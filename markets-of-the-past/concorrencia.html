@@ -1,0 +1,222 @@
+<title>Teste de Concorrência</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: mesmo livro-razão de arquivo do plano de lançamento. Coluna única, tabela-resumo, cartões só para os temas, carimbos de veredito. */
+:root{
+  --paper:#EDF0EA; --sheet:#F7F8F4; --ink:#1C2430; --muted:#5A6573; --rule:#C9D0C6;
+  --ledger:#1F6B52; --mark:#9C2F23; --amber:#8A5A00;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12171D; --sheet:#1A2129; --ink:#E4E8E2; --muted:#9AA5B1; --rule:#2E3843;
+  --ledger:#5FBF98; --mark:#E0796B; --amber:#E0B860; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12171D; --sheet:#1A2129; --ink:#E4E8E2; --muted:#9AA5B1; --rule:#2E3843;
+  --ledger:#5FBF98; --mark:#E0796B; --amber:#E0B860; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:17px/1.6 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+a{color:var(--ledger)}
+a:focus-visible{outline:2px solid var(--ledger);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:1;margin:0;text-wrap:balance;letter-spacing:.01em}
+h1{font-size:clamp(44px,9vw,76px);font-weight:800}
+h2{font-size:clamp(30px,5vw,40px);font-weight:800;display:flex;gap:12px;align-items:baseline}
+h2 .n{font-family:var(--mono);font-size:14px;color:var(--ledger);font-weight:500;letter-spacing:0}
+h3{font-size:26px;font-weight:800}
+p{margin:0;max-width:65ch}
+section{display:flex;flex-direction:column;gap:18px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:19px}
+.note{font-size:14px;color:var(--muted)}
+.lbl{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.stamp{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid currentColor;padding:2px 8px;transform:rotate(-2deg);white-space:nowrap}
+.s-red{color:var(--mark)} .s-amb{color:var(--amber)} .s-grn{color:var(--ledger)}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}
+td,th{padding:10px 8px;border-bottom:1px solid var(--rule);vertical-align:top;text-align:left}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td:first-child{min-width:150px;font-weight:600}
+.card{background:var(--sheet);border:1px solid var(--rule);padding:22px;display:flex;flex-direction:column;gap:16px}
+.ch{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between}
+.ch>div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ours{font-style:italic;color:var(--muted);font-size:15px}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.comp{font-size:15px}
+.comp li{overflow-wrap:anywhere}
+.comp .meta{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.two>div{min-width:0;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.alt{border-top:1px dashed var(--rule);padding-top:14px;display:flex;flex-direction:column;gap:6px}
+.alt .lbl{color:var(--ledger)}
+.alt .t{font-family:var(--display);font-weight:800;font-size:24px;text-transform:uppercase;line-height:1.05}
+.warn{border:2px solid var(--mark);padding:22px;display:flex;flex-direction:column;gap:12px}
+.ocean{display:flex;flex-direction:column;border-top:1px dashed var(--rule)}
+.oc{display:grid;grid-template-columns:1fr auto;gap:6px 16px;padding-block:14px;border-bottom:1px dashed var(--rule)}
+.oc .t{font-weight:600;min-width:0}
+.oc .why{grid-column:1/-1;font-size:15px;color:var(--muted)}
+.oc .why b{color:var(--ink);font-weight:600}
+@media (max-width:520px){.oc{grid-template-columns:1fr}.oc .stamp{justify-self:start}}
+.order{counter-reset:o;list-style:none;padding:0;display:flex;flex-direction:column;gap:12px}
+.order li{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:baseline}
+.order li::before{counter-increment:o;content:"Semana " counter(o);font-family:var(--mono);font-size:12px;color:var(--ledger);white-space:nowrap}
+.order li>div{min-width:0}
+.ask{border:2px solid var(--ink);padding:22px;display:flex;flex-direction:column;gap:12px}
+</style>
+
+<div class="wrap">
+
+<header style="display:flex;flex-direction:column;gap:16px">
+  <span class="eyebrow">Teste de concorrência · canal novo em inglês · 28 de outubro de 2026</span>
+  <h1>Teste de Concorrência</h1>
+  <p class="lede">Dos 6 temas propostos, só 2 têm um ângulo que ninguém parece ter feito ainda. Os outros 4 já existem em inglês, alguns com o mesmo ângulo e quase o mesmo título, e 3 deles foram publicados em 2026 por canais novos que fazem exatamente “o dinheiro por trás da guerra”. Abaixo, tema por tema, a troca sugerida e uma lista de oceanos azuis onde você tem vantagem.</p>
+  <p class="note"><b>Como foi feito e o que não deu para ver:</b> o YouTube bloqueia o acesso direto daqui (página anti-robô), então busquei vídeos em inglês por busca na web restrita ao youtube.com e abri cada vídeo para ler canal, data e descrição. <b>Views e inscritos não apareceram em quase nenhum</b>, então a “força” abaixo é estimada pela quantidade de vídeos encontrados, pela data (quanto mais recente, mais concorrência ativa) e por quanto o ângulo coincide com o nosso. A busca na web não mostra tudo que existe no YouTube; ausência aqui quer dizer “não encontrei”, não “não existe”. Antes de gravar, confira cada tema na própria busca do YouTube, filtrando por views.</p>
+  <p class="note">Plano original: <a href="https://claude.ai/artifact/A7zpqtRU9uf3NVJCLdbDvQ">Primeiros 5 Vídeos</a> · análise da Suíça: <a href="https://claude.ai/artifact/C3CPe5AnGv2q7sZgcJGLdW">edição e roteiro</a>.</p>
+</header>
+
+<section>
+  <h2><span class="n">§1</span>Resumo</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Tema</th><th>Tema em inglês</th><th>Nosso ângulo</th><th>Veredito</th></tr></thead>
+    <tbody>
+      <tr><td>Suíça / ouro nazista</td><td>Saturado</td><td>Já feito em 2026, mesmo acordo de US$ 1,25 bi</td><td><span class="stamp s-red">Descartar</span></td></tr>
+      <tr><td>Portugal (por que Hitler não invadiu)</td><td>Cheio</td><td>Volfrâmio e neutralidade já cobertos</td><td><span class="stamp s-amb">Trocar ângulo</span></td></tr>
+      <tr><td>Pearl Harbor / petróleo</td><td>Saturado</td><td>Pelo menos 5 vídeos sobre o embargo, 3 deles de 2026</td><td><span class="stamp s-red">Reserva</span></td></tr>
+      <tr><td>URSS / grãos de Stalin</td><td>Saturado</td><td>Aparece como detalhe, não como história principal</td><td><span class="stamp s-grn">Manter</span></td></tr>
+      <tr><td>Guerra Civil / King Cotton</td><td>Cheio</td><td>“A aposta no algodão” já tem título quase igual</td><td><span class="stamp s-amb">Trocar ângulo</span></td></tr>
+      <tr><td>Os 9 dias de 1939</td><td>Cheio</td><td>Formato dia a dia não encontrado em vídeo longo</td><td><span class="stamp s-grn">Manter</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2><span class="n">§2</span>O sinal mais importante</h2>
+  <div class="warn">
+    <h3>O nicho “dinheiro por trás da guerra” está enchendo</h3>
+    <p>Em 2026 apareceram vários canais sem rosto fazendo exatamente a proposta do Markets of the Past, e com os mesmos temas: <b>Market Fault Lines</b> (Suíça em março, Pearl Harbor em abril), <b>Billion to Bust</b> (Pearl Harbor e sanções, abril) e <b>Toledot Stories</b> (embargo do petróleo, abril). Ou seja, o ângulo econômico sozinho já não diferencia. O que ainda diferencia é: <b>(1)</b> o formato de narrativa (dia a dia, decisão, um personagem) e <b>(2)</b> temas que esses canais não alcançam porque as fontes estão em português ou espanhol. O segundo ponto é a sua vantagem real.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">§3</span>Tema por tema</h2>
+
+  <article class="card">
+    <div class="ch"><div><span class="lbl">Tema 1</span><h3>Suíça e o ouro de Hitler</h3><span class="ours">Nosso: Hitler's Gold: The Swiss Bill That Came 50 Years Late</span></div><span class="stamp s-red">Descartar</span></div>
+    <div><span class="lbl">Concorrência encontrada</span>
+    <ul class="comp">
+      <li><a href="https://www.youtube.com/watch?v=mOmGZWzDV54">The Swiss Banks That Held Hitler's Gold — And Never Gave It Back</a> <span class="meta">Market Fault Lines · 15/03/2026 · cita o acordo de US$ 1,25 bi de 1998, igual ao nosso gancho</span></li>
+      <li><a href="https://music.youtube.com/podcast/ktWcIVj4eN8">How Switzerland Helped Finance Hitler's War</a> <span class="meta">data não verificada</span></li>
+      <li><a href="https://www.youtube.com/watch?v=oe6N2RcTzWQ">The Bankers Who Profited From the Holocaust</a> · <a href="https://www.youtube.com/watch?v=xEEd2u_IRKc">Inside Nazi Gold: Swiss Banks…</a> <span class="meta">datas não verificadas</span></li>
+      <li>Pelo menos 5 vídeos longos e 4 shorts com “Why Hitler never invaded Switzerland”, ex.: <a href="https://www.youtube.com/watch?v=40JRaE2x8tM">60 Seconds Knowledge (09/2025)</a>, <a href="https://www.youtube.com/watch?v=gk24Os2lXLc">outro</a>, <a href="https://www.youtube.com/watch?v=WrClCGCrSRE">outro</a></li>
+      <li>Documentário de TV “Blood Money: Switzerland's Nazi Gold” (1997) e o próprio vídeo do Markets of the Past (1,3 mi), que já usa o ouro como virada.</li>
+    </ul></div>
+    <p><b>Leitura:</b> tema e ângulo saturados. Um canal novo chegando em terceiro ou quarto com o mesmo gancho não tem por onde ganhar.</p>
+  </article>
+
+  <article class="card">
+    <div class="ch"><div><span class="lbl">Tema 1b</span><h3>Por que Hitler não invadiu Portugal</h3><span class="ours">Sugerido como troca da Suíça</span></div><span class="stamp s-amb">Trocar ângulo</span></div>
+    <div><span class="lbl">Concorrência encontrada</span>
+    <ul class="comp">
+      <li><a href="https://www.youtube.com/watch?v=W5UljWnMHlo">Neutrality At All Costs: Portugal's Dangerous Game In WW2</a> <span class="meta">Timeline (History Hit) · 26/02/2026 · 52 min · 32.676 views, o único número que consegui ler</span></li>
+      <li><a href="https://www.youtube.com/watch?v=M-rQ8DLwam0">Why didn't the N4zis INVADE Portugal?</a> <span class="meta">Military History · 10/2023 · faz parte de uma série “por que não invadiram X”</span></li>
+      <li><a href="https://www.youtube.com/watch?v=h1xnbAw6HRM">Why Did Portugal Stay Out of World War II?</a> <span class="meta">Mohsin Insights · 06/2025 · já fala do volfrâmio (tungstênio) e dos Açores</span></li>
+      <li><a href="https://www.youtube.com/watch?v=P_0ixbnjYGk">Neutrality At A Price: The Dark Side Of Portugal's Survival</a> · <a href="https://www.youtube.com/watch?v=YHsBhmDimts">Why was Portugal Neutral in World War 2?</a> · <a href="https://www.youtube.com/watch?v=6Th1k0cSL9I">Lunchbox Lecture: Portugal in WWII</a></li>
+    </ul></div>
+    <p><b>Leitura:</b> a fórmula “Why Hitler never invaded [país neutro]” virou série em muitos canais: encontrei pelo menos 7 vídeos para a Suécia e um “The Real Reason Hitler Never Invaded Turkey”. Portugal está menos cheio que a Suíça, mas o título e o volfrâmio já foram usados. O número do Timeline (32 mil em 8 meses, canal grande) sugere que o tema puxa menos que Suíça.</p>
+    <div class="alt"><span class="lbl">Alternativa com ângulo novo</span><span class="t">The Tungsten War: Britain Paid Portugal a Fortune So Hitler Couldn't Buy Its Rocks</span><p>Em vez de “por que não invadiu”, o leilão: Grã-Bretanha e Alemanha disputando as minas de volfrâmio de Portugal e da Espanha, com os Aliados comprando só para o inimigo não comprar (a chamada compra preventiva). Não encontrei nenhum vídeo em inglês com esse ângulo como tema principal, e as melhores fontes sobre as minas estão em português.</p></div>
+  </article>
+
+  <article class="card">
+    <div class="ch"><div><span class="lbl">Tema 2</span><h3>Pearl Harbor e o petróleo</h3><span class="ours">Nosso: You Are Japan in 1941. You Have 18 Months of Oil Left.</span></div><span class="stamp s-red">Reserva</span></div>
+    <div><span class="lbl">Concorrência encontrada</span>
+    <ul class="comp">
+      <li><a href="https://www.youtube.com/watch?v=DChm44qvlyM">How America Financially Strangled Japan Before Pearl Harbor</a> <span class="meta">Market Fault Lines · 26/04/2026 · embargo, congelamento de bens, nota de Hull, Yamamoto: praticamente a nossa estrutura</span></li>
+      <li><a href="https://www.youtube.com/watch?v=KaIb1hOBD28">Washington Cut Off Japan's Economy. Pearl Harbor Was the Only Move Left</a> <span class="meta">Billion to Bust · 03/04/2026</span></li>
+      <li><a href="https://www.youtube.com/watch?v=-9d90LINuR8">Oil blockade that triggered Pearl Harbor</a> <span class="meta">Toledot Stories · 14/04/2026</span></li>
+      <li><a href="https://www.youtube.com/watch?v=ZD6towah1pI">America Froze Japan's Oil Supply in 1941…</a> · <a href="https://www.youtube.com/watch?v=NbUjE08I3WE">Why No One in Japan Stopped The Attack</a></li>
+      <li><a href="https://www.youtube.com/watch?v=qu4bTnXqIno">Why Japan Never Bombed Pearl Harbor's Fuel Tanks</a> <span class="meta">a “ironia” do nosso fecho também já é vídeo próprio</span></li>
+    </ul></div>
+    <p><b>Leitura:</b> “foi pelo petróleo” é hoje a explicação padrão (até o <a href="https://www.iwm.org.uk/history/why-did-japan-attack-pearl-harbor">Imperial War Museum</a> diz isso), e 3 canais do mesmo nicho publicaram essa versão em abril de 2026. A única coisa nossa é o formato em segunda pessoa (“você é o Japão”). É pouco para um vídeo de estreia. Deixe na reserva.</p>
+    <div class="alt"><span class="lbl">Se quiser manter o Pacífico</span><span class="t">Japan Got the Oil. Then It Couldn't Get It Home.</span><p>A continuação: o Japão conquista o petróleo das Índias Orientais Holandesas em 1942 e perde a guerra porque os submarinos americanos afundam os petroleiros. Existe pelo menos um concorrente (<a href="https://www.youtube.com/watch?v=iplqDJPVF20">America Built a Submarine Fleet Japan Ignored…</a>), então é risco médio, não oceano azul.</p></div>
+  </article>
+
+  <article class="card">
+    <div class="ch"><div><span class="lbl">Tema 3</span><h3>Stalin alimentando o exército de Hitler</h3><span class="ours">Nosso: Stalin Was Feeding Hitler's Army Until the Night of the Invasion</span></div><span class="stamp s-grn">Manter</span></div>
+    <div><span class="lbl">Concorrência encontrada</span>
+    <ul class="comp">
+      <li><a href="https://www.youtube.com/watch?v=QoQWBiujfkA">Why Operation Barbarossa Was COMPLETELY Avoidable</a> <span class="meta">Two Sides of War · 27/09/2026 · animado; cita que os soviéticos abasteciam a Alemanha até a invasão, mas o foco é “era evitável”</span></li>
+      <li><a href="https://www.youtube.com/watch?v=j42Y_0pKEzE">Why Hitler Betrayed Stalin: The Real Reason for Operation Barbarossa</a> <span class="meta">Frontline War History · 17/10/2026 · recursos como uma das causas</span></li>
+      <li><a href="https://www.youtube.com/shorts/AMxMfv2lvO8">Did Stalin Secretly Arm Himself Through Hitler?</a> <span class="meta">short</span> · <a href="https://www.youtube.com/watch?v=LEj5SZLXvkA">Hitler &amp; Stalin: The Cursed Pact</a></li>
+      <li>Dezenas de vídeos genéricos sobre Barbarossa (dia a dia, filmagens, por que falhou).</li>
+    </ul></div>
+    <p><b>Leitura:</b> o tema Barbarossa é enorme e disputado, mas o comércio germano-soviético aparece só como detalhe. Não encontrei vídeo longo em inglês que conte a história pelo acordo comercial (grãos, petróleo, o cruzador Lützow vendido aos soviéticos, os trens na fronteira na véspera). É o melhor dos 6. Dois concorrentes saíram há poucas semanas, então vale lançar logo.</p>
+    <div class="alt"><span class="lbl">Ajuste no título</span><span class="t">Stalin Sold Hitler the Fuel for His Own Invasion</span><p>Mais direto que o original e deixa claro o paradoxo. O livro “Feeding the German Eagle” (Edward Ericson) é a fonte principal.</p></div>
+  </article>
+
+  <article class="card">
+    <div class="ch"><div><span class="lbl">Tema 4</span><h3>King Cotton e a Guerra Civil</h3><span class="ours">Nosso: King Cotton: The Bet That Lost the Civil War</span></div><span class="stamp s-amb">Trocar ângulo</span></div>
+    <div><span class="lbl">Concorrência encontrada</span>
+    <ul class="comp">
+      <li><a href="https://www.youtube.com/watch?v=lbEdQwAIu2o">How The Confederate States Bet Everything On… Cotton</a> <span class="meta">Journey Through Time · 02/10/2025 · série com David Olusoga, inclui Lancashire. Título quase igual ao nosso</span></li>
+      <li><a href="https://www.youtube.com/watch?v=oQFb_FcHk9g">Cotton and the Financial War Behind the Civil War</a> · <a href="https://www.youtube.com/watch?v=8Sq1yyleHeY">What Was King Cotton Diplomacy? (Civil War Nerds)</a> · <a href="https://www.youtube.com/watch?v=43X-772ERzQ">King Cotton: The Truth About The Confederacy</a></li>
+      <li><a href="https://www.youtube.com/watch?v=wAT9DpLoF14">Why didn't Britain Support the Confederacy?</a> · <a href="https://www.youtube.com/watch?v=in7s_iKP_K4">Losing the Thread</a> · <a href="https://www.youtube.com/watch?v=RCxnutcPn3w">The Cotton Famine</a> · <a href="https://www.youtube.com/watch?v=E9NVWOGR-_c">The Bread Riots of 1863</a></li>
+      <li>O fecho no Egito também tem vídeos próprios: <a href="https://www.youtube.com/watch?v=rNV6yrZLTXw">Egypt 1882: how Britain turned a debt default into a 70-year occupation</a> (Uncover History, 07/2026), <a href="https://www.youtube.com/watch?v=4_zRWhjuDwE">Why Britain Really Bombarded Alexandria in 1882: To Collect A Debt?</a></li>
+    </ul></div>
+    <p><b>Leitura:</b> a aposta do algodão e a fome de Lancashire estão bem cobertas. A dívida egípcia também. O que não encontrei é alguém ligando as duas pontas num vídeo só: a Guerra Civil americana criando o boom do algodão egípcio, que gera a dívida, que leva à ocupação britânica.</p>
+    <div class="alt"><span class="lbl">Alternativa com ângulo novo</span><span class="t">How the American Civil War Made Britain Conquer Egypt</span><p>Comece pelo Egito (o título surpreende) e volte para 1861. O público de Guerra Civil e o de Império Britânico se somam.</p></div>
+  </article>
+
+  <article class="card">
+    <div class="ch"><div><span class="lbl">Tema 5</span><h3>Os 9 dias até a guerra</h3><span class="ours">Nosso: 9 Days: How World War II Became Unstoppable</span></div><span class="stamp s-grn">Manter</span></div>
+    <div><span class="lbl">Concorrência encontrada</span>
+    <ul class="comp">
+      <li>Gleiwitz tem vários vídeos próprios: <a href="https://www.youtube.com/watch?v=0nBYozK5Jfc">The Fake Attack Hitler Used to Start WWII</a>, <a href="https://www.youtube.com/watch?v=1MaKmC_r7bk">Operation Himmler</a>, <a href="https://www.youtube.com/watch?v=s7EjZ1TVQA4">Gleiwitz 1939…</a></li>
+      <li>O pacto também: <a href="https://www.youtube.com/watch?v=yuXMR8RDFow">Why Germany and the Soviet Union Became “Allies”</a>, <a href="https://www.youtube.com/watch?v=MuBRvARuLi4">The Pact That Changed Europe's Borders</a>, <a href="https://www.youtube.com/watch?v=AHiF5LiMdLE">The Nazi-Soviet Non-Aggression Pact</a></li>
+      <li><a href="https://www.youtube.com/shorts/NGDKDiICj0g">Hitler Almost Cancelled the Invasion of Poland</a> <span class="meta">short do Out of the Foxholes (TimeGhost) · cobre o adiamento de 25 de agosto</span> · <a href="https://www.youtube.com/watch?v=o-iSfxfve6g">The Jabłonków Incident</a></li>
+      <li>Livro de Richard Overy “1939: Countdown to War” usa o mesmo recorte de dias.</li>
+    </ul></div>
+    <p><b>Leitura:</b> cada peça já existe separada, e o TimeGhost (canal grande) cobre a guerra semana a semana. Mas não encontrei um vídeo longo em inglês estruturado como contagem regressiva de 23 de agosto a 1º de setembro. O diferencial aqui é o formato, que funciona bem para retenção. Risco médio.</p>
+  </article>
+</section>
+
+<section>
+  <h2><span class="n">§4</span>Oceano azul</h2>
+  <p>Critério: tema com gancho de dinheiro, ligado a algo que o público de língua inglesa já conhece (Segunda Guerra, EUA, Grã-Bretanha), e com poucos ou nenhum vídeo longo em inglês. A sua vantagem é ler as fontes brasileiras, portuguesas e hispânicas que os canais em inglês não usam. O risco é a demanda: tema latino-americano costuma fazer menos views que Hitler, por isso cada ideia abaixo tem uma “ponte” para um assunto que o público já procura.</p>
+  <div class="ocean">
+    <div class="oc"><span class="t">Brazil Burned 78 Million Bags of Coffee to Save Its Economy</span><span class="stamp s-grn">Pouca concorrência</span>
+      <p class="why">Na Grande Depressão o governo comprou e queimou café para segurar o preço (cerca de 78 milhões de sacas entre 1931 e 1944, confirmar o número na fonte). <b>Em inglês encontrei só shorts</b> (<a href="https://www.youtube.com/shorts/9MFDQZwGZ40">Why Brazil BURNED its coffee!</a>) e um documentário antigo da PBS. Ponte: Crash de 1929. Imagem forte para thumbnail: fogueira de sacas.</p></div>
+    <div class="oc"><span class="t">The Tungsten War (Portugal e Espanha)</span><span class="stamp s-grn">Pouca concorrência</span>
+      <p class="why">Descrito no tema 1b. <b>Nenhum vídeo em inglês com o leilão do volfrâmio como tema principal.</b> Ponte: Segunda Guerra e Churchill. Fica no mesmo público dos seus primeiros vídeos.</p></div>
+    <div class="oc"><span class="t">Brazil's First Stock Bubble Was Caused by the Fall of an Emperor</span><span class="stamp s-grn">Vazio em inglês</span>
+      <p class="why">O Encilhamento (1889 a 1891): a República recém-proclamada imprime dinheiro, a bolsa do Rio explode e quebra. <b>Todos os vídeos que encontrei estão em português</b>, nenhum em inglês. Ponte: bolhas famosas (tulipas, South Sea, 1929). Demanda incerta; melhor como vídeo 6 em diante.</p></div>
+    <div class="oc"><span class="t">The Steel Mill Brazil Got for Joining WWII</span><span class="stamp s-amb">Concorrência baixa</span>
+      <p class="why">Vargas negocia com os dois lados e só entra na guerra ao lado dos EUA em troca do financiamento da usina de Volta Redonda e de bases no Nordeste. Existem vídeos sobre “por que o Brasil entrou na guerra” (<a href="https://www.youtube.com/watch?v=STfpsSW47HE">animado</a>, <a href="https://www.youtube.com/watch?v=4bDQZ2Mss7c">outro</a>, um especial do TimeGhost sobre Vargas), mas não com a negociação como história principal. Ponte: Roosevelt e Segunda Guerra.</p></div>
+    <div class="oc"><span class="t">The Rubber Soldiers: The Army Brazil Sent Into the Amazon for America</span><span class="stamp s-amb">Concorrência baixa</span>
+      <p class="why">Depois que o Japão tomou a Malásia, os EUA financiaram o envio de dezenas de milhares de nordestinos para extrair borracha na Amazônia; muitos nunca voltaram. Encontrei <a href="https://www.youtube.com/watch?v=rMaMte73Hkg">um vídeo em inglês</a> sobre isso. Ponte: Pearl Harbor e a falta de borracha nos EUA. Funciona bem como sequência do vídeo do Pacífico.</p></div>
+    <div class="oc"><span class="t">Guano, salitre e a Guerra do Chaco</span><span class="stamp s-red">Já ocupado</span>
+      <p class="why">Pareciam oceano azul mas não são: a guerra do guano tem vários vídeos (<a href="https://www.youtube.com/watch?v=ljbPWvIdZ7w">These Nations Went to War Over Guano</a>, <a href="https://www.youtube.com/watch?v=qzzqdIkWHh4">How Peru Accidentally Became The Most Important Country On Earth</a>), a Guerra do Pacífico tem até versão dia a dia, e a Guerra do Chaco já tem o ângulo do petróleo. Guerra do Paraguai e nazistas na Argentina também estão cheios.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">§5</span>Nova escalação</h2>
+  <p>Três vídeos de Segunda Guerra com ângulo que não encontrei feito, para pegar o público que o algoritmo já entrega, e dois testes de oceano azul.</p>
+  <ol class="order">
+    <li><div><b>Stalin Sold Hitler the Fuel for His Own Invasion.</b> O ângulo mais limpo dos 6, e o tema Barbarossa está quente agora.</div></li>
+    <li><div><b>The Tungsten War.</b> Substitui Suíça e Portugal. Mesmo público, assunto sem dono.</div></li>
+    <li><div><b>9 Days: How World War II Became Unstoppable.</b> Diferencial no formato de contagem regressiva.</div></li>
+    <li><div><b>How the American Civil War Made Britain Conquer Egypt.</b> Substitui o King Cotton; primeiro teste fora da Segunda Guerra.</div></li>
+    <li><div><b>Brazil Burned 78 Million Bags of Coffee.</b> Primeiro teste de oceano azul com tema brasileiro. Se for bem, abre uma linha de vídeos que os concorrentes não conseguem copiar com facilidade.</div></li>
+  </ol>
+  <p class="note">Pearl Harbor fica na reserva. Se quiser um vídeo do Pacífico, prefira “Japan Got the Oil. Then It Couldn't Get It Home” e emende com os soldados da borracha.</p>
+</section>
+
+<section class="ask">
+  <h3>Como confirmar antes de gravar</h3>
+  <p>Para cada título da escalação, pesquise no YouTube em inglês e mande um print dos resultados ordenados por número de views. Com os prints eu completo o que ficou faltando aqui (views e tamanho dos canais) e confirmo se o tema está mesmo livre.</p>
+</section>
+
+</div>
