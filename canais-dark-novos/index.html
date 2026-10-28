@@ -1,0 +1,150 @@
+<title>Canais Dark Estourando</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: single reading column, wide scrollable tables, multiplier as the hero number of each row */
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#16181d; --muted:#5d6370; --line:#dde0e6;
+  --accent:#d6261e; --accent-soft:#fde8e6; --warn:#9a6400; --warn-soft:#fff3d6;
+  --display:"Archivo Narrow","Arial Narrow",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121317; --surface:#1b1d23; --fg:#eceef2; --muted:#9aa0ad; --line:#2c2f37;
+  --accent:#ff5a4f; --accent-soft:#3a1715; --warn:#f0b54a; --warn-soft:#33270f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121317; --surface:#1b1d23; --fg:#eceef2; --muted:#9aa0ad; --line:#2c2f37;
+  --accent:#ff5a4f; --accent-soft:#3a1715; --warn:#f0b54a; --warn-soft:#33270f; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+main{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+h1,h2{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:clamp(30px,5vw,46px)}
+h2{font-size:26px}
+p{margin:0;max-width:68ch}
+.lead{display:flex;flex-direction:column;gap:12px}
+.eyebrow{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+section{display:flex;flex-direction:column;gap:14px}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:900px;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 12px var(--body);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.x{font:700 22px var(--display);color:var(--accent);white-space:nowrap;font-variant-numeric:tabular-nums}
+td.n{font-family:var(--mono);font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums}
+a{color:inherit;text-decoration-color:var(--line);text-underline-offset:3px}
+a:hover,a:focus-visible{text-decoration-color:var(--accent)}
+.ch{font-weight:600}
+.tag{display:inline-block;font:500 11px var(--mono);padding:2px 6px;border-radius:3px;background:var(--accent-soft);color:var(--accent);margin-top:4px}
+.tag.w{background:var(--warn-soft);color:var(--warn)}
+.note{font-size:13px;color:var(--muted)}
+.patterns{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.pat{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.pat b{font-family:var(--display);font-size:18px}
+.callout{border-left:4px solid var(--accent);background:var(--surface);padding:14px 18px;border-radius:0 6px 6px 0}
+ul{margin:0;padding-left:20px}
+</style>
+
+<main>
+  <header class="lead">
+    <span class="eyebrow">Pesquisa YouTube · 28 out 2026</span>
+    <h1>Canais dark novos com vídeo estourado</h1>
+    <p>Critério: canal criado a partir de 28/ago/2026 (até 2 meses), entre ~1.200 e ~5.000 inscritos hoje, com pelo menos um vídeo de 30x ou mais o número de inscritos. Varri cerca de 190 buscas em português e inglês, nos filtros "este mês" e "esta semana", e conferi a data de criação, os inscritos e os últimos vídeos de cada canal.</p>
+    <p class="muted">131 canais passaram no filtro (lista completa no CSV). Abaixo estão os melhores com formato sem rosto. A coluna "x" é views do vídeo ÷ inscritos de hoje.</p>
+  </header>
+
+  <div class="callout">
+    <p><b>Achado que interessa direto ao seu canal de história:</b> o canal <a href="https://www.youtube.com/@TwoSideHistory">Two Side History</a>, criado em 9/out, tem 2,8 mil inscritos e fez <b>1,4 milhão</b> com "Why Did Hitler Leave Switzerland and Sweden Alone?", que é o tema Suíça que a gente vinha planejando. Os outros vídeos dele ficaram entre 0,5 e 7 mil. O tema tem demanda enorme, mas agora já foi usado por um canal novo.</p>
+  </div>
+
+  <section>
+    <h2>Brasil (português)</h2>
+    <div class="tbl"><table id="pt"></table></div>
+    <p class="note">Títulos que aparecem em inglês são como o YouTube mostra; esses canais são brasileiros, mas alguns publicam o título em inglês ou com tradução automática.</p>
+  </section>
+
+  <section>
+    <h2>Inglês</h2>
+    <div class="tbl"><table id="en"></table></div>
+  </section>
+
+  <section>
+    <h2>O que se repete nos que estouraram</h2>
+    <div class="patterns">
+      <div class="pat"><b>Uma fórmula de título em série</b><span>Os que mais estouram repetem o mesmo molde em todo vídeo: "The Canadian Trick That…", "They Asked [general] … He Said One Word", "What Really Happened to…", "How Every Country Teaches…", "Por que…", "30 Dias Trancado num…". Um vídeo pega e o molde segura os seguintes.</span></div>
+      <div class="pat"><b>2ª Guerra pelo lado do outro</b><span>O Ponto Cego (alemães vendo o Brasil), WWII PUB (generais alemães), Two Side History (Hitler e a Suíça), Canadian Trick. Militar e história continuam sendo os nichos que mais estouram em inglês.</span></div>
+      <div class="pat"><b>Ficção narrada de sobrevivência</b><span>"30 dias trancado num supermercado durante um apocalipse zumbi" fez 484 mil num canal de 2 mil. O Fim do Mundo Brasil copiou com "Surto Zumbi em São Paulo".</span></div>
+      <div class="pat"><b>Novelinha milionário e humilhação</b><span>É o formato com mais canais novos no Brasil (Histórias Emocionantes, Além das Aparências, Mubashir, Rainhas dos Dramas). Estoura, mas a concorrência é altíssima e a maioria dos vídeos fica abaixo de mil views.</span></div>
+      <div class="pat"><b>Público 60+</b><span>Saúde e segurança para idosos ("Idosos, coloquem papel alumínio na maçaneta…", "Adicione isto à sua água depois dos 60…"). Funciona em PT e EN, mas muitos usam "médico" ou "policial aposentado" falso.</span></div>
+      <div class="pat"><b>"O que acontece com…" / "Por que…"</b><span>Curiosidade de bastidor: comida que sobra no cruzeiro (674 mil), por que o B-52 pousa de lado (366 mil), como o faroleiro vive sozinho (326 mil).</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Limites desta pesquisa</h2>
+    <ul>
+      <li>Não consegui abrir as thumbnails nem os vídeos daqui, então "sem rosto" foi julgado pelo formato, pelos títulos e pelos últimos vídeos. Os marcados com <span class="tag w">conferir</span> podem mostrar rosto de alguém (cortes de palestrantes, "médico" ou casal apresentador).</li>
+      <li>Os inscritos são os de hoje. Como muitos canais ganharam inscritos com o próprio vídeo estourado, a proporção na época do pico era ainda maior.</li>
+      <li>A busca do YouTube favorece o que já está em alta, então canais pequenos que estouraram em nichos que eu não pesquisei podem ter ficado de fora.</li>
+      <li>Também apareceram canais fortes em espanhol e hindi (ex.: Leyendas del Barrio 448x, Dibujando Historias 264x). Estão no CSV.</li>
+    </ul>
+  </section>
+</main>
+
+<script>
+const PT=[
+ ["Prosa de Fazenda","prosadefazendabr","11/out","1,61 mil","Venderam CENTENAS de bois FIADO pra dois garotos sem dinheiro","439 mil","r1vOIcodv_c",273,"Histórias de agro e fazendeiros que enriqueceram","184 vídeos em 17 dias (produção em massa); outros com 32–37 mil",""],
+ ["Último Turno Histórias","UltimoTurnoHistorias","7/set","2,02 mil","30 Dias Trancado num Supermercado Durante um Apocalipse Zumbi","484 mil","Fr92L07Q3nM",240,"Ficção narrada de sobrevivência, série \"30 dias trancado\"","Seguintes: 36 mil (escola), 12 mil (prisão)",""],
+ ["Vidas Surpreendentes","VidasSurpreendentes","4/set","1,44 mil","Mecânico humilde comprou um touro que ninguém queria… e ficou rico no rodeio!","276 mil","ZG1JeVuLg54",192,"História narrada de virada (humilde que fica rico)","Só 2 vídeos, os dois estouraram (o outro tem 193 mil)",""],
+ ["História Além","historiaalem2d","31/ago","1,77 mil","O que os humanos antigos faziam quando chovia a semana inteira?","290 mil","",164,"Pré-história e vida antiga, \"o que/como os antigos…\"","Outro vídeo com 142 mil (câncer na pré-história)",""],
+ ["O Ponto Cego","OPontoCego-brs","8/out","1,46 mil","Prisioneiros alemães veem o Brasil pela primeira vez: ficaram chocados","235 mil","s_E9DHo0jW8",161,"2ª Guerra pelo ponto de vista do inimigo (FEB)","Monte Castello 24 mil; resto abaixo de 5 mil",""],
+ ["GLE Veículos","GLEYVE%C3%8DCULOS10","11/out","2,79 mil","Milhões de brasileiros estão voltando a usar carros antigos, e aqui está o porquê","405 mil","UPqh9Yl8kbQ",145,"Notícias e polêmicas de carros narradas","\"A dona da Fiat está perdendo tudo\" 201 mil",""],
+ ["Histórias Emocionantes","OficialHist%C3%B3riasemocionantes","7/out","1,92 mil","\"Deus, só queria alguém para jantar comigo\", sussurrou a viúva… e o milionário ouviu tudo","261 mil","-qw3PgzxQsM",136,"Novelinha narrada (viúva, fazendeiro, milionário)","Outros com 17–34 mil",""],
+ ["Histórias do Nosso Brasil","Hist%C3%B3riasdoNossoBrasil-r7u","14/out","1,36 mil","Sujou o chão para humilhar a faxineira… até ela voltar como sócia","170 mil","ANexjc6YIro",125,"Humilhação e virada","Seguintes com 11–26 mil",""],
+ ["Criatura Negócios","CriaturaNeg%C3%B3cios","5/out","1,21 mil","História da Havan: como o Véio lucrou R$ 1,5 bilhão enquanto o varejo quebrava?","104 mil","Iy7Mbdy4ZiY",86,"História de empresas e economia","81 vídeos; o resto abaixo de mil","conferir"],
+ ["Palavra de Deus Recitada","PalavraDeDeusRecitada","28/set","1,78 mil","Aos Gálatas | Completo | Bíblia falada","133 mil","aj-F11Pzr10",75,"Bíblia narrada, livro inteiro","Efésios 51 mil, Tessalonicenses 30 mil",""],
+ ["Além das Aparências","Al%C3%A9mdasApar%C3%AAncias-o7p","31/ago","1,48 mil","Ela dançou com o pai idoso do CEO, mas ele a convidou em seguida!","97 mil","G2CX7nSs5tk",66,"Novelinha CEO/milionário","Resto abaixo de 8 mil",""],
+ ["O Que a Terra Guardou","OQueATerraGuardou","1/out","2,99 mil","Chamaram ela de louca. 50 anos depois, a ciência admitiu que ela estava certa","183 mil","ejm8ck1Y-ZA",61,"Arqueologia e descobertas","Resto entre 1 e 8 mil",""],
+ ["Walter Reyes","WalterReyes-d8y","2/out","1,91 mil","Idosos, coloquem papel alumínio na maçaneta hoje à noite: chaveiro aposentado explica","107 mil","pZEe_lCPbwQ",56,"Segurança doméstica para idosos","Outros com 13–39 mil",""],
+ ["Mubashir Histórias","MubashirHist%C3%B3rias","19/set","2,21 mil","Mãe solteira ensaia entrevista no elevador, sem saber que o homem era o CEO!","123 mil","6OnT9fulK3Q",56,"Novelinha CEO/bilionário","Resto abaixo de 2 mil",""],
+ ["Essência do Invisível","essenciadoinvisivel","25/set","2,02 mil","É assim que sua mente controla seu campo energético: ciência, Qi e consciência","102 mil","7Ncb8sao888",50,"Espiritualidade e consciência","Outro com 18 mil",""],
+ ["Rainhas dos Dramas","RainhasDosDramas","8/set","2,76 mil","Meu ex me humilhou com a nova namorada no cruzeiro, ele não sabia que eu era a chefe dele!","134 mil","TQxb_A0oQ2c",49,"Drama em primeira pessoa","Resto abaixo de 7 mil",""],
+ ["Guia da Saúde Sênior","GuiadaSa%C3%BAdeS%C3%AAnior-c5u","29/ago","2,29 mil","Adicione isto à sua água depois dos 60 para estimular o colágeno","106 mil","NuoC1VqCMbw",46,"Saúde 60+, \"médico explica\"","Variação do mesmo título com 91 mil","conferir"],
+ ["Destinos Inesquecíveis","DestinosInesquec%C3%ADveis-i8g","12/out","2,11 mil","'Manda a feia, ele vai rejeitar', riram elas… mas o milionário ficou sem palavras","84 mil","ukChvppvG-w",40,"Novelinha milionário","122 vídeos em 16 dias",""],
+ ["Fim do Mundo Brasil","FimdoMundoBRASILYT","13/out","1,32 mil","Sobrevivência ao surto zumbi em São Paulo: do dia 1 ao dia 30","41 mil","dr2kTHQ3bQs",31,"Ficção narrada de sobrevivência","Mesmo formato do Último Turno",""],
+ ["Estoico por Dentro","estoico.pordentro","22/set","1,23 mil","Como não se deixar abalar por nada: 8 lições estoicas","39 mil","INhuDimyOio",31,"Estoicismo","",""],
+ ["Impetoz","impetoz","25/set","5,11 mil","Os segredos dos negócios que imprimem dinheiro enquanto outros quebram (Marcelo Baccarini)","682 mil","Gpj55nc2bdE",133,"Cortes de empresários (Flávio Augusto, Marçal, Ratinho)","Sem rosto do dono, mas mostra os palestrantes","conferir"]
+];
+const EN=[
+ ["Drollery","WatchDrollery","7/out","1,55 mil","No Celebrity Told WAR Stories Like Lee Marvin","1,2 mi","C6-FIlJaPNk",775,"Hollywood antiga, histórias de celebridades","Billy Bob Thornton 1 mi; o resto 2–39 mil",""],
+ ["Two Side History","TwoSideHistory","9/out","2,78 mil","Why Did Hitler Leave Switzerland and Sweden Alone?","1,4 mi","VVlfdGrHCIo",504,"História da 2ª Guerra com pergunta \"Why…\"","Resto entre 0,5 e 7 mil",""],
+ ["Cruise Ship Uncovered","Cruise_Ship_Uncovered","3/out","1,48 mil","What Happens to the Food Nobody Eats on a Cruise Ship","674 mil","QWcLsxkvPqE",455,"Bastidores de cruzeiro, \"What happens…\"","Resto abaixo de 9 mil",""],
+ ["Not Unprecedented","NotUnprecedented","6/out","1,66 mil","The AI Bubble Will Burst. Here's What Happens Next","516 mil","sD0RcD9rq_c",311,"Economia e IA com paralelo histórico","Só 3 vídeos; o 2º tem 23 mil",""],
+ ["Heart Theater","HeartTheater-83","10/set","5,02 mil","This Young Woman Is a Great Witch: Everyone Thought She Was Useless","1,35 mi","8yfsneaMun4",270,"Drama de fantasia feito com IA, 1 hora","Resto 0,7–16 mil",""],
+ ["Giants in Motion","GiantsinMotion","12/out","3,66 mil","How Japan Quietly Built an Aircraft Carrier, Breaking Every Naval Rule","976 mil","vgGjB22MAqA",267,"Porta-aviões e engenharia naval","US vs China carrier 47 mil",""],
+ ["Terra Cipher","TerraCipher-l4y","4/set","1,22 mil","How Does a Lighthouse Keeper Live Alone in the Middle of the Ocean?","326 mil","LftZeulv7og",267,"Como vivem/funcionam profissões e megaestruturas","Resto abaixo de 10 mil",""],
+ ["History Miscalculated","HistoryMiscalculated","25/set","1,75 mil","How Every Country Teaches World War II","382 mil","9B528xQfDHY",218,"Série \"How every country teaches…\"","1ª Guerra 42 mil, Revolução Americana 35 mil",""],
+ ["INGENIUM","INGENIUMYT","7/out","1,84 mil","China's New 6th Gen Fighter Doesn't Make Any Sense… Here's Why","394 mil","pt11euunS8I",214,"Aviação militar, \"Why the…\"","\"Why the B-52 lands sideways\" 366 mil",""],
+ ["The Canadian Trick","tct-i3b","14/set","1,93 mil","The Canadian Trick That Let Hitler's U-Boat Aces Dig Their Own Trap","348 mil","7i7bHtbBwAA",181,"2ª Guerra, série \"The Canadian Trick That…\"","Resto 1–11 mil",""],
+ ["Berean Studies","BereanStudies","21/set","5,37 mil","Will Jesus Raise the Cremated? What the Bible Says About Ashes","881 mil","Qs-e_WpMvYk",164,"Perguntas bíblicas","Resto 0,4–4 mil (um pouco acima de 5 mil inscritos)",""],
+ ["Forgotten American Shelter","ForgottenAmericanShelter","3/out","1,40 mil","15 Vehicles Americans Called Home During the Great Depression","209 mil","UDkY0mnBsao",150,"Grande Depressão, listas \"15 forgotten…\"","Resto abaixo de 5 mil",""],
+ ["Ever Young Seniors","EverYoungSeniors-tv","26/set","4,48 mil","Doctor Reveals: The #1 Best Fruit to Eat for Better Eyesight!","557 mil","iXc6ohsQfqY",124,"Saúde 60+","Últimos vídeos abaixo de 200 views","conferir"],
+ ["The Wealth Engine","TheWealthEngine_07","2/out","4,67 mil","How Does an Economy Actually Work?","451 mil","YqAiWBFwbpg",97,"Economia explicada","Só 2 vídeos",""],
+ ["The Infamous Cars","TheInfamousCars","18/set","2,65 mil","What Really Happened to History's Most Infamous Death Cars","255 mil","YG_3_gqpDJk",96,"Série \"What really happened to…\"","Seguintes 4–29 mil",""],
+ ["WWII PUB","WWIIPUB","18/set","2,97 mil","They Asked Rundstedt Why D-Day Succeeded. He Said Two Words, Three Times.","232 mil","",78,"2ª Guerra, série \"They asked [general]…\"","Ribbentrop 158 mil, Guderian 114 mil: série inteira funciona",""],
+ ["Dead Guns Society","DeadGunsSociety","13/out","2,86 mil","The Army Stopped Buying Its New Rifle","216 mil","-v8B1XaLwRQ",76,"Armas militares","M60 148 mil, .45 109 mil",""]
+];
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function render(id,rows){
+  const head="<thead><tr><th>x</th><th>Canal</th><th>Criado</th><th>Inscritos</th><th>Vídeo estourado</th><th>Views</th><th>Nicho / formato</th><th>Outros vídeos</th></tr></thead>";
+  const body=rows.map(r=>{
+    const [nome,h,criado,subs,titulo,views,vid,x,nicho,outros,flag]=r;
+    const vlink=vid?`<a href="https://youtu.be/${vid}">${esc(titulo)}</a>`:`<a href="https://www.youtube.com/@${h}/videos">${esc(titulo)}</a>`;
+    return `<tr><td class="x">${x}x</td><td><a class="ch" href="https://www.youtube.com/@${h}">${esc(nome)}</a>${flag?'<br><span class="tag w">conferir rosto</span>':''}</td><td class="n">${criado}</td><td class="n">${subs}</td><td>${vlink}</td><td class="n">${views}</td><td>${esc(nicho)}</td><td class="note">${esc(outros)}</td></tr>`;
+  }).join("");
+  document.getElementById(id).innerHTML=head+"<tbody>"+body+"</tbody>";
+}
+render("pt",PT);render("en",EN);
+</script>
