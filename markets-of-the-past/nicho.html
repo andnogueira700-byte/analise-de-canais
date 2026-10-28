@@ -1,0 +1,120 @@
+<title>Escolha de Nicho</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: mesmo livro-razão das páginas anteriores. Coluna única, tabela comparativa com carimbos, lista de temas com nível de concorrência. */
+:root{
+  --paper:#EDF0EA; --sheet:#F7F8F4; --ink:#1C2430; --muted:#5A6573; --rule:#C9D0C6;
+  --ledger:#1F6B52; --mark:#9C2F23; --amber:#8A5A00;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12171D; --sheet:#1A2129; --ink:#E4E8E2; --muted:#9AA5B1; --rule:#2E3843;
+  --ledger:#5FBF98; --mark:#E0796B; --amber:#E0B860; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12171D; --sheet:#1A2129; --ink:#E4E8E2; --muted:#9AA5B1; --rule:#2E3843;
+  --ledger:#5FBF98; --mark:#E0796B; --amber:#E0B860; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:17px/1.6 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+a{color:var(--ledger)}
+a:focus-visible{outline:2px solid var(--ledger);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:1;margin:0;text-wrap:balance;letter-spacing:.01em}
+h1{font-size:clamp(44px,9vw,76px);font-weight:800}
+h2{font-size:clamp(30px,5vw,40px);font-weight:800;display:flex;gap:12px;align-items:baseline}
+h2 .n{font-family:var(--mono);font-size:14px;color:var(--ledger);font-weight:500;letter-spacing:0}
+h3{font-size:26px;font-weight:800}
+p{margin:0;max-width:65ch}
+section{display:flex;flex-direction:column;gap:18px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:19px}
+.note{font-size:14px;color:var(--muted)}
+.stamp{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid currentColor;padding:2px 8px;transform:rotate(-2deg);white-space:nowrap}
+.s-red{color:var(--mark)} .s-amb{color:var(--amber)} .s-grn{color:var(--ledger)}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}
+td,th{padding:10px 8px;border-bottom:1px solid var(--rule);vertical-align:top;text-align:left}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td:first-child{min-width:140px;font-weight:600}
+td.w{min-width:200px}
+.warn{border:2px solid var(--mark);padding:22px;display:flex;flex-direction:column;gap:12px}
+.list{display:flex;flex-direction:column;border-top:1px dashed var(--rule)}
+.it{display:grid;grid-template-columns:1fr auto;gap:6px 16px;padding-block:14px;border-bottom:1px dashed var(--rule)}
+.it .t{font-family:var(--display);font-weight:800;font-size:22px;text-transform:uppercase;line-height:1.05;min-width:0}
+.it .why{grid-column:1/-1;font-size:15px;color:var(--muted)}
+.it .why b{color:var(--ink);font-weight:600}
+@media (max-width:520px){.it{grid-template-columns:1fr}.it .stamp{justify-self:start}}
+code{font-family:var(--mono);font-size:14px;background:var(--sheet);border:1px solid var(--rule);padding:0 5px;overflow-wrap:anywhere}
+.ask{border:2px solid var(--ink);padding:22px;display:flex;flex-direction:column;gap:12px}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+</style>
+
+<div class="wrap">
+
+<header style="display:flex;flex-direction:column;gap:16px">
+  <span class="eyebrow">Canal novo em inglês · fora da Segunda Guerra · 28 de outubro de 2026</span>
+  <h1>Escolha de Nicho</h1>
+  <p class="lede">Recomendo a <b>Guerra Fria</b>. É o nicho mais próximo do público de Segunda Guerra (o algoritmo leva os mesmos espectadores), tem rostos que todo americano reconhece e muitas perguntas do tipo “por que isso aconteceu”. A segunda opção é a <b>história americana de 1776 a 1900</b>. Roma, máfia, magnatas e piratas ficaram atrás.</p>
+  <p class="note">Como nas páginas anteriores, consegui ver canal e data dos concorrentes, mas não as views. A demanda abaixo é estimada pelo tamanho do assunto e pela quantidade de canais que fazem o tema, não medida. Antes de decidir, faça o mesmo teste que você fez com os temas de Segunda Guerra (lista no fim da página).</p>
+</header>
+
+<section>
+  <h2><span class="n">§1</span>O que descobri primeiro</h2>
+  <div class="warn">
+    <h3>A fórmula já está sendo copiada em outros nichos</h3>
+    <p>O título “The True Origin of X: What Historians Get Wrong”, que é a marca do Markets of the Past, já aparece em vídeos de 2026 sobre a <a href="https://www.youtube.com/watch?v=RS5Lk5zV95c">Revolução Americana</a> (julho) e a <a href="https://www.youtube.com/watch?v=o8uyo2FFxtk">Crise dos Mísseis de Cuba</a> (agosto), e em espanhol sobre o <a href="https://www.youtube.com/watch?v=d3EnqF7R6TI">colapso da URSS</a> (El Archivo Secreto, agosto). Um canal chamado Origins of War usa “The Real Reason X: What History Leaves Out” (<a href="https://www.youtube.com/watch?v=APoaKgwCm5k">Afeganistão, agosto</a>).</p>
+    <p>Ou seja, trocar de nicho não elimina a concorrência da fórmula: em qualquer nicho, os clones chegam em semanas. O que dá vantagem é escolher um nicho grande, entrar agora e publicar uma série com regularidade, antes que ele lote.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">§2</span>Os 7 nichos comparados</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Nicho</th><th>Demanda</th><th>Concorrência</th><th>Rostos</th><th>Veredito</th></tr></thead>
+    <tbody>
+      <tr><td>Guerra Fria</td><td class="w">Alta, e é o mesmo público da Segunda Guerra</td><td class="w">Média. Os clones da fórmula começaram em agosto de 2026 e ainda são poucos</td><td>Stalin, Khrushchev, Kennedy, Reagan, Gorbachev</td><td><span class="stamp s-grn">Recomendado</span></td></tr>
+      <tr><td>História americana (1776–1900)</td><td class="w">Alta nos EUA, onde a receita por view é maior. O vídeo da Guerra Civil do Markets of the Past fez 569 mil</td><td class="w">Alta nas histórias de dinheiro: Pony Express, Crédit Mobilier e a divisão da Standard Oil têm 5 ou mais vídeos cada. A Revolução já tem clone da fórmula</td><td>Washington, Lincoln, Custer, Rockefeller</td><td><span class="stamp s-amb">2ª opção</span></td></tr>
+      <tr><td>Roma Antiga</td><td class="w">A maior da história no YouTube</td><td class="w">Muito alta. “A moeda que matou Roma” tem mais de 10 vídeos</td><td>César, Nero (bustos)</td><td><span class="stamp s-red">Não agora</span></td></tr>
+      <tr><td>Magnatas da Era Dourada</td><td class="w">Média a alta</td><td class="w">Alta. Rockefeller, Carnegie e Vanderbilt têm documentários de todo tamanho</td><td>Rockefeller, J.P. Morgan</td><td><span class="stamp s-red">Não</span></td></tr>
+      <tr><td>Máfia e Lei Seca</td><td class="w">Alta</td><td class="w">Alta. Al Capone está saturado</td><td>Capone, Luciano</td><td><span class="stamp s-red">Não</span></td></tr>
+      <tr><td>Companhia das Índias</td><td class="w">Média</td><td class="w">Alta, com pelo menos 10 vídeos “how a company conquered India”</td><td>Poucos conhecidos</td><td><span class="stamp s-red">Não</span></td></tr>
+      <tr><td>Piratas</td><td class="w">Média</td><td class="w">Média</td><td>Não tem rosto real famoso; quebra a regra da thumbnail</td><td><span class="stamp s-red">Não</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2><span class="n">§3</span>Primeiros temas de Guerra Fria</h2>
+  <p>Escolhi perguntas sobre eventos que todo mundo conhece, com um líder famoso no centro. Ao lado de cada uma, o que encontrei em inglês.</p>
+  <div class="list">
+    <div class="it"><span class="t">The Real Reason Stalin Rejected the Marshall Plan</span><span class="stamp s-grn">Pouca concorrência</span>
+      <p class="why">Stalin recusa bilhões de dólares e proíbe o Leste Europeu de aceitar. <b>Em inglês só encontrei um short do Between 2 Wars e vídeos curtos de aula</b> (<a href="https://www.youtube.com/watch?v=h5_z93JifAc">exemplo</a>). Rostos: Stalin e Truman. Tem dinheiro no centro, como o seu formato pede.</p></div>
+    <div class="it"><span class="t">The Real Reason Khrushchev Was Overthrown</span><span class="stamp s-grn">Pouca concorrência</span>
+      <p class="why">O homem mais poderoso da URSS é derrubado pelos próprios aliados em 1964. A maioria dos vídeos é em russo; em inglês achei um episódio da série <a href="https://www.youtube.com/watch?v=quFOtUHYlCE">The Cold War</a> e dois vídeos menores (<a href="https://www.youtube.com/watch?v=0kb63qWWEX8">exemplo</a>). Rosto: Khrushchev.</p></div>
+    <div class="it"><span class="t">The Real Reason Stalin Blockaded Berlin</span><span class="stamp s-grn">Ângulo livre</span>
+      <p class="why">O bloqueio de 1948 começou quatro dias depois que os aliados lançaram uma moeda nova, o marco alemão. Os vídeos sobre o bloqueio contam a ponte aérea; nenhum que encontrei conta a história pela moeda. Rosto: Stalin.</p></div>
+    <div class="it"><span class="t">The Real Reason the Berlin Wall Went Up</span><span class="stamp s-amb">1 concorrente direto</span>
+      <p class="why">A Alemanha Oriental estava perdendo médicos, engenheiros e operários para o Oeste. Já existe <a href="https://www.youtube.com/watch?v=NEiNTL_k0ds">How a Brain Drain Built the Berlin Wall</a>; dá para fazer melhor, mas não é tema livre. Rostos: Khrushchev e Kennedy.</p></div>
+    <div class="it"><span class="t">Why Stalin Let the Korean War Happen</span><span class="stamp s-amb">Concorrência média</span>
+      <p class="why">Já há vídeos com esse ângulo (<a href="https://m.youtube.com/watch?v=bHNm9vJDzBc">Why Stalin Let the Korean War Happen</a>, <a href="https://www.youtube.com/watch?v=MGvDxZZUUz0">The Real Reason the Korean War Began</a>). Bom tema, mas não para estrear.</p></div>
+    <div class="it"><span class="t">Cuba, Afeganistão e o colapso da URSS</span><span class="stamp s-red">Já ocupados</span>
+      <p class="why">Os três já têm vídeos de 2026 com a mesma fórmula (links na seção 1). Deixe para depois, quando o canal tiver público.</p></div>
+  </div>
+</section>
+
+<section class="ask">
+  <h3>Teste de 10 minutos antes de decidir</h3>
+  <p>Use o mesmo método que você usou com os temas de Segunda Guerra. Digite devagar na busca do YouTube e anote o que ele completa e quantas views têm os primeiros resultados:</p>
+  <ul>
+    <li><code>marshall plan stalin</code> e <code>why did stalin reject</code></li>
+    <li><code>khrushchev</code> e <code>why was khrushchev</code></li>
+    <li><code>berlin blockade</code> e <code>berlin wall why</code></li>
+    <li>Para comparar com a segunda opção: <code>american revolution real reason</code> e <code>wild west</code></li>
+  </ul>
+  <p>Se a Guerra Fria aparecer forte (sugestões automáticas e vídeos com centenas de milhares de views), fechamos nela e eu monto os 5 primeiros vídeos com título, gancho e thumbnail, no mesmo formato do plano de lançamento. Se aparecer fraca, testamos a história americana. Pode mandar os prints aqui.</p>
+</section>
+
+</div>
