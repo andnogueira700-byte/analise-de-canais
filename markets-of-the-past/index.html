@@ -1,0 +1,339 @@
+<title>Markets of the Past</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: livro-razão de arquivo. Coluna única de leitura, tabelas com colunas de valores à direita, cartões só nas ideias de vídeo. */
+:root{
+  --paper:#EDF0EA; --sheet:#F7F8F4; --ink:#1C2430; --muted:#5A6573; --rule:#C9D0C6;
+  --ledger:#1F6B52; --mark:#9C2F23; --bar:#1F6B52; --bar-dim:#A9B7AC;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12171D; --sheet:#1A2129; --ink:#E4E8E2; --muted:#9AA5B1; --rule:#2E3843;
+  --ledger:#5FBF98; --mark:#E0796B; --bar:#5FBF98; --bar-dim:#3D4C46; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12171D; --sheet:#1A2129; --ink:#E4E8E2; --muted:#9AA5B1; --rule:#2E3843;
+  --ledger:#5FBF98; --mark:#E0796B; --bar:#5FBF98; --bar-dim:#3D4C46; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:17px/1.6 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:1;margin:0;text-wrap:balance;letter-spacing:.01em}
+h1{font-size:clamp(44px,9vw,76px);font-weight:800}
+h2{font-size:clamp(30px,5vw,40px);font-weight:800;display:flex;gap:12px;align-items:baseline}
+h2 .n{font-family:var(--mono);font-size:14px;color:var(--ledger);font-weight:500;letter-spacing:0}
+h3{font-size:24px;font-weight:700}
+p{margin:0;max-width:65ch}
+section{display:flex;flex-direction:column;gap:18px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:19px}
+.stamp{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  border:1.5px solid var(--mark);color:var(--mark);padding:2px 8px;transform:rotate(-2deg)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--mono);font-size:14px;color:var(--muted);border-block:1px solid var(--rule);padding-block:12px}
+.facts b{color:var(--ink);font-weight:500}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}
+td,th{padding:9px 8px;border-bottom:1px solid var(--rule);vertical-align:top;text-align:left}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td.v{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+td.t{min-width:220px}
+td.barcell{width:30%;min-width:90px}
+.bar{height:10px;background:var(--bar)}
+.bar.dim{background:var(--bar-dim)}
+.age{display:block;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.note{font-size:14px;color:var(--muted)}
+.formula{display:grid;gap:14px}
+.f{border-left:3px solid var(--ledger);padding:4px 0 4px 16px;display:flex;flex-direction:column;gap:6px}
+.f code{font-family:var(--mono);font-size:14px;color:var(--ledger);overflow-wrap:anywhere}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.cols>div{min-width:0;display:flex;flex-direction:column;gap:10px}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.plus li::marker{color:var(--ledger)} .minus li::marker{color:var(--mark)}
+.angle{background:var(--sheet);border:1px solid var(--rule);padding:22px;display:flex;flex-direction:column;gap:14px}
+.angle .tag{font-family:var(--mono);font-size:12px;color:var(--ledger);letter-spacing:.08em;text-transform:uppercase}
+.ideas{display:flex;flex-direction:column;gap:0;border-top:1px dashed var(--rule)}
+.idea{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding-block:12px;border-bottom:1px dashed var(--rule)}
+.idea .ti{font-weight:600;min-width:0}
+.idea .th{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:15px;background:var(--ink);color:var(--paper);padding:2px 8px;align-self:start;white-space:nowrap}
+.idea .why{grid-column:1/-1;font-size:15px;color:var(--muted)}
+@media (max-width:520px){.idea{grid-template-columns:1fr}.idea .th{justify-self:start;white-space:normal}}
+.patterns{border-left:3px solid var(--ledger);padding:4px 0 4px 16px;max-width:65ch}
+.vid{background:var(--sheet);border:1px solid var(--rule);padding:20px;display:flex;flex-direction:column;gap:16px}
+.vh{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:baseline}
+.rank{font-family:var(--mono);color:var(--ledger);font-size:14px}
+.vt{font-weight:600;min-width:0}
+.vv{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.vb{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.vb>div{min-width:0;display:flex;flex-direction:column;gap:4px}
+.vb p{font-size:15px}
+.lbl{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mine{border-top:1px dashed var(--rule);padding-top:14px;display:flex;flex-direction:column;gap:8px}
+.mine .lbl{color:var(--ledger)}
+.mt{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.mt .ti{font-weight:600;font-size:18px;min-width:0}
+.mt .th{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:15px;background:var(--ink);color:var(--paper);padding:2px 8px}
+.hook{font-style:italic;font-size:15px}
+.mine .why{font-size:15px;color:var(--muted)}
+.ask{border:2px solid var(--ink);padding:22px;display:flex;flex-direction:column;gap:12px}
+</style>
+
+<div class="wrap">
+
+<header style="display:flex;flex-direction:column;gap:16px">
+  <span class="eyebrow">Análise de canal · YouTube · outubro de 2026</span>
+  <h1>Markets of the Past</h1>
+  <p class="lede">Os 12 vídeos mais vistos do canal, por que cada um funcionou e uma versão sua, em inglês, com outro ângulo para cada um.</p>
+  <div class="facts">
+    <span><b>100 mil</b> inscritos</span><span><b>105</b> vídeos</span><span>primeiro vídeo há <b>~6 meses</b></span><span>duração <b>25 a 38 min</b></span>
+  </div>
+  <p class="note">Números lidos da aba "Populares" que você enviou. São aproximados, porque o YouTube arredonda as views.</p>
+</header>
+
+<section>
+  <h2><span class="n">§1</span>Onde estão as views</h2>
+  <p>Nenhum vídeo passa de 1,3 milhão. Os 12 mais vistos caem em três grupos: <b>Hitler e a Segunda Guerra</b> (5 vídeos), <b>a origem de uma guerra famosa</b> (Guerra Civil, Vietnã, Primeira Guerra) e <b>grandes rupturas religiosas</b> (Cruzadas, Cisma de 1054, Cristianismo e Judaísmo). Só um é de economia: a Grande Depressão.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Vídeo</th><th>Views</th><th></th></tr></thead>
+    <tbody>
+      <tr><td class="t">The Real Reason Hitler Never Invaded Switzerland<span class="age">há 9 dias</span></td><td class="v">1,3 mi</td><td class="barcell"><div class="bar" style="width:100.0%"></div></td></tr>
+      <tr><td class="t">The Real Reason Japan Attacked Pearl Harbor<span class="age">há 1 mês</span></td><td class="v">876 mil</td><td class="barcell"><div class="bar" style="width:67.4%"></div></td></tr>
+      <tr><td class="t">The Real Reason Hitler Invaded the Soviet Union<span class="age">há 2 semanas</span></td><td class="v">595 mil</td><td class="barcell"><div class="bar" style="width:45.8%"></div></td></tr>
+      <tr><td class="t">The True Origin of the American Civil War<span class="age">há 3 meses</span></td><td class="v">569 mil</td><td class="barcell"><div class="bar" style="width:43.8%"></div></td></tr>
+      <tr><td class="t">The True Origin of World War II: It Didn't Start in 1939<span class="age">há 2 meses</span></td><td class="v">550 mil</td><td class="barcell"><div class="bar" style="width:42.3%"></div></td></tr>
+      <tr><td class="t">The True Origin of the Great Depression<span class="age">há 3 meses</span></td><td class="v">422 mil</td><td class="barcell"><div class="bar" style="width:32.5%"></div></td></tr>
+      <tr><td class="t">The True Origin of the Crusades<span class="age">há 2 meses</span></td><td class="v">397 mil</td><td class="barcell"><div class="bar" style="width:30.5%"></div></td></tr>
+      <tr><td class="t">The Real Reason Christianity Split in Two — The Great Schism of 1054<span class="age">há 2 meses</span></td><td class="v">394 mil</td><td class="barcell"><div class="bar" style="width:30.3%"></div></td></tr>
+      <tr><td class="t">The True Origin of Christianity's Break With Judaism<span class="age">há 3 semanas</span></td><td class="v">366 mil</td><td class="barcell"><div class="bar" style="width:28.2%"></div></td></tr>
+      <tr><td class="t">The True Origin of the Vietnam War<span class="age">há 4 meses</span></td><td class="v">354 mil</td><td class="barcell"><div class="bar" style="width:27.2%"></div></td></tr>
+      <tr><td class="t">The Real Reason Hitler Never Invaded Sweden<span class="age">há 7 dias</span></td><td class="v">323 mil</td><td class="barcell"><div class="bar" style="width:24.8%"></div></td></tr>
+      <tr><td class="t">The True Origin of WWI<span class="age">há 4 meses</span></td><td class="v">302 mil</td><td class="barcell"><div class="bar" style="width:23.2%"></div></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">Barras na mesma escala (100% = 1,3 mi).</p>
+  <p>Os vídeos de Hitler mais novos são os que crescem mais rápido: Suíça fez 1,3 mi em 9 dias e Suécia fez 323 mil em 7 dias. Já os vídeos de economia com um vilão (Wilson, Soros, Churchill, Nixon), feitos em parceria com outro canal, ficaram entre 2,5 mil e 4,8 mil views. O nome do canal fala de mercados, mas o público vem pela guerra e pela religião.</p>
+</section>
+
+<section>
+  <h2><span class="n">§2</span>A fórmula do canal</h2>
+  <div class="formula">
+    <div class="f"><code>Why [Hitler / um país] [did / didn't] [X]?</code><p>Uma pergunta curta que o espectador já se fez. Na thumbnail vira "WHY NOT SWITZERLAND?" ou "WHY HITLER SPARED SWEDEN".</p></div>
+    <div class="f"><code>The Real Reason [X] — It Wasn't Just [explicação popular]</code><p>Pega a explicação que todo mundo conhece e promete que ela está incompleta.</p></div>
+    <div class="f"><code>The True Origin of [X]: What Historians Get Wrong</code><p>A versão mais usada. Promete corrigir "os historiadores", mas aparece em quase todo vídeo e já não diferencia nada.</p></div>
+  </div>
+  <div class="cols">
+    <div><h3>Thumbnail</h3><ul>
+      <li>Retrato em preto e branco do líder, sempre à direita.</li>
+      <li>Mapa envelhecido e rasgado com setas vermelhas e manchas de sangue.</li>
+      <li>Faixa de texto branco sobre preto, 2 ou 3 linhas em caixa alta.</li>
+      <li>Linha menor embaixo: "WHAT HISTORIANS GET WRONG" ou "THE REAL REASON".</li>
+    </ul></div>
+    <div><h3>Formato</h3><ul>
+      <li>Vídeos longos (25 a 38 min), narração em estilo documentário.</li>
+      <li>Publica quase todo dia: 105 vídeos em cerca de 6 meses.</li>
+      <li>Colaborações com canais irmãos (Market Fault Lines, Uncover Things, Uncover Old Files), sinal de uma rede de canais com produção em escala.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">§3</span>O que funciona e o que não funciona</h2>
+  <div class="cols">
+    <div><span class="stamp" style="border-color:var(--ledger);color:var(--ledger)">Funciona</span><ul class="plus">
+      <li>Hitler e um país neutro ("por que ele não invadiu?").</li>
+      <li>A origem de uma guerra que todo mundo estudou na escola.</li>
+      <li>Grandes rupturas religiosas: Cisma de 1054 e Cristianismo x Judaísmo passaram de 360 mil.</li>
+      <li>Uma pergunta curta e direta na thumbnail.</li>
+    </ul></div>
+    <div><span class="stamp">Não funciona</span><ul class="minus">
+      <li>Mistérios e relíquias: Voynich (8,5 mil), cremação (10 mil), Sudário de Turim (36 mil).</li>
+      <li>Economia com vilão: Wilson, Soros, Churchill e Nixon não passaram de 5 mil.</li>
+      <li>Batalhas pouco conhecidas fora do público de nicho.</li>
+      <li>Thumbnails todas iguais: no feed, um vídeo não se distingue do outro.</li>
+    </ul></div>
+  </div>
+  <p><b>Lacunas que esse canal não ocupa:</b> a história é sempre contada do ponto de vista do líder ou do Estado; quase nada sobre América Latina, África, Portugal ou Brasil; e o dinheiro aparece como acusação, nunca como o mecanismo concreto (quem pagou, quanto custou, quem lucrou).</p>
+</section>
+
+<section>
+  <h2><span class="n">§4</span>Vídeo por vídeo</h2>
+  <p>Para cada um dos 12 mais vistos: por que funcionou, o que ele deixa de fora e um vídeo seu que atende ao mesmo interesse do público com outro ângulo. Títulos, thumbnails e frases de abertura estão em inglês.</p>
+  <p class="note">O YouTube bloqueou o acesso direto ao canal daqui, então o conteúdo de cada vídeo deles é deduzido do título e da thumbnail. Confira os fatos históricos no roteiro antes de gravar.</p>
+  <div class="patterns"><b>A regra das suas versões:</b> manter o tema que já provou ter público (Hitler, guerra famosa, ruptura religiosa) e trocar a tese genérica por um fato específico e verificável, contado de outro ponto de vista.</div>
+  <article class="vid">
+    <div class="vh"><span class="rank">#1</span><span class="vt">The Real Reason Hitler Never Invaded Switzerland<span class="age">há 9 dias</span></span><span class="vv">1,3 mi</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>pergunta que todo mundo já se fez ("por que não?"), Hitler na thumbnail e um mistério com resposta. É o vídeo que mais cresce no canal: 1,3 mi em 9 dias.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>O depois. O ouro do Reichsbank que passou pela Suíça, parte dele saqueado, só foi investigado nos anos 1990. Em 1998 os bancos suíços fecharam um acordo de 1,25 bilhão de dólares com sobreviventes do Holocausto.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">Hitler's Gold and the $1.25 Billion Bill That Came 50 Years Late</span><span class="th">THE BILL CAME IN 1998</span></div>
+      <p class="hook">“In January 1997, a night guard at a Swiss bank found wartime records headed for the shredder. The next year, Switzerland's biggest banks agreed to pay one and a quarter billion dollars.”</p>
+      <p class="why">Pega o tema mais quente do canal agora, mas conta o que aconteceu com o dinheiro depois da guerra.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#2</span><span class="vt">The Real Reason Japan Attacked Pearl Harbor<span class="age">há 1 mês</span></span><span class="vv">876 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Evento que todo americano conhece, com a promessa de uma causa escondida.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>A decisão vista de dentro do Japão. Depois do embargo de petróleo de 1941, a Marinha japonesa calculava ter reserva para cerca de um ano e meio. Era guerra ou recuo, com um relógio correndo.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">You Are Japan in 1941. You Have 18 Months of Oil Left.</span><span class="th">18 MONTHS OF OIL</span></div>
+      <p class="hook">“It's August 1941. Your country imports most of its oil from the United States, and the United States just turned off the tap. Here are your three options.”</p>
+      <p class="why">Perspectiva "The Decision Room": o espectador escolhe antes de saber o desfecho. Bom para retenção e comentários.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#3</span><span class="vt">The Real Reason Hitler Invaded the Soviet Union<span class="age">há 2 semanas</span></span><span class="vv">595 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Hitler mais uma pergunta "por quê". Os vídeos de Hitler são o piso garantido do canal.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>O comércio entre os dois. Pelo acordo econômico de 1940, a União Soviética entregou petróleo e grãos para a Alemanha até os dias da invasão. Trens soviéticos de carga ainda cruzavam a fronteira em junho de 1941.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">Stalin Was Feeding Hitler's Army Until the Night of the Invasion</span><span class="th">HE FED HIS ENEMY</span></div>
+      <p class="hook">“On the night of June 21, 1941, Soviet trains loaded with grain were still rolling west into German territory. A few hours later, the German army rolled east.”</p>
+      <p class="why">Mesmo evento, mas o foco é o paradoxo e o dinheiro, não a estratégia militar.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#4</span><span class="vt">The True Origin of the American Civil War<span class="age">há 3 meses</span></span><span class="vv">569 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Tema enorme nos EUA e promessa de corrigir o que se aprende na escola.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>A aposta econômica do Sul. Em 1861 os confederados seguraram as exportações de algodão achando que a Grã-Bretanha seria forçada a entrar na guerra do lado deles. Os britânicos tinham estoque e passaram a comprar do Egito e da Índia.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">King Cotton: The Bet That Lost the Civil War</span><span class="th">THE BET THAT FAILED</span></div>
+      <p class="hook">“In 1861, the South believed it held the world hostage. Britain's mills ran on Southern cotton, and without it, they thought, London would have no choice.”</p>
+      <p class="why">Perspectiva "Biography of a Commodity": a guerra contada pelo algodão, com o mercado britânico do outro lado.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#5</span><span class="vt">The True Origin of World War II: It Didn't Start in 1939<span class="age">há 2 meses</span></span><span class="vv">550 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Contraria uma data que todo mundo aprendeu na escola. Promessa simples e fácil de entender na thumbnail.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>O momento exato. Em vez de voltar décadas, dá para contar os nove dias entre o pacto Molotov-Ribbentrop (23 de agosto de 1939) e a invasão da Polônia (1º de setembro), quando a guerra ainda podia ser evitada.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">9 Days: How World War II Became Unstoppable</span><span class="th">9 DAYS TO WAR</span></div>
+      <p class="hook">“On August 23, 1939, Hitler and Stalin's foreign ministers signed a deal that shocked the world. Nine days later, it was too late to stop anything.”</p>
+      <p class="why">Perspectiva "The Decision Room" em contagem regressiva, dia a dia. Formato diferente do "origem distante" que eles usam.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#6</span><span class="vt">The True Origin of the Great Depression<span class="age">há 3 meses</span></span><span class="vv">422 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>O único vídeo de economia entre os 12 mais vistos. Funciona porque a Grande Depressão é tão famosa quanto uma guerra.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>O resto do mundo, especialmente quem vendia matéria-prima. O Brasil passou anos queimando e jogando ao mar milhões de sacas de café para segurar o preço.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">Brazil Burned Its Own Coffee for 13 Years</span><span class="th">BURN THE COFFEE</span></div>
+      <p class="hook">“During the Great Depression, Brazil set fire to its most valuable product. Not once. For more than a decade, train after train of coffee went straight into the furnace.”</p>
+      <p class="why">Perspectiva "The Other Side": aqui o seu conhecimento de Brasil é vantagem direta. Confirme os números exatos das sacas no roteiro.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#7</span><span class="vt">The True Origin of the Crusades<span class="age">há 2 meses</span></span><span class="vv">397 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Religião e guerra juntas, num tema que todo mundo conhece por cima.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>A conta. A Quarta Cruzada encomendou uma frota de Veneza por 85 mil marcos de prata, não conseguiu pagar e acabou atacando cidades cristãs, até saquear Constantinopla em 1204.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">The Crusade That Attacked Christians to Pay Its Debts</span><span class="th">THEY COULDN'T PAY</span></div>
+      <p class="hook">“In 1201, the leaders of the Fourth Crusade ordered a fleet from Venice for 85,000 silver marks. When the bill came due, they didn't have the money.”</p>
+      <p class="why">Mesmo tema, mas um episódio específico com dinheiro no centro. É a dose certa de "mercados".</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#8</span><span class="vt">The Real Reason Christianity Split in Two — The Great Schism of 1054<span class="age">há 2 meses</span></span><span class="vv">394 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Ruptura que qualquer cristão sente até hoje, com a promessa de um motivo escondido.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>Um detalhe pouco contado: quando o cardeal Humberto deixou a bula de excomunhão no altar de Santa Sofia, em 16 de julho de 1054, o papa Leão IX que o enviou já tinha morrido havia três meses. E as excomunhões só foram retiradas em 1965.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">The Excommunication Sent by a Pope Who Was Already Dead</span><span class="th">THE POPE WAS DEAD</span></div>
+      <p class="hook">“On July 16, 1054, a cardinal walked into Hagia Sophia and laid a document on the altar. The pope who had sent him had been dead for three months.”</p>
+      <p class="why">Abre com um fato surpreendente e verificável, em vez de "o que os historiadores erram".</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#9</span><span class="vt">The True Origin of Christianity's Break With Judaism<span class="age">há 3 semanas</span></span><span class="vv">366 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Tema de identidade, sensível e cheio de curiosidade. 366 mil em só 3 semanas.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>O dinheiro. Depois da destruição de Jerusalém no ano 70, Roma criou um imposto especial para judeus. Alguns historiadores, como Martin Goodman, defendem que decidir quem pagava ajudou a separar cristãos e judeus como grupos.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">The Roman Tax That Helped Split Christians From Jews</span><span class="th">A TAX SPLIT THEM?</span></div>
+      <p class="hook">“After Jerusalem fell in 70 AD, Rome made every Jew in the empire pay a special tax. Deciding who had to pay it mattered more than anyone expected.”</p>
+      <p class="why">Apresente como uma das explicações dos historiadores, não como "a verdade". Isso dá credibilidade num tema delicado.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#10</span><span class="vt">The True Origin of the Vietnam War<span class="age">há 4 meses</span></span><span class="vv">354 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Contraria o que o público americano pensa ("começou com a França, não com a América").</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>O lado vietnamita. Em 2 de setembro de 1945, Ho Chi Minh abriu a declaração de independência citando a Declaração de Independência americana, e escreveu cartas a Truman que nunca foram respondidas.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">Ho Chi Minh Wrote to Truman. Truman Never Answered.</span><span class="th">THE UNANSWERED LETTERS</span></div>
+      <p class="hook">“On September 2, 1945, Ho Chi Minh stood before a crowd in Hanoi and opened with words from the American Declaration of Independence.”</p>
+      <p class="why">Perspectiva "The Other Side": a guerra começando pelo olhar de quem estava do outro lado.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#11</span><span class="vt">The Real Reason Hitler Never Invaded Sweden<span class="age">há 7 dias</span></span><span class="vv">323 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Mesma estrutura do vídeo da Suíça, publicado logo depois. Eles estão repetindo o que funcionou.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>O produto. A Suécia vendia minério de ferro e rolamentos de esferas para a Alemanha. Os Aliados bombardearam Schweinfurt em 1943 justamente para cortar os rolamentos.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">The Smallest Weapon of WWII Was Made in Sweden</span><span class="th">THE SMALLEST WEAPON</span></div>
+      <p class="hook">“Every German tank, every aircraft engine, every U-boat needed thousands of tiny steel balls. And a huge share of them came from one neutral country.”</p>
+      <p class="why">Perspectiva "Biography of a Commodity": a guerra contada pelo rolamento. A thumbnail mostra o objeto, não o Hitler.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#12</span><span class="vt">The True Origin of WWI<span class="age">há 4 meses</span></span><span class="vv">302 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Origem de guerra famosa, mesma fórmula dos outros.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>O mercado. Em 31 de julho de 1914 a Bolsa de Londres fechou e só reabriu em janeiro de 1915. A de Nova York também fechou por meses. O pânico financeiro chegou antes dos tiros.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">The Week the World's Stock Markets Shut Down: July 1914</span><span class="th">MARKETS CLOSED. WAR NEXT.</span></div>
+      <p class="hook">“On July 31, 1914, the London Stock Exchange closed its doors. It would not reopen for five months.”</p>
+      <p class="why">Usa o nome "markets" do jeito que o canal deles não usa: a guerra vista pela bolsa.</p>
+    </div>
+  </article>
+</section>
+
+<section>
+  <h2><span class="n">§5</span>Como não copiar</h2>
+  <ul>
+    <li><b>Visual próprio:</b> trocar mapa rasgado + retrato P&amp;B por algo do seu ângulo (recibos, cédulas antigas, livros-razão, gráficos de preço). Manter só o princípio: um rosto ou objeto grande e no máximo 4 palavras.</li>
+    <li><b>Fórmula de título própria:</b> por exemplo "What It Cost to…", "Who Paid for…" ou "You Are [pessoa] in [ano]: …". Evitar "The Real Reason" e "What Historians Get Wrong", que são a marca deles.</li>
+    <li><b>Fontes na tela:</b> mostrar o documento, a tabela de preços ou o jornal da época. É o contrário do "os historiadores erram" sem prova, e dá credibilidade.</li>
+    <li><b>Temas sim, roteiro não:</b> pode cobrir o mesmo evento que eles, mas nunca com a mesma tese, a mesma ordem de argumentos ou um título parecido.</li>
+  </ul>
+</section>
+
+<section class="ask">
+  <h3>Próximo passo</h3>
+  <p>Eu começaria pelo #1 (o ouro da Suíça) ou pelo #8 (o papa que já tinha morrido): o primeiro pega o tema que mais cresce no canal agora, e o segundo abre com um fato surpreendente num grupo de temas que eles quase não exploraram. Escolha um e eu escrevo o roteiro completo em inglês.</p>
+</section>
+
+</div>

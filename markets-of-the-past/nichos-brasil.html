@@ -1,0 +1,146 @@
+<title>Nichos no Brasil</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: livro-razão de arquivo. Coluna única de leitura, tabelas com colunas de valores à direita, cartões só nas ideias de vídeo. */
+:root{
+  --paper:#EDF0EA; --sheet:#F7F8F4; --ink:#1C2430; --muted:#5A6573; --rule:#C9D0C6;
+  --ledger:#1F6B52; --mark:#9C2F23; --bar:#1F6B52; --bar-dim:#A9B7AC;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12171D; --sheet:#1A2129; --ink:#E4E8E2; --muted:#9AA5B1; --rule:#2E3843;
+  --ledger:#5FBF98; --mark:#E0796B; --bar:#5FBF98; --bar-dim:#3D4C46; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12171D; --sheet:#1A2129; --ink:#E4E8E2; --muted:#9AA5B1; --rule:#2E3843;
+  --ledger:#5FBF98; --mark:#E0796B; --bar:#5FBF98; --bar-dim:#3D4C46; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:17px/1.6 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:1;margin:0;text-wrap:balance;letter-spacing:.01em}
+h1{font-size:clamp(44px,9vw,76px);font-weight:800}
+h2{font-size:clamp(30px,5vw,40px);font-weight:800;display:flex;gap:12px;align-items:baseline}
+h2 .n{font-family:var(--mono);font-size:14px;color:var(--ledger);font-weight:500;letter-spacing:0}
+h3{font-size:24px;font-weight:700}
+p{margin:0;max-width:65ch}
+section{display:flex;flex-direction:column;gap:18px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:19px}
+.stamp{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  border:1.5px solid var(--mark);color:var(--mark);padding:2px 8px;transform:rotate(-2deg)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--mono);font-size:14px;color:var(--muted);border-block:1px solid var(--rule);padding-block:12px}
+.facts b{color:var(--ink);font-weight:500}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}
+td,th{padding:9px 8px;border-bottom:1px solid var(--rule);vertical-align:top;text-align:left}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td.v{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+td.t{min-width:220px}
+td.barcell{width:30%;min-width:90px}
+.bar{height:10px;background:var(--bar)}
+.bar.dim{background:var(--bar-dim)}
+.age{display:block;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.note{font-size:14px;color:var(--muted)}
+.formula{display:grid;gap:14px}
+.f{border-left:3px solid var(--ledger);padding:4px 0 4px 16px;display:flex;flex-direction:column;gap:6px}
+.f code{font-family:var(--mono);font-size:14px;color:var(--ledger);overflow-wrap:anywhere}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.cols>div{min-width:0;display:flex;flex-direction:column;gap:10px}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.plus li::marker{color:var(--ledger)} .minus li::marker{color:var(--mark)}
+.angle{background:var(--sheet);border:1px solid var(--rule);padding:22px;display:flex;flex-direction:column;gap:14px}
+.angle .tag{font-family:var(--mono);font-size:12px;color:var(--ledger);letter-spacing:.08em;text-transform:uppercase}
+.ideas{display:flex;flex-direction:column;gap:0;border-top:1px dashed var(--rule)}
+.idea{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding-block:12px;border-bottom:1px dashed var(--rule)}
+.idea .ti{font-weight:600;min-width:0}
+.idea .th{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:15px;background:var(--ink);color:var(--paper);padding:2px 8px;align-self:start;white-space:nowrap}
+.idea .why{grid-column:1/-1;font-size:15px;color:var(--muted)}
+@media (max-width:520px){.idea{grid-template-columns:1fr}.idea .th{justify-self:start;white-space:normal}}
+.patterns{border-left:3px solid var(--ledger);padding:4px 0 4px 16px;max-width:65ch}
+.vid{background:var(--sheet);border:1px solid var(--rule);padding:20px;display:flex;flex-direction:column;gap:16px}
+.vh{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:baseline}
+.rank{font-family:var(--mono);color:var(--ledger);font-size:14px}
+.vt{font-weight:600;min-width:0}
+.vv{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.vb{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.vb>div{min-width:0;display:flex;flex-direction:column;gap:4px}
+.vb p{font-size:15px}
+.lbl{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mine{border-top:1px dashed var(--rule);padding-top:14px;display:flex;flex-direction:column;gap:8px}
+.mine .lbl{color:var(--ledger)}
+.mt{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.mt .ti{font-weight:600;font-size:18px;min-width:0}
+.mt .th{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:15px;background:var(--ink);color:var(--paper);padding:2px 8px}
+.hook{font-style:italic;font-size:15px}
+.mine .why{font-size:15px;color:var(--muted)}
+.ask{border:2px solid var(--ink);padding:22px;display:flex;flex-direction:column;gap:12px}
+.niche{background:var(--sheet);border:1px solid var(--rule);padding:20px;display:flex;flex-direction:column;gap:12px}
+.niche.rec{border:2px solid var(--ledger)}
+.nh{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:baseline}
+.score{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px 16px}
+.score div{display:flex;flex-direction:column;gap:2px;min-width:0}
+.score b{font-family:var(--mono);font-weight:500;font-size:14px}
+.lbl{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.pill{font-family:var(--mono);font-size:12px;padding:2px 8px;border:1px solid currentColor;text-transform:uppercase;letter-spacing:.06em}
+.g{color:var(--ledger)} .r{color:var(--mark)} .m{color:var(--muted)}
+.vl{list-style:none;padding:0;margin:0;display:flex;flex-direction:column}
+.vl li{display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding-block:10px;border-bottom:1px dashed var(--rule)}
+.vl .t{font-weight:600;min-width:0}
+.vl .th{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:15px;background:var(--ink);color:var(--paper);padding:2px 8px;align-self:start}
+.vl .w{grid-column:1/-1;font-size:15px;color:var(--muted)}
+@media (max-width:520px){.vl li{grid-template-columns:1fr}.vl .th{justify-self:start}}
+</style>
+<div class="wrap">
+<header style="display:flex;flex-direction:column;gap:16px">
+  <span class="eyebrow">Nichos para um canal em português · outubro de 2026</span>
+  <h1>Nichos no Brasil</h1>
+  <p class="lede">Onde a estrutura do Markets of the Past (pergunta forte, documentário longo, arquivo, cartões, mapas, dinheiro como explicação) tem espaço para entrar no público brasileiro.</p>
+  <p class="note">Concorrência levantada por buscas na web, que mostram quais canais e vídeos existem, mas quase nunca mostram as views. Antes de decidir, teste no YouTube como está descrito no fim desta página.</p>
+</header>
+
+<section>
+  <h2><span class="n">§1</span>O espaço vazio</h2>
+  <p>A história no YouTube brasileiro é dominada por canais com apresentador e personalidade: Nostalgia, Buenas Ideias, Nerdologia, Débora Aladim e Brasil Paralelo. O formato de documentário com narração, arquivo, cartões e mapas, sem rosto na tela, já é comum em inglês e cresce em espanhol (“La verdadera razón…”), mas quase não aparece em português. Esse é o oceano azul: o espaço vazio é <b>o formato</b>, mais do que o tema.</p>
+  <p>O melhor nicho junta esse formato com perguntas que só o brasileiro tem.</p>
+</section>
+
+<section>
+  <h2><span class="n">§2</span>Cinco nichos comparados</h2>
+  <div class="niche rec"><div class="nh"><h3>Por que o Brasil…? Dinheiro, obras e decisões</h3><span class="pill g">Recomendado</span></div><p>A pergunta “por que o Brasil…” faz o papel que “why Hitler didn't…” faz nos EUA: uma dúvida que milhões de pessoas já tiveram, com uma resposta que envolve dinheiro, interesses e decisões. Trens abandonados, a Transamazônica inacabada, a borracha perdida para a Ásia, a Fordlândia, o carro nacional que nunca veio.</p>
+<div class="score"><div><span class="lbl">Concorrência no formato</span><b>Baixa no formato. Há vídeos soltos de portais de notícia e canais de negócios, mas nenhum canal dedicado com documentário longo, arquivo e a pergunta como marca.</b></div><div><span class="lbl">Demanda</span><b>Alta. São assuntos que aparecem em matérias de grandes portais e geram debate.</b></div><div><span class="lbl">Encaixe na estrutura</span><b>Ótimo. Mapas, documentos, números, personagens e dinheiro, tudo o que o formato usa.</b></div></div></div>
+<div class="niche "><div class="nh"><h3>Crises e golpes financeiros que o brasileiro viveu</h3><span class="pill m">Forte, com ressalva</span></div><p>Confisco do Collor, hiperinflação, Plano Cruzado, Plano Real, Encilhamento, Boi Gordo, Banco Santos, Encol, Americanas. A audiência viveu ou ouviu falar em casa, o que cria muita identificação e comentário.</p>
+<div class="score"><div><span class="lbl">Concorrência no formato</span><b>Média. O Brasil Paralelo acabou de lançar um documentário sobre 40 anos da economia, e canais de finanças com apresentador cobrem os casos de empresas. A Varig, por exemplo, já tem muitos vídeos.</b></div><div><span class="lbl">Demanda</span><b>Alta, principalmente confisco e hiperinflação.</b></div><div><span class="lbl">Encaixe na estrutura</span><b>Bom, mas as imagens de TV da época são em grande parte da Globo e de outras emissoras e não podem ser usadas livremente.</b></div></div></div>
+<div class="niche "><div class="nh"><h3>Os vencedores americanos em português</h3><span class="pill m">Atalho, sem diferencial</span></div><p>Pegar os temas que já provaram demanda nos EUA (Hitler e a Suíça, Pearl Harbor, Guerra Civil) e fazer versões próprias em português. O formato de documentário com “a verdadeira razão” existe em inglês e em espanhol, mas quase não aparece em português.</p>
+<div class="score"><div><span class="lbl">Concorrência no formato</span><b>Média. A Segunda Guerra em português é coberta por canais grandes com apresentador (Nostalgia, Nerdologia, Buenas Ideias), mas não nesse formato.</b></div><div><span class="lbl">Demanda</span><b>Alta e já comprovada lá fora.</b></div><div><span class="lbl">Encaixe na estrutura</span><b>Perfeito, porque é a mesma estrutura. O risco é ser só uma versão traduzida e não construir uma marca própria.</b></div></div></div>
+<div class="niche "><div class="nh"><h3>História do Brasil que a escola não contou</h3><span class="pill m">Concorrido</span></div><p>Império, Guerra do Paraguai, Independência, Canudos, contados pela verdadeira razão.</p>
+<div class="score"><div><span class="lbl">Concorrência no formato</span><b>Alta. Buenas Ideias, Débora Aladim, Nostalgia, Brasil Paralelo e TV Senado já ocupam o espaço.</b></div><div><span class="lbl">Demanda</span><b>Alta, mas puxada pelo público de vestibular.</b></div><div><span class="lbl">Encaixe na estrutura</span><b>Bom, mas sem espaço para ser pioneiro.</b></div></div></div>
+<div class="niche "><div class="nh"><h3>Ditadura militar e Guerra Fria no Brasil</h3><span class="pill r">Evitar no começo</span></div><p>Tem muita busca, mas é o tema mais polarizado do país.</p>
+<div class="score"><div><span class="lbl">Concorrência no formato</span><b>Média.</b></div><div><span class="lbl">Demanda</span><b>Alta.</b></div><div><span class="lbl">Encaixe na estrutura</span><b>O risco é alto: comentários em guerra, denúncias, anunciantes evitando e a percepção de lado político logo no início do canal.</b></div></div></div>
+
+</section>
+
+<section>
+  <h2><span class="n">§3</span>Os 10 primeiros vídeos do nicho recomendado</h2>
+  <p>Mesma estrutura de título que venceu lá fora: uma pergunta ou “a verdadeira razão”, um evento que o público conhece e o dinheiro como resposta. Thumbnail com rosto famoso à esquerda, um objeto que mostra o ângulo e no máximo 4 palavras.</p>
+  <ul class="vl"><li><span class="t">A verdadeira razão do Brasil ter abandonado os trens</span><span class="th">QUEM MATOU OS TRENS?</span><span class="w">Rosto do JK à esquerda e um trem abandonado no mato. O dinheiro está nas montadoras, nas rodovias e nas decisões de governo, com datas e números.</span></li><li><span class="t">Por que a Transamazônica nunca foi terminada</span><span class="th">4 MIL KM PARA LUGAR NENHUM</span><span class="w">Rosto do Médici e a estrada de terra sumindo na floresta. Uma obra gigante, o “milagre econômico” e a conta que ficou.</span></li><li><span class="t">Fordlândia: a cidade de Henry Ford no meio da Amazônia</span><span class="th">FORD NA AMAZÔNIA</span><span class="w">Rosto do Henry Ford e uma casa americana no meio da selva. História conhecida lá fora e pouco contada aqui.</span></li><li><span class="t">Como o Brasil perdeu o monopólio da borracha para a Ásia</span><span class="th">AS SEMENTES ROUBADAS</span><span class="w">Rosto de Henry Wickham e um saco de sementes. Manaus rica e falida em poucos anos.</span></li><li><span class="t">A verdadeira razão do confisco da poupança em 1990</span><span class="th">SEU DINHEIRO SUMIU</span><span class="w">Rosto do Collor e uma caderneta de poupança. O tema com mais identificação de todos: quase toda família tem uma história.</span></li><li><span class="t">Por que 5 planos econômicos falharam e o Real deu certo</span><span class="th">5 PLANOS, 1 MOEDA</span><span class="w">Rosto do FHC ou do Itamar e uma pilha de cédulas antigas carimbadas. Cruzado, Bresser, Verão, Collor e o Real.</span></li><li><span class="t">Por que o Brasil nunca teve um carro nacional</span><span class="th">O CARRO QUE NÃO VEIO</span><span class="w">Rosto do Gurgel e um carro dele. Gurgel, Romi-Isetta, o fim do sonho e as montadoras estrangeiras.</span></li><li><span class="t">A verdadeira razão do Brasil ter construído Brasília</span><span class="th">UMA CAPITAL DO NADA</span><span class="w">Rosto do JK e o Plano Piloto em construção. A conta da obra e o que ela fez com a inflação.</span></li><li><span class="t">O Encilhamento: a primeira bolha da bolsa no Brasil</span><span class="th">A BOLHA DE 1890</span><span class="w">Rosto de Rui Barbosa e ações antigas. A especulação logo depois da República, pouco conhecida e com tudo para virar história de dinheiro.</span></li><li><span class="t">Por que o Brasil tem petróleo e paga caro na gasolina</span><span class="th">RICO EM PETRÓLEO, POBRE NA BOMBA</span><span class="w">Tema do dia a dia ligado à história da Petrobras. Cuidado com o tom político.</span></li></ul>
+  <p>Para começar, eu iria nos trens, no confisco e na Fordlândia. Os trens e o confisco têm a maior identificação com o público. A Fordlândia é a história mais surpreendente para quem nunca ouviu falar.</p>
+</section>
+
+<section>
+  <h2><span class="n">§4</span>O que muda em relação ao canal americano</h2>
+  <ul>
+    <li><b>Monetização menor.</b> O que o anunciante paga por mil views no Brasil costuma ser bem menor que nos EUA. O canal precisa de mais views para a mesma receita, ou de outras fontes (patrocínio, membros).</li>
+    <li><b>Imagens de arquivo.</b> Filmes de TV da época são, em grande parte, da Globo e de outras emissoras e podem gerar bloqueio por direitos autorais. Fontes mais seguras: as fotos da Agência Brasil (licença livre com crédito), o Arquivo Nacional, a Biblioteca Nacional Digital e o Wikimedia Commons.</li>
+    <li><b>Política.</b> Quase todo tema brasileiro recente tem um lado político. O roteiro precisa mostrar números e documentos e evitar adjetivos, para não virar briga nos comentários.</li>
+    <li><b>Duração.</b> Comece com 20 a 25 minutos em vez de 30. Dá para subir depois, se a retenção mostrar que o público aguenta.</li>
+  </ul>
+</section>
+
+<section class="ask">
+  <h3>Como validar antes de gravar (30 minutos)</h3>
+  <p>No YouTube, digite “por que o brasil” e anote as sugestões do autocompletar. Depois busque cada um dos 10 temas acima e anote as views dos 5 primeiros resultados e a data de cada vídeo. Tema com vídeos antigos e muitas views, e poucos vídeos recentes, é sinal verde. Se você me mandar prints dessas buscas, eu faço o ranking final.</p>
+</section>
+</div>
