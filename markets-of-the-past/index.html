@@ -1,0 +1,208 @@
+<title>Markets of the Past</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: livro-razão de arquivo. Coluna única de leitura, tabelas com colunas de valores à direita, cartões só nas ideias de vídeo. */
+:root{
+  --paper:#EDF0EA; --sheet:#F7F8F4; --ink:#1C2430; --muted:#5A6573; --rule:#C9D0C6;
+  --ledger:#1F6B52; --mark:#9C2F23; --bar:#1F6B52; --bar-dim:#A9B7AC;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12171D; --sheet:#1A2129; --ink:#E4E8E2; --muted:#9AA5B1; --rule:#2E3843;
+  --ledger:#5FBF98; --mark:#E0796B; --bar:#5FBF98; --bar-dim:#3D4C46; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12171D; --sheet:#1A2129; --ink:#E4E8E2; --muted:#9AA5B1; --rule:#2E3843;
+  --ledger:#5FBF98; --mark:#E0796B; --bar:#5FBF98; --bar-dim:#3D4C46; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:17px/1.6 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:1;margin:0;text-wrap:balance;letter-spacing:.01em}
+h1{font-size:clamp(44px,9vw,76px);font-weight:800}
+h2{font-size:clamp(30px,5vw,40px);font-weight:800;display:flex;gap:12px;align-items:baseline}
+h2 .n{font-family:var(--mono);font-size:14px;color:var(--ledger);font-weight:500;letter-spacing:0}
+h3{font-size:24px;font-weight:700}
+p{margin:0;max-width:65ch}
+section{display:flex;flex-direction:column;gap:18px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:19px}
+.stamp{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  border:1.5px solid var(--mark);color:var(--mark);padding:2px 8px;transform:rotate(-2deg)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--mono);font-size:14px;color:var(--muted);border-block:1px solid var(--rule);padding-block:12px}
+.facts b{color:var(--ink);font-weight:500}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}
+td,th{padding:9px 8px;border-bottom:1px solid var(--rule);vertical-align:top;text-align:left}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td.v{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+td.t{min-width:220px}
+td.barcell{width:30%;min-width:90px}
+.bar{height:10px;background:var(--bar)}
+.bar.dim{background:var(--bar-dim)}
+.age{display:block;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.note{font-size:14px;color:var(--muted)}
+.formula{display:grid;gap:14px}
+.f{border-left:3px solid var(--ledger);padding:4px 0 4px 16px;display:flex;flex-direction:column;gap:6px}
+.f code{font-family:var(--mono);font-size:14px;color:var(--ledger);overflow-wrap:anywhere}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.cols>div{min-width:0;display:flex;flex-direction:column;gap:10px}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.plus li::marker{color:var(--ledger)} .minus li::marker{color:var(--mark)}
+.angle{background:var(--sheet);border:1px solid var(--rule);padding:22px;display:flex;flex-direction:column;gap:14px}
+.angle .tag{font-family:var(--mono);font-size:12px;color:var(--ledger);letter-spacing:.08em;text-transform:uppercase}
+.ideas{display:flex;flex-direction:column;gap:0;border-top:1px dashed var(--rule)}
+.idea{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding-block:12px;border-bottom:1px dashed var(--rule)}
+.idea .ti{font-weight:600;min-width:0}
+.idea .th{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:15px;background:var(--ink);color:var(--paper);padding:2px 8px;align-self:start;white-space:nowrap}
+.idea .why{grid-column:1/-1;font-size:15px;color:var(--muted)}
+@media (max-width:520px){.idea{grid-template-columns:1fr}.idea .th{justify-self:start;white-space:normal}}
+.ask{border:2px solid var(--ink);padding:22px;display:flex;flex-direction:column;gap:12px}
+</style>
+
+<div class="wrap">
+
+<header style="display:flex;flex-direction:column;gap:16px">
+  <span class="eyebrow">Análise de canal · YouTube · outubro de 2026</span>
+  <h1>Markets of the Past</h1>
+  <p class="lede">O que faz esse canal crescer, onde a fórmula está se desgastando e quatro perspectivas para tratar os mesmos temas sem copiar o formato.</p>
+  <div class="facts">
+    <span><b>100 mil</b> inscritos</span><span><b>105</b> vídeos</span><span>primeiro vídeo há <b>~6 meses</b></span><span>duração <b>23 a 38 min</b></span>
+  </div>
+  <p class="note">Todos os números foram lidos do print enviado e são aproximados (views arredondadas pelo YouTube).</p>
+</header>
+
+<section>
+  <h2><span class="n">§1</span>Onde estão as views</h2>
+  <p>Os quatro maiores sucessos são os mais antigos, e todos são sobre <b>dinheiro com um culpado de nome conhecido</b>. Depois o canal virou "história geral" e a média caiu, com exceção dos vídeos de Hitler e da Segunda Guerra.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Vídeo</th><th>Views</th><th></th></tr></thead>
+    <tbody>
+      <tr><td class="t">Woodrow Wilson admitted he destroyed America<span class="age">há 6 meses</span></td><td class="v">4,8 mi</td><td class="barcell"><div class="bar" style="width:100%"></div></td></tr>
+      <tr><td class="t">George Soros broke the Bank of England in 1992<span class="age">há 6 meses</span></td><td class="v">3,5 mi</td><td class="barcell"><div class="bar" style="width:72.9%"></div></td></tr>
+      <tr><td class="t">Churchill starved 3 million Indians to finance WWII<span class="age">há 6 meses</span></td><td class="v">3,1 mi</td><td class="barcell"><div class="bar" style="width:64.6%"></div></td></tr>
+      <tr><td class="t">Nixon destroyed the global financial system in 15 minutes<span class="age">há 5 meses</span></td><td class="v">2,5 mi</td><td class="barcell"><div class="bar" style="width:52.1%"></div></td></tr>
+      <tr><td class="t">The real reason Hitler never invaded Switzerland<span class="age">há 9 dias</span></td><td class="v">1,3 mi</td><td class="barcell"><div class="bar" style="width:27.1%"></div></td></tr>
+      <tr><td class="t">The real reason Japan attacked Pearl Harbor<span class="age">há 1 mês</span></td><td class="v">876 mil</td><td class="barcell"><div class="bar dim" style="width:18.3%"></div></td></tr>
+      <tr><td class="t">The real reason Hitler invaded the Soviet Union<span class="age">há 2 semanas</span></td><td class="v">595 mil</td><td class="barcell"><div class="bar dim" style="width:12.4%"></div></td></tr>
+      <tr><td class="t">The true origin of the American Civil War<span class="age">há 3 meses</span></td><td class="v">569 mil</td><td class="barcell"><div class="bar dim" style="width:11.9%"></div></td></tr>
+      <tr><td class="t">The true origin of WWII: it didn't start in 1939<span class="age">há 2 meses</span></td><td class="v">550 mil</td><td class="barcell"><div class="bar dim" style="width:11.5%"></div></td></tr>
+      <tr><td class="t">The true origin of the Great Depression<span class="age">há 3 meses</span></td><td class="v">422 mil</td><td class="barcell"><div class="bar dim" style="width:8.8%"></div></td></tr>
+      <tr><td class="t">The true origin of the Crusades<span class="age">há 2 meses</span></td><td class="v">397 mil</td><td class="barcell"><div class="bar dim" style="width:8.3%"></div></td></tr>
+      <tr><td class="t">The true origin of the Voynich manuscript<span class="age">há 1 mês</span></td><td class="v">8,5 mil</td><td class="barcell"><div class="bar dim" style="width:.5%"></div></td></tr>
+      <tr><td class="t">The true origin of the storming of the Bastille<span class="age">há 2 meses</span></td><td class="v">6,1 mil</td><td class="barcell"><div class="bar dim" style="width:.5%"></div></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">Barras na mesma escala (100% = 4,8 mi). Verde forte: vídeos de dinheiro ou Hitler/Segunda Guerra acima de 1 mi.</p>
+</section>
+
+<section>
+  <h2><span class="n">§2</span>A fórmula do canal</h2>
+  <div class="formula">
+    <div class="f"><code>[Pessoa famosa] + [verbo de culpa] + [algo enorme] + [número]</code><p>A fórmula dos primeiros sucessos: "Nixon destruiu o sistema financeiro em 15 minutos". Vilão, escala e um número que parece impossível.</p></div>
+    <div class="f"><code>The Real Reason [X] — It Wasn't Just [explicação popular]</code><p>Pega a explicação que todo mundo conhece (o inverno russo, a bomba atômica, a Ana Bolena) e promete que ela está incompleta.</p></div>
+    <div class="f"><code>The True Origin of [X]: What Historians Get Wrong</code><p>A versão mais usada nos últimos meses. Promete corrigir "os historiadores", mas aparece em quase todo vídeo e já não diferencia nada.</p></div>
+  </div>
+  <div class="cols">
+    <div><h3>Thumbnail</h3><ul>
+      <li>Retrato em preto e branco do líder, sempre à direita.</li>
+      <li>Mapa envelhecido e rasgado com setas vermelhas e manchas de sangue.</li>
+      <li>Faixa de texto branco sobre preto, 2 ou 3 linhas em caixa alta.</li>
+      <li>Linha menor embaixo: "WHAT HISTORIANS GET WRONG" ou "THE REAL REASON".</li>
+    </ul></div>
+    <div><h3>Formato</h3><ul>
+      <li>Vídeos longos (25 a 38 min), narração em estilo documentário.</li>
+      <li>Publica quase todo dia: 105 vídeos em cerca de 6 meses.</li>
+      <li>Colaborações com canais irmãos (Market Fault Lines, Uncover Things, Uncover Old Files), sinal de uma rede de canais com produção em escala.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">§3</span>O que funciona e o que não funciona</h2>
+  <div class="cols">
+    <div><span class="stamp" style="border-color:var(--ledger);color:var(--ledger)">Funciona</span><ul class="plus">
+      <li>Dinheiro como explicação escondida de um fato famoso.</li>
+      <li>Um rosto que todo mundo reconhece na thumbnail.</li>
+      <li>Contrariar uma explicação popular ("não foi só X").</li>
+      <li>Hitler e Segunda Guerra continuam puxando views mesmo com o canal em queda.</li>
+    </ul></div>
+    <div><span class="stamp">Não funciona</span><ul class="minus">
+      <li>Religião e mistérios (Voynich, cremação, Bíblia etíope) ficam abaixo de 20 mil.</li>
+      <li>Thumbnails todas iguais: no feed, um vídeo não se distingue do outro.</li>
+      <li>O nome promete <i>mercados</i>, mas o canal saiu do tema que o fez crescer.</li>
+      <li>"O que os historiadores erram" repetido em todo vídeo soa como clickbait e arrisca a credibilidade.</li>
+    </ul></div>
+  </div>
+  <p><b>Lacunas que ninguém está ocupando nesse canal:</b> quase nada sobre América Latina, África, Portugal ou Brasil; a história é sempre contada do ponto de vista do líder ou do Estado; nunca da pessoa comum que pagou a conta.</p>
+</section>
+
+<section>
+  <h2><span class="n">§4</span>Quatro perspectivas novas</h2>
+  <p>A ideia é manter o que atrai (dinheiro, um fato famoso, uma explicação que contraria o senso comum) e trocar o ponto de vista, o idioma e a identidade visual. Assim os temas podem até se cruzar, mas o vídeo é outro.</p>
+
+  <div class="angle">
+    <span class="tag">Perspectiva A · recomendada</span>
+    <h3>Visto do Sul</h3>
+    <p>Os mesmos eventos mundiais, contados a partir do Brasil, de Portugal e das colônias. O público em português quase não tem esse tipo de conteúdo, e o ângulo é impossível de confundir com o canal original.</p>
+    <div class="ideas">
+      <div class="idea"><span class="ti">O terremoto de Lisboa foi reconstruído com ouro de Minas Gerais</span><span class="th">Quem pagou Lisboa?</span><span class="why">Responde ao vídeo deles sobre Lisboa 1755 pelo lado de quem financiou a reconstrução.</span></div>
+      <div class="idea"><span class="ti">Por que o Brasil entrou na Segunda Guerra: borracha, aço e Volta Redonda</span><span class="th">O preço do Brasil</span><span class="why">Segunda Guerra (o tema que mais rende) com uma negociação econômica que pouca gente conhece.</span></div>
+      <div class="idea"><span class="ti">Quem emprestou o dinheiro da Guerra do Paraguai</span><span class="th">A guerra a crédito</span><span class="why">Bancos, dívida externa e as consequências que duraram décadas.</span></div>
+    </div>
+  </div>
+
+  <div class="angle">
+    <span class="tag">Perspectiva B</span>
+    <h3>O recibo</h3>
+    <p>A história pelo bolso da pessoa comum: quanto custava o pão, quanto ganhava o soldado, quanto subiu o imposto. Cada vídeo gira em torno de um número concreto que o espectador consegue comparar com a vida dele.</p>
+    <div class="ideas">
+      <div class="idea"><span class="ti">Quanto custava sobreviver em Paris no ano da Revolução Francesa</span><span class="th">1 pão = meio salário</span><span class="why">O vídeo deles sobre a Bastilha teve 6 mil views; o mesmo tema pelo preço do pão é outro produto.</span></div>
+      <div class="idea"><span class="ti">O salário de um soldado alemão em Stalingrado</span><span class="th">Quanto valia morrer?</span><span class="why">Usa o tema forte (Hitler) sem repetir o enfoque estratégico deles.</span></div>
+      <div class="idea"><span class="ti">Hiperinflação brasileira: como era fazer compras em 1993</span><span class="th">Preço de manhã, outro à tarde</span><span class="why">Memória de muitos espectadores, com dados fáceis de comprovar.</span></div>
+    </div>
+  </div>
+
+  <div class="angle">
+    <span class="tag">Perspectiva C</span>
+    <h3>Na mesa da decisão</h3>
+    <p>Em vez de "a verdadeira razão" contada com o resultado já conhecido, o vídeo reconstrói a decisão com o que o líder sabia na hora: as opções, as contas e o risco de cada uma. O espectador decide junto antes de ver o que aconteceu.</p>
+    <div class="ideas">
+      <div class="idea"><span class="ti">Getúlio Vargas em 1942: as três saídas que ele tinha</span><span class="th">Eixo ou Aliados?</span><span class="why">Formato interativo, ótimo para comentários e retenção.</span></div>
+      <div class="idea"><span class="ti">Se você fosse ministro em 1929, o que faria com o café?</span><span class="th">Queimar o café?</span><span class="why">Crise de 1929 (422 mil views no canal deles) pelo lado brasileiro.</span></div>
+      <div class="idea"><span class="ti">D. João VI em 1807: fugir para o Brasil ou ficar?</span><span class="th">Fugir ou ficar?</span><span class="why">Tema conhecido, quase nunca contado como uma escolha racional.</span></div>
+    </div>
+  </div>
+
+  <div class="angle">
+    <span class="tag">Perspectiva D</span>
+    <h3>A biografia de uma mercadoria</h3>
+    <p>Um produto conta a história: açúcar, borracha, café, sal, bacalhau. O "personagem" da thumbnail deixa de ser um ditador e passa a ser o objeto, o que já separa visualmente do canal original.</p>
+    <div class="ideas">
+      <div class="idea"><span class="ti">Borracha: como Manaus ficou rica e quebrou em 10 anos</span><span class="th">A cidade que quebrou</span><span class="why">Ascensão e queda, a estrutura que mais prende em vídeo longo.</span></div>
+      <div class="idea"><span class="ti">O açúcar financiou a Holanda, e a Holanda invadiu o Brasil</span><span class="th">A guerra do açúcar</span><span class="why">Liga mercado europeu e história do Brasil numa só linha.</span></div>
+      <div class="idea"><span class="ti">Como o bacalhau virou comida de português sem existir em Portugal</span><span class="th">O peixe estrangeiro</span><span class="why">Tema leve, curioso e fácil de compartilhar, bom para variar o tom.</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">§5</span>Como não copiar</h2>
+  <ul>
+    <li><b>Visual próprio:</b> trocar mapa rasgado + retrato P&B por algo do seu ângulo (recibos, cédulas antigas, livros-razão, gráficos de preço). Manter só o princípio: um rosto ou objeto grande e no máximo 4 palavras.</li>
+    <li><b>Fórmula de título própria:</b> por exemplo "Quem pagou [evento]", "Quanto custava [época]" ou "[Ano]: as três saídas de [pessoa]".</li>
+    <li><b>Fontes na tela:</b> mostrar o documento, a tabela de preços ou o jornal da época. É o contrário do "os historiadores erram" sem prova, e dá credibilidade.</li>
+    <li><b>Temas sim, roteiro não:</b> pode cobrir o mesmo evento que eles, mas nunca com a mesma tese, a mesma ordem de argumentos ou o mesmo título traduzido.</li>
+  </ul>
+</section>
+
+<section class="ask">
+  <h3>Uma pergunta para você</h3>
+  <p>Sua mensagem terminou em "usar outra perspectiva de…". Eu escolhi o ângulo <b>Visto do Sul</b> (Brasil e Portugal, em português) como principal. Se você tinha outra perspectiva em mente, ou se o canal vai ser em inglês, me diga e eu refaço as ideias de vídeo nessa direção.</p>
+</section>
+
+</div>
