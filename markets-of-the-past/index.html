@@ -59,6 +59,23 @@ ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
 .idea .th{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:15px;background:var(--ink);color:var(--paper);padding:2px 8px;align-self:start;white-space:nowrap}
 .idea .why{grid-column:1/-1;font-size:15px;color:var(--muted)}
 @media (max-width:520px){.idea{grid-template-columns:1fr}.idea .th{justify-self:start;white-space:normal}}
+.patterns{border-left:3px solid var(--ledger);padding:4px 0 4px 16px;max-width:65ch}
+.vid{background:var(--sheet);border:1px solid var(--rule);padding:20px;display:flex;flex-direction:column;gap:16px}
+.vh{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:baseline}
+.rank{font-family:var(--mono);color:var(--ledger);font-size:14px}
+.vt{font-weight:600;min-width:0}
+.vv{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.vb{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.vb>div{min-width:0;display:flex;flex-direction:column;gap:4px}
+.vb p{font-size:15px}
+.lbl{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mine{border-top:1px dashed var(--rule);padding-top:14px;display:flex;flex-direction:column;gap:8px}
+.mine .lbl{color:var(--ledger)}
+.mt{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.mt .ti{font-weight:600;font-size:18px;min-width:0}
+.mt .th{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:15px;background:var(--ink);color:var(--paper);padding:2px 8px}
+.hook{font-style:italic;font-size:15px}
+.mine .why{font-size:15px;color:var(--muted)}
 .ask{border:2px solid var(--ink);padding:22px;display:flex;flex-direction:column;gap:12px}
 </style>
 
@@ -142,52 +159,140 @@ ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
 </section>
 
 <section>
-  <h2><span class="n">§4</span>Quatro perspectivas novas</h2>
-  <p>Para um canal em inglês, o desafio é competir no mesmo mercado que eles. Então a ideia é manter o que atrai (dinheiro, um fato famoso, uma explicação que contraria o senso comum) e trocar o ponto de vista e a identidade visual. Os temas podem até se cruzar, mas o vídeo é outro. Títulos e textos de thumbnail já estão em inglês.</p>
-
-  <div class="angle">
-    <span class="tag">Perspectiva A · recomendada</span>
-    <h3>The Receipt</h3>
-    <p>A história pelo bolso da pessoa comum: quanto custava o pão, quanto ganhava o soldado, quanto subiu o imposto. Cada vídeo gira em torno de um número concreto que o espectador consegue comparar com a vida dele. O Markets of the Past conta tudo do ponto de vista do líder; esse canal conta do ponto de vista de quem pagou.</p>
-    <div class="ideas">
-      <div class="idea"><span class="ti">What It Actually Cost to Survive in Paris in 1789</span><span class="th">Bread = Half a Wage</span><span class="why">O vídeo deles sobre a Bastilha teve 6 mil views; o mesmo tema pelo preço do pão é outro produto.</span></div>
-      <div class="idea"><span class="ti">What a German Soldier Was Paid at Stalingrad</span><span class="th">Paid to Freeze</span><span class="why">Usa o tema mais forte (Hitler e a Segunda Guerra) sem repetir o enfoque estratégico deles.</span></div>
-      <div class="idea"><span class="ti">Grocery Shopping in Weimar Germany, 1923</span><span class="th">One Loaf: 200 Billion</span><span class="why">Hiperinflação contada como um dia comum de compras, com preços reais da época.</span></div>
+  <h2><span class="n">§4</span>Vídeo por vídeo</h2>
+  <p>Os 10 vídeos mais vistos que aparecem no seu print. Para cada um: por que funcionou, o que ele deixa de fora e um vídeo seu que cobre o mesmo interesse do público com outro ângulo. Títulos, thumbnails e frases de abertura estão em inglês.</p>
+  <p class="note">O YouTube bloqueou o acesso direto ao canal daqui, então analisei os títulos e as thumbnails do print. O conteúdo de cada vídeo deles é deduzido do título. Confira os fatos históricos no roteiro antes de gravar.</p>
+  <div class="patterns"><b>O que os 4 maiores têm em comum:</b> uma pessoa famosa acusada de algo, um número específico (3 milhões, 15 minutos, 1992, 100 anos), dinheiro como mecanismo escondido e a promessa de um segredo. Suas versões abaixo mantêm o número e o dinheiro, e trocam a acusação por um fato documentado ou por outro ponto de vista.</div>
+  <article class="vid">
+    <div class="vh"><span class="rank">#1</span><span class="vt">Woodrow Wilson Admitted He Destroyed America — The Confession Buried for 100 Years<span class="age">há 6 meses</span></span><span class="vv">4,8 mi</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Confissão de um presidente, traição ao país e um segredo de 100 anos. Pelo título, o tema é a criação do Federal Reserve em 1913.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>A frase famosa atribuída a Wilson ("I am a most unhappy man. I have unwittingly ruined my country") não aparece em nenhum texto dele. É uma montagem que circula na internet há anos. Se o vídeo usa essa citação como "confissão", o maior sucesso do canal se apoia numa frase falsa.</p></div>
     </div>
-  </div>
-
-  <div class="angle">
-    <span class="tag">Perspectiva B</span>
-    <h3>The Other Side</h3>
-    <p>Os mesmos eventos mundiais, contados a partir de quem quase nunca aparece nesses canais: América Latina, Portugal, África e Ásia. Em inglês quase ninguém faz isso, e o seu conhecimento de Brasil e Portugal vira uma vantagem que o canal original não tem.</p>
-    <div class="ideas">
-      <div class="idea"><span class="ti">Lisbon Was Rebuilt With Brazilian Gold After 1755</span><span class="th">Who Paid for Lisbon?</span><span class="why">Responde ao vídeo deles sobre Lisboa pelo lado de quem financiou a reconstrução.</span></div>
-      <div class="idea"><span class="ti">The Steel Mill Brazil Demanded to Join WWII</span><span class="th">Brazil's Price for War</span><span class="why">Segunda Guerra com uma negociação econômica que o público em inglês desconhece.</span></div>
-      <div class="idea"><span class="ti">The War That Bankrupted Paraguay, Financed in London</span><span class="th">A War on Credit</span><span class="why">Bancos britânicos, dívida e uma guerra quase ignorada nos canais em inglês.</span></div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">The Duck Hunt That Secretly Created the Federal Reserve</span><span class="th">FAKE DUCK HUNT, REAL BANK</span></div>
+      <p class="hook">“In November 1910, six of the most powerful men in America boarded a private train car, told reporters they were going duck hunting, and used only first names so the porters wouldn't recognize them.”</p>
+      <p class="why">O segredo verdadeiro: a reunião de Jekyll Island, onde banqueiros escreveram o rascunho do sistema. Dá o mesmo gancho de conspiração com fatos documentados, e você pode abrir desmentindo a citação falsa, o que já diferencia o seu canal.</p>
     </div>
-  </div>
-
-  <div class="angle">
-    <span class="tag">Perspectiva C</span>
-    <h3>The Decision Room</h3>
-    <p>Em vez de "the real reason" contada com o resultado já conhecido, o vídeo reconstrói a decisão com o que o líder sabia na hora: as opções, as contas e o risco de cada uma. O espectador decide junto antes de ver o que aconteceu.</p>
-    <div class="ideas">
-      <div class="idea"><span class="ti">You Are FDR in 1941: Embargo Japan or Not?</span><span class="th">Cut the Oil?</span><span class="why">Pearl Harbor teve 876 mil views no canal deles; aqui o espectador fica do outro lado da mesa.</span></div>
-      <div class="idea"><span class="ti">Nixon's Three Options Before August 15, 1971</span><span class="th">Three Bad Options</span><span class="why">Mesmo evento de um dos maiores sucessos deles, mas como escolha e não como acusação.</span></div>
-      <div class="idea"><span class="ti">Portugal's King in 1807: Flee to Brazil or Face Napoleon?</span><span class="th">Flee or Stay?</span><span class="why">A única vez em que um império europeu mudou a capital para a colônia. Inédito em inglês.</span></div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#2</span><span class="vt">George Soros Broke the Bank of England in 1992 — The Day One Man Defeated an Entire Government<span class="age">há 6 meses</span></span><span class="vv">3,5 mi</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Um homem contra um governo inteiro, uma data exata e um valor gigante. É uma história de Davi contra Golias com dinheiro.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>O lado de depois. Ao sair do mecanismo europeu de câmbio, a libra caiu, os juros baixaram e a economia britânica cresceu nos anos seguintes. Muitos economistas britânicos passaram a chamar a data de "White Wednesday".</p></div>
     </div>
-  </div>
-
-  <div class="angle">
-    <span class="tag">Perspectiva D</span>
-    <h3>Biography of a Commodity</h3>
-    <p>Um produto conta a história: açúcar, borracha, pimenta, sal, petróleo. O "personagem" da thumbnail deixa de ser um ditador e passa a ser o objeto, o que já separa visualmente do canal original.</p>
-    <div class="ideas">
-      <div class="idea"><span class="ti">The Rubber Boom: How a Jungle City Got an Opera House and Went Broke</span><span class="th">Rich, Then Ruined</span><span class="why">Ascensão e queda de Manaus, a estrutura que mais prende em vídeo longo.</span></div>
-      <div class="idea"><span class="ti">Pepper Was Worth More Than Gold. Then It Wasn't.</span><span class="th">Worth More Than Gold</span><span class="why">Explica as navegações e o comércio europeu por um tempero que todo mundo tem em casa.</span></div>
-      <div class="idea"><span class="ti">How Sugar Started a War Between the Dutch and Portugal</span><span class="th">The Sugar War</span><span class="why">Liga mercado europeu e colônias numa só linha, com tema que quase ninguém cobriu.</span></div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">Black Wednesday Was the Best Thing That Ever Happened to Britain's Economy</span><span class="th">HE DID THEM A FAVOR?</span></div>
+      <p class="hook">“On September 16, 1992, the British government raised interest rates twice in a single day, spent billions defending the pound, and lost. Then something nobody expected happened.”</p>
+      <p class="why">Mesmo evento, tese contrária. Você não precisa do Soros como vilão: o personagem é a economia britânica, e a reviravolta está no fim.</p>
     </div>
-  </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#3</span><span class="vt">Churchill Starved 3 Million Indians to Finance WWII — And Blamed the Weather<span class="age">há 6 meses</span></span><span class="vv">3,1 mi</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Acusação direta a um herói nacional, um número enorme e uma suposta mentira oficial. Choque moral puro.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>O mecanismo do dia a dia: Bengala perdeu o arroz importado da Birmânia quando o Japão a ocupou em 1942, os gastos militares geraram inflação, barcos foram destruídos no litoral para não servirem aos japoneses, e o preço do arroz disparou em 1943. Quem morreu não morreu por uma frase do Churchill; morreu porque não podia pagar o arroz.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">The Price of Rice in Calcutta, 1943</span><span class="th">RICE: 4x THE PRICE</span></div>
+      <p class="hook">“In 1942, a farm laborer in Bengal could feed his family with what he earned in a day. A year later, the same wage bought a quarter of the rice.”</p>
+      <p class="why">Perspectiva "The Receipt": a fome contada pelo preço e pelo salário de uma família. É mais difícil de contestar, e o público tira a conclusão sobre Churchill sozinho.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#4</span><span class="vt">Nixon Destroyed the Global Financial System in 15 Minutes — And Nobody Voted for It<span class="age">há 5 meses</span></span><span class="vv">2,5 mi</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Um presidente, um tempo absurdo (15 minutos) e um sentimento de injustiça ("ninguém votou").</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>O resto do mundo. A decisão de 15 de agosto de 1971 foi tomada nos EUA, mas quem pagou foram Japão, Alemanha e os países com reservas em dólar. O secretário do Tesouro John Connally resumiu assim para os europeus: "the dollar is our currency, but it's your problem".</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">"Our Currency, Your Problem": How 1971 Looked From Tokyo</span><span class="th">OUR DOLLAR, YOUR PROBLEM</span></div>
+      <p class="hook">“In Japan, they still call it the Nixon Shock. Overnight, a country that had built its entire economy on a fixed 360 yen per dollar woke up to find the rule was gone.”</p>
+      <p class="why">Perspectiva "The Other Side": o mesmo evento visto do país que foi atingido. Ninguém em inglês contou isso desse lado com destaque.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#5</span><span class="vt">The Real Reason Hitler Never Invaded Switzerland<span class="age">há 9 dias</span></span><span class="vv">1,3 mi</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Pergunta que todo mundo já se fez, Hitler na thumbnail e um mistério com resposta. É o vídeo recente que mais cresce.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>O depois. O ouro do Reichsbank que passou pela Suíça, parte dele saqueado, só foi investigado nos anos 1990. Em 1998 os bancos suíços fecharam um acordo de 1,25 bilhão de dólares com sobreviventes do Holocausto.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">Hitler's Gold and the $1.25 Billion Bill That Came 50 Years Late</span><span class="th">THE BILL CAME IN 1998</span></div>
+      <p class="hook">“In January 1997, a night guard at a Swiss bank found wartime records headed for the shredder. The next year, Switzerland's biggest banks agreed to pay one and a quarter billion dollars.”</p>
+      <p class="why">Pega o tema quente do momento, mas conta o que aconteceu com o dinheiro depois da guerra, que eles não cobrem.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#6</span><span class="vt">The Real Reason Hitler Never Invaded Sweden<span class="age">há 7 dias</span></span><span class="vv">323 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Mesma estrutura do vídeo da Suíça, publicado logo depois. Eles estão repetindo o que funcionou.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>O produto. A Suécia vendia minério de ferro e rolamentos de esferas para a Alemanha. Os Aliados bombardearam Schweinfurt em 1943 justamente para cortar os rolamentos.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">The Smallest Weapon of WWII Was Made in Sweden</span><span class="th">THE SMALLEST WEAPON</span></div>
+      <p class="hook">“Every German tank, every aircraft engine, every U-boat needed thousands of tiny steel balls. And a huge share of them came from one neutral country.”</p>
+      <p class="why">Perspectiva "Biography of a Commodity": a guerra contada pelo rolamento. A thumbnail mostra o objeto, não o Hitler.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#7</span><span class="vt">The Real Reason Japan Attacked Pearl Harbor<span class="age">há 1 mês</span></span><span class="vv">876 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Evento que todo americano conhece, com a promessa de uma causa escondida.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>A decisão vista de dentro do Japão. Depois do embargo de petróleo de 1941, a Marinha japonesa calculava ter reserva para cerca de um ano e meio. Era guerra ou recuo, com um relógio correndo.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">You Are Japan in 1941. You Have 18 Months of Oil Left.</span><span class="th">18 MONTHS OF OIL</span></div>
+      <p class="hook">“It's August 1941. Your country imports most of its oil from the United States, and the United States just turned off the tap. Here are your three options.”</p>
+      <p class="why">Perspectiva "The Decision Room": o espectador escolhe antes de saber o desfecho. Funciona muito bem para retenção e comentários.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#8</span><span class="vt">The Real Reason Hitler Invaded the Soviet Union<span class="age">há 2 semanas</span></span><span class="vv">595 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Hitler mais uma pergunta "por quê". Os vídeos de Hitler são o piso garantido do canal.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>O comércio entre os dois. Pelo acordo econômico de 1940, a União Soviética entregou petróleo e grãos para a Alemanha até os dias da invasão. Trens soviéticos de carga ainda cruzavam a fronteira em junho de 1941.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">Stalin Was Feeding Hitler's Army Until the Night of the Invasion</span><span class="th">HE FED HIS ENEMY</span></div>
+      <p class="hook">“On the night of June 21, 1941, Soviet trains loaded with grain were still rolling west into German territory. A few hours later, the German army rolled east.”</p>
+      <p class="why">Mesmo evento, mas o foco é o dinheiro e o paradoxo, não a estratégia militar.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#9</span><span class="vt">The True Origin of the American Civil War: What Historians Get Wrong<span class="age">há 3 meses</span></span><span class="vv">569 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Tema enorme nos EUA e promessa de corrigir o que se aprende na escola.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>A aposta econômica do Sul. Em 1861 os confederados seguraram as exportações de algodão achando que a Grã-Bretanha seria forçada a entrar na guerra do lado deles. Os britânicos tinham estoque e passaram a comprar do Egito e da Índia.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">King Cotton: The Bet That Lost the Civil War</span><span class="th">THE BET THAT FAILED</span></div>
+      <p class="hook">“In 1861, the South believed it held the world hostage. Britain's mills ran on Southern cotton, and without it, they thought, London would have no choice.”</p>
+      <p class="why">Perspectiva "Biography of a Commodity": a guerra contada pelo algodão, com o mercado britânico do outro lado.</p>
+    </div>
+  </article>
+  <article class="vid">
+    <div class="vh"><span class="rank">#10</span><span class="vt">The True Origin of the Great Depression: What Historians Get Wrong<span class="age">há 3 meses</span></span><span class="vv">422 mil</span></div>
+    <div class="vb">
+      <div><span class="lbl">Por que funcionou</span><p>Crise econômica famosa com promessa de revelar a causa real.</p></div>
+      <div><span class="lbl">O que fica de fora</span><p>O resto do mundo, especialmente quem vendia matéria-prima. O Brasil passou anos queimando e jogando ao mar milhões de sacas de café para segurar o preço.</p></div>
+    </div>
+    <div class="mine">
+      <span class="lbl">Sua versão</span>
+      <div class="mt"><span class="ti">Brazil Burned Its Own Coffee for 13 Years</span><span class="th">BURN THE COFFEE</span></div>
+      <p class="hook">“During the Great Depression, Brazil set fire to its most valuable product. Not once. For more than a decade, train after train of coffee went straight into the furnace.”</p>
+      <p class="why">Perspectiva "The Other Side": aqui o seu conhecimento de Brasil é vantagem direta. Confirme os números exatos das sacas no roteiro.</p>
+    </div>
+  </article>
 </section>
 
 <section>
@@ -202,7 +307,7 @@ ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
 
 <section class="ask">
   <h3>Próximo passo</h3>
-  <p>O canal vai ser em inglês, e a perspectiva recomendada é <b>The Receipt</b>: compete direto com o tema de dinheiro que fez o Markets of the Past crescer, mas pelo lado de quem pagou a conta. Escolha uma das ideias e eu posso montar o roteiro, o título final e o briefing da thumbnail.</p>
+  <p>Se for começar por um, eu iria no #1 (Jekyll Island) ou no #5 (o ouro na Suíça): os dois pegam temas que já provaram ter público e trazem um fato documentado que o canal deles não contou. Escolha um e eu escrevo o roteiro completo em inglês.</p>
 </section>
 
 </div>
