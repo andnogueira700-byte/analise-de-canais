@@ -218,7 +218,6 @@ function buildScene() {
   pill(A('os holandeses mandavam mas viviam'), A('pense numa cidade em que') - 0.1, 'Um mar de gente falando português', POR);
   const tPref = A('pense numa cidade em que');
   cam(tPref, P.recife, 0.5, 1.6);
-  pin(tPref + 0.2, P.recife, 'Recife');
   icon(A('o prefeito muda'), A('mas a feira') + 0.3, 'landmark', P.recife, { size: 96, dx: -150, dy: -40, label: 'PREFEITO NOVO' });
   row(A('mas a feira'), A('era assim no recife') - 0.1, [
     { img: 'loja', label: 'A feira', at: A('mas a feira') }, { img: 'house', label: 'A porta de casa', at: A('a conversa na porta') },
@@ -302,6 +301,7 @@ function buildScene() {
     { img: 'familia', label: 'Portugueses', at: A('e portugueses') }, { img: 'message-circle', label: 'Ouvir o português', at: A('ou seja o governo precisava') }
   ]);
   const tRef = A('nassau reformou o recife');
+  unpin(tRef);
   cam(tRef, [-34.885, -8.06], 0.18, 1.8);
   photo(tRef + 0.2, A('montou ate um observatorio') - 0.1, 'mauricia', 'Cidade Maurícia e o Recife', { sub: 'Mapa holandês, por volta de 1640' });
   icon(A('construiu pontes'), A('fundou a cidade mauricia') + 1, 'ponte', [-34.876, -8.064], { size: 90 });
@@ -354,6 +354,7 @@ function buildScene() {
     { img: 'idiomas', label: 'Português + holandês', at: A('falavam portugues e holandes') }
   ]);
   const tTrad = A('por isso serviam de ponte');
+  unpin(tTrad);
   cam(tTrad, [-34.88, -8.06], 0.3, 1.4);
   noYear(tTrad);
   icon(tTrad, A('ja sao cinco razoes'), 'bandeira', P.recife, { size: 90, dx: -240, dy: -10, label: 'GOVERNO' });
@@ -470,7 +471,7 @@ function buildScene() {
   pin(tGua + 0.6, P.guararapes, 'Morro dos Guararapes');
   const t1648 = A('em abril de mil seiscentos e quarenta e oito');
   year(t1648 + 0.2, 1648, 1645);
-  photo(A('foi ali que a guerra virou'), A('cerca de dois mil') - 0.1, 'guararapes', 'Batalha dos Guararapes', { sub: 'Victor Meirelles, 1879', w: 700 });
+  photo(A('foi ali que a guerra virou'), A('cerca de dois mil') - 0.1, 'guararapes', 'Batalha dos Guararapes', { sub: 'Victor Meirelles, 1879', w: 700, y: 210 });
   num(A('cerca de dois mil'), A('depois de cinco horas') + 0.6, 2400, 'soldados do lado de cá', { prefix: '≈', color: POR, x: W / 2 - 360 });
   num(A('cerca de quatro mil'), A('depois de cinco horas') + 0.6, 4500, 'holandeses', { prefix: '≈', color: HOL, x: W / 2 + 360 });
   swarm(A('cerca de dois mil'), A('depois de cinco horas') + 1, [-34.99, -8.13], 0.07, 40, POR, 1.2, 14, { px: 6 });
@@ -568,7 +569,7 @@ function buildScene() {
   pill(A('uma delas e o desenho'), A('nenhum predio do centro') - 0.1, 'O desenho do Recife');
   const tPred = A('nenhum predio do centro');
   icon(tPred, A('outra marca sao os livros'), 'building-2', P.bomJesus, { size: 96, dx: -150, dy: -40, cross: tPred + 1.4 });
-  pin(A('como as da rua imperador'), [-34.878, -8.065], 'Rua Imperador D. Pedro II');
+  label(A('como as da rua imperador'), A('outra marca sao os livros'), [-34.95, -8.12], 'Rua Imperador D. Pedro II', { size: 24 });
   icon(A('o formato das ruas'), A('outra marca sao os livros'), 'house', [-34.878, -8.065], { size: 90, dx: 130, dy: 20, label: 'CASAS ESTREITAS' });
   const tLiv = A('outra marca sao os livros');
   unpin(tLiv);
@@ -589,10 +590,10 @@ function buildScene() {
   num(A('cerca de seiscentos judeus'), A('um grupo de vinte e tres') - 0.1, 600, 'judeus deixam o Recife', { prefix: '≈', color: NY });
   route('ny', A('um grupo de vinte e tres'), A('um grupo de vinte e tres') + 3.0, [P.recife, [-38, 2], [-60, 18], [-70, 32], P.novaYork], { icon: 'sinagoga', size: 76, color: NY });
   follow(A('um grupo de vinte e tres') + 0.2, 'ny', 50, 0.6);
-  num(A('um grupo de vinte e tres') + 0.2, A('ali elas formaram') - 0.1, 23, 'pessoas para Nova Amsterdã', { color: NY, from: 600 });
+  num(A('um grupo de vinte e tres') + 0.2, A('que hoje e nova york') - 0.1, 23, 'pessoas para Nova Amsterdã', { color: NY, from: 600 });
   const tNY = A('que hoje e nova york');
   cam(tNY, P.novaYork, 2.6, 1.4);
-  pin(tNY, P.novaYork, 'Nova Amsterdã → Nova York');
+  pin(tNY + 0.5, P.novaYork, 'Nova Amsterdã → Nova York');
   hl(tNY + 0.3, A('e tem um ultimo detalhe'), 'United States of America', NY, { alpha: 0.5 });
   pill(A('ali elas formaram'), A('ou seja uma parte') - 0.1, '1ª comunidade judaica da América do Norte', NY);
   pill(A('ou seja uma parte'), A('e tem um ultimo detalhe') - 0.1, 'Nova York começa um pouco no Recife');
