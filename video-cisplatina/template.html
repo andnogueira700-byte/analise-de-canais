@@ -1,0 +1,213 @@
+<title>Storyboard Cisplatina</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: mesa de montagem — cabeçalho com a "fita" do vídeo, demo da linha do tempo, e cenas em fila como um roteiro de edição */
+:root{
+  --bg:#f1ede2; --paper:#fbf9f3; --ink:#18262a; --muted:#5d6b6c; --line:#d8d2c2;
+  --sea:#1f8f95; --ipe:#e0a100; --motion:#6c52b8; --real:#c45a2c; --video:#b8336a;
+  --pt:#2e7d4f; --es:#c0392b; --art:#3b82c4; --br:#7aa52a; --uy:#5bb4e5;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible",ui-sans-serif,system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1719; --paper:#162225; --ink:#e9e5da; --muted:#9aa7a6; --line:#2b3a3d;
+  --sea:#43bec3; --ipe:#f4c22e; --motion:#9d86ea; --real:#ea8456; --video:#e46a9a;
+  --pt:#4fb37a; --es:#e2635a; --art:#68a8e6; --br:#a3cf4f; --uy:#86cdf2; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1719; --paper:#162225; --ink:#e9e5da; --muted:#9aa7a6; --line:#2b3a3d;
+  --sea:#43bec3; --ipe:#f4c22e; --motion:#9d86ea; --real:#ea8456; --video:#e46a9a;
+  --pt:#4fb37a; --es:#e2635a; --art:#68a8e6; --br:#a3cf4f; --uy:#86cdf2; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--body)}
+.wrap{max-width:1080px;margin:0 auto;padding-block:32px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2{font-family:var(--display);font-weight:800;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.02}
+h2{font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:6px}
+.eyebrow{font:500 .78rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{max-width:66ch;color:var(--muted);margin:10px 0 0}
+header{display:grid;gap:14px;margin-bottom:28px}
+.stats{display:flex;flex-wrap:wrap;gap:8px 20px;font:500 .85rem var(--mono);color:var(--muted)}
+.stats b{color:var(--ink)}
+/* fita */
+.strip{position:relative;height:38px;border-radius:6px;background:var(--line);overflow:hidden;margin-top:6px}
+.seg{position:absolute;top:0;bottom:0;border-right:1px solid var(--bg)}
+.seg:hover,.seg:focus-visible{filter:brightness(1.15);outline:2px solid var(--ink);outline-offset:-2px}
+.ticks{display:flex;justify-content:space-between;font:500 .7rem var(--mono);color:var(--muted);margin-top:4px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.85rem;margin-top:10px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.t-mapa{--c:var(--sea)} .t-time{--c:var(--ipe)} .t-motion{--c:var(--motion)} .t-real{--c:var(--real)} .t-video{--c:var(--video)}
+.seg,.legend i{background:var(--c)}
+section{margin-top:44px}
+/* linha do tempo */
+.tl{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:18px 18px 12px;margin-top:14px}
+.tl-scroll{overflow-x:auto}
+.tl svg{display:block;width:100%;min-width:720px;height:auto}
+.tl text{font-family:var(--body);fill:var(--ink)}
+.tl .yr{font:700 13px var(--mono)}
+.tl .lb{font-size:12px;fill:var(--muted)}
+.tl .cap{font:500 10px var(--mono);letter-spacing:.08em;fill:var(--muted)}
+.tl .band text{font:700 11px var(--body);fill:#fff}
+.tl .ev circle{fill:var(--paper);stroke:var(--ink);stroke-width:2}
+.tl .ev.on circle{fill:var(--ipe)}
+.tl .ev line{stroke:var(--line);stroke-width:1.5}
+.tl .axis{stroke:var(--ink);stroke-width:2}
+.tl .zoomgap{fill:var(--paper);stroke:var(--ink);stroke-width:1.5}
+.tl .lang{fill:var(--ipe)}
+.tl .lang-txt{font:800 13px var(--display);fill:#1b1b1b;letter-spacing:.12em}
+.tl .head line{stroke:var(--ink);stroke-width:2;stroke-dasharray:4 3}
+.tl .head rect{fill:var(--ink)}
+.tl .head text{font:700 13px var(--mono);fill:var(--paper)}
+.tl-ctrl{display:flex;align-items:center;gap:12px;margin-top:8px;flex-wrap:wrap}
+button{font:700 .9rem var(--body);background:var(--ink);color:var(--paper);border:0;border-radius:999px;padding:8px 16px;cursor:pointer}
+button:focus-visible{outline:3px solid var(--ipe);outline-offset:2px}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px 24px;margin-top:14px;font-size:.95rem}
+.notes div{min-width:0}
+.notes b{display:block;font-family:var(--display);font-size:1.02rem}
+/* cenas */
+.scenes{display:grid;gap:0;margin-top:12px;border-top:1px solid var(--line)}
+.scene{display:grid;grid-template-columns:132px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}
+.tc{display:flex;flex-direction:column;gap:2px;font-family:var(--mono)}
+.num{font:800 1.6rem var(--display);color:var(--c)}
+.time{font-weight:500;font-size:.95rem;font-variant-numeric:tabular-nums}
+.cuts{font-size:.72rem;color:var(--muted)}
+.body{min-width:0}
+.chip{display:inline-block;font:700 .72rem var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--c);border:1.5px solid var(--c);border-radius:999px;padding:2px 9px}
+blockquote{margin:8px 0 6px;font-family:var(--display);font-weight:500;font-size:1.12rem;line-height:1.35}
+.beats{margin:0;padding-left:18px;color:var(--ink)}
+.beats li{margin:2px 0}
+.beats li::marker{color:var(--c)}
+.assets{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin-top:12px}
+.asset{margin:0;min-width:0}
+.asset img,.ph{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:6px;display:block;background:var(--line)}
+.ph{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px;color:var(--muted);font-size:.85rem}
+.ph small{font-size:.7rem}
+.asset.is-video{position:relative}
+.asset.is-video::after{content:"▶ vídeo";position:absolute;top:6px;left:6px;font:700 .68rem var(--mono);background:var(--video);color:#fff;padding:2px 6px;border-radius:4px}
+figcaption{font-size:.74rem;line-height:1.35;margin-top:5px;overflow-wrap:anywhere}
+figcaption a{color:var(--ink)}
+.lic{display:block;color:var(--muted)}
+.gaps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px 24px;margin-top:12px}
+.gaps p{margin:0;min-width:0}
+.gaps b{font-family:var(--display)}
+footer{margin-top:40px;color:var(--muted);font-size:.85rem}
+@media (max-width:560px){.scene{grid-template-columns:1fr;gap:6px}.tc{flex-direction:row;align-items:baseline;gap:10px}}
+@media (prefers-reduced-motion:reduce){.tl .head{display:none}}
+</style>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow">Mapa Raiz · vídeo 3 · storyboard para aprovação</span>
+  <h1>Por que Montevidéu não fala português</h1>
+  <p class="lede">A novidade deste vídeo é intercalar o mapa 3D com pinturas de época, fotos e vídeos reais nos momentos de mais impacto, e abrir a parte histórica com uma linha do tempo animada. Cada bloco abaixo tem o tempo do SRT, o tipo de visual, o que acontece na tela e as imagens já encontradas com licença.</p>
+  <div class="stats"><span><b>15:14</b> de narração</span><span><b>{{NBLOCOS}}</b> blocos</span><span><b>{{NREAL}}</b> imagens/vídeos livres achados</span><span>troca de cena a cada <b>2–3 s</b></span></div>
+  <div>
+    <div class="strip" aria-label="Fita do vídeo por tipo de visual">{{STRIP}}</div>
+    <div class="ticks"><span>0:00</span><span>3:00</span><span>6:00</span><span>9:00</span><span>12:00</span><span>15:14</span></div>
+    <div class="legend"><span class="eyebrow">tipo principal de cada bloco (quase todos misturam mapa):</span>
+      <span class="t-mapa"><i></i>Mapa 3D · {{P_MAPA}}%</span>
+      <span class="t-real"><i></i>Pintura, retrato ou foto real · {{P_REAL}}%</span>
+      <span class="t-video"><i></i>Vídeo real · {{P_VIDEO}}%</span>
+      <span class="t-motion"><i></i>Motion graphic · {{P_MOTION}}%</span>
+      <span class="t-time"><i></i>Linha do tempo · {{P_TIME}}%</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <span class="eyebrow">0:37 · “vamos voltar bastante no tempo”</span>
+  <h2>A linha do tempo mestre, 1680 a 1830</h2>
+  <p class="lede">Ela entra com um contador rebobinando de 2026 até 1680 e volta seis vezes no vídeo, sempre com o marcador avançando até o ano da fala. A faixa de cima mostra quem mandava; a de baixo, a língua de Montevidéu. A ideia visual é a tese do vídeo: as cores de cima trocam cinco vezes e a faixa amarela de baixo nunca muda.</p>
+  <div class="tl">
+    <div class="tl-scroll">
+    <svg viewBox="0 0 1000 320" role="img" aria-label="Linha do tempo de 1680 a 1830: quem governava Montevidéu e a língua falada">
+      <text class="cap" x="40" y="14">QUEM MANDA NA REGIÃO</text>
+      <g class="band">
+        <defs><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="10" fill="var(--pt)"/><rect x="5" width="5" height="10" fill="var(--es)"/></pattern>
+        <pattern id="none" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="var(--line)"/><rect width="2" height="8" fill="var(--muted)" opacity=".35"/></pattern></defs>
+        <rect x="40" y="22" width="298" height="26" fill="url(#hatch)" rx="3"/><text x="50" y="40">Portugal × Espanha</text>
+        <rect x="338" y="22" width="102" height="26" fill="var(--es)"/><text x="346" y="40">Espanha</text>
+        <rect x="440" y="22" width="26" height="26" fill="var(--es)"/>
+        <rect x="466" y="22" width="156" height="26" fill="var(--art)"/><text x="474" y="40">Artigas / B. Aires</text>
+        <rect x="622" y="22" width="130" height="26" fill="var(--pt)"/><text x="630" y="40">Portugal</text>
+        <rect x="752" y="22" width="156" height="26" fill="var(--br)"/><text x="760" y="40">Brasil</text>
+        <rect x="908" y="22" width="52" height="26" fill="var(--uy)" rx="3"/><text x="914" y="40">UY</text>
+      </g>
+      <line class="axis" x1="40" y1="150" x2="960" y2="150"/>
+      <rect class="zoomgap" x="432" y="140" width="16" height="20" rx="2"/>
+      <text class="cap" x="440" y="176" text-anchor="middle">ZOOM</text>
+      <g id="evs"></g>
+      <text class="cap" x="40" y="238">LÍNGUA DE MONTEVIDÉU</text>
+      <rect x="40" y="246" width="141.5" height="26" fill="url(#none)" rx="3"/>
+      <text class="lb" x="48" y="263">cidade não existe</text>
+      <rect class="lang" x="181.5" y="246" width="778.5" height="26" rx="3"/>
+      <text class="lang-txt" x="560" y="264" text-anchor="middle">ESPAÑOL · ESPAÑOL · ESPAÑOL</text>
+      <text class="lb" x="960" y="300" text-anchor="end">As bandeiras trocaram cinco vezes. A língua, nenhuma.</text>
+      <g class="head" id="head"><line x1="0" y1="18" x2="0" y2="276"/><rect x="-26" y="278" width="52" height="20" rx="4"/><text id="yr" x="0" y="293" text-anchor="middle">1680</text></g>
+    </svg>
+    </div>
+    <div class="tl-ctrl"><button id="play" type="button">Pausar</button><span class="eyebrow">prévia do movimento; no vídeo a câmera dá zoom no trecho 1811–1830</span></div>
+  </div>
+  <div class="notes">
+    <div><b>Entrada (0:37)</b>Contador 2026 → 1680 girando, papel envelhece, som de rebobinar. Câmera desliza da direita para a esquerda até 1680.</div>
+    <div><b>Retornos</b>1726, 1777, 1811, 1816/17, 1821, 1822, 1825, 1828 e 1830. Cada volta dura 2–3 s e acende só o marco novo.</div>
+    <div><b>Escala com zoom</b>1680–1810 fica comprimido; ao chegar em 1811 a câmera aproxima e o trecho 1811–1830 ocupa metade da tela.</div>
+    <div><b>Fechamento (11:28)</b>Na recapitulação, a linha inteira aparece de novo com as 8 razões penduradas nos anos.</div>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">roteiro de edição</span>
+  <h2>Cena a cena</h2>
+  <p class="lede">Os tempos vêm do SRT por frase. Cada bloco reúne várias trocas de cena; a coluna da esquerda mostra quantos cortes cabem no ritmo de 2–3 s. O contador “Razão X de 9” fica fixo no canto a partir de 2:31.</p>
+  <div class="scenes">
+{{CARDS}}
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">o que ainda falta</span>
+  <h2>Onde não achei material livre</h2>
+  <div class="gaps">
+    <p><b>Vídeos de Rivera, Chuí, gado e Colônia.</b> O Commons só tem 4 vídeos bons de Montevidéu. Pexels e Pixabay têm vídeos gratuitos dessas cidades, mas a rede daqui bloqueia esses sites. Proposta: usar as fotos com movimento de câmera (zoom e paralaxe 2.5D), ou você baixa 3–4 clipes do Pexels e eu encaixo.</p>
+    <p><b>Esposa de Lecor, ata do Congresso de 1821, jornal da época.</b> Não há imagem livre. Vira motion: silhueta elegante, pergaminho animado com as 4 condições e página de jornal recriada.</p>
+    <p><b>Foto antiga de escola uruguaia.</b> Não achei. Uso o retrato de José Pedro Varela e uma sala de aula ilustrada no estilo do canal.</p>
+    <p><b>Praia da Agraciada.</b> Sem foto livre boa; o desembarque fica na pintura dos 33 e no mapa.</p>
+  </div>
+</section>
+
+<footer>Regras mantidas dos vídeos 1 e 2: marcadores só em terra e no lugar certo, nada sobreposto, cada país citado sobe em 3D com cor diferente, câmera sempre em movimento, música bem baixa e efeitos de whoosh e pop. Todas as imagens são do Wikimedia Commons; as CC BY e CC BY-SA vão creditadas na descrição do vídeo.</footer>
+</div>
+
+<script>
+(function(){
+  var X=function(y){return y<=1810?40+(y-1680)/130*400:440+(y-1810)/20*520};
+  var E=[[1680,"Colônia do Sacramento","C","start"],[1726,"Montevidéu","A"],[1777,"Tratado","C"],[1811,"Las Piedras","A"],[1817,"Lecor entra","C"],[1821,"Cisplatina","A"],[1822,"Independência","C"],[1825,"Os 33","A"],[1828,"Uruguai","C"],[1830,"Constituição","A","end"]];
+  var NS="http://www.w3.org/2000/svg",g=document.getElementById("evs"),nodes=[];
+  function el(t,a,p){var n=document.createElementNS(NS,t);for(var k in a)n.setAttribute(k,a[k]);(p||g).appendChild(n);return n}
+  E.forEach(function(e){
+    var x=X(e[0]),up=e[2]=="A",gg=el("g",{"class":"ev"});
+    el("line",{x1:x,y1:up?108:192,x2:x,y2:150},gg);
+    el("circle",{cx:x,cy:150,r:6},gg);
+    var anc=e[3]||"middle";
+    var t1=el("text",{"class":"yr",x:x,y:up?88:208,"text-anchor":anc},gg);t1.textContent=e[0];
+    var t2=el("text",{"class":"lb",x:x,y:up?103:223,"text-anchor":anc},gg);t2.textContent=e[1];
+    nodes.push([e[0],gg]);
+  });
+  var head=document.getElementById("head"),yr=document.getElementById("yr"),btn=document.getElementById("play");
+  var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function show(y){head.setAttribute("transform","translate("+X(y)+",0)");yr.textContent=Math.floor(y);
+    nodes.forEach(function(n){n[1].classList.toggle("on",n[0]<=y)})}
+  if(reduce){show(1830);btn.hidden=true;return}
+  var D=14000,t0=null,paused=false,acc=0,last=0;
+  function yearAt(p){ // p 0..1 → 1680..1830, passa mais devagar no trecho com zoom
+    return p<.4?1680+p/.4*130:1810+(p-.4)/.6*20 }
+  function tick(ts){ if(!paused){ if(last)acc+=ts-last; } last=ts;
+    var p=(acc%(D+1500))/D; show(yearAt(Math.min(p,1))); requestAnimationFrame(tick)}
+  btn.addEventListener("click",function(){paused=!paused;btn.textContent=paused?"Tocar":"Pausar"});
+  show(1830); requestAnimationFrame(tick);
+})();
+</script>
