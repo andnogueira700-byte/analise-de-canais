@@ -8,7 +8,7 @@ const path = require('path');
   const browser = await chromium.launch({ args: ['--allow-file-access-from-files', '--disable-web-security'] });
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
   page.on('console', m => { if (m.type() === 'warning' || m.type() === 'error') console.error('[page]', m.text()); });
-  await page.goto('file://' + path.resolve(__dirname, 'index.html') + '?tilt=' + (process.env.TILT || 0) + '&estilo=' + (process.env.ESTILO || 'a') + '&marcas=' + (process.env.MARCAS || 0));
+  await page.goto('file://' + path.resolve(__dirname, 'index.html') + '?tilt=' + (process.env.TILT || 0) + '&estilo=' + (process.env.ESTILO || 'a') + '&marcas=' + (process.env.MARCAS || 0) + (process.env.V ? '&v=' + process.env.V : ''));
   await page.waitForFunction(() => window.READY || window.ERR, null, { timeout: 600000 });
   const err = await page.evaluate(() => window.ERR); if (err) { console.error(err); process.exit(1); }
   if (still) { // quadros soltos para conferência

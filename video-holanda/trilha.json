@@ -1,0 +1,11 @@
+{
+  "cortes": {"razoes": "a primeira razao e a mais", "virada": "agora vem a virada", "guerra": "a oitava razao e a revolta", "suriname": "a decima razao e uma prova", "sobrou": "agora a ultima parte"},
+  "secoes": [
+    ["inicio", "razoes", ["curious_discovery", "playful_inquiry"]],
+    ["razoes", "virada", ["investigative_pulse", "documentary_reflection"]],
+    ["virada", "guerra", ["shadows_echoes"]],
+    ["guerra", "suriname", ["investigative_pulse"]],
+    ["suriname", "sobrou", ["documentary_reflection"]],
+    ["sobrou", "fim", ["gentle_dawn", "triumphant_horizons"]]
+  ]
+}

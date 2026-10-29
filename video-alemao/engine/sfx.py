@@ -37,7 +37,7 @@ def chapter():
 LIB = {k: f() for k, f in dict(whoosh=whoosh, pop=pop, tick=tick, rise=rise, card=card, drop=drop, chapter=chapter).items()}
 for k, v in LIB.items(): LIB[k] = v / np.max(np.abs(v))
 GAIN = dict(whoosh=0.55, pop=0.35, tick=0.25, rise=0.45, card=0.4, drop=0.4, chapter=0.5)
-ev = json.load(open(D + '/eventos.json'))
+ev = json.load(open(D + (f"/../../video-{os.environ['V']}/eventos.json" if os.environ.get('V') else '/eventos.json')))
 t0 = float(sys.argv[1]) if len(sys.argv) > 1 else 0; dur = float(sys.argv[2]) if len(sys.argv) > 2 else max(e[0] for e in ev) + 3
 out = np.zeros((int(SR * dur) + SR * 2, 2)); last = {}
 for t, k, g in ev:

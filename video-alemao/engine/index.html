@@ -1,6 +1,10 @@
 <!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000;overflow:hidden;width:1920px;height:1080px}canvas{display:block;position:absolute;left:0;top:0}#m{transform-origin:50% 50%}</style></head>
 <body><canvas id="m" width="1920" height="1080"></canvas><canvas id="c" width="1920" height="1080"></canvas>
-<script src="geo.js"></script><script src="fronteiras.js"></script><script src="mosaicos.js"></script><script src="cues.js"></script><script src="icons.js"></script><script src="engine.js"></script><script src="timeline.js"></script>
+<script src="geo.js"></script><script src="fronteiras.js"></script><script src="mosaicos.js"></script><script>
+// vídeo escolhido por ?v= (sem parâmetro: o vídeo 1, com cues e roteiro nesta pasta)
+const VID = new URLSearchParams(location.search).get('v'), VDIR = VID ? `../../video-${VID}/` : '';
+document.write(`<script src="${VDIR}cues.js"><\/script><script src="icons.js"><\/script><script src="engine.js"><\/script><script src="${VDIR}timeline.js"><\/script>`);
+</script>
 <script>
 (async () => {
   const Q = new URLSearchParams(location.search); ESTILO = Q.get('estilo') || 'a'; MARCAS = Q.get('marcas') === '1';
@@ -9,9 +13,9 @@
     ['Fraunces','fraunces-latin-700-normal','700','normal'],['Fraunces','fraunces-latin-600-italic','600','italic']];
   for (const [fam, file, weight, style] of fonts) { const f = new FontFace(fam, `url(fonts/${file}.woff2)`, { weight, style }); await f.load(); document.fonts.add(f); }
   const icons = ICON_LIST.map(n => [n, `../assets/icons/${n}.png`]);
-  await loadImages([...icons, ['vargas','../assets/fotos/vargas.jpg'], ['pedro1','../assets/fotos/pedro1.jpg'], ['leopoldina','../assets/fotos/leopoldina.jpg'], ...MOSAICOS[ESTILO].map(m => ['mos_' + m.name, `../assets/relevo${ESTILO === 'a' ? '' : '-' + ESTILO}/${m.name}.jpg`])]);
-  featherMosaics(MOSAICOS[ESTILO]);
-  MOS = MOSAICOS[ESTILO]; setTilt(+(Q.get('tilt') || 0)); makeTextures(); buildGeo(); buildBorders(); SCENE = buildScene();
+  await loadImages([...icons, ...(typeof FOTOS !== 'undefined' ? FOTOS.map(([n, f]) => [n, VDIR + f]) : [['vargas','../assets/fotos/vargas.jpg'], ['pedro1','../assets/fotos/pedro1.jpg'], ['leopoldina','../assets/fotos/leopoldina.jpg']]), ...MOSAICOS[ESTILO].filter(m => typeof MOS_USE === 'undefined' || MOS_USE.includes(m.name)).map(m => ['mos_' + m.name, `../assets/relevo${ESTILO === 'a' ? '' : '-' + ESTILO}/${m.name}.jpg`])]);
+  MOS = MOSAICOS[ESTILO].filter(m => typeof MOS_USE === 'undefined' || MOS_USE.includes(m.name)); featherMosaics(MOS);
+  setTilt(+(Q.get('tilt') || 0)); makeTextures(); buildGeo(); buildBorders(); SCENE = buildScene();
   const marks = [...new Set([...SCENE.icons.filter(i => i.mark).map(i => i.mark), ...(MARCAS ? Object.values(MK) : [])])];
   await loadImages(marks.map(n => ['mk_' + n, `../assets/marcadores/${n}.svg`]));
   layoutCards(SCENE); placeIcons(SCENE);

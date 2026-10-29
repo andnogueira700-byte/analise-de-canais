@@ -2,8 +2,8 @@
 const { chromium } = require('playwright'); const path = require('path');
 (async () => {
   const b = await chromium.launch({ args: ['--allow-file-access-from-files'] }); const p = await b.newPage({ viewport: { width: 1920, height: 1080 } });
-  await p.goto('file://' + path.resolve(__dirname, 'index.html') + '?estilo=' + (process.env.ESTILO || 'b') + '&marcas=' + (process.env.MARCAS ?? 1));
-  await p.waitForFunction(() => window.READY || window.ERR, null, { timeout: 120000 });
+  await p.goto('file://' + path.resolve(__dirname, 'index.html') + '?estilo=' + (process.env.ESTILO || 'b') + '&marcas=' + (process.env.MARCAS ?? 1) + '&tilt=' + (process.env.TILT || 0) + (process.env.V ? '&v=' + process.env.V : ''));
+  await p.waitForFunction(() => window.READY || window.ERR, null, { timeout: 600000 });
   const out = await p.evaluate(([t0, t1, dt]) => {
     const res = [];
     for (let t = t0; t < t1; t += dt) {

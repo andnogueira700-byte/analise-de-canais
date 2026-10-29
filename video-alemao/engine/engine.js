@@ -245,7 +245,7 @@ function drawMap(t, cam, S) {
     const a = vis(t, h.t0, h.t1, 0.6, 0.6); if (!a) continue;
     const l = byName(h.name); if (!l) continue;
     // região maior que a tela (câmera dentro dela): fica só um véu de cor, sem placa, para não tapar o mapa
-    const big = clamp(((l.bbox[2] - l.bbox[0]) / span - 0.55) / 0.35);
+    const big = h.solid ? 0 : clamp(((l.bbox[2] - l.bbox[0]) / span - 0.55) / 0.35); // solid: país com ilhas longe (Holanda) não vira véu
     const up = h.flat ? 0 : (h.lift ?? 14) * easeOut(clamp((t - h.t0) / 0.7)) * (t > h.t1 - 0.6 ? a : 1) * (1 - big);
     act.push({ h, a, l, up, big }); h._up = up;
   }
@@ -325,7 +325,7 @@ function drawRoutes(t, cam) {
     mctx.lineCap = 'round'; mctx.setLineDash([2, 16]); mctx.lineWidth = 10; mctx.strokeStyle = 'rgba(6,18,47,0.45)'; mctx.stroke();
     mctx.lineWidth = 6; mctx.strokeStyle = r.color || C.branco; mctx.stroke(); mctx.setLineDash([]);
     mctx.restore();
-    if (r.icon && IMG[r.icon] && t <= r.t1 + 0.6) {
+    if (r.icon && (IMG[r.icon] || (MARCAS && IMG["mk_" + MK[r.icon]])) && t <= r.t1 + 0.6) {
       const [sx, sy, f] = proj(hx, hy); const sz = (r.size || 84) * f, bob = Math.sin(t * 6) * 4;
       drawIcon(r.icon, sx, sy - sz * 0.3 + bob, sz, vis(t, r.t0, r.t1, 0.2, 0.5));
     }
@@ -401,9 +401,15 @@ function landAt(lon, lat) {
   const r = LODS.fine.coast.some(c => x >= c.bbox[0] && x <= c.bbox[2] && y >= c.bbox[1] && y <= c.bbox[3] && mctx.isPointInPath(c.path, x, y));
   mctx.restore(); LANDC.set(key, r); return r;
 }
-// ponto da tela está em terra firme? (sem inclinação; com inclinação aceita sempre)
-function onLand(cam, sx, sy) {
-  if (TILT) return true;
+// da tela para o canvas do mapa (desfaz a inclinação)
+function unproj(sx, sy) {
+  if (!TILT) return [sx, sy];
+  const th = TILT * Math.PI / 180, d = sy - H / 2, Y = d * PERSP / (Math.cos(th) * PERSP + d * Math.sin(th)), f = PERSP / (PERSP - Y * Math.sin(th));
+  return [(sx - W / 2) / f + MW / 2, Y + MH / 2];
+}
+// ponto da tela está em terra firme?
+function onLand(cam, px, py) {
+  const [sx, sy] = unproj(px, py);
   const x = cam.x + (sx - MW / 2) / cam.s, y = cam.y - (sy - MH / 2) / cam.s, lod = W / cam.s > 60 ? 'coarse' : 'fine';
   mctx.save(); mctx.setTransform(1, 0, 0, 1, 0, 0);
   const r = LODS[lod].coast.some(c => x >= c.bbox[0] && x <= c.bbox[2] && y >= c.bbox[1] && y <= c.bbox[3] && mctx.isPointInPath(c.path, x, y));
@@ -415,19 +421,20 @@ function placeIcons(S) {
   for (const ic of list) ic._skip = true;
   for (const ic of list) {
     const tm = ic.t0 + 0.45; render(tm);
-    for (const k of ['numbers', 'people', 'words', 'dots', 'lists', 'rows']) for (const o of S[k]) if (o.t0 < ic.t1 && ic.t0 < o.t1) {
+    for (const k of CARDS) for (const o of S[k] || []) if (o.t0 < ic.t1 && ic.t0 < o.t1) {
       const r = cardRect(k, o), dx = o._dx || 0, dy = o._dy || 0; BOXES.push([r[0] + dx - 10, r[1] + dy - 10, r[0] + r[2] + dx + 10, r[1] + r[3] + dy + 10]);
     }
     const cam = camera(tm), [ax, ay, f] = geoS(cam, ic.lon, ic.lat), sz = iconSize(ic) * f, r = sz / 2;
     const extra = ic.label ? sz * 0.62 + 28 : 0;
     const ok = (x, y) => x - r > 20 && x + r < W - 20 && y - r > 20 && y + r + extra < H - 130 &&
-      !hit([x - r, y - r, x + r, y + r + extra]) && [[0, 0], [r * .7, 0], [-r * .7, 0], [0, r * .7], [0, -r * .7]].every(([dx, dy]) => onLand(cam, x + dx, y + dy));
+      !hit([x - r, y - r, x + r, y + r + extra]) && [[0, 0], [r * .7, 0], [-r * .7, 0], [0, r * .7], [0, -r * .7]].every(([dx, dy]) => wet(x + dx, y + dy));
+    const wet = (x, y) => onLand(cam, x, y) !== !!ic.sea; // navio fica no mar; o resto, em terra
     const want = [(ic.dx || 0) * f, (ic.dy || 0) * f], cands = [want];
     for (const k of [0.75, 1.1, 1.5, 2, 2.6, 3.3]) {
       const ring = []; for (let i = 0; i < 16; i++) { const a = i / 16 * 6.283; ring.push([want[0] + Math.cos(a) * k * sz, want[1] + Math.sin(a) * k * sz]); }
       ring.sort((p, q) => Math.hypot(...p) - Math.hypot(...q)); cands.push(...ring);
     }
-    const c = cands.find(([dx, dy]) => ok(ax + dx, ay + dy)) || cands.find(([dx, dy]) => onLand(cam, ax + dx, ay + dy)) || want;
+    const c = cands.find(([dx, dy]) => ok(ax + dx, ay + dy)) || cands.find(([dx, dy]) => wet(ax + dx, ay + dy)) || want;
     ic._off = [c[0] / f, c[1] / f]; ic._skip = false;
   }
 }
@@ -510,6 +517,7 @@ function drawPills(t, S) {
     ctx.fillStyle = C.tinta; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(p.text, W / 2 + 12, H - 106 + up); ctx.restore();
   }
 }
+const CARDS = ['numbers', 'people', 'words', 'dots', 'lists', 'rows', 'photos'];
 // retângulo de cada cartão (mesmas contas dos desenhos), para arrumar a tela antes de renderizar
 function cardRect(k, o) {
   ctx.save(); let r;
@@ -518,12 +526,13 @@ function cardRect(k, o) {
   else if (k === 'words') r = [o.x ?? 90, o.y ?? 300, 640, o.meaning ? 300 : 240];
   else if (k === 'dots') { const cols = o.cols || 10, cell = o.cell || 38, w = cols * cell + 80; r = [o.x ?? (W - 90 - w), o.y ?? 200, w, Math.ceil(o.total / cols) * cell + 170]; }
   else if (k === 'lists') r = [W - 90 - 600, o.y ?? 200, 600, 100 + o.items.length * 92];
+  else if (k === 'photos') { const w = o.w || 560, h = photoH(o, w); r = [o.x ?? (o.side === 'left' ? 90 : W - 90 - w), o.y ?? 150, w, h]; }
   else if (k === 'rows') { const w = o.items.length * 220 + 40; r = [W / 2 - w / 2, o.y ?? 170, w, 250]; }
   ctx.restore(); return r;
 }
 function layoutCards(S) {
   LAYOUT = true; const all = [];
-  for (const k of ['numbers', 'people', 'words', 'dots', 'lists', 'rows']) for (const o of S[k]) all.push({ k, o, r: cardRect(k, o) });
+  for (const k of CARDS) for (const o of S[k] || []) all.push({ k, o, r: cardRect(k, o) });
   all.sort((a, b) => a.o.t0 - b.o.t0);
   const done = [];
   for (const c of all) {
@@ -556,7 +565,7 @@ let LAYOUT = false;
 function cardBoxes(t, S) {
   if (S.years.some(y => !y.hide && y.t <= t)) BOXES.push(Object.assign([W - 340, 50, W - 50, 180], { k: 'ano' })); // selo do ano
   if (LAYOUT) return;
-  for (const k of ['numbers', 'people', 'words', 'dots', 'lists', 'rows']) for (const o of S[k]) {
+  for (const k of CARDS) for (const o of S[k] || []) {
     if (!vis(t, o.t0, o.t1, 0.3, 0.35)) continue; const r = cardRect(k, o), dx = o._dx || 0, dy = o._dy || 0;
     BOXES.push([r[0] + dx - 10, r[1] + dy - 10, r[0] + r[2] + dx + 10, r[1] + r[3] + dy + 10]);
   }
@@ -617,6 +626,22 @@ function drawPeople(t, S) {
     ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic'; ctx.fillStyle = C.tinta; ctx.font = '800 46px "Bricolage Grotesque"'; ctx.fillText(pp.name, x + 238, y + 102);
     ctx.font = '700 24px Figtree'; ctx.letterSpacing = '3px'; ctx.fillStyle = C.acai; ctx.fillText(pp.role.toUpperCase(), x + 238, y + 146);
     if (pp.years) { ctx.letterSpacing = '0px'; ctx.font = '500 24px Figtree'; ctx.fillStyle = '#5a6078'; ctx.fillText(pp.years, x + 238, y + 182); }
+    ctx.restore();
+  }
+}
+// quadro ou foto de época: moldura branca, zoom lento e legenda embaixo
+function photoH(o, w) { const im = IMG[o.img]; const ih = im ? Math.min(Math.max((w - 28) * im.height / im.width, 240), 520) : 300; return ih + 28 + 74; }
+function drawPhotos(t, S) {
+  for (const o of S.photos || []) {
+    const a = vis(t, o.t0, o.t1, 0.4, 0.35); if (!a) continue; const im = IMG[o.img]; if (!im) continue;
+    const r = cardRect('photos', o), x = r[0] + (o._dx || 0), y = r[1] + (o._dy || 0), w = r[2], h = r[3], ih = h - 28 - 74;
+    const up = (1 - easeOut((t - o.t0) / 0.5)) * 40;
+    ctx.save(); ctx.globalAlpha = a; ctx.translate(0, up); card(x, y, w, h, a);
+    ctx.save(); rr(x + 14, y + 14, w - 28, ih, 12); ctx.clip();
+    const z = 1.04 + 0.08 * clamp((t - o.t0) / Math.max(1, o.t1 - o.t0)), k = Math.max((w - 28) / im.width, ih / im.height) * z;
+    const iw = im.width * k, ihh = im.height * k; ctx.drawImage(im, x + w / 2 - iw / 2, y + 14 + ih * (o.focus ?? 0.5) - ihh * (o.focus ?? 0.5), iw, ihh); ctx.restore();
+    ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic'; ctx.fillStyle = C.tinta; ctx.font = '800 30px "Bricolage Grotesque"'; ctx.fillText(o.caption, x + 24, y + ih + 28 + 38);
+    if (o.sub) { ctx.font = '500 21px Figtree'; ctx.fillStyle = '#5a6078'; ctx.fillText(o.sub, x + 24, y + ih + 28 + 66); }
     ctx.restore();
   }
 }
@@ -721,6 +746,6 @@ function render(t) {
   ctx.drawImage(OVER, 0, 0); // vinheta e grão
   K('alfinete', () => drawPin(t, cam, S)); K('ícone', () => drawIcons(t, cam, S));
   drawYear(t, S); K('capítulo', () => drawChapter(t, S));
-  drawDots(t, S); drawLists(t, S); drawNumbers(t, S); drawWords(t, S); drawPeople(t, S); drawRows(t, S);
+  drawDots(t, S); drawLists(t, S); drawNumbers(t, S); drawWords(t, S); drawPeople(t, S); drawPhotos(t, S); drawRows(t, S);
   drawPills(t, S); drawQuotes(t, S); drawTitle(t, S); drawEnd(t, S);
 }
