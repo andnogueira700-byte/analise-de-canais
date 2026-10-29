@@ -1,0 +1,81 @@
+<title>Language Map em Português</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: single reading column, wide scrollable tables, multiplier as the hero number of each row */
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#16181d; --muted:#5d6370; --line:#dde0e6;
+  --accent:#d6261e; --accent-soft:#fde8e6; --warn:#9a6400; --warn-soft:#fff3d6;
+  --display:"Archivo Narrow","Arial Narrow",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121317; --surface:#1b1d23; --fg:#eceef2; --muted:#9aa0ad; --line:#2c2f37;
+  --accent:#ff5a4f; --accent-soft:#3a1715; --warn:#f0b54a; --warn-soft:#33270f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121317; --surface:#1b1d23; --fg:#eceef2; --muted:#9aa0ad; --line:#2c2f37;
+  --accent:#ff5a4f; --accent-soft:#3a1715; --warn:#f0b54a; --warn-soft:#33270f; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+main{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+h1,h2{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:clamp(30px,5vw,46px)}
+h2{font-size:26px}
+p{margin:0;max-width:68ch}
+.lead{display:flex;flex-direction:column;gap:12px}
+.eyebrow{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+section{display:flex;flex-direction:column;gap:14px}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:900px;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 12px var(--body);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.x{font:700 22px var(--display);color:var(--accent);white-space:nowrap;font-variant-numeric:tabular-nums}
+td.n{font-family:var(--mono);font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums}
+a{color:inherit;text-decoration-color:var(--line);text-underline-offset:3px}
+a:hover,a:focus-visible{text-decoration-color:var(--accent)}
+.ch{font-weight:600}
+.tag{display:inline-block;font:500 11px var(--mono);padding:2px 6px;border-radius:3px;background:var(--accent-soft);color:var(--accent);margin-top:4px}
+.tag.w{background:var(--warn-soft);color:var(--warn)}
+.note{font-size:13px;color:var(--muted)}
+.patterns{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.pat{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.pat b{font-family:var(--display);font-size:18px}
+.callout{border-left:4px solid var(--accent);background:var(--surface);padding:14px 18px;border-radius:0 6px 6px 0}
+ul{margin:0;padding-left:20px}
+h3{font:700 20px var(--display);margin:0}
+.verdict{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.v{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.big{font:700 26px var(--display)}
+.red{color:var(--accent)}.ok{color:#1f8a4c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ok{color:#4cc27f}}
+:root[data-theme="dark"] .ok{color:#4cc27f}
+</style>
+<main>
+<header class="lead"><span class="eyebrow">Estudo de nicho · 28 out 2026</span>
+<h1>Temas para um "Language Map" brasileiro</h1>
+<p>Testei 25 temas de "por que tal lugar fala (ou não fala) tal língua" no YouTube do Brasil: o que o autocompletar sugere, quais vídeos já existem e quantas views eles fizeram. Também olhei quem são os canais brasileiros de mapas e história.</p></header>
+
+<div class="callout"><p><b>Resumo:</b> ninguém no Brasil faz uma série nesse formato. Os canais de mapa brasileiros (BBC News Brasil, Professor HOC, Brasil Paralelo, Canal Top10, Brasil Inexplicado, EconoSimples) falam de geopolítica, economia e fronteiras, e tocam em língua só de vez em quando. Os vídeos que tocaram foram muito bem: "Por que o Brasil continuou um só…" fez 3,4 mi na BBC. Os temas que puxam mais são os que falam do próprio Brasil.</p></div>
+
+<section><h2>Ranking de temas</h2>
+<div class="tbl"><table><thead><tr><th>#</th><th>Tema</th><th>Título no molde do Language Map</th><th>Prova de demanda</th><th>Concorrência</th><th>Potencial</th></tr></thead><tbody><tr><td class='x'>1</td><td><b>O Brasil quase falou tupi</b><br><span class='note'>Até o século 18, São Paulo e a Amazônia falavam a língua geral, não o português. Por que ela sumiu?</span></td><td>Why Did São Paulo Speak Tupi for 200 Years… but Today Nobody Does?</td><td>"Como era o português falado no Brasil do passado?" 2,4 mi (Uma História a Mais); "Como os indígenas chegaram no Brasil" 2,4 mi</td><td>Vídeos sobre a língua geral em si ficam abaixo de 70 mil; ninguém fez no formato de mapa</td><td class='n'>Alta</td></tr><tr><td class='x'>2</td><td><b>Por que o Brasil continuou um país só (e fala português)</b><br><span class='note'>A América espanhola virou 18 países; a portuguesa, um só, com uma língua.</span></td><td>Por que a América Espanhola Virou 18 Países e o Brasil Continuou Um Só?</td><td>BBC News Brasil 3,4 mi; Canal Top10 471 mil (há 1 mês); Revelando Brasil 804 mil em espanhol</td><td>BBC e Top10 já fizeram, mas uma vez cada; dá para fazer pelo ângulo da língua</td><td class='n'>Alta</td></tr><tr><td class='x'>3</td><td><b>A língua alemã no Sul do Brasil</b><br><span class='note'>Por que cidades do Sul ainda falam hunsrik e pomerano, 200 anos depois?</span></td><td>Por que Cidades Brasileiras Ainda Falam um Alemão que Nem a Alemanha Entende?</td><td>Vídeos de alemão vendo o "alemão do Sul" com 780–890 mil nas últimas semanas; hunsrik tem muitas buscas sugeridas</td><td>Quase só vlog e react; não achei explicação histórica forte</td><td class='n'>Alta</td></tr><tr><td class='x'>4</td><td><b>O Brasil recriou o português</b><br><span class='note'>Por que o português do Brasil e o de Portugal se afastaram tanto?</span></td><td>Portugal Colonizou o Brasil por 300 Anos… Então Por Que Falamos Tão Diferente?</td><td>"O Brasil recriou o português" 317 mil (há 2 meses); Portugal vs Brasil 2,8 mi</td><td>Muitos vídeos de comparação de palavras, poucos de história</td><td class='n'>Média</td></tr><tr><td class='x'>5</td><td><b>Os países que falam português e quase ninguém sabe</b><br><span class='note'>Macau, Goa, Timor-Leste, Malaca: Portugal ficou séculos e a língua quase sumiu.</span></td><td>Portugal Ficou 450 Anos em Macau… Por Que Quase Ninguém Fala Português Lá?</td><td>Vlogs de viagem com 1,2–2,1 mi (Nômade Raiz, Fe Leal); Timor 1,8 mi</td><td>Só vlogs de viagem; nenhum vídeo explicativo com mapa</td><td class='n'>Alta</td></tr><tr><td class='x'>6</td><td><b>Os holandeses no Nordeste</b><br><span class='note'>Recife foi holandesa por 24 anos. Por que não sobrou nada da língua?</span></td><td>Os Holandeses Governaram o Nordeste por 24 Anos… Por Que Não Falamos Holandês?</td><td>"Os holandeses no Brasil" 503 mil; Guararapes 514 mil</td><td>Tema de história conhecido, pouco pelo ângulo da língua</td><td class='n'>Média</td></tr><tr><td class='x'>7</td><td><b>O Uruguai já foi do Brasil</b><br><span class='note'>A Província Cisplatina. Por que o Uruguai fala espanhol e não português?</span></td><td>O Uruguai Foi Brasileiro… Por Que Fala Espanhol?</td><td>BBC News Brasil 986 mil</td><td>Pouca gente fez; autocompletar mostra "uruguai já foi do brasil"</td><td class='n'>Média</td></tr><tr><td class='x'>8</td><td><b>Os vizinhos que não falam espanhol</b><br><span class='note'>Suriname (holandês), Guiana (inglês), Guiana Francesa.</span></td><td>Por que o Vizinho do Brasil Fala Holandês?</td><td>"O vizinho do Brasil que fala holandês" 402 mil há 2 meses (Brasil Inexplicado); Suriname 1,6 mi (EconoSimples)</td><td>Dois canais médios já tocaram</td><td class='n'>Média</td></tr><tr><td class='x'>9</td><td><b>Sotaques do Brasil</b><br><span class='note'>Por que o carioca chia, o paulistano puxa o "r", o nordestino fala diferente?</span></td><td>Por que o Carioca Fala Chiado? A Explicação Histórica</td><td>Série da BBC News Brasil 670 mil–1,1 mi por vídeo</td><td>BBC já tem a série; concorrência forte</td><td class='n'>Média</td></tr><tr><td class='x'>10</td><td><b>Filipinas, Indonésia e outros casos de fora</b><br><span class='note'>Os mesmos temas do Language Map original, em português.</span></td><td>Por que a Espanha Ficou 300 Anos nas Filipinas e Quase Ninguém Fala Espanhol?</td><td>Em espanhol, BBC Mundo fez 3,1 mi; em português quase nada</td><td>Sem concorrência em PT, mas o interesse brasileiro é menor que nos temas do Brasil</td><td class='n'>Baixa a média</td></tr></tbody></table></div>
+<p class="note">Views são do vídeo citado, como aparecem na busca do YouTube hoje. Alguns títulos aparecem traduzidos para o inglês na busca, mas os vídeos são brasileiros.</p></section>
+
+<section><h2>Quase ninguém pesquisa, mas muita gente assiste</h2>
+<p>O autocompletar quase não sugere frases como "por que o Brasil não fala tupi". Isso não é falta de interesse: o Language Map original também não vive de busca, e sim da página inicial e dos vídeos sugeridos. É a pergunta curiosa na thumbnail que faz o clique. Por isso a prova de demanda aqui são as views de vídeos parecidos, não o volume de busca.</p></section>
+
+<section><h2>RPM e CPM</h2>
+<ul>
+<li>Não achei número confiável de RPM por nicho no Brasil. As calculadoras públicas (como a da vidIQ) dão faixas genéricas por nicho, sem separar o Brasil. Só os dados de um canal real mostram o número.</li>
+<li>O que dá para dizer: o público brasileiro paga menos por mil views que EUA e Europa. Conteúdo educativo e de história costuma atrair anunciantes melhores que entretenimento e futebol, e vídeos de 8 minutos ou mais permitem anúncios no meio, que aumentam a receita por vídeo.</li>
+<li>Um truque: temas da lusofonia (Macau, Goa, Timor, Portugal vs Brasil, Galícia) também atraem público de Portugal, que está na Europa e costuma pagar mais que o Brasil.</li>
+<li>Patrocínio: um canal de línguas e história tem patrocinadores naturais que canal de futebol não tem, como apps e escolas de idiomas, cursos e plataformas de viagem. E patrocínio não depende de ter rosto.</li>
+</ul></section>
+
+<section><h2>Limites</h2><ul>
+<li>As views mostram interesse no tema, não garantem que um canal novo vá chegar nesses números.</li>
+<li>Não vi o vídeo de referência do Language Map ainda; quando você mandar, analiso formato, duração e edição.</li></ul></section>
+</main>

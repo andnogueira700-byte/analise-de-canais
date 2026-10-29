@@ -1,0 +1,87 @@
+<title>Concorrência NFL e Language Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: single reading column, wide scrollable tables, multiplier as the hero number of each row */
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#16181d; --muted:#5d6370; --line:#dde0e6;
+  --accent:#d6261e; --accent-soft:#fde8e6; --warn:#9a6400; --warn-soft:#fff3d6;
+  --display:"Archivo Narrow","Arial Narrow",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121317; --surface:#1b1d23; --fg:#eceef2; --muted:#9aa0ad; --line:#2c2f37;
+  --accent:#ff5a4f; --accent-soft:#3a1715; --warn:#f0b54a; --warn-soft:#33270f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121317; --surface:#1b1d23; --fg:#eceef2; --muted:#9aa0ad; --line:#2c2f37;
+  --accent:#ff5a4f; --accent-soft:#3a1715; --warn:#f0b54a; --warn-soft:#33270f; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+main{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+h1,h2{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:clamp(30px,5vw,46px)}
+h2{font-size:26px}
+p{margin:0;max-width:68ch}
+.lead{display:flex;flex-direction:column;gap:12px}
+.eyebrow{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+section{display:flex;flex-direction:column;gap:14px}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:900px;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 12px var(--body);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.x{font:700 22px var(--display);color:var(--accent);white-space:nowrap;font-variant-numeric:tabular-nums}
+td.n{font-family:var(--mono);font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums}
+a{color:inherit;text-decoration-color:var(--line);text-underline-offset:3px}
+a:hover,a:focus-visible{text-decoration-color:var(--accent)}
+.ch{font-weight:600}
+.tag{display:inline-block;font:500 11px var(--mono);padding:2px 6px;border-radius:3px;background:var(--accent-soft);color:var(--accent);margin-top:4px}
+.tag.w{background:var(--warn-soft);color:var(--warn)}
+.note{font-size:13px;color:var(--muted)}
+.patterns{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.pat{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.pat b{font-family:var(--display);font-size:18px}
+.callout{border-left:4px solid var(--accent);background:var(--surface);padding:14px 18px;border-radius:0 6px 6px 0}
+ul{margin:0;padding-left:20px}
+h3{font:700 20px var(--display);margin:0}
+.verdict{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.v{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.big{font:700 26px var(--display)}
+.red{color:var(--accent)}.ok{color:#1f8a4c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ok{color:#4cc27f}}
+:root[data-theme="dark"] .ok{color:#4cc27f}
+</style>
+<main>
+<header class="lead"><span class="eyebrow">Teste de saturação · 28 out 2026</span>
+<h1>Dá para modelar When Football Was Football ou The Language Map?</h1>
+<p>Abri todos os vídeos dos dois canais e fiz 54 buscas no YouTube (EUA) com os títulos-molde e os temas deles, nos filtros "relevância", "este ano" e "mais vistos". Depois conferi a data de criação e os inscritos de cada canal que apareceu.</p></header>
+
+<div class="verdict">
+<div class="v"><span class="eyebrow">When Football Was Football</span><span class="big red">Saturado</span>
+<p>Em seis semanas apareceram pelo menos 25 canais com o mesmo molde "20 Things … Did in the 1970s That Would Shock … Today", em NFL, hóquei, beisebol, basquete, golfe, boxe, luta livre, NASCAR, futebol inglês e até caminhoneiros. Vários copiam o título palavra por palavra.</p>
+<p>O próprio original está cansando: os 10 últimos vídeos ficaram entre 2 mil e 12 mil views, contra 283 mil e 200 mil no começo. Os clones depois de outubro quase todos têm menos de mil views.</p></div>
+<div class="v"><span class="eyebrow">The Language Map</span><span class="big ok">Ainda dá, mas a janela é curta</span>
+<p>O canal tem 9 dias e 4 vídeos. Os clones já começaram (pelo menos 7 nas últimas duas semanas, dois com o título idêntico), mas nenhum passou de 13 mil views. Ainda não tem um segundo canal forte no formato.</p>
+<p>O tema em si é antigo e tem demanda provada: "Why Doesn't Indonesia Speak Dutch?" fez 1,67 mi, "Why does Brazil speak Portuguese…" fez 804 mil. Quem chegar primeiro com qualidade e volume ganha.</p></div>
+</div>
+
+<section><h2>O problema do Language Map: RPM</h2>
+<p>Os vídeos que mais estouraram falam de Filipinas e Indonésia, e quem assiste a esse tipo de vídeo costuma ser de lá. Esses países pagam muito menos por mil views do que EUA e Reino Unido. Já o canal de NFL tem audiência quase toda americana, que paga bem. Não consigo ver o RPM real daqui; isso vem do perfil do tema.</p>
+<p><b>Minha sugestão:</b> usar a ideia do Language Map ("por que tal lugar fala/não fala tal língua", com mapa e pergunta no título) puxando temas que o público americano e europeu assiste. Exemplos: por que a Louisiana deixou de falar francês, por que os EUA não têm língua oficial, por que o alemão quase virou a 2ª língua dos EUA e sumiu, por que o Texas e a Califórnia perderam o espanhol, por que a Irlanda trocou o irlandês pelo inglês, por que o Canadá ainda fala francês. É a mesma estratégia com audiência que paga melhor, e cabe na estrutura de história que você já tem.</p></section>
+
+<section><h2>Clones do When Football Was Football</h2><div class='tbl'><table><thead><tr><th>Canal</th><th>Criado</th><th>Inscritos</th><th>Melhor vídeo do formato</th><th>Views</th></tr></thead><tbody><tr><td><a class='ch' href='https://www.youtube.com/@WhenFootballWasFootball11'>@WhenFootballWasFootball11</a></td><td class='n'>4/set/2026</td><td class='n'>3,55 mil</td><td>20 Things NFL Players Did at Halftime in the 1970s… (o original)</td><td class='n'>283 mil</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@forgottenamericansportsyt'>@forgottenamericansportsyt</a></td><td class='n'>6/set/2026</td><td class='n'>1,19 mil</td><td>20 Things NFL Players Did at Halftime in the 1970s That Would Stun Teams Today</td><td class='n'>82 mil</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@WhenHockeyWasHockey'>@WhenHockeyWasHockey</a></td><td class='n'>9/out/2026</td><td class='n'>924</td><td>20 Things NHL Players Did Between Periods in the 1970s…</td><td class='n'>122 mil</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@WhenBaseballWasBaseball'>@WhenBaseballWasBaseball</a></td><td class='n'>14/set/2026</td><td class='n'>1,03 mil</td><td>25 Things Fans Could Do at an MLB Game in the 1970s…</td><td class='n'>11 mil</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@whenbasketballwasbasketball'>@whenbasketballwasbasketball</a></td><td class='n'>2/out/2026</td><td class='n'>165</td><td>20 Things NBA Players Did at Halftime in the 1970s…</td><td class='n'>17 mil</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@AmericanOldSchoolRacing'>@AmericanOldSchoolRacing</a></td><td class='n'>24/ago/2026</td><td class='n'>1,15 mil</td><td>20 Things Every 1970s NASCAR Fan Remembers…</td><td class='n'>37 mil</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@ForgottenFootbal'>@ForgottenFootbal</a></td><td class='n'>6/out/2026</td><td class='n'>188</td><td>25 Things Every 1970s British Football Fan Remembers…</td><td class='n'>36 mil</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@GridironTimeMachine-f6l'>@GridironTimeMachine-f6l</a></td><td class='n'>17/out/2026</td><td class='n'>9</td><td>20 Things NFL Players Did at Halftime in the 1970s… (título idêntico)</td><td class='n'>1,3 mil</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@FootballTimeCapsule-q6h'>@FootballTimeCapsule-q6h</a></td><td class='n'>22/out/2026</td><td class='n'>—</td><td>20 Things About Old NFL Stadiums in the 1970s…</td><td class='n'>72</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@NFLTimeVaultTV-q1w'>@NFLTimeVaultTV-q1w</a></td><td class='n'>16/out/2026</td><td class='n'>14</td><td>22 Wild NFL Stories From the '80s That Would Shock Fans Today</td><td class='n'>592</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@GolfWasGolf'>@GolfWasGolf</a></td><td class='n'>20/out/2026</td><td class='n'>—</td><td>20 Things Golf Players Did at Halftime in the 1970s…</td><td class='n'>34</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@WhenWrestlingWasWrestling-g7q'>@WhenWrestlingWasWrestling-g7q</a></td><td class='n'>23/out/2026</td><td class='n'>5</td><td>20 Things Wrestlers Did to Protect Kayfabe in the 1970s…</td><td class='n'>123</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@theforgottenrounds'>@theforgottenrounds</a></td><td class='n'>3/out/2026</td><td class='n'>4</td><td>20 Things About Watching Boxing in the 1970s…</td><td class='n'>344</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@NHLArchive-s8m'>@NHLArchive-s8m</a></td><td class='n'>18/out/2026</td><td class='n'>1</td><td>10 Things NHL Players Did at Halftime in the 1970s…</td><td class='n'>264</td></tr></tbody></table></div>
+<p class="note">Também tem o mesmo molde aplicado à nostalgia dos anos 70 em geral ("25 Things From the '70s That Would Shock People Today"), que já tem canais com 50 mil a 260 mil inscritos.</p></section>
+
+<section><h2>Clones do The Language Map</h2><div class='tbl'><table><thead><tr><th>Canal</th><th>Criado</th><th>Inscritos</th><th>Melhor vídeo do formato</th><th>Views</th></tr></thead><tbody><tr><td><a class='ch' href='https://www.youtube.com/@TheLanguageMap'>@TheLanguageMap</a></td><td class='n'>19/out/2026</td><td class='n'>2,24 mil</td><td>Why Did Spain Rule the Philippines for 300 Years but Leave Almost No Spanish Behind? (o original)</td><td class='n'>920 mil</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@NeighborLogic'>@NeighborLogic</a></td><td class='n'>2009</td><td class='n'>1 mil</td><td>Why Did the US Rule the Philippines for Only 48 Years but Leave English Everywhere?</td><td class='n'>13 mil</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@GeographybyHenry'>@GeographybyHenry</a></td><td class='n'>7/ago/2026</td><td class='n'>137</td><td>Why Did Spain Rule the Philippines for 300 Years… (título idêntico)</td><td class='n'>54</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@behindthemap-o9n'>@behindthemap-o9n</a></td><td class='n'>7/set/2026</td><td class='n'>54</td><td>Why Did Spain Rule the Philippines for 300 Years… (título idêntico)</td><td class='n'>1</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@TheLanguageAtlas'>@TheLanguageAtlas</a></td><td class='n'>—</td><td class='n'>46</td><td>Why Did Britain Rule India for 200 Years but Only 10% of Indians Speak English?</td><td class='n'>3</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@BabelAtlas'>@BabelAtlas</a></td><td class='n'>20/out/2026</td><td class='n'>7</td><td>Why Dutch and German Became Two Different Languages</td><td class='n'>0</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@Cartochron'>@Cartochron</a></td><td class='n'>16/out/2026</td><td class='n'>6</td><td>Why Does Brazil Speak Portuguese? A Line Drawn in 1494</td><td class='n'>17</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@TheBentBorder'>@TheBentBorder</a></td><td class='n'>12/out/2026</td><td class='n'>22</td><td>Why Does Brazil Speak Portuguese? Blame 1494</td><td class='n'>812</td></tr></tbody></table></div>
+<h3>Canais antigos que já pegam o mesmo tema</h3><div class='tbl'><table><thead><tr><th>Canal</th><th>Criado</th><th>Inscritos</th><th>Melhor vídeo do formato</th><th>Views</th></tr></thead><tbody><tr><td><a class='ch' href='https://www.youtube.com/@Big_Systems'>@Big_Systems</a></td><td class='n'>2022</td><td class='n'>83 mil</td><td>Why Doesn't Indonesia Speak Dutch?? (Documentary)</td><td class='n'>1,67 mi</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@RevelandoBrasil'>@RevelandoBrasil</a></td><td class='n'>nov/2025</td><td class='n'>6,5 mil</td><td>Why does Brazil speak Portuguese while the rest of South America speaks Spanish?</td><td class='n'>804 mil</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@General.Knowledge'>@General.Knowledge</a></td><td class='n'>2017</td><td class='n'>944 mil</td><td>Why Does Nobody Speak This Romance Language Anymore?</td><td class='n'>405 mil</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@NameExplain'>@NameExplain</a></td><td class='n'>2015</td><td class='n'>394 mil</td><td>Why Don't More Countries Speak Italian?</td><td class='n'>188 mil</td></tr><tr><td><a class='ch' href='https://www.youtube.com/@ThePresentPast_'>@ThePresentPast_</a></td><td class='n'>2022</td><td class='n'>466 mil</td><td>Why Brazilians Don't Speak Spanish</td><td class='n'>145 mil</td></tr></tbody></table></div></section>
+
+<section><h2>Os dois canais, vídeo por vídeo</h2>
+<p><b>When Football Was Football</b> (criado em 4/set, 3,55 mil inscritos, 28 vídeos, 1,18 mi de views no total): vídeos de 27 min a 1h25, um por dia. Os maiores são "Halftime" 283 mil, "Sidelines" 200 mil, "NFL Rules From the 1970s" 163 mil e "25 Things Every 1970s NFL Fan Remembers" 94 mil. Os 10 mais recentes têm entre 2 mil e 12 mil.</p>
+<p><b>The Language Map</b> (criado em 19/out, 2,24 mil inscritos, 4 vídeos, 1 mi de views no total): vídeos de 8 a 12 min. Filipinas/Espanha 920 mil, Indonésia/Holanda 87 mil, Brasil/língua indígena 26 mil (2 dias).</p></section>
+
+<section><h2>Limites</h2><ul>
+<li>A busca do YouTube não mostra todos os canais. Pode haver mais clones; o número real é igual ou maior.</li>
+<li>Não tenho acesso ao RPM de nenhum canal. A comparação vem de qual país assiste ao tema.</li></ul></section>
+</main>
