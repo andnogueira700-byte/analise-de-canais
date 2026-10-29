@@ -1,0 +1,11 @@
+{
+  "cortes": {"razoes": "a primeira razao", "bolso": "agora vem a parte do bolso", "guerra": "a setima razao", "escola": "a nona razao", "fecho": "um pais inteiro de lingua"},
+  "secoes": [
+    ["inicio", "razoes", ["curious_discovery", "playful_inquiry"]],
+    ["razoes", "bolso", ["investigative_pulse", "documentary_reflection"]],
+    ["bolso", "guerra", ["investigative_pulse"]],
+    ["guerra", "escola", ["shadows_echoes"]],
+    ["escola", "fecho", ["documentary_reflection"]],
+    ["fecho", "fim", ["gentle_dawn", "triumphant_horizons"]]
+  ]
+}

@@ -1,0 +1,4 @@
+<!-- desenhado para o Mapa Raiz, no estilo Lucide -->
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 24 24" fill="none" stroke="#06122F" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+<path d="M2 9h20"/><path d="M2 9v8"/><path d="M22 9v8"/><path d="M2 17a5 5 0 0 1 10 0"/><path d="M12 17a5 5 0 0 1 10 0"/><path d="M2 21c1.5 0 2-1 3.5-1s2 1 3.5 1 2-1 3.5-1 2 1 3.5 1 2-1 3.5-1 2 1 2.5 1"/>
+</svg>
