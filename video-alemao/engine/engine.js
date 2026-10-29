@@ -301,6 +301,9 @@ function drawLabels(t, cam, S) {
     // rótulo em cima de região destacada: sobe junto com a placa e fica branco com contorno escuro
     const on = S.highlights.find(h => h._up != null && vis(t, h.t0, h.t1, 0.6, 0.6) && byName(h.name) && inPath(cam, byName(h.name).path, l.lon, l.lat));
     if (on) y -= on._up;
+    { mctx.save(); mctx.font = `800 ${(l.size || 30) * 1.2}px "Bricolage Grotesque"`; const w = mctx.measureText(l.text.toUpperCase()).width / 2 + 8, h = (l.size || 30) * 0.75; mctx.restore();
+      const [p0x, p0y] = proj(x - w, y - h), [p1x, p1y] = proj(x + w, y + h);
+      if (BOXES.some(b => (b.k === 'cartão' || b.k === 'ano') && p0x < b[2] && p1x > b[0] && p0y < b[3] && p1y > b[1])) continue; }
     const dark = ESTILO === 'b' && !on && !l.light, sz = (l.size || 30) * 1.2;
     mctx.save(); mctx.globalAlpha = a; mctx.font = `800 ${sz}px "Bricolage Grotesque"`; mctx.textAlign = 'center'; mctx.textBaseline = 'middle';
     mctx.letterSpacing = `${sz * 0.06}px`; mctx.lineJoin = 'round'; mctx.lineWidth = sz * 0.28;
@@ -370,6 +373,7 @@ function drawIcons(t, cam, S) {
     const size = iconSize(ic) * (ic.sx != null ? 1 : f);
     const sc = backOut((t - ic.t0) / 0.45) * (1 + 0.03 * Math.sin(t * 3 + (ic.lon || 0)));
     let aa = a; if (ic.sink && t > ic.sink) { const p = clamp((t - ic.sink) / 1.6); y += p * 50; aa *= 1 - p; }
+    if (ic.sx == null && BOXES.some(b => (b.k === 'cartão' || b.k === 'rótulo') && x - size / 2 < b[2] && x + size / 2 > b[0] && y - size / 2 < b[3] && y + size / 2 > b[1])) continue; // nunca por baixo de cartão ou nome
     const grey = ic.grey && t > ic.grey;
     ctx.save(); if (grey) ctx.filter = 'grayscale(1) opacity(0.6)';
     if (ic.mark) drawMarker(ic.mark, x, y, size, aa, sc, ic.ring); else drawIcon(ic.img, x, y, size, aa, sc); ctx.restore();
@@ -411,6 +415,9 @@ function placeIcons(S) {
   for (const ic of list) ic._skip = true;
   for (const ic of list) {
     const tm = ic.t0 + 0.45; render(tm);
+    for (const k of ['numbers', 'people', 'words', 'dots', 'lists', 'rows']) for (const o of S[k]) if (o.t0 < ic.t1 && ic.t0 < o.t1) {
+      const r = cardRect(k, o), dx = o._dx || 0, dy = o._dy || 0; BOXES.push([r[0] + dx - 10, r[1] + dy - 10, r[0] + r[2] + dx + 10, r[1] + r[3] + dy + 10]);
+    }
     const cam = camera(tm), [ax, ay, f] = geoS(cam, ic.lon, ic.lat), sz = iconSize(ic) * f, r = sz / 2;
     const extra = ic.label ? sz * 0.62 + 28 : 0;
     const ok = (x, y) => x - r > 20 && x + r < W - 20 && y - r > 20 && y + r + extra < H - 130 &&
@@ -480,9 +487,11 @@ function drawChapter(t, S) {
   for (const c of S.chapters) {
     const a = vis(t, c.t0, c.t0 + 5, 0.4, 0.5); if (!a) continue;
     const slide = (1 - easeOut((t - c.t0) / 0.5)) * -40;
-    ctx.save(); ctx.globalAlpha = a; ctx.translate(70 + slide, 70);
-    ctx.font = '800 44px "Bricolage Grotesque"'; const nw = ctx.measureText(c.num).width + 40;
+    ctx.save(); ctx.font = '800 44px "Bricolage Grotesque"'; const nw = ctx.measureText(c.num).width + 40;
     ctx.font = '700 30px Figtree'; ctx.letterSpacing = '4px'; const tw = ctx.measureText(c.title.toUpperCase()).width + 44;
+    // se o alfinete ou um rótulo estiver no canto, a etiqueta do capítulo desce
+    let cy = 70; for (let k = 0; k < 6 && hit([60, cy - 10, 80 + nw + tw, cy + 90]); k++) cy += 100;
+    BOXES.push([70, cy, 70 + nw + tw, cy + 80]); ctx.globalAlpha = a; ctx.translate(70 + slide, cy);
     ctx.shadowColor = 'rgba(0,0,0,0.35)'; ctx.shadowBlur = 18; ctx.shadowOffsetY = 6;
     ctx.fillStyle = C.tinta; rr(0, 0, nw + tw, 80, 14); ctx.fill(); ctx.shadowColor = 'transparent';
     ctx.fillStyle = C.ipe; rr(0, 0, nw, 80, [14, 0, 0, 14]); ctx.fill();
@@ -513,24 +522,43 @@ function cardRect(k, o) {
   ctx.restore(); return r;
 }
 function layoutCards(S) {
-  const all = [];
+  LAYOUT = true; const all = [];
   for (const k of ['numbers', 'people', 'words', 'dots', 'lists', 'rows']) for (const o of S[k]) all.push({ k, o, r: cardRect(k, o) });
   all.sort((a, b) => a.o.t0 - b.o.t0);
   const done = [];
   for (const c of all) {
-    const live = done.filter(d => d.o.t0 < c.o.t1 && c.o.t0 < d.o.t1);
-    const box = dy => [c.r[0] - 12, c.r[1] + dy - 12, c.r[0] + c.r[2] + 12, c.r[1] + c.r[3] + dy + 12];
-    const clash = dy => live.some(d => { const b = box(dy), e = [d.r[0], d.r[1] + (d.o._dy || 0), d.r[0] + d.r[2], d.r[1] + d.r[3] + (d.o._dy || 0)]; return b[0] < e[2] && b[2] > e[0] && b[1] < e[3] && b[3] > e[1]; });
-    let dy = 0;
-    if (clash(0)) for (const s of [40, -40, 80, -80, 120, -120, 160, -160, 200, -200, 240, 280, 320, 360, 400]) { const top = c.r[1] + s, bot = top + c.r[3]; if (top >= 40 && bot <= H - 140 && !clash(s)) { dy = s; break; } }
+    // obstáculos fixos no tempo do cartão: alfinete, rótulos do mapa, capítulo e selo do ano
+    const obst = [];
+    for (const ts of [c.o.t0 + 0.5, (c.o.t0 + c.o.t1) / 2, c.o.t1 - 0.4]) { render(ts); for (const b of BOXES) if (['alfinete', 'rótulo', 'capítulo', 'ano'].includes(b.k)) obst.push(b); }
+    const live = done.filter(d => d.o.t0 < c.o.t1 && c.o.t0 < d.o.t1).concat(obst.map(b => ({ o: {}, r: [b[0], b[1], b[2] - b[0], b[3] - b[1]] })));
+    const off = c2 => [c2.o._dx || 0, c2.o._dy || 0];
+    const clash = (dx, dy) => live.some(d => { const [ex, ey] = off(d), b = [c.r[0] + dx - 12, c.r[1] + dy - 12, c.r[0] + c.r[2] + dx + 12, c.r[1] + c.r[3] + dy + 12], e = [d.r[0] + ex, d.r[1] + ey, d.r[0] + d.r[2] + ex, d.r[1] + d.r[3] + ey]; return b[0] < e[2] && b[2] > e[0] && b[1] < e[3] && b[3] > e[1]; });
+    let dx = 0, dy = 0;
+    if (clash(0, 0)) {
+      const opts = []; for (const sx of [0, -150, 150, -300, 300, -450, 450, -600, 600, -750, 750, -900, 900, -1140, 1140]) for (const sy of [0, 40, -40, 80, -80, 120, 160, 200, 240, 300, 360, 420, 480, 540]) opts.push([sx, sy]);
+      opts.sort((p, q) => Math.hypot(p[0] * 0.7, p[1]) - Math.hypot(q[0] * 0.7, q[1]));
+      const fit = ([sx, sy]) => c.r[0] + sx >= 40 && c.r[0] + c.r[2] + sx <= W - 40 && c.r[1] + sy >= 40 && c.r[1] + c.r[3] + sy <= H - 140 && !clash(sx, sy);
+      const f = opts.find(fit); if (f) [dx, dy] = f;
+      else { // não cabe: os cartões que atrapalham saem de cena quando este entra, e ele só desvia dos obstáculos fixos
+        const ov = (d, sx, sy) => { const [ex, ey] = off(d), b = [c.r[0] + sx - 12, c.r[1] + sy - 12, c.r[0] + c.r[2] + sx + 12, c.r[1] + c.r[3] + sy + 12], e = [d.r[0] + ex, d.r[1] + ey, d.r[0] + d.r[2] + ex, d.r[1] + d.r[3] + ey]; return b[0] < e[2] && b[2] > e[0] && b[1] < e[3] && b[3] > e[1]; };
+        const inside = ([sx, sy]) => c.r[0] + sx >= 40 && c.r[0] + c.r[2] + sx <= W - 40 && c.r[1] + sy >= 40 && c.r[1] + c.r[3] + sy <= H - 140;
+        const g = opts.find(p => inside(p) && !live.some(d => !d.k && ov(d, ...p))) || [0, 0];
+        [dx, dy] = g; for (const d of live) if (d.k && ov(d, dx, dy)) d.o.t1 = Math.min(d.o.t1, c.o.t0 + 0.3);
+      }
+    }
+    c.o._dx = dx;
     c.o._dy = dy; done.push(c);
   }
+  LAYOUT = false;
 }
 // caixas dos cartões visíveis no instante t (para ícones e rótulos não ficarem por baixo)
+let LAYOUT = false;
 function cardBoxes(t, S) {
+  if (S.years.some(y => !y.hide && y.t <= t)) BOXES.push(Object.assign([W - 340, 50, W - 50, 180], { k: 'ano' })); // selo do ano
+  if (LAYOUT) return;
   for (const k of ['numbers', 'people', 'words', 'dots', 'lists', 'rows']) for (const o of S[k]) {
-    if (!vis(t, o.t0, o.t1, 0.3, 0.35)) continue; const r = cardRect(k, o), dy = o._dy || 0;
-    BOXES.push([r[0] - 10, r[1] + dy - 10, r[0] + r[2] + 10, r[1] + r[3] + dy + 10]);
+    if (!vis(t, o.t0, o.t1, 0.3, 0.35)) continue; const r = cardRect(k, o), dx = o._dx || 0, dy = o._dy || 0;
+    BOXES.push([r[0] + dx - 10, r[1] + dy - 10, r[0] + r[2] + dx + 10, r[1] + r[3] + dy + 10]);
   }
 }
 function card(x, y, w, h, a, fill = C.branco) {
@@ -544,7 +572,7 @@ function drawNumbers(t, S) {
     ctx.save(); ctx.globalAlpha = a; const sc = 0.85 + 0.15 * backOut((t - n.t0) / 0.45);
     ctx.font = '800 120px "Bricolage Grotesque"'; const nw = ctx.measureText((n.prefix || '') + (n.raw || fmt(n.value)) + (n.suffix || '')).width;
     ctx.font = '700 28px Figtree'; ctx.letterSpacing = '3px'; const lw = ctx.measureText(n.label.toUpperCase()).width;
-    const w = Math.max(nw, lw) + 100, h = 230, x = n.x ?? W / 2, y = (n.y ?? 150) + (n._dy || 0);
+    const w = Math.max(nw, lw) + 100, h = 230, x = (n.x ?? W / 2) + (n._dx || 0), y = (n.y ?? 150) + (n._dy || 0);
     ctx.translate(x, y + h / 2); ctx.scale(sc, sc); ctx.translate(-x, -(y + h / 2));
     card(x - w / 2, y, w, h, a);
     ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic'; ctx.letterSpacing = '0px';
@@ -556,7 +584,7 @@ function drawNumbers(t, S) {
 function drawWords(t, S) {
   for (const wd of S.words) {
     const a = vis(t, wd.t0, wd.t1, 0.3, 0.35); if (!a) continue;
-    const x = wd.x ?? 90, y = (wd.y ?? 300) + (wd._dy || 0), w = 640, h = wd.meaning ? 300 : 240;
+    const x = (wd.x ?? 90) + (wd._dx || 0), y = (wd.y ?? 300) + (wd._dy || 0), w = 640, h = wd.meaning ? 300 : 240;
     const slide = (1 - easeOut((t - wd.t0) / 0.45)) * -50;
     ctx.save(); ctx.globalAlpha = a; ctx.translate(slide, 0); card(x, y, w, h, a);
     tagLabelLeft(wd.lang, x + 36, y + 50, wd.langColor || C.acai);
@@ -578,7 +606,7 @@ function drawPeople(t, S) {
     const right = pp.side === 'right';
     ctx.save(); ctx.font = '800 46px "Bricolage Grotesque"'; const nw = ctx.measureText(pp.name).width;
     ctx.font = '700 24px Figtree'; ctx.letterSpacing = '3px'; const rw = ctx.measureText(pp.role.toUpperCase()).width; ctx.letterSpacing = '0px';
-    const w = Math.max(nw, rw) + 290, h = 220; const x = right ? W - 90 - w : 90, y = (pp.y ?? 330) + (pp._dy || 0);
+    const w = Math.max(nw, rw) + 290, h = 220; const x = (right ? W - 90 - w : 90) + (pp._dx || 0), y = (pp.y ?? 330) + (pp._dy || 0);
     const slide = (1 - easeOut((t - pp.t0) / 0.45)) * (right ? 60 : -60);
     ctx.globalAlpha = a; ctx.translate(slide, 0); card(x, y, w, h, a);
     const cx = x + 125, cy = y + h / 2, R = 82;
@@ -596,7 +624,7 @@ function drawDots(t, S) {
   for (const d of S.dots) {
     const a = vis(t, d.t0, d.t1, 0.35, 0.35); if (!a) continue;
     const cols = d.cols || 10, rows = Math.ceil(d.total / cols), cell = d.cell || 38;
-    const w = cols * cell + 80, h = rows * cell + 170; const x = d.x ?? (W - 90 - w), y = (d.y ?? 200) + (d._dy || 0);
+    const w = cols * cell + 80, h = rows * cell + 170; const x = (d.x ?? (W - 90 - w)) + (d._dx || 0), y = (d.y ?? 200) + (d._dy || 0);
     ctx.save(); ctx.globalAlpha = a; card(x, y, w, h, a);
     ctx.textAlign = 'left'; ctx.fillStyle = C.tinta; ctx.font = '700 26px Figtree'; ctx.letterSpacing = '2px'; ctx.fillText(d.title.toUpperCase(), x + 40, y + 56); ctx.letterSpacing = '0px';
     for (let i = 0; i < d.total; i++) {
@@ -613,7 +641,7 @@ function drawDots(t, S) {
 function drawRows(t, S) {
   for (const row of S.rows) {
     const a = vis(t, row.t0, row.t1, 0.3, 0.35); if (!a) continue;
-    const n = row.items.length, cw = 220, w = n * cw + 40, h = 250, x = W / 2 - w / 2, y = (row.y ?? 170) + (row._dy || 0);
+    const n = row.items.length, cw = 220, w = n * cw + 40, h = 250, x = W / 2 - w / 2 + (row._dx || 0), y = (row.y ?? 170) + (row._dy || 0);
     ctx.save(); ctx.globalAlpha = a; card(x, y, w, h, a);
     row.items.forEach((it, i) => {
       const ti = it.at ?? (row.t0 + i * 0.35); const p = (t - ti) / 0.45; if (p <= 0) return;
@@ -628,7 +656,7 @@ function drawRows(t, S) {
 function drawLists(t, S) {
   for (const L of S.lists) {
     const a = vis(t, L.t0, L.t1, 0.35, 0.35); if (!a) continue;
-    const w = 600, rowH = 92, h = 100 + L.items.length * rowH, x = W - 90 - w, y = (L.y ?? 200) + (L._dy || 0);
+    const w = 600, rowH = 92, h = 100 + L.items.length * rowH, x = W - 90 - w + (L._dx || 0), y = (L.y ?? 200) + (L._dy || 0);
     ctx.save(); ctx.globalAlpha = a; card(x, y, w, h, a);
     ctx.fillStyle = C.tinta; ctx.font = '700 26px Figtree'; ctx.letterSpacing = '2px'; ctx.textAlign = 'left'; ctx.fillText(L.title.toUpperCase(), x + 36, y + 58); ctx.letterSpacing = '0px';
     L.items.forEach((it, i) => {
@@ -687,10 +715,12 @@ function render(t) {
   mctx.setTransform(1, 0, 0, 1, 0, 0); mctx.globalAlpha = 1;
   ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.filter = 'none'; ctx.clearRect(0, 0, W, H);
   const cam = camera(t), S = SCENE;
-  cardBoxes(t, S); drawMap(t, cam, S); drawLabels(t, cam, S); drawRoutes(t, cam);
+  // cada caixa ganha o tipo de quem a ocupou (usado pela conferência de sobreposição)
+  const K = (k, f) => { const n = BOXES.length; f(); for (let i = n; i < BOXES.length; i++) BOXES[i].k ??= k; };
+  K('cartão', () => cardBoxes(t, S)); drawMap(t, cam, S); K('rótulo', () => drawLabels(t, cam, S)); drawRoutes(t, cam);
   ctx.drawImage(OVER, 0, 0); // vinheta e grão
-  drawPin(t, cam, S); drawIcons(t, cam, S);
-  drawYear(t, S); drawChapter(t, S);
+  K('alfinete', () => drawPin(t, cam, S)); K('ícone', () => drawIcons(t, cam, S));
+  drawYear(t, S); K('capítulo', () => drawChapter(t, S));
   drawDots(t, S); drawLists(t, S); drawNumbers(t, S); drawWords(t, S); drawPeople(t, S); drawRows(t, S);
   drawPills(t, S); drawQuotes(t, S); drawTitle(t, S); drawEnd(t, S);
 }
