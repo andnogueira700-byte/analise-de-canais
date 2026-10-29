@@ -34,11 +34,14 @@ for i, (a, b, songs) in enumerate(SECS):
 inp = sum([['-i', p] for _, p in parts], []); fc = ''
 for j, (a, _) in enumerate(parts):
     d = int(max(0, a - 2) * 1000); fc += f'[{j}:a]adelay={d}|{d}[d{j}];'
-fc += ''.join(f'[d{j}]' for j in range(len(parts))) + f'amix=inputs={len(parts)}:normalize=0,atrim=0:{DUR},loudnorm=I=-33:TP=-6:LRA=11[m]'
+fc += ''.join(f'[d{j}]' for j in range(len(parts))) + f'amix=inputs={len(parts)}:normalize=0,atrim=0:{DUR},loudnorm=I=-30:TP=-2:LRA=11,volume=-12dB[m]'
 run(inp + ['-filter_complex', fc, '-map', '[m]', '-ar', '44100', TMP + '/trilha.wav'])
-# narração normalizada + trilha com leve "ducking" quando há voz
-run(['-i', D + '/narracao.mp3', '-i', TMP + '/trilha.wav', '-filter_complex',
+# efeitos sonoros nos tempos dos eventos da animação
+subprocess.run(['python3', os.path.dirname(os.path.abspath(__file__)) + '/sfx.py', '0', str(DUR), TMP + '/sfx.wav'], check=True)
+# narração normalizada + trilha bem baixa (Anderson pediu "bem no mínimo") com "ducking" quando há voz + efeitos
+run(['-i', D + '/narracao.mp3', '-i', TMP + '/trilha.wav', '-i', TMP + '/sfx.wav', '-filter_complex',
      '[0:a]loudnorm=I=-15:TP=-1.5:LRA=11,aresample=44100,aformat=channel_layouts=stereo,asplit=2[v][sc];'
      '[1:a][sc]sidechaincompress=threshold=0.05:ratio=3:attack=80:release=600[mb];'
-     '[v][mb]amix=inputs=2:normalize=0,alimiter=limit=0.95[out]', '-map', '[out]', '-c:a', 'aac', '-b:a', '192k', D + '/mix.m4a'])
+     '[2:a]volume=0.32[fx];'
+     '[v][mb][fx]amix=inputs=3:normalize=0,alimiter=limit=0.95[out]', '-map', '[out]', '-c:a', 'aac', '-b:a', '192k', D + '/mix.m4a'])
 print('ok', DUR)

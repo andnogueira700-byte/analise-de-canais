@@ -8,14 +8,17 @@ const path = require('path');
   const browser = await chromium.launch({ args: ['--allow-file-access-from-files', '--disable-web-security'] });
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
   page.on('console', m => { if (m.type() === 'warning' || m.type() === 'error') console.error('[page]', m.text()); });
-  await page.goto('file://' + path.resolve(__dirname, 'index.html'));
+  await page.goto('file://' + path.resolve(__dirname, 'index.html') + '?tilt=' + (process.env.TILT || 0) + '&estilo=' + (process.env.ESTILO || 'a') + '&marcas=' + (process.env.MARCAS || 0));
   await page.waitForFunction(() => window.READY || window.ERR, null, { timeout: 60000 });
   const err = await page.evaluate(() => window.ERR); if (err) { console.error(err); process.exit(1); }
   if (still) { // quadros soltos para conferência
     const fs = require('fs');
-    for (const t of process.argv.slice(6)) {
-      const b64 = await page.evaluate(t => { render(t); return cv.toDataURL('image/jpeg', 0.9).slice(23); }, parseFloat(t));
-      fs.writeFileSync(path.join(out, `f_${String(parseFloat(t).toFixed(1)).padStart(6, '0')}.jpg`), Buffer.from(b64, 'base64'));
+    // cada quadro pode ser um tempo (12.5) ou uma frase da legenda com deslocamento ("no brasil o alemao@+2")
+    for (const [i, arg] of process.argv.slice(6).entries()) {
+      const t = isNaN(+arg) ? await page.evaluate(([p, d]) => at(p) + (+d || 0), arg.split('@')) : +arg;
+      await page.evaluate(t => render(t), t);
+      const name = process.env.PREFIX ? `${process.env.PREFIX}${String(i + 1).padStart(2, '0')}` : `f_${String(t.toFixed(1)).padStart(6, '0')}`;
+      fs.writeFileSync(path.join(out, name + '.jpg'), await page.screenshot({ type: 'jpeg', quality: 92 }));
     }
     await browser.close(); return;
   }
@@ -23,8 +26,9 @@ const path = require('path');
   const n = Math.round((t1 - t0) * fps); const start = Date.now();
   for (let i = 0; i < n; i++) {
     const t = t0 + i / fps;
-    const b64 = await page.evaluate(t => { render(t); return cv.toDataURL('image/jpeg', 0.93).slice(23); }, t);
-    if (!ff.stdin.write(Buffer.from(b64, 'base64'))) await new Promise(r => ff.stdin.once('drain', r));
+    await page.evaluate(t => render(t), t);
+    const buf = await page.screenshot({ type: 'jpeg', quality: 93 });
+    if (!ff.stdin.write(buf)) await new Promise(r => ff.stdin.once('drain', r));
     if (i % 300 === 0) console.error(`${out}: ${i}/${n} (${((Date.now() - start) / 1000 / (i + 1) * 1000).toFixed(0)} ms/quadro)`);
   }
   ff.stdin.end(); await new Promise(r => ff.on('close', r)); await browser.close();

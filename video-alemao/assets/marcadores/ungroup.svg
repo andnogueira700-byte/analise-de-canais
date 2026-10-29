@@ -1,0 +1,16 @@
+<!-- @license lucide-static v0.460.0 - ISC -->
+<svg
+  class="lucide lucide-ungroup"
+  xmlns="http://www.w3.org/2000/svg"
+  width="240"
+  height="240"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="#06122F"
+  stroke-width="1.9"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="6" x="5" y="4" rx="1" />
+  <rect width="8" height="6" x="11" y="14" rx="1" />
+</svg>

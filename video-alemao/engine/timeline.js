@@ -40,7 +40,8 @@ function buildScene() {
   pill(A('quando um governo') + 0.4, A('no brasil o alemão') - 0.3, 'Língua proibida, língua morta?');
   const tBr = A('no brasil o alemão');
   cam(tBr, [-50.5, -27.5], 26, 1.8);
-  for (const s of SUL) hl(tBr + 0.3, A('nao e o alemao da') - 0.2, s, ALEMAO, { alpha: 0.75 });
+  const SULC = { RS: C.caju, SC: C.turq, PR: C.verde }; // cada estado com uma cor diferente
+  SUL.forEach((s, i) => hl(tBr + 0.3 + i * 0.35, A('nao e o alemao da') - 0.2, s, SULC[s]));
   label(tBr + 0.8, A('eu sempre achei'), [-53.5, -29.8], 'Rio Grande do Sul', { size: 26 });
   label(tBr + 0.8, A('eu sempre achei'), [-50.6, -27.2], 'Santa Catarina', { size: 26 });
   label(tBr + 0.8, A('eu sempre achei'), [-51.6, -24.7], 'Paraná', { size: 26 });
@@ -54,8 +55,8 @@ function buildScene() {
   const tDE = A('nao e o alemao da');
   cam(tDE, [-20, 16], 205, 2.2);
   hl(tDE + 0.5, A('como isso foi possivel'), 'Germany', ALEMAO);
-  hl(tDE + 0.5, A('como isso foi possivel'), 'RS', C.ipe, { alpha: 0.9 });
-  hl(tDE + 0.5, A('como isso foi possivel'), 'SC', C.ipe, { alpha: 0.9 });
+  hl(tDE + 0.5, A('como isso foi possivel'), 'RS', C.ipe);
+  hl(tDE + 0.5, A('como isso foi possivel'), 'SC', C.caju);
   label(tDE + 0.9, A('como isso foi possivel'), [10.4, 47.0], 'Alemanha', { size: 26, color: C.branco, alpha: 0.9 });
   pill(A('e um alemao que nasceu'), A('como isso foi possivel') - 0.1, 'Um alemão que nasceu aqui');
   // cartão de título
@@ -91,7 +92,7 @@ function buildScene() {
   hl(tHam, A('chegaram cheios de') - 2, 'Germany', ALEMAO, { alpha: 0.45 });
   const tSea = A('porto de hamburgo') + 0.6;
   const tRiver = A('subiram o rio') ;
-  route('mar', tSea, tRiver + 0.4, [P.hamburgo, [4.5, 53.6], [1.5, 51.0], [-6, 48.5], [-18, 30], [-26, 8], [-32, -8], [-40, -24], [-48.5, -31.5], P.rioGrande, [-51.3, -31.0], P.portoAlegre], { icon: 'ship', color: C.branco });
+  route('mar', tSea, tRiver + 0.4, [P.hamburgo, [8.4, 54.0], [6, 53.85], [4, 53.1], [2.6, 51.7], [1.5, 51.05], [-1, 50.25], [-5.5, 49.3], [-10, 46], [-18, 30], [-26, 8], [-32, -8], [-40, -24], [-48.5, -31.5], P.rioGrande, [-51.3, -31.0], P.portoAlegre], { icon: 'ship', color: C.branco });
   route('rio', tRiver + 0.4, A('chegaram cheios de') - 0.2, [P.portoAlegre, [-51.18, -29.92], P.saoLeopoldo], { icon: 'canoe', size: 70, color: C.ipe });
   unpin(tSea - 0.1);
   follow(tSea, 'mar', 40, 0.8);

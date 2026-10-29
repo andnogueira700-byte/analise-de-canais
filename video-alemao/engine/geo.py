@@ -1,6 +1,6 @@
 # Converte mapas (world-atlas 50m + estados do Brasil) para coordenadas Mercator simplificadas.
 import json, math, sys
-TOPO = '/tmp/claude-0/s/geo/package/countries-50m.json'
+TOPO = '/tmp/claude-0/s/geo/package/countries-10m.json'
 STATES = '../assets/geo/br-states.geojson'
 
 def merc(lon, lat):
@@ -25,6 +25,8 @@ def ring_out(ring, tol):
     if len(pts) < 4: return None
     return [v for p in pts for v in (round(p[0], 4), round(p[1], 4))]
 
+t = json.load(open(TOPO)) if False else None
+def _x(): pass
 t = json.load(open(TOPO)); sc, tr = t['transform']['scale'], t['transform']['translate']
 arcs = []
 for a in t['arcs']:
@@ -76,6 +78,7 @@ def ring2(T, idx):
         pts += a if not pts else a[1:]
     return pts
 
-G = {'fine': build(0.02, 0.004), 'coarse': build(0.12, 0.03)}
-json.dump(G, open('geo.json', 'w'), separators=(',', ':'))
-for k, v in G.items(): print(k, sum(len(r) for c in v['countries'].values() for r in c)//2, sum(len(r) for c in v['states'].values() for r in c)//2, sum(len(r) for r in v['land'])//2)
+if __name__ == '__main__':
+  G = {'fine': build(0.005, 0.0015), 'coarse': build(0.12, 0.03)}
+  json.dump(G, open('geo.json', 'w'), separators=(',', ':'))
+  for k, v in G.items(): print(k, sum(len(r) for c in v['countries'].values() for r in c)//2, sum(len(r) for c in v['states'].values() for r in c)//2, sum(len(r) for r in v['land'])//2)

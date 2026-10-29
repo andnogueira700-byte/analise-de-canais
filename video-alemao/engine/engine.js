@@ -103,7 +103,6 @@ function camera(t) {
   const span = Math.exp(st[2] - drift);
   return { x: st[0], y: st[1], s: W / span };
 }
-const toScreen = (cam, lon, lat) => { const [x, y] = merc(lon, lat); return [(x - cam.x) * cam.s + W / 2, -(y - cam.y) * cam.s + H / 2]; };
 
 // ---------- rotas ----------
 function buildRoute(r) {
@@ -149,56 +148,94 @@ function makeTextures() {
   o.fillStyle = vg; o.fillRect(0, 0, W, H); o.fillStyle = o.createPattern(GRAIN, 'repeat'); o.fillRect(0, 0, W, H);
 }
 
-// ---------- desenho do mapa ----------
-function drawMap(t, cam, S) {
-  // mar
-  const og = ctx.createRadialGradient(W / 2, H * 0.45, 100, W / 2, H / 2, W * 0.75);
-  og.addColorStop(0, '#173A7A'); og.addColorStop(0.55, '#0F2A60'); og.addColorStop(1, '#081A40');
-  ctx.fillStyle = og; ctx.fillRect(0, 0, W, H);
-  // ondulação presa ao mapa (paralaxe)
-  ctx.save(); ctx.globalAlpha = 0.55; const pat = ctx.createPattern(NOISE, 'repeat');
-  const ox = (-cam.x * cam.s * 0.35 + t * 6) % 512, oy = (cam.y * cam.s * 0.35) % 512;
-  ctx.translate(ox, oy); ctx.fillStyle = pat; ctx.fillRect(-ox - 512, -oy - 512, W + 1024, H + 1024); ctx.restore();
+// ---------- mapa (relevo real + vetores) ----------
+// O mapa é desenhado num canvas próprio, que pode ser inclinado em 3D via CSS; o resto fica num canvas por cima.
+const mcv = document.getElementById('m'); const mctx = mcv.getContext('2d');
+let ESTILO = 'a', TILT = 0, MW = W, MH = H; const PERSP = 1700;
+function setTilt(deg) {
+  TILT = deg; MW = deg ? 2500 : W; MH = deg ? 1700 : H; mcv.width = MW; mcv.height = MH;
+  mcv.style.left = (W - MW) / 2 + 'px'; mcv.style.top = (H - MH) / 2 + 'px';
+  mcv.style.transform = deg ? `perspective(${PERSP}px) rotateX(${deg}deg)` : 'none';
+}
+const toScreenM = (cam, x, y) => [(x - cam.x) * cam.s + MW / 2, -(y - cam.y) * cam.s + MH / 2];
+const toScreen = (cam, lon, lat) => { const [x, y] = merc(lon, lat); return toScreenM(cam, x, y); };
+// do canvas do mapa para a tela (aplica a inclinação); devolve [x, y, escala de profundidade]
+function proj(mx, my) {
+  if (!TILT) return [mx, my, 1];
+  const X = mx - MW / 2, Y = my - MH / 2, th = TILT * Math.PI / 180;
+  const yy = Y * Math.cos(th), z = Y * Math.sin(th), f = PERSP / (PERSP - z);
+  return [W / 2 + X * f, H / 2 + yy * f, f];
+}
+const geoS = (cam, lon, lat) => { const [x, y] = toScreen(cam, lon, lat); return proj(x, y); };
 
-  const lod = W / cam.s > 22 ? LODS.coarse : LODS.fine; LAND = lod.land;
-  const vx0 = cam.x - W / 2 / cam.s, vx1 = cam.x + W / 2 / cam.s, vy0 = cam.y - H / 2 / cam.s, vy1 = cam.y + H / 2 / cam.s;
-  const pad = 60 / cam.s;
-  const visible = LAND.filter(l => !l.virtual && l.bbox[2] > vx0 - pad && l.bbox[0] < vx1 + pad && l.bbox[3] > vy0 - pad && l.bbox[1] < vy1 + pad);
-  // linhas d'água e plataforma rasa, desenhadas em baixa resolução (são suaves de qualquer jeito)
-  const coast = lod.coast.filter(l => l.bbox[2] > vx0 - pad && l.bbox[0] < vx1 + pad && l.bbox[3] > vy0 - pad && l.bbox[1] < vy1 + pad);
-  const k = GLOW.width / W; gctx.setTransform(1, 0, 0, 1, 0, 0); gctx.clearRect(0, 0, GLOW.width, GLOW.height);
-  gctx.setTransform(cam.s * k, 0, 0, -cam.s * k, (W / 2 - cam.x * cam.s) * k, (H / 2 + cam.y * cam.s) * k); gctx.lineJoin = 'round';
-  for (const [w, col] of [[46, 'rgba(160,200,255,0.05)'], [30, 'rgba(160,200,255,0.06)'], [16, 'rgba(120,180,255,0.10)'], [26, 'rgba(40,110,180,0.16)'], [18, 'rgba(40,110,180,0.16)'], [11, 'rgba(40,110,180,0.16)'], [6, 'rgba(40,110,180,0.16)']]) {
-    gctx.lineWidth = w * 2 / cam.s; gctx.strokeStyle = col; for (const l of coast) gctx.stroke(l.path);
+let MOS = [];
+function drawRelief(cam) {
+  mctx.fillStyle = '#06122F'; mctx.fillRect(0, 0, MW, MH);
+  const vx0 = cam.x - MW / 2 / cam.s, vx1 = cam.x + MW / 2 / cam.s, vy0 = cam.y - MH / 2 / cam.s, vy1 = cam.y + MH / 2 / cam.s;
+  const nat = m => m.w / (m.x1 - m.x0);
+  const cover = MOS.filter(m => m.x0 <= vx0 && m.x1 >= vx1 && m.y0 <= vy0 && m.y1 >= vy1).sort((a, b) => a.z - b.z);
+  const list = cover.length ? cover : [MOS.find(m => m.name === 'mundo')];
+  let prev = null;
+  for (const m of list) {
+    let a = 1; if (prev) a = clamp((cam.s - 0.5 * nat(prev)) / (0.6 * nat(prev)));
+    if (a > 0 && IMG['mos_' + m.name]) {
+      const ix0 = Math.max(vx0, m.x0), ix1 = Math.min(vx1, m.x1), iy0 = Math.max(vy0, m.y0), iy1 = Math.min(vy1, m.y1);
+      const kx = m.w / (m.x1 - m.x0), ky = m.h / (m.y1 - m.y0);
+      const [dx0, dy0] = toScreenM(cam, ix0, iy1), [dx1, dy1] = toScreenM(cam, ix1, iy0);
+      mctx.globalAlpha = a; mctx.imageSmoothingQuality = 'high';
+      mctx.drawImage(IMG['mos_' + m.name], (ix0 - m.x0) * kx, (m.y1 - iy1) * ky, (ix1 - ix0) * kx, (iy1 - iy0) * ky, dx0, dy0, dx1 - dx0, dy1 - dy0);
+      mctx.globalAlpha = 1;
+    }
+    prev = m;
   }
-  ctx.drawImage(GLOW, 0, 0, W, H);
-  ctx.save(); ctx.setTransform(cam.s, 0, 0, -cam.s, W / 2 - cam.x * cam.s, H / 2 + cam.y * cam.s);
-  ctx.lineJoin = 'round';
-  // terra
-  ctx.fillStyle = C.areia; for (const l of visible) ctx.fill(l.path);
-  // regiões em destaque (com efeito levantado)
+}
+let BPATH = {};
+function buildBorders() {
+  for (const [k, lines] of Object.entries(BORDERS)) {
+    const p = new Path2D(); for (const l of lines) { for (let i = 0; i < l.length; i += 2) i ? p.lineTo(l[i], l[i + 1]) : p.moveTo(l[i], l[i + 1]); } BPATH[k] = p;
+  }
+}
+function drawMap(t, cam, S) {
+  drawRelief(cam);
+  const span = W / cam.s, lod = span > 60 ? 'coarse' : 'fine'; LAND = LODS[lod].land;
+  mctx.save(); mctx.setTransform(cam.s, 0, 0, -cam.s, MW / 2 - cam.x * cam.s, MH / 2 + cam.y * cam.s); mctx.lineJoin = 'round'; mctx.lineCap = 'round';
+  // fronteiras terrestres (sem linha de costa)
+  mctx.lineWidth = (ESTILO === 'b' ? 1.8 : 1.6) / cam.s; mctx.strokeStyle = ESTILO === 'b' ? 'rgba(255,255,255,0.85)' : 'rgba(255,255,255,0.55)'; mctx.stroke(BPATH['paises_' + lod]);
+  if (span < 45) { mctx.setLineDash([5 / cam.s, 5 / cam.s]); mctx.lineWidth = 1.2 / cam.s; mctx.strokeStyle = ESTILO === 'b' ? 'rgba(120,96,64,0.45)' : 'rgba(255,255,255,0.4)'; mctx.stroke(BPATH['estados_' + lod]); mctx.setLineDash([]); }
+  // regiões em destaque: placa que sobe do mapa (parede lateral escura + sombra + topo na cor)
+  const act = [];
   for (const h of S.highlights) {
     const a = vis(t, h.t0, h.t1, 0.6, 0.6); if (!a) continue;
     const l = byName(h.name); if (!l) continue;
-    const lift = (h.lift ?? 5) * a / cam.s;
-    ctx.save(); ctx.globalAlpha = 0.28 * a; ctx.fillStyle = C.tinta; ctx.translate(0, -lift * 0.6); ctx.fill(l.path); ctx.restore();
-    ctx.save(); ctx.translate(0, lift * 0.7); ctx.globalAlpha = a * (h.alpha ?? 0.92); ctx.fillStyle = h.color; ctx.fill(l.path);
-    if (h.pulse) { ctx.globalAlpha = a * (0.5 + 0.5 * Math.sin(t * 5)); ctx.lineWidth = 4 / cam.s; ctx.strokeStyle = h.pulse; ctx.stroke(l.path); }
-    ctx.restore();
+    // região maior que a tela (câmera dentro dela): fica só um véu de cor, sem placa, para não tapar o mapa
+    const big = clamp(((l.bbox[2] - l.bbox[0]) / span - 0.55) / 0.35);
+    const up = h.flat ? 0 : (h.lift ?? 14) * easeOut(clamp((t - h.t0) / 0.7)) * (t > h.t1 - 0.6 ? a : 1) * (1 - big);
+    act.push({ h, a, l, up, big }); h._up = up;
   }
-  // fronteiras
-  ctx.lineWidth = 1.1 / cam.s; ctx.strokeStyle = 'rgba(6,18,47,0.28)';
-  for (const l of visible) ctx.stroke(l.path);
-  ctx.restore();
+  for (const { h, a, l, up, big } of act) {
+    if (big >= 1) continue;
+    mctx.save(); mctx.globalAlpha = a * 0.55 * (1 - big); mctx.shadowColor = 'rgba(6,18,47,0.9)'; mctx.shadowBlur = 22; mctx.shadowOffsetY = 8;
+    mctx.fillStyle = darken(h.color, 0.5); mctx.fill(l.path); mctx.restore();
+    mctx.globalAlpha = a; mctx.fillStyle = darken(h.color, 0.42);
+    for (let k = 0; k < up; k += 1.5) { mctx.save(); mctx.translate(0, k / cam.s); mctx.fill(l.path); mctx.restore(); }
+  }
+  for (const { h, a, l, up, big } of act) {
+    mctx.save(); mctx.translate(0, up / cam.s);
+    mctx.globalAlpha = a * (h.alpha ?? 0.94) * (1 - big * 0.65); mctx.fillStyle = h.color; mctx.fill(l.path);
+    mctx.globalAlpha = a; mctx.lineWidth = 2.6 / cam.s; mctx.strokeStyle = h.pulse && Math.sin(t * 5) > 0 ? h.pulse : 'rgba(255,255,255,0.9)'; mctx.stroke(l.path);
+    mctx.restore();
+  }
+  mctx.globalAlpha = 1;
+  mctx.restore();
 
   // manchas de região (colônias)
   for (const b of S.blobs) {
     const a = vis(t, b.t0, b.t1, 0.8, 0.6); if (!a) continue;
     const [x, y] = toScreen(cam, b.lon, b.lat); const r = Math.max(b.r * cam.s, b.minPx ?? 14) * (0.6 + 0.4 * easeOut((t - b.t0) / 0.8));
-    const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+    const g = mctx.createRadialGradient(x, y, 0, x, y, r);
     const col = b.grey && t > b.grey ? C.cinza : b.color;
-    g.addColorStop(0, hexA(col, 0.85 * a)); g.addColorStop(0.65, hexA(col, 0.55 * a)); g.addColorStop(1, hexA(col, 0));
-    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fill();
+    g.addColorStop(0, hexA(col, 0.8 * a)); g.addColorStop(0.6, hexA(col, 0.5 * a)); g.addColorStop(1, hexA(col, 0));
+    mctx.fillStyle = g; mctx.beginPath(); mctx.arc(x, y, r, 0, 7); mctx.fill();
   }
   // enxames de pontos (pessoas chegando)
   for (const sw of S.swarms) {
@@ -208,65 +245,99 @@ function drawMap(t, cam, S) {
       const ang = r() * 6.283, rad = Math.sqrt(r()) * sw.r, ti = sw.t0 + (i / sw.n) * (sw.dur || 3);
       const p = easeOut((t - ti) / 0.4); if (p <= 0) continue;
       const [x, y] = toScreen(cam, sw.lon + Math.cos(ang) * rad, sw.lat + Math.sin(ang) * rad * 0.8);
-      ctx.globalAlpha = a * p; ctx.fillStyle = sw.color; ctx.beginPath(); ctx.arc(x, y, (sw.px || 5) * backOut(p), 0, 7); ctx.fill();
-      ctx.strokeStyle = 'rgba(6,18,47,0.5)'; ctx.lineWidth = 1; ctx.stroke();
+      mctx.globalAlpha = a * p; mctx.fillStyle = sw.color; mctx.beginPath(); mctx.arc(x, y, (sw.px || 5) * backOut(p), 0, 7); mctx.fill();
+      mctx.strokeStyle = 'rgba(255,255,255,0.8)'; mctx.lineWidth = 1.2; mctx.stroke();
     }
-    ctx.globalAlpha = 1;
+    mctx.globalAlpha = 1;
   }
 }
 function hexA(hex, a) { const n = parseInt(hex.slice(1), 16); return `rgba(${n >> 16},${(n >> 8) & 255},${n & 255},${a})`; }
+function darken(hex, k) { const n = parseInt(hex.slice(1), 16); const f = c => Math.round(c * (1 - k)); return `rgb(${f(n >> 16)},${f((n >> 8) & 255)},${f(n & 255)})`; }
+function lighten(hex) { const n = parseInt(hex.slice(1), 16); const f = c => Math.round(c + (255 - c) * 0.35); return `rgb(${f(n >> 16)},${f((n >> 8) & 255)},${f(n & 255)})`; }
 
 // ---------- elementos sobre o mapa ----------
 function drawLabels(t, cam, S) {
   for (const l of S.labels) {
     const a = vis(t, l.t0, l.t1, 0.5, 0.5); if (!a) continue;
-    const [x, y] = toScreen(cam, l.lon, l.lat);
-    ctx.save(); ctx.globalAlpha = a * (l.alpha ?? 0.62); ctx.fillStyle = l.color || C.tinta;
-    ctx.font = `700 ${l.size || 30}px Figtree`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.letterSpacing = `${(l.size || 30) * 0.18}px`; ctx.fillText(l.text.toUpperCase(), x, y); ctx.restore();
+    let [x, y] = toScreen(cam, l.lon, l.lat);
+    // rótulo em cima de região destacada: sobe junto com a placa e fica branco com contorno escuro
+    const on = S.highlights.find(h => h._up != null && vis(t, h.t0, h.t1, 0.6, 0.6) && byName(h.name) && inPath(cam, byName(h.name).path, l.lon, l.lat));
+    if (on) y -= on._up;
+    const dark = ESTILO === 'b' && !on && !l.light, sz = (l.size || 30) * 1.2;
+    mctx.save(); mctx.globalAlpha = a; mctx.font = `800 ${sz}px "Bricolage Grotesque"`; mctx.textAlign = 'center'; mctx.textBaseline = 'middle';
+    mctx.letterSpacing = `${sz * 0.06}px`; mctx.lineJoin = 'round'; mctx.lineWidth = sz * 0.28;
+    mctx.strokeStyle = dark ? 'rgba(255,255,255,0.95)' : 'rgba(6,18,47,0.92)'; mctx.fillStyle = dark ? C.tinta : C.branco;
+    const txt = l.upper === false ? l.text : l.text.toUpperCase();
+    mctx.strokeText(txt, x, y); mctx.fillText(txt, x, y);
+    const w = mctx.measureText(txt).width / 2 + 8, [p0x, p0y] = proj(x - w, y - sz * 0.6), [p1x, p1y] = proj(x + w, y + sz * 0.6);
+    BOXES.push([p0x, p0y, p1x, p1y]); mctx.restore();
   }
 }
+const inPath = (cam, path, lon, lat) => { const [x, y] = merc(lon, lat); mctx.save(); mctx.setTransform(1, 0, 0, 1, 0, 0); const r = mctx.isPointInPath(path, x, y); mctx.restore(); return r; };
 function drawRoutes(t, cam) {
   for (const r of Object.values(ROUTES)) {
     const a = vis(t, r.t0, r.hide ?? Infinity, 0.2, 0.6); if (!a || t < r.t0) continue;
     const L = routeProg(r, t) * r._L;
-    ctx.save(); ctx.globalAlpha = a; ctx.beginPath();
-    for (let i = 0; i < r._pts.length && r._cum[i] <= L; i++) {
-      const p = r._pts[i]; const x = (p[0] - cam.x) * cam.s + W / 2, y = -(p[1] - cam.y) * cam.s + H / 2;
-      i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
-    }
-    const h = routeHead(r, t); const hx = (h[0] - cam.x) * cam.s + W / 2, hy = -(h[1] - cam.y) * cam.s + H / 2; ctx.lineTo(hx, hy);
-    ctx.lineCap = 'round'; ctx.setLineDash([2, 16]); ctx.lineWidth = 9; ctx.strokeStyle = 'rgba(6,18,47,0.35)'; ctx.stroke();
-    ctx.lineWidth = 6; ctx.strokeStyle = r.color || C.branco; ctx.stroke(); ctx.setLineDash([]);
+    mctx.save(); mctx.globalAlpha = a; mctx.beginPath();
+    for (let i = 0; i < r._pts.length && r._cum[i] <= L; i++) { const [x, y] = toScreenM(cam, r._pts[i][0], r._pts[i][1]); i ? mctx.lineTo(x, y) : mctx.moveTo(x, y); }
+    const h = routeHead(r, t); const [hx, hy] = toScreenM(cam, h[0], h[1]); mctx.lineTo(hx, hy);
+    mctx.lineCap = 'round'; mctx.setLineDash([2, 16]); mctx.lineWidth = 10; mctx.strokeStyle = 'rgba(6,18,47,0.45)'; mctx.stroke();
+    mctx.lineWidth = 6; mctx.strokeStyle = r.color || C.branco; mctx.stroke(); mctx.setLineDash([]);
+    mctx.restore();
     if (r.icon && IMG[r.icon] && t <= r.t1 + 0.6) {
-      const sz = r.size || 84, bob = Math.sin(t * 6) * 4; const ia = vis(t, r.t0, r.t1, 0.2, 0.5);
-      ctx.globalAlpha = ia; ctx.shadowColor = 'rgba(0,0,0,0.35)'; ctx.shadowBlur = 12; ctx.shadowOffsetY = 6;
-      ctx.drawImage(IMG[r.icon], hx - sz / 2, hy - sz * 0.8 + bob, sz, sz);
+      const [sx, sy, f] = proj(hx, hy); const sz = (r.size || 84) * f, bob = Math.sin(t * 6) * 4;
+      drawIcon(r.icon, sx, sy - sz * 0.3 + bob, sz, vis(t, r.t0, r.t1, 0.2, 0.5));
     }
-    ctx.restore();
   }
 }
+// emoji → marcador redondo equivalente (quando ?marcas=1)
+let MARCAS = false;
+const MK = { school: 'school', newspaper: 'newspaper', rolled_newspaper: 'newspaper', police_officer: 'shield', hot_beverage: 'coffee', church: 'church', house: 'house', hut: 'house',
+  books: 'book-open', openbook: 'book-open', bluebook: 'book-open', man_teacher: 'user', teacher: 'user', bust: 'user', busts: 'users', woman: 'user', old_woman: 'user', child: 'baby',
+  graduation_cap: 'graduation-cap', pencil: 'pencil', abacus: 'calculator', musical_notes: 'music', performing_arts: 'drama', hospital: 'hospital', fire: 'flame', fire_engine: 'flame',
+  chains: 'link', locked: 'lock', lock2: 'lock', scroll: 'scroll', page_with_curl: 'scroll', prohibited: 'ban', prohibited2: 'ban', no_entry: 'ban', speech_balloon: 'message-circle', speaking_head: 'megaphone',
+  eyes: 'eye', lupa: 'search', trophy: 'trophy', beer_mug: 'beer', beers: 'beer', ear_of_corn: 'wheat', seedling: 'sprout', axe: 'axe', store: 'store', dstore: 'store', bread: 'croissant', baguette: 'croissant',
+  shortcake: 'cake', hearthands: 'heart-handshake', bullseye: 'target', gym: 'dumbbell', brokenheart: 'heart-crack', swords: 'swords', skull: 'skull', muted: 'volume-x', shushing_face: 'volume-x',
+  door: 'door-open', cooking: 'cooking-pot', pot_of_food: 'cooking-pot', tree: 'tree-pine', tree2: 'tree-pine', flag: 'flag', microphone: 'mic', classical_building: 'landmark', cross_mark: 'x',
+  check_mark_button: 'check', ship: 'ship', ship2: 'ship', passenger_ship: 'ship', canoe: 'sailboat', sailboat: 'sailboat', spiral_calendar: 'calendar', tractor: 'tractor', hammer: 'hammer', bell: 'bell', envelope: 'mail', sparkles: 'sparkles', fearful_face: 'user', dove: 'heart-handshake', jar: 'cooking-pot', leafy_green: 'sprout' };
 function drawIcon(img, x, y, sz, a, scale = 1) {
+  if (MARCAS && MK[img] && IMG['mk_' + MK[img]]) return drawMarker(MK[img], x, y, sz, a, scale);
   if (!IMG[img]) return;
-  ctx.save(); ctx.globalAlpha = a; ctx.shadowColor = 'rgba(0,0,0,0.35)'; ctx.shadowBlur = 14; ctx.shadowOffsetY = 7;
-  const s = sz * scale; ctx.drawImage(IMG[img], x - s / 2, y - s / 2, s, s); ctx.restore();
+  ctx.save(); ctx.globalAlpha = a; ctx.shadowColor = 'rgba(0,0,0,0.45)'; ctx.shadowBlur = 16; ctx.shadowOffsetY = 8;
+  const im = IMG[img], s = sz * scale, k = Math.min(s / im.width, s / im.height);
+  ctx.drawImage(im, x - im.width * k / 2, y - im.height * k / 2, im.width * k, im.height * k); ctx.restore();
+}
+// marcador redondo: disco branco, aro colorido e ícone de traço (Lucide)
+function drawMarker(name, x, y, sz, a, scale = 1, ring = C.caju) {
+  const r = sz * scale / 2; if (r <= 0) return;
+  ctx.save(); ctx.globalAlpha = a; ctx.shadowColor = 'rgba(6,18,47,0.45)'; ctx.shadowBlur = 14; ctx.shadowOffsetY = 6;
+  ctx.fillStyle = C.branco; ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fill(); ctx.shadowColor = 'transparent';
+  ctx.lineWidth = r * 0.14; ctx.strokeStyle = ring; ctx.beginPath(); ctx.arc(x, y, r * 0.9, 0, 7); ctx.stroke();
+  const im = IMG['mk_' + name]; if (im) ctx.drawImage(im, x - r * 0.55, y - r * 0.55, r * 1.1, r * 1.1);
+  ctx.restore();
 }
 function drawCross(x, y, sz, p) {
   ctx.save(); ctx.globalAlpha = clamp(p); ctx.strokeStyle = C.urucum; ctx.lineWidth = sz * 0.1; ctx.lineCap = 'round';
   const d = sz * 0.42 * easeOut(p * 1.3); ctx.beginPath(); ctx.moveTo(x - d, y - d); ctx.lineTo(x + d, y + d); ctx.moveTo(x + d, y - d); ctx.lineTo(x - d, y + d);
   ctx.shadowColor = 'rgba(0,0,0,0.4)'; ctx.shadowBlur = 8; ctx.stroke(); ctx.restore();
 }
+// caixas já ocupadas neste quadro (alfinete e rótulos), para nada ficar por cima de nada
+let BOXES = [];
+const hit = (b) => BOXES.some(o => b[0] < o[2] && b[2] > o[0] && b[1] < o[3] && b[3] > o[1]);
 function drawIcons(t, cam, S) {
   for (const ic of S.icons) {
     const a = vis(t, ic.t0, ic.t1, 0.2, 0.35); if (!a) continue;
-    let x, y; if (ic.sx != null) { x = ic.sx; y = ic.sy; } else { [x, y] = toScreen(cam, ic.lon, ic.lat); x += ic.dx || 0; y += ic.dy || 0; }
+    let x, y, f = 1; if (ic.sx != null) { x = ic.sx; y = ic.sy; } else { [x, y, f] = geoS(cam, ic.lon, ic.lat); x += (ic.dx || 0) * f; y += (ic.dy || 0) * f; }
+    const size = (ic.size || 96) * (ic.sx != null ? 1 : f);
+    if (ic.sx == null) for (let k = 0; k < 8 && hit([x - size / 2, y - size / 2, x + size / 2, y + size / 2]); k++) x += size * 0.35;
     const sc = backOut((t - ic.t0) / 0.45) * (1 + 0.03 * Math.sin(t * 3 + (ic.lon || 0)));
     let aa = a; if (ic.sink && t > ic.sink) { const p = clamp((t - ic.sink) / 1.6); y += p * 50; aa *= 1 - p; }
     const grey = ic.grey && t > ic.grey;
     ctx.save(); if (grey) ctx.filter = 'grayscale(1) opacity(0.6)';
-    drawIcon(ic.img, x, y, ic.size || 96, aa, sc); ctx.restore();
-    if (ic.cross && t > ic.cross) drawCross(x, y, ic.size || 96, (t - ic.cross) / 0.3);
-    if (ic.label) tagLabel(ic.label, x, y + (ic.size || 96) * 0.62, aa, 24);
+    if (ic.mark) drawMarker(ic.mark, x, y, size, aa, sc, ic.ring); else drawIcon(ic.img, x, y, size, aa, sc); ctx.restore();
+    if (ic.cross && t > ic.cross) drawCross(x, y, size, (t - ic.cross) / 0.3);
+    if (ic.sx == null) BOXES.push([x - size / 2, y - size / 2, x + size / 2, y + size / 2]);
+    if (ic.label) tagLabel(ic.label, x, y + size * 0.62, aa, 24);
   }
   for (const sw of S.iconSwarms) {
     const a = vis(t, sw.t0, sw.t1, 0.3, 0.5); if (!a) continue;
@@ -274,15 +345,18 @@ function drawIcons(t, cam, S) {
     for (let i = 0; i < sw.n; i++) {
       const ang = r() * 6.283, rad = Math.sqrt(r()) * sw.r, ti = sw.t0 + (i / sw.n) * (sw.dur || 2.5);
       const p = (t - ti) / 0.4; if (p <= 0) continue;
-      const [x, y] = toScreen(cam, sw.lon + Math.cos(ang) * rad, sw.lat + Math.sin(ang) * rad * 0.8);
-      drawIcon(sw.img, x, y, sw.size || 54, a, backOut(p));
+      const [x, y, f] = geoS(cam, sw.lon + Math.cos(ang) * rad, sw.lat + Math.sin(ang) * rad * 0.8);
+      drawIcon(sw.img, x, y, (sw.size || 54) * f, a, backOut(p));
     }
   }
 }
 function tagLabel(text, x, y, a, size = 26, bg = C.tinta, fg = C.branco) {
   ctx.save(); ctx.globalAlpha = a; ctx.font = `700 ${size}px Figtree`; ctx.letterSpacing = `${size * 0.08}px`;
   const w = ctx.measureText(text).width + size * 1.1, h = size * 1.6;
-  ctx.fillStyle = bg; rr(x - w / 2, y - h / 2, w, h, h / 2); ctx.fill();
+  for (let k = 0; k < 6 && hit([x - w / 2, y - h / 2, x + w / 2, y + h / 2]); k++) y += h + 6;
+  BOXES.push([x - w / 2, y - h / 2, x + w / 2, y + h / 2]);
+  ctx.shadowColor = 'rgba(0,0,0,0.35)'; ctx.shadowBlur = 10; ctx.shadowOffsetY = 3;
+  ctx.fillStyle = bg; rr(x - w / 2, y - h / 2, w, h, h / 2); ctx.fill(); ctx.shadowColor = 'transparent';
   ctx.fillStyle = fg; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(text, x, y + 1); ctx.restore();
 }
 function rr(x, y, w, h, r) { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); }
@@ -302,14 +376,14 @@ function drawPin(t, cam, S) {
   const P = S.pins; let i = -1; for (let k = 0; k < P.length; k++) if (P[k].t <= t) i = k;
   if (i < 0) return; const cur = P[i]; if (cur.hide) { // some com fade
     const prev = P[i - 1]; if (!prev || prev.hide) return; const a = 1 - clamp((t - cur.t) / 0.4); if (a <= 0) return;
-    const [x, y] = toScreen(cam, prev.lon, prev.lat); drawPinShape(x, y, 96, a); return;
+    const [x, y] = geoS(cam, prev.lon, prev.lat); drawPinShape(x, y, 96, a); return;
   }
   const prev = i > 0 && !P[i - 1].hide ? P[i - 1] : null;
-  let [x, y] = toScreen(cam, cur.lon, cur.lat); let a = 1, sc = 1;
+  let [x, y] = geoS(cam, cur.lon, cur.lat); let a = 1, sc = 1;
   const p = clamp((t - cur.t) / 0.8);
-  if (prev && p < 1) { const [x0, y0] = toScreen(cam, prev.lon, prev.lat); const e = ease(p); x = lerp(x0, x, e); y = lerp(y0, y, e) - Math.sin(Math.PI * e) * 120; }
+  if (prev && p < 1) { const [x0, y0] = geoS(cam, prev.lon, prev.lat); const e = ease(p); x = lerp(x0, x, e); y = lerp(y0, y, e) - Math.sin(Math.PI * e) * 120; }
   else if (!prev) { a = clamp((t - cur.t) / 0.3); sc = backOut((t - cur.t) / 0.5); y -= (1 - easeOut(p)) * 80; }
-  drawPinShape(x, y, 96 * sc, a);
+  drawPinShape(x, y, 96 * sc, a); BOXES.push([x - 40, y - 100, x + 40, y + 10]);
   if (cur.label) { const la = clamp((t - cur.t - 0.6) / 0.3) * a; if (la > 0) tagLabel(cur.label, x, y + 46, la, 28, C.branco, C.tinta); }
 }
 
@@ -503,14 +577,13 @@ function drawEnd(t, S) {
 // ---------- quadro ----------
 let SCENE;
 function render(t) {
-  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.filter = 'none';
+  BOXES = [];
+  mctx.setTransform(1, 0, 0, 1, 0, 0); mctx.globalAlpha = 1;
+  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.filter = 'none'; ctx.clearRect(0, 0, W, H);
   const cam = camera(t), S = SCENE;
-  drawMap(t, cam, S);
-  drawLabels(t, cam, S);
-  drawRoutes(t, cam);
-  drawIcons(t, cam, S);
-  drawPin(t, cam, S);
+  drawMap(t, cam, S); drawLabels(t, cam, S); drawRoutes(t, cam);
   ctx.drawImage(OVER, 0, 0); // vinheta e grão
+  drawPin(t, cam, S); drawIcons(t, cam, S);
   drawYear(t, S); drawChapter(t, S);
   drawDots(t, S); drawLists(t, S); drawNumbers(t, S); drawWords(t, S); drawPeople(t, S); drawRows(t, S);
   drawPills(t, S); drawQuotes(t, S); drawTitle(t, S); drawEnd(t, S);
