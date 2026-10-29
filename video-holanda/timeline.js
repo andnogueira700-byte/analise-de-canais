@@ -9,6 +9,7 @@ Object.assign(MK, { acucar: 'x-acucar', boi: 'x-boi', ponte: 'x-ponte', sinagoga
   pintura: 'palette', livro: 'book-open', jardim: 'trees', rua: 'map', familia: 'users', juros: 'percent', queda: 'trending-down', balanca: 'scale',
   pena: 'feather', igreja: 'church', cruz: 'cross', ancora: 'anchor', mundo: 'globe', papel: 'file-text', loja: 'store', aperto: 'handshake', peixe: 'fish' });
 for (const n of ['heart-handshake', 'baby', 'crown', 'mountain', 'link', 'factory', 'message-circle', 'tent', 'bomb', 'flag', 'shield', 'clock', 'building-2', 'landmark', 'search']) MK[n] = n;
+CIDADES = true; // cidade citada ganha um quarteirão em 3D embaixo do alfinete
 const P = { // lugares [lon, lat]
   recife: [-34.877, -8.063], olinda: [-34.855, -8.010], salvador: [-38.51, -12.97], amsterda: [4.90, 52.37], lisboa: [-9.14, 38.72],
   madri: [-3.70, 40.42], elmina: [-1.35, 5.08], paramaribo: [-55.20, 5.85], novaYork: [-74.0, 40.71], guararapes: [-34.945, -8.155],
@@ -20,7 +21,7 @@ function buildScene() {
   // abaixo de ~1,6° o relevo do Recife (quase ao nível do mar) vira quadradinhos, então a câmera não chega mais perto que isso
   const cam = (t, place, span, d = 1.4) => (span = Math.max(span, 1.6), CAM.push(Array.isArray(place) ? { t, lon: place[0], lat: place[1], span, d } : { t, ...place, span, d }));
   const follow = (t, id, span, d = 0.8) => CAM.push({ t, follow: id, span, d });
-  const pin = (t, place, label) => S.pins.push({ t, lon: place[0], lat: place[1], label });
+  const pin = (t, place, label, o = {}) => S.pins.push({ t, lon: place[0], lat: place[1], label, ...o });
   const unpin = t => S.pins.push({ t, hide: true });
   const year = (t, y, from) => S.years.push({ t, y, from });
   const noYear = t => S.years.push({ t, hide: true });
@@ -36,7 +37,8 @@ function buildScene() {
   const word = (t0, t1, lang, wordTxt, o = {}) => S.words.push({ t0, t1, lang, word: wordTxt, ...o });
   const row = (t0, t1, items, o = {}) => S.rows.push({ t0, t1, items, ...o });
   const photo = (t0, t1, img, caption, o = {}) => S.photos.push({ t0, t1, img, caption, ...o });
-  const swarm = (t0, t1, place, r, n, color, dur, seed, o = {}) => S.swarms.push({ t0, t1, lon: place[0], lat: place[1], r, n, color, dur, seed, ...o });
+  // multidão: bonequinhos em vez de pontos (em menor número, para não virar um borrão)
+  const swarm = (t0, t1, place, r, n, color, dur, seed, o = {}) => S.swarms.push({ t0, t1, lon: place[0], lat: place[1], r, n: Math.ceil(n * 0.45), color, dur, seed, people: true, ...o });
   const A = at;
   // cores: cada lugar citado em sequência tem uma cor diferente da anterior
   const HOL = C.caju, POR = C.verde, ESP = C.urucum, PE = C.ipe, SUR = C.acai, GAN = C.jambo, NY = C.lilas;
@@ -218,6 +220,7 @@ function buildScene() {
   pill(A('os holandeses mandavam mas viviam'), A('pense numa cidade em que') - 0.1, 'Um mar de gente falando português', POR);
   const tPref = A('pense numa cidade em que');
   cam(tPref, P.recife, 0.5, 1.6);
+  pin(tPref + 0.2, P.recife, 'Recife');
   icon(A('o prefeito muda'), A('mas a feira') + 0.3, 'landmark', P.recife, { size: 96, dx: -150, dy: -40, label: 'PREFEITO NOVO' });
   row(A('mas a feira'), A('era assim no recife') - 0.1, [
     { img: 'loja', label: 'A feira', at: A('mas a feira') }, { img: 'house', label: 'A porta de casa', at: A('a conversa na porta') },
@@ -225,6 +228,7 @@ function buildScene() {
   ]);
   pill(A('era assim no recife'), A('as criancas nasciam') - 0.1, 'Era assim no Recife');
   const tCri = A('as criancas nasciam');
+  unpin(tCri);
   icon(tCri, A('para a lingua mudar') + 0.3, 'house', P.recife, { size: 104, dx: 120, dy: -30, label: 'EM CASA: PORTUGUÊS' });
   icon(A('passa de pai para filho'), A('para a lingua mudar') + 0.3, 'baby', P.recife, { size: 90, dx: 260, dy: 40 });
   icon(A('mesmo com a bandeira nova'), A('para a lingua mudar') + 0.3, 'forte', P.recife, { size: 90, dx: -140, dy: 40, label: 'BANDEIRA NOVA' });
@@ -264,7 +268,7 @@ function buildScene() {
   year(A('em mil seiscentos e trinta e sete o forte'), 1637, 1630);
   hl(tMina + 0.5, A('essa foi a parte que mais me surpreendeu'), 'Ghana', GAN);
   hl(tMina + 0.5, A('essa foi a parte que mais me surpreendeu'), 'PE', PE);
-  pin(A('o forte de sao jorge'), P.elmina, 'São Jorge da Mina');
+  pin(A('o forte de sao jorge'), P.elmina, 'São Jorge da Mina', { city: false });
   route('mina', A('o forte de sao jorge') + 0.6, A('o forte de sao jorge') + 3.0, [P.elmina, [-12, 0], [-25, -6], P.recife], { color: GAN, hide: A('quem conquistou a terra') + 1 });
   icon(A('o forte de sao jorge') + 0.3, A('essa foi a parte que mais me surpreendeu'), 'forte', P.elmina, { size: 96, dx: 0, dy: -120 });
   const tSurp = A('essa foi a parte que mais me surpreendeu');
@@ -454,7 +458,7 @@ function buildScene() {
   ]);
   const tTab = A('em agosto daquele ano');
   cam(tTab, P.tabocas, 0.6, 1.6);
-  pin(A('veio a batalha de tabocas') - 0.2, P.tabocas, 'Monte das Tabocas');
+  pin(A('veio a batalha de tabocas') - 0.2, P.tabocas, 'Monte das Tabocas', { city: false });
   icon(A('veio a batalha de tabocas'), A('quando o ano acabou'), 'espada', P.tabocas, { size: 100, dx: 130, dy: -40 });
   const tAcab = A('quando o ano acabou');
   unpin(tAcab);
@@ -468,7 +472,7 @@ function buildScene() {
   const tGua = A('a nona razao e o morro');
   chap(tGua, 'IX', 'Guararapes');
   cam(tGua, P.guararapes, 0.35, 1.8);
-  pin(tGua + 0.6, P.guararapes, 'Morro dos Guararapes');
+  pin(tGua + 0.6, P.guararapes, 'Morro dos Guararapes', { city: false });
   const t1648 = A('em abril de mil seiscentos e quarenta e oito');
   year(t1648 + 0.2, 1648, 1645);
   photo(A('foi ali que a guerra virou'), A('cerca de dois mil') - 0.1, 'guararapes', 'Batalha dos Guararapes', { sub: 'Victor Meirelles, 1879', w: 700, y: 210 });
@@ -507,7 +511,7 @@ function buildScene() {
   const t1654 = A('em janeiro de mil seiscentos e cinquenta e quatro');
   year(t1654 + 0.3, 1654, 1653);
   cam(t1654, P.taborda, 0.12, 1.4);
-  pin(A('no campo do taborda'), P.taborda, 'Campo do Taborda');
+  pin(A('no campo do taborda'), P.taborda, 'Campo do Taborda', { city: false });
   icon(A('os holandeses assinaram'), A('os vinte e quatro anos tinham'), 'papel', P.taborda, { size: 100, label: 'RENDIÇÃO' });
   pill(A('foi no dia vinte e seis'), A('dois dias depois') - 0.1, '26 de janeiro de 1654', POR);
   const tDois = A('dois dias depois');

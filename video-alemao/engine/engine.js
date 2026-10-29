@@ -274,7 +274,8 @@ function drawMap(t, cam, S) {
     g.addColorStop(0, hexA(col, 0.8 * a)); g.addColorStop(0.6, hexA(col, 0.5 * a)); g.addColorStop(1, hexA(col, 0));
     mctx.fillStyle = g; mctx.beginPath(); mctx.arc(x, y, r, 0, 7); mctx.fill();
   }
-  // enxames de pontos (pessoas chegando)
+  // enxames de pontos (pessoas chegando); com people: true viram bonequinhos, desenhados em pé por cima do mapa
+  const crowd = CROWD = [];
   for (const sw of S.swarms) {
     const a = vis(t, sw.t0, sw.t1, 0.3, 0.6); if (!a) continue;
     const r = rng(sw.seed || 11);
@@ -283,11 +284,36 @@ function drawMap(t, cam, S) {
       const p = easeOut((t - ti) / 0.4); if (p <= 0) continue;
       if (!landAt(sw.lon + Math.cos(ang) * rad, sw.lat + Math.sin(ang) * rad * 0.8)) continue; // ponto no mar não aparece
       const [x, y] = toScreen(cam, sw.lon + Math.cos(ang) * rad, sw.lat + Math.sin(ang) * rad * 0.8);
+      if (sw.people) { const [px, py, f] = proj(x, y); crowd.push([py, px, f, sw, a * p, backOut(p), r()]); continue; }
       mctx.globalAlpha = a * p; mctx.fillStyle = sw.color; mctx.beginPath(); mctx.arc(x, y, (sw.px || 5) * backOut(p), 0, 7); mctx.fill();
       mctx.strokeStyle = 'rgba(255,255,255,0.8)'; mctx.lineWidth = 1.2; mctx.stroke();
     }
     mctx.globalAlpha = 1;
   }
+}
+// bonequinhos: desenhados depois do alfinete e dos nomes, de trás para a frente, sem empilhar e sem ficar por baixo de nada
+let CROWD = [];
+function drawCrowd() {
+  CROWD.sort((a, b) => a[0] - b[0]); const taken = [];
+  for (const [y, x, f, sw, a, sc, rv] of CROWD) {
+    const h = (sw.size || 40) * f; if (taken.some(([tx, ty]) => Math.abs(tx - x) < h * 0.42 && Math.abs(ty - y) < h * 0.3)) continue;
+    if (hit([x - h * 0.25, y - h, x + h * 0.25, y])) continue;
+    taken.push([x, y]); drawPerson(x, y, h * sc, sw.color, a, rv);
+  }
+}
+// bonequinho com volume: sombra no chão, corpo com degradê e cabeça com brilho
+const SKIN = ['#F2D3B5', '#E0B48C', '#B97E52', '#8A5634'];
+function drawPerson(x, y, h, color, a, rv) {
+  if (h < 3) return; ctx.save(); ctx.globalAlpha = a;
+  ctx.fillStyle = 'rgba(6,18,47,0.35)'; ctx.beginPath(); ctx.ellipse(x + h * 0.06, y, h * 0.26, h * 0.08, 0, 0, 7); ctx.fill();
+  const bw = h * 0.42, bt = y - h * 0.66;
+  const g = ctx.createLinearGradient(x - bw / 2, bt, x + bw / 2, y); g.addColorStop(0, lighten(color)); g.addColorStop(0.55, color); g.addColorStop(1, darken(color, 0.35));
+  ctx.fillStyle = g; ctx.beginPath(); ctx.roundRect(x - bw / 2, bt, bw, h * 0.66, [bw * 0.5, bw * 0.5, bw * 0.18, bw * 0.18]); ctx.fill();
+  ctx.lineWidth = Math.max(1, h * 0.04); ctx.strokeStyle = 'rgba(6,18,47,0.55)'; ctx.stroke();
+  const hr = h * 0.17, hy = bt - hr * 0.95, skin = SKIN[Math.floor(rv * SKIN.length)];
+  const gh = ctx.createRadialGradient(x - hr * 0.35, hy - hr * 0.35, hr * 0.1, x, hy, hr); gh.addColorStop(0, '#fff8ef'); gh.addColorStop(0.35, skin); gh.addColorStop(1, darken(skin, 0.3));
+  ctx.fillStyle = gh; ctx.beginPath(); ctx.arc(x, hy, hr, 0, 7); ctx.fill(); ctx.stroke();
+  ctx.restore();
 }
 function hexA(hex, a) { const n = parseInt(hex.slice(1), 16); return `rgba(${n >> 16},${(n >> 8) & 255},${n & 255},${a})`; }
 function darken(hex, k) { const n = parseInt(hex.slice(1), 16); const f = c => Math.round(c * (1 - k)); return `rgb(${f(n >> 16)},${f((n >> 8) & 255)},${f(n & 255)})`; }
@@ -447,6 +473,18 @@ function tagLabel(text, x, y, a, size = 26, bg = C.tinta, fg = C.branco) {
   ctx.fillStyle = bg; rr(x - w / 2, y - h / 2, w, h, h / 2); ctx.fill(); ctx.shadowColor = 'transparent';
   ctx.fillStyle = fg; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(text, x, y + 1); ctx.restore();
 }
+// escolhe o maior tamanho de fonte (até size) em que o texto cabe em maxW; font usa {} no lugar do tamanho
+function fit(text, maxW, font, size, min = 16) {
+  let sz = size; for (; sz > min; sz--) { ctx.font = font.replace('{}', sz); if (ctx.measureText(text).width <= maxW) break; }
+  ctx.font = font.replace('{}', sz); return sz;
+}
+// quebra o texto em até 2 linhas que caibam em maxW (com a fonte atual)
+function wrap2(text, maxW) {
+  if (ctx.measureText(text).width <= maxW) return [text];
+  const w = text.split(' '); let best = [text];
+  for (let i = 1; i < w.length; i++) { const a = w.slice(0, i).join(' '), b = w.slice(i).join(' '); if (ctx.measureText(a).width <= maxW && ctx.measureText(b).width <= maxW) { best = [a, b]; if (ctx.measureText(b).width <= ctx.measureText(a).width) break; } }
+  return best;
+}
 function rr(x, y, w, h, r) { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); }
 
 // alfinete da marca
@@ -460,6 +498,26 @@ function drawPinShape(x, y, sz, a) {
   ctx.fillStyle = C.tinta; ctx.beginPath(); ctx.arc(100, 76, 15, 0, 7); ctx.fill();
   ctx.restore();
 }
+// cidade citada: um quarteirão de predinhos em 3D no lugar exato, embaixo do alfinete
+let CIDADES = false;
+function drawCity(x, y, p, seed) {
+  if (p <= 0) return; let h0 = 0; for (const ch of seed) h0 = (h0 * 31 + ch.charCodeAt(0)) >>> 0; const r = rng(h0 || 7);
+  const K = 1.7, blocks = []; for (let i = 0; i < 13; i++) { const ang = r() * 6.283, d = Math.sqrt(r()) * 34 * K; blocks.push([x + Math.cos(ang) * d * 1.3, y + Math.sin(ang) * d * 0.5, (9 + r() * 7) * K, (10 + r() * 22) * K * (1 - d / (34 * K) * 0.5), r()]); }
+  blocks.sort((a, b) => a[1] - b[1]);
+  ctx.save(); ctx.globalAlpha = clamp(p * 2);
+  ctx.fillStyle = 'rgba(6,18,47,0.28)'; ctx.beginPath(); ctx.ellipse(x, y + 6, 62 * K, 24 * K, 0, 0, 7); ctx.fill();
+  const roofs = ['#C8553D', '#D9824A', '#B5473A'];
+  for (const [bx, by, bw, bh0, rv] of blocks) {
+    const bh = bh0 * backOut(p), dx = bw * 0.45, dy = bw * 0.28;
+    ctx.fillStyle = '#E9DCC4'; ctx.fillRect(bx - bw / 2, by - bh, bw, bh); // frente
+    ctx.fillStyle = '#C9B796'; ctx.beginPath(); ctx.moveTo(bx + bw / 2, by); ctx.lineTo(bx + bw / 2 + dx, by - dy); ctx.lineTo(bx + bw / 2 + dx, by - dy - bh); ctx.lineTo(bx + bw / 2, by - bh); ctx.fill(); // lado
+    ctx.fillStyle = roofs[Math.floor(rv * 3)]; ctx.beginPath(); ctx.moveTo(bx - bw / 2, by - bh); ctx.lineTo(bx + bw / 2, by - bh); ctx.lineTo(bx + bw / 2 + dx, by - bh - dy); ctx.lineTo(bx - bw / 2 + dx, by - bh - dy); ctx.fill(); // telhado
+    ctx.strokeStyle = 'rgba(6,18,47,0.5)'; ctx.lineWidth = 1; ctx.strokeRect(bx - bw / 2, by - bh, bw, bh);
+    ctx.fillStyle = 'rgba(6,18,47,0.35)'; for (let wy = by - bh + 6; wy < by - 5; wy += 9) ctx.fillRect(bx - bw / 2 + 3, wy, bw - 6, 2); // janelas
+  }
+  ctx.restore();
+  BOXES.push([x - 66 * K, y - 50 * K, x + 66 * K, y + 14 * K]);
+}
 function drawPin(t, cam, S) {
   const P = S.pins; let i = -1; for (let k = 0; k < P.length; k++) if (P[k].t <= t) i = k;
   if (i < 0) return; const cur = P[i]; if (cur.hide) { // some com fade
@@ -468,11 +526,13 @@ function drawPin(t, cam, S) {
   }
   const prev = i > 0 && !P[i - 1].hide ? P[i - 1] : null;
   let [x, y] = geoS(cam, cur.lon, cur.lat); let a = 1, sc = 1;
+  // cidade: o quarteirão fica no chão, o alfinete flutua por cima e o nome vem embaixo, maior
+  const city = CIDADES && cur.city !== false, gx = x, gy = y; if (city) { drawCity(x, y, clamp((t - cur.t - 0.3) / 0.6), cur.label || ''); y -= 62; }
   const p = clamp((t - cur.t) / 0.8);
-  if (prev && p < 1) { const [x0, y0] = geoS(cam, prev.lon, prev.lat); const e = ease(p); x = lerp(x0, x, e); y = lerp(y0, y, e) - Math.sin(Math.PI * e) * 120; }
+  if (prev && p < 1) { const [x0, y00] = geoS(cam, prev.lon, prev.lat), y0 = y00 - (CIDADES && prev.city !== false ? 62 : 0); const e = ease(p); x = lerp(x0, x, e); y = lerp(y0, y, e) - Math.sin(Math.PI * e) * 120; }
   else if (!prev) { a = clamp((t - cur.t) / 0.3); sc = backOut((t - cur.t) / 0.5); y -= (1 - easeOut(p)) * 80; }
   drawPinShape(x, y, 96 * sc, a); BOXES.push([x - 40, y - 100, x + 40, y + 10]);
-  if (cur.label) { const la = clamp((t - cur.t - 0.6) / 0.3) * a; if (la > 0) tagLabel(cur.label, x, y + 46, la, 28, C.branco, C.tinta); }
+  if (cur.label) { const la = clamp((t - cur.t - 0.6) / 0.3) * a; if (la > 0) city ? tagLabel(cur.label, gx, gy + 56, la, 34, C.tinta, C.branco) : tagLabel(cur.label, x, y + 46, la, 28, C.branco, C.tinta); }
 }
 
 // ---------- interface ----------
@@ -598,9 +658,14 @@ function drawWords(t, S) {
     ctx.save(); ctx.globalAlpha = a; ctx.translate(slide, 0); card(x, y, w, h, a);
     tagLabelLeft(wd.lang, x + 36, y + 50, wd.langColor || C.acai);
     ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
-    ctx.fillStyle = C.tinta; ctx.font = 'italic 600 76px Fraunces'; ctx.fillText(wd.word, x + 36, y + 160);
-    if (wd.pt) { ctx.font = '700 40px Figtree'; ctx.fillStyle = C.verde; ctx.fillText('→ ' + wd.pt, x + 36, y + 218); }
-    if (wd.meaning) { ctx.font = 'italic 400 34px Figtree'; ctx.fillStyle = '#4a5068'; ctx.fillText('“' + wd.meaning + '”', x + 36, y + (wd.pt ? 268 : 215)); }
+    // tudo dentro do cartão: a palavra diminui até caber ao lado do ícone, e o resto até caber na largura
+    ctx.fillStyle = C.tinta; fit(wd.word, w - 72 - (wd.icon ? 150 : 0), 'italic 600 {}px Fraunces', 76, 34); ctx.fillText(wd.word, x + 36, y + 160);
+    if (wd.pt) { fit('→ ' + wd.pt, w - 72, '700 {}px Figtree', 40, 24); ctx.fillStyle = C.verde; ctx.fillText('→ ' + wd.pt, x + 36, y + 218); }
+    if (wd.meaning) {
+      const m = '“' + wd.meaning + '”', yy = y + (wd.pt ? 268 : 215); ctx.fillStyle = '#4a5068';
+      if (fit(m, w - 72, 'italic 400 {}px Figtree', 34, 27) > 27 || ctx.measureText(m).width <= w - 72) ctx.fillText(m, x + 36, yy);
+      else { ctx.font = 'italic 400 25px Figtree'; const L = wrap2(m, w - 72); if (L.length > 1) fit(L[0].length > L[1].length ? L[0] : L[1], w - 72, 'italic 400 {}px Figtree', 25, 16); L.forEach((l, i) => ctx.fillText(l, x + 36, yy - (L.length - 1) * 15 + i * 30)); }
+    }
     if (wd.icon) drawIcon(wd.icon, x + w - 90, y + 110, 120, a);
     ctx.restore();
   }
@@ -640,8 +705,8 @@ function drawPhotos(t, S) {
     ctx.save(); rr(x + 14, y + 14, w - 28, ih, 12); ctx.clip();
     const z = 1.04 + 0.08 * clamp((t - o.t0) / Math.max(1, o.t1 - o.t0)), k = Math.max((w - 28) / im.width, ih / im.height) * z;
     const iw = im.width * k, ihh = im.height * k; ctx.drawImage(im, x + w / 2 - iw / 2, y + 14 + ih * (o.focus ?? 0.5) - ihh * (o.focus ?? 0.5), iw, ihh); ctx.restore();
-    ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic'; ctx.fillStyle = C.tinta; ctx.font = '800 30px "Bricolage Grotesque"'; ctx.fillText(o.caption, x + 24, y + ih + 28 + 38);
-    if (o.sub) { ctx.font = '500 21px Figtree'; ctx.fillStyle = '#5a6078'; ctx.fillText(o.sub, x + 24, y + ih + 28 + 66); }
+    ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic'; ctx.fillStyle = C.tinta; fit(o.caption, w - 48, '800 {}px "Bricolage Grotesque"', 30, 16); ctx.fillText(o.caption, x + 24, y + ih + 28 + 38);
+    if (o.sub) { fit(o.sub, w - 48, '500 {}px Figtree', 21, 13); ctx.fillStyle = '#5a6078'; ctx.fillText(o.sub, x + 24, y + ih + 28 + 66); }
     ctx.restore();
   }
 }
@@ -651,14 +716,14 @@ function drawDots(t, S) {
     const cols = d.cols || 10, rows = Math.ceil(d.total / cols), cell = d.cell || 38;
     const w = cols * cell + 80, h = rows * cell + 170; const x = (d.x ?? (W - 90 - w)) + (d._dx || 0), y = (d.y ?? 200) + (d._dy || 0);
     ctx.save(); ctx.globalAlpha = a; card(x, y, w, h, a);
-    ctx.textAlign = 'left'; ctx.fillStyle = C.tinta; ctx.font = '700 26px Figtree'; ctx.letterSpacing = '2px'; ctx.fillText(d.title.toUpperCase(), x + 40, y + 56); ctx.letterSpacing = '0px';
+    ctx.textAlign = 'left'; ctx.fillStyle = C.tinta; ctx.font = '700 26px Figtree'; ctx.letterSpacing = '2px'; fit(d.title.toUpperCase(), w - 80, '700 {}px Figtree', 26, 14); ctx.fillText(d.title.toUpperCase(), x + 40, y + 56); ctx.letterSpacing = '0px';
     for (let i = 0; i < d.total; i++) {
       const ti = d.t0 + 0.3 + i * (d.speed || 0.012); const p = backOut((t - ti) / 0.3); if (p <= 0) continue;
       const cx = x + 40 + (i % cols) * cell + cell / 2, cy = y + 90 + Math.floor(i / cols) * cell + cell / 2;
       const colored = i < d.colored && t > d.t0 + (d.colorAt ?? 0);
       ctx.fillStyle = colored ? d.color : (d.base || '#cfd3dc'); ctx.beginPath(); ctx.arc(cx, cy, cell * 0.36 * p, 0, 7); ctx.fill();
     }
-    ctx.font = '500 24px Figtree'; ctx.fillStyle = '#4a5068';
+    ctx.fillStyle = '#4a5068'; fit(d.legend.map(l => l[1]).join(''), w - 80 - d.legend.length * 70, '500 {}px Figtree', 24, 14);
     let lx = x + 40; for (const [col, txt] of d.legend) { ctx.fillStyle = col; ctx.beginPath(); ctx.arc(lx + 10, y + h - 42, 10, 0, 7); ctx.fill(); ctx.fillStyle = C.tinta; ctx.fillText(txt, lx + 28, y + h - 34); lx += ctx.measureText(txt).width + 70; }
     ctx.restore();
   }
@@ -673,7 +738,7 @@ function drawRows(t, S) {
       const cx = x + 20 + cw * i + cw / 2; const grey = it.cross && t > it.cross;
       ctx.save(); if (grey) ctx.filter = 'grayscale(1) opacity(0.55)'; drawIcon(it.img, cx, y + 100, 120, 1, backOut(p)); ctx.restore();
       if (it.cross && t > it.cross) drawCross(cx, y + 100, 120, (t - it.cross) / 0.3);
-      if (it.label) { ctx.globalAlpha = a * clamp(p); ctx.fillStyle = C.tinta; ctx.font = '700 24px Figtree'; ctx.letterSpacing = '3px'; ctx.textAlign = 'center'; ctx.fillText(it.label.toUpperCase(), cx, y + 210); ctx.letterSpacing = '0px'; ctx.globalAlpha = a; }
+      if (it.label) { ctx.globalAlpha = a * clamp(p); ctx.fillStyle = C.tinta; ctx.letterSpacing = '2px'; ctx.textAlign = 'center'; fit(it.label.toUpperCase(), cw - 18, '700 {}px Figtree', 24, 14); ctx.fillText(it.label.toUpperCase(), cx, y + 210); ctx.letterSpacing = '0px'; ctx.globalAlpha = a; }
     });
     ctx.restore();
   }
@@ -683,12 +748,12 @@ function drawLists(t, S) {
     const a = vis(t, L.t0, L.t1, 0.35, 0.35); if (!a) continue;
     const w = 600, rowH = 92, h = 100 + L.items.length * rowH, x = W - 90 - w + (L._dx || 0), y = (L.y ?? 200) + (L._dy || 0);
     ctx.save(); ctx.globalAlpha = a; card(x, y, w, h, a);
-    ctx.fillStyle = C.tinta; ctx.font = '700 26px Figtree'; ctx.letterSpacing = '2px'; ctx.textAlign = 'left'; ctx.fillText(L.title.toUpperCase(), x + 36, y + 58); ctx.letterSpacing = '0px';
+    ctx.fillStyle = C.tinta; ctx.letterSpacing = '2px'; ctx.textAlign = 'left'; fit(L.title.toUpperCase(), w - 72, '700 {}px Figtree', 26, 14); ctx.fillText(L.title.toUpperCase(), x + 36, y + 58); ctx.letterSpacing = '0px';
     L.items.forEach((it, i) => {
       const p = easeOut((t - it.at) / 0.4); if (p <= 0) return; const yy = y + 110 + i * rowH;
       ctx.globalAlpha = a * p; ctx.fillStyle = it.color; ctx.beginPath(); ctx.arc(x + 52, yy + 26, 14, 0, 7); ctx.fill();
-      ctx.fillStyle = C.tinta; ctx.font = '800 34px "Bricolage Grotesque"'; ctx.fillText(it.name, x + 82 + (1 - p) * 20, yy + 26);
-      ctx.fillStyle = '#4a5068'; ctx.font = '500 24px Figtree'; ctx.fillText(it.sub, x + 82 + (1 - p) * 20, yy + 60);
+      ctx.fillStyle = C.tinta; fit(it.name, w - 120, '800 {}px "Bricolage Grotesque"', 34, 18); ctx.fillText(it.name, x + 82 + (1 - p) * 20, yy + 26);
+      ctx.fillStyle = '#4a5068'; fit(it.sub, w - 120, '500 {}px Figtree', 24, 14); ctx.fillText(it.sub, x + 82 + (1 - p) * 20, yy + 60);
     });
     ctx.restore();
   }
@@ -744,7 +809,7 @@ function render(t) {
   const K = (k, f) => { const n = BOXES.length; f(); for (let i = n; i < BOXES.length; i++) BOXES[i].k ??= k; };
   K('cartão', () => cardBoxes(t, S)); drawMap(t, cam, S); K('rótulo', () => drawLabels(t, cam, S)); drawRoutes(t, cam);
   ctx.drawImage(OVER, 0, 0); // vinheta e grão
-  K('alfinete', () => drawPin(t, cam, S)); K('ícone', () => drawIcons(t, cam, S));
+  K('alfinete', () => drawPin(t, cam, S)); K('ícone', () => drawIcons(t, cam, S)); drawCrowd();
   drawYear(t, S); K('capítulo', () => drawChapter(t, S));
   drawDots(t, S); drawLists(t, S); drawNumbers(t, S); drawWords(t, S); drawPeople(t, S); drawPhotos(t, S); drawRows(t, S);
   drawPills(t, S); drawQuotes(t, S); drawTitle(t, S); drawEnd(t, S);
