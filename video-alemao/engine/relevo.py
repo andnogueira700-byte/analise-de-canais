@@ -49,7 +49,7 @@ def shade(E, z, ty_frac):
     az, alt = math.radians(315), math.radians(42)
     hs = np.sin(alt) * np.cos(slope) + np.cos(alt) * np.sin(slope) * np.cos(az - aspect)
     hs = np.clip(hs, 0, 1)
-    if STYLE == 'b': return shade_b(E, hs, land)
+    if STYLE == 'b': return shade_b(E, hs, land, z)
     # cores de terra (planície verde-oliva → planalto ocre → serra marrom → pico claro)
     stops_l = [(0, (128, 146, 92)), (200, (150, 160, 104)), (600, (178, 168, 118)), (1200, (170, 140, 98)), (2500, (150, 120, 92)), (4500, (228, 222, 214))]
     # cores do mar (plataforma rasa clara → oceano profundo anil)
@@ -64,7 +64,7 @@ def shade(E, z, ty_frac):
     rgb = np.where(land[..., None], col_l * shade_l, col_o * shade_o)
     return Image.fromarray(np.clip(rgb, 0, 255).astype(np.uint8))
 
-def shade_b(E, hs, land):
+def shade_b(E, hs, land, z=5):
     from scipy import ndimage
     # tira ilhotas de poucos pixels (montes submarinos que viram pontinhos brilhantes)
     lab, n = ndimage.label(land); sizes = ndimage.sum(land, lab, range(1, n + 1))
@@ -75,7 +75,8 @@ def shade_b(E, hs, land):
     col_l = base * (0.86 + 0.2 * hs[..., None])
     # mar turquesa, mais claro perto da costa (brilho) e mais fundo longe
     d = ndimage.distance_transform_edt(~land)
-    glow = np.exp(-d / 14)[..., None]; near = np.exp(-d / 60)[..., None]
+    k = 2.0 ** (z - 5)  # larguras fixas em graus, para os mosaicos de zoom diferente emendarem
+    glow = np.exp(-d / (12 * k))[..., None]; near = np.exp(-d / (50 * k))[..., None]
     deep = np.array((38, 112, 136), np.float32); mid = np.array((52, 140, 160), np.float32); light = np.array((150, 214, 214), np.float32)
     col_o = deep + (mid - deep) * near
     col_o = col_o + (light - col_o) * glow * 0.85

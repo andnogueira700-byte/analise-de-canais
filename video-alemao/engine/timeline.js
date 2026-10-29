@@ -22,7 +22,7 @@ function buildScene() {
   const hl = (t0, t1, name, color, o = {}) => S.highlights.push({ t0, t1, name, color, ...o });
   const blob = (t0, t1, place, r, color, o = {}) => S.blobs.push({ t0, t1, lon: place[0], lat: place[1], r, color, ...o });
   const icon = (t0, t1, img, place, o = {}) => S.icons.push({ t0, t1, img, lon: place[0], lat: place[1], ...o });
-  const sicon = (t0, t1, img, sx, sy, o = {}) => S.icons.push({ t0, t1, img, sx, sy, ...o });
+  const sicon = () => {}; // ícones soltos no meio da tela foram abolidos: marcador só aparece no mapa, no lugar a que se refere
   const label = (t0, t1, place, text, o = {}) => S.labels.push({ t0, t1, lon: place[0], lat: place[1], text, ...o });
   const route = (id, t0, t1, pts, o = {}) => ROUTES[id] = buildRoute({ t0, t1, pts, hide: t1 + 5, ...o });
   const person = (t0, t1, name, role, o = {}) => S.people.push({ t0, t1, name, role, ...o });

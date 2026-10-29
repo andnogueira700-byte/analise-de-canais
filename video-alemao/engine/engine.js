@@ -133,9 +133,10 @@ function makeTextures() {
   const n = document.createElement('canvas'); n.width = n.height = 512; const g = n.getContext('2d');
   const r = rng(7); const id = g.createImageData(512, 512);
   // ondulação: soma de senos irregulares
-  const waves = Array.from({ length: 9 }, () => [r() * 6.28, (r() * 0.03 + 0.012), r() * 6.28, r() * 0.5 + 0.5]);
+  // vetores de onda inteiros: a textura emenda sem costura quando repete
+  const waves = Array.from({ length: 9 }, () => { const a = r() * 6.28, f = 2 + Math.round(r() * 6); return [Math.round(Math.cos(a) * f), Math.round(Math.sin(a) * f) || 1, r() * 6.28, r() * 0.5 + 0.5]; });
   for (let y = 0; y < 512; y++) for (let x = 0; x < 512; x++) {
-    let v = 0; for (const [a, f, ph, amp] of waves) v += amp * Math.sin((x * Math.cos(a) + y * Math.sin(a)) * f * 6.28 / 6.28 * 2 + ph);
+    let v = 0; for (const [kx, ky, ph, amp] of waves) v += amp * Math.sin((kx * x + ky * y) / 512 * 6.2832 + ph);
     v = (v / 5 + 1) / 2; const i = (y * 512 + x) * 4;
     id.data[i] = id.data[i + 1] = id.data[i + 2] = 255; id.data[i + 3] = Math.round(clamp(v) * 40);
   }
@@ -169,8 +170,30 @@ function proj(mx, my) {
 const geoS = (cam, lon, lat) => { const [x, y] = toScreen(cam, lon, lat); return proj(x, y); };
 
 let MOS = [];
+// borda esfumada nos mosaicos mais detalhados, para não aparecer a emenda com o de baixo
+function featherMosaics(list) {
+  for (const m of list) {
+    const im = IMG['mos_' + m.name]; if (!im) continue;
+    // máscara do mar (meia resolução): onde o azul domina
+    const mk = document.createElement('canvas'); mk.width = im.width >> 1; mk.height = im.height >> 1; const mg = mk.getContext('2d');
+    mg.drawImage(im, 0, 0, mk.width, mk.height); const d = mg.getImageData(0, 0, mk.width, mk.height), px = d.data;
+    for (let i = 0; i < px.length; i += 4) { const water = px[i + 2] > px[i] + 12; px[i] = px[i + 1] = px[i + 2] = 255; px[i + 3] = water ? 255 : 0; }
+    mg.putImageData(d, 0, 0); IMG['msk_' + m.name] = mk;
+    if (m.name === 'mundo') continue;
+    const c = document.createElement('canvas'); c.width = im.width; c.height = im.height; const g = c.getContext('2d');
+    g.drawImage(im, 0, 0); g.globalCompositeOperation = 'destination-out';
+    const e = Math.round(Math.min(c.width, c.height) * 0.06);
+    for (const [x0, y0, x1, y1, rx, ry, rw, rh] of [[0, 0, e, 0, 0, 0, e, c.height], [c.width, 0, c.width - e, 0, c.width - e, 0, e, c.height], [0, 0, 0, e, 0, 0, c.width, e], [0, c.height, 0, c.height - e, 0, c.height - e, c.width, e]]) {
+      const gr = g.createLinearGradient(x0, y0, x1, y1); gr.addColorStop(0, 'rgba(0,0,0,1)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = gr; g.fillRect(rx, ry, rw, rh);
+    }
+    IMG['mos_' + m.name] = c;
+  }
+}
 function drawRelief(cam) {
-  mctx.fillStyle = '#06122F'; mctx.fillRect(0, 0, MW, MH);
+  mctx.fillStyle = '#06122F'; mctx.fillRect(0, 0, MW, MH); drawMos(mctx, cam, 'mos_', 1);
+}
+// desenha os mosaicos que cobrem a vista (pre = 'mos_' imagem, 'msk_' máscara do mar), na escala k do canvas de destino
+function drawMos(g, cam, pre, k) {
   const vx0 = cam.x - MW / 2 / cam.s, vx1 = cam.x + MW / 2 / cam.s, vy0 = cam.y - MH / 2 / cam.s, vy1 = cam.y + MH / 2 / cam.s;
   const nat = m => m.w / (m.x1 - m.x0);
   const cover = MOS.filter(m => m.x0 <= vx0 && m.x1 >= vx1 && m.y0 <= vy0 && m.y1 >= vy1).sort((a, b) => a.z - b.z);
@@ -178,13 +201,13 @@ function drawRelief(cam) {
   let prev = null;
   for (const m of list) {
     let a = 1; if (prev) a = clamp((cam.s - 0.5 * nat(prev)) / (0.6 * nat(prev)));
-    if (a > 0 && IMG['mos_' + m.name]) {
+    if (a > 0 && IMG[pre + m.name]) {
       const ix0 = Math.max(vx0, m.x0), ix1 = Math.min(vx1, m.x1), iy0 = Math.max(vy0, m.y0), iy1 = Math.min(vy1, m.y1);
-      const kx = m.w / (m.x1 - m.x0), ky = m.h / (m.y1 - m.y0);
+      const im = IMG[pre + m.name], kx = im.width / (m.x1 - m.x0), ky = im.height / (m.y1 - m.y0);
       const [dx0, dy0] = toScreenM(cam, ix0, iy1), [dx1, dy1] = toScreenM(cam, ix1, iy0);
-      mctx.globalAlpha = a; mctx.imageSmoothingQuality = 'high';
-      mctx.drawImage(IMG['mos_' + m.name], (ix0 - m.x0) * kx, (m.y1 - iy1) * ky, (ix1 - ix0) * kx, (iy1 - iy0) * ky, dx0, dy0, dx1 - dx0, dy1 - dy0);
-      mctx.globalAlpha = 1;
+      g.globalAlpha = a; g.imageSmoothingQuality = 'high';
+      g.drawImage(im, (ix0 - m.x0) * kx, (m.y1 - iy1) * ky, (ix1 - ix0) * kx, (iy1 - iy0) * ky, dx0 * k, dy0 * k, (dx1 - dx0) * k, (dy1 - dy0) * k);
+      g.globalAlpha = 1;
     }
     prev = m;
   }
@@ -195,8 +218,22 @@ function buildBorders() {
     const p = new Path2D(); for (const l of lines) { for (let i = 0; i < l.length; i += 2) i ? p.lineTo(l[i], l[i + 1]) : p.moveTo(l[i], l[i + 1]); } BPATH[k] = p;
   }
 }
+// ondas: textura de ondulação andando devagar, só no mar (a terra é recortada), em meia resolução
+const WV = document.createElement('canvas'); const wctx = WV.getContext('2d');
+function drawWaves(t, cam) {
+  const k = 0.5; if (WV.width !== MW * k) { WV.width = MW * k; WV.height = MH * k; }
+  const pat = wctx.createPattern(NOISE, 'repeat'); wctx.globalCompositeOperation = 'source-over'; wctx.clearRect(0, 0, WV.width, WV.height);
+  // duas camadas presas ao mapa, deslizando em direções diferentes
+  const ox = -cam.x * cam.s * k, oy = cam.y * cam.s * k;
+  for (const [vx, vy, sc, al] of [[16, 6, 1.6, 1], [-10, 12, 2.6, 0.8]]) {
+    wctx.save(); wctx.globalAlpha = al; wctx.translate(((ox + t * vx) % (512 * sc)), ((oy + t * vy) % (512 * sc))); wctx.scale(sc, sc);
+    wctx.fillStyle = pat; wctx.fillRect(-512, -512, WV.width / sc + 1024, WV.height / sc + 1024); wctx.restore();
+  }
+  wctx.globalCompositeOperation = 'destination-in'; drawMos(wctx, cam, 'msk_', k); wctx.globalCompositeOperation = 'source-over';
+  mctx.save(); mctx.globalCompositeOperation = 'screen'; mctx.globalAlpha = 0.85; mctx.drawImage(WV, 0, 0, MW, MH); mctx.restore();
+}
 function drawMap(t, cam, S) {
-  drawRelief(cam);
+  drawRelief(cam); if (ESTILO === 'b') drawWaves(t, cam);
   const span = W / cam.s, lod = span > 60 ? 'coarse' : 'fine'; LAND = LODS[lod].land;
   mctx.save(); mctx.setTransform(cam.s, 0, 0, -cam.s, MW / 2 - cam.x * cam.s, MH / 2 + cam.y * cam.s); mctx.lineJoin = 'round'; mctx.lineCap = 'round';
   // fronteiras terrestres (sem linha de costa)
@@ -244,6 +281,7 @@ function drawMap(t, cam, S) {
     for (let i = 0; i < sw.n; i++) {
       const ang = r() * 6.283, rad = Math.sqrt(r()) * sw.r, ti = sw.t0 + (i / sw.n) * (sw.dur || 3);
       const p = easeOut((t - ti) / 0.4); if (p <= 0) continue;
+      if (!landAt(sw.lon + Math.cos(ang) * rad, sw.lat + Math.sin(ang) * rad * 0.8)) continue; // ponto no mar não aparece
       const [x, y] = toScreen(cam, sw.lon + Math.cos(ang) * rad, sw.lat + Math.sin(ang) * rad * 0.8);
       mctx.globalAlpha = a * p; mctx.fillStyle = sw.color; mctx.beginPath(); mctx.arc(x, y, (sw.px || 5) * backOut(p), 0, 7); mctx.fill();
       mctx.strokeStyle = 'rgba(255,255,255,0.8)'; mctx.lineWidth = 1.2; mctx.stroke();
@@ -301,7 +339,7 @@ const MK = { school: 'school', newspaper: 'newspaper', rolled_newspaper: 'newspa
   door: 'door-open', cooking: 'cooking-pot', pot_of_food: 'cooking-pot', tree: 'tree-pine', tree2: 'tree-pine', flag: 'flag', microphone: 'mic', classical_building: 'landmark', cross_mark: 'x',
   check_mark_button: 'check', ship: 'ship', ship2: 'ship', passenger_ship: 'ship', canoe: 'sailboat', sailboat: 'sailboat', spiral_calendar: 'calendar', tractor: 'tractor', hammer: 'hammer', bell: 'bell', envelope: 'mail', sparkles: 'sparkles', fearful_face: 'user', dove: 'heart-handshake', jar: 'cooking-pot', leafy_green: 'sprout' };
 function drawIcon(img, x, y, sz, a, scale = 1) {
-  if (MARCAS && MK[img] && IMG['mk_' + MK[img]]) return drawMarker(MK[img], x, y, sz, a, scale);
+  if (MARCAS && MK[img] && IMG['mk_' + MK[img]]) return drawMarker(MK[img], x, y, Math.min(sz, 104), a, scale);
   if (!IMG[img]) return;
   ctx.save(); ctx.globalAlpha = a; ctx.shadowColor = 'rgba(0,0,0,0.45)'; ctx.shadowBlur = 16; ctx.shadowOffsetY = 8;
   const im = IMG[img], s = sz * scale, k = Math.min(s / im.width, s / im.height);
@@ -327,9 +365,9 @@ const hit = (b) => BOXES.some(o => b[0] < o[2] && b[2] > o[0] && b[1] < o[3] && 
 function drawIcons(t, cam, S) {
   for (const ic of S.icons) {
     const a = vis(t, ic.t0, ic.t1, 0.2, 0.35); if (!a) continue;
-    let x, y, f = 1; if (ic.sx != null) { x = ic.sx; y = ic.sy; } else { [x, y, f] = geoS(cam, ic.lon, ic.lat); x += (ic.dx || 0) * f; y += (ic.dy || 0) * f; }
-    const size = (ic.size || 96) * (ic.sx != null ? 1 : f);
-    if (ic.sx == null) for (let k = 0; k < 8 && hit([x - size / 2, y - size / 2, x + size / 2, y + size / 2]); k++) x += size * 0.35;
+    if (ic._skip) continue;
+    let x, y, f = 1; if (ic.sx != null) { x = ic.sx; y = ic.sy; } else { [x, y, f] = geoS(cam, ic.lon, ic.lat); const o = ic._off || [ic.dx || 0, ic.dy || 0]; x += o[0] * f; y += o[1] * f; }
+    const size = iconSize(ic) * (ic.sx != null ? 1 : f);
     const sc = backOut((t - ic.t0) / 0.45) * (1 + 0.03 * Math.sin(t * 3 + (ic.lon || 0)));
     let aa = a; if (ic.sink && t > ic.sink) { const p = clamp((t - ic.sink) / 1.6); y += p * 50; aa *= 1 - p; }
     const grey = ic.grey && t > ic.grey;
@@ -344,10 +382,46 @@ function drawIcons(t, cam, S) {
     const r = rng(sw.seed || 5);
     for (let i = 0; i < sw.n; i++) {
       const ang = r() * 6.283, rad = Math.sqrt(r()) * sw.r, ti = sw.t0 + (i / sw.n) * (sw.dur || 2.5);
-      const p = (t - ti) / 0.4; if (p <= 0) continue;
+      const p = (t - ti) / 0.4; if (p <= 0 || !landAt(sw.lon + Math.cos(ang) * rad, sw.lat + Math.sin(ang) * rad * 0.8)) continue;
       const [x, y, f] = geoS(cam, sw.lon + Math.cos(ang) * rad, sw.lat + Math.sin(ang) * rad * 0.8);
-      drawIcon(sw.img, x, y, (sw.size || 54) * f, a, backOut(p));
+      const h = (sw.size || 54) * f * 0.5, b = [x - h, y - h, x + h, y + h]; if (hit(b)) continue; // não empilha ícones
+      BOXES.push(b); drawIcon(sw.img, x, y, h * 2, a, backOut(p));
     }
+  }
+}
+const iconSize = ic => Math.min(ic.size || 96, 104);
+const LANDC = new Map();
+function landAt(lon, lat) {
+  const key = lon.toFixed(3) + ',' + lat.toFixed(3); if (LANDC.has(key)) return LANDC.get(key);
+  const [x, y] = merc(lon, lat); mctx.save(); mctx.setTransform(1, 0, 0, 1, 0, 0);
+  const r = LODS.fine.coast.some(c => x >= c.bbox[0] && x <= c.bbox[2] && y >= c.bbox[1] && y <= c.bbox[3] && mctx.isPointInPath(c.path, x, y));
+  mctx.restore(); LANDC.set(key, r); return r;
+}
+// ponto da tela está em terra firme? (sem inclinação; com inclinação aceita sempre)
+function onLand(cam, sx, sy) {
+  if (TILT) return true;
+  const x = cam.x + (sx - MW / 2) / cam.s, y = cam.y - (sy - MH / 2) / cam.s, lod = W / cam.s > 60 ? 'coarse' : 'fine';
+  mctx.save(); mctx.setTransform(1, 0, 0, 1, 0, 0);
+  const r = LODS[lod].coast.some(c => x >= c.bbox[0] && x <= c.bbox[2] && y >= c.bbox[1] && y <= c.bbox[3] && mctx.isPointInPath(c.path, x, y));
+  mctx.restore(); return r;
+}
+// decide uma vez, num instante fixo, onde cada ícone fica: em terra, perto do lugar e sem cobrir nada
+function placeIcons(S) {
+  const list = S.icons.filter(i => i.sx == null).sort((a, b) => a.t0 - b.t0);
+  for (const ic of list) ic._skip = true;
+  for (const ic of list) {
+    const tm = ic.t0 + 0.45; render(tm);
+    const cam = camera(tm), [ax, ay, f] = geoS(cam, ic.lon, ic.lat), sz = iconSize(ic) * f, r = sz / 2;
+    const extra = ic.label ? sz * 0.62 + 28 : 0;
+    const ok = (x, y) => x - r > 20 && x + r < W - 20 && y - r > 20 && y + r + extra < H - 130 &&
+      !hit([x - r, y - r, x + r, y + r + extra]) && [[0, 0], [r * .7, 0], [-r * .7, 0], [0, r * .7], [0, -r * .7]].every(([dx, dy]) => onLand(cam, x + dx, y + dy));
+    const want = [(ic.dx || 0) * f, (ic.dy || 0) * f], cands = [want];
+    for (const k of [0.75, 1.1, 1.5, 2, 2.6, 3.3]) {
+      const ring = []; for (let i = 0; i < 16; i++) { const a = i / 16 * 6.283; ring.push([want[0] + Math.cos(a) * k * sz, want[1] + Math.sin(a) * k * sz]); }
+      ring.sort((p, q) => Math.hypot(...p) - Math.hypot(...q)); cands.push(...ring);
+    }
+    const c = cands.find(([dx, dy]) => ok(ax + dx, ay + dy)) || cands.find(([dx, dy]) => onLand(cam, ax + dx, ay + dy)) || want;
+    ic._off = [c[0] / f, c[1] / f]; ic._skip = false;
   }
 }
 function tagLabel(text, x, y, a, size = 26, bg = C.tinta, fg = C.branco) {
@@ -427,6 +501,38 @@ function drawPills(t, S) {
     ctx.fillStyle = C.tinta; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(p.text, W / 2 + 12, H - 106 + up); ctx.restore();
   }
 }
+// retângulo de cada cartão (mesmas contas dos desenhos), para arrumar a tela antes de renderizar
+function cardRect(k, o) {
+  ctx.save(); let r;
+  if (k === 'numbers') { ctx.font = '800 120px "Bricolage Grotesque"'; const nw = ctx.measureText((o.prefix || '') + (o.raw || fmt(o.value)) + (o.suffix || '')).width; ctx.font = '700 28px Figtree'; ctx.letterSpacing = '3px'; const w = Math.max(nw, ctx.measureText(o.label.toUpperCase()).width) + 100; r = [(o.x ?? W / 2) - w / 2, o.y ?? 150, w, 230]; }
+  else if (k === 'people') { ctx.font = '800 46px "Bricolage Grotesque"'; const nw = ctx.measureText(o.name).width; ctx.font = '700 24px Figtree'; ctx.letterSpacing = '3px'; const w = Math.max(nw, ctx.measureText(o.role.toUpperCase()).width) + 290; r = [o.side === 'right' ? W - 90 - w : 90, o.y ?? 330, w, 220]; }
+  else if (k === 'words') r = [o.x ?? 90, o.y ?? 300, 640, o.meaning ? 300 : 240];
+  else if (k === 'dots') { const cols = o.cols || 10, cell = o.cell || 38, w = cols * cell + 80; r = [o.x ?? (W - 90 - w), o.y ?? 200, w, Math.ceil(o.total / cols) * cell + 170]; }
+  else if (k === 'lists') r = [W - 90 - 600, o.y ?? 200, 600, 100 + o.items.length * 92];
+  else if (k === 'rows') { const w = o.items.length * 220 + 40; r = [W / 2 - w / 2, o.y ?? 170, w, 250]; }
+  ctx.restore(); return r;
+}
+function layoutCards(S) {
+  const all = [];
+  for (const k of ['numbers', 'people', 'words', 'dots', 'lists', 'rows']) for (const o of S[k]) all.push({ k, o, r: cardRect(k, o) });
+  all.sort((a, b) => a.o.t0 - b.o.t0);
+  const done = [];
+  for (const c of all) {
+    const live = done.filter(d => d.o.t0 < c.o.t1 && c.o.t0 < d.o.t1);
+    const box = dy => [c.r[0] - 12, c.r[1] + dy - 12, c.r[0] + c.r[2] + 12, c.r[1] + c.r[3] + dy + 12];
+    const clash = dy => live.some(d => { const b = box(dy), e = [d.r[0], d.r[1] + (d.o._dy || 0), d.r[0] + d.r[2], d.r[1] + d.r[3] + (d.o._dy || 0)]; return b[0] < e[2] && b[2] > e[0] && b[1] < e[3] && b[3] > e[1]; });
+    let dy = 0;
+    if (clash(0)) for (const s of [40, -40, 80, -80, 120, -120, 160, -160, 200, -200, 240, 280, 320, 360, 400]) { const top = c.r[1] + s, bot = top + c.r[3]; if (top >= 40 && bot <= H - 140 && !clash(s)) { dy = s; break; } }
+    c.o._dy = dy; done.push(c);
+  }
+}
+// caixas dos cartões visíveis no instante t (para ícones e rótulos não ficarem por baixo)
+function cardBoxes(t, S) {
+  for (const k of ['numbers', 'people', 'words', 'dots', 'lists', 'rows']) for (const o of S[k]) {
+    if (!vis(t, o.t0, o.t1, 0.3, 0.35)) continue; const r = cardRect(k, o), dy = o._dy || 0;
+    BOXES.push([r[0] - 10, r[1] + dy - 10, r[0] + r[2] + 10, r[1] + r[3] + dy + 10]);
+  }
+}
 function card(x, y, w, h, a, fill = C.branco) {
   ctx.shadowColor = 'rgba(0,0,0,0.38)'; ctx.shadowBlur = 26; ctx.shadowOffsetY = 10; ctx.fillStyle = fill; rr(x, y, w, h, 22); ctx.fill(); ctx.shadowColor = 'transparent';
 }
@@ -438,7 +544,7 @@ function drawNumbers(t, S) {
     ctx.save(); ctx.globalAlpha = a; const sc = 0.85 + 0.15 * backOut((t - n.t0) / 0.45);
     ctx.font = '800 120px "Bricolage Grotesque"'; const nw = ctx.measureText((n.prefix || '') + (n.raw || fmt(n.value)) + (n.suffix || '')).width;
     ctx.font = '700 28px Figtree'; ctx.letterSpacing = '3px'; const lw = ctx.measureText(n.label.toUpperCase()).width;
-    const w = Math.max(nw, lw) + 100, h = 230, x = n.x ?? W / 2, y = n.y ?? 150;
+    const w = Math.max(nw, lw) + 100, h = 230, x = n.x ?? W / 2, y = (n.y ?? 150) + (n._dy || 0);
     ctx.translate(x, y + h / 2); ctx.scale(sc, sc); ctx.translate(-x, -(y + h / 2));
     card(x - w / 2, y, w, h, a);
     ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic'; ctx.letterSpacing = '0px';
@@ -450,7 +556,7 @@ function drawNumbers(t, S) {
 function drawWords(t, S) {
   for (const wd of S.words) {
     const a = vis(t, wd.t0, wd.t1, 0.3, 0.35); if (!a) continue;
-    const x = wd.x ?? 90, y = wd.y ?? 300, w = 640, h = wd.meaning ? 300 : 240;
+    const x = wd.x ?? 90, y = (wd.y ?? 300) + (wd._dy || 0), w = 640, h = wd.meaning ? 300 : 240;
     const slide = (1 - easeOut((t - wd.t0) / 0.45)) * -50;
     ctx.save(); ctx.globalAlpha = a; ctx.translate(slide, 0); card(x, y, w, h, a);
     tagLabelLeft(wd.lang, x + 36, y + 50, wd.langColor || C.acai);
@@ -472,7 +578,7 @@ function drawPeople(t, S) {
     const right = pp.side === 'right';
     ctx.save(); ctx.font = '800 46px "Bricolage Grotesque"'; const nw = ctx.measureText(pp.name).width;
     ctx.font = '700 24px Figtree'; ctx.letterSpacing = '3px'; const rw = ctx.measureText(pp.role.toUpperCase()).width; ctx.letterSpacing = '0px';
-    const w = Math.max(nw, rw) + 290, h = 220; const x = right ? W - 90 - w : 90, y = pp.y ?? 330;
+    const w = Math.max(nw, rw) + 290, h = 220; const x = right ? W - 90 - w : 90, y = (pp.y ?? 330) + (pp._dy || 0);
     const slide = (1 - easeOut((t - pp.t0) / 0.45)) * (right ? 60 : -60);
     ctx.globalAlpha = a; ctx.translate(slide, 0); card(x, y, w, h, a);
     const cx = x + 125, cy = y + h / 2, R = 82;
@@ -490,7 +596,7 @@ function drawDots(t, S) {
   for (const d of S.dots) {
     const a = vis(t, d.t0, d.t1, 0.35, 0.35); if (!a) continue;
     const cols = d.cols || 10, rows = Math.ceil(d.total / cols), cell = d.cell || 38;
-    const w = cols * cell + 80, h = rows * cell + 170; const x = d.x ?? (W - 90 - w), y = d.y ?? 200;
+    const w = cols * cell + 80, h = rows * cell + 170; const x = d.x ?? (W - 90 - w), y = (d.y ?? 200) + (d._dy || 0);
     ctx.save(); ctx.globalAlpha = a; card(x, y, w, h, a);
     ctx.textAlign = 'left'; ctx.fillStyle = C.tinta; ctx.font = '700 26px Figtree'; ctx.letterSpacing = '2px'; ctx.fillText(d.title.toUpperCase(), x + 40, y + 56); ctx.letterSpacing = '0px';
     for (let i = 0; i < d.total; i++) {
@@ -507,7 +613,7 @@ function drawDots(t, S) {
 function drawRows(t, S) {
   for (const row of S.rows) {
     const a = vis(t, row.t0, row.t1, 0.3, 0.35); if (!a) continue;
-    const n = row.items.length, cw = 220, w = n * cw + 40, h = 250, x = W / 2 - w / 2, y = row.y ?? 170;
+    const n = row.items.length, cw = 220, w = n * cw + 40, h = 250, x = W / 2 - w / 2, y = (row.y ?? 170) + (row._dy || 0);
     ctx.save(); ctx.globalAlpha = a; card(x, y, w, h, a);
     row.items.forEach((it, i) => {
       const ti = it.at ?? (row.t0 + i * 0.35); const p = (t - ti) / 0.45; if (p <= 0) return;
@@ -522,7 +628,7 @@ function drawRows(t, S) {
 function drawLists(t, S) {
   for (const L of S.lists) {
     const a = vis(t, L.t0, L.t1, 0.35, 0.35); if (!a) continue;
-    const w = 600, rowH = 92, h = 100 + L.items.length * rowH, x = W - 90 - w, y = L.y ?? 200;
+    const w = 600, rowH = 92, h = 100 + L.items.length * rowH, x = W - 90 - w, y = (L.y ?? 200) + (L._dy || 0);
     ctx.save(); ctx.globalAlpha = a; card(x, y, w, h, a);
     ctx.fillStyle = C.tinta; ctx.font = '700 26px Figtree'; ctx.letterSpacing = '2px'; ctx.textAlign = 'left'; ctx.fillText(L.title.toUpperCase(), x + 36, y + 58); ctx.letterSpacing = '0px';
     L.items.forEach((it, i) => {
@@ -581,7 +687,7 @@ function render(t) {
   mctx.setTransform(1, 0, 0, 1, 0, 0); mctx.globalAlpha = 1;
   ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.filter = 'none'; ctx.clearRect(0, 0, W, H);
   const cam = camera(t), S = SCENE;
-  drawMap(t, cam, S); drawLabels(t, cam, S); drawRoutes(t, cam);
+  cardBoxes(t, S); drawMap(t, cam, S); drawLabels(t, cam, S); drawRoutes(t, cam);
   ctx.drawImage(OVER, 0, 0); // vinheta e grão
   drawPin(t, cam, S); drawIcons(t, cam, S);
   drawYear(t, S); drawChapter(t, S);

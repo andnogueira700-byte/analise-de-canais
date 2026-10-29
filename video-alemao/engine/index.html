@@ -10,9 +10,11 @@
   for (const [fam, file, weight, style] of fonts) { const f = new FontFace(fam, `url(fonts/${file}.woff2)`, { weight, style }); await f.load(); document.fonts.add(f); }
   const icons = ICON_LIST.map(n => [n, `../assets/icons/${n}.png`]);
   await loadImages([...icons, ['vargas','../assets/fotos/vargas.jpg'], ['pedro1','../assets/fotos/pedro1.jpg'], ['leopoldina','../assets/fotos/leopoldina.jpg'], ...MOSAICOS[ESTILO].map(m => ['mos_' + m.name, `../assets/relevo${ESTILO === 'a' ? '' : '-' + ESTILO}/${m.name}.jpg`])]);
+  featherMosaics(MOSAICOS[ESTILO]);
   MOS = MOSAICOS[ESTILO]; setTilt(+(Q.get('tilt') || 0)); makeTextures(); buildGeo(); buildBorders(); SCENE = buildScene();
   const marks = [...new Set([...SCENE.icons.filter(i => i.mark).map(i => i.mark), ...(MARCAS ? Object.values(MK) : [])])];
   await loadImages(marks.map(n => ['mk_' + n, `../assets/marcadores/${n}.svg`]));
+  layoutCards(SCENE); placeIcons(SCENE);
   window.READY = true;
 })().catch(e => { window.ERR = String(e.stack || e); });
 </script></body></html>
