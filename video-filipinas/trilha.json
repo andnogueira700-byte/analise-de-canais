@@ -1,0 +1,12 @@
+{
+  "cortes": {"razoes": "a primeira razao para o espanhol", "virada": "agora vamos para a virada", "massa": "agora a quarta razao", "quiz": "agora a resposta do quiz", "zamb": "agora o lugar que eu prometi", "fecho": "entao voltando a pergunta"},
+  "secoes": [
+    ["inicio", "razoes", ["curious_discovery", "playful_inquiry"]],
+    ["razoes", "virada", ["investigative_pulse", "documentary_reflection"]],
+    ["virada", "massa", ["shadows_echoes"]],
+    ["massa", "quiz", ["investigative_pulse"]],
+    ["quiz", "zamb", ["documentary_reflection"]],
+    ["zamb", "fecho", ["curious_discovery"]],
+    ["fecho", "fim", ["gentle_dawn", "triumphant_horizons"]]
+  ]
+}

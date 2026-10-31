@@ -1,0 +1,22 @@
+# key: (commons title, licença, autor, tipo)
+A = {
+ "r_filipe2": ("Portrait of Philip II of Spain by Sofonisba Anguissola - 002b.jpg", "Domínio público", "Sofonisba Anguissola", "retrato"),
+ "m_murillo": ("Murillo Velarde Map at the Centro de Turismo Intramuros.jpg", "Domínio público", "Pedro Murillo Velarde (1734)", "mapa"),
+ "r_claveria": ("El teniente general Narciso Clavería y Zaldúa, conde de Manila (Museo del Prado).jpg", "Domínio público", "Museo del Prado (autor desconhecido)", "retrato"),
+ "d_catalogo": ("Catalogo Alfabetico de Apellidos.jpg", "Domínio público", "Narciso Clavería y Zaldúa (1849)", "documento"),
+ "d_doctrina": ("Doctrina Christiana Image80.jpg", "Domínio público", "Library of Congress", "livro (1593)"),
+ "f_sanagustin": ("San Agustin Church, Intramuros, Manila, Philippines - panoramio.jpg", "CC BY 3.0", "alfonsoereve", "foto"),
+ "r_rizal": ("Jose Rizal full.jpg", "Domínio público", "autor desconhecido", "foto"),
+ "d_noli": ("Noli Me Tangere.jpg", "Domínio público", "José Rizal (1887)", "capa"),
+ "p_manilabay": ("Battle of Manila Bay by James Gale Tyler (1898).jpg", "Domínio público", "James Gale Tyler", "pintura"),
+ "r_dewey": ("Portrait of George Dewey.jpg", "Domínio público", "autor desconhecido", "foto"),
+ "f_tratado": ("Jules Cambon signs Treaty of Paris, 1899.JPG", "Domínio público", "Frances Benjamin Johnston", "foto"),
+ "r_aguinaldo": ("General Emilio Aguinaldo.jpg", "Domínio público", "autor desconhecido", "foto"),
+ "f_tropas": ("Squad of Filipino troops, 1899.jpg", "Domínio público", "autor desconhecido", "foto"),
+ "f_thomas": ("U.S.A.T Thomas in dock at Fort Mason, California.png", "Domínio público", "U.S. Army Signal Corps", "foto"),
+ "f_marco_thomasites": ("Thomasites Memorial historical marker in Manila.jpg", "CC BY-SA 3.0", "JoRitchChT", "foto"),
+ "r_quezon": ("Manuel L. Quezon portrait.jpg", "Domínio público", "Malacañang Palace", "foto"),
+ "f_pilar": ("Fort Pilar (2008).jpg", "CC BY-SA 3.0", "Dennison Uy", "foto"),
+ "f_pilar_antigo": ("Fort Pilar, Zamboanga, P. I. (1910s).jpg", "Domínio público", "autor desconhecido", "cartão-postal"),
+ "f_cebu": ("Santo Nino Basilica.jpg", "CC BY 4.0", "Philip Nalangan", "foto"),
+}
