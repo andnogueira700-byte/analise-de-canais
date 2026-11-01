@@ -60,6 +60,10 @@ h.append("<h2>1 · ESTILO DESTE VÍDEO</h2><ul>"
  "<li><b>Mapas com setas</b>: ícones 3D (navios, aviões, soldados) sobre mapa, com a câmera seguindo a seta. Os ícones 3D novos estão na seção 3.</li>"
  "<li><b>Recortes de jornal reais</b> de 1940 (Library of Congress) e documentos em máquina de escrever.</li>"
  "<li><b>Cor</b>: fotos e filmagens em preto e branco quente com grão leve; gráficos em cores vivas (azul-marinho, vermelho, âmbar, ciano).</li></ul>")
+h.append("<div class='th'>")
+for f,c in (('mock_a.png','MOCKUP · mapa com ícones 3D, seta que a câmera segue e nome do lugar no canto'),('mock_b.png','MOCKUP · cartões de personagem lado a lado: foto, nome, cargo'),('mock_c.png','MOCKUP · recorte de jornal real e pergunta no painel escuro')):
+    h.append(f"<figure style='width:370px'><img src='{b64(Image.open(R+f).resize((640,360)),62)}'><figcaption>{html.escape(c)}</figcaption></figure>")
+h.append("</div>")
 h.append("<h2>2 · CENA A CENA</h2>")
 for c in SC:
     sid,a,b,ttl,nar,vis,txt,sfx,mus,imgs,vids=c
