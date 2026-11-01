@@ -44,12 +44,20 @@ def cam_at(t,keys):
             x=ease((t-a[0])/max(b[0]-a[0],1e-6)); return tuple(a[i]+(b[i]-a[i])*x for i in (1,2,3))
     return keys[-1][1:]
 def tlab(d,x,y,txt,col=CREAM,sz=30,anchor='c',al=1.0):
+    if al<=0.01: return
     f=serif(int(sz*1.2),'Bold'); w=tw(d,txt,f); xx={'l':x,'c':x-w/2,'r':x-w}[anchor]
-    d.text((xx,y),txt,font=f,fill=col+(int(255*al),),stroke_width=3,stroke_fill=(8,10,14,int(255*al)))
-def map_scene(t0,t1,keys,elems,hl=None,base=None):
+    if al>=0.98:
+        d.text((xx,y),txt,font=f,fill=col+(255,),stroke_width=3,stroke_fill=(8,10,14,255)); return
+    pad=14; bb=f.getbbox(txt,stroke_width=3); tw_,th_=int(bb[2]-bb[0]+2*pad),int(bb[3]-bb[1]+2*pad)
+    lay=Image.new('RGBA',(tw_,th_),(0,0,0,0)); ImageDraw.Draw(lay).text((pad-bb[0],pad-bb[1]),txt,font=f,fill=col+(255,),stroke_width=3,stroke_fill=(8,10,14,255))
+    lay.putalpha(lay.getchannel('A').point(lambda v:int(v*al)))
+    ox,oy=int(xx+bb[0]-pad),int(y+bb[1]-pad); ov=d._image
+    x0,y0=max(ox,0),max(oy,0); x1,y1=min(ox+tw_,ov.width),min(oy+th_,ov.height)
+    if x1>x0 and y1>y0: ov.alpha_composite(lay.crop((x0-ox,y0-oy,x1-ox,y1-oy)),(x0,y0))
+def map_scene(t0,t1,keys,elems,hl=None,base=None,yoff=0,drift=0.07):
     """keys: [(t,lon,lat,s)]; elems: lista de dicts com 'k' (icon|arrow|pin|label|x|ring), 't' de entrada"""
     def draw(t,d,a):
-        cam=cam_at(t,keys)
+        cam=cam_at(t,keys); u_=(t-t0)/max(t1-t0,1e-6); cam=(cam[0],cam[1]-yoff/cam[2],cam[2]*(1+drift*ease(u_)))
         if base: base(d,cam,t)
         else: draw_map(d,cam,hl)
         for e in elems:
@@ -58,6 +66,9 @@ def map_scene(t0,t1,keys,elems,hl=None,base=None):
             if e['k']=='arrow':
                 a0=mp(*e['a'],cam); b0=mp(*e['b'],cam); u=ease((t-e['t'])/e.get('d',1.5)); p=(a0[0]+(b0[0]-a0[0])*u,a0[1]+(b0[1]-a0[1])*u)
                 col=e.get('c',RED); d.line([a0,p],fill=col+(255,),width=e.get('w',9))
+                if e.get('ship') and u>=0.99:
+                    uu=((t-e['t']-e.get('d',1.5))/e.get('lap',4.0))%1.0; q=(a0[0]+(b0[0]-a0[0])*uu,a0[1]+(b0[1]-a0[1])*uu); put(d,e['ship'],q[0],q[1]+16+3*math.sin(t*2.2),e.get('sh',80),flip=(b0[0]<a0[0]))
+                elif e.get('ship'): put(d,e['ship'],p[0],p[1]+16,e.get('sh',80),flip=(b0[0]<a0[0]))
                 if u>0.05:
                     ang=math.atan2(p[1]-a0[1],p[0]-a0[0]); hd=e.get('w',9)*2.6
                     d.polygon([p,(p[0]-hd*math.cos(ang-0.45),p[1]-hd*math.sin(ang-0.45)),(p[0]-hd*math.cos(ang+0.45),p[1]-hd*math.sin(ang+0.45))],fill=col+(255,))
@@ -65,7 +76,7 @@ def map_scene(t0,t1,keys,elems,hl=None,base=None):
                 p=e['p']; 
                 if 'move' in e:
                     m=e['move']; u=ease((t-e['t'])/max(m[2]-e['t'],1e-6)); p=(p[0]+(m[0]-p[0])*u,p[1]+(m[1]-p[1])*u)
-                x,y=mp(*p,cam); put(d,e['n'],x,y+e.get('dy',20),e.get('h',90)*kk,flip=e.get('flip',False))
+                x,y=mp(*p,cam); put(d,e['n'],x,y+e.get('dy',20)+3*math.sin(t*2.0+x*0.01),e.get('h',90)*kk,flip=e.get('flip',False))
                 if e.get('lab'): tlab(d,x,y+e.get('dy',20)+6,e['lab'],e.get('lc',CREAM),e.get('ls',24),al=kk)
             elif e['k']=='pin':
                 x,y=mp(*e['p'],cam); c=e.get('c',RED); r=14
@@ -141,7 +152,7 @@ def _portrait(path,w=270,h=300):
     im=Image.new('RGB',(w,h),(26,30,36)); dr=ImageDraw.Draw(im)
     dr.ellipse([w/2-48,h*0.20,w/2+48,h*0.20+112],fill=(48,54,62)); dr.ellipse([w/2-110,h*0.52,w/2+110,h*1.05],fill=(48,54,62))
     f=serif(15,'Medium'); dr.text((w/2,h-16),"FOTO NON TROVATA",font=f,fill=(110,120,130),anchor='mm'); return im
-def L_cards(cards,t_end,y=400,pw=340,ph=380):
+def L_cards(cards,t_end,y=640,pw=250,ph=270):
     """cards: [(t_in, nome, cargo, foto|None)] — entram um depois do outro e ficam lado a lado até t_end"""
     n=len(cards); gap=36; tot=n*(pw+gap)-gap; x0=W/2-tot/2
     ims=[_portrait(c[3],pw,ph) for c in cards]

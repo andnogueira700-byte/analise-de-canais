@@ -43,6 +43,29 @@ def news_clip(k):
     return out
 # ------------------------------------------------------------------ montagem
 shots=[]; TRX={}
+class NewsShot(Shot):
+    def __init__(s,t0,t1,**k):
+        Shot.__init__(s,t0,t1,**k); s.img=Image.open(k['key']).convert('RGB'); s.iw,s.ih=s.img.size
+    def xf(s,t):
+        z0,z1=s.k.get('z',(1.0,1.12)); z=z0+(z1-z0)*ease(s.p(t)); c=s.k.get('c',(.5,.3))
+        vw=s.iw/z; vh=s.ih/z; x0=min(max(c[0]*s.iw-vw/2,0),s.iw-vw); y0=min(max(c[1]*s.ih-vh/2,0),s.ih-vh); return x0,y0,vw,vh
+    def render(s,t):
+        x0,y0,vw,vh=s.xf(t); return s.img.crop((int(x0),int(y0),int(x0+vw),int(y0+vh))).resize((W,H),Image.LANCZOS)
+def news_marks(shot,marks):
+    """marks: [(t_rel, (x0,y0,x1,y1) em fração da página, 'hi'|'box')] — grifo amarelo que varre + moldura vermelha"""
+    def fn(t,im,s_):
+        if not (shot.t0<=t<=shot.t1): return
+        x0,y0,vw,vh=shot.xf(t); ov,d=newov()
+        for tr,(a,b,c,e),kind in marks:
+            tt=t-(shot.t0+tr)
+            if tt<0: continue
+            X0=(a*shot.iw-x0)*W/vw; X1=(c*shot.iw-x0)*W/vw; Y0=(b*shot.ih-y0)*H/vh; Y1=(e*shot.ih-y0)*H/vh
+            u=min(1,tt/0.7); xe=X0+(X1-X0)*ease(u)
+            if kind=='hi':
+                d.rectangle([X0,Y0,xe,Y1],fill=(255,225,40,115))
+            d.rectangle([X0-6,Y0-6,X1+6,Y1+6],outline=(230,57,70,int(255*min(1,max(0,(tt-0.5)/0.3)))),width=7)
+        over(im,ov)
+    LAYERS.append((shot.t0,shot.t1,fn))
 class Blk(Shot):
     def render(s,t): return Image.new('RGB',(W,H),(0,0,0))
 def vclip(clip,ss,t0,t1,name,**k):
@@ -60,7 +83,9 @@ def build_shots():
             p=pimg_or(*a); z=o.get('z',(1.0,1.10)); c=o.get('c',((.5,.5),(.5,.5)))
             seq.append(Photo(t0,t1,key=p,z=z,c=c,seed=len(seq)+1.0,cover=o.get('cover',False)))
         elif kind=='N':
-            seq.append(Photo(t0,t1,key=news_clip(a[0]),z=o.get('z',(1.0,1.12)),c=o.get('c',((.5,.25),(.5,.4))),seed=1.0,cover=True))
+            ns=NewsShot(t0,t1,key=news_clip(a[0]),z=o.get('z',(1.0,1.12)),c=o.get('c',(.5,.3)),look='full'); seq.append(ns)
+            if o.get('marks'): news_marks(ns,o['marks'])
+            TRX[round(t0,2)]='diss'
         elif kind=='V':
             seq.append(vclip(a[0],a[1],t0,t1,f'seg{len(seq):03d}_{a[0]}_{int(a[1])}',zoom=o.get('zoom',1.06),z0=o.get('z0',1.0),cy=o.get('cy',0.5),c=o.get('c',(.5,.5))))
         elif kind=='B3':   # vídeo 3D do Blender

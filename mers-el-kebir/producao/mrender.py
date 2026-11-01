@@ -32,6 +32,6 @@ if __name__=='__main__':
         import multiprocessing as mp
         step=float(sys.argv[2]); tag_=sys.argv[3]; ks=[int(x) for x in sys.argv[4:]]
         jobs=[(k,k*step,min((k+1)*step,DUR+0.1),f'/tmp/mers/build/{tag_}_{k:03d}.mp4') for k in ks]
-        with mp.Pool(3) as pool:
+        with mp.Pool(4) as pool:
             for r in pool.imap_unordered(chunk,jobs): print('done',r,flush=True)
         print('RENDER DONE',flush=True)
