@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1280" height="720"></canvas>
+<script src="d3.min.js"></script><script src="topojson-client.min.js"></script><script src="world.js"></script><script src="fonts.js"></script>
+<script src="imgs.js"></script><script src="sb_lib.js"></script><script src="sb_lib2.js"></script><script src="sb_scenes.js"></script><script src="sb_scenes2.js"></script><script src="sb_lib3.js"></script><script src="sb_scenes3.js"></script><script src="sb_scenes4.js"></script><script src="anim.js"></script>
+<script>
+const IM={};for(const n of ['tesei','mussolini']){const i=new Image();i.src=IMGDATA[n];IM[n]=i;}
+const cv=document.getElementById('c'),cx=cv.getContext('2d'),SCL=1280/960;
+const probeCv=document.createElement('canvas');probeCv.width=480;probeCv.height=270;const pcx=probeCv.getContext('2d');
+const CAMO={S06:{z0:1.12,z1:1.3,c0:[540,170],c1:[400,240]},S21:{z0:1.34,z1:1.06,c0:[520,330],c1:[480,300]}};
+const PROBE={};
+function probe(i){ if(PROBE[i])return PROBE[i]; ANIM.dir=0;ANIM.text=false;ANIM.t=1;ANIM.d=8;ANIM.p=.5;ANIM.probe=true;
+ pcx.save();pcx.setTransform(.5,0,0,.5,0,0);pcx.fillStyle='#000';pcx.fillRect(0,0,W,H);try{SC[i].draw(pcx);}catch(e){} pcx.restore(); ANIM.probe=false; return PROBE[i]={dir:ANIM.dir,text:ANIM.text}; }
+window.sceneCount=()=>SC.length;
+window.renderFrame=function(i,k,n,fps,fadeIn){
+  const s=SC[i], pr=probe(i); const p=n>1?k/(n-1):0, t=k/fps, d=n/fps;
+  ANIM.t=t;ANIM.d=d;ANIM.p=p;ANIM.dir=0;ANIM.text=false;
+  cx.save();cx.setTransform(SCL,0,0,SCL,0,0);cx.globalAlpha=1;cx.textAlign='left';cx.letterSpacing='0px';cx.filter='none';cx.fillStyle='#000';cx.fillRect(0,0,W,H);
+  // câmera
+  let z0=1.05,z1=1.13,c0=[W/2,H/2],c1=[W/2,H/2]; const e=p*p*(3-2*p);
+  if(CAMO[s.id]){const c=CAMO[s.id];z0=c.z0;z1=c.z1;c0=c.c0;c1=c.c1;}
+  else if(pr.text){z0=1;z1=1.015;}
+  else if(pr.dir){const sl=W*.05;z0=1.11;z1=1.13;c0=[W/2-pr.dir*sl,H/2];c1=[W/2+pr.dir*sl,H/2];}   // câmera acompanha o sentido do movimento
+  else {const a=i%2?1:-1;z0=1.04;z1=1.14;c0=[W/2+a*W*.03,H/2+H*.02];c1=[W/2-a*W*.04,H/2-H*.03];}
+  const z=z0+(z1-z0)*e; let ccx=c0[0]+(c1[0]-c0[0])*e, ccy=c0[1]+(c1[1]-c0[1])*e; ccx=Math.max(W/2/z,Math.min(W-W/2/z,ccx)); ccy=Math.max(H/2/z,Math.min(H-H/2/z,ccy));
+  ANIM.cam={z:z,x:ccx,y:ccy};cx.translate(W/2,H/2);cx.scale(z,z);cx.translate(-ccx,-ccy);
+  s.draw(cx); cx.restore();
+  cx.save();cx.setTransform(SCL,0,0,SCL,0,0); finish(cx,(i*977+k)%9973+1,'rgba(255,214,150,.035)'); 
+  const f=fadeIn?1-Math.min(1,t/.35):0, fo=0; if(f>0){cx.fillStyle='rgba(0,0,0,'+f+')';cx.fillRect(0,0,W,H);} cx.restore();
+  return cv.toDataURL('image/jpeg',.86).slice(23);
+};
+(async()=>{const F=FONTS;const mk=(n,b,w,st)=>new FontFace(n,Uint8Array.from(atob(b),c=>c.charCodeAt(0)).buffer,{weight:w,style:st});
+ const fs=[mk('FiraEC',F.fira700,'700','normal'),mk('FiraEC',F.fira500,'500','normal'),mk('CormI',F.corm600i,'600','italic'),mk('Corm',F.corm600,'600','normal')];
+ for(const f of fs){await f.load();document.fonts.add(f);} await Promise.all(Object.values(IM).map(i=>i.decode().catch(()=>0))); window.READY=true;})();
+</script></body></html>
