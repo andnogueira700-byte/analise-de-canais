@@ -46,33 +46,33 @@ def boom(dur=1.6, f_start=95, far=False):
     crack = rs.randn(n) * np.exp(-tt * 70) * (0.25 if not far else 0.04)
     x = thump * 0.9 + noise * 0.55 + crack
     return x / np.max(np.abs(x))
-for ts in ev["shots"]: add(sfx, ts, boom(), 0.85)
-for ts in ev["far"]: add(sfx, ts, boom(2.0, 80, True), 0.4)
+for ts in ev["shots"]: add(sfx, ts, boom(), 0.36)
+for ts in ev["far"]: add(sfx, ts, boom(2.0, 80, True), 0.15)
 # bolas de canhao: assobio + impacto
 for tf, th in zip(ev["fire"], ev["hits"]):
     n = int((th - tf) * SR); tt = np.arange(n) / SR
     w = rs.randn(n); w = lp_fast(w, 2600) - lp_fast(w, 500); w *= (tt / tt[-1]) ** 2 * 0.5
-    add(sfx, tf, w, 0.5)
-    imp = boom(1.0, 70) ; add(sfx, th, imp, 0.7)
+    add(sfx, tf, w, 0.2)
+    imp = boom(1.0, 70) ; add(sfx, th, imp, 0.28)
 # marcha: batidas suaves ate "Si fermarono"
-step = 0.46; tm = ev["tS2"] + 0.3
+step = ev.get('stepEvery', 0.6); tm = ev["tS2"] + 0.3
 march = np.zeros(N)
 while tm < ev["stop"] - 0.05:
     if not (ev["tS2"] + 4 < tm < ev["tS2"] + 4.1):
         n = int(0.12 * SR); tt = np.arange(n) / SR
-        x = lp_fast(rs.randn(n), 1400) * np.exp(-tt * 38); add(march, tm, x / np.max(np.abs(x)), 0.10 * (0.7 + 0.3 * rs.rand()))
+        x = lp_fast(rs.randn(n), 1400) * np.exp(-tt * 38); add(march, tm, x / np.max(np.abs(x)), 0.04 * (0.7 + 0.3 * rs.rand()))
     tm += step
 march *= np.clip((t - ev["tS2"]) / 1.5, 0, 1)
 # timpano no "Si fermarono"
 n = int(1.4 * SR); tt = np.arange(n) / SR
-timp = np.sin(2 * np.pi * (60 + 40 * np.exp(-tt * 12)) * tt) * np.exp(-tt * 3.0); add(sfx, ev["stop"], timp, 0.65)
+timp = np.sin(2 * np.pi * (60 + 40 * np.exp(-tt * 12)) * tt) * np.exp(-tt * 3.0); add(sfx, ev["stop"], timp, 0.26)
 
 # ducking sob a voz
 vm = np.abs(voice).mean(1); k = int(0.12 * SR)
 venv = np.convolve(vm, np.ones(k) / k, mode="same"); venv = np.clip(venv / 0.09, 0, 1)
 duck = 1 - 0.45 * venv
 bed = (pad + wind + march) * duck
-fx = sfx * (1 - 0.25 * venv)
+fx = sfx * (1 - 0.5 * venv)
 st = np.stack([bed + fx, bed + fx], 1).astype(np.float32)
 # pad levemente aberto no estereo
 st[:, 0] += (pad * 0.05).astype(np.float32); st[:, 1] -= (pad * 0.05).astype(np.float32)
