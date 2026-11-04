@@ -25,19 +25,24 @@ function dressBot(root, key){
     m.material = new THREE.MeshStandardMaterial({vertexColors:true, roughness:.8, metalness:.02, flatShading:false, skinning:true});
     m.castShadow = true;
   });
-  // acessórios presos ao osso da cabeça / peito
-  const head = root.getObjectByName('mixamorigHead')||root.getObjectByName('mixamorig:Head'), chest = root.getObjectByName('mixamorigSpine2')||root.getObjectByName('mixamorig:Spine2');
+  // acessórios: posicionados em coordenadas do mundo na pose-T (x lateral, y cima, z frente) e depois presos ao osso
+  root.updateMatrixWorld(true);
+  const B=n=>root.getObjectByName('mixamorig'+n)||root.getObjectByName('mixamorig:'+n);
+  const wp=b=>b.getWorldPosition(new THREE.Vector3());
   const mat=(c,r=.8)=>new THREE.MeshStandardMaterial({color:c,roughness:r});
-  if(head){ const S=100; // osso em unidades do FBX (cm)
-    const add=(geo,m,pos,rot)=>{const me=new THREE.Mesh(geo,m);me.position.set(...pos);if(rot)me.rotation.set(...rot);head.add(me);return me;};
-    if(o.hood){ add(new THREE.SphereGeometry(12.6,16,12),mat(0x111213),[0,10,1]); add(new THREE.SphereGeometry(6.4,12,10),mat(o.skin),[0,9.5,9.6]).scale.set(1,1.15,.5); }
-    if(o.goggles){ for(const sx of[-3.6,3.6]) add(new THREE.CylinderGeometry(2.7,2.7,1.6,12),mat(0x0a0a0a,.3),[sx,11,13.2],[Math.PI/2,0,0]); add(new THREE.BoxGeometry(14,1.3,1),mat(0x0a0a0a),[0,11,12.6]); }
-    if(o.cap==='white'||o.cap==='uk'){ add(new THREE.CylinderGeometry(11.5,12.6,5,16),mat(o.cap==='white'?0xf0eee6:0x14181f),[0,19,1]); add(new THREE.CylinderGeometry(12.2,12.2,1.2,16),mat(o.cap==='white'?0x1d2b4a:0xefefef),[0,16.6,1]); }
-    if(o.cap==='peaked'||o.cap==='peakedwhite'){ const cc=o.cap==='peaked'?0x131a2a:0xf0eee6; add(new THREE.CylinderGeometry(12,12.8,6.5,16),mat(cc),[0,19.5,1]); add(new THREE.CylinderGeometry(12.2,12.2,1.6,16),mat(0x0b0b0c),[0,16.6,1]); add(new THREE.BoxGeometry(14,.8,8),mat(0x0b0b0c),[0,17,10]); add(new THREE.SphereGeometry(1.6,8,6),mat(0xd4ab4f),[0,18,12.2]); }
+  const hb=B('Head'); const K=wp(hb).y>20?1:0.01; console.log('K',K,wp(hb).y);
+  const put=(bone,geo,m,off,rot,sc)=>{const me=new THREE.Mesh(geo,m);const p=wp(bone).add(new THREE.Vector3(...off).multiplyScalar(K));me.position.copy(root.worldToLocal(p.clone()));if(rot)me.rotation.set(...rot);me.scale.set(...(sc||[1,1,1])).multiplyScalar(K);root.add(me);bone.attach(me);me.castShadow=true;return me;};
+  const head=B('Head'), chest=B('Spine2');
+  if(head){
+    if(o.hood){ put(head,new THREE.SphereGeometry(11.4,18,14),mat(0x111213),[0,10,0],0,[.88,1.05,.98]); put(head,new THREE.SphereGeometry(5.6,12,10),mat(o.skin),[0,9.2,8.6],0,[.95,1.15,.42]); }
+    if(o.goggles){ for(const sx of[-3.4,3.4]) put(head,new THREE.CylinderGeometry(2.5,2.5,1.4,12),mat(0x0a0a0a,.3),[sx,11,10.4],[Math.PI/2,0,0]); put(head,new THREE.BoxGeometry(12,1,1),mat(0x0a0a0a),[0,11,9.8]); }
+    if(o.cap==='white'||o.cap==='uk'){ put(head,new THREE.CylinderGeometry(10.8,11.4,4.6,18),mat(o.cap==='white'?0xf0eee6:0x14181f),[0,17.5,0]); put(head,new THREE.CylinderGeometry(11.3,11.3,1.1,18),mat(o.cap==='white'?0x1d2b4a:0xefefef),[0,15.4,0]); }
+    if(o.cap==='peaked'||o.cap==='peakedwhite'){ const cc=o.cap==='peaked'?0x131a2a:0xf0eee6; put(head,new THREE.CylinderGeometry(10.8,11.6,6,18),mat(cc),[0,18,0]); put(head,new THREE.CylinderGeometry(11.5,11.5,1.5,18),mat(0x0b0b0c),[0,15,0]); put(head,new THREE.BoxGeometry(12,.7,7),mat(0x0b0b0c),[0,15.4,9]); put(head,new THREE.SphereGeometry(1.4,8,6),mat(0xd4ab4f),[0,17,11.4]); }
   }
-  if(chest){ const add=(geo,m,pos,rot)=>{const me=new THREE.Mesh(geo,m);me.position.set(...pos);if(rot)me.rotation.set(...rot);chest.add(me);return me;};
-    if(o.rebreather){ add(new THREE.BoxGeometry(24,16,9),mat(0x2b2f2a),[0,8,13]).scale.set(1,1,1); add(new THREE.CylinderGeometry(2,2,26,8),mat(0x444a44),[0,12,-14],[0,0,0]); }
-    if(o.collar){ add(new THREE.BoxGeometry(26,1.2,18),mat(o.collar),[0,16,3]); }
-    if(o.stripes){ for(const s of[-1,1]) for(let k=0;k<3;k++) add(new THREE.BoxGeometry(.9,.8,9.5),mat(0xd4ab4f),[s*34,-16-k*2,0]); }
+  if(chest){
+    if(o.rebreather){ put(chest,new THREE.BoxGeometry(20,13,7),mat(0x2b2f2a),[0,-2,12.5]); put(chest,new THREE.CylinderGeometry(1.3,1.3,18,8),mat(0x555b55),[-7,6,12.5]); put(chest,new THREE.CylinderGeometry(1.3,1.3,18,8),mat(0x555b55),[7,6,12.5]); }
+    if(o.collar){ put(chest,new THREE.BoxGeometry(27,.9,17),mat(o.collar),[0,15,-3]); put(chest,new THREE.BoxGeometry(10,.9,9),mat(o.collar),[0,14.5,8]); }
   }
+  if(o.stripes){ for(const side of['Left','Right']){ const fa=B(side+'ForeArm'),hd=B(side+'Hand'); if(!fa||!hd) continue; const a=wp(fa),b=wp(hd),dir=b.clone().sub(a);
+      for(let k=0;k<3;k++){ const me=new THREE.Mesh(new THREE.CylinderGeometry(5.4,5.4,.9,14),mat(0xd4ab4f,.4)); me.position.copy(root.worldToLocal(a.clone().add(dir.clone().multiplyScalar(.55+k*.06)))); me.rotation.z=Math.PI/2; me.scale.multiplyScalar(K); root.add(me); fa.attach(me); } } }
 }
