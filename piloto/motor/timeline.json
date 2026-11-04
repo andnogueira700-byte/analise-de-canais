@@ -1,0 +1,160 @@
+{
+ "lead": 0.5,
+ "beats": [
+  {
+   "i": 1,
+   "start": 0.5,
+   "end": 2.9,
+   "text": "L'11 maggio 1745,"
+  },
+  {
+   "i": 2,
+   "start": 3.44,
+   "end": 4.46,
+   "text": "nell'attuale Belgio,"
+  },
+  {
+   "i": 3,
+   "start": 4.86,
+   "end": 8.86,
+   "text": "una colonna di circa quindicimila soldati britannici e hannoveriani"
+  },
+  {
+   "i": 4,
+   "start": 9.28,
+   "end": 11.06,
+   "text": "cominciò a salire lungo un pendio,"
+  },
+  {
+   "i": 5,
+   "start": 11.42,
+   "end": 13.2,
+   "text": "vicino al villaggio di Fontenoy."
+  },
+  {
+   "i": 6,
+   "start": 13.66,
+   "end": 15.8,
+   "text": "In cima li aspettava l'esercito francese,"
+  },
+  {
+   "i": 7,
+   "start": 16.38,
+   "end": 17.22,
+   "text": "cannoni davanti,"
+  },
+  {
+   "i": 8,
+   "start": 17.7,
+   "end": 18.72,
+   "text": "cannoni sui lati,"
+  },
+  {
+   "i": 9,
+   "start": 19.16,
+   "end": 22.62,
+   "text": "fanti al riparo dietro trinceramenti e villaggi fortificati."
+  },
+  {
+   "i": 10,
+   "start": 23.12,
+   "end": 26.62,
+   "text": "I britannici avanzarono allo scoperto, in file ordinate,"
+  },
+  {
+   "i": 11,
+   "start": 27.08,
+   "end": 28.95,
+   "text": "le palle di cannone aprivano varchi nei ranghi."
+  },
+  {
+   "i": 12,
+   "start": 29.28,
+   "end": 32.84,
+   "text": "Gli uomini chiudevano i vuoti e continuavano a camminare."
+  },
+  {
+   "i": 13,
+   "start": 33.4,
+   "end": 41.28,
+   "text": "Quando finalmente arrivarono davanti alla prima linea francese, a poche decine di passi, successe qualcosa di ancora più strano."
+  },
+  {
+   "i": 14,
+   "start": 42.0,
+   "end": 42.94,
+   "text": "Si fermarono,"
+  },
+  {
+   "i": 15,
+   "start": 43.38,
+   "end": 44.5,
+   "text": "sistemarono le file"
+  },
+  {
+   "i": 16,
+   "start": 44.6,
+   "end": 48.0,
+   "text": "e, secondo il racconto reso famoso da Voltaire,"
+  },
+  {
+   "i": 17,
+   "start": 48.42,
+   "end": 50.45,
+   "text": "un ufficiale britannico si fece avanti."
+  },
+  {
+   "i": 18,
+   "start": 50.78,
+   "end": 51.7,
+   "text": "Si tolse il cappello"
+  },
+  {
+   "i": 19,
+   "start": 51.78,
+   "end": 54.2,
+   "text": "e invitò i francesi a sparare per primi."
+  },
+  {
+   "i": 20,
+   "start": 54.26,
+   "end": 55.66,
+   "text": "Dall'altra parte,"
+  },
+  {
+   "i": 21,
+   "start": 56.1,
+   "end": 59.42,
+   "text": "un ufficiale francese avrebbe risposto con la stessa cortesia."
+  },
+  {
+   "i": 22,
+   "start": 60.04,
+   "end": 60.56,
+   "text": "Signori,"
+  },
+  {
+   "i": 23,
+   "start": 61.04,
+   "end": 62.2,
+   "text": "non ci pensiamo nemmeno."
+  },
+  {
+   "i": 24,
+   "start": 62.58,
+   "end": 63.42,
+   "text": "Sparate voi!"
+  }
+ ],
+ "words": {
+  "Signori": 60.04,
+  "non": 61.04,
+  "ci": 61.14,
+  "pensiamo": 61.28,
+  "nemmeno": 61.74,
+  "Sparate": 62.58,
+  "voi": 63.14
+ },
+ "voiceEnd": 63.42,
+ "total": 68.42
+}

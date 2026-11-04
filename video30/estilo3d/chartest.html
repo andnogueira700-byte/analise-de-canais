@@ -1,0 +1,13 @@
+<!doctype html><html><body style="margin:0"><script src="three.min.js"></script><script src="fflate.min.js"></script><script src="FBXLoader.js"></script><script src="SkeletonUtils.js"></script><script src="chars.js"></script>
+<script>
+const R=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});R.setSize(960,480);document.body.appendChild(R.domElement);
+const sc=new THREE.Scene();sc.background=new THREE.Color(0x3a3f46);sc.add(new THREE.HemisphereLight(0xdfe6f0,0x403a30,1.1));const dl=new THREE.DirectionalLight(0xfff2dd,1.1);dl.position.set(120,200,160);sc.add(dl);
+const cam=new THREE.PerspectiveCamera(32,2,1,3000);cam.position.set(0,95,430);cam.lookAt(0,88,0);
+const L=new THREE.FBXLoader();const load=u=>new Promise(r=>L.load(u,r));
+const keys=['frogman','sailor_it','officer_it','sailor_uk','officer_uk','officer_white'];let mixers=[];
+(async()=>{const bot=await load('anim/xbot.fbx');const idle=(await load('anim/seated_idle.fbx')).animations[0];const talk=(await load('anim/talking.fbx')).animations[0];
+ keys.forEach((k,i)=>{const o=THREE.SkeletonUtils?null:null;const m=THREE.SkeletonUtils.clone(bot);
+  m.position.x=(i-2.5)*70;sc.add(m);dressBot(m,k);const mx=new THREE.AnimationMixer(m);mx.clipAction(i%2?talk:talk).play();mixers.push(mx);});
+ window.READY=true;})();
+window.fr=t=>{mixers.forEach(m=>m.setTime(t));R.render(sc,cam);return R.domElement.toDataURL('image/jpeg',.9).slice(23);};
+</script></body></html>
