@@ -20,18 +20,29 @@ function slc(){const g=new THREE.Group();const c=M(0x8d9b82);
  const tail=add(new THREE.Mesh(new THREE.ConeGeometry(.55,1.6,14),M(0x5f6d59)),[-3.3,0,0]);tail.rotation.z=Math.PI/2;g.add(tail);
  g.add(add(new THREE.Mesh(new THREE.BoxGeometry(.7,.06,2),M(0x5f6d59)),[-3.6,0,0]));g.add(add(new THREE.Mesh(new THREE.BoxGeometry(.7,1.6,.06),M(0x5f6d59)),[-3.6,0,0]));
  const prop=new THREE.Mesh(new THREE.BoxGeometry(.05,1.0,.12),M(0x33392f));prop.position.set(-4.2,0,0);g.add(prop);g.userData.prop=prop;
- for(const x of[.2,-1.4]){g.add(add(new THREE.Mesh(new THREE.BoxGeometry(.9,.16,.55),M(0x3f4a3c)),[x,.6,0]));}
+ for(const x of[.2,-1.4]){g.add(add(new THREE.Mesh(new THREE.BoxGeometry(.8,.12,.42),M(0x3f4a3c)),[x,.64,0]));g.add(add(new THREE.Mesh(new THREE.BoxGeometry(.16,.2,.16),M(0x3f4a3c)),[x,.55,0]));}
  g.add(add(new THREE.Mesh(new THREE.BoxGeometry(.08,.8,.9),M(0x5f6d59)),[1.7,.85,0]));
  const lamp=new THREE.SpotLight(0xdffff6,3,40,.45,.5);lamp.position.set(4.3,0,0);lamp.target.position.set(20,-.4,0);g.add(lamp);g.add(lamp.target);return g;}
 const S=slc();sc.add(S);
 const wake=[];for(let i=0;i<30;i++){const m=new THREE.Mesh(new THREE.CircleGeometry(1,10),new THREE.MeshBasicMaterial({color:0xdff3f8,transparent:true,opacity:.5,depthWrite:false}));m.rotation.x=-Math.PI/2;sc.add(m);wake.push(m);}
 const bub=[];for(let i=0;i<40;i++){const m=new THREE.Mesh(new THREE.SphereGeometry(.06,6,5),new THREE.MeshBasicMaterial({color:0xdff3f8,transparent:true,opacity:.6}));sc.add(m);bub.push(m);}
-const L=new THREE.FBXLoader();const load=u=>new Promise(r=>L.load(u,r));const riders=[],mix=[];
+
+const _q1=new THREE.Quaternion(),_q2=new THREE.Quaternion(),_v1=new THREE.Vector3(),_v2=new THREE.Vector3();
+function aim(bone,child,dirLocalS){ // gira o osso para que bone->child aponte na direção (no referencial do Maiale S)
+  S.updateMatrixWorld(true);const a=bone.getWorldPosition(_v1.clone()),b=child.getWorldPosition(_v2.clone());const cur=b.sub(a).normalize();
+  const tgt=dirLocalS.clone().normalize().applyQuaternion(S.getWorldQuaternion(new THREE.Quaternion()));
+  const q=new THREE.Quaternion().setFromUnitVectors(cur,tgt);const bw=bone.getWorldQuaternion(new THREE.Quaternion());const pw=bone.parent.getWorldQuaternion(new THREE.Quaternion());
+  bone.quaternion.copy(pw.invert().multiply(q).multiply(bw));bone.updateMatrixWorld(true);}
+function hang(m){const g=n=>m.getObjectByName('mixamorig'+n);
+  for(const [side,zs] of [['Left',1],['Right',-1]]){aim(g(side+'UpLeg'),g(side+'Leg'),new THREE.Vector3(.1,-.5,1*zs));aim(g(side+'Leg'),g(side+'Foot'),new THREE.Vector3(.12,-1,.6*zs));aim(g(side+'Foot'),g(side+'ToeBase'),new THREE.Vector3(1,-.25,0));}}
+const ZOFF=0.0;const L=new THREE.FBXLoader();const load=u=>new Promise(r=>L.load(u,r));const riders=[],mix=[];
 (async()=>{const bot=await load('anim/xbot.fbx');const idle=(await load('anim/seated_idle.fbx')).animations[0];
- [[.4,0],[-1.2,1.3]].forEach(([x,ph],i)=>{const m=THREE.SkeletonUtils.clone(bot);dressBot(m,'frogman');m.scale.setScalar(.0105);m.rotation.y=Math.PI/2;m.position.set(x,-.05,0);S.add(m);const mx=new THREE.AnimationMixer(m);const a=mx.clipAction(idle);a.play();mix.push([mx,ph]);});
+ [[.2,0],[-1.4,1.3]].forEach(([x,ph],i)=>{const m=THREE.SkeletonUtils.clone(bot);dressBot(m,'frogman');m.scale.setScalar(.0105);m.rotation.y=Math.PI/2;m.position.set(0,0,0);S.add(m);const mx=new THREE.AnimationMixer(m);const a=mx.clipAction(idle);a.play();mx.setTime(0);S.updateMatrixWorld(true);
+  const hips=m.getObjectByName('mixamorigHips');const hp=hips.getWorldPosition(new THREE.Vector3());S.worldToLocal(hp);
+  const SEAT=.70; m.position.set(x-hp.x,SEAT-hp.y-.04,ZOFF-hp.z);mix.push([mx,ph,m]);});
  window.READY=true;})();
 const X0=-30,V=1.6;
-window.frame=function(t){waves(t);const sx=X0+V*t;S.position.set(sx,-.42+wv(sx,0,t)*.6,0);S.rotation.z=Math.sin(t*1.2)*.012;S.userData.prop.rotation.x=t*30;mix.forEach(([m,ph])=>m.setTime(t+ph));
+window.frame=function(t){waves(t);const sx=X0+V*t;S.position.set(sx,-.42+wv(sx,0,t)*.6,0);S.rotation.z=Math.sin(t*1.2)*.012;S.userData.prop.rotation.x=t*30;mix.forEach(([mx,ph,bm])=>{mx.setTime(t+ph);hang(bm);});
  wake.forEach((m,i)=>{const age=i*.12,ts=t-age;m.visible=ts>=0;const x=X0+V*ts-4.4;m.position.set(x,wv(x,0,t)+.03,Math.sin(i*1.7)*.15*age);const s=.25+age*.35;m.scale.set(s,s,s);m.material.opacity=Math.max(0,.5-age*.12);});
  bub.forEach((m,i)=>{const ph=(i*.37+t*.6)%1;m.position.set(sx-4.3-i*.05+Math.sin(i+t*3)*.15,-.45+ph*.45,Math.sin(i*2.3)*.25);m.material.opacity=.7*(1-ph);});
  const mode=P.get('cam')||'side';
