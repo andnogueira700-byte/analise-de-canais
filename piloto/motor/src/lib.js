@@ -31,16 +31,18 @@ function figure(ctx, o) {
     officer = false, hand = null, hand2 = null, hatInHand = false, idle = 0, rot = 0, alpha = 1, shadow = true, cuff = '#e8e2d2', musket = true,
     lean = 0, bow = 0, look = 0, tilt = 0, flinch = 0, tm = 0, seed = 0, hatLift = 0 } = o;
   ctx.save(); ctx.globalAlpha *= alpha; ctx.translate(x, y);
-  if (shadow) { ctx.fillStyle = 'rgba(30,40,20,.24)'; ctx.beginPath(); ctx.ellipse(0, 1, 16 * s, 4 * s, 0, 0, 7); ctx.fill(); }
+  if (shadow) { ctx.fillStyle = 'rgba(28,42,22,.16)'; ctx.beginPath(); ctx.ellipse(-16 * s, 1.5, 30 * s, 3.8 * s, -0.05, 0, 7); ctx.fill(); ctx.fillStyle = 'rgba(28,42,22,.26)'; ctx.beginPath(); ctx.ellipse(-2 * s, 1, 13 * s, 3.4 * s, 0, 0, 7); ctx.fill(); }
   ctx.rotate(rot * facing); ctx.scale(s * facing, s);
   const idl = 1 - walk;
+  const nzs = (f, k) => noise1(tm * f, seed * k + 1);
+  const amp = 0.86 + 0.26 * ((seed * 0.6180339) % 1);
   const bob = -Math.abs(Math.sin(phase)) * 2.6 * walk + Math.sin(idle) * 0.55 * idl;
-  const swayX = Math.sin(idle * 0.5 + seed) * 0.9 * idl;
+  const swayX = nzs(0.35, 1.3) * 1.6 * idl;
   const hipX = swayX, hipY = -27 + bob + flinch * 3;
   // pernas com joelho
   for (const k of [-1, 1]) {
     const ph = phase + (k > 0 ? 0 : Math.PI);
-    const a = 0.52 * Math.sin(ph) * walk + k * 0.035 * idl + (flinch ? -0.08 * flinch : 0);
+    const a = 0.52 * amp * Math.sin(ph) * walk + k * 0.035 * idl + (flinch ? -0.08 * flinch : 0);
     const b = (0.12 + 0.85 * Math.max(0, Math.sin(ph + 1.25))) * walk + 0.02;
     const hx = hipX + 2.3 * k, hy = hipY;
     const kx = hx + 13.5 * Math.sin(a), ky = hy + 13.5 * Math.cos(a);
@@ -52,7 +54,7 @@ function figure(ctx, o) {
   }
   // grupo do tronco
   ctx.save(); ctx.translate(hipX, hipY);
-  ctx.rotate(0.045 * walk + lean + bow * 0.34 - flinch * 0.16);
+  ctx.rotate(0.045 * walk + lean + bow * 0.34 - flinch * 0.16 + nzs(0.3, 3.7) * 0.03 * idl + Math.sin(phase * 2 + 0.9) * 0.012 * walk);
   const armSw = Math.sin(phase);
   // braco de tras
   { const ex = hand2 ? hand2[0] : -3 + armSw * 7 * walk - 1 * idl, ey = hand2 ? hand2[1] : -3 + 2 * Math.abs(Math.cos(phase)) * walk + 1 * idl;
@@ -69,12 +71,12 @@ function figure(ctx, o) {
   if (officer) { ctx.strokeStyle = '#c9a13f'; ctx.lineWidth = 2.6; ctx.beginPath(); ctx.moveTo(-9, -21); ctx.lineTo(9, -3); ctx.stroke(); ctx.fillStyle = '#c9a13f'; for (let i = 0; i < 3; i++) ctx.fillRect(-1, -22 + i * 8, 2.2, 2.2); }
   ctx.fillStyle = '#d8c48a'; for (let i = 0; i < 3; i++) { ctx.beginPath(); ctx.arc(0, -20 + i * 7, 0.9, 0, 7); ctx.fill(); }
   // cabeca
-  ctx.save(); ctx.translate(0, -32); ctx.rotate(tilt + look * 0.09 - bow * 0.22 - lean * 0.4 + Math.sin(phase * 2 + 0.4) * 0.035 * walk);
+  ctx.save(); ctx.translate(0, -32); ctx.rotate(tilt + look * 0.09 - bow * 0.22 - lean * 0.4 + Math.sin(phase * 2 + 0.4) * 0.035 * walk + nzs(0.45, 2.1) * 0.11 * idl);
   ctx.fillStyle = '#7d7468'; ctx.fillRect(-9.2, -4.5, 4.2, 6.5);
   ctx.fillStyle = skin; ctx.beginPath(); ctx.arc(0, 0, 6.5, 0, 7); ctx.fill();
   if (officer) { ctx.fillStyle = '#ebe6da'; ctx.beginPath(); ctx.arc(-0.6, -1.2, 7.5, Math.PI * 0.95, Math.PI * 2.1); ctx.fill(); ctx.beginPath(); ctx.arc(-6.4, 3, 3.5, 0, 7); ctx.fill(); ctx.beginPath(); ctx.arc(-6.4, 6.6, 2.7, 0, 7); ctx.fill(); }
   const blink = ((tm * 0.31 + seed * 0.173) % 1) > 0.955;
-  const ex = 3 + look * 1.5;
+  const ex = 3 + look * 1.5 + nzs(0.45, 2.1) * 0.5 * idl;
   ctx.fillStyle = '#2a2220'; ctx.strokeStyle = '#2a2220'; ctx.lineWidth = 1.2;
   if (blink) { ctx.beginPath(); ctx.moveTo(ex - 1.3, -0.3); ctx.lineTo(ex + 1.3, -0.3); ctx.stroke(); } else { ctx.beginPath(); ctx.arc(ex, -0.5, 1, 0, 7); ctx.fill(); }
   ctx.fillStyle = 'rgba(190,90,70,.35)'; ctx.beginPath(); ctx.arc(ex + 0.5, 2.6, 1.5, 0, 7); ctx.fill();
@@ -134,7 +136,7 @@ function cannon(ctx, x, y, s, facing, recoil, t) {
 }
 
 // fumaca: nuvem de circulos que cresce e some
-function smoke(ctx, x, y, age, size, seed, drift = 1) {
+function smoke(ctx, x, y, age, size, seed, drift = 1, tone = 0) {
   if (age < 0 || age > 5) return;
   const r = rng(seed);
   const a = clamp(1 - age / 5);
@@ -143,8 +145,8 @@ function smoke(ctx, x, y, age, size, seed, drift = 1) {
     const px = x + Math.cos(ang) * d + age * 14 * drift * (0.6 + r() * .8);
     const py = y + Math.sin(ang) * d * 0.7 - age * (10 + r() * 14);
     const rad = (8 + r() * 14) * size * (0.7 + age * 0.55);
-    const g = 190 + r() * 40;
-    ctx.fillStyle = `rgba(${g},${g - 4},${g - 10},${0.5 * a * a})`;
+    const g = tone ? 58 + r() * 26 : 190 + r() * 40;
+    ctx.fillStyle = `rgba(${g},${g - 4},${g - 8},${(tone ? 0.62 : 0.5) * a * a})`;
     ctx.beginPath(); ctx.arc(px, py, rad, 0, 7); ctx.fill();
   }
 }
@@ -249,7 +251,7 @@ function makeCam(t0, t1, targetFn, st) {
   const dt = 1 / 120, n = Math.ceil((t1 - t0) / dt) + 1, out = []; let tg = targetFn(t0);
   let c = { ...tg }, v = { x: 0, y: 0, z: 0 };
   for (let i = 0; i < n; i++) { const t = t0 + i * dt; tg = targetFn(t);
-    for (const k of ['x', 'y', 'z']) { const r = smoothDamp(c[k], tg[k], v[k], k === 'z' ? st * 1.15 : st, dt); c[k] = r[0]; v[k] = r[1]; }
+    for (const k of ['x', 'y', 'z']) { const r = smoothDamp(c[k], tg[k], v[k], k === 'z' ? st * 0.9 : st, dt); c[k] = r[0]; v[k] = r[1]; }
     out.push({ x: c.x, y: c.y, z: c.z }); }
   return (t) => { const f = clamp((t - t0) / dt, 0, n - 1.001), i = Math.floor(f), u = f - i; const a = out[i], b = out[i + 1]; return { x: lerp(a.x, b.x, u), y: lerp(a.y, b.y, u), z: lerp(a.z, b.z, u) }; };
 }
@@ -258,7 +260,7 @@ function makeCam(t0, t1, targetFn, st) {
 function tree(ctx, x, y, s, kind, seed, t) {
   const r = rng(seed * 13 + 5); const sway = Math.sin(t * 0.9 + seed) * 1.6 * s;
   ctx.save(); ctx.translate(x, y);
-  ctx.fillStyle = 'rgba(25,45,20,.22)'; ctx.beginPath(); ctx.ellipse(10 * s, 2, 40 * s, 7 * s, 0, 0, 7); ctx.fill();
+  ctx.fillStyle = 'rgba(25,45,20,.20)'; ctx.beginPath(); ctx.ellipse(-34 * s, 3, 74 * s, 8 * s, -0.04, 0, 7); ctx.fill();
   if (kind === 1) { // choupo
     const h = 120 * s, w = 17 * s;
     ctx.fillStyle = '#5a4630'; ctx.fillRect(-2 * s, -14 * s, 4 * s, 14 * s);
@@ -277,7 +279,7 @@ function tree(ctx, x, y, s, kind, seed, t) {
   ctx.restore();
 }
 function bush(ctx, x, y, s, seed) {
-  ctx.fillStyle = 'rgba(25,45,20,.2)'; ctx.beginPath(); ctx.ellipse(x + 6 * s, y + 2, 34 * s, 6 * s, 0, 0, 7); ctx.fill();
+  ctx.fillStyle = 'rgba(25,45,20,.2)'; ctx.beginPath(); ctx.ellipse(x - 18 * s, y + 2, 48 * s, 6 * s, 0, 0, 7); ctx.fill();
   ctx.fillStyle = '#4b6e3a'; ctx.beginPath(); ctx.ellipse(x, y - 10 * s, 30 * s, 16 * s, 0, 0, 7); ctx.ellipse(x + 20 * s, y - 6 * s, 22 * s, 13 * s, 0, 0, 7); ctx.fill();
   ctx.fillStyle = '#6a8f48'; ctx.beginPath(); ctx.ellipse(x - 5 * s, y - 15 * s, 20 * s, 10 * s, 0, 0, 7); ctx.fill();
   ctx.fillStyle = '#93b062'; ctx.beginPath(); ctx.ellipse(x - 10 * s, y - 19 * s, 9 * s, 5 * s, 0, 0, 7); ctx.fill();
@@ -307,16 +309,16 @@ function birds(ctx, t, x0, y0, n, seed, col = '#3b3a3a') {
   for (let i = 0; i < n; i++) { const ox = r() * 90, oy = r() * 40, ph = r() * 6; const x = x0 + ox + ((t * 22 + i * 3) % 1500) - 150, y = y0 + oy + Math.sin(t * .8 + ph) * 6; const w = Math.sin(t * 8 + ph) * 4;
     ctx.beginPath(); ctx.moveTo(x - 7, y - w); ctx.quadraticCurveTo(x - 3, y - 4 - w * .3, x, y); ctx.quadraticCurveTo(x + 3, y - 4 - w * .3, x + 7, y - w); ctx.stroke(); }
 }
-function tuft(ctx, x, y, s, col) { ctx.strokeStyle = col; ctx.lineWidth = 1.8; ctx.lineCap = 'round'; ctx.beginPath(); for (const d of [-5, 0, 5]) { ctx.moveTo(x + d * s * .5, y); ctx.quadraticCurveTo(x + d * s, y - 7 * s, x + d * s * 1.5, y - 12 * s); } ctx.stroke(); }
+function tuft(ctx, x, y, s, col, t = 0) { const sw = Math.sin(t * 1.7 + x * .021) * 2.2 * s; ctx.strokeStyle = col; ctx.lineWidth = 1.8; ctx.lineCap = 'round'; ctx.beginPath(); for (const d of [-5, 0, 5]) { ctx.moveTo(x + d * s * .5, y); ctx.quadraticCurveTo(x + d * s + sw * .4, y - 7 * s, x + d * s * 1.5 + sw, y - 12 * s); } ctx.stroke(); }
 function flowers(ctx, x, y, s, col) { ctx.fillStyle = col; for (const [dx, dy] of [[0, 0], [5, -3], [-4, -2]]) { ctx.beginPath(); ctx.arc(x + dx * s, y + dy * s, 1.8 * s, 0, 7); ctx.fill(); } }
 
-// retalhos de campos sobre uma colina
+// retalhos de campos sobre uma colina (faixas fixas no mundo: nao mudam com a camera)
+const _fieldCache = {};
 function fields(ctx, camX, f, contour, depth, seed, pal) {
-  const r = rng(seed); let wx = -300 + Math.floor((camX * f) / 150) * 150 - 150;
-  for (let i = 0; i < 40; i++) { const w = 90 + r() * 130; const x0 = wx - camX * f, x1 = x0 + w; wx += w;
-    if (x1 < -50 || x0 > W + 50) continue;
-    const c = pal[Math.floor(r() * pal.length)]; const sk = (r() - .5) * 80;
-    ctx.fillStyle = c; ctx.beginPath(); ctx.moveTo(x0, contour(wx - w) + 0.5); ctx.lineTo(x1, contour(wx) + 0.5); ctx.lineTo(x1 + sk, contour(wx) + depth); ctx.lineTo(x0 + sk, contour(wx - w) + depth); ctx.closePath(); ctx.fill();
+  let S = _fieldCache[seed];
+  if (!S) { const r = rng(seed); S = []; let wx = -2400; for (let i = 0; i < 140; i++) { const w = 90 + r() * 130; S.push({ x0: wx, x1: wx + w, c: Math.floor(r() * pal.length), sk: (r() - .5) * 80 }); wx += w; } _fieldCache[seed] = S; }
+  for (const s of S) { const x0 = s.x0 - camX * f, x1 = s.x1 - camX * f; if (x1 < -140 || x0 > W + 140) continue;
+    ctx.fillStyle = pal[s.c % pal.length]; ctx.beginPath(); ctx.moveTo(x0, contour(s.x0) + 0.5); ctx.lineTo(x1, contour(s.x1) + 0.5); ctx.lineTo(x1 + s.sk, contour(s.x1) + depth); ctx.lineTo(x0 + s.sk, contour(s.x0) + depth); ctx.closePath(); ctx.fill();
     ctx.strokeStyle = 'rgba(60,80,40,.35)'; ctx.lineWidth = 1.6; ctx.stroke(); }
 }
 
@@ -343,11 +345,62 @@ function backdrop(ctx, camX, t, hz, seed, o = {}) {
   ctx.fillStyle = '#a8b4b6'; for (let i = 0; i < 6; i++) { const x = ((i * 410 + 120) - camX * .15) % 2400; if (x > -40 && x < W + 40) { ctx.fillRect(x, h1(x + camX * .15) - 10, 14, 10); ctx.beginPath(); ctx.moveTo(x - 2, h1(x + camX * .15) - 10); ctx.lineTo(x + 7, h1(x + camX * .15) - 17); ctx.lineTo(x + 16, h1(x + camX * .15) - 10); ctx.fill(); } }
   drawHill(h2, .3, '#9fb69a');
   fields(ctx, camX, .3, (wx) => h2(wx), 56, seed + 3, ['#aab36a', '#8fae60', '#b8b46e', '#7fa35c', '#a09a58']);
-  { const rt = rng(seed + 9); for (let i = 0; i < 16; i++) { const wx = i * 170 + rt() * 90, x = wx - camX * .3; if (x > -60 && x < W + 60) tree(ctx, x, h2(wx) + 6, .32 + rt() * .12, i % 3 === 0 ? 1 : 0, i, t); } }
+  for (const o of bdTrees(seed).t2) { const x = o.wx - camX * .3; if (x > -70 && x < W + 70) tree(ctx, x, h2(o.wx) + 6, o.s, o.k, o.id, t); }
   drawHill(h3, .5, '#82a46f');
   fields(ctx, camX, .5, (wx) => h3(wx), 70, seed + 5, ['#9db462', '#86a95c', '#b4b26a', '#76985a']);
   const wmx = (o.windmillX != null ? o.windmillX : 860) - camX * .5; windmill(ctx, wmx, h3(wmx + camX * .5) + 8, .62, t);
-  { const rt = rng(seed + 21); for (let i = 0; i < 14; i++) { const wx = i * 190 + rt() * 120, x = wx - camX * .5; if (x > -60 && x < W + 60) tree(ctx, x, h3(wx) + 12, .5 + rt() * .2, i % 4 === 1 ? 1 : 0, i + 20, t); } }
+  for (const o of bdTrees(seed).t3) { const x = o.wx - camX * .5; if (x > -90 && x < W + 90) tree(ctx, x, h3(o.wx) + 12, o.s, o.k, o.id, t); }
   // nevoa de profundidade
   const hz2 = ctx.createLinearGradient(0, hz - 90, 0, hz + 30); hz2.addColorStop(0, 'rgba(240,228,196,0)'); hz2.addColorStop(1, 'rgba(240,228,196,.35)'); ctx.fillStyle = hz2; ctx.fillRect(0, hz - 90, W, 120);
+}
+
+
+// ===== dados fixos, ruido suave, seguidor generico, craters =====
+const _bdC = {};
+function bdTrees(seed) {
+  if (_bdC[seed]) return _bdC[seed];
+  const a = rng(seed + 9), b = rng(seed + 21), t2 = [], t3 = [];
+  for (let i = 0; i < 36; i++) t2.push({ wx: -700 + i * 170 + a() * 90, s: .32 + a() * .12, k: i % 3 === 0 ? 1 : 0, id: i });
+  for (let i = 0; i < 34; i++) t3.push({ wx: -700 + i * 190 + b() * 120, s: .5 + b() * .2, k: i % 4 === 1 ? 1 : 0, id: i + 20 });
+  return (_bdC[seed] = { t2, t3 });
+}
+const hash = (a, b = 0, c = 0) => { const s = Math.sin(a * 127.1 + b * 311.7 + c * 74.7) * 43758.5453; return s - Math.floor(s); };
+function noise1(x, k) { return (Math.sin(x * 0.9 + k * 1.7) + 0.6 * Math.sin(x * 1.7 + k * 3.1) + 0.3 * Math.sin(x * 3.3 + k * 5.3)) / 1.9; }
+function makeFollow(t0, t1, fn, st) {
+  const dt = 1 / 120, n = Math.ceil((t1 - t0) / dt) + 1, out = [], c = { ...fn(t0) }, v = {}; for (const k in c) v[k] = 0;
+  for (let i = 0; i < n; i++) { const t = t0 + i * dt, tg = fn(t), o = {};
+    for (const k in c) { const r = smoothDamp(c[k], tg[k], v[k], st[k] || st.default, dt); c[k] = r[0]; v[k] = r[1]; o[k] = c[k]; } out.push(o); }
+  return (t) => { const f = clamp((t - t0) / dt, 0, n - 1.001), i = Math.floor(f), u = f - i, a = out[i], b = out[i + 1], r = {}; for (const k in a) r[k] = lerp(a[k], b[k], u); return r; };
+}
+function cloudShadows(ctx, t, y, ry) {
+  for (let i = 0; i < 3; i++) { const x = ((i * 620 + t * 18) % 2300) - 480; ctx.save(); ctx.translate(x, y + (i % 2) * 40); ctx.scale(1, ry / 300);
+    const g = ctx.createRadialGradient(0, 0, 10, 0, 0, 300); g.addColorStop(0, 'rgba(20,40,34,.17)'); g.addColorStop(1, 'rgba(20,40,34,0)'); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, 0, 300, 0, 7); ctx.fill(); ctx.restore(); }
+}
+// cratera no chao (permanente) + terra espalhada
+function craterGround(ctx, x, y, sc, u) {
+  if (u < 0) return; const k = easeOut(u / 0.22), rx = 38 * sc * k;
+  ctx.save(); ctx.translate(x, y); ctx.scale(1, 0.27);
+  const g = ctx.createRadialGradient(0, 0, 2, 0, 0, rx * 1.7); g.addColorStop(0, 'rgba(26,17,10,.9)'); g.addColorStop(.5, 'rgba(48,33,20,.7)'); g.addColorStop(1, 'rgba(48,33,20,0)');
+  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, 0, rx * 1.7, 0, 7); ctx.fill();
+  ctx.fillStyle = '#7d5f3d'; ctx.beginPath(); ctx.arc(0, 0, rx, 0, 7); ctx.fill();
+  ctx.fillStyle = '#a07e52'; ctx.beginPath(); ctx.arc(0, -rx * .08, rx * .92, Math.PI, 2 * Math.PI); ctx.fill();
+  ctx.fillStyle = '#1e140c'; ctx.beginPath(); ctx.arc(0, rx * .04, rx * .66, 0, 7); ctx.fill();
+  ctx.fillStyle = '#35241a'; ctx.beginPath(); ctx.arc(0, rx * .14, rx * .5, 0, 7); ctx.fill();
+  ctx.restore();
+  const r = rng(Math.floor(x) + 3);
+  for (let i = 0; i < 11; i++) { const a = r() * 6.28, sp = (30 + r() * 60) * sc, fl = 0.55 + r() * .3; const uu = clamp(u / fl); const px = x + Math.cos(a) * sp * easeOut(uu), py = y + Math.sin(a) * sp * .22 * easeOut(uu) - Math.sin(Math.PI * uu) * 70 * sc * (0.5 + r() * .5);
+    ctx.fillStyle = r() > .5 ? '#6f5233' : '#4f3a25'; ctx.beginPath(); ctx.ellipse(px, py, (2 + r() * 3) * sc, (1.6 + r() * 2) * sc, 0, 0, 7); ctx.fill(); }
+}
+function craterFire(ctx, x, y, sc, u, t, seed) {
+  if (u < 0.05) return; const f = u < 3.6 ? 1 : clamp(1 - (u - 3.6) / 3.4); if (f <= 0) return;
+  const gl = ctx.createRadialGradient(x, y - 14 * sc, 2, x, y - 14 * sc, 95 * sc); gl.addColorStop(0, `rgba(255,170,70,${.4 * f})`); gl.addColorStop(1, 'rgba(255,140,40,0)'); ctx.fillStyle = gl; ctx.beginPath(); ctx.arc(x, y - 14 * sc, 95 * sc, 0, 7); ctx.fill();
+  const ramp = easeOut(u / 0.4);
+  for (let k = 0; k < 5; k++) {
+    const fx = x + (k - 2) * 10 * sc, base = y - 1, edge = 1 - Math.abs(k - 2) * 0.2;
+    const h = (24 + 14 * Math.abs(Math.sin(t * 9 + k * 1.7 + seed)) + 6 * Math.sin(t * 17 + k * 2.3)) * sc * f * edge * ramp, sw = Math.sin(t * 5 + k * 2 + seed) * 4 * sc;
+    for (const [col, wk, hk] of [['#d63d1b', 1, 1], ['#f48c1e', .72, .78], ['#ffe27c', .42, .5]]) {
+      const w = 9 * sc * wk; ctx.fillStyle = col; ctx.beginPath(); ctx.moveTo(fx - w, base); ctx.quadraticCurveTo(fx - w * .5 + sw * .2, base - h * hk * .6, fx + sw, base - h * hk); ctx.quadraticCurveTo(fx + w * .5 + sw * .2, base - h * hk * .6, fx + w, base); ctx.closePath(); ctx.fill(); }
+  }
+  for (let k = 0; k < 7; k++) { const ag = (u * .8 + k * .143 + hash(seed, k)) % 1; ctx.fillStyle = `rgba(255,${150 + 70 * ag | 0},60,${(1 - ag) * f})`; ctx.beginPath(); ctx.arc(x + Math.sin(k * 3.1 + ag * 5) * 20 * sc, y - 6 * sc - ag * 78 * sc, 1.7 * sc, 0, 7); ctx.fill(); }
+  if (u < 5.2) { smoke(ctx, x, y - 12 * sc, u, 1.45 * sc / 1.2, 700 + seed, .35, 1); smoke(ctx, x + 6, y - 12 * sc, Math.max(0, u - .6), 1.2 * sc / 1.2, 740 + seed, .5, 1); }
 }

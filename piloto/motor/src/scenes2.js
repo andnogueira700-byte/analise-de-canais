@@ -45,6 +45,12 @@ function drawMap(ctx, t) {
 }
 
 // ===== ENCOSTA =====
+// vegetacao e detalhes FIXOS no mundo (gerados uma vez; a camera so enquadra)
+const ST_TREES = (() => { const rb = rng(4242), o = []; for (let i = 0; i < 90; i++) o.push({ bx: -400 + i * 78 + rb() * 60, kind: rb(), oy: rb() * 70, s1: rb(), s2: rb(), i }); return o; })();
+const ST_PATCH = (() => { const rp = rng(808), o = []; for (let i = 0; i < 70; i++) o.push({ x: -300 + i * 120 + rp() * 100, y: 50 + rp() * 220, dk: rp() > .5, rx: 60 + rp() * 70, ry: 12 + rp() * 12 }); return o; })();
+const ST_TUFT = (() => { const rf = rng(606), o = []; for (let i = 0; i < 130; i++) o.push({ x: -300 + i * 62 + rf() * 50, y: 70 + rf() * 230, fl: rf() < .25, s: .9 + rf() * .9, c: rf() > .5, f2: rf() > .5 }); return o; })();
+const ST_TUFT3 = (() => { const rf = rng(303), o = []; for (let i = 0; i < 80; i++) o.push({ x: -250 + rf() * 1600, y: 650 + rf() * 130, fl: rf() < .22, s: 1.1 + rf() * 1.1, c: rf() > .5, f2: rf() > .5 }); return o; })();
+const ST_PATCH3 = (() => { const rp = rng(909), o = []; for (let i = 0; i < 40; i++) o.push({ x: -100 + rp() * 1500, y: 450 + rp() * 330, dk: rp() > .5, rx: 60 + rp() * 90, ry: 10 + rp() * 14 }); return o; })();
 function G(x) { return 628 - 215 * sm(150, 3000, x) + Math.sin(x * 0.0045) * 7 + Math.sin(x * 0.013) * 2.5; }
 const MOUNDS = [{ x0: 2410, x1: 3010, h: 30 }, { x0: 2225, x1: 2320, h: 18 }];
 function moundH(x) { let h = 0; for (const m of MOUNDS) { if (x > m.x0 && x < m.x1) { const e = Math.min((x - m.x0) / 28, (m.x1 - x) / 28, 1); h = Math.max(h, m.h * clamp(e)); } } return h; }
@@ -63,7 +69,7 @@ function lanePos(lane, i, t) {
   return xf(t) - i * SP - LANES[lane].off + SP * ra * easeIO((t - CLOSE0) / (CLOSE1 - CLOSE0));
 }
 // camera da encosta: segue a historia (coluna -> topo -> canhoes -> coluna de perto -> chegada)
-const cam2 = makeCam(tS2 - 1, tS3 + 1.2, (t) => {
+const cam2 = makeCam(tS2 - 1, tS3 + 1.2, (tq) => { const t = tq + 0.6;
   const follow = (z) => ({ x: xf(t) - 760, y: 0, z });
   if (t < T[4] + 0.4) return follow(1.12);
   if (t < T[7] - 0.7) return { x: 2020, y: 0, z: 1.0 };
@@ -73,7 +79,7 @@ const cam2 = makeCam(tS2 - 1, tS3 + 1.2, (t) => {
   if (t < E[12] + 0.3) return { x: xf(t) - 640, y: 0, z: 1.32 };
   if (t < T[13] + 1.0) return follow(1.2);
   return follow(1.0);
-}, 0.8);
+}, 1.0);
 
 function drawSlope(ctx, t) {
   const c = cam2(t), camX = c.x, camY = camY2(camX), zoom = c.z;
@@ -88,16 +94,16 @@ function drawSlope(ctx, t) {
   const gr = ctx.createLinearGradient(0, 300, 0, H + 300); gr.addColorStop(0, '#a3bb63'); gr.addColorStop(.3, '#84a053'); gr.addColorStop(1, '#4e6c38'); ctx.fillStyle = gr; ctx.fill();
   ctx.strokeStyle = 'rgba(222,232,150,.6)'; ctx.lineWidth = 3; ctx.beginPath(); for (let x = camX - 80; x <= camX + W + 80; x += 16) (x === camX - 80 ? ctx.moveTo(x, G(x)) : ctx.lineTo(x, G(x))); ctx.stroke();
   for (let k = 1; k < 8; k++) { ctx.strokeStyle = `rgba(60,86,40,${.09 + k * .018})`; ctx.lineWidth = 2 + k * .4; ctx.beginPath(); for (let x = camX - 80; x <= camX + W + 80; x += 24) { const y = G(x) + k * 28 + k * k * 1.6; (x === camX - 80 ? ctx.moveTo(x, y) : ctx.lineTo(x, y)); } ctx.stroke(); }
-  { const rp = rng(808); for (let i = 0; i < 40; i++) { const x = i * 120 + rp() * 100, y = G(x) + 50 + rp() * 220; if (x < camX - 150 || x > camX + W + 150) continue; ctx.fillStyle = rp() > .5 ? 'rgba(190,210,110,.16)' : 'rgba(60,90,40,.14)'; ctx.beginPath(); ctx.ellipse(x, y, 60 + rp() * 70, 12 + rp() * 12, 0, 0, 7); ctx.fill(); } }
+  for (const p of ST_PATCH) { if (p.x < camX - 150 || p.x > camX + W + 150) continue; const y = G(p.x) + p.y; ctx.fillStyle = p.dk ? 'rgba(60,90,40,.14)' : 'rgba(190,210,110,.16)'; ctx.beginPath(); ctx.ellipse(p.x, y, p.rx, p.ry, 0, 0, 7); ctx.fill(); }
   // trilha
   ctx.beginPath(); for (let x = camX - 80; x <= camX + W + 80 && x < 2400; x += 20) { const y = G(x) - 8 - 6 * Math.sin(x * .02); (x === camX - 80 ? ctx.moveTo(x, y) : ctx.lineTo(x, y)); }
   for (let x = Math.min(camX + W + 80, 2400); x >= camX - 80; x -= 20) ctx.lineTo(x, G(x) + 58 + 4 * Math.sin(x * .017));
   ctx.closePath(); ctx.fillStyle = 'rgba(180,150,100,.6)'; ctx.fill();
   ctx.strokeStyle = 'rgba(150,120,76,.5)'; ctx.lineWidth = 2; ctx.beginPath(); for (let x = camX - 80; x <= camX + W + 80 && x < 2400; x += 20) { const y = G(x) + 18; (x === camX - 80 ? ctx.moveTo(x, y) : ctx.lineTo(x, y)); } ctx.stroke();
+  for (const h of HITS) { const x = lanePosFixed(h); craterGround(ctx, x, G(x) + LANES[h.lane].dy + 2, LANES[h.lane].sc, t - h.t); }
   // arvores / arbustos atras da trilha
-  { const rb = rng(4242); for (let i = 0; i < 70; i++) { const bx = i * 78 + rb() * 60, kind = rb(), by = G(bx) - 22 - rb() * 70;
-      if (bx < camX - 120 || bx > camX + W + 120) continue;
-      if (kind < .22) tree(ctx, bx, by, .85 + rb() * .5, 0, i, t); else if (kind < .34) tree(ctx, bx, by, .9 + rb() * .4, 1, i, t); else bush(ctx, bx, by + 20, .8 + rb() * .7, i); } }
+  for (const o of ST_TREES) { if (o.bx < camX - 140 || o.bx > camX + W + 140) continue; const by = G(o.bx) - 22 - o.oy;
+    if (o.kind < .22) tree(ctx, o.bx, by, .85 + o.s1 * .5, 0, o.i, t); else if (o.kind < .34) tree(ctx, o.bx, by, .9 + o.s1 * .4, 1, o.i, t); else bush(ctx, o.bx, by + 20, .8 + o.s2 * .7, o.i); }
   // vila
   const vil = [[3085, 54, 40, '#e8dcc0', '#b3553a'], [3150, 46, 52, '#efe3c8', '#9c4a34'], [3330, 58, 44, '#e5d8ba', '#a4533a'], [3410, 50, 56, '#eadfc2', '#b3553a'], [3485, 60, 42, '#e8dcc0', '#8f4531'], [3560, 52, 50, '#efe3c8', '#b3553a']];
   for (const v of vil) house(ctx, v[0], G(v[0] + 20) + 4, v[1], v[2], v[3], v[4]);
@@ -130,20 +136,22 @@ function drawSlope(ctx, t) {
     const hh = hitOf(o.lane, o.i); if (hh && t >= hh.t) continue;
     const x = lanePos(o.lane, o.i, t); if (x < camX - 90 || x > camX + W + 90) continue;
     const L = LANES[o.lane], y = G(x) + L.dy, isOff = o.lane === 1 && o.i === 0, isFlag = o.lane === 0 && o.i === 1;
-    const rateV = 1 + ((o.i * 7 + o.lane * 3) % 5) * 0.012;
-    const phase = cyc(xf(t), L.sc) * rateV + o.i * 1.15 + o.lane * 1.9;
-    let fl = 0; for (const h of HITS) { const dx = Math.abs(lanePosFixed(h) - x); if (t > h.t && dx < 210) fl = Math.max(fl, Math.exp(-(t - h.t) * 3.2) * (1 - dx / 210)); }
-    let look = 0; for (const h of HITS) if (t > h.t && t < h.t + 2.2 && h.lane === o.lane && o.i === h.i + 1) look = -1;
+    const rateV = 0.97 + 0.06 * hash(o.i, o.lane, 2);
+    const phase = cyc(xf(t), L.sc) * rateV + hash(o.i, o.lane, 1) * 6.28;
+    let fl = 0; for (const h of HITS) { const dx = Math.abs(lanePosFixed(h) - x); if (t > h.t && dx < 210) fl = Math.max(fl, Math.min(1, (t - h.t) / .09) * Math.exp(-(t - h.t) * 3.0) * (1 - dx / 210)); }
+    let look = 0; for (const h of HITS) if (h.lane === o.lane && o.i === h.i + 1) look = Math.min(look, -sm(h.t, h.t + .35, t) * (1 - sm(h.t + 1.8, h.t + 2.6, t)));
     figure(ctx, { x, y, s: L.sc, coat: '#b5302a', facing: 1, phase, walk: 1, skin: SKIN[(o.i * 3 + o.lane) % 4], officer: isOff, musket: !isFlag, hand: isFlag ? [8, -5] : null, tm: t, seed: o.i * 5 + o.lane, flinch: fl, look });
     if (isFlag) flag(ctx, x + 8 * L.sc, y - 2, L.sc, t, '#c24a3d', '#f1e8d0');
     const age = ((((phase % Math.PI) + Math.PI) % Math.PI)) / (2 * Math.PI * VS2 / (STRIDE * L.sc)); if (age < 0.42) dust.push([x - 8 * L.sc, y, age, L.sc]);
   }
   for (const d of dust) { const a = 1 - d[2] / 0.42; ctx.fillStyle = `rgba(190,165,120,${0.38 * a})`; ctx.beginPath(); ctx.ellipse(d[0] - d[2] * 14, d[1] - 2 - d[2] * 10, (5 + d[2] * 26) * d[3] * .6, (3 + d[2] * 12) * d[3] * .6, 0, 0, 7); ctx.fill(); }
+  for (const h of HITS) { const x = lanePosFixed(h); craterFire(ctx, x, G(x) + LANES[h.lane].dy + 2, LANES[h.lane].sc, t - h.t, t, h.i * 7 + h.lane); }
   for (const h of HITS) { const x = lanePosFixed(h), L = LANES[h.lane], ty = G(x) + L.dy - 36; const u = (t - (h.t - FLIGHT)) / FLIGHT;
     if (u > 0 && u < 1) { const bx = lerp(x + 1100, x, u), by = lerp(ty - 380, ty, u * u); ctx.strokeStyle = 'rgba(40,40,44,.45)'; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(bx, by); ctx.lineTo(bx + 42, by - 14); ctx.stroke(); ctx.fillStyle = '#1b1d20'; ctx.beginPath(); ctx.arc(bx, by, 7, 0, 7); ctx.fill(); }
     smoke(ctx, x, ty + 26, t - h.t, 1.15, 500 + h.i * 31 + h.lane, 0.6); }
-  { const rf = rng(606); for (let i = 0; i < 90; i++) { const x = i * 62 + rf() * 50, y = G(x) + 70 + rf() * 230; if (x < camX - 40 || x > camX + W + 40) continue; if (rf() > .25) tuft(ctx, x, y, .9 + rf() * .9, rf() > .5 ? '#3f5f2c' : '#6f8f45'); else flowers(ctx, x, y, 1.2, rf() > .5 ? '#f2d34e' : '#f7f4ea'); } }
+  for (const o of ST_TUFT) { if (o.x < camX - 50 || o.x > camX + W + 50) continue; const y = G(o.x) + o.y; if (!o.fl) tuft(ctx, o.x, y, o.s, o.c ? '#3f5f2c' : '#6f8f45', t); else flowers(ctx, o.x, y, 1.2, o.f2 ? '#f2d34e' : '#f7f4ea'); }
   ctx.restore();
+  cloudShadows(ctx, t, 560, 70);
   const sx = (x) => x - camX, Gs = (x) => G(x) - camY;
   tag(ctx, t, E[5] - 0.5, E[6] + 1.3, 'FONTENOY', sx(3250) - 60, Gs(3250) - 290, sx(3250), Gs(3250) - 175);
   tag(ctx, t, T[7] - 0.05, E[7] + 0.9, 'CANNONI', sx(2475) - 70, cy2.A - camY - 190, sx(2475), cy2.A - camY - 50);
@@ -162,7 +170,7 @@ function approachOff(t) { const p = clamp((t - tS3) / (tStop - tS3)); return -AP
 const bez = (a, b, c, u) => [(1 - u) * (1 - u) * a[0] + 2 * (1 - u) * u * b[0] + u * u * c[0], (1 - u) * (1 - u) * a[1] + 2 * (1 - u) * u * b[1] + u * u * c[1]];
 const eBack = (u) => { u = clamp(u); const c1 = 1.4, c3 = c1 + 1; return 1 + c3 * Math.pow(u - 1, 3) + c1 * Math.pow(u - 1, 2); };
 const REST = [7, -4];
-function officerB(t) {   // oficial britanico
+function officerBraw(t) {   // oficial britanico
   const mv = clamp((t - T[17]) / 1.9), ex = easeIO(mv);
   const o = { x: 590 + approachOff(t) + 74 * ex, walk: 0, lean: 0, bow: 0, hand: null, hand2: null, hatIn: false, hatRot: 0, look: 0, hatLift: 0 };
   o.walk = t < tStop ? 1 - sm(tStop - 0.3, tStop, t) : (mv > 0 && mv < 1 ? 1 : 0);
@@ -177,7 +185,7 @@ function officerB(t) {   // oficial britanico
   }
   return o;
 }
-function officerF(t) {   // oficial frances
+function officerFraw(t) {   // oficial frances
   const mv = clamp((t - T[21] - 0.1) / 1.7), ex = easeIO(mv);
   const o = { x: 868 - 54 * ex, walk: mv > 0 && mv < 1 ? 1 : 0, lean: mv > 0 && mv < 1 ? 0.05 * Math.sin(Math.PI * mv) : 0, bow: 0, hand: null, hand2: null, hatIn: false, hatRot: 0, look: 0, hatLift: 0 };
   const th = t - (T[21] + 2.25);
@@ -192,21 +200,28 @@ function officerF(t) {   // oficial frances
     const nod = (t > TL.words.non && t < TL.words.nemmeno + .4) ? Math.max(0, Math.sin((t - TL.words.non) * 5)) * 0.14 : 0; o.bow = Math.max(o.bow, nod); }
   return o;
 }
+const _stF = { default: 0.13, bow: 0.24, lean: 0.2, look: 0.4 };
+const _chan = (o) => ({ hx: o.hand ? o.hand[0] : REST[0], hy: o.hand ? o.hand[1] : REST[1], gx: o.hand2 ? o.hand2[0] : -3, gy: o.hand2 ? o.hand2[1] : -3, bow: o.bow, lean: o.lean, look: o.look });
+const _smB = makeFollow(tS3 - 1.5, TOTAL + 0.5, (t) => _chan(officerBraw(t)), _stF);
+const _smF = makeFollow(tS3 - 1.5, TOTAL + 0.5, (t) => _chan(officerFraw(t)), _stF);
+const _mixO = (o, s) => ({ ...o, hand: [s.hx, s.hy], hand2: [s.gx, s.gy], bow: s.bow, lean: s.lean, look: s.look });
+function officerB(t) { return _mixO(officerBraw(t), _smB(t)); }
+function officerF(t) { return _mixO(officerFraw(t), _smF(t)); }
 // camera do confronto: segue a historia
-const cam3 = makeCam(tS3 - 1.0, TOTAL + 0.5, (t) => {
+const cam3 = makeCam(tS3 - 1.0, TOTAL + 0.5, (tq) => { const t = tq + 0.8;
   const b = officerB(t), f = officerF(t);
   if (t < tStop - 1.8) return { x: 600, y: 395, z: 1.0 };
   if (t < tStop) return { x: 590, y: 470, z: 1.18 };
   if (t < T[15]) return { x: 575, y: 520, z: 1.32 };
   if (t < T[16]) return { x: 380, y: 545, z: 1.55 };
   if (t < T[17] - 0.1) return { x: 640, y: 480, z: 1.12 };
-  if (t < T[18] - 0.25) return { x: b.x + 45, y: 545, z: 1.5 };
-  if (t < T[19] + 0.1) return { x: b.x + 22, y: 560, z: 2.5 };
+  if (t < T[18] - 0.9) return { x: b.x + 45, y: 545, z: 1.5 };
+  if (t < T[19] + 0.5) return { x: b.x + 22, y: 560, z: 2.45 };
   if (t < T[20]) return { x: b.x + 70, y: 556, z: 2.15 };
-  if (t < T[21] + 0.25) return { x: 840, y: 565, z: 1.7 };
+  if (t < T[21] - 0.1) return { x: 840, y: 565, z: 1.7 };
   if (t < TL.words.Signori - 0.35) return { x: f.x - 12, y: 560, z: 2.35 };
   return { x: (b.x + f.x) / 2, y: 558, z: 2.0 + 0.15 * sm(TL.words.Signori, TL.voiceEnd, t) };
-}, 0.55);
+}, 0.8);
 
 function drawFace(ctx, t) {
   const c = cam3(t);
@@ -219,8 +234,9 @@ function drawFace(ctx, t) {
   for (let x = 0; x < 1300; x += 90) bush(ctx, x + 20, 414, .7, x);
   const gr = ctx.createLinearGradient(0, 408, 0, 800); gr.addColorStop(0, '#a2b95f'); gr.addColorStop(.35, '#80a050'); gr.addColorStop(1, '#4d6b36'); ctx.fillStyle = gr; ctx.fillRect(-500, 408, W + 1000, 600);
   ctx.strokeStyle = 'rgba(60,86,40,.15)'; ctx.lineWidth = 2; for (let k = 0; k < 10; k++) { ctx.beginPath(); ctx.moveTo(-500, 440 + k * 24 + k * k * 1.2); ctx.lineTo(W + 500, 440 + k * 24 + k * k * 1.2); ctx.stroke(); }
-  { const rp = rng(909); for (let i = 0; i < 40; i++) { ctx.fillStyle = rp() > .5 ? 'rgba(200,215,120,.14)' : 'rgba(60,90,40,.13)'; ctx.beginPath(); ctx.ellipse(-100 + rp() * 1500, 450 + rp() * 330, 60 + rp() * 90, 10 + rp() * 14, 0, 0, 7); ctx.fill(); } }
+  for (const p of ST_PATCH3) { ctx.fillStyle = p.dk ? 'rgba(60,90,40,.13)' : 'rgba(200,215,120,.14)'; ctx.beginPath(); ctx.ellipse(p.x, p.y, p.rx, p.ry, 0, 0, 7); ctx.fill(); }
   ctx.fillStyle = 'rgba(165,135,92,.25)'; ctx.beginPath(); ctx.ellipse(715, 600, 360, 58, 0, 0, 7); ctx.fill();
+  cloudShadows(ctx, t, 560, 90);
   FAR.forEach((ft, n) => smoke(ctx, 1160 - n * 40, 440, t - ft, 1.4, 900 + n, -1));
   // soldados
   const cp = sm(T[15], E[15] + 0.5, t), ao = approachOff(t);
@@ -231,7 +247,7 @@ function drawFace(ctx, t) {
     const bx = 520 - i * 58 - l * 15 + ao + jx * (1 - cp);
     const shuffling = (t > T[15] - 0.1 && t < E[15] + 0.7) ? Math.sin(Math.PI * clamp((t - T[15] + .1 + i * .035) / 1.0)) : 0;
     const mv = t < tStop ? 1 - sm(tStop - 0.35, tStop, t) : shuffling * 0.55;
-    const ph = (t < tStop + 0.01) ? cyc(bx, sc) + i * 1.1 + l * 1.7 : (shuffling > 0 ? t * 7 + i : cyc(520 - i * 58 - l * 15, sc) + i * 1.1 + l * 1.7);
+    const ph = (t < tStop + 0.01) ? cyc(bx, sc) + hash(i, l, 1) * 6.28 : (shuffling > 0 ? t * 6.2 + hash(i, l, 4) * 6.28 : cyc(520 - i * 58 - l * 15, sc) + hash(i, l, 1) * 6.28);
     items.push({ y: yb, k: 'b', x: bx, yy: yb + jy * (1 - cp), sc, ph, mv, j: i, r: l, bearer: l === 1 && i === 1, lean: -0.07 * stopKick });
     items.push({ y: yb, k: 'f', x: 870 + i * 58 + l * 15 + (rj() - .5) * 6, yy: yb, sc, j: i, r: l, ph: 0, mv: 0, bearer: l === 1 && i === 1 });
   }
@@ -239,23 +255,23 @@ function drawFace(ctx, t) {
   const bo = officerB(t), fo = officerF(t);
   let drewB = false;
   const drawOff = () => { if (drewB) return; drewB = true;
-    figure(ctx, { x: bo.x, y: 642, s: 1.8, coat: '#a82a2a', facing: 1, officer: true, phase: cyc(bo.x, 1.8) + .4, walk: bo.walk, hand: bo.hand, hand2: bo.hand2, hatInHand: bo.hatIn, hatRot: bo.hatRot, hatLift: bo.hatLift, lean: bo.lean, bow: bo.bow, look: bo.look, skin: SKIN[2], idle: t * 2, tm: t, seed: 3, musket: false }); };
+    figure(ctx, { x: bo.x, y: 642, s: 1.8, coat: '#a82a2a', facing: 1, officer: true, phase: cyc(bo.x, 1.8) + .4, walk: bo.walk, hand: [bo.hand[0] - Math.sin(cyc(bo.x, 1.8) + .4) * 6 * bo.walk, bo.hand[1]], hand2: [bo.hand2[0] + Math.sin(cyc(bo.x, 1.8) + .4) * 7 * bo.walk, bo.hand2[1]], hatInHand: bo.hatIn, hatRot: bo.hatRot, hatLift: bo.hatLift, lean: bo.lean, bow: bo.bow, look: bo.look, skin: SKIN[2], idle: t * 2, tm: t, seed: 3, musket: false }); };
   const dust = [];
   for (const it of items) {
     if (it.y > 640 && !drewB) drawOff();
     if (it.k === 'b') {
-      figure(ctx, { x: it.x, y: it.yy, s: it.sc, coat: '#b5302a', facing: 1, phase: it.ph, walk: it.mv, skin: SKIN[(it.j + it.r) % 4], idle: t * 2 + it.j, tm: t, seed: it.j * 3 + it.r, lean: it.lean, look: t > T[17] ? 1 : 0, musket: !it.bearer, hand: it.bearer ? [8, -5] : null });
+      figure(ctx, { x: it.x, y: it.yy, s: it.sc, coat: '#b5302a', facing: 1, phase: it.ph, walk: it.mv, skin: SKIN[(it.j + it.r) % 4], idle: t * 2 + it.j, tm: t, seed: it.j * 3 + it.r, lean: it.lean, look: sm(T[17], T[17] + .8, t), musket: !it.bearer, hand: it.bearer ? [8, -5] : null });
       if (it.bearer) flag(ctx, it.x + 8 * it.sc, it.yy - 2, it.sc, t, '#c24a3d', '#f1e8d0');
       if (it.mv > 0.5 && t < tStop) { const age = ((((it.ph % Math.PI) + Math.PI) % Math.PI)) / (Math.PI * 2 * 60 / (STRIDE * it.sc)); if (age < .4) dust.push([it.x - 8 * it.sc, it.yy, age, it.sc]); }
     } else {
-      figure(ctx, { x: it.x, y: it.yy, s: it.sc, coat: '#3a5c9e', facing: -1, phase: 0, walk: 0, skin: SKIN[(it.j * 2 + it.r) % 4], idle: t * 2.1 + it.j + it.r, tm: t, seed: it.j * 7 + it.r + 2, hatTrim: '#f4f0e6', look: t > T[18] ? 1 : .4, musket: !it.bearer, hand: it.bearer ? [8, -5] : null });
+      figure(ctx, { x: it.x, y: it.yy, s: it.sc, coat: '#3a5c9e', facing: -1, phase: 0, walk: 0, skin: SKIN[(it.j * 2 + it.r) % 4], idle: t * 2.1 + it.j + it.r, tm: t, seed: it.j * 7 + it.r + 2, hatTrim: '#f4f0e6', look: lerp(.4, 1, sm(T[18], T[18] + .8, t)), musket: !it.bearer, hand: it.bearer ? [8, -5] : null });
       if (it.bearer) flag(ctx, it.x - 8 * it.sc, it.yy - 2, it.sc, t, '#f3efe2', '#c9a13f');
     }
   }
   drawOff();
-  figure(ctx, { x: fo.x, y: 642, s: 1.8, coat: '#2f4f93', facing: -1, officer: true, phase: cyc(868 - fo.x, 1.8), walk: fo.walk, hand: fo.hand, hand2: fo.hand2, hatInHand: fo.hatIn, hatRot: fo.hatRot, hatLift: fo.hatLift, lean: fo.lean, bow: fo.bow, look: fo.look, skin: SKIN[3], idle: t * 2, tm: t, seed: 9, musket: false });
+  figure(ctx, { x: fo.x, y: 642, s: 1.8, coat: '#2f4f93', facing: -1, officer: true, phase: cyc(868 - fo.x, 1.8), walk: fo.walk, hand: [fo.hand[0] - Math.sin(cyc(868 - fo.x, 1.8)) * 6 * fo.walk, fo.hand[1]], hand2: [fo.hand2[0] + Math.sin(cyc(868 - fo.x, 1.8)) * 7 * fo.walk, fo.hand2[1]], hatInHand: fo.hatIn, hatRot: fo.hatRot, hatLift: fo.hatLift, lean: fo.lean, bow: fo.bow, look: fo.look, skin: SKIN[3], idle: t * 2, tm: t, seed: 9, musket: false });
   for (const d of dust) { const a = 1 - d[2] / 0.4; ctx.fillStyle = `rgba(190,165,120,${0.4 * a})`; ctx.beginPath(); ctx.ellipse(d[0] - d[2] * 14, d[1] - 2 - d[2] * 10, (5 + d[2] * 26) * d[3] * .6, (3 + d[2] * 12) * d[3] * .6, 0, 0, 7); ctx.fill(); }
-  { const rf = rng(303); for (let i = 0; i < 70; i++) { const x = -150 + rf() * 1500, y = 650 + rf() * 130; if (rf() > .22) tuft(ctx, x, y, 1.1 + rf() * 1.1, rf() > .5 ? '#3f5f2c' : '#6f8f45'); else flowers(ctx, x, y, 1.4, rf() > .5 ? '#f2d34e' : '#f7f4ea'); } }
+  for (const o of ST_TUFT3) { if (!o.fl) tuft(ctx, o.x, o.y, o.s, o.c ? '#3f5f2c' : '#6f8f45', t); else flowers(ctx, o.x, o.y, 1.4, o.f2 ? '#f2d34e' : '#f7f4ea'); }
   for (let i = 0; i < 5; i++) { const x = ((i * 380 + t * 14) % 1900) - 300; const g = ctx.createRadialGradient(x, 560, 10, x, 560, 260); g.addColorStop(0, 'rgba(235,228,214,.18)'); g.addColorStop(1, 'rgba(235,228,214,0)'); ctx.fillStyle = g; ctx.fillRect(x - 280, 380, 560, 340); }
   ctx.restore();
 }
