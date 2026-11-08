@@ -99,7 +99,7 @@ export const Video: React.FC = () => {
         {whip > 0 && <div style={{position: 'absolute', inset: 0, background: `linear-gradient(90deg, rgba(242,242,242,0) 30%, rgba(242,242,242,${whip * 0.22}) 100%)`}} />}
         {flash > 0 && <div style={{position: 'absolute', inset: 0, background: C.white, opacity: flash * 0.55}} />}
       </SceneCtx.Provider>
-      <Audio src={staticFile('narrazione.mp3')} />
+      <Audio src={staticFile('mix_full.wav')} />
     </AbsoluteFill>
   );
 };
