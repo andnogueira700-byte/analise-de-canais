@@ -2,6 +2,7 @@ import React from 'react';
 import {spring, useVideoConfig} from 'remotion';
 import {Animal, AnimalKind, Bird, Boat, Bus, Condo, ContainerShip, Crane, Gommone, Human, IceBlock, Owl, Panda} from './animals';
 import {Arrow, Label, Layer, Rings, SpeedLines, Tag, useScene} from './fx';
+import {MediaCard, FullBleedMedia} from './media';
 import {C, FONT, H, W, clamp, ease, easeOut} from './theme';
 
 export type Item = {
@@ -128,12 +129,38 @@ export const ItemView: React.FC<{it: Item}> = ({it}) => {
     }
     case 'arrow': {
       const p = easeOut((lt - at) / (it.dur ?? 0.5));
-      return <Layer depth={dep}><Arrow x1={x} y1={y} x2={it.x2 ?? x + 300} y2={it.y2 ?? y} p={p} width={it.size ?? 14} /></Layer>;
+      return <Layer depth={dep}><Arrow x1={x} y1={y} x2={it.x2 ?? x + 300} y2={it.y2 ?? y} p={p} width={it.size ?? 14} color={it.color ?? C.red} /></Layer>;
     }
     case 'rings': return <Layer depth={dep}><Rings x={x} y={y} t={lt} max={w} n={it.n ?? 4} color={it.color ?? C.gray2} /></Layer>;
     case 'speed': return <SpeedLines t={lt} dir={it.dir ?? 1} y0={it.y ?? 200} y1={it.y2 ?? 900} op={it.op ?? 0.35} />;
     case 'tag':
       return <Tag name={it.name ?? ''} measure={it.measure} x={x} y={y} appear={at} anchor={it.ax !== undefined ? [it.ax, it.ay!] : undefined} />;
+    case 'ruler': {
+      const ppm = it.size ?? 116, nm = it.n ?? 10;
+      const p = easeOut((lt - at) / 0.8);
+      return (
+        <Layer depth={dep}>
+          <svg width={W} height={H} style={{position: 'absolute', inset: 0}}>
+            <line x1={x} y1={y} x2={x + nm * ppm * p} y2={y} stroke={C.white} strokeWidth={4} />
+            {Array.from({length: nm + 1}).map((_, i) => (i * ppm <= nm * ppm * p) && (
+              <g key={i}><line x1={x + i * ppm} y1={y - 12} x2={x + i * ppm} y2={y + 12} stroke={C.white} strokeWidth={3} /><text x={x + i * ppm} y={y + 46} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={26} fill={C.gray2}>{i}</text></g>
+            ))}
+            <text x={x + nm * ppm + 30} y={y + 46} fontFamily={FONT} fontWeight={800} fontSize={26} fill={C.gray2}>M</text>
+          </svg>
+        </Layer>
+      );
+    }
+    case 'bracket': {
+      const p = easeOut((lt - at) / 0.7);
+      return (
+        <Layer depth={dep}>
+          <svg width={W} height={H} style={{position: 'absolute', inset: 0}}>
+            <path d={`M ${x} ${y + 14} V ${y} H ${x + w * p} V ${y + 14}`} fill="none" stroke={C.red} strokeWidth={8} />
+          </svg>
+          <div style={{position: 'absolute', left: x, width: w, top: y - 74, textAlign: 'center', opacity: p}}><Label size={46} color={C.red}>{it.text}</Label></div>
+        </Layer>
+      );
+    }
     case 'water': return <Wave y={y} t={gt} />;
     case 'disc': {
       const p = easeOut((lt - at) / 0.5);
@@ -166,7 +193,9 @@ export const ItemView: React.FC<{it: Item}> = ({it}) => {
         </svg>
       );
     }
-    case 'label': return <Layer depth={dep}><div style={{position: 'absolute', left: x, top: y, transform: 'translate(-50%,-50%)'}}><PopIn at={at} out={it.out}><Label size={it.size ?? 40} color={it.color ?? C.gray2} weight={it.n ?? 800}>{it.text}</Label></PopIn></div></Layer>;
+    case 'label': return <Layer depth={dep}><PopIn at={at} out={it.out}><div style={{position: 'absolute', left: x - 800, width: 1600, top: y, transform: 'translateY(-50%)', display: 'flex', justifyContent: 'center'}}><Label size={it.size ?? 40} color={it.color ?? C.gray2} weight={it.n ?? 800}>{it.text}</Label></div></PopIn></Layer>;
+    case 'media': return <MediaCard src={it.color} desc={it.text ?? ''} label={it.name} x={x} y={y} w={w} rot={it.rot ?? -2} d={it.d ?? 1.2} at={at} out={it.out} />;
+    case 'full': return <FullBleedMedia src={it.color} desc={it.text ?? ''} />;
     default: return null;
   }
 };

@@ -148,7 +148,7 @@ export const PopText: React.FC<{text: string; lt: number; dur: number; pos?: 't'
 
 // pequenos utilitários de tipografia para componentes
 export const Label: React.FC<{children: React.ReactNode; size?: number; color?: string; weight?: number; style?: React.CSSProperties}> = ({children, size = 40, color = C.white, weight = 800, style}) => (
-  <div style={{fontFamily: FONT, fontWeight: weight, fontSize: size, color, textTransform: 'uppercase', letterSpacing: 1.5, WebkitTextStroke: '4px #000', paintOrder: 'stroke fill', ...style}}>{children}</div>
+  <div style={{fontFamily: FONT, fontWeight: weight, fontSize: size, color, textTransform: 'uppercase', letterSpacing: 1.5, whiteSpace: 'nowrap', WebkitTextStroke: '4px #000', paintOrder: 'stroke fill', ...style}}>{children}</div>
 );
 
 /** Etiqueta de animal: caixa preta, borda cinza, nome branco e medida vermelha */

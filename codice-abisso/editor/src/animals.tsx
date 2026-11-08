@@ -445,7 +445,7 @@ export const Gommone: React.FC<{w?: number}> = ({w = 360}) => (
   </svg>
 );
 
-export const Bird: React.FC<{w?: number; t: number; phase?: number}> = ({w = 70, t, phase = 0}) => {
+export const Bird: React.FC<{w?: number; t: number; phase?: number}> = ({w = 130, t, phase = 0}) => {
   const f = Math.sin((t * 3 + phase) * Math.PI * 2);
   return (
     <svg width={w} height={w * 0.5} viewBox="0 0 100 50" style={{overflow: 'visible'}}>
