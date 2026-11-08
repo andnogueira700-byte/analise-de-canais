@@ -6,12 +6,14 @@ from PIL import Image,ImageDraw,ImageFilter,ImageOps
 from alib import *
 FPS=25
 CUTS=json.load(open('/tmp/alex/cuts.json'))
-DUR=1088.4
+REM=json.load(open('/tmp/alex/rem.json'))
+def warp(t): return t-sum(min(max(t-a,0),b-a) for a,b in REM)
+DUR=round(float(subprocess.run(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0','/tmp/alex/narr.wav'],capture_output=True,text=True).stdout),2)
 def tm(s):
     if isinstance(s,str): m,x=s.split(':'); s=int(m)*60+float(x)
-    return s+2.0+sum(d for c,d in CUTS if c<=s)
+    return warp(s)+2.0+sum(d for c,d in CUTS if c<=s)
 BLK=[]; _acc=0.0
-for c,d in CUTS: g=c+2.0+_acc; BLK.append((g,g+d)); _acc+=d
+for c,d in CUTS: g=warp(c)+2.0+_acc; BLK.append((g,g+d)); _acc+=d
 WORDS=json.load(open('/tmp/alex/words.json'))
 def _norm(x): return re.sub(r'[^a-zàèéìòù0-9]','',x.lower())
 def wt(word,near,end=False):
@@ -56,7 +58,7 @@ def finalize():
 SRC={'sneak':'/tmp/alex/vid/sneak.mp4','hood':'/tmp/alex/vid/hood.mp4','ytc':'/tmp/alex/vid/ytcomm.mp4'}
 CROP={'sneak':'crop=iw*0.94:ih*0.94','hood':'crop=iw*0.80:ih*0.80:iw*0.10:ih*0.04','ytc':'crop=iw*0.70:ih*0.86:iw*0.15:ih*0.05'}
 PW,PH=2112,1188
-GRADE="format=gray,format=rgb24,colorchannelmixer=rr=1.07:gg=1.0:bb=0.86,eq=contrast=1.10:gamma=0.97,noise=alls=7:allf=t,vignette=angle=PI/4.5"
+GRADE="format=gray,format=rgb24,normalize=blackpt=black:whitept=white:smoothing=40:independence=0:strength=0.75,colorchannelmixer=rr=1.06:gg=1.0:bb=0.88,eq=contrast=1.06:gamma=1.18:brightness=0.02,noise=alls=5:allf=t,vignette=angle=PI/8"
 def clip_path(s): return f"/tmp/alex/build/clips/c{s['id']:03d}.mp4"
 def prep_clip(s):
     p=clip_path(s)
@@ -88,7 +90,7 @@ def photo_big(path,mode='era',bg=False):
     k=(path,mode,bg)
     if k in _pcache: return _pcache[k]
     im=Image.open(path).convert('RGB')
-    if mode=='era': im=era(im,grain=5,vig=0.35)
+    if mode=='era': im=era(im,grain=4,vig=0.12)
     if bg:   # foto pequena/retrato: fundo desfocado + foto inteira no centro
         big=cover(im,PW,PH).filter(ImageFilter.GaussianBlur(28)); big=Image.eval(big,lambda v:int(v*0.45))
         f=im.copy(); f.thumbnail((int(PW*0.62),int(PH*0.80))); fr=Image.new('RGB',(f.width+16,f.height+16),ACC); fr.paste(f,(8,8))
@@ -100,7 +102,7 @@ def photo_big(path,mode='era',bg=False):
     k=(path,mode,bg)
     if k in _pcache: return _pcache[k]
     im=Image.open(path).convert('RGB')
-    if mode=='era': im=era(im,grain=5,vig=0.35)
+    if mode=='era': im=era(im,grain=4,vig=0.12)
     if bg:
         big=cover(im,PW,PH).filter(ImageFilter.GaussianBlur(28)); big=Image.eval(big,lambda v:int(v*0.4))
         f=im.copy(); f.thumbnail((int(PW*0.6),int(PH*0.78)))
@@ -140,7 +142,7 @@ def render_chunk(f0,f1,out):
             base=s['fn'](tl,u)
         else: base=Image.new('RGB',(W,H))
         im=base.convert('RGBA') if base.mode!='RGBA' else base
-        if s.get('dim'): im.alpha_composite(Image.new('RGBA',(W,H),(4,10,20,int(255*s['dim']))))
+        if s.get('dim'): im.alpha_composite(Image.new('RGBA',(W,H),(4,10,20,int(255*s['dim']*0.7))))
         for L in LAYERS:
             a=lalpha(L,t)
             if a>0: L['fn'](im,t-L['t0'],a)

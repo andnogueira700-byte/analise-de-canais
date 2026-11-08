@@ -76,8 +76,8 @@ def geomap(keys,elems,hl=None,drift=0.05,dur=10):
                 step=1 if len(r)<400 or s>60 else 2
                 d.polygon(list(zip(xs[::step].tolist(),ys[::step].tolist())),fill=hl.get(nm,LAND),outline=BORD)
         P=lambda lo,la:((lo-lon)*k+W/2,(lat-la)*s+H/2)
-        for e in elems:
-            if tl<e['t'] or tl>e.get('e',1e9): continue
+        for e in sorted(elems,key=lambda e:{'country':0,'arrow':1,'icon':2,'x':3,'ring':3,'flash':3,'pin':4}.get(e['k'],2)):
+            if e['k'] not in ('pin',) and (tl<e['t'] or tl>e.get('e',1e9)): continue
             q=tl-e['t']
             if e['k']=='arrow':
                 pts=[P(*PLACES.get(p,p)) if isinstance(p,str) else P(*p) for p in e['pts']]; uu=ease(q/e.get('d',2.0))
@@ -86,9 +86,32 @@ def geomap(keys,elems,hl=None,drift=0.05,dur=10):
                     uv=uu if uu<1 or not e.get('loop') else ((q-e.get('d',2.0))/e['loop'])%1
                     (x,y),ang=along(pts,uv); put(im,e['ship'],x,y-14+3*math.sin(tl*2),e.get('sw',110),flip=math.cos(ang)<0)
             elif e['k']=='pin':
-                x,y=P(*PLACES.get(e['p'],e.get('ll',(0,0)))); a=min(1,q/0.25)
+                x,y=P(*PLACES.get(e['p'],e.get('ll',(0,0)))); foc=0<=q<3.2
+                if foc:
+                    k1=min(1,q/0.35); fade=1 if q<2.6 else max(0,(3.2-q)/0.6)
+                    gl=Image.new('RGBA',(W,H),(0,0,0,0)); gd=ImageDraw.Draw(gl)
+                    for r,a in ((150,40),(110,60),(75,90),(45,120)): rr=r*k1; gd.ellipse([x-rr,y-rr,x+rr,y+rr],fill=ACC+(int(a*fade),))
+                    im.alpha_composite(gl.filter(ImageFilter.GaussianBlur(18)))
+                    R=58*k1; n=28; rot=q*0.9
+                    for i in range(n):
+                        if i%2: continue
+                        a0=rot+2*math.pi*i/n; a1=rot+2*math.pi*(i+1)/n
+                        d.arc([x-R,y-R,x+R,y+R],math.degrees(a0),math.degrees(a1),fill=ACC+(int(255*fade),),width=5)
                 d.ellipse([x-12,y-12,x+12,y+12],fill=e.get('c',ACC),outline=BG,width=4)
-                chip(im,x+(24 if e.get('side','r')=='r' else -24),y-22,e.get('lab',e['p']),sz=e.get('sz',24),anchor='l' if e.get('side','r')=='r' else 'r',bg=WHITE,fg=BG,pad=(12,7),al=a)
+                sz=e.get('sz',24)+(6 if foc and q<2.6 else 0)
+                chip(im,x+(26 if e.get('side','r')=='r' else -26),y-24,e.get('lab',e['p']),sz=sz,anchor='l' if e.get('side','r')=='r' else 'r',bg=ACC if (foc and q<2.6) else WHITE,fg=BG,pad=(12,7))
+            elif e['k']=='country':
+                k1=ease(min(1,q/0.7)) if q>=0 else 0
+                if k1<=0: continue
+                lay=Image.new('RGBA',(W,H),(0,0,0,0)); ld=ImageDraw.Draw(lay)
+                for r in ALLC.get(e['name'],[]):
+                    xs=(r[:,0]-lon)*k+W/2; ys=(lat-r[:,1])*s+H/2
+                    if xs.max()<-50 or xs.min()>W+50 or ys.max()<-50 or ys.min()>H+50: continue
+                    pts=list(zip(xs.tolist(),ys.tolist())); hgt=12*k1
+                    ld.polygon([(px+5,py+7) for px,py in pts],fill=(0,0,0,int(120*k1)))
+                    ld.polygon(pts,fill=(150,100,10,int(150*k1)))
+                    ld.polygon([(px,py-hgt) for px,py in pts],fill=ACC+(int(105*k1),),outline=(255,215,120,int(255*k1)),width=4)
+                im.alpha_composite(lay); d=ImageDraw.Draw(im)
             elif e['k']=='icon':
                 x,y=P(*PLACES.get(e['p'],e.get('ll',(0,0)))) if 'p' in e else P(*e['ll']); put(im,e['name'],x+e.get('dx',0),y+e.get('dy',0)+3*math.sin(tl*1.7),e.get('w',120),e.get('flip',False),min(1,q/0.3))
             elif e['k']=='x':

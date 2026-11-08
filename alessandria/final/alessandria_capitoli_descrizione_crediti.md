@@ -8,21 +8,21 @@
 ## Capitoli (da incollare nella descrizione)
 ```
 0:00 Alessandria, notte del 18 dicembre 1941
-1:14 Due corazzate nel porto di Alessandria
-2:23 Il precedente: Pola, 1918
-2:45 Tesei, Toschi e la nascita del «Maiale»
-3:31 Come funziona il siluro a lenta corsa
-4:19 L'attacco tipico, passo dopo passo
-5:52 I fallimenti: Iride, Gibilterra, Malta
-7:36 Il viaggio dello Scirè e il segnale del giorno
-9:18 Sei uomini, tre bersagli
-10:08 La rete si apre
-10:28 Sagona e Queen Elizabeth
-11:19 Durand de la Penne, solo sul fondo
-12:40 Dalle 5:40 alle 6:04
-13:58 Affondate? No: ferme per mesi
-15:43 Aspettare e accodarsi: la logica
-16:42 Morgan e la medaglia d'oro
+1:13 Due corazzate nel porto di Alessandria
+2:20 Il precedente: Pola, 1918
+2:41 Tesei, Toschi e la nascita del «Maiale»
+3:26 Come funziona il siluro a lenta corsa
+4:11 L'attacco tipico, passo dopo passo
+5:42 I fallimenti: Iride, Gibilterra, Malta
+7:20 Il viaggio dello Scirè e il segnale del giorno
+8:59 Sei uomini, tre bersagli
+9:44 La rete si apre
+10:04 Sagona e Queen Elizabeth
+10:53 Durand de la Penne, solo sul fondo
+12:13 Dalle 5:40 alle 6:04
+13:28 Affondate? No: ferme per mesi
+15:11 Aspettare e accodarsi: la logica
+16:08 Morgan e la medaglia d'oro
 ```
 
 ## Descrizione (italiano)

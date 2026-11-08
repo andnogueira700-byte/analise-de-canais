@@ -20,7 +20,7 @@ def cover(im,w=W,h=H,z=1.0,cx=0.5,cy=0.5):
     x=int((nw-w)*cx); y=int((nh-h)*cy); return im.crop((x,y,x+w,y+h))
 def era(im,warm=0.22,grain=10,vig=0.55,seed=0):
     g=ImageOps.grayscale(im.convert('RGB')); g=ImageOps.autocontrast(g,cutoff=1)
-    a=np.asarray(g).astype(np.float32)/255.
+    a=(np.asarray(g).astype(np.float32)/255.)**0.88
     r=a*(1+warm*0.35); gg=a*(1+warm*0.12); b=a*(1-warm*0.25)
     out=np.stack([r,gg,b],-1)
     h,w=a.shape; yy,xx=np.mgrid[0:h,0:w]; dd=((xx-w/2)/(w/2))**2+((yy-h/2)/(h/2))**2; out*=(1-vig*np.clip(dd-0.25,0,1)*0.8)[...,None]
