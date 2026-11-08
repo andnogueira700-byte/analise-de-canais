@@ -20,11 +20,12 @@ def diver(x,z,m,k,sk):
     for y in (-0.2,0.2):
         cyl((x+0.25,y,z+0.1),0.09,0.6,m,(0,R(80),0),10)        # thighs
         cyl((x+0.3,y,z+0.5),0.07,0.5,m,(0,R(60),0),10)         # arms
-def slc(parts=False,riders=True):
+def slc(parts=False,riders=True,only=None):
     gr=mat((0.20,0.24,0.22),0.55,0.3); dk=mat((0.08,0.09,0.09),0.6,0.4); br=mat((0.55,0.42,0.2),0.4,0.8)
-    cH=mat((0.85,0.25,0.18),0.5,0.2) if parts else gr      # testa (warhead)
-    cB=mat((0.95,0.70,0.15),0.5,0.2) if parts else gr      # batterie/posti
-    cM=mat((0.25,0.55,0.85),0.5,0.2) if parts else gr      # motore
+    on=lambda n:parts or only==n
+    cH=mat((0.85,0.25,0.18),0.5,0.2) if on('h') else gr      # testa (warhead)
+    cB=mat((0.95,0.70,0.15),0.5,0.2) if on('b') else gr      # batterie/posti
+    cM=mat((0.25,0.55,0.85),0.5,0.2) if on('m') else gr      # motore
     r=0.27
     # warhead (x 2.0..3.65) with rounded nose
     cyl((2.75,0,0),r,1.5,cH,(0,R(90),0),32); sph((3.5,0,0),r,cH,(1.0,1,1))
@@ -79,3 +80,12 @@ if what in('all','net'):
             for j in range(6): box((x+1.5,0,-0.4-j*0.6),(3.0,0.03,0.03),n)
     for i in range(25): box(((i-12)*1.0,0,-1.8),(0.03,0.03,3.2),n)
     cam((0,-30,7),(0,0,-0.8),50,(1000,520),30); render('net')
+
+for o in ('n','h','b','m'):
+    if what in('all','hl'):
+        base(); slc(riders=False,only=o); cam((0.5,-12,3),(0,0,0),50,(1600,560),8.2); render('slc_hl_'+o)
+if what in('all','medal'):
+    base(); g=mat((0.95,0.72,0.2),0.25,1.0); r=mat((0.15,0.3,0.7),0.5)
+    cyl((0,0,0),1.0,0.12,g,(R(90),0,0),64); cyl((0,-0.07,0),0.75,0.03,mat((0.85,0.62,0.15),0.35,1.0),(R(90),0,0),64)
+    box((0,0,1.55),(0.9,0.06,1.1),r); box((0,-0.01,1.55),(0.3,0.07,1.1),mat((0.9,0.9,0.9),0.5)); 
+    cam((0,-8,0.6),(0,0,0.55),50,(700,900),3.6); render('medal')

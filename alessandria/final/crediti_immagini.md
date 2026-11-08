@@ -1,0 +1,28 @@
+# Crediti immagini — Alessandria 1941
+
+- borghese: Borghese.jpg — https://commons.wikimedia.org/wiki/File:Borghese.jpg
+- borghese40: Junio_Valerio_Borghese_anni_40.jpg — https://it.wikipedia.org/wiki/File:Junio_Valerio_Borghese_anni_40.jpg
+- borghese_cc: Julio_Valerio_Borghese_da_capitano_di_corvetta.jpg — https://it.wikipedia.org/wiki/File:Julio_Valerio_Borghese_da_capitano_di_corvetta.jpg
+- dlp3: Durand_de_la_Penne3.jpg — https://commons.wikimedia.org/wiki/File:Durand_de_la_Penne3.jpg
+- dlp_palombaro: Durand_de_la_Penne_palombaro.jpg — https://it.wikipedia.org/wiki/File:Durand_de_la_Penne_palombaro.jpg
+- dlp_vi: Luigi_Durand_de_la_Penne_(VI).jpg — https://commons.wikimedia.org/wiki/File:Luigi_Durand_de_la_Penne_%28VI%29.jpg
+- iride: Sommergibile_Iride.jpg — https://it.wikipedia.org/wiki/File:Sommergibile_Iride.jpg
+- jervis: Jervis_NH.JPG — https://commons.wikimedia.org/wiki/File:Jervis_NH.JPG
+- maiale_gosport: Maiale_at_gosport.jpg — https://commons.wikimedia.org/wiki/File:Maiale_at_gosport.jpg
+- marceglia: Antonio_Marceglia.jpg — https://it.wikipedia.org/wiki/File:Antonio_Marceglia.jpg
+- martellotta: Vincenzo_Martellotta_Impresa_di_Alessandria.jpg — https://it.wikipedia.org/wiki/File:Vincenzo_Martellotta_Impresa_di_Alessandria.jpg
+- mas_logo: Logodcima.jpg — https://commons.wikimedia.org/wiki/File:Logodcima.jpg
+- qe_a9256: British_Warships_of_the_Second_World_War_A9256.jpg — https://commons.wikimedia.org/wiki/File:British_Warships_of_the_Second_World_War_A9256.jpg
+- qe_guns: HMS_Queen_Elizabeth_forward_guns_Gallipoli_1915_AWM_G00224.jpeg — https://commons.wikimedia.org/wiki/File:HMS_Queen_Elizabeth_forward_guns_Gallipoli_1915_AWM_G00224.jpeg
+- rossetti: RaffaeleRossetti1.jpg — https://commons.wikimedia.org/wiki/File:RaffaeleRossetti1.jpg
+- schergat: Spartaco_Schergat_Impresa_di_Alessandria.jpg — https://it.wikipedia.org/wiki/File:Spartaco_Schergat_Impresa_di_Alessandria.jpg
+- scire: Scrè.jpg — https://it.wikipedia.org/wiki/File:Scr%C3%A8.jpg
+- scire_en: 35c0kmw_-_scire.jpg — https://commons.wikimedia.org/wiki/File:35c0kmw_-_scire.jpg
+- scire_incursori: Scire_incursori.jpg — https://it.wikipedia.org/wiki/File:Scire_incursori.jpg
+- tesei: Teseo_Tesei.jpg — https://commons.wikimedia.org/wiki/File:Teseo_Tesei.jpg
+- tesei_ten: Ten._Genio_Navale_Teseo_Tesei.jpg — https://it.wikipedia.org/wiki/File:Ten._Genio_Navale_Teseo_Tesei.jpg
+- valiant: HMS_Valiant_(1914).jpg — https://commons.wikimedia.org/wiki/File:HMS_Valiant_%281914%29.jpg
+- viribus: Vu1912.JPG — https://commons.wikimedia.org/wiki/File:Vu1912.JPG
+- alex1911, alexharbor: Library of Congress (pubblico dominio) — https://www.loc.gov/item/2004672939/ , https://www.loc.gov/item/2019705897/
+- Evening Star, 8/1/1942 p.16: Library of Congress, Chronicling America — https://www.loc.gov/resource/sn83045462/1942-01-08/ed-1/?sp=16
+- yt_bandiere: miniatura del canale Logica di Guerra — https://www.youtube.com/watch?v=amMScr5MFD0
