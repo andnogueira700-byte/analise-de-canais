@@ -45,7 +45,7 @@ Musica: brani del canale (Flow Music); «Investigative Underscore», «Corporate
 
 #SecondaGuerraMondiale #DecimaMAS #StoriaMilitare
 
-## Tag (campo "Tag" do YouTube — 494 caracteres)
+## Tag (campo "Tag" do YouTube — 456 caracteres, limite 500)
 maiale siluro, siluri a lenta corsa, impresa di alessandria, decima mas, x mas, durand de la penne, siluri umani, mezzi d'assalto, regia marina, seconda guerra mondiale, storia militare, alessandria 1941, hms valiant, queen elizabeth corazzata, sommergibile scirè, junio valerio borghese, teseo tesei, uomini gamma, marina italiana ww2, incursori italiani, marinai italiani, logica di guerra, documentario seconda guerra mondiale, storia navale, ww2 italia
 
 ## Dicas de SEO
