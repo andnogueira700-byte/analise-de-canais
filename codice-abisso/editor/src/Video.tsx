@@ -42,7 +42,7 @@ const OpenScene: React.FC<{desc: string}> = ({desc}) => {
         ]} />
       </Camera>
       <div style={{position: 'absolute', left: x, top: y, width: w, height: h, overflow: 'hidden', border: `${lerp(0, 3, k)}px solid ${C.white}`, boxShadow: k > 0 ? '0 22px 50px rgba(0,0,0,.8)' : 'none', transform: `rotate(${3 * k}deg)`}}>
-        <MediaFill desc={desc} zoom={1 + 0.05 * lt} />
+        <MediaFill kind="video" desc={desc} zoom={1} />
       </div>
       {k > 0.8 && <div style={{position: 'absolute', left: 1130, top: 610, fontFamily: 'Montserrat', fontWeight: 800, fontSize: 34, letterSpacing: 3, color: C.white, background: C.bg, border: `2px solid ${C.gray1}`, padding: '6px 18px'}}>ORCA IN CACCIA</div>}
     </>
@@ -82,7 +82,7 @@ export const Video: React.FC = () => {
   const whip = tr === 'whip' ? clamp(1 - lt / 0.28) : 0;
   const flash = tr === 'flash' ? clamp(1 - lt / 0.2) : 0;
   const dip = tr === 'dip' ? clamp(1 - lt / 0.35) : 0;
-  const ctx = {lt, dur, idx, gt: t, zoom: s.k === 'items' || s.k === 'map' ? 0.08 : 0.12};
+  const ctx = {lt, dur, idx, gt: t, zoom: s.k === 'map' ? 0.03 : 0, follow: s.follow};
   const noBg = s.k === 'map' || s.k === 'open';
   return (
     <AbsoluteFill style={{background: C.bg}}>

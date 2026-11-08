@@ -24,10 +24,12 @@ export type Item = {
 const ANIMALS = ['orca', 'sperm', 'humpback', 'pilot', 'shark', 'seal', 'blue', 'dolphin', 'fish', 'greywhale'];
 const RATIO: Record<string, number> = {humpback: 0.52};
 
-const PopIn: React.FC<{at: number; out?: number; children: React.ReactNode; origin?: string}> = ({at, out, children, origin = '50% 50%'}) => {
+const STATIC = ['ship', 'crane', 'ice', 'condo', 'boat'];
+const PopIn: React.FC<{at: number; out?: number; children: React.ReactNode; origin?: string; still?: boolean}> = ({at, out, children, origin = '50% 50%', still}) => {
   const {lt} = useScene();
   const {fps} = useVideoConfig();
   if (lt < at) return null;
+  if (still) return <div style={{position: 'absolute', inset: 0, opacity: Math.min(1, lt / 0.4)}}>{children}</div>;
   const sp = spring({frame: (lt - at) * fps, fps, config: {damping: 13, stiffness: 150, mass: 0.8}, durationInFrames: 16});
   const o = out !== undefined ? clamp((out - lt) / 0.2) : 1;
   if (o <= 0) return null;
@@ -75,7 +77,7 @@ export const ItemView: React.FC<{it: Item}> = ({it}) => {
 
   const place = (node: React.ReactNode, hRatio = 0.4) => (
     <Layer depth={dep}>
-      <PopIn at={at} out={it.out}>
+      <PopIn at={STATIC.includes(k) ? 0 : at} out={it.out} still={STATIC.includes(k)}>
         <div style={{position: 'absolute', left: x - w / 2, top: y - (w * hRatio) / 2, transform: `rotate(${it.rot ?? 0}deg) scale(${extraScale})`, opacity: it.op ?? 1, transformOrigin: '50% 50%'}}>{node}</div>
       </PopIn>
     </Layer>

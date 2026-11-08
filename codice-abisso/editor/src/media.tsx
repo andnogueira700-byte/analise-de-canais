@@ -14,7 +14,7 @@ const Cam: React.FC<{s: number}> = ({s}) => (
 );
 
 /** Conteúdo: mídia real (src) ou placeholder de storyboard */
-export const MediaFill: React.FC<{src?: string; desc: string; zoom?: number}> = ({src, desc, zoom = 1}) => {
+export const MediaFill: React.FC<{src?: string; desc: string; zoom?: number; kind?: 'foto' | 'video'}> = ({src, desc, zoom = 1, kind = 'foto'}) => {
   if (src) {
     const url = staticFile(`assets/${src}`);
     return isVideo(src)
@@ -27,7 +27,7 @@ export const MediaFill: React.FC<{src?: string; desc: string; zoom?: number}> = 
       <div style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 18, transform: `scale(${zoom})`}}>
         <Cam s={110} />
         <div style={{fontFamily: FONT, fontWeight: 800, fontSize: 26, letterSpacing: 2, color: C.gray2, textAlign: 'center', textTransform: 'uppercase', padding: '0 70px', lineHeight: 1.25}}>
-          VIDEO REALE: {desc}
+          {kind === 'video' ? 'VIDEO REALE' : 'FOTO REALE'}: {desc}
         </div>
       </div>
     </div>
@@ -44,12 +44,12 @@ export const MediaCard: React.FC<{src?: string; desc: string; label?: string; x:
   const o = out !== undefined ? clamp((out - lt) / 0.2) : 1;
   const h = w * 9 / 16;
   y = Math.max(y, 215 + h / 2);
-  const drift = Math.sin(lt * 0.6) * 1.2;
+  const drift = 0;
   return (
     <Layer depth={d}>
       <div style={{position: 'absolute', left: x - w / 2, top: y - h / 2, width: w, opacity: o * clamp((lt - at) / 0.12), transform: `translateY(${(1 - k) * 60}px) rotate(${rot + drift}deg) scale(${0.9 + 0.1 * k})`}}>
         <div style={{width: w, height: h, border: `3px solid ${C.white}`, boxShadow: '0 22px 50px rgba(0,0,0,0.75)', overflow: 'hidden', background: '#111'}}>
-          <MediaFill src={src} desc={desc} zoom={1 + 0.06 * clamp(lt / 6)} />
+          <MediaFill src={src} desc={desc} />
         </div>
         {label && (
           <div style={{marginTop: 14, fontFamily: FONT, fontWeight: 800, fontSize: 34, letterSpacing: 3, color: C.white, background: C.bg, border: `2px solid ${C.gray1}`, display: 'inline-block', padding: '6px 18px', textTransform: 'uppercase'}}>{label}</div>
@@ -63,7 +63,7 @@ export const FullBleedMedia: React.FC<{src?: string; desc: string}> = ({src, des
   const {lt, dur} = useScene();
   return (
     <div style={{position: 'absolute', inset: 0}}>
-      <MediaFill src={src} desc={desc} zoom={1 + 0.06 * clamp(lt / dur)} />
+      <MediaFill kind="video" src={src} desc={desc} />
       <div style={{position: 'absolute', inset: 0, background: 'linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0) 35%)'}} />
     </div>
   );

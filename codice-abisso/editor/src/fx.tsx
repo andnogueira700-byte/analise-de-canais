@@ -5,21 +5,18 @@ import {C, FONT, FPS, H, W, clamp, rnd} from './theme';
 // ---------------------------------------------------------------------------
 // Contexto de cena: tempo local, duração, câmera
 // ---------------------------------------------------------------------------
-export type SceneCtxT = {lt: number; dur: number; idx: number; gt: number; zoom?: number};
+export type SceneCtxT = {lt: number; dur: number; idx: number; gt: number; zoom?: number; follow?: number};
 export const SceneCtx = createContext<SceneCtxT>({lt: 0, dur: 4, idx: 0, gt: 0});
 export const useScene = () => useContext(SceneCtx);
 
 /** deslocamento da câmera (px) – sempre em movimento */
 export const useCam = () => {
-  const {lt, dur, idx, zoom} = useScene();
+  const {lt, dur, zoom, follow} = useScene();
   const p = clamp(lt / Math.max(dur, 0.1));
-  const dirs: [number, number][] = [[1, 0.25], [-1, -0.2], [0.6, -0.5], [-0.7, 0.45], [1, -0.1], [-1, 0.1]];
-  const [dx, dy] = dirs[idx % dirs.length];
-  const amp = 90;
   return {
-    scale: 1 + (zoom ?? 0.08) * p,
-    px: dx * amp * (p - 0.5),
-    py: dy * amp * (p - 0.5),
+    scale: 1 + (zoom ?? 0) * p,
+    px: -(follow ?? 0) * lt * 0.55,
+    py: 0,
     p,
   };
 };

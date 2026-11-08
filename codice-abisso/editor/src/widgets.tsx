@@ -9,9 +9,9 @@ import {ItemView, Item} from './shot';
 // ------------------------------ MAPA RADAR ---------------------------------
 export type MapP = {
   from: [number, number, number]; to?: [number, number, number]; // lon, lat, px/grau
-  pts?: {p: string | [number, number]; label?: string; red?: boolean; at?: number; white?: boolean}[];
+  pts?: {p: string | [number, number]; label?: string; red?: boolean; at?: number; white?: boolean; dx?: number; dy?: number; end?: boolean}[];
   routes?: {a: string; b: string; at?: number; dur?: number}[];
-  names?: {p: string | [number, number]; text: string; at?: number}[];
+  names?: {p: string | [number, number]; text: string; at?: number; dx?: number; dy?: number}[];
   tracks?: {p: string; n?: number}[];
   title?: string; items?: Item[];
 };
@@ -21,8 +21,8 @@ export const MapScene: React.FC<MapP> = ({from, to, pts = [], routes = [], names
   const {lt, dur} = useScene();
   const k = ease(lt / Math.max(dur, 0.1));
   const tgt = to ?? from;
-  const lon0 = lerp(from[0], tgt[0], k), lat0 = lerp(from[1], tgt[1], k);
-  const S = Math.exp(lerp(Math.log(from[2]), Math.log(tgt[2]), k));
+  const lon0 = tgt[0], lat0 = tgt[1];
+  const S = tgt[2] * (1 + 0.03 * k);
   const P = (lon: number, lat: number): [number, number] => [W / 2 + (lon - lon0) * S, H / 2 - (lat - lat0) * S];
   const poly = (pl: [number, number][]) => pl.map(([a, b]) => P(a, b).join(',')).join(' ');
   const step = S > 40 ? 1 : S > 14 ? 5 : S > 7 ? 10 : 20;
@@ -69,17 +69,17 @@ export const MapScene: React.FC<MapP> = ({from, to, pts = [], routes = [], names
             <g key={i}>
               <circle cx={c[0]} cy={c[1]} r={14 + q * 60} fill="none" stroke={col} strokeWidth={3} opacity={1 - q} />
               <circle cx={c[0]} cy={c[1]} r={12} fill={col} />
-              {pt.label && <text x={c[0] + 26} y={c[1] + 10} fontFamily={FONT} fontWeight={800} fontSize={34} fill={C.white} stroke="#000" strokeWidth={6} paintOrder="stroke" letterSpacing={2}>{pt.label}</text>}
+              {pt.label && <text x={c[0] + (pt.dx ?? 24)} y={c[1] + (pt.dy ?? 8)} textAnchor={pt.end ? 'end' : 'start'} fontFamily={FONT} fontWeight={800} fontSize={26} fill={C.white} stroke="#000" strokeWidth={6} paintOrder="stroke" letterSpacing={2}>{pt.label}</text>}
             </g>
           );
         })}
         {names.map((n, i) => {
           if (lt < (n.at ?? 0)) return null;
           const c = P(...pos(n.p));
-          return <text key={i} x={c[0]} y={c[1]} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={30} fill={C.gray2} stroke="#000" strokeWidth={5} paintOrder="stroke" letterSpacing={4}>{n.text}</text>;
+          return <text key={i} x={c[0] + (n.dx ?? 0)} y={c[1] + (n.dy ?? 0)} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={22} fill={C.gray2} stroke="#000" strokeWidth={5} paintOrder="stroke" letterSpacing={4}>{n.text}</text>;
         })}
       </svg>
-      {title && <div style={{position: 'absolute', left: 120, top: 980, fontFamily: FONT, fontWeight: 800, fontSize: 30, letterSpacing: 6, color: C.gray2}}>{title}</div>}
+      {title && <div style={{position: 'absolute', left: 120, top: 980, fontFamily: FONT, fontWeight: 800, fontSize: 24, letterSpacing: 6, color: C.gray2}}>{title}</div>}
       {items.map((it, i) => <ItemView key={i} it={it} />)}
     </>
   );
@@ -109,8 +109,9 @@ export const StudyCard: React.FC<{big: string; sub?: string; author: string; yea
 };
 
 // ------------------------------ CONTADOR -----------------------------------
-export const Counter: React.FC<{shiftX?: number; from?: number; to: number; unit?: string; label?: string; dur?: number; items?: Item[]; size?: number; dec?: number; sep?: boolean}> = ({from = 0, to, unit, label, dur = 1.6, items = [], size = 260, dec = 0, sep, shiftX = 0}) => {
-  const {lt} = useScene();
+export const Counter: React.FC<{delay?: number; shiftX?: number; from?: number; to: number; unit?: string; label?: string; dur?: number; items?: Item[]; size?: number; dec?: number; sep?: boolean}> = ({from = 0, to, unit, label, dur = 1.6, items = [], size = 260, dec = 0, sep, shiftX = 0, delay = 0}) => {
+  const {lt: lt0} = useScene();
+  const lt = Math.max(0, lt0 - delay);
   const v = lerp(from, to, easeOut(lt / dur));
   let s = v.toFixed(dec);
   if (sep) s = Math.round(v).toLocaleString('it-IT');
@@ -118,7 +119,7 @@ export const Counter: React.FC<{shiftX?: number; from?: number; to: number; unit
   return (
     <>
       {items.map((it, i) => <ItemView key={i} it={it} />)}
-      <div style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', transform: `translateX(${shiftX}px) scale(${pop})`}}>
+      <div style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', transform: `translateX(${shiftX}px) scale(${pop * (0.85 + 0.15 * easeOut(lt / 0.3))})`, opacity: lt0 < delay ? 0 : clamp(lt / 0.2)}}>
         {label && <Label size={44} color={C.gray2} weight={800}>{label}</Label>}
         <div style={{display: 'flex', alignItems: 'baseline', gap: 22, fontFamily: FONT, fontWeight: 800, fontSize: size, lineHeight: 1.05, textShadow: shadowText}}>
           <span style={{color: C.white, WebkitTextStroke: '10px #000', paintOrder: 'stroke fill'}}>{s}</span>

@@ -7,7 +7,7 @@ import type {Item} from './shot';
 
 export type SceneDef = {
   t: number; k: string; v: string; p?: any; items?: Item[]; tr?: 'cut' | 'whip' | 'flash' | 'dip';
-  bg?: {mode?: 'deep' | 'surface' | 'dark' | 'plain'; rays?: boolean; fx?: number}; snd?: string;
+  bg?: {mode?: 'deep' | 'surface' | 'dark' | 'plain'; rays?: boolean; fx?: number}; snd?: string; follow?: number;
 };
 export type TextDef = {t: number; d: number; s: string; pos?: 't' | 'b' | 'c'; size?: number};
 
@@ -28,17 +28,17 @@ export const SCENES: SceneDef[] = [
     a('human', 330, 700, 70, {h: 209}), lbl('TU (in scala)', 330, 830, {size: 28, at: 0.4, color: '#F2F2F2'}),
     a('orca', 1050, 640, 1100, {at: 0.2}), {k: 'ruler', x: 200, y: 900, n: 12, size: 116}, {k: 'bracket', x: 490, y: 480, w: 1100, text: '~9,5 M', at: 0.8},
   ], {tr: 'whip'}),
-  CNT(5.2, 'Contador 11 T com a orca ao fundo', {to: 11, unit: 'T', label: 'PESO', items: [a('orca', 960, 900, 900, {op: 0.35, d: 0.5})]}),
-  I(7.3, 'Bando de orcas em perseguição (parallax, linhas de velocidade)', [
+  CNT(5.2, 'Orca centrada; o número 11 T entra por cima dela', {to: 11, unit: 'T', label: 'PESO', delay: 0.7, items: [a('orca', 960, 600, 1000)]}),
+  I(7.3, 'Bando de orcas em perseguição (a câmera acompanha o líder)', [
     {k: 'speed', dir: 1, y: 150, y2: 950, op: 0.3},
     a('orca', 700, 480, 1000, {vx: 30, d: 1.4}), a('orca', 1350, 300, 640, {vx: 24, phase: 0.3, d: 0.9}), a('orca', 1300, 760, 760, {vx: 26, phase: 0.6, d: 1.1}),
     a('orca', 380, 800, 520, {vx: 22, phase: 0.8, d: 0.7, op: 0.8}), a('orca', 1700, 520, 420, {vx: 20, phase: 0.2, d: 0.5, op: 0.7}),
-  ], {tr: 'whip'}),
+  ], {tr: 'whip', follow: 30}),
   I(9.3, 'Formação de equipe: orcas em V ligadas por linhas de passe', [
     a('orca', 960, 330, 700), a('orca', 640, 540, 620, {phase: 0.2}), a('orca', 1280, 540, 620, {phase: 0.4}), a('orca', 340, 760, 560, {phase: 0.6}), a('orca', 1580, 760, 560, {phase: 0.8}),
     {k: 'arrow', x: 760, y: 360, x2: 1080, y2: 340, at: 0.4, color: '#B3B3B3', size: 6}, {k: 'arrow', x: 700, y: 560, x2: 1190, y2: 560, at: 0.9, color: '#B3B3B3', size: 6},
   ]),
-  MAP(11.7, 'Mapa radar do oceano, vazio: ninguém caça a orca', {from: [-30, 20, 4.5], to: [-30, 20, 5.6], title: 'OCEANO · NESSUN PREDATORE'}),
+  MAP(11.7, 'Mapa radar do oceano, vazio: ninguém caça a orca', {to: [-30, 20, 5.6], title: 'OCEANO · NESSUN PREDATORE'}),
   I(14.5, 'A orca vira e foge; seta vermelha, linhas de velocidade', [
     {k: 'speed', dir: -1, y: 200, y2: 900, op: 0.4}, a('orca', 1050, 520, 1250, {turn: 1.0, vx: -50, glow: false}), {k: 'arrow', x: 1500, y: 800, x2: 800, y2: 800, at: 1.2, size: 18},
   ], {tr: 'flash'}),
@@ -47,17 +47,17 @@ export const SCENES: SceneDef[] = [
     {k: 'water', y: 760}, a('ship', 700, 640, 1100, {d: 0.6}), a('crane', 1380, 480, 560, {d: 0.8}), a('crane', 1560, 520, 460, {d: 0.6, op: 0.7}),
     a('orca', 800, 880, 600, {vx: -20, d: 1.4}), m('porto di Prà, Genova (arquivo)', 'GENOVA, 2019', 1480, 400, 640, {at: 0.3, rot: 3}),
   ], {bg: {mode: 'surface'}}),
-  MAP(24.3, 'Mapa da Ligúria com ponto vermelho em Prà-Voltri', {from: [10, 43, 60], to: [8.9, 44.3, 260], pts: [{p: 'pra', label: 'PRÀ-VOLTRI', at: 0.5}], names: [{p: [9.5, 45.0], text: 'LIGURIA'}, {p: [9.2, 42.2], text: 'MAR LIGURE', at: 0.5}, {p: [8.9, 43.1], text: 'CORSICA'}]}),
+  MAP(24.3, 'Mapa da Ligúria com ponto vermelho em Prà-Voltri', {to: [9.3, 43.4, 170], pts: [{p: 'pra', label: 'PRÀ-VOLTRI', at: 0.5, dx: -22, dy: -26, end: true}], names: [{p: [10.4, 44.9], text: 'LIGURIA'}, {p: [8.5, 43.4], text: 'MAR LIGURE', at: 0.5}, {p: [9.0, 42.2], text: 'CORSICA', dx: 40}, {p: [11.2, 43.3], text: 'TOSCANA'}]}),
   CNT(26.9, 'Contador de dias: 14 GIORNI', {to: 14, unit: 'GIORNI', label: 'NEL PORTO', items: [a('orca', 960, 820, 800, {op: 0.3, d: 0.5}), m('orche nel porto di Genova', 'DICEMBRE 2019', 1500, 330, 560, {rot: 4, at: 0.2})]}),
   I(29.5, 'Silhuetas de orca aparecem uma a uma (4 ou 5)', [
     a('orca', 460, 380, 520, {at: 0.1}), a('orca', 1000, 430, 520, {at: 0.5, phase: 0.2}), a('orca', 1500, 380, 520, {at: 0.9, phase: 0.4}), a('orca', 700, 760, 520, {at: 1.3, phase: 0.6}), a('orca', 1300, 770, 520, {at: 1.7, phase: 0.8, op: 0.45}), lbl('4 · 5', 960, 590, {size: 56, color: '#D7141A', at: 1.7}),
   ], {tr: 'whip'}),
-  I(31.8, 'Orca pequena (cucciolo) ao lado da grande, câmera lenta', [a('orca', 800, 500, 1000, {amp: 0.5, freq: 0.4}), a('orca', 1380, 700, 380, {amp: 0.6, freq: 0.5, phase: 0.3}), tag('CUCCIOLO', undefined, 1400, 560, {at: 0.6})]),
+  I(31.8, 'Orca pequena (cucciolo) ao lado da grande, câmera lenta', [a('orca', 800, 500, 1000, {amp: 0.5, freq: 0.4}), a('orca', 1380, 700, 380, {amp: 0.6, freq: 0.5, phase: 0.3}), tag('CUCCIOLO', undefined, 1700, 860, {at: 0.6, ax: 1380, ay: 700})]),
   {t: 33.4, k: 'study', v: 'Cartão de estudo: Acquario di Genova · Istituto Tethys', p: {big: 'ACQUARIO DI GENOVA', sub: 'ISTITUTO TETHYS', author: 'Valutazione degli esperti', year: '2019', journal: 'Cucciolo: probabilmente morto'}, bg: {mode: 'dark'}},
   I(35.8, 'Cartão de imagem real do cucciolo e silhueta apagando', [a('orca', 600, 600, 760, {op: 0.35, amp: 0.3}), m('cucciolo e madre nel porto', 'LA MADRE NON LO LASCIA', 1380, 470, 800, {rot: -2})], {bg: {mode: 'dark', rays: false}}),
   I(38.0, 'Mãe com filhote, luz baixa, ritmo lento', [a('orca', 840, 520, 1050, {amp: 0.4, freq: 0.35, tone: 0.4}), a('orca', 1380, 640, 360, {amp: 0.4, freq: 0.4, phase: 0.2, tone: 0.3})], {bg: {mode: 'dark'}}),
   I(40.7, 'Mãe e filhote perto da linha d\'água, luz vinda de cima', [{k: 'water', y: 330}, a('orca', 900, 520, 1000, {amp: 0.4, freq: 0.35}), a('orca', 960, 420, 330, {amp: 0.4, freq: 0.45, phase: 0.3, d: 1.2}), {k: 'rings', x: 960, y: 335, w: 300, n: 2}], {bg: {mode: 'surface', fx: 1.6}}),
-  MAP(44.3, 'Mapa animado: rota pontilhada Islândia - Gênova', {from: [-10, 52, 22], to: [-6, 52, 24], pts: [{p: 'islanda', label: 'ISLANDA'}, {p: 'genova', label: 'GENOVA', at: 1.5}], routes: [{a: 'islanda', b: 'genova', at: 0.3, dur: 2.6}]}),
+  MAP(44.3, 'Mapa animado: rota pontilhada Islândia - Gênova', {to: [-6, 52, 24], pts: [{p: 'islanda', label: 'ISLANDA'}, {p: 'genova', label: 'GENOVA', at: 1.5}], routes: [{a: 'islanda', b: 'genova', at: 0.3, dur: 2.6}]}),
   CNT(47.6, 'Contador 5.000 KM', {to: 5000, unit: 'KM', sep: true, dur: 1.8, label: 'ISLANDA → GENOVA'}),
   I(51.0, 'Vídeo real em tela cheia: orca no porto', [full('orca no porto industriale di Genova')], {tr: 'flash'}),
   I(53.4, 'Orca grande com seta vermelha de fuga: o rei do mar', [a('orca', 900, 540, 1200, {turn: 1.6}), {k: 'arrow', x: 1500, y: 850, x2: 900, y2: 850, at: 1.7, size: 16}, {k: 'speed', dir: -1, op: 0.25}], {tr: 'whip'}),
@@ -66,7 +66,7 @@ export const SCENES: SceneDef[] = [
     {k: 'qmark', x: 380, y: 440, w: 200, at: 0.4, color: '#B3B3B3'}, {k: 'qmark', x: 960, y: 420, w: 200, at: 0.7, color: '#B3B3B3'}, {k: 'qmark', x: 1540, y: 440, w: 200, at: 1.0, color: '#D7141A'},
   ], {bg: {mode: 'dark'}}),
   CNT(60.6, 'Revelação do número: 3', {to: 3, label: 'ANIMALI', dur: 0.3, size: 380}, {tr: 'flash'}),
-  MAP(61.4, 'Mediterrâneo com dois pontos vermelhos', {from: [10, 40, 18], to: [10, 41, 24], pts: [{p: 'pelagos', label: 'MAR LIGURE', at: 0.2}, {p: 'tirreno', label: 'TIRRENO', at: 0.8}], names: [{p: [3, 39.5], text: 'MEDITERRANEO'}]}),
+  MAP(61.4, 'Mediterrâneo com a bota da Itália, Sicília, Sardenha, Córsega e dois pontos vermelhos', {to: [12, 40.5, 95], pts: [{p: 'pelagos', label: 'MAR LIGURE', at: 0.2, dx: -20, dy: -14, end: true}, {p: 'tirreno', label: 'TIRRENO', at: 0.8, dx: 22, dy: 44}], names: [{p: [17, 36.6], text: 'MEDITERRANEO'}, {p: [14.5, 43.2], text: 'ITALIA'}]}),
   I(64.3, 'Silhueta de tubarão aparece e some', [a('shark', 960, 520, 1000, {tone: 0.1, vx: 18})], {bg: {mode: 'dark'}}),
   I(66.9, 'Tubarão-branco em close, etiqueta', [a('shark', 900, 540, 1300, {glow: true}), tag('SQUALO BIANCO', '~6 M', 1450, 280, {ax: 1100, ay: 450, at: 0.5})], {tr: 'whip'}),
   I(70.1, 'Barra vermelha cruza o tubarão: NO', [a('shark', 960, 540, 1100, {vx: -30}), {k: 'cross', x: 960, y: 540, w: 1000, at: 0.4}], {tr: 'flash'}),
@@ -338,7 +338,7 @@ SCENES.forEach((s) => {
 // o cartão fica na zona direita livre. Textos: um só por zona, o anterior sai antes.
 // ---------------------------------------------------------------------------
 const LAYOUT_UNTIL = 65;
-const CARD_X = 1540, CARD_Y = 590, CARD_W = 640, F = 0.6;
+const CARD_X = 1500, CARD_Y = 590, CARD_W = 640, F = 0.6;
 const SCALED_W = ['orca', 'sperm', 'humpback', 'pilot', 'shark', 'seal', 'blue', 'dolphin', 'fish', 'greywhale', 'bus', 'panda', 'boat', 'gommone', 'ice', 'crane', 'ship', 'owl', 'bird', 'condo', 'clock', 'bar', 'rings', 'disc', 'bracket', 'qmark', 'text', 'ruler'];
 const relayout = (list: Item[]): Item[] =>
   list.map((it) => {
