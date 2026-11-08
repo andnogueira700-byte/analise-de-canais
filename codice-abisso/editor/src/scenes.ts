@@ -47,7 +47,7 @@ export const SCENES: SceneDef[] = [
     {k: 'water', y: 760}, a('ship', 700, 640, 1100, {d: 0.6}), a('crane', 1380, 480, 560, {d: 0.8}), a('crane', 1560, 520, 460, {d: 0.6, op: 0.7}),
     a('orca', 800, 880, 600, {vx: -20, d: 1.4}), m('porto di Prà, Genova (arquivo)', 'GENOVA, 2019', 1480, 400, 640, {at: 0.3, rot: 3}),
   ], {bg: {mode: 'surface'}}),
-  MAP(24.3, 'Mapa da Ligúria com ponto vermelho em Prà-Voltri', {from: [10, 43, 60], to: [8.9, 44.3, 260], pts: [{p: 'pra', label: 'PRÀ-VOLTRI', at: 0.5}], names: [{p: [10.4, 44.55], text: 'LIGURIA'}, {p: [9.2, 42.2], text: 'MAR LIGURE', at: 0.5}, {p: [8.9, 43.1], text: 'CORSICA'}]}),
+  MAP(24.3, 'Mapa da Ligúria com ponto vermelho em Prà-Voltri', {from: [10, 43, 60], to: [8.9, 44.3, 260], pts: [{p: 'pra', label: 'PRÀ-VOLTRI', at: 0.5}], names: [{p: [9.5, 45.0], text: 'LIGURIA'}, {p: [9.2, 42.2], text: 'MAR LIGURE', at: 0.5}, {p: [8.9, 43.1], text: 'CORSICA'}]}),
   CNT(26.9, 'Contador de dias: 14 GIORNI', {to: 14, unit: 'GIORNI', label: 'NEL PORTO', items: [a('orca', 960, 820, 800, {op: 0.3, d: 0.5}), m('orche nel porto di Genova', 'DICEMBRE 2019', 1500, 330, 560, {rot: 4, at: 0.2})]}),
   I(29.5, 'Silhuetas de orca aparecem uma a uma (4 ou 5)', [
     a('orca', 460, 380, 520, {at: 0.1}), a('orca', 1000, 430, 520, {at: 0.5, phase: 0.2}), a('orca', 1500, 380, 520, {at: 0.9, phase: 0.4}), a('orca', 700, 760, 520, {at: 1.3, phase: 0.6}), a('orca', 1300, 770, 520, {at: 1.7, phase: 0.8, op: 0.45}), lbl('4 · 5', 960, 590, {size: 56, color: '#D7141A', at: 1.7}),
@@ -332,3 +332,42 @@ SCENES.forEach((s) => {
     s.items = [...(s.items ?? []), m(e[0], e[1], 1560, 360, 560, {rot: s.t % 2 ? 3 : -3, at: 0.35})];
   }
 });
+
+// ---------------------------------------------------------------------------
+// LAYOUT: quando há cartão, o conteúdo vai para o lado oposto (zona esquerda) e
+// o cartão fica na zona direita livre. Textos: um só por zona, o anterior sai antes.
+// ---------------------------------------------------------------------------
+const LAYOUT_UNTIL = 65;
+const CARD_X = 1540, CARD_Y = 590, CARD_W = 640, F = 0.6;
+const SCALED_W = ['orca', 'sperm', 'humpback', 'pilot', 'shark', 'seal', 'blue', 'dolphin', 'fish', 'greywhale', 'bus', 'panda', 'boat', 'gommone', 'ice', 'crane', 'ship', 'owl', 'bird', 'condo', 'clock', 'bar', 'rings', 'disc', 'bracket', 'qmark', 'text', 'ruler'];
+const relayout = (list: Item[]): Item[] =>
+  list.map((it) => {
+    if (it.k === 'media') return {...it, x: CARD_X, y: CARD_Y, w: CARD_W, rot: it.rot ?? 2, d: 1.0};
+    if (['speed', 'water', 'floor', 'shade', 'full'].includes(it.k)) return it;
+    const o: Item = {...it};
+    if (o.x !== undefined) o.x = o.x * F;
+    if (o.x2 !== undefined) o.x2 = o.x2 * F;
+    if (o.ax !== undefined) o.ax = o.ax * F;
+    if (o.vx !== undefined) o.vx = o.vx * F;
+    if (SCALED_W.includes(o.k)) {
+      if (o.w !== undefined) o.w = o.w * F;
+      if (o.h !== undefined && o.k !== 'bar') o.h = o.h * F;
+      if (o.k === 'ruler' && o.size) o.size = o.size * F;
+      if (o.k === 'text' && o.size) o.size = o.size * 0.8;
+    }
+    return o;
+  });
+SCENES.forEach((s) => {
+  if (s.t >= LAYOUT_UNTIL) return;
+  if (s.k === 'items' && (s.items ?? []).some((i) => i.k === 'media')) s.items = relayout(s.items!);
+  if (s.k === 'counter' && s.p?.items?.some((i: Item) => i.k === 'media')) {
+    s.p.items = relayout(s.p.items);
+    s.p.shiftX = -330;
+  }
+});
+// textos: sem sobreposição temporal
+TEXTS.sort((a, b) => a.t - b.t);
+for (let i = 0; i + 1 < TEXTS.length; i++) {
+  const gap = TEXTS[i + 1].t - 0.12;
+  if (TEXTS[i].t + TEXTS[i].d > gap) TEXTS[i].d = Math.max(0.8, gap - TEXTS[i].t);
+}

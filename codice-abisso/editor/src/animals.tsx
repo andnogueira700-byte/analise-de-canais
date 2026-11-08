@@ -307,6 +307,11 @@ const parts = (kind: AnimalKind, f: string, f2: string): Parts => {
   }
 };
 
+// eixo das nadadeiras peitorais (x, y) por animal
+const PECT: Partial<Record<AnimalKind, [number, number]>> = {
+  orca: [775, 285], sperm: [700, 288], humpback: [805, 258], greywhale: [790, 272], pilot: [785, 270], blue: [780, 246], shark: [740, 268], dolphin: [758, 270],
+};
+
 const GRAD_IDS: AnimalKind[] = ['orca', 'sperm', 'humpback', 'pilot', 'shark', 'seal', 'blue', 'dolphin', 'fish', 'greywhale'];
 
 export const AnimalDefs: React.FC<{tone?: number}> = ({tone = 0.55}) => {
@@ -363,7 +368,9 @@ export const Animal: React.FC<AnimalProps> = ({
     >
       <AnimalDefs tone={tone} />
       <g transform={`rotate(${bodyRot} ${cx} ${cy})`}>
-        {p.under}
+        {p.under && PECT[kind] ? (
+          <g transform={`rotate(${Math.sin((t * freq * (kind === 'humpback' ? 0.55 : 1) + phase) * Math.PI * 2 - 2.1) * (kind === 'humpback' ? 17 : 11) * amp} ${PECT[kind]![0]} ${PECT[kind]![1]})`}>{p.under}</g>
+        ) : p.under}
         <g transform={`rotate(${tailRot} ${p.joint[0]} ${p.joint[1]})`}>
           {p.tail}
           {p.fluke && (
@@ -384,7 +391,9 @@ export const Animal: React.FC<AnimalProps> = ({
         {kind === 'orca' && (
           <>
             {/* dorsal e peitoral da orca */}
-            <path d="M 572 126 C 592 92 612 52 626 12 C 640 52 654 96 672 124 Z" fill="url(#g-orca)" stroke={OUT} strokeWidth={1.8} />
+            <g transform={`rotate(${Math.sin((t * freq + phase) * Math.PI * 2 - 0.8) * 2.5 * amp} 620 124)`}>
+              <path d="M 572 126 C 592 92 612 52 626 12 C 640 52 654 96 672 124 Z" fill="url(#g-orca)" stroke={OUT} strokeWidth={1.8} />
+            </g>
           </>
         )}
       </g>

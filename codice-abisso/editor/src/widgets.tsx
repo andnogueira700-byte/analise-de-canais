@@ -79,7 +79,7 @@ export const MapScene: React.FC<MapP> = ({from, to, pts = [], routes = [], names
           return <text key={i} x={c[0]} y={c[1]} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={30} fill={C.gray2} stroke="#000" strokeWidth={5} paintOrder="stroke" letterSpacing={4}>{n.text}</text>;
         })}
       </svg>
-      {title && <div style={{position: 'absolute', left: 120, top: 70, fontFamily: FONT, fontWeight: 800, fontSize: 30, letterSpacing: 6, color: C.gray2}}>{title}</div>}
+      {title && <div style={{position: 'absolute', left: 120, top: 980, fontFamily: FONT, fontWeight: 800, fontSize: 30, letterSpacing: 6, color: C.gray2}}>{title}</div>}
       {items.map((it, i) => <ItemView key={i} it={it} />)}
     </>
   );
@@ -109,7 +109,7 @@ export const StudyCard: React.FC<{big: string; sub?: string; author: string; yea
 };
 
 // ------------------------------ CONTADOR -----------------------------------
-export const Counter: React.FC<{from?: number; to: number; unit?: string; label?: string; dur?: number; items?: Item[]; size?: number; dec?: number; sep?: boolean}> = ({from = 0, to, unit, label, dur = 1.6, items = [], size = 260, dec = 0, sep}) => {
+export const Counter: React.FC<{shiftX?: number; from?: number; to: number; unit?: string; label?: string; dur?: number; items?: Item[]; size?: number; dec?: number; sep?: boolean}> = ({from = 0, to, unit, label, dur = 1.6, items = [], size = 260, dec = 0, sep, shiftX = 0}) => {
   const {lt} = useScene();
   const v = lerp(from, to, easeOut(lt / dur));
   let s = v.toFixed(dec);
@@ -118,7 +118,7 @@ export const Counter: React.FC<{from?: number; to: number; unit?: string; label?
   return (
     <>
       {items.map((it, i) => <ItemView key={i} it={it} />)}
-      <div style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', transform: `scale(${pop})`}}>
+      <div style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', transform: `translateX(${shiftX}px) scale(${pop})`}}>
         {label && <Label size={44} color={C.gray2} weight={800}>{label}</Label>}
         <div style={{display: 'flex', alignItems: 'baseline', gap: 22, fontFamily: FONT, fontWeight: 800, fontSize: size, lineHeight: 1.05, textShadow: shadowText}}>
           <span style={{color: C.white, WebkitTextStroke: '10px #000', paintOrder: 'stroke fill'}}>{s}</span>
