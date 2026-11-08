@@ -1,0 +1,373 @@
+// ============================================================================
+// LISTA DE CENAS  (dados, separados dos componentes; reutilizável nos próximos vídeos)
+//  - t: início em segundos (fronteiras das frases do timing.json); o fim é o início da próxima
+//  - k: tipo de componente; p: props; v: descrição visual; tr: transição de entrada
+// ============================================================================
+import type {Item} from './shot';
+
+export type SceneDef = {
+  t: number; k: string; v: string; p?: any; items?: Item[]; tr?: 'cut' | 'whip' | 'flash' | 'dip';
+  bg?: {mode?: 'deep' | 'surface' | 'dark' | 'plain'; rays?: boolean; fx?: number}; snd?: string; follow?: number;
+};
+export type TextDef = {t: number; d: number; s: string; pos?: 't' | 'b' | 'c'; size?: number};
+
+const a = (k: string, x: number, y: number, w: number, o: Partial<Item> = {}): Item => ({k, x, y, w, ...o});
+const m = (desc: string, label: string | undefined, x: number, y: number, w = 760, o: Partial<Item> = {}): Item => ({k: 'media', text: desc, name: label, x, y, w, ...o});
+const full = (desc: string): Item => ({k: 'full', text: desc});
+const tag = (name: string, measure: string | undefined, x: number, y: number, o: Partial<Item> = {}): Item => ({k: 'tag', name, measure, x, y, ...o});
+const lbl = (text: string, x: number, y: number, o: Partial<Item> = {}): Item => ({k: 'label', text, x, y, ...o});
+const I = (t: number, v: string, items: Item[], o: Partial<SceneDef> = {}): SceneDef => ({t, k: 'items', v, items, ...o});
+const MAP = (t: number, v: string, p: any, o: Partial<SceneDef> = {}): SceneDef => ({t, k: 'map', v, p, bg: {mode: 'plain', rays: false}, ...o});
+const CNT = (t: number, v: string, p: any, o: Partial<SceneDef> = {}): SceneDef => ({t, k: 'counter', v, p, bg: {mode: 'dark'}, ...o});
+
+const WORLD: [number, number, number] = [10, 20, 5.3];
+
+export const SCENES: SceneDef[] = [
+  {t: 0, k: 'open', v: 'VÍDEO REAL em tela cheia (orca) que encolhe num cartão; a animação abre em volta', p: {desc: "orca in caccia, vista dall'alto"}},
+  I(3.4, 'Régua em metros: silhueta humana "TU (in scala)" ao lado da orca', [
+    a('human', 330, 700, 70, {h: 209}), lbl('TU (in scala)', 330, 830, {size: 28, at: 0.4, color: '#F2F2F2'}),
+    a('orca', 1050, 640, 1100, {at: 0.2}), {k: 'ruler', x: 200, y: 900, n: 12, size: 116}, {k: 'bracket', x: 490, y: 480, w: 1100, text: '~9,5 M', at: 0.8},
+  ], {tr: 'whip'}),
+  CNT(5.2, 'Orca centrada; o número 11 T entra por cima dela', {to: 11, unit: 'T', label: 'PESO', delay: 0.7, items: [a('orca', 960, 600, 1000)]}),
+  I(7.3, 'Bando de orcas em perseguição (a câmera acompanha o líder)', [
+    {k: 'speed', dir: 1, y: 150, y2: 950, op: 0.3},
+    a('orca', 700, 480, 1000, {vx: 30, d: 1.4}), a('orca', 1350, 300, 640, {vx: 24, phase: 0.3, d: 0.9}), a('orca', 1300, 760, 760, {vx: 26, phase: 0.6, d: 1.1}),
+    a('orca', 380, 800, 520, {vx: 22, phase: 0.8, d: 0.7, op: 0.8}), a('orca', 1700, 520, 420, {vx: 20, phase: 0.2, d: 0.5, op: 0.7}),
+  ], {tr: 'whip', follow: 30}),
+  I(9.3, 'Formação de equipe: orcas em V ligadas por linhas de passe', [
+    a('orca', 960, 330, 700), a('orca', 640, 540, 620, {phase: 0.2}), a('orca', 1280, 540, 620, {phase: 0.4}), a('orca', 340, 760, 560, {phase: 0.6}), a('orca', 1580, 760, 560, {phase: 0.8}),
+    {k: 'arrow', x: 760, y: 360, x2: 1080, y2: 340, at: 0.4, color: '#B3B3B3', size: 6}, {k: 'arrow', x: 700, y: 560, x2: 1190, y2: 560, at: 0.9, color: '#B3B3B3', size: 6},
+  ]),
+  MAP(11.7, 'Mapa radar do oceano, vazio: ninguém caça a orca', {to: [-30, 20, 5.6], title: 'OCEANO · NESSUN PREDATORE'}),
+  I(14.5, 'A orca vira e foge; seta vermelha, linhas de velocidade', [
+    {k: 'speed', dir: -1, y: 200, y2: 900, op: 0.4}, a('orca', 1050, 520, 1250, {turn: 1.0, vx: -50, glow: false}), {k: 'arrow', x: 1500, y: 800, x2: 800, y2: 800, at: 1.2, size: 18},
+  ], {tr: 'flash'}),
+  {t: 17.9, k: 'timeline', v: 'Linha do tempo até 2019', p: {from: 2015, to: 2020, mark: 2019, big: '2019'}, bg: {mode: 'dark'}},
+  I(22.0, 'Porto de Prà: gruas, navio de contêineres e orcas', [
+    {k: 'water', y: 760}, a('ship', 700, 640, 1100, {d: 0.6}), a('crane', 1380, 480, 560, {d: 0.8}), a('crane', 1560, 520, 460, {d: 0.6, op: 0.7}),
+    a('orca', 800, 880, 600, {vx: -20, d: 1.4}), m('porto di Prà, Genova (arquivo)', 'GENOVA, 2019', 1480, 400, 640, {at: 0.3, rot: 3}),
+  ], {bg: {mode: 'surface'}}),
+  MAP(24.3, 'Mapa da Ligúria com ponto vermelho em Prà-Voltri', {to: [9.3, 43.4, 170], pts: [{p: 'pra', label: 'PRÀ-VOLTRI', at: 0.5, dx: -22, dy: -26, end: true}], names: [{p: [10.4, 44.9], text: 'LIGURIA'}, {p: [8.5, 43.4], text: 'MAR LIGURE', at: 0.5}, {p: [9.0, 42.2], text: 'CORSICA', dx: 40}, {p: [11.2, 43.3], text: 'TOSCANA'}]}),
+  CNT(26.9, 'Contador de dias: 14 GIORNI', {to: 14, unit: 'GIORNI', label: 'NEL PORTO', items: [a('orca', 960, 820, 800, {op: 0.3, d: 0.5}), m('orche nel porto di Genova', 'DICEMBRE 2019', 1500, 330, 560, {rot: 4, at: 0.2})]}),
+  I(29.5, 'Silhuetas de orca aparecem uma a uma (4 ou 5)', [
+    a('orca', 460, 380, 520, {at: 0.1}), a('orca', 1000, 430, 520, {at: 0.5, phase: 0.2}), a('orca', 1500, 380, 520, {at: 0.9, phase: 0.4}), a('orca', 700, 760, 520, {at: 1.3, phase: 0.6}), a('orca', 1300, 770, 520, {at: 1.7, phase: 0.8, op: 0.45}), lbl('4 · 5', 960, 590, {size: 56, color: '#D7141A', at: 1.7}),
+  ], {tr: 'whip'}),
+  I(31.8, 'Orca pequena (cucciolo) ao lado da grande, câmera lenta', [a('orca', 800, 500, 1000, {amp: 0.5, freq: 0.4}), a('orca', 1380, 700, 380, {amp: 0.6, freq: 0.5, phase: 0.3}), tag('CUCCIOLO', undefined, 1700, 860, {at: 0.6, ax: 1380, ay: 700})]),
+  {t: 33.4, k: 'study', v: 'Cartão de estudo: Acquario di Genova · Istituto Tethys', p: {big: 'ACQUARIO DI GENOVA', sub: 'ISTITUTO TETHYS', author: 'Valutazione degli esperti', year: '2019', journal: 'Cucciolo: probabilmente morto'}, bg: {mode: 'dark'}},
+  I(35.8, 'Cartão de imagem real do cucciolo e silhueta apagando', [a('orca', 600, 600, 760, {op: 0.35, amp: 0.3}), m('cucciolo e madre nel porto', 'LA MADRE NON LO LASCIA', 1380, 470, 800, {rot: -2})], {bg: {mode: 'dark', rays: false}}),
+  I(38.0, 'Mãe com filhote, luz baixa, ritmo lento', [a('orca', 840, 520, 1050, {amp: 0.4, freq: 0.35, tone: 0.4}), a('orca', 1380, 640, 360, {amp: 0.4, freq: 0.4, phase: 0.2, tone: 0.3})], {bg: {mode: 'dark'}}),
+  I(40.7, 'Mãe e filhote perto da linha d\'água, luz vinda de cima', [{k: 'water', y: 330}, a('orca', 900, 520, 1000, {amp: 0.4, freq: 0.35}), a('orca', 960, 420, 330, {amp: 0.4, freq: 0.45, phase: 0.3, d: 1.2}), {k: 'rings', x: 960, y: 335, w: 300, n: 2}], {bg: {mode: 'surface', fx: 1.6}}),
+  MAP(44.3, 'Mapa animado: rota pontilhada Islândia - Gênova', {to: [-6, 52, 24], pts: [{p: 'islanda', label: 'ISLANDA'}, {p: 'genova', label: 'GENOVA', at: 1.5}], routes: [{a: 'islanda', b: 'genova', at: 0.3, dur: 2.6}]}),
+  CNT(47.6, 'Contador 5.000 KM', {to: 5000, unit: 'KM', sep: true, dur: 1.8, label: 'ISLANDA → GENOVA'}),
+  I(51.0, 'Vídeo real em tela cheia: orca no porto', [full('orca no porto industriale di Genova')], {tr: 'flash'}),
+  I(53.4, 'Orca grande com seta vermelha de fuga: o rei do mar', [a('orca', 900, 540, 1200, {turn: 1.6}), {k: 'arrow', x: 1500, y: 850, x2: 900, y2: 850, at: 1.7, size: 16}, {k: 'speed', dir: -1, op: 0.25}], {tr: 'whip'}),
+  I(56.5, 'Três silhuetas pretas com pontos de interrogação (lista)', [
+    a('orca', 380, 520, 520, {tone: 0.05, op: 0.9, at: 0}), a('sperm', 960, 520, 560, {tone: 0.05, at: 0.3}), a('pilot', 1540, 520, 480, {tone: 0.05, at: 0.6}),
+    {k: 'qmark', x: 380, y: 440, w: 200, at: 0.4, color: '#B3B3B3'}, {k: 'qmark', x: 960, y: 420, w: 200, at: 0.7, color: '#B3B3B3'}, {k: 'qmark', x: 1540, y: 440, w: 200, at: 1.0, color: '#D7141A'},
+  ], {bg: {mode: 'dark'}}),
+  CNT(60.6, 'Revelação do número: 3', {to: 3, label: 'ANIMALI', dur: 0.3, size: 380}, {tr: 'flash'}),
+  MAP(61.4, 'Mediterrâneo com a bota da Itália, Sicília, Sardenha, Córsega e dois pontos vermelhos', {to: [12, 40.5, 95], pts: [{p: 'pelagos', label: 'MAR LIGURE', at: 0.2, dx: -20, dy: -14, end: true}, {p: 'tirreno', label: 'TIRRENO', at: 0.8, dx: 22, dy: 44}], names: [{p: [17, 36.6], text: 'MEDITERRANEO'}, {p: [14.5, 43.2], text: 'ITALIA'}]}),
+  I(64.3, 'Silhueta de tubarão aparece e some', [a('shark', 960, 520, 1000, {tone: 0.1, vx: 18})], {bg: {mode: 'dark'}}),
+  I(66.9, 'Tubarão-branco em close, etiqueta', [a('shark', 900, 540, 1300, {glow: true}), tag('SQUALO BIANCO', '~6 M', 1450, 280, {ax: 1100, ay: 450, at: 0.5})], {tr: 'whip'}),
+  I(70.1, 'Barra vermelha cruza o tubarão: NO', [a('shark', 960, 540, 1100, {vx: -30}), {k: 'cross', x: 960, y: 540, w: 1000, at: 0.4}], {tr: 'flash'}),
+  MAP(72.4, 'Mapa das ilhas Farallon (Califórnia), ponto pulsante', {from: [-110, 38, 30], to: [-122, 37.5, 95], pts: [{p: 'farallon', label: 'FARALLON', at: 0.4}], names: [{p: [-120.5, 39.2], text: 'CALIFORNIA'}, {p: [-122.2, 36.8], text: 'OCEANO PACIFICO', at: 0.5}]}),
+  I(76.7, 'Duas orcas e um tubarão cinza: ataque', [a('shark', 1300, 540, 800, {vx: 20}), a('orca', 560, 400, 800, {vx: 30}), a('orca', 560, 720, 700, {vx: 28, phase: 0.4}), {k: 'arrow', x: 900, y: 440, x2: 1150, y2: 520, size: 14, at: 0.5}]),
+  CNT(79.3, 'Contador: 1 CASO documentato', {to: 1, unit: 'CASO', dur: 0.4, label: 'FARALLON, 1997', items: [m('orche e squalo bianco (archivio)', 'FARALLON, 1997', 1500, 300, 600, {rot: 3})]}),
+  {t: 81.4, k: 'study', v: 'Cartão de estudo: Jorgensen et al., Scientific Reports', p: {big: 'SQUALI SPARITI', sub: 'IN POCHI MINUTI', author: 'Jorgensen et al.', year: '2019', journal: 'Scientific Reports', key1: 'TRASMETTITORI'}, bg: {mode: 'dark'}},
+  MAP(86.0, 'Trajetórias dos tubarões saindo do centro quando as orcas chegam', {from: [-123, 37.7, 80], to: [-123, 37.7, 110], pts: [{p: 'farallon', label: 'ORCHE', at: 0.2}], tracks: [{p: 'farallon', n: 7}]}),
+  I(89.9, 'Relógio: poucos minutos; depois calendário com seta de volta riscada', [a('shark', 500, 560, 600, {tone: 0.3, vx: -40, op: 0.5}), {k: 'clock', x: 1250, y: 520, w: 420, dur: 2, n: 0.25}, {k: 'strike', x: 1250, y: 760, w: 520, at: 2}, lbl('STAGIONE SUCCESSIVA', 1250, 800, {size: 32, at: 2}), m('squalo bianco in allontanamento', 'SPARITI FINO ALLA STAGIONE DOPO', 400, 300, 480, {rot: -3, at: 1})], {tr: 'whip', bg: {mode: 'dark'}}),
+  MAP(92.9, 'Mapa da África do Sul, ponto vermelho', {from: [8, -20, 25], to: [18.5, -34, 100], pts: [{p: 'sudafrica', label: 'SUDAFRICA', at: 0.4}], names: [{p: [24, -29], text: 'SUDAFRICA'}, {p: [8, -37], text: 'OCEANO ATLANTICO', at: 0.6}]}),
+  I(97.5, 'Barbatanas dorsais de Port e Starboard rasgando a água', [{k: 'water', y: 520}, a('orca', 650, 640, 700, {tone: 0.2, d: 1.2}), a('orca', 1350, 700, 700, {tone: 0.2, phase: 0.5, d: 1.2}), tag('PORT', undefined, 650, 400, {ax: 790, ay: 470}), tag('STARBOARD', undefined, 1350, 400, {ax: 1490, ay: 560})], {bg: {mode: 'surface'}}),
+  I(100.5, 'Manchetes de jornal sul-africanas (cartões de imagem real)', [m('manchete: squali bianchi senza fegato', 'SUDAFRICA, 2015', 560, 460, 700, {rot: -4}), m('squalo bianco spiaggiato (archivio)', 'DAL 2015', 1400, 560, 700, {rot: 3, at: 0.5})], {bg: {mode: 'dark', rays: false}}),
+  I(103.0, 'Carcaça de tubarão (silhueta apagada, de cabeça para baixo)', [a('shark', 960, 560, 1100, {rot: 180, tone: 0.15, amp: 0.1, bob: 14}), a('shark', 960, 540, 1100, {rot: 180, tone: 0.1, op: 0, amp: 0})], {tr: 'flash', bg: {mode: 'dark'}}),
+  I(105.4, 'Ponto de interrogação gigante', [{k: 'qmark', x: 960, y: 520, w: 640}], {bg: {mode: 'dark'}}),
+  {t: 106.6, k: 'scale', v: 'Balança: o tubarão faz um cálculo', p: {left: {k: 'shark', n: 1, w: 380, sub: 'RISCHIO'}, right: {text: 'PASTO', sub: 'ALTRO POSTO'}, tilt: -9}, bg: {mode: 'dark'}},
+  I(109.0, 'Tubarão vira e se afasta', [a('shark', 960, 540, 1200, {turn: 0.8, vx: 20}), {k: 'speed', dir: -1, op: 0.3}], {tr: 'whip'}),
+  I(111.1, 'Vídeo real em tela cheia: orca na superfície em caça', [full('orca na superficie, in caccia')], {tr: 'flash'}),
+  I(114.0, 'Lista vazia com linhas em branco', [{k: 'bar', x: 960, y: 380, w: 900, h: 84, to: 0, from: 0}, {k: 'bar', x: 960, y: 520, w: 900, h: 84, to: 0, from: 0, at: 0.3}, {k: 'bar', x: 960, y: 660, w: 900, h: 84, to: 0, from: 0, at: 0.6}, lbl('LA LISTA', 960, 250, {size: 56, color: '#F2F2F2'})], {bg: {mode: 'dark'}}),
+  {t: 116.4, k: 'icons', v: 'Três ícones: dimensioni, organizzazione, testardaggine', p: {labels: ['DIMENSIONI', 'ORGANIZZAZIONE', 'TESTARDAGGINE'], times: [0.1, 1.0, 2.1]}, bg: {mode: 'dark'}},
+  {t: 120.4, k: 'cards', v: 'Carta 03 gira e revela a megattera', p: {reveal: 3, animal: 'humpback', name: 'MEGATTERA'}, bg: {mode: 'dark'}, tr: 'flash'},
+  {t: 122.0, k: 'chapter', v: 'Cartela de capítulo: NUMERO TRE / LA MEGATTERA', p: {num: 'NUMERO TRE', title: 'LA MEGATTERA', animal: 'humpback'}, bg: {mode: 'deep'}},
+  I(125.0, 'Megattera e orca separadas por uma linha', [a('humpback', 520, 540, 900, {amp: 0.6}), a('orca', 1450, 560, 700, {flip: true}), {k: 'bar', x: 960, y: 540, w: 4, h: 420, to: 1, from: 1, color: '#B3B3B3'}, lbl('MEGATTERA', 520, 800, {size: 36}), lbl('ORCA', 1450, 800, {size: 36})]),
+  I(128.5, 'Megattera vira em direção a um som distante (anéis de sonar)', [{k: 'rings', x: 150, y: 540, w: 1500, n: 5}, a('humpback', 1050, 540, 1000, {turn: 0.6, flip: true}), a('orca', 160, 560, 220, {flip: true, op: 0.6, d: 0.5})]),
+  I(131.3, 'Megattera nadando rápido em direção ao ataque', [{k: 'speed', dir: 1, op: 0.45}, a('humpback', 900, 520, 1250, {vx: 60, amp: 1.8, freq: 1.4})], {tr: 'whip'}),
+  {t: 132.5, k: 'study', v: 'Cartão de estudo: Pitman et al., 2017', p: {big: 'MEGATTERE vs ORCHE', sub: '115 INCONTRI', author: 'Robert Pitman et al.', year: '2017', journal: 'Marine Mammal Science'}, bg: {mode: 'dark'}},
+  CNT(136.5, 'Contador sobe até 115 INCONTRI', {to: 115, unit: 'INCONTRI', dur: 2.4, items: [a('humpback', 560, 840, 560, {op: 0.5, d: 0.5}), a('orca', 1400, 840, 460, {op: 0.5, d: 0.5, flip: true}), m('megattere e orche (archivio)', 'DOCUMENTATI', 1560, 270, 520, {rot: 3, at: 0.3})]}),
+  CNT(140.2, 'Contador 56 e orca com seta de ataque', {to: 56, unit: 'ATTACCHI', dur: 1.2, items: [a('orca', 480, 820, 640, {op: 0.8}), {k: 'arrow', x: 800, y: 800, x2: 1250, y2: 800, at: 0.6, size: 12}, a('seal', 1500, 800, 280, {op: 0.8})]}),
+  I(143.9, 'Barra preenchida mais da metade; megattera entra', [{k: 'bar', x: 960, y: 560, w: 1100, h: 90, from: 0, to: 0.56, dur: 1.6}, lbl('LE MEGATTERE SI INTROMETTONO', 960, 450, {size: 44, color: '#F2F2F2'}), lbl('> 50%', 960, 700, {size: 110, color: '#D7141A', at: 1.5}), a('humpback', 1560, 250, 500, {vx: -20, op: 0.9})], {bg: {mode: 'dark'}}),
+  I(147.4, 'Presas em fila: foca, golfinho, peixe e megattera', [a('seal', 320, 560, 360), a('dolphin', 760, 560, 360, {at: 0.3}), a('fish', 1160, 560, 340, {at: 0.6}), a('humpback', 1600, 560, 500, {at: 0.9, flip: true})]),
+  I(149.2, 'Tela quase preta, pausa; um ponto de interrogação fraco', [{k: 'qmark', x: 960, y: 520, w: 420, color: '#3A3A3A'}, a('humpback', 960, 760, 300, {tone: 0.1, op: 0.5})], {bg: {mode: 'dark', rays: false}}),
+  {t: 151.5, k: 'pie', v: 'Gráfico de pizza: 11% megattere', p: {pct: 11}, bg: {mode: 'dark'}},
+  {t: 154.9, k: 'pie', v: 'Pizza completa: 11% e 89%, 10 specie', p: {pct: 11, labelBig: 'ALTRE 10 SPECIE'}, bg: {mode: 'dark'}},
+  I(158.0, 'Silhuetas em fila, uma por vez: foche, leoni marini, delfini, pesce', [a('seal', 330, 520, 380), a('seal', 740, 520, 380, {at: 0.5, flip: true}), a('dolphin', 1150, 520, 400, {at: 1.0}), a('fish', 1560, 520, 360, {at: 1.5}), m('foca sul ghiaccio / leone marino', 'LE PREDE', 960, 880, 380, {rot: 2, at: 2.2})]),
+  {t: 161.8, k: 'pie', v: 'Pizza com a fatia de 89% em destaque', p: {pct: 11, hi: 'big', labelBig: 'DIFENDONO ALTRI'}, bg: {mode: 'dark'}},
+  I(165.3, 'Prédio em silhueta (assemblea di condominio)', [{k: 'condo', x: 960, y: 560, w: 860}, lbl('ASSEMBLEA DI CONDOMINIO', 960, 60, {size: 40})], {bg: {mode: 'dark'}}),
+  I(167.1, 'Uma janela se abre: megattera do lado de fora', [{k: 'condo', x: 600, y: 560, w: 860}, a('humpback', 1300, 500, 800, {at: 0.8, rot: -8}), m('condominio, finestra aperta', undefined, 1500, 840, 400, {rot: 3, at: 1.2})], {bg: {mode: 'dark'}}),
+  I(170.5, 'Régua: megattera de 18 m ao lado de um ônibus articulado', [a('humpback', 960, 470, 1100, {amp: 0.5}), a('bus', 960, 830, 1100, {at: 0.8}), {k: 'bracket', x: 410, y: 330, w: 1100, text: '18 M', at: 0.5}, tag('AUTOBUS SNODATO', '18 M', 960, 990, {at: 1.2})]),
+  CNT(174.5, 'Barra de peso: 40 T', {to: 40, unit: 'T', dur: 1.6, label: 'MEGATTERA', items: [a('humpback', 960, 850, 900, {op: 0.35, d: 0.6}), {k: 'bar', x: 960, y: 270, w: 1000, h: 40, from: 0, to: 0.9, dur: 1.6}]}),
+  MAP(178.7, 'Mapa da Antártida, ponto vermelho', {from: [-60, -40, 14], to: [-60, -60, 28], pts: [{p: 'antartide', label: 'ANTARTIDE', at: 0.4}]}),
+  I(180.9, 'Ilustração: bloco de gelo, dez orcas e uma foca', [{k: 'water', y: 620}, a('ice', 960, 590, 900, {d: 0.8}), a('seal', 960, 470, 220, {d: 0.8}), a('orca', 400, 800, 460, {vx: 20}), a('orca', 700, 880, 420, {vx: 18, phase: 0.2}), a('orca', 1300, 820, 440, {vx: -18, flip: true, phase: 0.4}), a('orca', 1600, 900, 380, {vx: -20, flip: true, phase: 0.6}), m('orche attorno a un blocco di ghiaccio', 'ANTARTIDE', 1500, 280, 560, {rot: 3, at: 0.4})], {bg: {mode: 'surface'}}),
+  I(184.1, 'Duas megatteras chegam nadando', [{k: 'water', y: 560}, a('humpback', 400, 780, 1000, {vx: 90}), a('humpback', 1500, 880, 800, {vx: -60, flip: true, phase: 0.3}), a('ice', 1400, 560, 600, {d: 0.6})], {tr: 'whip', bg: {mode: 'surface'}}),
+  I(185.8, 'Megatteras giram, batem a cauda e as nadadeiras (ondas)', [{k: 'water', y: 470}, {k: 'rings', x: 960, y: 480, w: 700, n: 4}, a('humpback', 700, 700, 1000, {pose: -14, amp: 2}), a('humpback', 1400, 820, 800, {flip: true, pose: 10, amp: 2.2}), m('megattera bate la coda', 'LA CODA', 1560, 300, 560, {rot: 3, at: 0.5})], {bg: {mode: 'surface', fx: 1.5}}),
+  I(190.2, 'Orcas se afastando, incomodadas', [a('orca', 960, 540, 800, {vx: -90, flip: true}), a('orca', 1500, 400, 600, {vx: -80, flip: true, phase: 0.3}), a('orca', 1200, 760, 560, {vx: -85, flip: true, phase: 0.6}), {k: 'speed', dir: -1, op: 0.25}]),
+  I(192.3, 'Foca sozinha no gelo, orcas saindo do quadro', [{k: 'water', y: 700}, a('ice', 960, 690, 1000, {d: 0.8}), a('seal', 960, 560, 360, {d: 0.8}), a('orca', 300, 880, 420, {vx: -40, flip: true, op: 0.6})], {bg: {mode: 'surface'}}),
+  CNT(195.1, 'Flash: SECONDA SCENA', {to: 2, label: 'SCENA', dur: 0.2, size: 340}, {tr: 'flash'}),
+  MAP(196.3, 'Mapa da baía de Monterey, Califórnia', {from: [-100, 38, 30], to: [-122, 36.8, 160], pts: [{p: 'monterey', label: 'MONTEREY', at: 0.4}], names: [{p: [-120.4, 37.5], text: 'CALIFORNIA'}]}),
+  I(199.9, 'Baleia-cinzenta com filhote cercada por orcas', [a('greywhale', 700, 540, 1000, {amp: 0.8}), a('greywhale', 1050, 640, 380, {amp: 1, phase: 0.2}), a('orca', 1500, 340, 520, {flip: true, vx: -20}), a('orca', 1500, 800, 480, {flip: true, vx: -22, phase: 0.5}), a('orca', 300, 300, 440, {vx: 18, phase: 0.3})]),
+  I(203.0, 'Filhote cai em cinza, luz apaga', [a('greywhale', 960, 520, 520, {rot: 70, tone: 0.1, vy: 90, amp: 0.1})], {bg: {mode: 'dark', rays: false}, tr: 'dip'}),
+  I(204.3, 'Megatteras ao lado da carcaça', [a('greywhale', 960, 780, 700, {rot: 180, tone: 0.1, op: 0.7, amp: 0}), a('humpback', 520, 480, 900), a('humpback', 1450, 400, 700, {flip: true, phase: 0.4}), m('megattere accanto alla carcassa', 'BAIA DI MONTEREY', 1500, 800, 480, {rot: 3, at: 0.3})]),
+  I(207.1, 'Relógio em timelapse: 6 ore e mezza', [{k: 'clock', x: 960, y: 500, w: 560, dur: 2.6, n: 6.5}], {bg: {mode: 'dark'}}),
+  I(210.1, 'Vídeo real em tela cheia: megattera golpeia com a cauda', [full('megattera colpisce con la coda e le pinne')], {tr: 'flash'}),
+  MAP(213.0, 'Pontos do mapa de Monterey se apagando', {from: [-122, 36.8, 160], to: [-122, 36.8, 175], pts: [{p: 'monterey', label: 'MONTEREY'}], names: [{p: [-120.8, 37.4], text: 'NESSUNO DA SALVARE'}]}, {tr: 'dip'}),
+  I(215.7, 'Escuro; megatteras imóveis ao longe', [a('humpback', 960, 540, 700, {tone: 0.15, amp: 0.3, op: 0.6})], {bg: {mode: 'dark', rays: false}}),
+  I(217.8, 'Ponto de interrogação', [{k: 'qmark', x: 960, y: 520, w: 560}], {bg: {mode: 'dark'}}),
+  I(219.7, 'Megattera com filhote (proteger os pequenos)', [a('humpback', 760, 520, 1100, {amp: 0.7}), a('humpback', 1250, 680, 400, {phase: 0.3, amp: 0.9}), tag('PICCOLO', undefined, 1450, 540, {ax: 1280, ay: 650, at: 0.6})]),
+  I(222.4, 'Megattera em contorno com cicatrizes + cartão de imagem real', [a('humpback', 560, 560, 900, {tone: 0.35}), m('dorso di megattera con cicatrici', 'CICATRICI DI VECCHI ATTACCHI', 1480, 480, 620, {rot: 3})]),
+  I(224.7, 'Vídeo real em tela cheia: dorso de megattera com cicatrizes', [full('dorso di megattera con cicatrici')], {tr: 'flash'}),
+  I(229.1, 'Orca com seta de ida e volta', [a('orca', 960, 540, 1100, {turn: 0.9}), {k: 'arrow', x: 500, y: 850, x2: 1400, y2: 850, size: 14, at: 0.2}]),
+  I(231.0, 'A seta da orca cai para baixo', [a('orca', 960, 540, 1000, {amp: 0.3, pose: 12}), {k: 'arrow', x: 960, y: 200, x2: 960, y2: 850, size: 18, at: 0.1, color: '#D7141A'}], {tr: 'whip'}),
+  {t: 232.3, k: 'scale', v: 'Balança: DISTURBA pesa mais que FERISCE', p: {left: {text: 'DISTURBA', sub: undefined}, right: {text: 'FERISCE'}, tilt: -10, items: []}, bg: {mode: 'dark'}},
+  I(236.6, 'Mergulho em direção ao azul escuro; profundidades passam', [
+    {k: 'floor', y: 800}, a('humpback', 560, 330, 500, {vy: 40, tone: 0.4}), a('sperm', 1500, 800, 380, {tone: 0.1, op: 0.5, vy: -10, d: 0.4}),
+    lbl('200 M', 200, 900, {vy: -150, size: 36}), lbl('500 M', 200, 1500, {vy: -150, size: 36}), lbl('1000 M', 200, 2100, {vy: -150, size: 36, color: '#D7141A'}),
+  ], {bg: {mode: 'dark', fx: 0.4}, tr: 'dip'}),
+  {t: 241.5, k: 'cards', v: 'Carta 02 gira e revela o capodoglio', p: {reveal: 2, animal: 'sperm', name: 'CAPODOGLIO'}, bg: {mode: 'dark'}, tr: 'flash'},
+  {t: 242.4, k: 'chapter', v: 'Cartela de capítulo: NUMERO DUE / IL CAPODOGLIO', p: {num: 'NUMERO DUE', title: 'IL CAPODOGLIO', animal: 'sperm'}, bg: {mode: 'deep'}},
+  MAP(244.3, 'Mapa do Santuário Pelagos (Ligúria, Córsega, Mônaco) com capodoglio', {from: [8, 42, 70], to: [8.8, 43.5, 180], pts: [{p: 'pelagos', label: 'PELAGOS', at: 0.3}], names: [{p: [10.2, 44.4], text: 'LIGURIA'}, {p: [9.1, 42.2], text: 'CORSICA', at: 0.5}, {p: [7.4, 43.8], text: 'MONACO', at: 1.0}], items: [a('sperm', 620, 760, 700, {op: 0.8, vx: 20})]}),
+  I(249.3, 'Capodoglio desce ao abismo atrás de lulas', [{k: 'floor', y: 940}, a('sperm', 760, 480, 1100, {pose: 12, vy: 40}), a('fish', 1500, 800, 200, {tone: 0.2, op: 0.6, vx: -20}), a('fish', 1650, 700, 150, {tone: 0.2, op: 0.5, vx: -25, phase: 0.4}), lbl('CALAMARI', 1550, 900, {size: 32})], {bg: {mode: 'dark', fx: 0.6}}),
+  I(251.7, 'Capodoglio ao lado de uma régua, o gigante da lista', [a('sperm', 1000, 480, 1500), {k: 'ruler', x: 250, y: 830, n: 16, size: 80}, a('human', 190, 700, 60, {h: 144}), {k: 'bracket', x: 250, y: 280, w: 1280, text: 'GIGANTE', at: 0.8}], {tr: 'whip'}),
+  MAP(254.9, 'Mediterrâneo: poucos pontos de orcas', {from: [10, 38, 22], to: [10, 40, 26], pts: [{p: 'pelagos', at: 0.3, label: 'ORCHE: RARE'}], names: [{p: [3, 38], text: 'MEDITERRANEO'}]}),
+  I(257.6, 'Orcas de Gênova fizeram barulho: cartão de imagem real', [m('orche nel porto di Genova (notizie)', 'GENOVA, 2019', 960, 470, 1000, {rot: -2}), a('orca', 300, 800, 480, {op: 0.6, d: 0.5})], {bg: {mode: 'dark'}}),
+  MAP(260.6, 'Mapa-múndi com pontos de encontros documentados', {from: [0, 25, 5], to: [-30, 20, 5.6], pts: [{p: 'californiaoff', label: 'CALIFORNIA'}, {p: 'antartide', at: 0.6}, {p: 'norvegia', at: 1.0}, {p: 'bremer', at: 1.4}, {p: 'islanda', at: 1.8}], names: [{p: [10, -2], text: 'SCONTRI DOCUMENTATI'}]}),
+  I(263.3, 'Vídeo real em tela cheia: confronto orcas e capodogli (arquivo)', [full('orche e capodogli, scontro (archivio)')], {tr: 'flash'}),
+  CNT(265.7, 'Contador 16 M', {to: 16, unit: 'M', dur: 1.2, label: 'CAPODOGLIO MASCHIO', items: [a('sperm', 960, 840, 1200, {op: 0.4, d: 0.5})]}),
+  CNT(267.8, 'Contador 45 T', {to: 45, unit: 'T', dur: 1.2, label: 'PESO', items: [a('sperm', 960, 840, 1200, {op: 0.4, d: 0.5})]}),
+  CNT(269.7, 'Contador 11 T da orca', {to: 11, unit: 'T', dur: 1, label: 'ORCA', items: [a('orca', 960, 840, 900, {op: 0.4, d: 0.5})]}),
+  {t: 271.9, k: 'scale', v: 'Balança: uma orca (11 T) contra um capodoglio (45 T)', p: {left: {k: 'orca', n: 1, w: 380, sub: '11 T'}, right: {k: 'sperm', n: 1, w: 420, sub: '45 T'}, tilt: 16}, bg: {mode: 'dark'}},
+  {t: 274.6, k: 'scale', v: 'Balança: quatro orcas equilibram um capodoglio', p: {left: {k: 'orca', n: 4, w: 230, sub: '4 × 11 T'}, right: {k: 'sperm', n: 1, w: 420, sub: '45 T'}, tilt: 2}, bg: {mode: 'dark'}, tr: 'whip'},
+  {t: 276.9, k: 'daisy', v: 'Margherita vista de cima: capodogli em círculo, orcas girando em volta', p: {n: 8, orcas: 5}, bg: {mode: 'deep', rays: false}, tr: 'flash'},
+  {t: 280.8, k: 'daisy', v: 'Margherita: teste ao centro, caudas para fora, com cartão real', p: {n: 8, orcas: 4, items: [m('capodogli in cerchio', 'LA MARGHERITA', 1560, 260, 520, {rot: 3, at: 0.3}), lbl('TESTE AL CENTRO · CODE FUORI', 960, 1000, {size: 34})]}, bg: {mode: 'deep', rays: false}},
+  {t: 284.8, k: 'daisy', v: 'Parede de caudas: orca encontra a barreira', p: {n: 10, orcas: 3, items: [lbl('UNA PARETE DI CODE', 960, 130, {size: 56, color: '#F2F2F2'})]}, bg: {mode: 'deep', rays: false}},
+  {t: 287.5, k: 'daisy', v: 'Um capodoglio sai do círculo para resgatar um companheiro', p: {n: 8, orcas: 5, rescue: true, items: [{k: 'arrow', x: 960, y: 700, x2: 960, y2: 960, at: 0.5, size: 10}]}, bg: {mode: 'deep', rays: false}, tr: 'whip'},
+  {t: 290.5, k: 'daisy', v: 'Resgate continua: um ou dois capodogli expostos', p: {n: 8, orcas: 6, rescue: true, items: [tag('SI ESPONGONO', undefined, 1560, 980)]}, bg: {mode: 'deep', rays: false}},
+  I(293.4, 'Capodoglio exposto aos ataques das orcas', [a('sperm', 700, 540, 1200, {amp: 1.2}), a('orca', 1500, 340, 520, {flip: true, vx: -30}), a('orca', 1500, 780, 480, {flip: true, vx: -34, phase: 0.4}), {k: 'arrow', x: 1400, y: 540, x2: 1000, y2: 540, size: 12, at: 0.5}]),
+  I(296.3, 'Pranzo di domenica dalla nonna: silhuetas humanas à mesa', [a('human', 560, 700, 70, {h: 300}), a('human', 800, 700, 70, {h: 300, at: 0.3}), a('human', 1040, 700, 70, {h: 300, at: 0.6}), a('human', 1280, 700, 70, {h: 300, at: 0.9}), {k: 'bar', x: 920, y: 800, w: 1000, h: 24, from: 1, to: 1, color: '#3A3A3A'}, lbl('PRANZO DELLA NONNA', 920, 280, {size: 56, color: '#F2F2F2'})], {bg: {mode: 'dark', rays: false}}),
+  I(299.0, 'Um fica para trás, outro volta para buscá-lo', [a('human', 560, 700, 70, {h: 300}), a('human', 800, 700, 70, {h: 300}), a('human', 1650, 700, 70, {h: 300, vx: -80, op: 0.9}), {k: 'arrow', x: 900, y: 500, x2: 1500, y2: 500, size: 10, at: 0.3, color: '#B3B3B3'}, lbl('NESSUNO RESTA INDIETRO', 1100, 260, {size: 48, color: '#F2F2F2'})], {bg: {mode: 'dark', rays: false}}),
+  {t: 302.1, k: 'timeline', v: 'Linha do tempo: ottobre → novembre 1997', p: {from: 1996, to: 1998, mark: 1997, big: 'NOV 1997', marks: [{y: 1996.5, label: ''}]}, bg: {mode: 'dark'}},
+  MAP(304.7, 'Mapa: Farallon, um mês antes', {from: [-123, 37.7, 150], to: [-123.6, 37.5, 200], pts: [{p: 'farallon', label: 'FARALLON · OTTOBRE'}]}),
+  MAP(306.4, 'Mapa: 130 km ao largo da Califórnia', {from: [-122, 37, 60], to: [-124.5, 36.5, 100], pts: [{p: 'californiaoff', label: '130 KM AL LARGO', at: 0.3}], names: [{p: [-121, 38.3], text: 'CALIFORNIA'}]}),
+  CNT(309.2, 'Contador 35 ORCHE', {to: 35, unit: 'ORCHE', dur: 1.0, items: [a('orca', 960, 830, 800, {op: 0.35, d: 0.5})]}),
+  CNT(310.6, 'Contador 9 CAPODOGLI', {to: 9, unit: 'CAPODOGLI', dur: 0.8, size: 300, items: [a('sperm', 960, 830, 900, {op: 0.35, d: 0.5})]}),
+  {t: 312.4, k: 'daisy', v: 'Ondas de ataque: quatro ou cinco orcas', p: {n: 9, orcas: 5, items: [lbl('ONDATE DI 4-5', 960, 110, {size: 56, color: '#D7141A'})]}, bg: {mode: 'deep', rays: false}},
+  {t: 315.4, k: 'daisy', v: 'Colpiscono, si ritirano, tornano', p: {n: 9, orcas: 7, items: [lbl('COLPISCONO · SI RITIRANO · TORNANO', 960, 110, {size: 42})]}, bg: {mode: 'deep', rays: false}, tr: 'whip'},
+  {t: 318.2, k: 'daisy', v: 'Os capodoglios permanecem em círculo', p: {n: 9, orcas: 4, items: [lbl('RESTANO IN CERCHIO', 960, 110, {size: 52, color: '#F2F2F2'})]}, bg: {mode: 'deep', rays: false}},
+  CNT(320.1, 'Contador 4 ORE', {to: 4, unit: 'ORE', dur: 0.8, items: [{k: 'clock', x: 960, y: 820, w: 260, dur: 1.5, n: 4, op: 0.8}]}),
+  CNT(321.8, 'Duas partite e mezza de calcio', {to: 2.5, dec: 1, unit: 'PARTITE', dur: 1.4, label: 'DI CALCIO', items: [m('partita di calcio (stadio)', 'SENZA INTERVALLO', 1530, 300, 520, {rot: 3, at: 0.5})]}),
+  I(325.3, 'Um capodoglio morto e comido (silhueta apagada, cruz vermelha)', [a('sperm', 960, 540, 1100, {tone: 0.15, amp: 0.1, rot: 8}), {k: 'cross', x: 960, y: 540, w: 900, at: 0.5}], {bg: {mode: 'dark'}}),
+  I(328.7, 'Os outros capodoglios feridos', [a('sperm', 620, 480, 800, {tone: 0.3, amp: 0.4}), a('sperm', 1400, 640, 700, {tone: 0.3, amp: 0.4, phase: 0.5, flip: true}), tag('FERITI', undefined, 960, 880)]),
+  I(331.3, 'Não é uma vitória para os capodoglios', [a('sperm', 960, 520, 1200, {amp: 0.4, tone: 0.3}), lbl('NON È UNA VITTORIA', 960, 900, {size: 56, color: '#F2F2F2'})], {bg: {mode: 'dark'}}),
+  I(333.4, 'Recorda o tubarão-branco que some até a temporada seguinte', [a('shark', 700, 520, 1000, {vx: -40, op: 0.8}), {k: 'clock', x: 1500, y: 450, w: 300, dur: 2, n: 1}, m('squalo bianco (archivio)', 'FINO ALLA STAGIONE DOPO', 1500, 800, 480, {rot: -3, at: 0.4})], {tr: 'whip'}),
+  CNT(336.9, 'Contador 35 ORCHE', {to: 35, unit: 'ORCHE', dur: 0.8, items: [a('orca', 960, 830, 800, {op: 0.35, d: 0.5})]}),
+  CNT(338.7, 'Contador 4 ORE: una sola preda', {to: 4, unit: 'ORE', dur: 0.6, label: 'PER UNA SOLA PREDA'}),
+  I(340.9, 'A lógica: se o capodoglio assusta, o número 1 seria maior', [a('sperm', 960, 540, 1100, {amp: 0.4}), {k: 'qmark', x: 1560, y: 300, w: 280}]),
+  I(342.5, 'Silhueta gigante ainda maior em tracejado', [a('sperm', 700, 600, 900, {tone: 0.3}), {k: 'disc', x: 1200, y: 540, w: 900, n: 1, color: '#B3B3B3'}, a('blue', 1260, 540, 1400, {tone: 0.2, op: 0.4, vx: -10, at: 0.5}), lbl('ANCORA PIÙ GRANDE?', 960, 960, {size: 48})], {bg: {mode: 'dark'}}),
+  I(346.7, 'Giusto?', [{k: 'qmark', x: 960, y: 520, w: 600, color: '#B3B3B3'}], {bg: {mode: 'dark', rays: false}}),
+  I(347.6, 'Sbagliato: cruz vermelha sobre a silhueta grande', [a('blue', 960, 520, 1500, {tone: 0.2}), {k: 'cross', x: 960, y: 520, w: 1300, at: 0.2}], {tr: 'flash'}),
+  I(348.7, 'A silhueta encolhe: é muito mais pequeno', [a('sperm', 960, 520, 1500, {scaleTo: 0.3, tone: 0.3}), {k: 'arrow', x: 960, y: 240, x2: 960, y2: 820, at: 0.3, size: 14}]),
+  {t: 351.5, k: 'cards', v: 'Carta 01 gira e revela o globicefalo', p: {reveal: 1, animal: 'pilot', name: 'GLOBICEFALO'}, bg: {mode: 'dark'}, tr: 'flash'},
+  {t: 352.6, k: 'chapter', v: 'Cartela de capítulo: NUMERO UNO / IL GLOBICEFALO', p: {num: 'NUMERO UNO', title: 'IL GLOBICEFALO', animal: 'pilot'}, bg: {mode: 'deep'}},
+  I(354.6, 'Régua: globicefalo de 5–7 m ao lado de dois Panda em fila', [a('pilot', 780, 400, 910, {amp: 0.7}), a('panda', 430, 780, 468), a('panda', 900, 780, 468, {at: 0.3}), {k: 'ruler', x: 320, y: 940, n: 8, size: 130}, {k: 'bracket', x: 325, y: 290, w: 910, text: '5-7 M', at: 0.5}, tag('2 PANDA', undefined, 1500, 780, {at: 0.8})]),
+  CNT(358.0, 'Contador: 1–2 T', {to: 2, unit: 'T', dur: 0.8, label: 'GLOBICEFALO', items: [a('pilot', 960, 830, 800, {op: 0.35, d: 0.5})]}),
+  I(359.7, 'Orca (11 T) ao lado do globicefalo', [a('orca', 800, 440, 1100), a('pilot', 1400, 760, 560, {phase: 0.4}), tag('ORCA', '11 T', 700, 740), tag('GLOBICEFALO', '2 T', 1400, 940)]),
+  I(361.7, 'Eppure...', [{k: 'qmark', x: 960, y: 520, w: 520}], {bg: {mode: 'dark', rays: false}}),
+  I(362.7, 'Lo sapevi? Globicefalo e orca lado a lado', [a('pilot', 600, 540, 700), a('orca', 1350, 540, 860), {k: 'bar', x: 960, y: 800, w: 600, h: 8, from: 1, to: 1, color: '#D7141A'}], {tr: 'whip'}),
+  I(365.6, 'Família dos delfinídeos: golfinho, globicefalo, orca em compacto', [a('dolphin', 400, 600, 520), a('pilot', 960, 600, 640, {at: 0.4}), a('orca', 1530, 600, 780, {at: 0.8}), lbl('DELFINI OCEANICI', 960, 900, {size: 48, color: '#F2F2F2'})]),
+  MAP(369.6, 'Mapa do Mar Ligure e Tirreno setentrionale: avvistamenti', {from: [9, 41, 60], to: [9.5, 43.2, 130], pts: [{p: 'liguria', label: 'MAR LIGURE'}, {p: 'tirreno', label: 'TIRRENO', at: 0.6}], names: [{p: [9.5, 44.4], text: 'ITALIA'}, {p: [9.1, 42.2], text: 'CORSICA'}], items: [a('pilot', 440, 780, 560, {op: 0.85})]}),
+  I(374.0, 'Cartão: avvistamenti pochi', [a('pilot', 600, 560, 900, {amp: 0.6}), m('globicefali nel Mar Ligure', 'POCHI AVVISTAMENTI', 1440, 460, 700, {rot: 3})]),
+  I(376.4, 'Globicefalo em posição vertical (spy-hopping), cabeça fora da água', [{k: 'water', y: 520}, a('pilot', 960, 560, 800, {rot: -80, amp: 0.2, bob: 16}), tag('SPY-HOPPING', undefined, 1500, 360), tag('PELAGOS', undefined, 400, 360)], {bg: {mode: 'surface'}}),
+  I(379.0, 'Vídeo real em tela cheia: globicefali con la testa fuori dall\'acqua', [full('globicefalo in verticale, testa fuori dall\'acqua')], {tr: 'flash'}),
+  MAP(381.8, 'Mapa da Islândia', {from: [-19, 64.8, 70], to: [-19, 64.8, 110], pts: [{p: 'islanda', label: 'ISLANDA'}], names: [{p: [-19, 66.8], text: 'OCEANO ATLANTICO'}]}),
+  {t: 385.0, k: 'timeline', v: 'Linha do tempo 2007–2020: monitoramento na Islândia', p: {from: 2007, to: 2020, mark: 2020, big: '2007 → 2020'}, bg: {mode: 'dark'}},
+  I(387.8, 'O copião se repete: globicefali avançam em grupo', [a('pilot', 500, 520, 700, {vx: 40}), a('pilot', 300, 780, 560, {vx: 38, phase: 0.3}), a('pilot', 250, 330, 500, {vx: 36, phase: 0.6}), a('orca', 1450, 540, 800, {vx: 10, flip: true})]),
+  I(391.6, 'As orcas se afastam; globicefali continuam', [a('orca', 1000, 520, 900, {vx: 70, flip: false, pose: 0}), a('pilot', 1500, 760, 560, {vx: 20, flip: true, d: 0.6}), {k: 'speed', dir: 1, op: 0.3}], {tr: 'whip'}),
+  CNT(394.5, 'Mais de 1 em cada 4 encontros: fuga', {to: 25, unit: '%', dur: 1.2, label: '> 1 INCONTRO SU 4', items: [a('orca', 960, 850, 800, {op: 0.35, d: 0.5})]}),
+  I(397.0, 'Vídeo real em tela cheia: orcas em fuga com saltos', [full('orche in fuga a tutta velocita con salti fuori dall\'acqua (aerea)')], {tr: 'flash'}),
+  I(399.9, 'Gommone ligure em mar aberto, globicefali ao fundo', [{k: 'water', y: 640}, a('gommone', 700, 640, 620, {bob: 14, d: 1.4}), a('pilot', 1400, 780, 600, {d: 0.6}), a('pilot', 1620, 720, 400, {d: 0.4, phase: 0.4, op: 0.7}), m('gommone da Camogli / Sanremo', 'CAMOGLI · SANREMO', 1500, 300, 520, {rot: 3, at: 0.4})], {bg: {mode: 'surface'}}),
+  I(403.9, 'O pequeno contra o rei: grupo de globicefali avança sobre a orca', [a('orca', 1450, 540, 1000, {vx: 50, flip: false, glow: false}), a('pilot', 450, 480, 560, {vx: 60, flip: false}), a('pilot', 260, 700, 460, {vx: 55, phase: 0.4}), a('pilot', 600, 780, 500, {vx: 50, phase: 0.8})]),
+  I(407.9, 'Nessuno si picchia', [a('pilot', 600, 540, 800), a('orca', 1400, 540, 900, {flip: true}), {k: 'cross', x: 960, y: 560, w: 260, at: 0.3}], {bg: {mode: 'dark'}}),
+  I(409.3, 'Nenhum contacto físico evidente: distância entre as silhuetas', [a('pilot', 500, 540, 800), a('orca', 1450, 540, 800, {flip: true}), {k: 'bracket', x: 760, y: 440, w: 430, text: 'NESSUN CONTATTO', at: 0.3}]),
+  I(411.5, 'Orca interrompe a caça: seta riscada', [a('orca', 960, 540, 1100, {vx: -20, flip: true}), a('seal', 400, 700, 240, {tone: 0.3, op: 0.7}), {k: 'cross', x: 500, y: 540, w: 360, at: 0.5}], {tr: 'whip'}),
+  I(414.9, 'Basta que os globicefali se aproximem', [a('pilot', 300, 520, 700, {vx: 60}), a('pilot', 200, 760, 520, {vx: 60, phase: 0.5}), a('orca', 1500, 540, 900, {flip: true, vx: 20})]),
+  I(417.2, 'Ícone de bateria que desce: tempo e energia perdidos', [{k: 'bar', x: 960, y: 520, w: 760, h: 200, from: 1, to: 0.08, dur: 2.6}, {k: 'bar', x: 1370, y: 520, w: 36, h: 90, from: 1, to: 1, color: '#B3B3B3'}, lbl('ENERGIA', 960, 700, {size: 48, color: '#F2F2F2'}), lbl('OGNI CACCIA INTERROTTA', 960, 320, {size: 44})], {bg: {mode: 'dark'}}),
+  I(420.6, 'Os cientistas fazem uma prova: laboratório / altifalante', [a('pilot', 600, 780, 500, {tone: 0.3}), {k: 'label', text: 'ESPERIMENTO', x: 960, y: 220, size: 64, color: '#F2F2F2'}, m('ricercatori in barca con altoparlante', 'ISLANDA', 1450, 520, 700, {rot: -3})]),
+  I(422.7, 'Altifalante submerso: ondas sonoras', [{k: 'rings', x: 400, y: 640, w: 1300, n: 5}, {k: 'tag', name: 'ALTOPARLANTE', x: 400, y: 800}, a('orca', 1450, 480, 800, {flip: true, vx: 10})]),
+  {t: 425.5, k: 'timeline', v: 'Linha do tempo 2021–2023', p: {from: 2021, to: 2023, mark: 2023, big: '2021 → 2023'}, bg: {mode: 'dark'}},
+  CNT(428.5, 'Contador 8 ORCHE com sensor', {to: 8, unit: 'ORCHE', dur: 1, label: 'UN SENSORE CIASCUNA', items: [a('orca', 960, 830, 700, {op: 0.35, d: 0.5}), m('orca con sensore (suction cup)', undefined, 1560, 300, 480, {rot: 3, at: 0.4})]}),
+  CNT(432.9, 'Contador 15 PROVE', {to: 15, unit: 'PROVE', dur: 1.2, label: 'SUONI VERI + CONTROLLO'}),
+  I(436.8, 'Resultado: orcas se afastam em linha reta e se alinham', [a('orca', 400, 400, 520, {vx: 90}), a('orca', 400, 560, 520, {vx: 90, phase: 0.2}), a('orca', 400, 720, 520, {vx: 90, phase: 0.4}), {k: 'arrow', x: 300, y: 900, x2: 1700, y2: 900, size: 14, at: 0.3}, {k: 'speed', dir: 1, op: 0.3}], {tr: 'whip'}),
+  MAP(440.2, 'Gráfico/mapa: rastros em linha reta das orcas', {from: [-19, 64.8, 100], to: [-19, 64.8, 120], pts: [{p: 'islanda', label: 'ISLANDA'}], tracks: [{p: 'islanda', n: 8}], title: 'TRACCIATI DELLE ORCHE'}),
+  I(442.9, 'Sentono só um suono', [{k: 'rings', x: 960, y: 540, w: 800, n: 5}, {k: 'tag', name: 'SOLO UN SUONO', x: 960, y: 540}], {bg: {mode: 'dark'}}),
+  I(444.8, 'E fogem: orca acelera', [a('orca', 960, 540, 1200, {vx: 260, amp: 1.8, freq: 1.5}), {k: 'speed', dir: 1, op: 0.5}], {tr: 'whip'}),
+  I(445.9, 'Como um sonar militar: ping e ondas', [{k: 'rings', x: 960, y: 540, w: 900, n: 5, color: '#D7141A'}, a('pilot', 960, 540, 420, {glow: true}), lbl('COME UN SONAR MILITARE', 960, 900, {size: 48, color: '#F2F2F2'})], {bg: {mode: 'dark'}}),
+  I(448.4, 'Cartão: estudo de playback', [m('esperimento di playback in mare', 'SCIENTIFIC REPORTS', 960, 440, 900, {rot: -2}), lbl('SIMILE A UN SONAR MILITARE', 960, 900, {size: 42, color: '#D7141A'})], {bg: {mode: 'dark'}}),
+  I(451.3, 'Flash: Ma c\'è di più', [{k: 'text', text: 'MA C\'È DI PIÙ', x: 960, y: 520, w: 1400, size: 110}], {tr: 'flash', bg: {mode: 'dark'}}),
+  MAP(452.2, 'Mapa da Noruega', {from: [10, 62, 28], to: [14, 68, 60], pts: [{p: 'norvegia', label: 'NORVEGIA'}], names: [{p: [8, 61], text: 'NORVEGIA'}, {p: [0, 66], text: 'MAR DI NORVEGIA'}]}),
+  I(457.0, 'Sons de orca para os globicefali', [{k: 'rings', x: 220, y: 540, w: 1300, n: 5}, a('orca', 220, 700, 300, {tone: 0.3, op: 0.6}), a('pilot', 1250, 500, 800), a('pilot', 1620, 760, 500, {phase: 0.4})]),
+  I(459.9, 'E eles não fogem', [a('pilot', 960, 540, 1100), {k: 'cross', x: 960, y: 540, w: 500, at: 0.3, color: '#B3B3B3'}, lbl('NON SCAPPANO', 960, 900, {size: 56, color: '#F2F2F2'})], {bg: {mode: 'dark'}}),
+  I(461.4, 'Quatro em cada cinco viram em direção ao altifalante', [a('pilot', 1250, 330, 520, {flip: true, vx: -30}), a('pilot', 1400, 520, 560, {flip: true, vx: -30, phase: 0.2}), a('pilot', 1300, 740, 520, {flip: true, vx: -30, phase: 0.5}), a('pilot', 1550, 880, 400, {flip: true, vx: -30, phase: 0.8}), a('pilot', 1650, 220, 380, {vx: 30, phase: 0.3, op: 0.7}), {k: 'tag', name: 'ALTOPARLANTE', x: 300, y: 540}, {k: 'rings', x: 300, y: 540, w: 700, n: 4}, lbl('4 SU 5', 960, 120, {size: 80, color: '#D7141A'})]),
+  I(466.3, 'O grupo em volta se engrossa', [a('pilot', 500, 520, 600), a('pilot', 960, 440, 620, {phase: 0.2}), a('pilot', 1400, 560, 580, {phase: 0.4}), a('pilot', 700, 800, 480, {at: 0.8, phase: 0.6}), a('pilot', 1200, 820, 440, {at: 1.4, phase: 0.8}), a('pilot', 300, 300, 380, {at: 1.9, phase: 0.1, op: 0.8})]),
+  I(469.3, 'Non scappano', [a('pilot', 960, 540, 1300, {amp: 0.5}), lbl('NON SCAPPANO', 960, 900, {size: 56, color: '#F2F2F2'})], {bg: {mode: 'dark'}}),
+  I(470.6, 'Accorrono: avançam a toda', [a('pilot', 800, 540, 1300, {vx: 120, amp: 1.6, freq: 1.3}), {k: 'speed', dir: 1, op: 0.5}], {tr: 'whip'}),
+  I(472.0, 'E allora perché?', [{k: 'qmark', x: 960, y: 520, w: 620}], {bg: {mode: 'dark', rays: false}}),
+  I(472.9, 'Mobbing: uma coruja em silhueta', [a('owl', 960, 540, 420, {bob: 10}), a('bird', 300, 300, 120, {vx: 40}), lbl('MOBBING', 960, 160, {size: 80, color: '#D7141A'})], {bg: {mode: 'dark'}}),
+  I(475.8, 'Pássaros pequenos cercam a coruja', [a('owl', 960, 560, 380), ...[0, 1, 2, 3, 4, 5].map((i) => a('bird', 960 + Math.cos(i * 1.05) * 420, 520 + Math.sin(i * 1.05) * 260, 170, {phase: i * 0.17, bob: 20, bobf: 2})), m('uccelli che circondano una civetta', 'LA CIVETTA', 1560, 260, 440, {rot: 3, at: 0.4})], {bg: {mode: 'dark'}}),
+  I(478.5, 'Globicefali em volta de uma orca: se radunano e tormentam', [a('orca', 960, 540, 900, {turn: 1.8}), a('pilot', 400, 300, 360, {bob: 20}), a('pilot', 1500, 320, 360, {phase: 0.3, bob: 20}), a('pilot', 380, 800, 360, {phase: 0.5, bob: 20}), a('pilot', 1520, 820, 360, {phase: 0.8, bob: 20})]),
+  {t: 481.3, k: 'study', v: 'Cartão: l\'ipotesi più discussa, ricercatori prudenti', p: {big: 'MOBBING', sub: 'PER ORA: UN\'IPOTESI', author: 'Ricercatori prudenti', year: '', journal: 'Ipotesi non confermata'}, bg: {mode: 'dark'}},
+  I(485.4, 'So cosa stai pensando', [{k: 'qmark', x: 960, y: 520, w: 560, color: '#B3B3B3'}], {bg: {mode: 'dark', rays: false}}),
+  I(487.0, 'Orca grande, rápida, inteligente: três etiquetas', [a('orca', 960, 540, 1300, {glow: true}), tag('PIÙ GROSSE', undefined, 400, 300, {at: 0.3}), tag('PIÙ VELOCI', undefined, 1500, 280, {at: 1.0}), tag('PIÙ INTELLIGENTI', undefined, 960, 900, {at: 1.8})]),
+  I(490.4, 'Perché dovrebbero scappare?', [{k: 'qmark', x: 960, y: 520, w: 700}], {bg: {mode: 'dark', rays: false}}),
+  I(492.1, 'Facciamo due conti', [{k: 'text', text: 'FACCIAMO DUE CONTI', x: 960, y: 520, w: 1500, size: 100}], {tr: 'flash', bg: {mode: 'dark'}}),
+  I(493.4, 'Orca ferida se afasta em mar aberto', [a('orca', 900, 540, 1100, {vx: -40, flip: true, pose: 6, tone: 0.3}), {k: 'disc', x: 1050, y: 560, w: 150, color: '#D7141A', at: 0.6, n: 1}]),
+  I(496.0, 'Lista custo-benefício: caça falhada, risco', [lbl('COSTI', 560, 300, {size: 56, color: '#B3B3B3'}), lbl('BENEFICI', 1360, 300, {size: 56, color: '#B3B3B3'}), lbl('FERITA · CACCIA FALLITA', 560, 460, {size: 38, color: '#D7141A', at: 0.5}), lbl('RISCHIO DI INFEZIONE', 560, 560, {size: 38, color: '#F2F2F2', at: 1.2}), lbl('PASTO FACILE', 1360, 460, {size: 38, color: '#F2F2F2', at: 2}), {k: 'bar', x: 960, y: 700, w: 4, h: 400, from: 1, to: 1, color: '#B3B3B3'}], {bg: {mode: 'dark'}}),
+  {t: 500.1, k: 'scale', v: 'Balança: rischio contra pasto', p: {left: {text: 'RISCHIO', sub: 'GRUPPO CHE SI DIFENDE'}, right: {text: 'PASTO', sub: 'FACILE'}, tilt: -12}, bg: {mode: 'dark'}},
+  I(503.4, 'Grupo que se defende: contas não fecham', [a('pilot', 500, 520, 700), a('pilot', 330, 760, 520, {phase: 0.4}), a('orca', 1450, 540, 800, {flip: true, glow: true}), {k: 'cross', x: 1450, y: 540, w: 360, at: 0.8}], {tr: 'whip'}),
+  I(507.3, 'Tangenziale di Milano: cartão de imagem real', [m('tangenziale di Milano nel traffico', 'TANGENZIALE DI MILANO', 960, 450, 1000, {rot: -2}), a('panda', 380, 880, 360, {vx: 60}), a('panda', 1500, 880, 360, {vx: -60})], {bg: {mode: 'dark'}}),
+  I(509.2, 'Mesmo com razão, se arrisca a lataria, deixa passar', [a('panda', 500, 700, 520, {vx: 90}), a('boat', 1500, 700, 520, {vx: -60, op: 0}), a('orca', 1450, 540, 800, {vx: -70, flip: true}), {k: 'arrow', x: 900, y: 880, x2: 1400, y2: 880, size: 10, at: 0.5, color: '#B3B3B3'}, lbl('LASCI PASSARE', 960, 160, {size: 56, color: '#F2F2F2', at: 1})], {bg: {mode: 'dark', rays: false}}),
+  I(514.1, 'Ma attenzione', [{k: 'text', text: 'MA ATTENZIONE', x: 960, y: 520, w: 1500, size: 110}], {tr: 'flash', bg: {mode: 'dark'}}),
+  I(515.9, 'As orcas não são vigliacche', [a('orca', 960, 540, 1250, {glow: true, amp: 1.2}), lbl('NON SONO VIGLIACCHE', 960, 920, {size: 54, color: '#F2F2F2'})]),
+  I(518.6, 'Scelgono le battaglie: três silhuetas de presas', [a('orca', 400, 560, 700, {glow: true}), a('seal', 1120, 400, 260, {at: 0.4}), a('greywhale', 1400, 700, 600, {at: 0.8}), a('blue', 1450, 380, 800, {at: 1.2, tone: 0.3})], {tr: 'whip'}),
+  I(521.0, 'E a volte scelgono quelle enormi: baleia-azul surge', [a('blue', 1000, 540, 1700, {vx: -20, amp: 0.6, tone: 0.5}), a('orca', 300, 800, 420, {op: 0.8, phase: 0.3})]),
+  MAP(524.4, 'Mapa da Austrália Ocidental: Bremer Canyon', {from: [100, -25, 18], to: [118, -34, 70], pts: [{p: 'bremer', label: 'BREMER CANYON', at: 0.5}], names: [{p: [128, -26], text: 'AUSTRALIA OCCIDENTALE'}, {p: [112, -38], text: 'OCEANO INDIANO', at: 0.6}]}),
+  {t: 527.5, k: 'study', v: 'Cartão de estudo: Totterdell et al., primeiro ataque a uma balenottera azzurra adulta', p: {big: 'BALENOTTERA AZZURRA', sub: 'MARZO 2019', author: 'Totterdell et al.', year: '2022', journal: 'Marine Mammal Science'}, bg: {mode: 'dark'}},
+  CNT(530.5, 'Contador 14 → 50 ORCHE no banquete', {from: 14, to: 50, unit: 'ORCHE', dur: 2.6, label: 'DALL\'INIZIO AL BANCHETTO', items: [a('blue', 960, 850, 1300, {op: 0.3, d: 0.5}), m('orche attorno a una balenottera', 'BREMER CANYON', 1560, 280, 500, {rot: 3, at: 0.5})]}),
+  I(534.9, 'A baleia-azul não consegue: afunda lentamente', [a('blue', 960, 480, 1500, {pose: 14, vy: 25, amp: 0.4, tone: 0.3}), a('orca', 500, 760, 400, {phase: 0.4}), a('orca', 1500, 760, 380, {phase: 0.7, flip: true})], {bg: {mode: 'dark'}, tr: 'dip'}),
+  I(537.0, 'Silhueta humana em um barco', [{k: 'water', y: 700}, a('boat', 960, 660, 700, {bob: 12}), a('human', 960, 480, 60, {h: 190, bob: 12}), lbl('IL NEMICO PIÙ PERICOLOSO', 960, 160, {size: 48, color: '#F2F2F2'})], {bg: {mode: 'surface'}}),
+  I(541.1, 'Non è un cetaceo', [{k: 'text', text: 'NON È UN CETACEO', x: 960, y: 520, w: 1500, size: 100}, a('human', 1700, 700, 40, {h: 120, op: 0.3})], {tr: 'flash', bg: {mode: 'dark'}}),
+  I(542.5, 'Siamo noi: grande silhueta humana', [a('human', 960, 560, 400, {h: 800, scaleTo: 1.08, tone: 0.1}), {k: 'disc', x: 960, y: 200, w: 240, color: '#D7141A', at: 0.5}], {bg: {mode: 'dark'}, tr: 'flash'}),
+  {t: 543.5, k: 'timeline', v: 'Linha do tempo: anos 60 e 70', p: {from: 1960, to: 1975, mark: 1970, big: 'ANNI \'60-\'70', marks: [{y: 1960, label: ''}]}, bg: {mode: 'dark'}},
+  I(546.5, 'Cartão: foto de arquivo das capturas para parques aquáticos', [m('orche catturate, vasche di un parco acquatico (archivio)', 'ANNI SESSANTA-SETTANTA', 960, 470, 1000, {rot: -2})], {bg: {mode: 'dark'}}),
+  MAP(549.5, 'Mapa do noroeste dos EUA', {from: [-110, 42, 30], to: [-124, 47.5, 100], pts: [{p: [-123, 48], label: 'NORD-OVEST USA', at: 0.3}], names: [{p: [-120, 44], text: 'STATI UNITI'}]}),
+  CNT(551.9, 'Contador 45 CATTURATE', {to: 45, unit: 'CATTURATE', dur: 1.2, size: 240, items: [a('orca', 960, 840, 700, {op: 0.35, d: 0.5})]}),
+  CNT(554.4, 'Contador 13 MORTE', {to: 13, unit: 'MORTE', dur: 1.0, label: 'ALMENO', size: 280}),
+  CNT(557.2, 'Contador cai: 74 orche nel 2025', {from: 120, to: 74, unit: 'ORCHE', dur: 2, label: 'LUGLIO 2025', items: [a('orca', 960, 840, 600, {op: 0.3, d: 0.5})]}),
+  MAP(560.9, 'Mapa do Estreito de Gibraltar', {from: [0, 38, 80], to: [-5.6, 36, 200], pts: [{p: 'gibilterra', label: 'GIBILTERRA', at: 0.3}], names: [{p: [-4, 35.1], text: 'MAROCCO'}, {p: [-5, 37.8], text: 'SPAGNA'}], items: [a('orca', 400, 860, 420, {op: 0.8})]}),
+  CNT(564.4, 'Contador: circa 40 orche iberiche', {to: 40, unit: 'ORCHE', dur: 1, label: 'IBERICHE · CIRCA'}),
+  I(566.0, 'Carimbo vermelho IN PERICOLO CRITICO sobre a orca', [a('orca', 960, 700, 900, {tone: 0.3}), {k: 'stamp'}], {bg: {mode: 'dark'}}),
+  I(568.6, 'Poucos filhotes: orcas que diminuem', [a('orca', 500, 540, 700, {amp: 0.5}), a('orca', 1100, 640, 500, {at: 0.8, op: 0.6, phase: 0.3}), a('orca', 1500, 480, 340, {at: 1.6, op: 0.35, phase: 0.6}), lbl('POCHI PICCOLI', 960, 920, {size: 50, color: '#F2F2F2'})]),
+  I(571.6, 'Tonno rosso que some: peixes desaparecem um a um', [a('fish', 400, 400, 420), a('fish', 900, 560, 420, {at: 0.2, phase: 0.2, op: 0.7}), a('fish', 1400, 420, 420, {at: 0.4, phase: 0.4, op: 0.5}), a('fish', 1500, 760, 340, {phase: 0.6, op: 0.3}), tag('TONNO ROSSO', 'SCARSO', 960, 900), m('tonno rosso (pesca)', undefined, 1560, 230, 440, {rot: 3, at: 1})]),
+  I(575.6, 'Cadeia alimentar animada: peixe → foca → orca', [a('fish', 380, 560, 380), {k: 'arrow', x: 600, y: 560, x2: 800, y2: 560, size: 10, at: 0.5, color: '#B3B3B3'}, a('seal', 1000, 560, 380, {at: 0.8}), {k: 'arrow', x: 1220, y: 560, x2: 1400, y2: 560, size: 10, at: 1.5, color: '#B3B3B3'}, a('orca', 1600, 560, 420, {at: 1.8}), lbl('PREDATORE ALL\'APICE', 1600, 760, {size: 30, at: 2})], {bg: {mode: 'dark'}}),
+  I(578.4, 'Cadeia alimentar: o topo some e o equilíbrio muda', [a('fish', 380, 560, 380), a('seal', 1000, 560, 380), a('orca', 1600, 560, 420, {out: 1.4, tone: 0.3}), {k: 'cross', x: 1600, y: 560, w: 360, at: 1.4}, m('foche e pesci grandi (archivio)', 'L\'EQUILIBRIO DEL MARE', 960, 220, 500, {rot: -2, at: 0.2})], {bg: {mode: 'dark'}}),
+  I(581.5, 'Orca some devagar, o mar muda', [a('orca', 960, 540, 1200, {op: 0.55, tone: 0.2, amp: 0.4})], {bg: {mode: 'dark'}}),
+  I(585.1, 'E non sempre in meglio', [a('orca', 960, 540, 1200, {op: 0.2, tone: 0.1, amp: 0.2})], {bg: {mode: 'dark', rays: false}, tr: 'dip'}),
+  I(586.7, 'Volta ao porto de Prà ao amanhecer (cartão de imagem real)', [m('porto di Prà all\'alba, silenzio', 'PRÀ, ALL\'ALBA', 960, 470, 1100, {rot: -1}), a('orca', 400, 860, 380, {op: 0.5, amp: 0.3})], {bg: {mode: 'dark'}}),
+  I(588.7, 'O filhote, longe de casa', [a('orca', 800, 540, 1000, {amp: 0.3, freq: 0.3, tone: 0.3}), a('orca', 1380, 700, 340, {amp: 0.3, freq: 0.3, tone: 0.2, op: 0.5})], {bg: {mode: 'dark'}}),
+  I(592.0, 'O rei do mar foge de um globicefalo', [a('orca', 1200, 540, 1000, {vx: 70, flip: false}), a('pilot', 500, 560, 600, {vx: 50}), {k: 'speed', dir: 1, op: 0.3}], {tr: 'whip'}),
+  {t: 593.9, k: 'end', v: 'Tela final: slogan, áreas de vídeo recomendado e inscrição', bg: {mode: 'dark'}},
+];
+
+export const TEXTS: TextDef[] = [
+  {t: 11.8, d: 2.5, s: 'NESSUNO TI DÀ LA *CACCIA*', pos: 't'},
+  {t: 14.8, d: 2.4, s: 'EPPURE *SCAPPI*', pos: 't'},
+  {t: 19.5, d: 3.4, s: 'GENOVA, DICEMBRE *2019*'},
+  {t: 40.8, d: 3.0, s: 'LA MADRE NON LO *LASCIA*'},
+  {t: 47.8, d: 2.5, s: '5.000 *KM* DALL\'ISLANDA', pos: 't'},
+  {t: 56.8, d: 3.6, s: 'SOLO TRE *ANIMALI*', pos: 't'},
+  {t: 67.0, d: 2.4, s: 'LO SQUALO *BIANCO*?'},
+  {t: 70.3, d: 2.0, s: 'LO SQUALO BIANCO? *NO*', pos: 't'},
+  {t: 72.7, d: 3.4, s: '1997: UN ATTACCO. *TUTTI VIA.*', pos: 't'},
+  {t: 98.0, d: 2.6, s: 'SOLO IL *FEGATO*', pos: 't'},
+  {t: 109.2, d: 1.8, s: 'LO SQUALO FA I *CONTI*', pos: 't'},
+  {t: 116.6, d: 3.8, s: 'DIMENSIONI. ORGANIZZAZIONE. *TESTARDAGGINE.*', pos: 't', size: 62},
+  {t: 125.0, d: 2.4, s: 'NON HA *SENSO*', pos: 't'},
+  {t: 128.9, d: 2.2, s: 'QUANDO SENTE UN ATTACCO: *ARRIVA*', pos: 't', size: 64},
+  {t: 136.8, d: 3.2, s: '115 INCONTRI. 56 ATTACCHI.', pos: 't', size: 62},
+  {t: 144.0, d: 3.0, s: 'PIÙ DELLA METÀ: *INTERVENGONO*', pos: 't', size: 66},
+  {t: 162.0, d: 3.0, s: '89%: *DIFENDONO* ALTRI', pos: 't'},
+  {t: 171.0, d: 3.2, s: '18 METRI. UN AUTOBUS *SNODATO*', pos: 't', size: 64},
+  {t: 185.6, d: 3.6, s: 'ANTARTIDE: LA FOCA SI *SALVA*', pos: 't', size: 66},
+  {t: 207.4, d: 2.6, s: '6 ORE E *MEZZA*', pos: 't'},
+  {t: 219.9, d: 4.8, s: 'RESTANO. ANCHE SENZA NESSUNO DA *SALVARE*', pos: 't', size: 54},
+  {t: 232.6, d: 3.6, s: 'DISTURBA. *NON FERISCE.*', pos: 't'},
+  {t: 277.0, d: 3.6, s: 'LA *MARGHERITA*', pos: 't'},
+  {t: 287.7, d: 5.4, s: 'NESSUNO RESTA *INDIETRO*', pos: 't'},
+  {t: 309.3, d: 3.0, s: '35 ORCHE. 9 CAPODOGLI.', pos: 't'},
+  {t: 320.3, d: 3.4, s: '4 ORE. *UNA SOLA PREDA.*', pos: 't'},
+  {t: 348.8, d: 2.4, s: 'È *PIÙ PICCOLO*', pos: 't'},
+  {t: 354.8, d: 3.0, s: '7 METRI vs 10 METRI', pos: 't'},
+  {t: 365.8, d: 3.6, s: 'UN *CUGINO* PIÙ PICCOLO', pos: 't'},
+  {t: 388.0, d: 3.5, s: 'I GLOBICEFALI SI *AVVICINANO*', pos: 't', size: 66},
+  {t: 391.8, d: 2.6, s: 'LE ORCHE *SE NE VANNO*', pos: 't'},
+  {t: 404.0, d: 3.8, s: 'IL PICCOLO CONTRO IL *RE*', pos: 't'},
+  {t: 409.4, d: 4.6, s: 'NESSUN CONTATTO. BASTA *AVVICINARSI.*', pos: 't', size: 62},
+  {t: 442.9, d: 3.6, s: 'SOLO UN SUONO. *FILANO VIA.*', pos: 't'},
+  {t: 452.6, d: 3.6, s: 'NORVEGIA: *ACCORRONO*', pos: 't'},
+  {t: 472.9, d: 4.2, s: 'MOBBING: LA *CIVETTA* DEL MARE', pos: 'b', size: 64},
+  {t: 487.4, d: 3.0, s: 'PERCHÉ *SCAPPANO*?', pos: 't'},
+  {t: 493.6, d: 2.6, s: 'UNA FERITA NON SI *CURA*', pos: 't'},
+  {t: 524.8, d: 4.6, s: '2019: UNA *BALENOTTERA* AZZURRA', pos: 't', size: 66},
+  {t: 541.2, d: 1.8, s: 'IL NEMICO PIÙ PERICOLOSO: *NOI*', pos: 't', size: 62},
+  {t: 552.2, d: 3.6, s: '45 CATTURATE. 2025: *74*', pos: 't'},
+  {t: 561.0, d: 3.4, s: 'ORCHE IBERICHE: CIRCA *40*', pos: 't'},
+  {t: 581.8, d: 3.0, s: 'SE SPARISCONO, IL MARE *CAMBIA*', pos: 't', size: 62},
+  {t: 595.0, d: 3.4, s: 'DAVANTI A NOI, NON HA *DOVE ANDARE*', pos: 't', size: 56},
+  {t: 598.9, d: 6.0, s: 'SCRIVILO NEI *COMMENTI*', pos: 't', size: 64},
+];
+
+// Cartões extras de imagem real (placeholders até as mídias chegarem em public/assets)
+const EXTRA: Record<number, [string, string | undefined]> = {
+  7.3: ['branco di orche in caccia', 'IN BRANCO'], 14.5: ['orca che vira e si allontana', undefined], 29.5: ['gruppo di orche nel porto', 'QUATTRO O CINQUE'],
+  31.8: ['orca con cucciolo (archivio)', 'CUCCIOLO'], 38.0: ['madre e cucciolo di orca', undefined], 53.4: ['orca che si allontana (aerea)', 'IL RE DEL MARE'],
+  66.9: ['squalo bianco in nuoto', 'SQUALO BIANCO'], 76.7: ['orche e squalo bianco, Farallon', undefined], 109.0: ['squalo bianco che si allontana', undefined],
+  125.0: ['megattera in superficie', undefined], 128.5: ['megattera che si gira verso il suono', undefined], 131.3: ['megattera in corsa', undefined],
+  199.9: ['balena grigia con piccolo, Monterey', 'MONTEREY, 2012'], 229.1: ['orca in caccia', undefined], 249.3: ['capodoglio in immersione', 'NELL\'ABISSO'],
+  293.4: ['capodogli attaccati dalle orche', undefined], 387.8: ['globicefali che si avvicinano alle orche', 'ISLANDA'], 391.6: ['orche che si allontanano', undefined],
+  403.9: ['globicefali in gruppo', undefined], 414.9: ['globicefali vicino alle orche', undefined], 436.8: ['orche in fuga in linea retta', undefined],
+  457.0: ['globicefali ascoltano suoni di orche', 'NORVEGIA'], 461.4: ['globicefali verso l\'altoparlante', undefined], 487.0: ['orca in caccia, close-up', undefined],
+  515.9: ['orca al banchetto', undefined], 521.0: ['balenottera azzurra (aerea)', 'LA PIÙ GRANDE'], 568.6: ['orche iberiche', 'GIBILTERRA'],
+  588.7: ['orche di Genova', 'GENOVA, 2019'], 592.0: ['globicefalo e orca', undefined], 3.4: ['orca vicino a una barca', 'IN SCALA'],
+};
+SCENES.forEach((s) => {
+  const e = EXTRA[s.t];
+  if (e && s.k === 'items' && !(s.items ?? []).some((i) => i.k === 'media' || i.k === 'full')) {
+    s.items = [...(s.items ?? []), m(e[0], e[1], 1560, 360, 560, {rot: s.t % 2 ? 3 : -3, at: 0.35})];
+  }
+});
+
+// ---------------------------------------------------------------------------
+// LAYOUT: quando há cartão, o conteúdo vai para o lado oposto (zona esquerda) e
+// o cartão fica na zona direita livre. Textos: um só por zona, o anterior sai antes.
+// ---------------------------------------------------------------------------
+const LAYOUT_UNTIL = 65;
+const CARD_X = 1500, CARD_Y = 590, CARD_W = 640, F = 0.6;
+const SCALED_W = ['orca', 'sperm', 'humpback', 'pilot', 'shark', 'seal', 'blue', 'dolphin', 'fish', 'greywhale', 'bus', 'panda', 'boat', 'gommone', 'ice', 'crane', 'ship', 'owl', 'bird', 'condo', 'clock', 'bar', 'rings', 'disc', 'bracket', 'qmark', 'text', 'ruler'];
+const relayout = (list: Item[]): Item[] =>
+  list.map((it) => {
+    if (it.k === 'media') return {...it, x: CARD_X, y: CARD_Y, w: CARD_W, rot: it.rot ?? 2, d: 1.0};
+    if (['speed', 'water', 'floor', 'shade', 'full'].includes(it.k)) return it;
+    const o: Item = {...it};
+    if (o.x !== undefined) o.x = o.x * F;
+    if (o.x2 !== undefined) o.x2 = o.x2 * F;
+    if (o.ax !== undefined) o.ax = o.ax * F;
+    if (o.vx !== undefined) o.vx = o.vx * F;
+    if (SCALED_W.includes(o.k)) {
+      if (o.w !== undefined) o.w = o.w * F;
+      if (o.h !== undefined && o.k !== 'bar') o.h = o.h * F;
+      if (o.k === 'ruler' && o.size) o.size = o.size * F;
+      if (o.k === 'text' && o.size) o.size = o.size * 0.8;
+    }
+    return o;
+  });
+SCENES.forEach((s) => {
+  if (s.t >= LAYOUT_UNTIL) return;
+  if (s.k === 'items' && (s.items ?? []).some((i) => i.k === 'media')) s.items = relayout(s.items!);
+  if (s.k === 'counter' && s.p?.items?.some((i: Item) => i.k === 'media')) {
+    s.p.items = relayout(s.p.items);
+    s.p.shiftX = -330;
+  }
+});
+// textos: sem sobreposição temporal
+TEXTS.sort((a, b) => a.t - b.t);
+for (let i = 0; i + 1 < TEXTS.length; i++) {
+  const gap = TEXTS[i + 1].t - 0.12;
+  if (TEXTS[i].t + TEXTS[i].d > gap) TEXTS[i].d = Math.max(0.8, gap - TEXTS[i].t);
+}
