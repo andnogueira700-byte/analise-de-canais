@@ -178,3 +178,66 @@ O "monstro" é o ambiente, e o vídeo percorre o que te mataria ali, do menos ao
 3. Definir a identidade visual própria (cor de destaque e figura humana) e fazer 3 thumbnails de teste.
 4. Escrever o primeiro roteiro seguindo os 12 blocos.
 5. Publicar 5 vídeos antes de julgar: no Depth Theory, o estouro veio no segundo.
+
+## 8. Validação das ideias 1 e 3 (inglês, 10/11/2026)
+
+Fonte: vidIQ (vídeos acima da média do canal, últimos 3 a 12 meses, e pesquisa de palavra-chave). O Dotti Finder estava no limite diário.
+
+### Ideia 1 — Animais individuais que caçaram gente
+
+Veredito: **demanda comprovada, pouca concorrência dedicada, resultado irregular.**
+
+Vídeos que estouraram em canais pequenos:
+
+| Vídeo | Canal (inscritos) | Views |
+|---|---|---|
+| [This Crocodile Killed 300 People — Gustave](https://www.youtube.com/watch?v=kL-jAm_2x48) | The Timeline (5,5 mil) | 810 mil |
+| [The Sloth Bear of Mysore](https://www.youtube.com/watch?v=pU5NaHMWFhI) | The New Window (2,9 mil) | 196 mil |
+| [The Crocodile That Killed Hundreds — Gustave](https://www.youtube.com/watch?v=7tpPDr7nnU4) | Whata Life (1,1 mil) | 189 mil |
+| [The Bellundur Ogre](https://www.youtube.com/watch?v=6ScjahnkINM) (1h22) | Tanner Streeter (2,6 mil) | 167 mil |
+| [The Man-Eater With 133 Kills](https://www.youtube.com/watch?v=OdChfRHc8AQ) (podcast) | Wild Times Podcast (518 mil) | 338 mil |
+| [The Gun That Killed the Champawat Tiger](https://www.youtube.com/watch?v=O0RfQ8modzk) | Beans & Ballistics (3,7 mil) | 35 mil |
+| [The Only Four Animals That Hunt Humans](https://www.youtube.com/watch?v=JF2Ty1IOYWA) | BeyondTheGreen (74 mil) | 3,9 mi |
+
+Único canal dedicado ao formato curto que encontrei: [Whata Life](https://www.youtube.com/channel/UCUZfuxXFROxtUupzygwgbPw), 1,1 mil inscritos, 9 vídeos de animais devoradores desde julho. Dois renderam (189 mil e 23 mil); os outros sete ficaram entre 92 e 1,8 mil (Tsavo 1,3 mil, Champawat 1,3 mil, Rudraprayag 272, Panar 165, Gévaudan 92).
+
+Quem mais ocupa o tema, em outros formatos:
+
+- Audiolivros longos de caçadores (Jim Corbett, Kenneth Anderson): [Meridian Audiobooks](https://www.youtube.com/channel/UCX8KvZqCYaYUu5Qb4_I_ZZQ), [Kenneth Anderson](https://www.youtube.com/channel/UC96owW4WlyrHEGiAsCbs8Rw). 10 a 60 mil por vídeo.
+- Ataques modernos a pessoas: [Animal Encounters](https://www.youtube.com/channel/UCE8mjWSpn7b5h_Q2giNIW7Q) (59 mil inscritos), [Apex Predators](https://www.youtube.com/channel/UC8UsFJbMqqIGK5eMxOs6kRQ) (93 mil), [Grizzly Tales](https://www.youtube.com/channel/UCGtigZksB1b_mKXKz8CQ7fA) (37 mil).
+- Podcasts: Tooth & Claw, Wild Times.
+
+Pontos de atenção:
+
+- Busca direta é pequena ("champawat tiger" cerca de 7,8 mil buscas/mês; "man eating tiger" abaixo de 750). O tema vive de recomendação, então thumbnail e título decidem.
+- As buscas de tigre vêm muito de Índia, Vietnã e Bangladesh, que pagam menos por view. Os casos de crocodilo e de África foram os que mais renderam.
+- Estoque de casos famosos é limitado (30 a 40).
+
+### Ideia 3 — Quem o predador teme, em terra
+
+Veredito: **demanda comprovada, mas já tem dono e o entorno está lotado.**
+
+O [BeyondTheGreen](https://www.youtube.com/channel/UCKjRbFbTtetc-bQ5sztC4aA) (74 mil inscritos) faz exatamente isso desde abril:
+
+| Vídeo | Views |
+|---|---|
+| Why Apex Predators Are Still Afraid of Crows | 638 mil |
+| Why Eagles are Terrified of Crows | 427 mil |
+| Why Wolves are Terrified of Moose | 185 mil |
+| Why Gorillas are Terrified of Leopards | 146 mil |
+| Why Lions are Afraid of Honey Badgers | 122 mil |
+| Why Do Elephants Always Run Away From Bees? | 41 mil |
+
+Canais pequenos que tentaram a mesma moldura não saíram do lugar: [The New Window](https://www.youtube.com/channel/UCUjDQ_Jdm2Hsfznjs673u5A) fez 1,8 mil com "The Only Animal in South America That Can Make a Jaguar Back Down"; [Animals Made Us](https://www.youtube.com/channel/UCf15kbNe0aVbj39o51aAVeA) fez 2,6 mil com o texugo-do-mel.
+
+O entorno (leão, hiena, texugo-do-mel, hipopótamo, crocodilo) está tomado por dezenas de canais de compilação com imagens de IA, no estilo "X vs Y" e "caught on camera". Só o texugo-do-mel apareceu em mais de 25 vídeos acima da média em 6 meses.
+
+Estoque de temas também é curto (cerca de 20 pares predador/animal temido).
+
+### Achado extra
+
+A moldura mais forte do BeyondTheGreen hoje não é nenhuma das duas: é "Why We Can't Truly Explore the Deep [lugar]" (Congo 2,4 mi, Amazônia 2,1 mi, Madagascar 472 mil, Groenlândia 375 mil, China 330 mil). Isso reforça a ideia 2 (lugares em vez de animais).
+
+### Recomendação
+
+Ideia 1, com o sistema de thumbnail e roteiro do Depth Theory. Começar pelos casos de crocodilo e África, que foram os que mais renderam, e deixar os tigres e leopardos da Índia para depois.
