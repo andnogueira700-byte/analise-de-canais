@@ -241,3 +241,72 @@ A moldura mais forte do BeyondTheGreen hoje não é nenhuma das duas: é "Why We
 ### Recomendação
 
 Ideia 1, com o sistema de thumbnail e roteiro do Depth Theory. Começar pelos casos de crocodilo e África, que foram os que mais renderam, e deixar os tigres e leopardos da Índia para depois.
+
+## 9. Ideia dos lugares — análise completa (inglês, 10/11/2026)
+
+Fonte: vidIQ (vídeos acima da média do canal, últimos 3 a 6 meses) e thumbnails lidas direto do YouTube. Os créditos do vidIQ acabaram no meio e o Dotti Finder seguia no limite diário, então ficaram sem checar: o roteiro do BeyondTheGreen (sem transcrição), o país do público e a concorrência dos lugares ainda não usados.
+
+Veredito: **é a ideia com mais demanda das três, e a única em que canais pequenos copiando também estouram.** Em troca, é a que está enchendo mais rápido.
+
+### Quem criou a onda: BeyondTheGreen (74 mil inscritos)
+
+Canal: https://www.youtube.com/channel/UCKjRbFbTtetc-bQ5sztC4aA
+
+| Vídeo | Views | Data |
+|---|---|---|
+| Why We Can't Truly Explore the Deep Congo Jungle | 2,45 mi | 14/09 |
+| Why We Can't Truly Explore the Deep Amazon | 2,15 mi | 06/08 |
+| Why We Can't Truly Explore Deep Madagascar | 472 mil | 23/09 |
+| Why We Can't Truly Explore Inner Greenland | 375 mil | 26/10 |
+| Why We Can't Truly Explore Deep China | 331 mil | 01/11 |
+| Why We Can't Truly Explore the Deep Sahara Desert | 246 mil | 08/10 |
+| Nothing About the Deep Amazon Rainforest is Normal | 180 mil | 14/10 |
+| Why We Can't Truly Explore the Antarctic Desert | 126 mil | 17/10 |
+| Why We Can't Truly Explore The Darien Gap | 86 mil | 07/11 (3 dias) |
+
+- Posta a cada 3 dias, vídeos de 15 a 29 minutos.
+- Alterna "lugar" com "animal", mas os lugares rendem bem mais.
+- Thumbnail: mesmo sistema do Depth Theory. Fundo preto, animal em preto e branco de frente com **olhos brancos brilhando**, e o texto **"DON'T GO IN."** em duas linhas, a segunda em vermelho. O texto é igual em todos; só muda o animal, que identifica o lugar (cobra = Amazônia, leopardo = Congo, urso polar = Groenlândia, escorpião = Saara).
+
+### Canais pequenos que copiaram e estouraram
+
+| Vídeo | Canal (inscritos) | Views |
+|---|---|---|
+| [Why We Can't Truly Explore the Deep Amazon.](https://www.youtube.com/watch?v=sV7PjOuPle0) | AbyssLab (6,2 mil) | 848 mil |
+| [Why the Congo Basin Is Still Off Limits to Humans](https://www.youtube.com/watch?v=UdQr0HaIAB8) | IntoTheGreen (2,1 mil) | 741 mil em 2 semanas |
+| [The Most Dangerous River on Earth?](https://www.youtube.com/watch?v=iNN05CHXvUs) | MystiHaq (520) | 650 mil |
+| [Why The Darien Gap Is More Dangerous Than The Amazon](https://www.youtube.com/watch?v=Zxn1h4zzAkY) | Real Destination (7,1 mil) | 325 mil |
+| [Nothing About the Amazon Rainforest is Normal](https://www.youtube.com/watch?v=ZsrR81hz1fU) | Amazon Archives (6 mil) | 288 mil |
+| [Why Nobody Wants to Enter These Parts of the Amazon](https://www.youtube.com/watch?v=q17BoNDfw5w) | CreatureCam (1,4 mil) | 275 mil |
+| [9 Places Inside the Amazon That Even Locals Refuse to Enter](https://www.youtube.com/watch?v=h19jX-pnAQA) | RACHEL FINN (2,4 mil) | 265 mil |
+| [Why the Papuan Jungle is Deadlier Than the Congo](https://www.youtube.com/watch?v=E5OAFYtvm-Q) | The Animals World (2,3 mil) | 198 mil |
+| [The Parts of the Congo That Don't Let You Back Out](https://www.youtube.com/watch?v=iozTE3qWgV8) | CreatureCam (1,4 mil) | 168 mil |
+| [The Amazon Gets More Dangerous the Deeper You Go](https://www.youtube.com/watch?v=o3SPFWmJ6S0) | Earth Discovery (1,6 mil) | 144 mil |
+| [Why We Can't Truly Explore the Deep New Guinea](https://www.youtube.com/watch?v=ycXshh2VyMU) | Dark Creatures (16,8 mil) | 104 mil |
+| [The Most Dangerous Place on Earth (Congo Basin)](https://www.youtube.com/watch?v=MAhPikJ8bTE) | Dafakt (171) | 54 mil |
+
+Versão oceano da mesma moldura: BeyondTheBlue, Mariana Trench (1,7 mi); LetsGoSwimmin', Blue Hole (1 mi, canal de 18 mil); Squidium, segunda fossa mais funda (113 mil, canal de 4,5 mil).
+
+Também houve quem não saiu do lugar: GeoFortune World (1,1 mil views), Lethal Planet (3,5 mil), En Wildlife (1,9 mil), The Sleepy Geographer (6 mil).
+
+### O que isso mostra
+
+- **Quem puxa a view é o lugar, não a frase do título.** Pelo menos 6 molduras diferentes funcionaram: "Can't Truly Explore", "Still Off Limits to Humans", "Deadlier Than [outro lugar]", "Don't Let You Back Out", "Nobody Wants to Enter", "Gets More Dangerous the Deeper You Go". Dá para ter título próprio.
+- **A comparação entre lugares é uma moldura forte**: 3 canais pequenos diferentes passaram de 160 mil com "X é mais mortal que Y".
+- **Amazônia e Congo já estão batidos** (10+ vídeos cada na amostra). Fossa das Marianas também.
+- **Lugares com poucos vídeos e que renderam**: Nova Guiné (2 vídeos, 198 mil e 104 mil), Darién (2 vídeos), Madagascar, Groenlândia, Saara, interior da China.
+- **Lugares dos EUA** tiveram um sinal: "13 Most Dangerous Animals in the Louisiana Bayou" fez 121 mil no Wild States (16,6 mil inscritos). Público americano paga mais por view, mas é um vídeo só como evidência.
+
+### Riscos
+
+- Entrada rápida de concorrentes: a maioria dos canais da tabela tem menos de 4 meses nesse tema.
+- Estoque: lugares famosos são uns 40 a 60. Dá para esticar com sub-regiões, rios, cavernas, ilhas e comparações.
+- Muitos concorrentes usam imagem de IA; os que mais renderam por inscrito têm roteiro mais longo (17 a 35 minutos). Vídeo de 8 minutos aqui é exceção.
+
+### Como juntar com a ideia 1
+
+O vídeo de lugar aceita a história do animal devorador como bloco de "caso real": Sundarbans (tigres), lago Tanganica e rio Ruzizi (Gustave), Tsavo (leões), Kumaon (Champawat), Hokkaido (urso de Sankebetsu). Assim o canal usa a demanda maior dos lugares e não depende do estoque curto de devoradores.
+
+### Lugares a validar antes de produzir (não checados)
+
+Bornéu, taiga siberiana, Sundarbans, Outback australiano, Kamchatka, Pantanal, Okavango, Everglades, Gobi, tepuis da Venezuela, Costa dos Esqueletos, depressão de Danakil, Alasca interior, Tsingy de Madagascar.
