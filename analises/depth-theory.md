@@ -310,3 +310,82 @@ O vídeo de lugar aceita a história do animal devorador como bloco de "caso rea
 ### Lugares a validar antes de produzir (não checados)
 
 Bornéu, taiga siberiana, Sundarbans, Outback australiano, Kamchatka, Pantanal, Okavango, Everglades, Gobi, tepuis da Venezuela, Costa dos Esqueletos, depressão de Danakil, Alasca interior, Tsingy de Madagascar.
+
+## 10. Checagem dos lugares candidatos e plano recomendado (10/11/2026)
+
+Fonte: busca direta no YouTube em inglês (EUA), filtro "este ano" e "este mês", ordenado por views. Essa busca não mostra inscritos dos canais.
+
+### Correção da seção 9
+
+A seção 9 olhou só para os vídeos que estouraram. A busca direta mostra o outro lado: o título "Why We Can't Truly Explore…" **também já foi copiado em massa**, e a maioria das cópias ficou abaixo de 1 mil views. Quem rende com ele são poucos canais (AbyssLab/Apex Fauna, SupremeSpecies, Dark Creatures, CurioStick, Snoozy Science).
+
+### Lugares candidatos, um por um
+
+| Lugar | Vídeos com esse título | Melhor resultado | Resto |
+|---|---|---|---|
+| Taiga siberiana | 8+ | 192 mil (AbyssLab) | 57 mil, 24 mil, depois abaixo de 2,3 mil |
+| Nova Guiné | 9+ | 104 mil (Dark Creatures) | 71 mil, 63 mil, 12 mil, 12 mil, depois abaixo de 2 mil |
+| Pantanal | 4 | 79 mil (SupremeSpecies) | abaixo de 600 |
+| Bornéu | 5+ | 54 mil (vídeo de 2h para dormir) | abaixo de 600 |
+| Interior do Alasca | 5 | 38 mil (Dark Creatures) | 19 mil, 4 mil, 1 mil |
+| Danakil | 2 | 8,5 mil (AbyssLab) | abaixo de 70 |
+| Sundarbans | 5 | 364 | todos abaixo de 400 |
+| Kamchatka | 1 | 679 | — |
+| Outback australiano | 1 | 584 | — |
+| Tepuis da Venezuela | 2 | 207 | — |
+| Costa dos Esqueletos | 2 | 133 | — |
+| Tsingy / Madagascar | 3 | 140 | — |
+| Okavango, Everglades, Gobi | 0 | — | — |
+
+Leitura:
+
+- Lugar famoso rende, mas já tem fila. Lugar pouco conhecido está vazio porque rende pouco: o AbyssLab fez 848 mil com a Amazônia e 8,5 mil com Danakil.
+- Sundarbans foi tentado 5 vezes com esse título e não passou de 400 views.
+- Três casos, mesma regra: "Never Want To Meet", "Can't Truly Explore" e "Lake Superior Is WAY More Dangerous" — quem copiou o título exato depois do original quase sempre ficou no zero.
+
+### Nichos novos testados (este mês)
+
+| Nicho | Sinal |
+|---|---|
+| Espaço ("Why You'd Never Survive/Land on Venus") | 6+ cópias, todas abaixo de 310 views |
+| Idade Média ("Why You'd Never Survive…") | 8+ cópias, todas abaixo de 730 |
+| Doenças (raiva) | nada relevante no mês |
+| Profissões perigosas | nada relevante no mês |
+| Tornado, Everest | 1–2 cópias, abaixo de 100 |
+| Monte Kailash | 1 vídeo de 113 mil e 8 cópias abaixo de 6 mil |
+| **Lugares perigosos dos EUA** | vários canais diferentes acima de 50 mil (abaixo) |
+
+### O nicho que apareceu: lugares perigosos dos EUA
+
+| Vídeo | Canal | Views | Idade |
+|---|---|---|---|
+| Michigan's Upper Peninsula Is More Dangerous Than You Think | Odd Atlas Files | 320 mil | 1 mês |
+| Lake Superior Is Hiding Something Nobody Talks About | The Hidden States | 277 mil | 4 meses |
+| Lake Superior Is WAY More Dangerous Than People Think | Odd Atlas Files | 242 mil | 3 semanas |
+| 13 Most Dangerous Animals in the Great Lakes | CuddleBeaks | 179 mil | 3 meses |
+| Michigan Is Hiding Something Nobody Talks About | Odd Atlas Files | 139 mil | 2 meses |
+| 9 Appalachian Waters You Should NEVER Swim In | Omer Crum | 132 mil | 3 semanas |
+| 13 Most Dangerous Animals in the Louisiana Bayou | Wild States | 121 mil | 2 meses |
+| Duluth Is Hiding Something More Dangerous Than You Think | Odd Atlas Files | 96 mil | 2 semanas |
+| Why the Pacific Crest Trail Is More Dangerous Than You Think | After Hours Archive | 56 mil | 2 semanas |
+| Why We Can't Truly Explore Alaska's Interior | Dark Creatures | 38 mil | 2 meses |
+
+- Os vídeos desses canais são longos (25 a 58 minutos) e em tom de documentário.
+- Não encontrei ninguém fazendo esse tema no formato do Depth Theory (10 a 15 minutos, segunda pessoa, "o que você faria?", thumbnail de gravura).
+- Também tem fracasso: Illinois (999 views) e Colorado River (1,4 mil) nos mesmos canais.
+- Público provavelmente americano, que costuma pagar mais por view. É inferência pelo tema, não medi.
+
+### Plano recomendado
+
+Canal em inglês sobre **lugares selvagens dos EUA, em segunda pessoa**: o que acontece com você naquele lugar.
+
+- Moldura de título própria a validar: "How Long You'd Last In [lugar]" (a base é o vídeo de 12 mi do Fossil, aplicada a lugares atuais dos EUA) ou "You Fell Into Lake Superior. Here's What Happens Next."
+- Thumbnail: sistema preto, branco e vermelho; perigo do lugar em gravura, pessoa minúscula, seta; texto de 2–3 palavras ("DAY ONE..", "DON'T SWIM..").
+- Roteiro: os 12 blocos do Depth Theory, com um caso real por vídeo (aqui entram os animais que caçaram gente: tubarões de Jersey 1916, ursos de Glacier 1967).
+- Duração: 12 a 18 minutos. Ritmo: 2 a 3 por semana.
+- Primeiros 5 temas, por ordem de evidência: Lake Superior, pântanos da Louisiana, águas dos Apalaches, interior do Alasca, Everglades.
+- Julgar só depois de 8 a 10 vídeos.
+
+O que é aposta: a combinação (formato Depth Theory + lugares dos EUA) não tem nenhum exemplo provado. Cada metade tem evidência; o conjunto não.
+
+Reserva, se não andar em 10 vídeos: abrir para lugares do mundo com moldura de comparação ("X Is Deadlier Than Y"), que rendeu acima de 160 mil para 3 canais pequenos.
