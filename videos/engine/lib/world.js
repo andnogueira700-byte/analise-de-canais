@@ -65,7 +65,7 @@ export function makeLights(scene, opts = {}) {
 // ---------- água ----------
 export function makeWaterMaterial(opts = {}) {
   const u = {
-    uTime: { value: 0 }, deep: { value: new THREE.Color(opts.deep ?? 0x2f5a5e) }, shallow: { value: new THREE.Color(opts.shallow ?? 0x6e7b62) },
+    uTime: { value: 0 }, deep: { value: new THREE.Color(opts.deep ?? 0x24545e) }, shallow: { value: new THREE.Color(opts.shallow ?? 0x4f8288) },
     skyc: { value: new THREE.Color(opts.sky ?? 0xe9c6a8) }, sunDir: { value: new THREE.Vector3(0.6, 0.15, -0.8).normalize() }, cell: { value: opts.cell ?? 0.035 },
     sunCol: { value: new THREE.Color(0xfff2d0) }, fogColor: { value: new THREE.Color(0xd9b48c) }, fogDensity: { value: 0.012 }, alpha: { value: opts.alpha ?? 1 },
   };

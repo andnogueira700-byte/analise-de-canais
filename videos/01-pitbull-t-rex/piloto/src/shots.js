@@ -19,6 +19,7 @@ export function makeShots(W) {
   const label = (k, text, px = 12) => card(k, () => makeCard([{ text, px, color: 0xfff1dc }], { bg: 0x2a1a10, border: 0xe0862f, padX: 5, padY: 4, cell: 1.2 }));
   const num = (k, n, text) => card(k, () => makeCard([{ text: n, px: 22, color: 0xe0862f }, { text, px: 13 }], { padX: 8, padY: 6, gap: 1.6 }));
   const at = (c, x, y) => { c.position.set(x, y, 0); return c; };
+  const fixed = (c, x, y) => { c.position.set(x, y, 0); c.userData.anchored = true; return c; };
   const anchor = (c, wp, dx = 0, dy = 0) => { const o = st.toOverlay(wp); const hw = (c.userData.W || 20) / 2 + 3, hh = (c.userData.H || 8) / 2 + 3; c.position.set(clamp(o[0] + dx, -96 + hw, 96 - hw), clamp(o[1] + dy, -54 + hh, 54 - hh), 0); c.userData.anchored = true; return c; };
   const gy = (x, z) => (groundH(x, z) + groundH(x + 0.12, z) + groundH(x - 0.12, z) + groundH(x, z + 0.1) + groundH(x, z - 0.1)) / 5;
   const placeDog = (x, y, z, yaw) => { D.root.position.set(x, y, z); D.root.rotation.set(0, yaw, 0); };
@@ -81,7 +82,7 @@ export function makeShots(W) {
     placeDog(0, 0.24, -0.8, -Math.PI / 2);
     poseDog(D, { t: T, ears: 1, jaw: bark(lt, 0.1, 2.1, 7) * 0.8, tailUp: 1, wag: 0.8, headPitch: 0.15 });
     const k = ease.io(lt / 2.1);
-    cam(lerp3([0.45, 0.55, -1.75], [0.55, 1.7, -1.95], k), lerp3([0.1, 0.45, 4], [0, 0.2, 5], k), lerp(42, 52, k), 0.008, T);
+    cam(lerp3([1.5, 0.7, -1.6], [1.6, 1.5, -1.85], k), lerp3([-1.6, 0.3, 1.4], [-1.1, 0.15, 3.5], k), lerp(48, 54, k), 0.008, T);
     animCard(at(stamp('suyo2', 'TODO SUYO', 20), 0, 26), lt, 1.0);
   }, [[0, 'whoosh'], [1.0, 'stamp']]);
   // 4 · em casa, investiga qualquer barulho
@@ -105,7 +106,7 @@ export function makeShots(W) {
     placeDog(x, gy(x, z), z, 0);
     poseDog(D, { t: T, gait: 'walk', phase: lt * 1.0, sniff: 1, ears: 0.5, wag: 0.3 });
     const n = noseWorld();
-    cam([n.x + 0.12, n.y + 0.1, n.z - 0.6], [n.x - 0.12, n.y - 0.04, n.z], 34, 0.004, T);
+    cam([n.x + 0.22, n.y + 0.16, n.z - 0.8], [n.x - 0.18, n.y - 0.03, n.z], 36, 0.004, T);
     shadowAt([x + 0.3, 0, z], 1.6);
     W.particles(40, (i) => { const k = ((lt * 0.7 + hash3(i, 1, 1)) % 1); const g = [n.x + 0.25 + hash3(i, 2, 2) * 0.3, gy(n.x + 0.3, z) + 0.01, n.z + (hash3(i, 3, 3) - 0.5) * 0.25]; const q = lerp3(g, [n.x + 0.01, n.y - 0.005, n.z], ease.in(k)); return { p: q, s: 0.006 * (1 - k * 0.5), c: 0xf6e3c4 }; });
   }, [[0, 'whoosh'], [0.2, 'sniff'], [1.3, 'sniff']]);
@@ -151,7 +152,7 @@ export function makeShots(W) {
     placeDog(0.02, gy(0.02, 0.3), 0.3, lerp(0.15, 0.55, up));
     poseDog(D, { t: T, sniff: 0.8 * (1 - up), headPitch: up * 0.15, headYaw: up * 0.35, ears: 0.6 + up * 0.4, tailDown: up * 0.3 });
     const h = noseWorld();
-    cam(lerp3([h.x + 0.5, h.y + 0.02, h.z + 0.32], [h.x + 0.42, h.y + 0.06, h.z + 0.26], ease.out(lt / 2.25)), [h.x - 0.12, h.y + 0.02, h.z], 36, 0.004, T);
+    cam(lerp3([h.x + 0.85, h.y + 0.06, h.z + 0.55], [h.x + 0.75, h.y + 0.08, h.z + 0.48], ease.out(lt / 2.25)), [h.x - 0.18, h.y - 0.02, h.z], 36, 0.004, T);
     shadowAt([0.2, 0, 0.3], 1.4);
   }, []);
   // 9 · abre a câmera: o rio e o T. rex ao fundo, entre as árvores
@@ -252,10 +253,10 @@ export function makeShots(W) {
     set.ruler.visible = true; set.ruler.position.set(0.14, 0, 0.32); set.ruler.scale.set(1.4, rk, 1.4);
     placeDog(0, 0, 0, 0);
     poseDog(D, { t: T, ears: 0.6, headYaw: ease.io(seg(lt, 0.6, 1.0)) * 0.5, headPitch: -0.1 * ease.io(seg(lt, 0.6, 1.0)) });
-    cam(lerp3([0.25, 0.42, 1.5], [0.22, 0.4, 1.35], lt / 2.35), [0.05, 0.3, 0], 34, 0.003, T);
+    cam(lerp3([0.25, 0.42, 1.9], [0.22, 0.4, 1.75], lt / 2.35), [0.05, 0.3, 0], 34, 0.003, T);
     const m = card('linha', () => voxelText('— — — — — —', { px: 10, cube: 0.5, color: 0xffe08a, shadow: false }));
     anchor(m, [-0.05, 0.47, 0.32]); animText(m, lt, 0.85);
-    animCard(anchor(label('05m', 'MENOS DE 0,5 M', 13), [0.14, 0.62, 0.32], 30, 14), lt, 1.0);
+    animCard(anchor(label('05m', 'MENOS DE 0,5 M', 13), [0.14, 0.62, 0.32], 0, 22), lt, 1.0);
   }, [[0.3, 'tick'], [1.0, 'pop']]);
   // 19 · baixinho, largo e pura musculatura
   shot(49.2, 'estudio', (lt, T) => {
@@ -355,8 +356,8 @@ export function makeShots(W) {
     poseDog(D, { t: T, ears: 0.5, jaw: 0, headYaw: 0.05 });
     D.root.updateMatrixWorld(true); const hinge = new THREE.Vector3(0.09, -0.03, 0.07); D.head.localToWorld(hinge);
     const lk = ease.back(seg(lt, 1.45, 1.75)), fall = seg(lt, 3.25, 3.9);
-    set.lock.visible = lk > 0.01; set.lock.scale.setScalar(lk * 0.8);
-    set.lock.position.set(hinge.x, hinge.y - fall * fall * 0.8, hinge.z + 0.04); set.lock.rotation.set(0, 0, fall * 2.5);
+    set.lock.visible = lk > 0.01; set.lock.scale.setScalar(lk * 0.55);
+    set.lock.position.set(hinge.x + 0.05, hinge.y - fall * fall * 0.8, hinge.z + 0.09); set.lock.rotation.set(0, 0, fall * 2.5);
     cam(lerp3([0.55, 0.55, 1.05], [0.5, 0.54, 0.92], lt / 3.9), [0.3, 0.48, 0], 32, 0.003, T);
     animCard(at(title('traba', [{ text: '¿MANDÍBULA QUE SE TRABA?', px: 14 }]), 0, 36), lt, 0.6, 3.1);
     animCard(at(stamp('mito', 'MITO', 26), 0, 4), lt, 3.2, 99, { spin: -0.6 });
@@ -377,7 +378,7 @@ export function makeShots(W) {
     placeDog(0.1, 0.02, 0.6, Math.PI / 2 + 0.2);
     const look = clamp(Math.atan2(-(-1.0 - 0.6), px - 0.1) - (Math.PI / 2 + 0.2), -0.9, 0.9);
     poseDog(D, { t: T, sit: 1, headYaw: look, ears: 0.7, wag: 0.3 });
-    cam(lerp3([1.4, 0.5, 1.0], [1.3, 0.5, 0.85], lt / 3.95), [-0.2, 0.6, -0.4], 40, 0.004, T);
+    cam(lerp3([1.7, 0.5, 0.25], [1.6, 0.5, 0.15], lt / 3.95), [-0.5, 0.55, -0.4], 42, 0.004, T);
     animCard(at(num('n3', '3', 'LEER A LOS DEMÁS'), -54, 28), lt, 0.35);
   }, [[0, 'whoosh'], [0.35, 'pop']]);
   // 30 · sabe que você vai sair antes de pegar as chaves
@@ -387,7 +388,7 @@ export function makeShots(W) {
     placeDog(2.65, 0.02, 0.45, 1.2);
     poseDog(D, { t: T, sit: lt < 1.6 ? 1 : 0, headPitch: 0.45, headYaw: -0.3, ears: 0.9, wag: 1, wagSpeed: 18, tailUp: 0.5 });
     if (lt > 1.6) { D.root.position.y += Math.abs(Math.sin((lt - 1.6) * 7)) * 0.05; }
-    cam(lerp3([1.75, 0.75, -0.15], [1.85, 0.75, -0.25], lt / 2.65), [3.0, 0.75, 0.15], 44, 0.005, T);
+    cam(lerp3([2.1, 0.6, 1.35], [2.15, 0.62, 1.2], lt / 2.65), [2.95, 0.8, -0.3], 44, 0.005, T);
     animCard(anchor(label('ya', '¡YA SABE!', 13), [2.7, 0.75, 0.45], 0, 6), lt, 0.55);
   }, [[0.55, 'pop'], [1.5, 'jingle']]);
   // 31 · sabe quando você está triste
@@ -420,7 +421,7 @@ export function makeShots(W) {
     placeDog(0.05, 0.02, -0.25, Math.PI / 2);
     const tilt = Math.sin(clamp((lt - 0.8) / 1.6) * Math.PI) * 0.45 - Math.sin(clamp((lt - 2.3) / 1.0) * Math.PI) * 0.35;
     poseDog(D, { t: T, sit: 1, headPitch: 0.6, headRoll: tilt, ears: 0.6 + Math.abs(tilt), wag: 0.5, wagSpeed: 8 });
-    cam(lerp3([0.3, 0.24, -0.78], [0.26, 0.26, -0.74], lt / 3.55), [0.05, 0.55, -0.35], 46, 0.003, T);
+    cam(lerp3([0.85, 0.32, -0.75], [0.8, 0.33, -0.7], lt / 3.55), [0.0, 0.5, -0.4], 44, 0.003, T);
   }, [[0, 'whoosh']]);
   // 34 · agora, as más notícias
   shot(94.95, 'estudio', (lt, T) => {
@@ -484,7 +485,7 @@ export function makeShots(W) {
     if (W.cur.pack) W.cur.pack.visible = false;
     placeDog(0.6, gy(0.6, -0.2), -0.2, 0.5);
     poseDog(D, { t: T, sit: 1, headYaw: Math.sin(lt * 0.9) * 0.3, ears: 0.6, tailDown: 0.3 });
-    cam(lerp3([-1.4, 0.7, 2.3], [-1.1, 0.75, 2.0], lt / 2.9), [1.2, 0.4, -0.8], 42, 0.005, T);
+    cam(lerp3([2.0, 0.65, 1.2], [1.85, 0.62, 1.05], lt / 2.9), [0.4, 0.4, -0.6], 44, 0.005, T);
     shadowAt([0.6, 0, -0.2], 2);
     animCard(at(title('reglas', [{ text: 'LAS REGLAS', px: 20 }]), 0, 34), lt, 0.1);
     animCard(at(label('solo', 'LLEGA SOLO', 14), 0, 18), lt, 1.6);
@@ -497,7 +498,7 @@ export function makeShots(W) {
     cam(lerp3([1.65, 0.48, 0.45], [1.55, 0.46, 0.35], lt / 2.95), [0.5, 0.35, -0.3], 38, 0.004, T);
     shadowAt([0.6, 0, -0.2], 1.5);
     const xs = [['c1', 'X  SIN COLLAR', 0.1], ['c2', 'X  SIN COMIDA', 1.0], ['c3', 'X  SIN TI', 2.35]];
-    xs.forEach(([k, txt, t0], i) => animCard(at(card(k, () => makeCard([{ text: txt, px: 14, color: 0xfff1dc }], { bg: 0x2a1a10, border: 0xc8322b, padX: 6, padY: 4, cell: 1.2, minW: 52 })), -58, 26 - i * 15), lt, t0));
+    xs.forEach(([k, txt, t0], i) => animCard(fixed(card(k, () => makeCard([{ text: txt, px: 14, color: 0xfff1dc }], { bg: 0x2a1a10, border: 0xc8322b, padX: 6, padY: 4, cell: 1.2, minW: 52 })), -58, 26 - i * 15), lt, t0));
   }, [[0.1, 'pop'], [1.0, 'pop'], [2.35, 'pop']]);
   // 41 · o que ele tem é o que traz no corpo
   shot(113.75, 'creta', (lt, T) => {
@@ -506,7 +507,7 @@ export function makeShots(W) {
     poseDog(D, { t: T, ears: 0.7, headYaw: 0.1, wag: 0.3 });
     const k = ease.io(lt / 1.95);
     const n = noseWorld();
-    cam(lerp3([1.75, 0.55, -0.55], [1.6, 0.3, 0.55], k), lerp3([n.x, n.y, n.z], [0.75, 0.1, -0.15], k), 36, 0.004, T);
+    cam(lerp3([2.0, 0.6, -0.65], [1.85, 0.35, 0.7], k), lerp3([n.x, n.y, n.z], [0.75, 0.1, -0.15], k), 36, 0.004, T);
     shadowAt([0.6, 0, -0.2], 1.2);
     animCard(anchor(label('t1', 'NARIZ', 12), [n.x, n.y + 0.06, n.z], 0, 8), lt, 0.1, 1.2);
     animCard(anchor(label('t2', 'MÚSCULO', 12), [0.55, 0.42, -0.1], 0, 8), lt, 0.8);
@@ -525,7 +526,7 @@ export function makeShots(W) {
     stars(k, T);
     placeDog(0.6, gy(0.6, -0.2), -0.2, 0.5);
     poseDog(D, { t: T, sit: 1, headPitch: 0.25 * k, headYaw: 0.2, ears: 0.6 });
-    cam(lerp3([-0.9, 0.35, 1.0], [-1.0, 0.38, 1.1], lt / 2.45), [1.4, 0.7, -1.4], 40, 0.003, T);
+    cam(lerp3([1.9, 0.5, 0.75], [1.95, 0.52, 0.85], lt / 2.45), [0.3, 0.45, -0.6], 42, 0.003, T);
     shadowAt([0.6, 0, -0.2], 2);
     animCard(at(card('meta', () => makeCard([{ text: 'META', px: 12, color: 0xe0862f }, { text: 'LLEGAR A LA NOCHE', px: 16 }], { padX: 8, padY: 6, gap: 1.6 })), 0, 32), lt, 0.25);
   }, [[0.25, 'pop'], [0.3, 'night']]);
@@ -541,7 +542,7 @@ export function makeShots(W) {
     placeDog(0.6, gy(0.6, -0.2), -0.2, 0.5);
     poseDog(D, { t: T, sit: 1, headPitch: 0.2, headYaw: 0.3, ears: 0.8 });
     const k = ease.io(seg(lt, 0, 4.2));
-    cam(lerp3([-0.6, 0.5, 0.9], [-5, 6.5, 8], k), lerp3([1.0, 0.4, -0.6], [8, 0.5, -20], k), lerp(38, 46, k), 0.005, T);
+    cam(lerp3([1.7, 0.5, 0.8], [3.6, 5.5, 6.5], k), lerp3([0.5, 0.4, -0.4], [8, 0.5, -20], k), lerp(40, 46, k), 0.005, T);
     shadowAt([0.6, 0, -0.2], lerp(1.5, 6, k));
     animCard(at(title('cuanto2', [{ text: '¿CUÁNTO DURARÍA?', px: 20 }]), 0, 30), lt, 1.6);
     st.veil.material.opacity = ease.in(seg(lt, 3.45, 4.4));
@@ -556,29 +557,45 @@ export function makeShots(W) {
   const homes = [D.head, D.jaw, ...D.ears, D.tail[0], ...Object.values(D.legs).flatMap(l => [l.up, l.lo])];
   homes.forEach(g => g.userData.home = g.position.toArray());
   const restoreParts = () => homes.forEach(g => g.position.set(...g.userData.home));
-  // cartões não podem cobrir o protagonista: se cobrirem, vão para um canto livre
-  const box3 = new THREE.Box3(), corners = [];
-  const screenRect = (obj) => {
-    if (!obj || !obj.visible) return null;
-    box3.setFromObject(obj); if (box3.isEmpty()) return null;
-    let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9, front = false;
-    for (let i = 0; i < 8; i++) { const p = [i & 1 ? box3.max.x : box3.min.x, i & 2 ? box3.max.y : box3.min.y, i & 4 ? box3.max.z : box3.min.z]; const o = st.toOverlay(p); if (o[2] < 1) front = true; x0 = Math.min(x0, o[0]); x1 = Math.max(x1, o[0]); y0 = Math.min(y0, o[1]); y1 = Math.max(y1, o[1]); }
-    if (!front) return null;
-    return [Math.max(-96, x0) - 5, Math.max(-54, y0) - 5, Math.min(96, x1) + 5, Math.min(54, y1) + 5];
+  // cartões não podem cobrir o protagonista: mede a silhueta real (amostras dos cubos projetadas na tela)
+  const GX = 32, GY = 18;
+  const occGrid = (objs) => {
+    const g = new Uint8Array(GX * GY), v = new THREE.Vector3();
+    st.camera.updateMatrixWorld();
+    for (const o of objs) {
+      if (!o || !o.visible) continue;
+      o.updateMatrixWorld(true);
+      o.traverse(m => {
+        if (!m.isMesh || !m.visible || !m.geometry.attributes.position) return;
+        const pos = m.geometry.attributes.position, step = Math.max(1, Math.floor(pos.count / 400));
+        for (let i = 0; i < pos.count; i += step) {
+          v.fromBufferAttribute(pos, i).applyMatrix4(m.matrixWorld).project(st.camera);
+          if (v.z > 1 || v.z < -1) continue;
+          const cx = Math.floor((v.x + 1) / 2 * GX), cy = Math.floor((v.y + 1) / 2 * GY);
+          for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) { const X = cx + dx, Y = cy + dy; if (X >= 0 && Y >= 0 && X < GX && Y < GY) g[X + GX * Y] = 1; }
+        }
+      });
+    }
+    return g;
   };
-  const SLOTS = [[0, -38], [0, 37], [-58, 37], [58, 37], [-58, -38], [58, -38], [-62, 0], [62, 0]];
+  const SLOTS = [[0, -38], [0, 37], [-58, 37], [58, 37], [-58, -38], [58, -38], [-62, 12], [62, 12], [-62, -12], [62, -12]];
   function avoid(si) {
-    const prot = [screenRect(D.root), W.person && screenRect(W.person.root), W.cur === W.sets.fogueira ? screenRect(W.cur.ancient.root) : null, W.cur === W.sets.fogueira ? screenRect(W.cur.wolf.root) : null].filter(Boolean)
-
-    const ov = (cx, cy, w, h) => prot.reduce((a, r) => a + Math.max(0, Math.min(cx + w / 2, r[2]) - Math.max(cx - w / 2, r[0])) * Math.max(0, Math.min(cy + h / 2, r[3]) - Math.max(cy - h / 2, r[1])), 0);
-    const hit = (cx, cy, w, h) => ov(cx, cy, w, h) > 0;
+    let grid = null;
+    const cost = (cx, cy, w, h) => {
+      const x0 = Math.floor(((cx - w / 2) / 96 + 1) / 2 * GX), x1 = Math.floor(((cx + w / 2) / 96 + 1) / 2 * GX), y0 = Math.floor(((cy - h / 2) / 54 + 1) / 2 * GY), y1 = Math.floor(((cy + h / 2) / 54 + 1) / 2 * GY);
+      let n = 0; for (let X = Math.max(0, x0); X <= Math.min(GX - 1, x1); X++) for (let Y = Math.max(0, y0); Y <= Math.min(GY - 1, y1); Y++) n += grid[X + GX * Y]; return n;
+    };
     for (const c of REG.values()) {
       if (!c.visible || c.userData.anchored) continue;
-      const w = (c.userData.W || 20) * 1.05, h = (c.userData.H || 8) * 1.05;
-      if (c.userData.home === undefined || c.userData.homeShot !== si) { c.userData.home = [c.position.x, c.position.y]; c.userData.homeShot = si; c.userData.slot = null; }
+      const w = (c.userData.W || 20) * 1.08, h = (c.userData.H || 8) * 1.1;
+      if (c.userData.homeShot !== si) { c.userData.home = [c.position.x, c.position.y]; c.userData.homeShot = si; c.userData.slot = null; }
       if (c.userData.slot === null) {
-        let pick = c.userData.home;
-        if (hit(pick[0], pick[1], w, h)) { const c2 = SLOTS.map(([x, y]) => [clamp(x, -96 + w / 2 + 2, 96 - w / 2 - 2), clamp(y, -54 + h / 2 + 2, 54 - h / 2 - 2)]); c2.sort((A, B) => ov(A[0], A[1], w, h) - ov(B[0], B[1], w, h)); if (ov(c2[0][0], c2[0][1], w, h) < ov(pick[0], pick[1], w, h)) pick = c2[0]; }
+        if (!grid) grid = occGrid([D.root, W.person && W.person.root, W.cur === W.sets.fogueira ? W.cur.ancient.root : null, W.cur === W.sets.fogueira ? W.cur.wolf.root : null]);
+        const others = [...REG.values()].filter(o => o !== c && o.userData.homeShot === si && o.userData.slot && o.userData.used);
+        const cardHit = (q) => others.reduce((a, o) => { const ow = (o.userData.W || 20) * 1.08, oh = (o.userData.H || 8) * 1.1; const ix = Math.max(0, Math.min(q[0] + w / 2, o.userData.slot[0] + ow / 2) - Math.max(q[0] - w / 2, o.userData.slot[0] - ow / 2)), iy = Math.max(0, Math.min(q[1] + h / 2, o.userData.slot[1] + oh / 2) - Math.max(q[1] - h / 2, o.userData.slot[1] - oh / 2)); return a + (ix * iy > 0 ? 1000 : 0); }, 0);
+        const cost2 = (q) => cost(q[0], q[1], w, h) + cardHit(q);
+        let pick = c.userData.home, best = cost2(pick);
+        if (best > 0) for (const [x, y] of SLOTS) { const q = [clamp(x, -96 + w / 2 + 2, 96 - w / 2 - 2), clamp(y, -54 + h / 2 + 2, 54 - h / 2 - 2)]; const k = cost2(q); if (k < best) { best = k; pick = q; } }
         c.userData.slot = pick;
       }
       c.position.x = c.userData.slot[0]; c.position.y = c.userData.slot[1];

@@ -111,12 +111,12 @@ export function animCard(card, lt, inT = 0, outT = 99, opts = {}) {
   // texto cai bloco a bloco
   for (const t of ud.texts || []) {
     const set = t.userData.set, gw = t.userData.gw;
-    set.update((it) => { const d = clamp((lt - inT - 0.12 - (it.gx / gw) * 0.35) / 0.22); return { k: ease.back(d), dy: (1 - ease.out(d)) * 4 }; });
+    set.update((it) => { const d = clamp((lt - inT - 0.1 - (it.gx / gw) * 0.18) / 0.14); return { k: ease.out(d), dy: (1 - ease.out(d)) * 1.5 }; });
   }
 }
 export function animText(t, lt, inT = 0, outT = 99, opts = {}) {
   const set = t.userData.set, gw = t.userData.gw;
   const b = clamp((outT - lt) / 0.25);
   t.visible = lt > inT && b > 0;
-  set.update((it) => { const d = clamp((lt - inT - (it.gx / gw) * (opts.spread ?? 0.4)) / 0.25); return { k: ease.back(d) * ease.out(b), dy: (1 - ease.out(d)) * (opts.drop ?? 5), rz: (1 - ease.out(d)) * 0.6 }; });
+  set.update((it) => { const d = clamp((lt - inT - (it.gx / gw) * (opts.spread ?? 0.2)) / 0.14); return { k: ease.out(d) * ease.out(b), dy: (1 - ease.out(d)) * 1.5 }; });
 }

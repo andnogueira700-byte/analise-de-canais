@@ -18,98 +18,135 @@ function part(fn, colorFn, min, max, s, pivot) {
 
 export function buildDog(opts = {}) {
   const C = DOG_COLORS[opts.palette || 'pitbull'];
-  const s = opts.voxel || 0.0078;
+  const s = opts.voxel || 0.0068;
   const sx = opts.snout || 0; // lobo: focinho mais longo
   const J = (hex, x, y, z, a = 0.06) => jitter(hex, x, y, z, a);
   const root = new THREE.Group();
   const V = (a) => new THREE.Vector3(...a);
   const B = [0, 0.35, 0];
-  // ---------- corpo (peito largo, cintura, quadril, pescoço grosso) ----------
+  // pelagem: mais clara em cima onde bate luz, mais escura na barriga, leve marca de costelas
+  const fur = (p, x, y, z) => {
+    const k = Math.max(0, Math.min(1, (p[1] - 0.24) / 0.28));
+    let c = lerpHex(lerpHex(C.fur, C.furDark, 0.45), lerpHex(C.fur, 0xc98a52, 0.22), k);
+    if (p[1] > 0.47 && p[0] < 0.15 && p[0] > -0.28) c = lerpHex(c, C.furDark, 0.45 * Math.min(1, (p[1] - 0.47) / 0.04));
+    const rib = p[0] > -0.06 && p[0] < 0.14 && p[1] < 0.4 && p[1] > 0.26 && Math.abs(p[2]) > 0.1 && Math.sin(p[0] * 95) > 0.75;
+    if (rib) c = lerpHex(c, C.furDark, 0.25);
+    return J(c, x, y, z, 0.07);
+  };
+  // ---------- corpo (peito fundo, cintura recolhida, ombros e garupa musculosos) ----------
   const torsoSdf = (p) => {
-    let d = ell(p, [0.12, 0.35, 0], [0.175, 0.162, 0.158]);
-    d = smin(d, ell(p, [-0.06, 0.36, 0], [0.17, 0.125, 0.13]), 0.08);
-    d = smin(d, ell(p, [-0.2, 0.372, 0], [0.125, 0.125, 0.128]), 0.07);
-    d = smin(d, cap(p, [0.17, 0.42, 0], [0.27, 0.5, 0], 0.108, 0.098), 0.06);
-    d = smin(d, ell(p, [0.13, 0.36, 0.095], [0.1, 0.12, 0.07]), 0.05);
-    d = smin(d, ell(p, [0.13, 0.36, -0.095], [0.1, 0.12, 0.07]), 0.05);
+    let d = ell(p, [0.115, 0.345, 0], [0.175, 0.172, 0.158]);
+    d = smin(d, ell(p, [-0.055, 0.375, 0], [0.165, 0.112, 0.122]), 0.09);
+    d = smin(d, ell(p, [-0.2, 0.385, 0], [0.13, 0.12, 0.13]), 0.07);
+    d = smin(d, cap(p, [0.17, 0.42, 0], [0.27, 0.5, 0], 0.11, 0.1), 0.06);
+    for (const g of [1, -1]) {
+      d = smin(d, ell(p, [0.135, 0.375, 0.1 * g], [0.105, 0.125, 0.068]), 0.045);
+      d = smin(d, ell(p, [0.2, 0.43, 0.06 * g], [0.07, 0.08, 0.06]), 0.04);
+      d = smin(d, ell(p, [-0.21, 0.36, 0.085 * g], [0.1, 0.11, 0.06]), 0.04);
+    }
     return d;
   };
   const torsoCol = (p, x, y, z) => {
     const az = Math.abs(p[2]);
-    const bib = (p[0] > 0.205 - Math.max(0, 0.42 - p[1]) * 0.5 && p[1] < 0.5 && az < 0.115 - Math.max(0, p[1] - 0.38) * 0.7) || (p[1] < 0.24 && p[0] > -0.02 && az < 0.09);
-    if (bib) return J(C.white, x, y, z, 0.035);
-    const dark = p[1] > 0.47 && p[0] < 0.15;
-    const k = Math.max(0, Math.min(1, (p[1] - 0.25) / 0.25));
-    return J(lerpHex(lerpHex(C.fur, C.furDark, 0.35), dark ? C.furDark : lerpHex(C.fur, 0xc9824a, 0.25), k), x, y, z, 0.07);
+    const bib = (p[0] > 0.205 - Math.max(0, 0.42 - p[1]) * 0.5 && p[1] < 0.5 && az < 0.115 - Math.max(0, p[1] - 0.38) * 0.7) || (p[1] < 0.235 && p[0] > 0.0 && az < 0.08);
+    if (bib) return J(lerpHex(C.white, 0xd9c8b0, Math.max(0, (0.3 - p[1]) * 3)), x, y, z, 0.035);
+    return fur(p, x, y, z);
   };
-  const body = part(torsoSdf, torsoCol, [-0.35, 0.17, -0.2], [0.4, 0.62, 0.2], s, B);
+  const body = part(torsoSdf, torsoCol, [-0.35, 0.16, -0.2], [0.4, 0.62, 0.2], s, B);
   root.add(body);
-  // ---------- cabeça larga ----------
+  // ---------- cabeça larga com bochechas, testa, lábios e focinho ----------
   const H = [0.27, 0.5, 0];
   const headSdf = (p) => {
-    let d = ell(p, [0.305, 0.548, 0], [0.122, 0.094, 0.118]);
-    d = smin(d, box(p, [0.31, 0.59, 0], [0.08, 0.042, 0.088], 0.045), 0.03);
-    d = smin(d, ell(p, [0.355, 0.505, 0.06], [0.085, 0.07, 0.066]), 0.04);
-    d = smin(d, ell(p, [0.355, 0.505, -0.06], [0.085, 0.07, 0.066]), 0.04);
-    d = smin(d, box(p, [0.44 + sx / 2, 0.5, 0], [0.062 + sx / 2, 0.043, 0.064 - sx * 0.25], 0.03), 0.03);
+    let d = ell(p, [0.305, 0.55, 0], [0.12, 0.094, 0.116]);
+    d = smin(d, box(p, [0.31, 0.588, 0], [0.078, 0.042, 0.086], 0.045), 0.03);
+    for (const g of [1, -1]) {
+      d = smin(d, ell(p, [0.35, 0.508, 0.064 * g], [0.085, 0.072, 0.064]), 0.04);
+      d = smin(d, ell(p, [0.385, 0.6, 0.05 * g], [0.035, 0.018, 0.03]), 0.02);
+      d = smin(d, ell(p, [0.445 + sx * 0.6, 0.485, 0.052 * g], [0.05 + sx / 2, 0.03, 0.022]), 0.02);
+      d = Math.min(d, sph(p, [0.408, 0.568, 0.063 * g], 0.0195));
+    }
+    d = smin(d, box(p, [0.44 + sx / 2, 0.502, 0], [0.06 + sx / 2, 0.04, 0.062 - sx * 0.25], 0.03), 0.03);
     d = smin(d, ell(p, [0.497 + sx, 0.522, 0], [0.021, 0.021, 0.03]), 0.012);
-    d = Math.min(d, sph(p, [0.408, 0.568, 0.063], 0.02), sph(p, [0.408, 0.568, -0.063], 0.02));
     return d;
   };
   const eyeC = [[0.408, 0.568, 0.063], [0.408, 0.568, -0.063]];
   const headCol = (p, x, y, z) => {
     const az = Math.abs(p[2]);
-    if (p[0] > 0.482 + sx && p[1] > 0.5 && az < 0.036) return J(C.nose, x, y, z, 0.05);
+    if (p[0] > 0.48 + sx && p[1] > 0.5 && az < 0.036) {
+      if (az > 0.006 && az < 0.02 && p[1] < 0.53 && p[1] > 0.508 && p[0] > 0.505 + sx) return 0x1e100c;
+      return J(C.nose, x, y, z, 0.06);
+    }
     for (const e of eyeC) {
       const de = Math.hypot(p[0] - e[0], p[1] - e[1], p[2] - e[2]);
-      if (de < 0.023) { if (p[1] > e[1] + 0.007 && p[0] > e[0] + 0.006) return 0xfff6e8; return C.eye; }
+      if (de < 0.023) {
+        if (p[1] > e[1] + 0.006 && p[0] > e[0] + 0.005 && Math.hypot(p[1] - e[1] - 0.009, p[0] - e[0] - 0.01) < 0.007) return 0xfff8ec;
+        const lat = Math.hypot(p[1] - e[1], az - Math.abs(e[2]));
+        return lat < 0.009 ? C.eye : (lat < 0.016 ? (opts.palette === 'wolf' ? 0x9a7a20 : 0x7a4a22) : 0x2e1a10);
+      }
+      if (de < 0.028 && p[1] > e[1]) return J(C.furDark, x, y, z, 0.04);
     }
-    if (p[1] < 0.476 && p[0] > 0.37) return J(C.mouth, x, y, z, 0.03);
+    if (p[1] < 0.476 && p[0] > 0.37) {
+      const edge = p[0] > 0.48 + sx || az > 0.05;
+      return edge ? 0xefe6d2 : J(C.mouth, x, y, z, 0.03);
+    }
+    if (p[1] < 0.483 && p[0] > 0.4 && az > 0.04) return J(0x3a221c, x, y, z, 0.04);
+    if (p[0] > 0.43 + sx && p[0] < 0.48 + sx && p[1] > 0.494 && p[1] < 0.512 && az > 0.05 && hash3(x, y, z) > 0.9) return 0xb59a88;
     const blaze = az < 0.016 + Math.max(0, 0.6 - p[1]) * 0.4 && p[0] > 0.34 && p[1] > 0.535;
     const muzzle = p[0] > 0.432 + sx * 0.6 || (p[1] < 0.495 && p[0] > 0.385);
     if (blaze || muzzle) return J(C.white, x, y, z, 0.035);
-    return J(C.fur, x, y, z);
+    const k = Math.max(0, Math.min(1, (p[1] - 0.48) / 0.15));
+    return J(lerpHex(lerpHex(C.fur, C.furDark, 0.3), lerpHex(C.fur, 0xc98a52, 0.2), k), x, y, z, 0.06);
   };
   const head = part(headSdf, headCol, [0.17, 0.43, -0.14], [0.54 + sx, 0.65, 0.14], s, H);
   body.add(head); head.position.sub(V(B));
-  // mandíbula
+  // mandíbula com dentes na borda
   const Jp = [0.36, 0.474, 0];
   const jaw = part(
     (p) => box(p, [0.43 + sx / 2, 0.458, 0], [0.055 + sx / 2, 0.02, 0.052 - sx * 0.2], 0.017),
-    (p, x, y, z) => p[1] > 0.47 ? J(C.tongue, x, y, z, 0.05) : J(C.white, x, y, z, 0.035),
+    (p, x, y, z) => { if (p[1] > 0.47) { const edge = p[0] > 0.47 + sx || Math.abs(p[2]) > 0.04; return edge ? 0xefe6d2 : J(C.tongue, x, y, z, 0.05); } return J(C.white, x, y, z, 0.035); },
     [0.34, 0.43, -0.07], [0.51 + sx, 0.49, 0.07], s, Jp);
   head.add(jaw); jaw.position.sub(V(H));
-  // orelhas em "rosa", dobradas para trás
+  // orelhas em "rosa"
   const ears = [];
   for (const sgn of [1, -1]) {
-    const E = [0.27, 0.632, 0.078 * sgn];
+    const E = [0.265, 0.645, 0.088 * sgn];
     const ear = part(
-      (p) => ell(p, [0.262, 0.636, 0.112 * sgn], [0.044, 0.016, 0.042]),
-      (p, x, y, z) => (p[1] < 0.632) ? J(C.earIn, x, y, z, 0.04) : J(C.furDark, x, y, z),
-      [0.2, 0.57, sgn > 0 ? 0.06 : -0.14], [0.34, 0.68, sgn > 0 ? 0.14 : -0.06], s, E);
+      (p) => smin(ell(p, [0.252, 0.615, 0.099 * sgn], [0.046, 0.036, 0.011]), ell(p, [0.268, 0.638, 0.095 * sgn], [0.03, 0.016, 0.014]), 0.012),
+      (p, x, y, z) => (Math.abs(p[2]) < 0.097 && p[1] < 0.63) ? J(C.earIn, x, y, z, 0.04) : J(C.furDark, x, y, z),
+      [0.2, 0.57, sgn > 0 ? 0.06 : -0.16], [0.33, 0.68, sgn > 0 ? 0.16 : -0.06], s, E);
     ear.userData.sgn = sgn;
     head.add(ear); ear.position.sub(V(H)); ears.push(ear);
   }
-  // ---------- patas ----------
+  // ---------- patas (antebraço forte, dedos e unhas) ----------
   const legs = {};
-  const whitePaw = (p, x, y, z) => p[1] < 0.072 ? J(C.white, x, y, z, 0.035) : J(C.fur, x, y, z);
+  const pawCol = (zc) => (p, x, y, z) => {
+    if (p[1] < 0.075) {
+      if (p[1] < 0.03) { const tz = (p[2] - zc) / 0.016; if (Math.abs(tz - Math.round(tz)) < 0.18 && p[1] > 0.008) return J(0xcbb8a0, x, y, z, 0.03); }
+      return J(C.white, x, y, z, 0.035);
+    }
+    return fur(p, x, y, z);
+  };
+  const toes = (p, cx, zc) => { let d = 1; for (const k of [-1.5, -0.5, 0.5, 1.5]) d = Math.min(d, ell(p, [cx + 0.03 - Math.abs(k) * 0.006, 0.02, zc + k * 0.017], [0.022, 0.02, 0.012])); return d; };
+  const nails = (p, cx, zc) => { for (const k of [-1.5, -0.5, 0.5, 1.5]) if (Math.hypot(p[0] - (cx + 0.052 - Math.abs(k) * 0.006), p[1] - 0.012, p[2] - (zc + k * 0.017)) < 0.007) return true; return false; };
   for (const sgn of [1, -1]) {
     const zc = 0.098 * sgn;
     const S = [0.14, 0.32, zc], E = [0.13, 0.17, zc];
-    const up = part((p) => smin(cap(p, [0.14, 0.32, zc], [0.13, 0.17, zc], 0.055, 0.044), ell(p, [0.145, 0.27, zc], [0.065, 0.085, 0.055]), 0.03), (p, x, y, z) => J(C.fur, x, y, z), [0.06, 0.12, zc - 0.075], [0.22, 0.4, zc + 0.075], s, S);
-    const lo = part((p) => smin(cap(p, [0.13, 0.17, zc], [0.14, 0.045, zc], 0.04, 0.035), ell(p, [0.162, 0.026, zc], [0.05, 0.028, 0.045]), 0.02), whitePaw, [0.07, -0.005, zc - 0.065], [0.23, 0.21, zc + 0.065], s, E);
+    const up = part((p) => smin(cap(p, [0.14, 0.32, zc], [0.13, 0.17, zc], 0.055, 0.043), ell(p, [0.148, 0.265, zc], [0.068, 0.09, 0.056]), 0.03), fur, [0.06, 0.12, zc - 0.08], [0.23, 0.4, zc + 0.08], s, S);
+    const lo = part((p) => { let d = smin(cap(p, [0.13, 0.17, zc], [0.142, 0.05, zc], 0.042, 0.033), ell(p, [0.15, 0.04, zc], [0.04, 0.03, 0.04]), 0.02); d = smin(d, toes(p, 0.15, zc), 0.012); return d; },
+      (p, x, y, z) => nails(p, 0.15, zc) ? 0x2a1e18 : pawCol(zc)(p, x, y, z), [0.07, -0.005, zc - 0.07], [0.24, 0.21, zc + 0.07], s, E);
     body.add(up); up.position.sub(V(B)); up.add(lo); lo.position.sub(V(S));
     legs[sgn > 0 ? 'FL' : 'FR'] = { up, lo, front: true };
     const Hh = [-0.2, 0.35, zc * 0.95], K = [-0.15, 0.185, zc];
-    const up2 = part((p) => smin(ell(p, [-0.185, 0.28, zc], [0.088, 0.115, 0.062]), cap(p, [-0.2, 0.35, zc], [-0.15, 0.185, zc], 0.05, 0.042), 0.04), (p, x, y, z) => J(C.fur, x, y, z), [-0.29, 0.13, zc - 0.08], [-0.08, 0.42, zc + 0.08], s, Hh);
-    const lo2 = part((p) => smin(smin(cap(p, [-0.15, 0.185, zc], [-0.235, 0.092, zc], 0.04, 0.034), cap(p, [-0.235, 0.092, zc], [-0.215, 0.04, zc], 0.034, 0.032), 0.02), ell(p, [-0.193, 0.026, zc], [0.05, 0.028, 0.045]), 0.02), whitePaw, [-0.29, -0.005, zc - 0.065], [-0.11, 0.23, zc + 0.065], s, K);
+    const up2 = part((p) => smin(ell(p, [-0.185, 0.282, zc], [0.092, 0.118, 0.064]), cap(p, [-0.2, 0.35, zc], [-0.15, 0.185, zc], 0.05, 0.042), 0.04), fur, [-0.29, 0.13, zc - 0.085], [-0.08, 0.42, zc + 0.085], s, Hh);
+    const lo2 = part((p) => { let d = smin(smin(cap(p, [-0.15, 0.185, zc], [-0.235, 0.092, zc], 0.042, 0.032), cap(p, [-0.235, 0.092, zc], [-0.215, 0.045, zc], 0.032, 0.03), 0.02), ell(p, [-0.205, 0.04, zc], [0.038, 0.028, 0.038]), 0.02); d = smin(d, toes(p, -0.205, zc), 0.012); return d; },
+      (p, x, y, z) => nails(p, -0.205, zc) ? 0x2a1e18 : pawCol(zc)(p, x, y, z), [-0.29, -0.005, zc - 0.07], [-0.11, 0.23, zc + 0.07], s, K);
     body.add(up2); up2.position.sub(V(B)); up2.add(lo2); lo2.position.sub(V(Hh));
     legs[sgn > 0 ? 'RL' : 'RR'] = { up: up2, lo: lo2, front: false };
   }
-  // ---------- rabo ----------
+  // ---------- rabo (grosso na base, afinando) ----------
   const T = [-0.3, 0.42, 0], T2 = [-0.41, 0.375, 0];
-  const t1 = part((p) => cap(p, [-0.3, 0.42, 0], [-0.41, 0.375, 0], 0.03, 0.022), (p, x, y, z) => J(C.fur, x, y, z), [-0.45, 0.33, -0.05], [-0.26, 0.46, 0.05], s, T);
-  const t2 = part((p) => cap(p, [-0.41, 0.375, 0], [-0.51, 0.3, 0], 0.022, 0.011), (p, x, y, z) => J(C.furDark, x, y, z), [-0.55, 0.26, -0.04], [-0.38, 0.41, 0.04], s, T2);
+  const t1 = part((p) => cap(p, [-0.3, 0.42, 0], [-0.41, 0.375, 0], 0.034, 0.023), fur, [-0.46, 0.33, -0.05], [-0.26, 0.47, 0.05], s, T);
+  const t2 = part((p) => cap(p, [-0.41, 0.375, 0], [-0.51, 0.3, 0], 0.023, 0.009), (p, x, y, z) => J(C.furDark, x, y, z), [-0.55, 0.26, -0.04], [-0.38, 0.41, 0.04], s, T2);
   body.add(t1); t1.position.sub(V(B)); t1.add(t2); t2.position.sub(V(T));
   body.position.set(...B);
   const dog = { root, body, head, jaw, ears, legs, tail: [t1, t2], B, s };
@@ -188,6 +225,11 @@ export function poseDog(d, p) {
   if (p.shiver) { by += Math.sin(t * 70) * 0.003 * p.shiver; br += Math.sin(t * 63) * 0.02 * p.shiver; }
   d.body.position.y = d.B[1] + by; d.body.rotation.z = bp; d.body.rotation.x = br;
   // cabeça
+  if (!p.still) { // micro-movimento natural (nunca totalmente parado)
+    d.head.rotation.z += Math.sin(t * 0.9) * 0.02 + Math.sin(t * 2.3) * 0.008;
+    d.head.rotation.y += Math.sin(t * 0.6 + 1) * 0.025;
+    d.body.scale.y = 1 + Math.sin(t * 2.4) * 0.006;
+  }
   d.head.rotation.z += (p.headPitch || 0);
   d.head.rotation.y += (p.headYaw || 0);
   d.head.rotation.x += (p.headRoll || 0);
@@ -197,7 +239,8 @@ export function poseDog(d, p) {
   d.jaw.rotation.z = -(p.jaw || 0) * 0.6;
   // orelhas: 0 relaxadas, 1 em alerta
   const ek = p.ears ?? 0.3;
-  for (const e of d.ears) { const g = e.userData.sgn; e.rotation.x = (0.75 - ek * 0.5) * g; e.rotation.z = 0.15 - ek * 0.3; e.rotation.y = 0; }
+  const twitch = Math.pow(Math.max(0, Math.sin(t * 0.7 + 2)), 30) * 0.25;
+  for (const e of d.ears) { const g = e.userData.sgn; e.rotation.x = (0.08 + ek * 0.3 + twitch) * g; e.rotation.z = -0.1 + ek * 0.35; e.rotation.y = -0.1 * g * (1 - ek); }
   // rabo
   const wag = p.wag ?? 0.2;
   d.tail[0].rotation.y = Math.sin(t * (p.wagSpeed || 12)) * 0.5 * wag;
