@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body style="margin:0;background:#000">
+<script type="importmap">{"imports":{"three":"/videos/engine/node_modules/three/build/three.module.js"}}</script>
+<script type="module">
+import { createStage, THREE } from '/videos/engine/lib/core.js';
+import { makeLights } from '/videos/engine/lib/world.js';
+import * as F from '/videos/engine/lib/fauna.js';
+const q = new URLSearchParams(location.search);
+const st = createStage(+(q.get('w') || 1280), +(q.get('h') || 720));
+st.scene.background = new THREE.Color(0x6b7b86);
+st.renderer.toneMapping = THREE.NeutralToneMapping;
+const L = makeLights(st.scene, { sun: 2.4, hemi: 1.4 });
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(60, 60), new THREE.MeshStandardMaterial({ color: 0x8a7a68 })); floor.rotation.x = -Math.PI / 2; floor.receiveShadow = true; st.scene.add(floor);
+const A = {
+  croc: [F.buildCroc(), F.poseCroc, 4.5, [0, 0.25, 0]], brach: [F.buildCroc({ len: 2.2, blunt: 1 }), F.poseCroc, 3.2, [0, 0.2, 0]], champ: [F.buildChampso(), F.poseCroc, 2.6, [0, 0.12, 0]],
+  turtle: [F.buildTurtle(), F.poseTurtle, 0.9, [0.02, 0.08, 0]], multi: [F.buildMulti(), F.poseMammal, 0.45, [0, 0.07, 0]], didel: [F.buildDidelphodon(), F.poseMammal, 1.1, [0.05, 0.2, 0]],
+  gar: [F.buildFish(), F.poseFish, 1.5, [0, 0.0, 0]], fish: [F.buildFish({ len: 0.25, gar: 0 }), F.poseFish, 0.5, [0, 0, 0]],
+  edmo: [F.buildEdmonto(), F.poseEdmonto, 15, [0, 2.5, 0]], trike: [F.buildTrike(), F.poseTrike, 11, [0.5, 1.8, 0]], raptor: [F.buildRaptor(), F.poseRaptor, 2.4, [-0.2, 0.6, 0]], dakota: [F.buildRaptor({ size: 2.2 }), F.poseRaptor, 5, [-0.4, 1.3, 0]],
+  bird: [F.buildBird(), (b, p) => F.poseBird(b, p.t), 0.5, [0, 0, 0]],
+};
+for (const k in A) { A[k][0].root.visible = false; st.scene.add(A[k][0].root); }
+window.renderAt = (name, view, extra) => {
+  for (const k in A) A[k][0].root.visible = k === name;
+  const [a, pose, d, c] = A[name];
+  pose(a, Object.assign({ t: 1 }, extra ? JSON.parse(extra) : {}));
+  if (name === 'gar' || name === 'fish' || name === 'bird') a.root.position.y = 0.3 * (d / 1.5);
+  const dir = view === 'side' ? [0.05, 0.25, 1] : view === 'front' ? [1, 0.3, 0.25] : [0.8, 0.5, 0.75];
+  const n = Math.hypot(...dir);
+  st.look([c[0] + dir[0] / n * d, c[1] + dir[1] / n * d, c[2] + dir[2] / n * d], c, 0, 35);
+  L.aim(c, [0.5, 0.7, 0.6], d * 0.6, d * 3);
+  st.render();
+  return { ms: 0, url: st.renderer.domElement.toDataURL('image/jpeg', 0.9) };
+};
+window.ready = true;
+</script></body></html>

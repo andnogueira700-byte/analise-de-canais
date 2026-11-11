@@ -222,6 +222,48 @@ export function poseDog(d, p) {
     for (const n of ['RL', 'RR']) { L[n].up.rotation.z = 1.35 * k; L[n].lo.rotation.z = -2.35 * k; }
     for (const n of ['RL', 'RR']) L[n].up.rotation.x = 0.25 * k * (n === 'RL' ? -1 : 1);
   }
+  if (p.drink) { // cabeça baixa até a água, lambendo
+    const k = p.drink;
+    bp -= 0.3 * k; by -= 0.08 * k;
+    for (const n of ['FL', 'FR']) { L[n].up.rotation.z += 0.45 * k; L[n].lo.rotation.z -= 0.35 * k; }
+    for (const n of ['RL', 'RR']) { L[n].up.rotation.z -= 0.12 * k; L[n].lo.rotation.z += 0.2 * k; }
+    d.head.rotation.z -= 0.95 * k;
+    d.jaw.userData.lap = Math.max(0, Math.sin(t * 16)) * 0.35 * k;
+  }
+  if (p.dig) { // patas da frente cavando, alternadas
+    const k = p.dig, f = t * (p.digSpeed || 15);
+    bp -= 0.22 * k; by -= 0.03 * k;
+    L.FL.up.rotation.z = (0.25 + Math.max(0, Math.sin(f)) * 0.9 - 0.45 * Math.max(0, -Math.sin(f))) * k;
+    L.FR.up.rotation.z = (0.25 + Math.max(0, -Math.sin(f)) * 0.9 - 0.45 * Math.max(0, Math.sin(f))) * k;
+    L.FL.lo.rotation.z = -Math.max(0, Math.cos(f)) * 0.9 * k; L.FR.lo.rotation.z = -Math.max(0, -Math.cos(f)) * 0.9 * k;
+    for (const n of ['RL', 'RR']) { L[n].up.rotation.z = -0.3 * k; L[n].lo.rotation.z = 0.35 * k; }
+    d.head.rotation.z -= 0.35 * k;
+  }
+  if (p.bow) { // espreguiçar: peito no chão, patas da frente esticadas, traseiro no alto
+    const k = p.bow;
+    bp -= 0.42 * k; by -= 0.06 * k;
+    for (const n of ['FL', 'FR']) { L[n].up.rotation.z = 1.05 * k; L[n].lo.rotation.z = 0.15 * k; }
+    for (const n of ['RL', 'RR']) { L[n].up.rotation.z = -0.25 * k; L[n].lo.rotation.z = 0.05 * k; }
+    d.head.rotation.z += 0.35 * k;
+  }
+  if (p.stretchBack) { // espreguiçar: patas de trás esticadas para trás
+    const k = p.stretchBack;
+    bp += 0.12 * k; by -= 0.04 * k;
+    for (const n of ['FL', 'FR']) { L[n].up.rotation.z = -0.3 * k; L[n].lo.rotation.z = 0.0; }
+    for (const n of ['RL', 'RR']) { L[n].up.rotation.z = -0.85 * k; L[n].lo.rotation.z = -0.25 * k; }
+  }
+  if (p.growl) { // cabeça baixa, rosnando
+    const k = p.growl;
+    d.head.rotation.z -= 0.22 * k; bp -= 0.06 * k; by -= 0.03 * k;
+    for (const n of ['FL', 'FR']) L[n].up.rotation.z += 0.12 * k;
+    by += Math.sin(t * 55) * 0.0015 * k;
+  }
+  if (p.roll) { // de costas, patas para o ar, se esfregando
+    const k = p.roll, w = Math.sin(t * (p.rollSpeed || 7));
+    br += (Math.PI * 0.92 + w * 0.22) * k; by -= 0.2 * k;
+    for (const n in L) { const fr = L[n].front; L[n].up.rotation.z = (fr ? 0.7 : -0.5) * k + Math.sin(t * 9 + (fr ? 0 : 2) + (n.endsWith('L') ? 0 : 1)) * 0.35 * k; L[n].lo.rotation.z = (fr ? -1.0 : 1.0) * k; }
+    d.head.rotation.z += 0.3 * k; d.head.rotation.x += w * 0.3 * k;
+  }
   if (p.shiver) { by += Math.sin(t * 70) * 0.003 * p.shiver; br += Math.sin(t * 63) * 0.02 * p.shiver; }
   d.body.position.y = d.B[1] + by; d.body.rotation.z = bp; d.body.rotation.x = br;
   // cabeça
@@ -236,7 +278,7 @@ export function poseDog(d, p) {
   if (p.sniff) { // focinho farejando: pequenos impulsos
     d.head.rotation.z += -0.55 * p.sniff + Math.sin(t * 9) * 0.035 * p.sniff;
   }
-  d.jaw.rotation.z = -(p.jaw || 0) * 0.6;
+  d.jaw.rotation.z = -((p.jaw || 0) + (d.jaw.userData.lap || 0) + (p.growl ? 0.12 * p.growl + Math.sin(t * 40) * 0.03 * p.growl : 0)) * 0.6; d.jaw.userData.lap = 0;
   // orelhas: 0 relaxadas, 1 em alerta
   const ek = p.ears ?? 0.3;
   const twitch = Math.pow(Math.max(0, Math.sin(t * 0.7 + 2)), 30) * 0.25;

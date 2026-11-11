@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><style>@font-face{font-family:"Inter";font-weight:900;src:url(/videos/engine/fonts/Inter-Black.otf)}</style></head><body style="margin:0;background:#000">
+<script type="importmap">{"imports":{"three":"/videos/engine/node_modules/three/build/three.module.js"}}</script>
+<script type="module">
+import { createStage, THREE } from '/videos/engine/lib/core.js';
+import { createWorld } from './sets.js';
+import { poseDog } from '/videos/engine/lib/dog.js';
+const q = new URLSearchParams(location.search);
+const st = createStage(+(q.get('w') || 1920), +(q.get('h') || 1080));
+st.renderer.toneMapping = THREE.ACESFilmicToneMapping;
+const W = createWorld(st);
+window.renderAt = (name, cam, extra) => {
+  const t0 = performance.now();
+  W.use(name); const c = JSON.parse(cam); const e = extra ? JSON.parse(extra) : {};
+  if (e.mood) W.mood(e.mood);
+  if (e.dog) { W.dog.root.position.set(...e.dog); W.dog.root.rotation.set(0, e.yaw || 0, 0); poseDog(W.dog, { t: 1, ...(e.pose || {}) }); } else W.dog.root.visible = false;
+  if (e.trex && W.cur.trex) { W.cur.trex.root.visible = true; W.cur.trex.root.position.set(...e.trex); }
+  st.look(c[0], c[1], 0, c[2] || 40);
+  st.render();
+  return { ms: performance.now() - t0, url: st.renderer.domElement.toDataURL('image/jpeg', 0.9) };
+};
+window.ready = true;
+</script></body></html>

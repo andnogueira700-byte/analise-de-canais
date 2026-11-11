@@ -1,3 +1,5 @@
 node_modules/
 videos/**/render/
 *.mp4
+entregas/
+videos/**/audio/*.wav
