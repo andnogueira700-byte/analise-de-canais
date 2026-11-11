@@ -2,13 +2,24 @@
 //  stills: node render.js still <pagina> <saida-dir> <tempos,separados,por,virgula> [w h]
 //  vídeo : node render.js video <pagina> <saida.mp4> <t0> <t1> <fps> [w h]
 const { chromium } = require('playwright'); const serve = require('./serve'); const fs = require('fs'); const { spawn } = require('child_process');
+const FFMPEG = process.env.FFMPEG || (() => { try { return require('ffmpeg-static'); } catch { return 'ffmpeg'; } })();
 (async () => {
   const [, , mode, page, out, a, b, c, w = '1920', h = '1080'] = process.argv;
-  const srv = await serve('/home/user/analise-de-canais', 0); const port = srv.address().port;
-  const br = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
-  const W = mode === 'still' ? (c || w) : w, H = mode === 'still' ? (c ? (process.argv[7] || h) : h) : h;
+  const srv = await serve(require('path').resolve(__dirname, '../..'), 0); const port = srv.address().port;
+  // GPU=1 usa a placa de vídeo do computador; sem isso (ou se a placa não responder), usa a CPU (SwiftShader), como na nuvem.
+  const CPU_ARGS = ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'];
+  let br, gpu = false;
+  if (process.env.GPU === '1') {
+    try {
+      br = await chromium.launch({ channel: 'chromium', args: ['--ignore-gpu-blocklist'] });
+      const t = await br.newPage(); const gl = await t.evaluate(() => { const c = document.createElement('canvas').getContext('webgl2'); if (!c) return ''; const e = c.getExtension('WEBGL_debug_renderer_info'); return e ? c.getParameter(e.UNMASKED_RENDERER_WEBGL) : 'webgl2'; }); await t.close();
+      if (gl && !/swiftshader|llvmpipe|software/i.test(gl)) { gpu = true; console.log('[gpu]', gl); } else { await br.close(); br = null; console.log('[gpu] placa de vídeo não disponível, usando CPU'); }
+    } catch (e) { if (br) await br.close(); br = null; console.log('[gpu] falhou (' + e.message.split('\n')[0] + '), usando CPU'); }
+  }
+  if (!br) br = await chromium.launch({ args: CPU_ARGS });
+  const W = mode === 'still' ? (b || w) : w, H = mode === 'still' ? (c || h) : h;
   const pg = await br.newPage({ viewport: { width: +W, height: +H } });
-  pg.on('console', m => { const t = m.text(); if (!t.includes('GPU stall')) console.log('[page]', t); }); pg.on('pageerror', e => console.log('[err]', e.message));
+  pg.on('console', m => { const t = m.text(); if (!t.includes('GPU stall') && !(gpu && t.includes('GL Driver'))) console.log('[page]', t); }); pg.on('pageerror', e => console.log('[err]', e.message)); pg.on('response', r => { if (r.status() >= 400 && !r.url().endsWith('favicon.ico')) console.log('[404]', r.url()); });
   await pg.goto(`http://localhost:${port}/${page}?w=${W}&h=${H}`);
   await pg.waitForFunction('window.ready', null, { timeout: 600000 });
   if (mode === 'meta') { fs.writeFileSync(out, JSON.stringify({ cues: await pg.evaluate('window.CUES'), end: await pg.evaluate('window.END'), shots: await pg.evaluate('window.SHOTS') }, null, 1)); }
@@ -21,7 +32,7 @@ const { chromium } = require('playwright'); const serve = require('./serve'); co
   }
   if (mode === 'video') {
     const t0 = +a, t1 = +b, fps = +c;
-    const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'mjpeg', '-i', '-', '-vf', 'scale=1920:1080:flags=lanczos', '-c:v', 'libx264', '-preset', 'medium', '-crf', '15', '-pix_fmt', 'yuv420p', out], { stdio: ['pipe', 'inherit', 'inherit'] });
+    const ff = spawn(FFMPEG, ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'mjpeg', '-i', '-', '-vf', 'scale=1920:1080:flags=lanczos', '-c:v', 'libx264', '-preset', 'medium', '-crf', '15', '-pix_fmt', 'yuv420p', out], { stdio: ['pipe', 'inherit', 'inherit'] });
     const n0 = Math.round(t0 * fps), n1 = Math.round(t1 * fps); const start = Date.now();
     for (let n = n0; n < n1; n++) {
       const url = await pg.evaluate((T) => window.renderAt(T), (n + 0.5) / fps);

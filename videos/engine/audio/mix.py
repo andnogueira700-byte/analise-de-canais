@@ -1,5 +1,6 @@
 # Trilha do piloto: efeitos sintetizados, ambiências por cenário, música de fundo e narração.
-import numpy as np, json, sys, subprocess
+import numpy as np, json, sys, subprocess, os
+FFMPEG = os.environ.get('FFMPEG', 'ffmpeg')
 from scipy.signal import butter, sosfilt
 SR = 44100
 meta = json.load(open(sys.argv[1])); voice_path = sys.argv[2]; out = sys.argv[3]
@@ -156,7 +157,7 @@ def gain_curve(points):
 g = gain_curve([(0, 0), (0.3, 1), (22.2, 1), (22.6, 0.0), (26.0, 0.0), (26.6, 1), (94.9, 1), (95.1, 0.35), (101.5, 0.35), (102, 1), (121.0, 1), (END, 0)])
 mus *= g
 # narração
-raw = subprocess.run(['ffmpeg', '-loglevel', 'error', '-i', voice_path, '-ar', str(SR), '-ac', '1', '-f', 'f32le', '-'], capture_output=True).stdout
+raw = subprocess.run([FFMPEG, '-loglevel', 'error', '-i', voice_path, '-ar', str(SR), '-ac', '1', '-f', 'f32le', '-'], capture_output=True).stdout
 v = np.frombuffer(raw, dtype=np.float32).astype(np.float64)
 voice = np.zeros(N); voice[:min(N, len(v))] = v[:N]
 # ducking: música e ambiência baixam quando há voz
@@ -164,5 +165,5 @@ ve = np.abs(voice); ve = lp(ve, 4); duck = 1 - 0.6 * np.clip(ve / (np.percentile
 mix = voice * 1.0 + fx * 0.7 + amb * duck + mus * 0.2 * duck
 mix = mix / max(1.0, np.abs(mix).max() / 0.95)
 st = np.stack([mix, mix], 1).astype(np.float32)
-subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-f', 'f32le', '-ar', str(SR), '-ac', '2', '-i', '-', '-af', 'loudnorm=I=-15:TP=-1.5:LRA=11', '-ar', '48000', '-c:a', 'pcm_s16le', out], input=st.tobytes())
+subprocess.run([FFMPEG, '-loglevel', 'error', '-y', '-f', 'f32le', '-ar', str(SR), '-ac', '2', '-i', '-', '-af', 'loudnorm=I=-15:TP=-1.5:LRA=11', '-ar', '48000', '-c:a', 'pcm_s16le', out], input=st.tobytes())
 print('ok', END)

@@ -2,7 +2,7 @@
 const { chromium } = require('playwright'); const serve = require('./serve'); const fs = require('fs');
 (async () => {
   const [, , page, outDir, callsJson, w = '1920', h = '1080'] = process.argv;
-  const srv = await serve('/home/user/analise-de-canais', 8770 + Math.floor(Math.random() * 100));
+  const srv = await serve(require('path').resolve(__dirname, '../..'), 8770 + Math.floor(Math.random() * 100));
   const port = srv.address().port;
   const b = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
   const p = await b.newPage({ viewport: { width: +w, height: +h } });
