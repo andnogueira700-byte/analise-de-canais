@@ -1,0 +1,36 @@
+<!doctype html><html><body style="margin:0;background:#000">
+<script type="importmap">{"imports":{"three":"/videos/engine/node_modules/three/build/three.module.js"}}</script>
+<script type="module">
+import { createStage, THREE } from '/videos/engine/lib/core.js';
+import { makeSky, makeLights } from '/videos/engine/lib/world.js';
+import { buildCreta, groundH } from '/videos/engine/lib/creta.js';
+import { buildDog, poseDog } from '/videos/engine/lib/dog.js';
+import { poseTrex } from '/videos/engine/lib/world.js';
+const q = new URLSearchParams(location.search);
+const W = +(q.get('w') || 1920), H = +(q.get('h') || 1080);
+const st = createStage(W, H);
+const sky = makeSky(); st.scene.add(sky);
+st.scene.fog = new THREE.FogExp2(0xd9b48c, 0.012);
+const L = makeLights(st.scene, { sun: 2.3, hemi: 1.35 });
+st.renderer.toneMappingExposure = 1.05;
+const t0 = performance.now();
+const C = buildCreta(st.scene);
+const dog = buildDog(); st.scene.add(dog.root);
+console.log('build ms', performance.now() - t0);
+const by = {}; st.scene.traverse(o => { if (o.isMesh && o.geometry.index) { let n = o.name || (o.parent && o.parent.name) || 'other'; let q = o; while (q.parent && !q.name) q = q.parent; n = q.name || 'other'; by[n] = (by[n] || 0) + o.geometry.index.count / 3; } }); console.log('tris', JSON.stringify(by));
+window.renderAt = (name, t) => {
+  const views = {
+    ref: () => { st.look([-0.75, 0.42, 1.55], [1.2, 0.25, -0.6], 0, 40); dog.root.position.set(0.15, groundH(0.15,0.25), 0.25); dog.root.rotation.y = 0.15; poseDog(dog, { t, ears: 0.6, headYaw: 0.1, headPitch: 0.05 }); },
+    side: () => { st.look([0.1, 0.35, 1.6], [0.1, 0.3, 0], 0, 35); dog.root.position.set(0, groundH(0,0), 0); dog.root.rotation.y = 0; poseDog(dog, { t, gait: 'walk', phase: t * 1.2, ears: 0.6 }); },
+    front: () => { st.look([1.0, 0.4, 0.5], [0.0, 0.32, 0], 0, 35); dog.root.position.set(0, groundH(0,0), 0); dog.root.rotation.y = 0; poseDog(dog, { t, ears: 0.8, jaw: 0.3 }); },
+    wide: () => { st.look([-3, 2.2, 5], [6, 1.5, -20], 0, 45); dog.root.position.set(0.15, 0, 0.25); poseDog(dog, { t }); },
+  };
+  views[name]();
+  L.aim([0.5, 0, 0], [0.55, 0.32, -0.75], 3.5, 20);
+  poseTrex(C.trex, { t, phase: t * 0.4 });
+  C.wmat.userData.u.uTime.value = t; C.fmat.userData.u.uTime.value = t;
+  const s0 = performance.now(); st.render(); const ms = performance.now() - s0;
+  return { ms, url: st.renderer.domElement.toDataURL('image/jpeg', 0.9) };
+};
+window.ready = true;
+</script></body></html>
