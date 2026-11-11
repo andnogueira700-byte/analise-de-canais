@@ -56,7 +56,7 @@ export function createWorld(st) {
       meio: { sky: { top: 0x5f9ad0, mid: 0xc6dce8, hor: 0xf0ead0, sunDir: [0.2, 0.95, -0.2], glow: 0.2 }, fog: [0xd0dcd0, 0.016], L: { sun: 2.8, hemi: 1.3, sunCol: 0xfff6e0, sky: 0xe0eef8, ground: 0x6a6440 } },
       tarde: { sky: { top: 0x6f9fb6, mid: 0xe9c79a, hor: 0xf6b47a, sunDir: [0.6, 0.18, -0.8], glow: 0.45 }, fog: [0xdcb48c, 0.014], L: { sun: 2.4, hemi: 1.2, sunCol: 0xffc48a, sky: 0xc8dce4, ground: 0x7a5636 } },
       ocaso: { sky: { top: 0x2c3a5c, mid: 0xb06a5a, hor: 0xf08a4a, sunDir: [0.7, 0.03, -0.7], glow: 0.6 }, fog: [0x9a6a5a, 0.02], L: { sun: 1.4, hemi: 0.75, sunCol: 0xff9a5a, sky: 0x8a90b8, ground: 0x4a3226, exposure: 1.05 } },
-      noite: { sky: { top: 0x04070f, mid: 0x0e1628, hor: 0x1e2a48, sunDir: [-0.3, 0.6, 0.5], glow: 0.0 }, fog: [0x0e1628, 0.04], L: { sun: 0.9, hemi: 0.55, sunCol: 0xa8c0ff, sky: 0x5a6aa0, ground: 0x1a1a14, fill: 0.3, fillCol: 0x6a7ab0, exposure: 1.45 } },
+      noite: { sky: { top: 0x04070f, mid: 0x0e1628, hor: 0x1e2a48, sunDir: [-0.3, 0.6, 0.5], glow: 0.0 }, fog: [0x0e1628, 0.04], L: { sun: 1.05, hemi: 0.7, sunCol: 0xa8c0ff, sky: 0x6a7ab0, ground: 0x22221a, fill: 0.35, fillCol: 0x6a7ab0, exposure: 1.6 } },
       alba: { sky: { top: 0x5a7ab0, mid: 0xe8b8a8, hor: 0xffc890, sunDir: [-0.7, 0.08, 0.5], glow: 0.55 }, fog: [0xe0c0a8, 0.02], L: { sun: 1.9, hemi: 1.1, sunCol: 0xffb880, sky: 0xc0c8e0, ground: 0x5a4a36 } },
     }[m];
     setSky(W, M.sky); W.st.scene.fog = new THREE.FogExp2(M.fog[0], M.fog[1]); setLights(W, M.L);

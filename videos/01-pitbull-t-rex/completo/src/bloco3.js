@@ -76,7 +76,7 @@ export function addBloco3(K) {
   shot(463.26, 'claro', (lt, T) => {
     tick(T); herd(T); D.root.visible = false; noise(T);
     cam(lerp3([8, 3, -9], [9.5, 3.2, -8], lt / 3.55), [24, 3, 0], 40, 0.002, T);
-    animCard(at(label('ruido', 'RUIDO TODO EL TIEMPO', 13), -56, 34), lt, 0.2);
+    animCard(at(label('ruido3', 'RUIDO TODO EL TIEMPO', 13), -56, 34), lt, 0.2);
     animCard(at(label('resoplido', 'RESOPLIDOS', 13), -56, -20), lt, 1.6);
     animCard(at(label('mugido', 'MUGIDOS GRAVES', 13), -56, -36), lt, 2.4);
   }, [[0.2, 'pop'], [0.5, 'snort'], [1.6, 'pop'], [2.0, 'moo'], [2.4, 'pop']]);
@@ -131,7 +131,7 @@ export function addBloco3(K) {
     placeDog(0.3, 0, 1.4, 0.9); poseDog(D, { t: T, ears: 1, tailUp: 1, jaw: bark(lt, 0.0, 1.7, 6), headPitch: 0.3, crouch: 0.2 });
     cam(lerp3([-0.9, 0.6, 0.6], [-0.85, 0.58, 0.65], lt / 1.8), [0.9, 0.7, 2.2], 44, 0.008, T);
     animCard(at(label('cartero', 'COMO AL CARTERO', 14), -56, 34), lt, 0.1);
-    animCard(at(label('contodo', 'CON TODO', 14), 0, -38), lt, 1.1);
+    animCard(at(label('contodo3', 'CON TODO', 14), 0, -38), lt, 1.1);
   }, [[0.05, 'bark'], [0.45, 'bark'], [0.85, 'bark'], [0.1, 'pop'], [1.1, 'pop']]);
   shot(484.80, 'claro', (lt, T) => {
     tick(T); herd(T); trike(T);
@@ -537,7 +537,7 @@ export function addBloco3(K) {
     const h = wpos(R.head);
     cam(lerp3([0.2, 1.8, 6], [0.1, 1.7, 5.5], lt / 5.68), [0.2, 1.8, 0], 46, 0.002, T);
     animCard(at(card('vs', () => makeCard([{ text: 'VS', px: 26, color: 0xe0862f }], { padX: 8, padY: 5 })), 0, 34), lt, 0.6);
-    animCard(at(label('unico', 'EL ÚNICO QUE COMPITE CON SU NARIZ', 12), 0, -38), lt, 2.6);
+    animCard(at(label('unico3', 'EL ÚNICO QUE COMPITE CON SU NARIZ', 12), 0, -38), lt, 2.6);
   }, [[0.6, 'stamp'], [2.6, 'pop']]);
   // ---- para, cheira, olha ----
   const rexStop = [38, -7], rexYaw = yawTo(-16.5, 11.5);

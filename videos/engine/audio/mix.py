@@ -114,9 +114,76 @@ def night(d=2.4):
         i = int(k * 0.25 * SR); tt = t_(0.08); c = np.sin(2 * np.pi * 4300 * tt) * (np.sin(2 * np.pi * 40 * tt) > 0) * env(len(tt), 0.005, 0.03); o[i:i + len(c)] += c
     return norm(o, 0.06)
 def jump(): return whoosh(0.35) * 0.6
+
+# ---- efeitos do vídeo completo ----
+def bark():
+    t = t_(0.28); f = 520 * np.exp(-t * 4) + 260; ph = 2 * np.pi * np.cumsum(f) / SR
+    v = (np.sign(np.sin(ph)) * 0.5 + np.sin(ph * 2) * 0.5) * env(len(t), 0.008, 0.09)
+    return norm(bp(v + noise(0.28) * 0.25 * env(len(t), 0.005, 0.05), 250, 3500), 0.5)
+def hiss(d=1.0):
+    t = t_(d); return norm(bp(noise(d), 2500, 9000) * np.minimum(1, t / 0.05) * np.exp(-np.maximum(0, t - 0.5) * 4), 0.4)
+def dig(d=1.6):
+    t = t_(d); x = lp(noise(d), 1800) * (0.4 + 0.6 * (np.sin(2 * np.pi * 7 * t) > 0.3)); return norm(x * np.minimum(1, (d - t) / 0.3), 0.3)
+def crunch():
+    o = np.zeros(int(0.5 * SR))
+    for k in range(5):
+        i = int((k * 0.09 + rng.random() * 0.03) * SR); x = bp(noise(0.06), 1500, 7000) * env(int(0.06 * SR), 0.002, 0.02); o[i:i + len(x)] += x
+    return norm(o, 0.35)
+def squish(d=0.8):
+    t = t_(d); return norm(lp(noise(d), 900) * (0.5 + 0.5 * np.sin(2 * np.pi * 5 * t)) * env(len(t), 0.02, 0.3), 0.3)
+def herd(d=3.0):
+    t = t_(d); o = lp(noise(d), 400) * 0.4
+    for k in range(4):
+        i = int(rng.random() * (d - 0.8) * SR); n = int(0.7 * SR); tt = np.arange(n) / SR; f = 70 + rng.random() * 40
+        o[i:i + n] += np.sin(2 * np.pi * f * tt + 3 * np.sin(2 * np.pi * 3 * tt)) * env(n, 0.15, 0.3)
+    return norm(o * np.minimum(1, t / 0.3) * np.minimum(1, (d - t) / 0.5), 0.3)
+def snort(): t = t_(0.5); return norm(bp(noise(0.5), 300, 2500) * env(len(t), 0.02, 0.15), 0.35)
+def moo(d=1.2):
+    t = t_(d); f = 85 + 10 * np.sin(2 * np.pi * 0.8 * t); ph = 2 * np.pi * np.cumsum(f) / SR
+    return norm(lp(np.sin(ph) + 0.4 * np.sin(2 * ph) + 0.2 * np.sign(np.sin(ph)), 900) * np.minimum(1, t / 0.2) * np.minimum(1, (d - t) / 0.3), 0.35)
+def chew(d=1.2):
+    o = np.zeros(int(d * SR))
+    for k in range(int(d / 0.25)):
+        i = int(k * 0.25 * SR); x = lp(noise(0.08), 1200) * env(int(0.08 * SR), 0.005, 0.03); o[i:i + len(x)] += x
+    return norm(o, 0.2)
+def flap(d=1.6):
+    t = t_(d); return norm(bp(noise(d), 300, 2500) * (np.sin(2 * np.pi * 9 * t) > 0) * np.minimum(1, (d - t) / 0.5), 0.3)
+def infra(d=2.4):
+    t = t_(d); return norm((np.sin(2 * np.pi * 38 * t) + 0.5 * np.sin(2 * np.pi * 57 * t)) * np.sin(np.pi * t / d) ** 2 + lp(noise(d), 120) * 0.3, 0.7)
+def rattle(d=2.0):
+    t = t_(d); return norm(bp(noise(d), 2500, 6000) * (np.sin(2 * np.pi * 28 * t) > 0.6) * np.sin(np.pi * t / d), 0.15)
+def roar(d=1.6):
+    t = t_(d); f = 160 - 60 * t / d; ph = 2 * np.pi * np.cumsum(f) / SR
+    return norm(lp(np.sign(np.sin(ph)) + noise(d) * 0.8, 1800) * np.sin(np.pi * np.minimum(1, t / d)) ** 0.5, 0.55)
+def coo(d=1.6):
+    t = t_(d); return norm(np.sin(2 * np.pi * 180 * t) * (0.5 + 0.5 * np.sin(2 * np.pi * 2.5 * t)) * np.sin(np.pi * t / d), 0.25)
+def heartbeat():
+    o = np.zeros(int(0.9 * SR))
+    for dt, a in ((0, 1), (0.22, 0.7)):
+        i = int(dt * SR); n = int(0.15 * SR); tt = np.arange(n) / SR; o[i:i + n] += np.sin(2 * np.pi * 55 * tt) * np.exp(-tt * 30) * a
+    return norm(o, 0.6)
+def rustle(d=1.6):
+    t = t_(d); return norm(bp(noise(d), 1500, 7000) * (0.4 + 0.6 * np.abs(np.sin(2 * np.pi * 3 * t))) * np.sin(np.pi * t / d), 0.2)
+def thud():
+    t = t_(0.9); return norm(np.sin(2 * np.pi * 45 * t) * np.exp(-t * 6) + lp(noise(0.9), 200) * np.exp(-t * 9) * 0.6, 0.85)
+def stepL(): t = t_(0.15); return norm(bp(noise(0.15), 800, 4000) * env(len(t), 0.003, 0.03), 0.15)
+def frog(d=0.9):
+    t = t_(d); return norm(np.sign(np.sin(2 * np.pi * 380 * t)) * (np.sin(2 * np.pi * 14 * t) > 0) * np.sin(np.pi * t / d) * 0.6 + 0, 0.12)
+def yawn(d=1.2):
+    t = t_(d); f = 600 - 300 * t / d; ph = 2 * np.pi * np.cumsum(f) / SR; return norm(lp(np.sin(ph) + noise(d) * 0.3, 2000) * np.sin(np.pi * t / d), 0.2)
+def scratch(d=1.5):
+    t = t_(d); return norm(bp(noise(d), 2000, 6000) * (np.sin(2 * np.pi * 11 * t) > 0) * np.sin(np.pi * t / d), 0.18)
+def birds(d=2.4):
+    o = np.zeros(int(d * SR))
+    for k in range(6):
+        i = int(rng.random() * (d - 0.3) * SR); n = int(0.18 * SR); tt = np.arange(n) / SR; f = 2500 + rng.random() * 1500 + 800 * np.sin(2 * np.pi * 18 * tt)
+        o[i:i + n] += np.sin(2 * np.pi * np.cumsum(f) / SR) * env(n, 0.01, 0.06)
+    return norm(o, 0.12)
 FX = dict(whoosh=whoosh, pop=pop, stamp=stamp, ding=ding, knock=knock, sniff=sniff, step=step, tick=tick, trickle=trickle, tension=tension, rumble=rumble,
           vacuum=vacuum, spot=spot, burst=burst, snap=snap, rise=rise, growl=growl, jingle=jingle, fire=fire, wind=wind, buzz=buzz, splash=splash,
-          bubble=bubble, click=click, night=night, jump=jump)
+          bubble=bubble, click=click, night=night, jump=jump,
+          bark=bark, hiss=hiss, dig=dig, crunch=crunch, squish=squish, herd=herd, snort=snort, moo=moo, chew=chew, flap=flap, infra=infra, rattle=rattle,
+          roar=roar, coo=coo, heartbeat=heartbeat, rustle=rustle, thud=thud, stepL=stepL, frog=frog, yawn=yawn, scratch=scratch, birds=birds)
 fx = np.zeros(N)
 for t, k in meta['cues']:
     if k not in FX: continue
@@ -125,17 +192,22 @@ for t, k in meta['cues']:
 amb = np.zeros(N)
 river = lp(noise(END), 900) * 0.5 + bp(noise(END), 1500, 5000) * 0.08
 room = lp(noise(END), 200) * 0.25
+forest = bp(noise(END), 3000, 7000) * 0.15 * (0.6 + 0.4 * np.sin(2 * np.pi * 0.13 * np.arange(N) / SR)) + lp(noise(END), 500) * 0.3
 for a, b, s in meta['shots']:
     i, j = int(a * SR), int(b * SR)
     if s == 'creta': amb[i:j] += river[i:j] * 0.07
     elif s in ('sala', 'quarto'): amb[i:j] += room[i:j] * 0.03
     elif s == 'rua': amb[i:j] += river[i:j] * 0.03
     elif s == "fogueira": amb[i:j] += lp(rng.standard_normal(j - i), 500) * 0.03
+    elif s == 'orilla': amb[i:j] += river[i:j] * 0.08
+    elif s == 'bosque': amb[i:j] += (forest[i:j] * 0.05)
+    elif s == 'claro': amb[i:j] += (forest[i:j] * 0.03 + room[i:j] * 0.03)
+    elif s == 'mapa': amb[i:j] += room[i:j] * 0.02
 amb = lp(amb, 8000)
 # música: pad + marimba suave, 96 bpm, Ré menor
 bpm = 96; beat = 60 / bpm
 chords = [[50, 53, 57, 62], [46, 50, 53, 58], [53, 57, 60, 65], [48, 52, 55, 60]]
-mus = np.zeros(N); T = np.arange(N) / SR
+mus = np.zeros(N); mar = np.zeros(N); T = np.arange(N) / SR
 hz = lambda m: 440 * 2 ** ((m - 69) / 12)
 bar = beat * 4
 for ci in range(int(END / bar) + 1):
@@ -149,13 +221,31 @@ for ci in range(int(END / bar) + 1):
         st = a + k * beat / 2; i = int(st * SR); m = ch[pat[k]] + 12; d = 0.6; tt2 = np.arange(int(d * SR)) / SR
         pl = (np.sin(2 * np.pi * hz(m) * tt2) + 0.3 * np.sin(2 * np.pi * hz(m) * 4 * tt2) * np.exp(-tt2 * 30)) * np.exp(-tt2 * 7) * 0.09
         if i >= N: continue
-        j = min(N, i + len(pl)); mus[i:j] += pl[:j - i]
-mus = lp(mus, 5000)
-# tira a música no momento tenso (plano 9) e nas más notícias, e fecha no fim
+        j = min(N, i + len(pl)); mar[i:j] += pl[:j - i]
+mus = lp(mus, 5000); mar = lp(mar, 5000)
+# dinâmica da música: piloto usa a curva fixa; vídeos longos usam "modos" (arquivo musica.json ao lado da narração)
 def gain_curve(points):
     g = np.interp(T, [p[0] for p in points], [p[1] for p in points]); return g
-g = gain_curve([(0, 0), (0.3, 1), (22.2, 1), (22.6, 0.0), (26.0, 0.0), (26.6, 1), (94.9, 1), (95.1, 0.35), (101.5, 0.35), (102, 1), (121.0, 1), (END, 0)])
-mus *= g
+import os
+mfile = os.path.join(os.path.dirname(os.path.abspath(voice_path)), 'musica.json')
+if os.path.exists(mfile):
+    modes = json.load(open(mfile))
+    lvl = {'calma': 1.0, 'tension': 0.55, 'noche': 0.45, 'silencio': 0.0}
+    pts = [(0, 0)]
+    for a, b, m in modes: pts += [(a + 0.25, lvl[m]), (b - 0.25, lvl[m])]
+    pts.append((END, 0)); pts.sort()
+    g = gain_curve(pts)
+    # drone grave nos trechos de tensão/noite
+    drone = np.zeros(N)
+    for a, b, m in modes:
+        if m in ('tension', 'noche'):
+            i, j = int(a * SR), min(N, int(b * SR)); tt = np.arange(j - i) / SR
+            drone[i:j] += (np.sin(2 * np.pi * 73.4 * tt) + 0.5 * np.sin(2 * np.pi * 110 * tt + np.sin(tt * 0.7))) * np.minimum(1, tt / 1.5) * np.minimum(1, (b - a - tt) / 1.5) * 0.05
+    gm = gain_curve(sorted([(0, 0)] + [p for a, b, m in modes for p in ((a + 0.25, 1.0 if m == 'calma' else 0.0), (b - 0.25, 1.0 if m == 'calma' else 0.0))] + [(END, 0)]))
+    mus = mus * g + mar * gm + lp(drone, 400)
+else:
+    g = gain_curve([(0, 0), (0.3, 1), (22.2, 1), (22.6, 0.0), (26.0, 0.0), (26.6, 1), (94.9, 1), (95.1, 0.35), (101.5, 0.35), (102, 1), (121.0, 1), (END, 0)])
+    mus = (mus + mar) * g
 # narração
 raw = subprocess.run([FFMPEG, '-loglevel', 'error', '-i', voice_path, '-ar', str(SR), '-ac', '1', '-f', 'f32le', '-'], capture_output=True).stdout
 v = np.frombuffer(raw, dtype=np.float32).astype(np.float64)
