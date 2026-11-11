@@ -161,7 +161,7 @@ export function poseFish(F, p = {}) { const ph = (p.phase || 0) * TAU, a = p.amp
 // ---------- Edmontosaurus (bico de pato) ----------
 export function buildEdmonto(o = {}) {
   const s = o.voxel ?? 0.1, skin = o.skin ?? 0x6a6a4a, back = o.back ?? 0x4e5236, belly = o.belly ?? 0xb0a47c;
-  const col = (p, x, y, z) => { if (p[1] < 2.0 && p[0] > -2 && p[0] < 2.5) return J(belly, x, y, z, 0.06); const st = Math.sin(p[0] * 1.8 + p[1]) > 0.55 && p[1] > 2.6; return J(st || p[1] > 3.4 ? back : skin, x, y, z, 0.08); };
+  const col = (p, x, y, z) => { if (p[1] < 2.0 && p[0] > -2 && p[0] < 2.5) return J(belly, x, y, z, 0.06); const m = hash3(Math.floor(p[0] * 2.5), Math.floor(p[1] * 2.5), Math.floor(p[2] * 2.5)); return J(lerpHex(skin, back, Math.min(1, Math.max(0, (p[1] - 2.6) * 0.8)) * 0.7 + (m > 0.8 ? 0.2 : 0)), x, y, z, 0.07); };
   const root = new THREE.Group();
   const HIP = [0, 2.9, 0];
   const body = part(s, (p) => { let d = ell(p, [0.3, 2.75, 0], [2.3, 1.1, 0.95]); d = smin(d, ell(p, [-0.6, 3.0, 0], [1.4, 1.0, 0.85]), 0.6); d = smin(d, cap(p, [2.2, 2.9, 0], [3.4, 3.4, 0], 0.65, 0.4), 0.5); return d; }, col, [-2.3, 1.5, -1.1], [3.9, 4.2, 1.1], HIP);
@@ -176,12 +176,12 @@ export function buildEdmonto(o = {}) {
   const legs = [];
   for (const sg of [1, -1]) {
     const z = 0.6 * sg, Hp = [0, 2.8, z];
-    const thigh = part(s, (p) => smin(ell(p, [0, 2.4, z], [0.75, 0.95, 0.4]), cap(p, [0, 2.6, z], [0.3, 1.5, z], 0.4, 0.3), 0.3), col, [-1, 1.1, z - 0.55], [1.0, 3.4, z + 0.55], Hp);
+    const thigh = part(s, (p) => smin(ell(p, [0, 2.4, z], [0.9, 1.05, 0.5]), cap(p, [0, 2.6, z], [0.3, 1.5, z], 0.55, 0.42), 0.3), col, [-1.1, 1.0, z - 0.65], [1.1, 3.5, z + 0.65], Hp);
     const Kn = [0.3, 1.5, z];
-    const shin = part(s, (p) => smin(cap(p, [0.3, 1.5, z], [-0.05, 0.3, z], 0.3, 0.22), ell(p, [0.15, 0.12, z], [0.35, 0.13, 0.22]), 0.12), (p, x, y, z2) => p[1] < 0.22 ? J(0x3e3a2c, x, y, z2) : col(p, x, y, z2), [-0.45, -0.05, z - 0.4], [0.65, 1.9, z + 0.4], Kn);
+    const shin = part(s, (p) => smin(cap(p, [0.3, 1.5, z], [-0.05, 0.3, z], 0.42, 0.3), ell(p, [0.15, 0.12, z], [0.42, 0.14, 0.28]), 0.12), (p, x, y, z2) => p[1] < 0.22 ? J(0x3e3a2c, x, y, z2) : col(p, x, y, z2), [-0.45, -0.05, z - 0.4], [0.65, 1.9, z + 0.4], Kn);
     attach(body, thigh); attach(thigh, shin);
     const Sh = [2.2, 2.3, z * 0.85];
-    const arm = part(s, (p) => smin(cap(p, [2.2, 2.3, z * 0.85], [2.5, 0.25, z * 0.9], 0.22, 0.14), ell(p, [2.55, 0.1, z * 0.9], [0.18, 0.1, 0.15]), 0.08), (p, x, y, z2) => p[1] < 0.2 ? J(0x3e3a2c, x, y, z2) : col(p, x, y, z2), [1.9, -0.05, z * 0.85 - 0.35], [2.85, 2.6, z * 0.85 + 0.35], Sh);
+    const arm = part(s, (p) => smin(cap(p, [2.2, 2.3, z * 0.85], [2.5, 0.25, z * 0.9], 0.3, 0.2), ell(p, [2.55, 0.1, z * 0.9], [0.22, 0.11, 0.18]), 0.08), (p, x, y, z2) => p[1] < 0.2 ? J(0x3e3a2c, x, y, z2) : col(p, x, y, z2), [1.9, -0.05, z * 0.85 - 0.35], [2.85, 2.6, z * 0.85 + 0.35], Sh);
     attach(body, arm);
     legs.push({ thigh, shin, arm, sg });
   }

@@ -200,11 +200,13 @@ const BUILD = {
     g.add(buildTerrain(hC, cC, { cx: 4, cz: 0, rings: [{ half: 2, s: 0.025, sv: 0.02, chunks: 4 }, { half: 8, s: 0.06, sv: 0.02, chunks: 6 }, { half: 32, s: 0.18, sv: 0.03, chunks: 6, tall: true }, { half: 180, s: 0.9, sv: 0.06, chunks: 8, tall: true }] }));
     const R = rng(55);
     for (let i = 0; i < 80; i++) { const a = R() * 6.28, d = 52 + R() * 50, x = 20 + Math.cos(a) * d, z = Math.sin(a) * d * 0.9; const t = makeTree(Math.floor(R() * 1e6), { voxel: 0.16 + d / 400, height: 12 + R() * 10 }); t.position.set(x, hC(x, z) - 0.1, z); g.add(t); }
+    const edge = []; for (const [x, z] of [[58, -26], [62, -19], [55, -31], [64, -12], [60, -5], [57, 6], [61, 14], [54, 22]]) { const t = makeTree(Math.floor(x * 31 + z), { voxel: 0.12, height: 13 + (x % 4), cast: true }); t.position.set(x, hC(x, z) - 0.1, z); g.add(t); edge.push(t); }
+    const dungs = []; for (const [x, z, r] of [[6, -3, 0.5], [11, 5, 0.6], [3.5, 4, 0.4]]) { const d = makeDung(Math.floor(x), { r, voxel: 0.03 }); d.position.set(x, hC(x, z) - 0.03, z); g.add(d); dungs.push(d); }
     for (let i = 0; i < 10; i++) { const x = -6 - R() * 6, z = -8 + R() * 16; const t = makeTree(Math.floor(R() * 1e6), { voxel: 0.08, height: 11 + R() * 6, cast: true }); t.position.set(x, hC(x, z) - 0.1, z); g.add(t); }
     const ferns = [];
     const fern = (x, z, sz, sd) => { const f = makeFern(sd, { size: sz }); f.position.set(x, hC(x, z) - 0.01, z); f.rotation.y = sd; g.add(f); ferns.push(f); return f; };
-    const big = fern(0.55, 0.15, 0.95, 501); fern(0.45, 0.9, 0.7, 502); fern(0.6, -0.7, 0.75, 503); fern(-0.5, 0.8, 0.6, 504);
-    for (let i = 0; i < 70; i++) { const x = -4 + R() * 50, z = -25 + R() * 50; if (Math.hypot(x, z) < 1.6) continue; if (Math.hypot(x - 20, z) < 14 && R() < 0.7) continue; i % 3 ? fern(x, z, 0.4 + R() * 0.5, 600 + i) : (() => { const b = makeFlowerBush(i + 20, { size: 0.4 + R() * 0.4, voxel: 0.03 }); b.position.set(x, hC(x, z), z); g.add(b); })(); }
+    const big = fern(0.85, 0.05, 0.95, 501); fern(0.75, -0.75, 0.7, 503); fern(-0.7, -0.8, 0.55, 504);
+    for (let i = 0; i < 70; i++) { const x = -4 + R() * 50, z = -25 + R() * 50; if (Math.hypot(x, z) < 2.6) continue; if (Math.hypot(x - 20, z) < 14 && R() < 0.7) continue; i % 3 ? fern(x, z, 0.4 + R() * 0.5, 600 + i) : (() => { const b = makeFlowerBush(i + 20, { size: 0.4 + R() * 0.4, voxel: 0.03 }); b.position.set(x, hC(x, z), z); g.add(b); })(); }
     const herd = [];
     const HP = [[16, -6, 2.9], [20, 3, 3.3], [24, -12, 2.6], [27, 8, 3.6], [31, -3, 3.0], [34, 12, 3.4], [22, -18, 2.4], [36, -10, 2.8], [40, 2, 3.2], [29, 18, 3.5]];
     HP.forEach(([x, z, r], i) => { const e = F.buildEdmonto({ voxel: i < 4 ? 0.1 : 0.14 }); e.root.position.set(x, hC(x, z), z); e.root.rotation.y = r; e.home = [x, z, r]; e.ph = i * 0.37; g.add(e.root); herd.push(e); });
@@ -213,7 +215,7 @@ const BUILD = {
     const birds = []; for (let i = 0; i < 8; i++) { const b = F.buildBird(); b.root.scale.setScalar(1.6); g.add(b.root); birds.push(b); }
     g.add(makeClouds(9, 10, 0xf0e0c8));
     W.st.scene.add(g);
-    const o = { group: g, hC, herd, trike, trex, birds, ferns, big, env() {
+    const o = { group: g, hC, herd, trike, trex, birds, ferns, big, edge, env() {
       trex.root.visible = false; for (const b of birds) b.root.visible = false;
       W.mood('tarde'); W.st.scene.fog.density = 0.008;
       W.L.aim([1, 0, 0], [0.6, 0.45, -0.6], 4, 20);
