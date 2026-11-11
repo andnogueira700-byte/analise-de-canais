@@ -1,13 +1,14 @@
 # Produção de vídeos em microblocos
 
 - `engine/` — motor de render (three.js em Chromium, com ou sem placa de vídeo): cubos com chanfro, pitbull articulado, T. rex, cenário de Hell Creek, textos e cartões em blocos, mixagem de áudio.
+- `01-pitbull-t-rex/completo/` — vídeo completo (16:40): narração em `audio/` (partes originais, transcrição, ritmo, `musica.json` com os trechos de calma/tensão/noite/silêncio), cenas em `src/` (`shots.js` com os planos do piloto retemporizados e `bloco2..4.js`).
 - `01-pitbull-t-rex/piloto/` — piloto de 2 min: narração (`narracion.mp3` original, `narracion_ritmo.wav` com pausas encurtadas), tempos por palavra (`words_ritmo.json`) e as cenas (`src/shots.js`).
 
 ## Renderizar no seu computador (um comando)
 
 Precisa só do **Node.js** (versão LTS, em https://nodejs.org). O resto (navegador, ffmpeg) é instalado sozinho na primeira vez.
 
-- **Windows:** baixe o repositório e dê dois cliques em `RENDERIZAR.bat`, na pasta principal.
+- **Windows:** baixe o repositório e dê dois cliques em `RENDERIZAR.bat` (piloto de 2 min) ou `RENDERIZAR_COMPLETO.bat` (vídeo completo de 16 min), na pasta principal.
 - **Mac/Linux:** `./renderizar.sh`
 
 O vídeo pronto aparece na pasta do projeto (ex.: `videos/01-pitbull-t-rex/piloto/01-pitbull-t-rex_piloto.mp4`).

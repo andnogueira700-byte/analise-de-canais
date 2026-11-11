@@ -1,7 +1,7 @@
 // Renderiza um projeto inteiro com um comando: cenas em paralelo, trilha sonora e montagem final.
 //   node renderizar.js <pasta-do-projeto> [--cpu] [--partes N] [--fps 30] [--ate SEGUNDOS]
 //   ex.: node renderizar.js ../01-pitbull-t-rex/piloto
-// A pasta do projeto precisa ter src/index.html e narracion_ritmo.wav.
+// A pasta do projeto precisa ter src/index.html e a narração (narracion_ritmo.wav/.m4a, na pasta ou em audio/).
 // Por padrão usa a placa de vídeo (GPU). --cpu força o modo da nuvem, bem mais lento.
 const path = require('path'), fs = require('fs'), os = require('os'); const { spawn, spawnSync } = require('child_process');
 const args = process.argv.slice(2); const opt = (k, d) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : d; };
@@ -42,7 +42,7 @@ const run = (cmd, a, tag) => new Promise((res, rej) => {
   bounds.push(END);
   console.log(`\nDuração ${END.toFixed(1)} s, partes: ${bounds.map(b => b.toFixed(2)).join(' | ')}`);
   // 3. trilha sonora (precisa de Python com numpy e scipy; se não tiver, usa trilha pronta ou só a narração)
-  const trilha = path.join(out, 'trilha.wav'); const voz = path.join(proj, 'narracion_ritmo.wav');
+  const trilha = path.join(out, 'trilha.wav'); const voz = ['narracion_ritmo.wav', 'audio/narracion_ritmo.wav', 'narracion_ritmo.m4a', 'audio/narracion_ritmo.m4a'].map(f => path.join(proj, f)).find(f => fs.existsSync(f));
   const audioJob = (async () => {
     for (const py of ['python3', 'python', 'py']) {
       const r = spawnSync(py, [path.join(__dirname, 'audio/mix.py'), metaF, voz, trilha], { env, stdio: 'pipe' });
