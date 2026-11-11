@@ -1,6 +1,6 @@
 // Pitbull em microblocos, montado por partes articuladas (corpo, cabeça, mandíbula, orelhas, patas, rabo).
 import * as THREE from 'three';
-import { sd, voxelize, jitter, hash3 } from './vox.js';
+import { sd, voxelize, jitter, hash3, lerpHex } from './vox.js';
 
 const { ell, cap, box, sph, smin } = sd;
 export const DOG_COLORS = {
@@ -18,7 +18,7 @@ function part(fn, colorFn, min, max, s, pivot) {
 
 export function buildDog(opts = {}) {
   const C = DOG_COLORS[opts.palette || 'pitbull'];
-  const s = opts.voxel || 0.0092;
+  const s = opts.voxel || 0.0078;
   const sx = opts.snout || 0; // lobo: focinho mais longo
   const J = (hex, x, y, z, a = 0.06) => jitter(hex, x, y, z, a);
   const root = new THREE.Group();
@@ -39,7 +39,8 @@ export function buildDog(opts = {}) {
     const bib = (p[0] > 0.205 - Math.max(0, 0.42 - p[1]) * 0.5 && p[1] < 0.5 && az < 0.115 - Math.max(0, p[1] - 0.38) * 0.7) || (p[1] < 0.24 && p[0] > -0.02 && az < 0.09);
     if (bib) return J(C.white, x, y, z, 0.035);
     const dark = p[1] > 0.47 && p[0] < 0.15;
-    return J(dark ? C.furDark : C.fur, x, y, z);
+    const k = Math.max(0, Math.min(1, (p[1] - 0.25) / 0.25));
+    return J(lerpHex(lerpHex(C.fur, C.furDark, 0.35), dark ? C.furDark : lerpHex(C.fur, 0xc9824a, 0.25), k), x, y, z, 0.07);
   };
   const body = part(torsoSdf, torsoCol, [-0.35, 0.17, -0.2], [0.4, 0.62, 0.2], s, B);
   root.add(body);
@@ -138,7 +139,8 @@ export function poseDog(d, p) {
   if (p.gait === 'walk' || p.gait === 'run') {
     const ph = p.phase * TAU;
     const run = p.gait === 'run';
-    const A = run ? 0.75 : 0.42, Bf = run ? 1.1 : 0.7;
+    const amt = p.amt ?? 1;
+    const A = (run ? 0.72 : 0.4) * amt, Bf = (run ? 1.05 : 0.65) * amt;
     const offs = run ? { FL: 0, FR: 0.12, RL: 0.5, RR: 0.62 } : { RL: 0, FL: 0.25, RR: 0.5, FR: 0.75 };
     for (const k in L) {
       const a = ph + offs[k] * TAU;
@@ -147,9 +149,10 @@ export function poseDog(d, p) {
       L[k].up.rotation.z = sw * A * (L[k].front ? 1 : 0.85);
       L[k].lo.rotation.z = L[k].front ? -lift * Bf : lift * Bf * 0.9;
     }
-    by += run ? Math.abs(Math.sin(ph)) * 0.05 - 0.02 : Math.abs(Math.sin(ph * 2)) * 0.008;
-    bp += run ? Math.sin(ph + 0.6) * 0.12 : Math.sin(ph * 2) * 0.015;
-    d.head.rotation.z += run ? -Math.sin(ph + 0.6) * 0.1 : Math.sin(ph * 2) * 0.03;
+    by += (run ? (0.5 - 0.5 * Math.cos(ph * 2)) * 0.045 - 0.02 : (0.5 - 0.5 * Math.cos(ph * 4)) * 0.008) * amt;
+    bp += (run ? Math.sin(ph + 0.6) * 0.1 : Math.sin(ph * 2) * 0.012) * amt;
+    d.head.rotation.z += (run ? -Math.sin(ph + 0.6) * 0.08 : Math.sin(ph * 2) * 0.025) * amt;
+    br += Math.sin(ph) * 0.02 * amt;
   }
   if (p.gait === 'swim') {
     const ph = p.phase * TAU;

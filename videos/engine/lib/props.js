@@ -176,13 +176,15 @@ export function buildPerson(o = {}) {
     const arm = P([{ t: 'cap', a: [0.24 * sg, 1.43, 0], b: [0.26 * sg, 1.12, 0], ra: 0.055, col: shirt }, { t: 'cap', a: [0.26 * sg, 1.12, 0], b: [0.27 * sg, 0.88, 0], ra: 0.045, col: skin }, { t: 'sph', c: [0.27 * sg, 0.84, 0], r: 0.05, col: skin }], [0.24 * sg, 1.43, 0]);
     torso.add(arm); arm.position.sub(new THREE.Vector3(0, 1.0, 0)); arms.push(arm);
   }
-  const legs = [];
+  const legs = [], shins = [];
   for (const sg of [1, -1]) {
-    const leg = P([{ t: 'cap', a: [0.1 * sg, 0.98, 0], b: [0.1 * sg, 0.1, 0], ra: 0.075, rb: 0.06, col: pants }, { t: 'box', c: [0.1 * sg, 0.04, 0.05], h: [0.055, 0.04, 0.11], r: 0.02, col: o.shoe ?? 0x2a2a2a }], [0.1 * sg, 0.98, 0]);
-    root.add(leg); legs.push(leg);
+    const leg = P([{ t: 'cap', a: [0.1 * sg, 0.98, 0], b: [0.1 * sg, 0.53, 0], ra: 0.078, rb: 0.064, col: pants }], [0.1 * sg, 0.98, 0]);
+    const shin = P([{ t: 'cap', a: [0.1 * sg, 0.53, 0], b: [0.1 * sg, 0.1, 0], ra: 0.064, rb: 0.055, col: pants }, { t: 'box', c: [0.1 * sg, 0.04, 0.05], h: [0.055, 0.04, 0.11], r: 0.02, col: o.shoe ?? 0x2a2a2a }], [0.1 * sg, 0.53, 0]);
+    leg.add(shin); shin.position.sub(new THREE.Vector3(0.1 * sg, 0.98, 0));
+    root.add(leg); legs.push(leg); shins.push(shin);
   }
   root.add(torso);
-  return { root, torso, head, arms, legs };
+  return { root, torso, head, arms, legs, shins };
 }
 
 // ---------- casas da rua ----------

@@ -160,8 +160,8 @@ raw = subprocess.run(['ffmpeg', '-loglevel', 'error', '-i', voice_path, '-ar', s
 v = np.frombuffer(raw, dtype=np.float32).astype(np.float64)
 voice = np.zeros(N); voice[:min(N, len(v))] = v[:N]
 # ducking: música e ambiência baixam quando há voz
-ve = np.abs(voice); ve = lp(ve, 4); duck = 1 - 0.55 * np.clip(ve / (np.percentile(ve, 90) + 1e-9), 0, 1)
-mix = voice * 1.0 + fx * 0.9 + amb * duck + mus * 0.55 * duck
+ve = np.abs(voice); ve = lp(ve, 4); duck = 1 - 0.6 * np.clip(ve / (np.percentile(ve, 90) + 1e-9), 0, 1)
+mix = voice * 1.0 + fx * 0.7 + amb * duck + mus * 0.2 * duck
 mix = mix / max(1.0, np.abs(mix).max() / 0.95)
 st = np.stack([mix, mix], 1).astype(np.float32)
 subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-f', 'f32le', '-ar', str(SR), '-ac', '2', '-i', '-', '-af', 'loudnorm=I=-15:TP=-1.5:LRA=11', '-ar', '48000', '-c:a', 'pcm_s16le', out], input=st.tobytes())

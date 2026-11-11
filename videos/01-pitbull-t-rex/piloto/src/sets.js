@@ -178,6 +178,8 @@ const BUILD = {
     const stones = [];
     for (let i = 0; i < 10; i++) { const a = i / 10 * Math.PI * 2; stones.push({ t: 'ell', c: [Math.cos(a) * 0.5, 0.04, Math.sin(a) * 0.5], r: [0.09, 0.07, 0.08], col: 0x6a6460 }); }
     g.add(P.shapes(stones, 0.025));
+    const seat = P.shapes([{ t: 'cap', a: [-1.05, 0.17, -0.5], b: [-1.05, 0.17, 0.5], ra: 0.17, col: (p, x, y, z) => jitter(Math.abs(p[2]) > 0.48 ? 0x9a7550 : (Math.sin(p[0] * 60 + p[1] * 40) > 0.5 ? 0x4a3020 : 0x5e3d26), x, y, z, 0.08) }], 0.02);
+    g.add(seat);
     const wolf = buildDog({ palette: 'wolf', snout: 0.035 }); g.add(wolf.root);
     const ancient = P.buildPerson({ shirt: 0x7a5a3a, pants: 0x6a4a2e, skin: 0xb98a64, hair: 0x2a1a10, shoe: 0x5a3a24 }); g.add(ancient.root);
     W.st.scene.add(g);
