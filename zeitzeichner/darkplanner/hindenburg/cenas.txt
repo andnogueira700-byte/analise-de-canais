@@ -1,0 +1,331 @@
+# id | tokens | cena (imagem estática) | movimento (vídeo)
+1||wide night view of the Brandenburg Gate in Berlin in winter, torch glow lighting the columns from below, deep blue sky|torch light flickers on the columns, slow push-in
+2||a snowy Berlin government street at dusk, gas lamps glowing, stately palace facades, a few people hurrying in coats|snowflakes drift, lamps flicker
+3||low-angle view of a huge column of men in brown uniforms with plain red armbands carrying burning torches through the Brandenburg Gate|the column marches forward, flames flicker
+4||stately palace facade at night with torchlight reflected in tall windows, one lit window showing the silhouette of a very tall old man|reflections ripple across the glass
+5|Hindenburg|medium shot of the old man standing perfectly straight at a tall window at night, orange firelight on his face, curtains on both sides|slight breathing, firelight flickers on his face
+6|Hindenburg|over-the-shoulder shot of the old man looking down from the window at the torch parade in the street below, one hand resting on a walking cane|the cane taps gently on the floor
+7|Hindenburg|the old man sitting at a heavy desk signing a document with a frown, a shadowy figure waiting in the doorway behind|the pen moves slowly across the paper
+8|Hitler|medium shot of the man in a dark suit standing before a torchlit window, chin raised, smug expression|he lifts his chin slightly, torchlight flickers
+9||a Berlin square in 1915 in daylight, a long queue of people in First World War era clothes holding coins|the queue shuffles forward
+10|Hindenburg|a giant wooden statue of the character, twelve meters tall, standing in front of the Reichstag building, small people hammering nails into its base|hammers strike, tiny wood chips fly
+11|Hindenburg|heroic low-angle portrait of the old field marshal in uniform with medals, golden backlight, imperial flags behind him|flags ripple, slow push-in
+12|Hindenburg|the old man in a dark civilian frock coat standing beside a black-red-gold flag inside a parliament hall|the flag ripples softly
+13||symbolic image of an old gloved hand opening a heavy iron crypt door, cold darkness beyond, a black-red-gold ribbon lying on the stone steps|the door creaks slowly open
+14||an old pocket watch lying on a wooden desk under a warm lamp, its hands spinning backwards|the hands spin backwards
+15||an eleven-year-old boy in an oversized Prussian cadet uniform standing stiffly in a gray barracks yard, large serious eyes|the boy nervously adjusts his cap
+16||an aristocratic 1840s nursery, a Prussian officer father looking down at a newborn baby in a wooden cradle, candlelight|the candle flickers, the father smiles
+17||a large manor house in the flat eastern Prussian countryside, a black and white flag on a pole, autumn trees|the flag waves in the wind
+18||a gallery of oil portraits of stern mustached Prussian officers hanging on a dark manor wall|slow pan along the portraits
+19||a noble family praying at a dinner table, a crucifix, a portrait of a king and two crossed sabers on the wall behind them|candles flicker
+20||a boy with a small suitcase at the iron gate of a grim red-brick military academy, his mother waving behind him|the gate swings open
+21||rows of young cadets marching in a courtyard while a mustached drill sergeant shouts at them|the cadets march in step
+22||close-up of the boy cadet snapping a rigid salute, determined eyes, other cadets behind him|he snaps the salute
+23||the boy cadet alone at a dormitory window at night, his reflection in the glass showing a tall grown-up officer|the candle gutters, the reflection shimmers
+24|Paul|the young lieutenant in a Prussian blue uniform and spiked helmet standing in front of his soldiers on a hill, cannon smoke behind|smoke drifts, he grips his sword
+25||wide battlefield of 1866, lines of Prussian soldiers in dark blue facing Austrian soldiers in white coats, cannon smoke over rolling hills|cannons fire puffs of smoke
+26|Paul|close-up of the young lieutenant as a bullet punches through his spiked helmet, comically shocked wide eyes|the helmet jolts, he flinches
+27||extreme close-up of a spiked helmet lying in the grass with a bullet hole, a thin curl of smoke rising|the smoke curls upward
+28|Paul|the young lieutenant with a bandaged head leading his soldiers in a charge toward enemy cannons|he charges forward
+29|Paul|an older general pinning a medal on the chest of the proud young lieutenant, soldiers watching|the medal is pinned, he straightens up
+30||a wooden table with an old map of France and Germany, blue arrows pointing toward Paris, small toy soldiers|the arrows extend toward Paris
+31||the palace of Versailles in a snowy winter morning, Prussian soldiers guarding the gates|snow falls gently
+32|Paul|the young lieutenant walking through a grand golden palace corridor, looking around in awe|he walks forward looking around
+33||wide shot of the Hall of Mirrors packed with officers in dress uniforms, crystal chandeliers, tall mirrors|chandeliers sparkle, slow push-in
+34||an elderly king with white sideburns standing on a raised platform in the Hall of Mirrors while officers raise their sabers|the sabers rise
+35||an imperial crown glowing on a red velvet cushion, black-white-red flags behind|light glints on the crown
+36||a crowd of officers cheering with sabers raised high, reflected in the mirrors|the sabers shake in celebration
+37|Paul|close-up of the young lieutenant with tears of joy in his eyes, saber raised, mirrors and chandeliers behind him|a tear rolls down his cheek
+38|Paul|the young lieutenant saluting, his figure reflected many times in the golden mirrors|the reflections shimmer
+39||the empty Hall of Mirrors in silence, dust floating in golden light|dust floats slowly
+40||the boots of an officer climbing a long stone staircase one step at a time|the boots climb one step
+41||an officer seen from behind working at a desk covered in maps and paperwork under a single lamp|pages turn, the lamp flickers
+42|Hindenburg|the field marshal posing as a general with his wife and three children in a formal parlor, a pendulum clock on the wall|the family holds still, the pendulum swings
+43|Hindenburg|the old man hanging his spiked helmet on a coat hook with a sigh|the helmet settles on the hook
+44|Hindenburg|the old man in a tweed hunting coat with a shotgun and a cigar in an autumn forest|cigar smoke drifts
+45|Hindenburg|the old man sitting on a park bench feeding pigeons while passersby ignore him|the pigeons peck at crumbs
+46||a dusty history book closing on a desk, its pages blank|the book shuts, dust puffs out
+47||dark storm clouds gathering over a German city skyline|clouds roll, lightning flashes
+48||cheering soldiers in 1914 uniforms boarding a train, flowers stuck in their rifles|the train starts moving
+49||a map of East Prussia on a table with two big red arrows pushing in from the east|the red arrows advance
+50||refugees with carts and bundles fleeing along a muddy road, smoke on the horizon|the carts roll forward
+51|Hindenburg|the old man in slippers and a cardigan opening a telegram envelope at his front door|he unfolds the paper
+52||extreme close-up of old hands holding a telegram slip with blank lines, a steaming coffee cup beside it|the hands tremble slightly
+53|Hindenburg|the old man at a post office counter firmly pushing a short reply slip across to the clerk|he pushes the slip across
+54|Hindenburg|the old man struggling comically in a too-tight field-gray jacket, buttons straining|a button pops off
+55|Hindenburg|the old man in an old dark blue Prussian uniform stepping onto a steaming train at a station|steam billows as he climbs aboard
+56|Ludendorff|the stocky officer on a train platform, impatient, checking his pocket watch|he taps his foot and checks the watch
+57|Hindenburg, Ludendorff|the tall old man and the stocky officer side by side in a train compartment bent over a map|the stocky officer jabs a finger at the map
+58||a dense East Prussian pine forest, Russian soldiers in olive uniforms advancing between the trees|the soldiers trudge forward
+59||a map-like aerial view of a forest with German troops closing a ring around Russian troops|the ring closes
+60||an endless column of Russian prisoners walking along a dirt road with their hands raised|the column walks forward
+61||an empty Russian officer's cap lying on a tree stump in a dark forest at dusk|leaves fall softly
+62|Hindenburg|a cheering crowd waving newspapers with a large printed drawing of the character on the front page|newspapers wave in the air
+63|Hindenburg|the old man staring at a battle map with a puzzled face while other officers' hands move pins around him|the hands move the pins
+64|Ludendorff|the stocky officer bent over a map table moving pins with intense focus|he moves a pin decisively
+65|Hindenburg|the old man calmly signing a paper with a big pen, eyes half-closed, completely relaxed|he signs slowly
+66||a wooden signpost at a forest crossroads with several blank arrows pointing in different directions|the signpost creaks in the wind
+67|Hindenburg|the old man smiling slyly as he writes on a map with a quill|the quill moves
+68||a medieval battle, knights in white mantles with black crosses falling in a field|banners fall
+69|Hindenburg|the old man standing on a pedestal like a statue, golden rays of light behind him|light rays pulse
+70|Hindenburg|a shop window full of postcards, cups and cigar boxes, all decorated with drawings of the character|the shop bell sways
+71||workers on ladders mounting new blank street signs on a city corner|a worker hammers a sign
+72|Hindenburg|a towering wooden statue of the character in front of the Reichstag building, flags around it|the flags wave
+73||close-up of a hand hammering a nail into wood already studded with many nails|the hammer strikes
+74||three nails, iron, silver and gold, lying on red velvet beside some coins|the gold nail gleams
+75||war widows in black receiving coins at a charity table, a giant wooden statue in the background|the coins are handed over
+76|Hindenburg|the old man standing proudly while his body turns into stone from the feet upward|the stone texture creeps upward
+77|Hindenburg|a stone statue of the character with a tiny crack on its surface, pigeons on its shoulders|the pigeons shuffle
+78|Hindenburg|the old man pushing a crumpled paper under a carpet with his boot, looking away innocently|his boot pushes the paper under the rug
+79|Hindenburg, Ludendorff|the tall old man and the stocky officer entering a military headquarters room while officers salute|the officers snap a salute
+80|Kaiser|the emperor sitting on a throne flanked by a chancellor and parliament benches, looking important|he twirls his mustache
+81|Hindenburg, Ludendorff, Kaiser|the tall old man and the stocky officer standing behind the throne holding puppet strings attached to the seated emperor|the strings pull the emperor's arms
+82|Ludendorff, Kaiser|the stocky officer slamming a letter on a desk in front of the nervous emperor|he slams the letter down
+83|Kaiser|the emperor shrinking in his chair as a giant shadow of a field marshal looms on the wall|the shadow grows
+84||a spiked helmet and an officer's cap resting on an empty imperial throne|dust drifts in the light
+85||a German U-boat surfacing in a stormy gray sea|water pours off the hull
+86||a torpedo hitting a merchant ship, a large plume of water and smoke|the explosion plume rises
+87||American soldiers in First World War helmets marching down a gangway from a troopship with an American flag|the soldiers march down
+88|Hindenburg|the old man walking past a closed parliament door toward a small side door|he walks past the door
+89||a muddy trench in autumn rain, exhausted German soldiers and broken rifles|rain falls
+90|Ludendorff|the stocky officer storming into a ministry office and pounding the desk|he pounds the desk
+91||a white flag on a stick planted in the mud of no man's land|the flag flutters
+92||a trench wall collapsing, sandbags sliding down|the sandbags slide
+93|Hindenburg, Ludendorff|the tall old man and the stocky officer hiding pens behind their backs, looking away from a document on the table|their eyes shift away
+94||civilian politicians in suits standing in a doorway while gloved military fingers point at them|the fingers point
+95||an old railway carriage in a misty forest clearing|mist drifts
+96||a round-faced civilian politician with round glasses and a mustache sitting at a table inside a railway carriage, French officers opposite him|he lifts the pen
+97||close-up of a pen signing a document on a table inside a wooden railway carriage|the pen signs
+98||a dark forest path with a fallen hat on the ground|leaves fall
+99||an angry crowd of men pointing accusingly and shaking their fists|they shake their fists
+100||a gray November street in Berlin with red flags hanging from windows|the flags sway
+101||sailors on a warship deck raising their fists, factory workers marching behind|the fists rise
+102||a politician proclaiming from a window of the Reichstag to a cheering crowd below|the crowd cheers
+103|Kaiser|the emperor at a map table in a Belgian château, determined, pointing toward the east|he points
+104|Kaiser|the emperor facing a row of grim generals, his face falling|his face falls
+105|Hindenburg|the old man in the background of a room looking down at his boots in silence|he avoids looking up
+106|Hindenburg, Kaiser|the tall old man standing silent at the side while a thin general speaks to the emperor|the thin general gestures
+107|Kaiser|the emperor in a car at dawn crossing a border barrier, looking back|the car drives away
+108|Hindenburg|the old man watching a car disappear into the fog, one hand half raised|the car fades into the fog
+109|Hindenburg, Kaiser|the old man alone in a dark office holding a framed portrait of the emperor|the lamp flickers
+110||German delegates in black suits walking into a grand palace|they walk forward
+111||a map of Germany being cut into pieces with giant scissors, bags of gold beside it|the scissors cut
+112||the Hall of Mirrors packed with Allied statesmen around a signing table|the chandeliers shimmer
+113||the Hall of Mirrors with ghostly translucent officers of 1871 cheering among the statesmen|the ghosts fade in and out
+114|Paul|the young lieutenant as a ghostly translucent figure cheering among the 1919 statesmen in the Hall of Mirrors|the ghostly figure fades
+115||a German delegate signing a treaty with a bowed head while Allied leaders watch coldly|he signs slowly
+116|Hindenburg|the old man entering a wood-paneled parliamentary committee room, photographers' cameras flashing|camera flashes burst
+117||committee members at a long table leaning forward with stern faces|they lean forward
+118|Hindenburg|the old man standing tall and calm at a witness desk in uniform|he rises to his full height
+119|Hindenburg|the old man reading from a paper while green poisonous smoke curls up from it|the smoke curls
+120|Hindenburg|close-up of the old man lowering a paper and looking at the audience with raised eyebrows|he lowers the paper
+121||a German soldier standing firm while a dark shadow with a dagger rises behind him|the shadow raises the dagger
+122||a group of civilian politicians and striking workers with many fingers pointing at them|the fingers jab
+123||the dagger image cracking like glass|the cracks spread
+124|Hindenburg, Ludendorff|the stocky officer demanding something at a desk while the tall old man stands beside him|the stocky officer gestures
+125||a crowd reading newspapers with shocked, angry faces|pages rustle
+126||a dagger hovering over a fragile glass model of a parliament building|the dagger trembles
+127||the National Theatre in Weimar with black-red-gold flags in front|the flags wave
+128||hands writing a constitution with a quill in a large hall|the quill writes
+129||a tiny fragile sapling growing in cracked ground in a storm|the wind bends the sapling
+130||people pushing wheelbarrows full of banknotes down a street|banknotes blow away
+131||a baker handing a loaf of bread to a customer who pushes a huge stack of money across the counter|the stack of money wobbles
+132||a street fight at a barricade between armed men with red flags and men in field-gray|they scuffle
+133||a fallen top hat on wet cobblestones beside an open car door at night|rain drips
+134||a thick constitution book lying open, one small paragraph glowing faintly|the glow pulses
+135||close-up of the glowing paragraph with a golden key rising out of the page|the key rises
+136||a red emergency lever behind glass on a parliament hallway wall|light glints on the glass
+137||stacks of decrees with official seals, a large rubber stamp hovering above them|the stamp presses down
+138||a funeral procession with a coffin draped in a black-red-gold flag|the procession walks slowly
+139|Hindenburg|conservative politicians in top hats huddled together, one lifting a framed portrait of the character|he lifts the portrait, the others nod
+140|Hindenburg|the old man sitting in an armchair with a blanket over his knees, reading glasses on his nose|he adjusts his glasses
+141|Hindenburg|the old man dismissively waving away a pile of party pamphlets|he waves his hand
+142|Kaiser|the emperor in exile reading a letter in a Dutch manor garden, a pile of chopped wood behind him|he reads the letter
+143|Hindenburg|the old man standing awkwardly in front of a black-red-gold flag while crowds cheer|the crowd cheers
+144|Hindenburg|the old man raising his right hand to take an oath in the Reichstag chamber|he raises his hand
+145||close-up of a big old hand resting on a constitution book|the hand presses down
+146|Hindenburg|the old man working dutifully at a presidential desk|he signs a paper
+147|Hindenburg|the old man politely greeting foreign diplomats in a palace hall|they shake hands
+148||a Berlin cabaret in the twenties, a jazz band and dancers in flapper dresses|the dancers kick
+149||a sunny Berlin street with old cars and smiling people|the cars drive by
+150|Hindenburg, Paul|the old man looking into a mirror and seeing the young lieutenant as his reflection|the reflection salutes
+151|Hindenburg, Kaiser|the old man secretly looking at a small portrait of the emperor hidden in a desk drawer|he closes the drawer
+152||a birthday cake with eighty candles in a palace room, a gift box with a ribbon|the candles flicker
+153||wealthy men in top hats with cigars dropping money into a hat|coins drop
+154||a manor house estate with a giant red bow wrapped around it|the ribbon flutters
+155|Oskar|the son signing a land deed at a notary's desk with a smug smile|he signs
+156||a tax collector with an empty bag shrugging in front of a closed gate|he shrugs
+157|Hindenburg|the old man at a manor surrounded by landowners in hunting clothes|they laugh
+158|Hindenburg|a hunting party with rifles in a forest, landowners whispering into the old man's ear|they whisper
+159||landowners in hunting clothes scowling at a black-red-gold flag|they frown
+160||panic at a stock exchange in 1929, ticker tape falling, men pulling their hair|ticker tape falls
+161||a long line of unemployed men in caps at a soup kitchen in the snow|steam rises from the soup
+162||deputies brawling and shouting in a parliament chamber, papers flying|papers fly
+163|Hindenburg|the old man breaking the glass and pulling a red emergency lever|he pulls the lever
+164|Hindenburg|the old man signing an endless conveyor of documents fed by a thin chancellor with round glasses|the papers move along
+165||an empty parliament chamber with cobwebs and a single deputy asleep|the cobweb sways
+166||a worn and polished red emergency lever beside towering stacks of decrees|the lever clicks
+167||a radio's volume knob being turned down, a black-red-gold flag drooping beside it|the knob turns
+168||men in brown shirts with plain red armbands without any symbol multiplying across a street|they march
+169||a column of brown-shirted men marching through a Berlin street|they march forward
+170||a street brawl between brown-shirted men and men carrying red flags|they scuffle
+171|Hitler|the man in a brown shirt with a plain red armband without any symbol, shouting from a beer hall podium with a raised fist|his fist rises
+172||a ballot box overflowing with ballots|ballots spill out
+173||a bar chart made of wooden blocks growing tall|the bar grows
+174|Hindenburg, Hitler|the very tall old man looking down his nose at the much shorter man|the old man raises an eyebrow
+175|Hindenburg|the old man scoffing and pointing his cane dismissively|he points the cane
+176|Hitler|the man behind a post office counter in a mail cap, stamping letters with an annoyed face|he stamps a letter
+177|Hindenburg|close-up of a postage stamp printed with a portrait of the character, a tongue about to lick it|the tongue licks the stamp
+178|Hindenburg|the very old man looking at an hourglass that is running out|the sand falls
+179|Hindenburg, Hitler|the old man and the shorter man in opposite corners of a boxing ring|the bell rings
+180||close-up of a shocked worker's face as his pipe drops from his mouth|the pipe falls
+181||social democratic politicians in suits around a table with red flags|they lean in
+182||a socialist politician with a dagger-shaped shadow on his back|the shadow flickers
+183|Hindenburg|a rally of workers waving banners and holding portraits of the character|the banners wave
+184||a ballot counting room, one big pile of ballots next to a smaller one|hands count ballots
+185|Hindenburg|workers carrying the old man on their shoulders|they lift him up
+186|Hindenburg|the old man with a cold smirk closing a door|the door closes
+187||a thin chancellor with round glasses carrying a box out of a government building in the rain|he walks out
+188|Papen|the elegant man in a morning coat bowing in a chancellery hall|he bows
+189|Papen|close-up of the elegant man tipping his top hat with a charming smile|he tips his hat
+190||a cabinet table full of aristocrats with monocles, top hats and sashes, champagne glasses|they sip champagne
+191||Berlin workers laughing at a cartoon in a newspaper|they laugh
+192||a Prussian state ministry building on a summer day|the flags sway
+193|Papen|the elegant man handing a sealed decree to soldiers|he hands over the decree
+194||Prussian policemen in shakos standing aside as soldiers march into a building|the soldiers march in
+195||ministers carrying boxes out of a building escorted by soldiers|they walk out
+196||a boot stepping down a staircase whose steps crumble one by one|a step crumbles
+197||a parliament seating chart with a large brown block filling in|the brown block grows
+198|Hindenburg, Hitler|in a palace office the tall old man standing with arms behind his back while the shorter man pleads|the old man shakes his head
+199|Hindenburg, Hitler|the old man closing a heavy door in the face of the shorter man|the door shuts
+200||a dusty archive drawer sliding open to reveal old files|the drawer slides open
+201||voters in a line on a rainy election day|umbrellas drip
+202||an empty treasure chest with moths flying out, a brown-shirted man staring into it|moths fly out
+203||brown-shirted men arguing at a table, papers being thrown|papers are thrown
+204|Hitler|the man sliding down a long staircase, looking worried|he slides down
+205|Hitler|the man at the bottom of a grand staircase looking up as gloved hands reach down to him|the hands reach down
+206|Schleicher|the bald general sitting in a chancellor's chair with a sly look|he leans back
+207|Papen|the elegant man sulking with his arms crossed and his nose in the air|he turns his head away
+208|Papen|the elegant man drawing a plan on a chalkboard with a sly grin|the chalk moves
+209|Papen, Hitler|the elegant man and the shorter man whispering in a dark room by candlelight|the candle flickers
+210||an elegant villa at night in the snow, lit windows, black cars parked outside|snow falls
+211|Oskar|the son in uniform sneaking through the side door of a villa at night|he slips inside
+212|Oskar, Hitler|the son and the shorter man seated in a closed room, the shorter man leaning in persuasively|the son slowly nods
+213|Hindenburg|the old man shifting uncomfortably in his armchair, sweating|he shifts in the chair
+214||a deputy waving papers angrily in the parliament chamber|he waves the papers
+215||money bags flowing from a treasury building toward manor houses|the bags slide along
+216|Schleicher|the bald general examining papers with a magnifying glass|he moves the magnifying glass
+217||a manor house with a giant magnifying glass hovering above it|the magnifying glass hovers
+218|Hindenburg, Schleicher|the old man pointing to the door as the bald general leaves|the general walks out
+219|Papen, Hindenburg|by a fireplace the elegant man persuading the old man, one hand on his arm|the fire crackles
+220||a chessboard with three brown pawns surrounded by eight black pieces|a black piece moves closer
+221|Papen|the elegant man confidently moving pieces on the chessboard|he moves a piece
+222|Papen, Hitler|the elegant man and aristocrats in top hats laughing while holding the shorter man on a short leash|they laugh
+223|Papen, Hitler|the elegant man pushing the shorter man into a corner of the room|he pushes
+224|Hindenburg|the old man slumped in his chair, sighing and nodding reluctantly|he nods slowly
+225||a palace on a government street on a winter morning|smoke rises from the chimneys
+226|Hitler|the man in a dark morning coat entering a palace hall|he walks in
+227|Hindenburg, Hitler|the shorter man raising his hand to take an oath before the standing old man|he raises his hand
+228||a torch parade passing through the Brandenburg Gate at night|the flames flicker
+229|Hindenburg|the old man at the window lit by firelight from the street|the firelight flickers
+230||Berliners gossiping over beer in a crowded pub|they clink glasses
+231|Hindenburg|the old man squinting out of the window with a confused face|he squints
+232|Hindenburg|the old man with a thought bubble showing columns of Russian prisoners from 1914|the thought bubble wobbles
+233|Hindenburg|the old man looking small and confused, surrounded by swirling dark shadows|the shadows swirl
+234|Papen|the elegant man holding a snapped leash with a shocked face|the leash dangles
+235||blank calendar pages flying off a wall calendar|the pages fly
+236||the Reichstag building engulfed in flames at night|the flames roar
+237||policemen dragging a young man away from a burning building|they drag him away
+238|Hitler|the man shouting and pointing at a burning building|he points
+239||a decree with an official seal lying on a desk, an old hand holding a pen above it|the pen hovers
+240||a hand pulling the red emergency lever again|the lever is pulled
+241||a printing press wrapped in heavy chains with a padlock|the chains tighten
+242||policemen arresting a man at his front door at night|they lead him away
+243|Hindenburg|the old man signing a document with a trembling hand|his hand trembles
+244||a signature stroke on paper turning into prison bars|the lines turn into bars
+245||a prison cell door closing into darkness|the door closes
+246||the baroque Garrison Church in Potsdam with crowds and black-white-red flags outside|the flags wave
+247||the interior of a baroque church with royal sarcophagi lit by shafts of light|light shafts shift
+248|Hindenburg|the old man in a full imperial field marshal uniform with a spiked helmet and baton entering the church|he walks in
+249|Hindenburg|the old man saluting an empty ornate chair|he holds the salute
+250|Hitler|the man in a black morning coat, bowing|he bows
+251|Hitler, Hindenburg|the shorter man bowing deeply and shaking hands with the old man|they shake hands
+252||press photographers' cameras flashing in a church|the flashes burst
+253||conservative men in top hats reading newspapers|they turn the pages
+254||old officers with medals nodding approvingly|they nod
+255|Hindenburg, Hitler|the old man standing behind the shorter man like a protective shield|the old man stands firm
+256|Hindenburg|workers pasting a huge poster of the character onto a wall|they smooth the poster
+257|Hindenburg|a giant billboard with the character's portrait, brown-shirted men admiring it|they look up
+258||the Kroll Opera House in Berlin on a gray day|clouds drift
+259|Hitler|the man at a podium in an opera hall full of deputies|he gestures
+260||a giant stamp crushing a miniature parliament building|the stamp presses down
+261||a constitution book splitting with a crack down the middle|the crack spreads
+262||empty seats in a parliament chamber with abandoned hats on them|dust drifts
+263||brown-shirted men with plain armbands lining the walls and doors of a hall|they stare menacingly
+264||a small group of deputies in dark suits standing firm with red carnations|they stand firm
+265||an older bald man with glasses and a mustache standing defiantly at a podium|he grips the podium
+266||close-up of the older bald man with glasses, hand on his heart, defiant|he presses his hand to his heart
+267||rows of deputies raising their hands in agreement|the hands rise
+268||the doors of a parliament building wrapped in chains with a padlock|the padlock clicks shut
+269||a dark Berlin street at night, black cars with bright headlights|the cars drive slowly
+270||shadowy figures of gunmen standing in dark doorways|the shadows move
+271|Schleicher|the bald general opening the door of his villa at night, startled|he opens the door
+272||an empty villa room with an overturned chair and fallen flowers on the floor|a curtain moves
+273|Papen|the elegant man peeking through curtains, guards standing outside|he peeks out
+274|Hitler|the man holding tiny conservative men in top hats in the palm of his hand|he closes his fingers slightly
+275||a telegram being typed on a typewriter in an office|the typewriter keys strike
+276||a telegram slip with blank lines delivered on a silver tray|the tray is set down
+277|Hindenburg|the old man frail in a sickbed, a pen lying on the blanket|he breathes slowly
+278||close-up of an illegible scribbled signature on paper|ink glistens
+279||a manor house at dawn in the mist, curtains drawn|the mist drifts
+280|Hindenburg|the old man lying peacefully in bed with eyes closed and hands folded, a single candle|the candle flickers
+281||a hand stamping a document at a cabinet table|the stamp presses
+282||two ornate chairs merging into one giant chair|the chairs merge
+283|Hitler|the man sitting alone on a giant chair, his shadow enormous on the wall|the shadow grows
+284||rows of soldiers in field-gray raising three fingers to swear an oath in a courtyard|the fingers rise
+285|Hitler|the man reviewing rows of soldiers from a podium|he looks down at them
+286|Paul|the young lieutenant raising his hand to swear an oath in the Hall of Mirrors|he raises his hand
+287|Hindenburg|the old man raising his hand to swear an oath in the Reichstag chamber|he raises his hand
+288||ranks of soldiers in field-gray seen from behind|they stand at attention
+289||an empty grave plot under an oak tree beside a small gravestone on a country estate|leaves fall
+290||a huge octagonal memorial with eight towers in the East Prussian countryside|clouds drift
+291||a funeral procession with a coffin on a gun carriage entering the octagonal memorial|the procession moves slowly
+292||tanks on a snowy horizon|the tanks advance
+293||the towers of the octagonal memorial collapsing in an explosion|the towers collapse
+294||the quiet Gothic interior of a church in Marburg|light shafts shift
+295||a giant airship silhouette emerging from the clouds|the airship glides forward
+296||a huge silver airship with plain unmarked tail fins flying over the countryside, crowds watching below|the airship glides
+297||the silver airship approaching a mooring mast at dusk|the airship slowly descends
+298||the airship bursting into flames|the flames spread
+299||newspaper presses printing, shocked crowds holding newspapers|the presses roll
+300||a person in a museum looking at a framed picture of a burning airship|the person leans closer
+301||the burning airship collapsing to the ground|the airship collapses
+302||hands signing a constitution in a hall in Bonn, black-red-gold flags|the pen signs
+303|Hindenburg|a constitution book lying open, a faint ghostly reflection of the character visible on its pages|the reflection fades
+304||a modest presidential chair in a plain room|light shifts across the room
+305||an empty wall bracket where the red emergency lever used to be|dust floats
+306||one chair being swapped for another chair at the same moment|the chairs swap
+307||a stone tablet engraved with symbols protected by a glass dome|light glints on the dome
+308||a guard blocking a door against shadowy figures|the shadows recoil
+309||a black-red-gold shield standing firm against a storm|rain lashes the shield
+310||a strong oak tree where the fragile sapling once stood|leaves rustle
+311||a town council meeting with people arguing|they gesture
+312||a worker unscrewing a blank street sign|the screw turns
+313||citizens dropping ballots into a box on a palace square in Münster|ballots drop in
+314||the boy cadet in an oversized uniform standing in the barracks yard|he adjusts his cap
+315|Paul|the young lieutenant cheering in the Hall of Mirrors|he cheers
+316|Hindenburg|the old man holding a telegram|he looks up from the telegram
+317|Hindenburg|the old man at the window watching the torches|the firelight flickers
+318||a black-red-gold flag slowly being lowered|the flag lowers
+319||a staircase descending into darkness, each step lit by a dimming lamp|the lamps dim
+320||the red emergency lever|the lever trembles
+321||a pen signing a paper|the pen signs
+322|Papen, Hitler|aristocrats in top hats with the elegant man holding the shorter man on a leash|they laugh
+323||a snapped leash lying on the floor|the leash slides
+324|Hindenburg|the old man at a crossroads looking back over his shoulder|he looks back
+325|Hindenburg, Hitler|the old man closing a door in the face of the shorter man|the door shuts
+326||an elegant villa at night in the snow, candlelight in the windows|snow falls
+327||a pen hovering over a decree, glowing with firelight|the pen hovers
+328||the empty Hall of Mirrors with torch flames reflected in every mirror|the flames flicker
+329||a golden crown floating over a dark map of Europe|the crown glows
+330||the silhouette of a man in a bicorne hat against a sunset|the cape flutters
