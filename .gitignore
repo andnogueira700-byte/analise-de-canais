@@ -6,3 +6,12 @@ zeitzeichner/video2d/chk*.jpg
 zeitzeichner/video2d/audio.raw
 zeitzeichner/video2d/audio_cut.raw
 zeitzeichner/video2d/*.mp3
+zeitzeichner/video2d/*.wav
+zeitzeichner/video2d/blk/
+zeitzeichner/video2d/sheet_*.jpg
+zeitzeichner/video2d/*_chk.jpg
+zeitzeichner/video2d/c2.jpg
+zeitzeichner/video2d/render_log.txt
+zeitzeichner/video2d/music/t1.mp3
+zeitzeichner/video2d/sfx/test.mp3
+zeitzeichner/video2d/geo/*.geojson

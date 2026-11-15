@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Playfair;src:url(playfair-display-latin-900-normal.woff2);font-weight:900}
+html,body{margin:0;background:#000}canvas{display:block}</style></head><body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script src="lib.js"></script><script src="maps.js"></script><script src="docs_data.js"></script><script src="timings.js"></script>
+<script src="pilot_scenes.js"></script><script src="tpl.js"></script><script src="spec.js"></script>
+<script>
+// tempos locais da cena s4 (zoom) usam u/d — o resto vem da SPEC
+function ui(o,u){if(!o)return;if(o.lt)lowerThird(o.lt[0],o.lt[1],u);if(o.tag)nameTag(o.tag[0],o.tag[1],u,o.tag[2]!=null?o.tag[2]:W/2-230,o.tag[3]!=null?o.tag[3]:920);if(o.big)bigNumber(o.big[0],o.big[1],u,0.3,300);if(o.kw)keyword(o.kw,u,0.3);
+ (o.lab||[]).forEach(([tx,x,t0])=>{const a=back((u-t0)/0.4);if(a<=0)return;X.save();X.translate(x,200);X.scale(a,a);X.textAlign='center';X.font='900 76px Inter';X.fillStyle='#fff';X.shadowColor='rgba(0,0,0,0.4)';X.shadowBlur=14;X.fillText(tx,0,0);X.restore()})}
+let lastYear=1933;
+window.render=function(t){X.setTransform(1,0,0,1,0,0);X.clearRect(0,0,W,H);let i=0;while(i<SPEC.length-1&&t>=TSTART[i+1])i++;
+ const sp=SPEC[i],u=t-TSTART[i],d=TSTART[i+1]-TSTART[i];X.save();try{TPL[sp[0]](u,d,t,sp[1]||{})}catch(e){bg('#300','#000');X.fillStyle='#fff';X.font='40px Inter';X.fillText('ERRO bloco '+(i+1)+': '+e.message,100,500)}X.restore();X.setTransform(1,0,0,1,0,0);grain(t);
+ let yr=sp[2],lab=sp[4]||(yr!=null?String(yr):'');if(yr==null){yr=lerp(1933,1847,ease(u/d));lab=String(Math.round(yr))}
+ timeline(Math.min(Math.max(yr,1847),1934.6),lab);ui(sp[3],u);watermark();
+ return c.toDataURL('image/jpeg',0.88)};
+window.DUR=TSTART[TSTART.length-1];window.BLOCK=t=>{let i=0;while(i<SPEC.length-1&&t>=TSTART[i+1])i++;return i+1};
+</script></body></html>
