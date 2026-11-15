@@ -1,0 +1,50 @@
+Encontre o áudio do projeto "video 01 canal alemão" (canal ZEITZEICHNER, narração em ALEMÃO, vídeo sobre Paul von Hindenburg). Use o tempo de 3 a 8 segundos no SYNC do SRT TEMPO.
+
+Em seguida, baixe o SRT TEMPO e conte os blocos.
+
+DOCUMENTOS DA PASTA (leia todos antes de começar):
+- prompts-darkplanner-zeitzeichner (skill do canal: regras, tokens e processo)
+- ESTILO_zeitzeichner_cartoon.md (STYLE_DNA e NEGATIVE_DNA: copiar VERBATIM, sem mudar uma palavra)
+- PERSONAGENS_referencias.md (tokens [Hindenburg], [Paul], [Ludendorff], [Kaiser], [Papen], [Oskar], [Schleicher], [Hitler])
+- cenas.txt (as 330 cenas já roteirizadas, uma por bloco)
+- compilar.py (compilador que monta os prompts finais e valida a contagem)
+- PROMPTS_70_30.txt (prompts finais já prontos na regra 70/30, para 330 blocos)
+- SKILL MESTRE — Gerador de Imagens por SRT
+- Diretor Cinematográfico SRT — Imagem + Vídeo
+- SKILL MESTRE — Diretor de Personagens Referenciados por SRT
+
+DECISÃO PELO NÚMERO DE BLOCOS:
+- Se o SRT TEMPO tiver EXATAMENTE 330 blocos: use o PROMPTS_70_30.txt como base. Revise linha por linha contra o texto de cada bloco e corrija só o que estiver errado (anacronismo, cena genérica, personagem errado). Não reescreva o que está certo.
+- Se o SRT TEMPO tiver outro número de blocos: refaça o cenas.txt para o novo SRT, seguindo a skill do canal e reaproveitando as cenas existentes que ainda batem com o texto. Depois rode "python3 compilar.py <pasta> <srt_tempo>" e aplique a regra 70/30 abaixo.
+REGRA ABSOLUTA: total de linhas do arquivo final = total de blocos do SRT TEMPO. Mesma ordem. Nenhum bloco pulado, juntado ou duplicado.
+
+REGRA DAS TAGS:
+- Cena só imagem: uma linha com a tag [I] (prompt da imagem).
+- Cena animada: a tag [I] para a imagem e a tag [V] para animar essa imagem, conforme determinado pela skill.
+
+REGRA 70/30:
+- 70% das cenas ANIMADAS ([I] + [V]) e 30% SÓ IMAGEM ([I]). As imagens paradas recebem zoom na edição.
+- Os primeiros 60 segundos do vídeo devem ser 100% animados e o mais próximos possível do que o roteiro fala.
+- Distribua as imagens paradas de forma estratégica: mapas, documentos, objetos, prédios, retratos, estátuas e planos de ambientação. Nunca coloque mais de 2 imagens paradas seguidas.
+- Anime sempre: ação física, emoção e reação dos personagens, momentos de virada, multidões e desfiles, explosões e incêndios, e as cenas que repetem imagens do início (callbacks).
+
+ÉPOCA E FIDELIDADE (o roteiro vai de 1847 a 1949, na Alemanha e na Prússia):
+- Uniformes, armas, veículos, prédios e roupas devem ser exatamente da data do bloco: Guerra de 1866 e 1870/71 (uniforme azul prussiano e capacete com ponta), Primeira Guerra (cinza de campanha, trincheiras, U-boats de 1917), República de Weimar (anos 1920, inflação de 1923, crise de 1929), 1930–1934 (Reichstag, Potsdam, Ópera Kroll) e o dirigível de 1936/37.
+- PROIBIDO na imagem: suástica, qualquer símbolo ou insígnia nazista, texto legível, letras e números. Braçadeiras vermelhas sempre lisas; bandeiras sem símbolo; o dirigível com aletas lisas. Datas e números entram na edição, não na imagem.
+- Token de personagem [Nome] só quando a pessoa está visível no quadro, uma única vez por prompt, e o nome nunca aparece fora dos colchetes (regra da Skill de Personagens).
+
+Gere prompts visuais extremamente detalhados, específicos e historicamente precisos para cada trecho do SRT. Cada imagem deve representar fielmente o que está sendo narrado naquele momento, sem cenas genéricas. Descreva com precisão a época, personagens, uniformes, armas, veículos, equipamentos, ações, posições corporais, ambiente, iluminação, enquadramento e perspectiva da câmera. Mantenha a metáfora visual de cada frase (ex.: marionete, coleira, alavanca vermelha de emergência) e o estilo cartoon do canal.
+
+PREVENÇÃO DE ERROS VISUAIS: Antes de finalizar cada prompt, verifique a coerência anatômica, mecânica, espacial e histórica. Evite mãos deformadas, dedos extras, rostos distorcidos, membros duplicados, personagens fundidos, objetos flutuantes, armas deformadas, equipamentos impossíveis, proporções incorretas e elementos atravessando corpos ou estruturas. Garanta que os personagens segurem e utilizem corretamente os equipamentos, com movimentos fisicamente possíveis. Em armas, respeite posição do cano, gatilho, mecanismos e procedimentos de operação. Em veículos, navios, submarinos e aeronaves, preserve a estrutura real, as proporções e a quantidade e a posição de motores, rodas, asas, torres, escotilhas e tripulantes.
+
+FIDELIDADE À NARRAÇÃO: Não invente acontecimentos, personagens ou ações que não estejam sustentados pelo contexto. Não misture períodos históricos, uniformes, armamentos ou tecnologias. Evite interpretações literais equivocadas de termos técnicos. Mantenha continuidade visual entre cenas relacionadas, incluindo aparência dos personagens, roupas, equipamentos, localização e condições do ambiente. TOME CUIDADO COM ERROS: SE ENCONTRAR ANACRONISMO, REFAÇA O PROMPT.
+
+Cada prompt deve ser completo, independente, visualmente claro e diretamente conectado ao trecho narrado. Priorize precisão e coerência acima do espetáculo visual. Nunca substitua uma ação específica por uma cena genérica.
+
+VALIDAÇÃO FINAL (obrigatória antes de enviar):
+1. Total de linhas = total de blocos do SRT TEMPO.
+2. Entre 68% e 72% das linhas têm [V], e os primeiros 60 segundos são todos animados.
+3. Nenhuma linha contém suástica, símbolo nazista ou pedido de texto ou número.
+4. Cada token aparece no máximo uma vez por linha, e nenhum nome de personagem aparece fora dos colchetes.
+
+Assim que finalizar a criação dos prompts, envie todos para produção: crie (ou use) o projeto com o nome "video 01 canal alemão" e mande os prompts para serem feitos, com as referências de personagens já vinculadas aos tokens.
