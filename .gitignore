@@ -15,3 +15,5 @@ zeitzeichner/video2d/render_log.txt
 zeitzeichner/video2d/music/t1.mp3
 zeitzeichner/video2d/sfx/test.mp3
 zeitzeichner/video2d/geo/*.geojson
+zeitzeichner/video2d/v_*.jpg
+zeitzeichner/video2d/final_chk.jpg
