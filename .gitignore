@@ -3,3 +3,6 @@ zeitzeichner/video2d/stills/
 zeitzeichner/video2d/chk.jpg
 zeitzeichner/video2d/stills2/
 zeitzeichner/video2d/chk*.jpg
+zeitzeichner/video2d/audio.raw
+zeitzeichner/video2d/audio_cut.raw
+zeitzeichner/video2d/*.mp3
