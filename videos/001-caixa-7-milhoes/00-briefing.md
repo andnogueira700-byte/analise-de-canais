@@ -113,3 +113,9 @@ Consequências:
 - Nenhuma fonte diz que os dados da CVP já foram usados em golpe. "Golpista" no título afirmaria isso. Fato confirmado: os dados foram "copiados clandestinamente" por um invasor (Agência Brasil).
 - **Título principal final:** "7,6 Milhões de CPFs Vazados: O Hacker Soube Antes de Você" (57 caracteres). Alternativa A/B: "Vazamento de Dados: Quem Decide Se Você Precisa Saber?".
 - Thumbnail: texto de fato, sem "golpista".
+
+### Decisão do DONO (17/11) — título e thumbnail
+- **Título escolhido pelo dono:** "Caixa Seguridade Hackeada: Por que Você Só Soube Depois?!"
+  (a pergunta que o espectador faz; o roteiro responde: ataque em 6/11, aviso em 11/11 segundo a empresa, e a regra que permite esse intervalo).
+- Thumbnail: estilo das thumbs de hacker aprovadas (Hackers do Crime): foto clara e realista, prédio corporativo + hacker na tela + logo da Caixa Seguridade + 1 texto forte em tarja vermelha. Sem excesso de escuro, sem poluição.
+- Rodada 2 do analista: nota 7,7, ajustes pequenos. Limite de 2 rodadas atingido; o Diretor coordena os ajustes finais e leva as pendências ao dono.

@@ -1,147 +1,147 @@
 # Parecer do Analista
-**Veredito:** AJUSTES | **Nota final:** 5,8
-(A 5,5 x 30% + B 4,5 x 30% + C 7,5 x 25% + D 6,0 x 15%. O bloco B tem falhas, então o vídeo não pode ser aprovado nesta rodada.)
+**Veredito (rodada 2):** AJUSTES | **Nota final:** 7,7
 
-Laudo nº 001. Título principal: nº 1 ("7,6 Milhões de CPFs Vazados: Por Que Você Soube Por Último?"), com o nº 3 em teste A/B. Thumbnail: conceito A.
+(A 7,8 x 30% + B 7,8 x 30% + C 8,3 x 25% + D 6,5 x 15%. Subiu de 5,8 para 7,7. O bloco B ainda tem duas falhas pequenas, então não pode ser APROVADO nesta rodada. Todas se resolvem em poucas linhas.)
 
-Como li: abri 5 fontes. Agência Brasil (CVP), Agência Brasil (Tesouro), Tecnoblog (FGC), página oficial da ANPD e Olhar Digital (INSS). Fiz também uma busca sobre o 70% da Febraban, porque o Monitor Mercantil devolveu 403. As leituras são resumos automáticos de página: onde o ajuste depende da palavra exata, peço conferência no original antes de gravar.
+Laudo nº 001. Título principal: "7,6 Milhões de CPFs Vazados: O Hacker Soube Antes de Você" (57 caracteres). A/B: "Vazamento de Dados: Quem Decide Se Você Precisa Saber?". Thumbnail recomendada: fusão F1 ("5 DIAS / DE VANTAGEM").
+
+## Resumo da rodada 1 (nota 5,8, AJUSTES)
+Falhas centrais da rodada 1: (1) o roteiro afirmava "dentro do prazo" e "não houve empresa vilã"; (2) o título "Por Que Você Soube Por Último?" não era sustentado pelas fontes, porque a Agência Brasil diz que a CVP notificou os titulares em 11/11; (3) INSS com número errado (2,8 milhões) e Febraban 70% sem fonte firme; (4) frase do Tesouro parafraseada, não literal; (5) "segundo o comunicado" sem ter lido o comunicado; (6) thumbnail "CHEGOU TARDE" como julgamento; (7) capítulos e contagem de palavras divergentes entre arquivos.
+
+## Como li (rodada 2)
+Li CANAL.md, ESTILO-EDICAO.md, o parecer anterior, as decisões do 00-briefing e as versões novas de 01 a 05. Abri a fonte original de novo em 6 pontos: Agência Brasil (CVP), Agência Brasil (Tesouro), página oficial da ANPD, Tecnoblog (FGC), Mercado & Consumo (FGC) e IstoÉ (CVP, que na rodada passada deu erro 502 e agora abriu). Fiz também uma busca nos domínios da Febraban. Vi a imagem da F1 (`thumbs-canva/v2-F1.jpg`). As leituras de página são resumos automáticos: onde a palavra exata importa, peço conferência no original antes de gravar.
+
+## Os 13 ajustes da rodada 1, item por item
+
+| # | Ajuste da rodada 1 | Situação | Observação |
+|---|---|---|---|
+| 1 | Trocar afirmações de legalidade pela ressalva neutra | ✅ | Blocos 1, 2, 5, 6 e 9 agora dizem "não afirmamos que o prazo foi cumprido, nem que foi descumprido" e "nenhuma fonte que consultamos". "Dentro do prazo", "vilã" e "dentro do que a regra permite" sumiram do roteiro, do 03 e do mapa (conferi por busca). Mapa: cena 102 e checklist ok. |
+| 2 | Confirmar se os titulares foram avisados em 11/11 | ✅ no roteiro / ❌ no 01 | Conferi o original: é uma única frase, "notificou, em 11 de novembro, a ANPD, outras autoridades competentes e os titulares afetados". A nova espinha dorsal é sustentada e atribuída à empresa. Mas o `01-pesquisa.md` ainda diz "🟡 NÃO FECHADO" e "derruba a tese". Está desatualizado (ver ajuste 5 abaixo). |
+| 3 | Cortar o INSS | ✅ nos arquivos públicos / ❌ no 01 | Sem INSS no roteiro, no 03 e no mapa. No 04 só aparece o nome de um canal concorrente ("Inss Passo a Passo", tabela de referências). O `01-pesquisa.md` ainda traz INSS em 4 lugares (checagem pós-parecer, "Contexto extra", "Casos parecidos", fonte 19). |
+| 4 | Conferir frase do Tesouro e cortar o 70% | ✅ | Frase do Tesouro agora é a do texto. Confirmei na Agência Brasil: "as informações expostas podem ser utilizadas por terceiros para tornar tentativas de fraude mais convincentes" e "mensagens e contatos que aparentem ser legítimos". O roteiro só omite a palavra "expostas", o que é inofensivo; na tela, usar o texto exato. O 70% da Febraban saiu do roteiro, do 03, do 04 e do mapa. Continua no `01-pesquisa.md` (checagem pós-parecer, "Contexto", fontes 16, 16a, 16b). |
+| 5 | Atribuir "segundo o comunicado" e a frase da Caixa Econômica | ✅ parcial | "Segundo o comunicado da empresa, citado pela Agência Brasil" ok. Mas "segundo a IstoÉ, a empresa afirma que o incidente não afetou contas da Caixa Econômica Federal" não bate com o que a IstoÉ diz (ver ajuste 2 abaixo). |
+| 6 | Ressalva da ANPD e comunicação preliminar | ✅ | Confirmado na página oficial da ANPD: "larga escala, sensíveis e de grupos vulneráveis", 20 dias úteis, "a comunicação preliminar é insuficiente". Bloco 4 e bloco 6 ("É justo dizer o resto") cobrem. |
+| 7 | Gancho comprovável | ✅ | "milhões de brasileiros tiveram dados copiados, segundo a própria empresa". |
+| 8 | Tesouro e FGC não resolvidos pela conta; tirar promessas não cumpridas | ✅ | Bloco 5 diz que as contas "não medem a mesma coisa". "Detalhe estranho" e "isso ainda não era o pior" saíram. "A palavra é ativos" é cumprida logo depois. |
+| 9 | Título principal, contagem de palavras e capítulos | ✅ título / ❌ contagem e capítulos | Título resolvido (ver D). Contagem: roteiro 2.553, 03 diz 2.661, mapa 2.553 e a contagem do Diretor é 2.514. Capítulos ainda calculados sobre base errada. |
+| 10 | Canais oficiais na descrição | ✅ | FGC, Fala.BR do Tesouro e a nota sobre o e-mail da CVP estão na descrição, e o bloco 8 do roteiro não promete mais o que não existe. |
+| 11 | Thumbnail: tirar "CHEGOU TARDE", "7,6 Mi", linha da Hotmart | ✅ parcial | Texto novo é fato. Mas o `04-thumbnail.md` ainda traz "golpista" para quem copiou os dados (ver ajuste 8). A linha da Hotmart com "1 mês" saiu (sobra uma nota "não usado" sobre o m6 #08, inofensiva). |
+| 12 | Editor: cenas 8, 78, 82, 113, 31, 32, 97 | ✅ | Textos de tela trocados, INSS e 70% sumiram, grifo do Tesouro agora na cena 137-138 com o texto literal. |
+| 13 | Diretor: atualizar briefing e carimbo de data | ❌ | As decisões foram acrescentadas no fim, mas o topo do `00-briefing.md` ainda tem o título antigo, a Hotmart no placar e "o golpista já está com os dados" (linhas 4 a 24). Carimbo 17/11 continua no briefing, no 03, no 04 e no manual, com ambiente em 16/11. |
+
+## Pontos de atenção que você pediu (resultado direto)
+1. **Nenhuma afirmação de cumprimento ou descumprimento de prazo:** ✅. Conferi roteiro, 03, 04 e mapa. Risco residual pequeno: bloco 6, "Uma regra de três dias úteis, começando numa sexta-feira, pode terminar só na quarta", reproduz exatamente a situação da CVP (sexta 06/11, quarta 11/11). Está cercado de "não afirmamos", então passa. Sugestão: começar a frase com "Por exemplo,".
+2. **"Golpista" nunca para quem copiou:** ✅ no roteiro, na descrição e no mapa. ❌ no `04-thumbnail.md` (linhas 3, 56, 64, 146 ainda escrevem "o golpista soube antes de você"). Usos genéricos ("O golpista não quebra o sistema do banco", bloco 4) são aceitáveis. O teaser final ("o que os golpistas fazem com os dados depois que eles vazam") é genérico, mas é a frase mais próxima de ligar os dados da CVP a golpistas. Sugiro trocar por "o que fazem com os dados depois que eles vazam".
+3. **Febraban 70% e INSS fora de todos os arquivos:** ✅ em 02, 03, 05. ❌ em 01 (pesquisa) e, para o INSS, só o nome do canal concorrente no 04. Não é público, mas o pedido foi "todos".
+4. **Frase do Tesouro literal:** ✅ (conferida na fonte).
+5. **Título cumprido:** ✅. "Quem copiou soube antes de você" aparece no bloco 1 e no bloco 9, com as datas 06/11 e 11/11 e "cinco dias". Sugestão: dizer a palavra "hacker" uma vez em voz alta (ver sugestões).
+6. **Thumbnail = F1:** ✅. Vi a imagem. Quatro palavras ("5 DIAS DE VANTAGEM"), silhueta de costas, sem rosto, sem logo, celular com "Comunicado: incidente de segurança" genérico, "06/11" e "11/11", etiqueta "LAUDO Nº 001 - HACKOPSIA" no canto inferior esquerdo. Completa o título sem repeti-lo. "Vantagem" é inferência das duas datas da empresa, não acusa ninguém. Detalhe de paleta: a etiqueta "06/11" é vermelha (a bíblia reserva vermelho para "VAZADO" e números de perda).
+7. **Mapa segue o manual:** parcial. Segue marca d'água, cartão "ARQUIVO 0X" com digitação, grifo amarelo, frase na tela com quadradinho amarelo, lista numerada, etiqueta de data, glitch só na virada, música -20 dB e -14 a -16 LUFS, pausas antes das revelações, sem apresentador. Desvios no ajuste 7.
+8. **Itens do art. 48/52 da LGPD:** mantidos como "conferir antes de gravar" (art. 48, 2% e R$ 50 milhões, § 3º do art. 52). Não reprovam.
 
 ---
 
-## A. Fatos — nota 5,5
+## A. Fatos — nota 7,8
 
 **Confere com a fonte aberta**
-- Tesouro: detecção em 04/11, divulgação na quinta 12/11 à noite, ~30 mil cadastros e ~4 mil chaves Pix, justificativa do prazo ("detectar e confirmar o incidente, investigar, conter"). OK.
-- FGC (Tecnoblog): suspeita em 26/10, matéria de 05/11, dados e posição do FGC, ANPD comunicada. OK. O texto não traz a data exata do comunicado, só a da matéria, então "dez dias" fica como cálculo nosso sobre a data da matéria. Isso já está rotulado como "segundo as datas do Tecnoblog".
-- ANPD (página oficial): 3 dias úteis, três condições cumulativas, "o próprio controlador avalia". OK.
-- CVP (Agência Brasil): 7,6 milhões de ativos, ex-clientes sem número, dados expostos, citação "não há indícios de comprometimento de dados financeiros ou de autenticação", comunicado em 12/11. OK.
+- CVP (Agência Brasil): "ataque cibernético ocorrido em 6 de novembro"; notificação em 11/11 à ANPD, autoridades e titulares afetados (mesma frase); titulares "estão sendo comunicados"; 7,6 milhões de clientes ativos; "Dados de ex-clientes também foram vazados"; "não há indícios de comprometimento de dados financeiros ou de autenticação"; e-mail específico para dúvidas, sem endereço. OK.
+- Tesouro (Agência Brasil): detectado em 4/11; divulgado na quinta (12) à noite; ~30 mil cadastros; ~4 mil chaves Pix; justificativa do prazo; ANPD e CTIR Gov notificados; alerta de fraude com o texto citado acima. OK.
+- ANPD (página oficial): 3 dias úteis, três condições, "cabe ao controlador avaliar", larga escala, 20 dias úteis, preliminar insuficiente. OK.
+- FGC (Tecnoblog): suspeita identificada em 26/10, dados, ausência de evidência de divulgação, cautela com mensagens e ligações em nome do FGC, e-mail do FGC. OK.
 
 **Problemas encontrados**
-1. **INSS, "2,8 milhões de CPFs" (roteiro, bloco 4, "Em maio de dois mil e vinte e seis, segundo a Dataprev...").** A matéria do Olhar Digital citada na fonte nº 19 não traz 2,8 milhões. Fala em cerca de 2 milhões de segurados (estimativa de técnicos), diz que 97% dos CPFs acessados são de pessoas falecidas e que a apuração segue em andamento. O número do roteiro está errado e a frase cria uma impressão falsa. O trecho também não ilustra demora de aviso, então é uma digressão. Cortar ou refazer (ver ajustes).
-2. **CVP notificou os titulares em 11/11, segundo a Agência Brasil?** A matéria diz que a CVP notificou a ANPD, outras autoridades "e os titulares afetados" em 11/11. A pesquisa e o roteiro tratam só a ANPD como notificada em 11/11 e dizem apenas "começou a avisar os titulares", sem data. Se isso for confirmado no comunicado, a tese "você foi o último a saber" não se sustenta para o caso principal. Há mais em B.
-3. **Febraban, 70%.** O número está na pesquisa (fonte nº 16, Monitor Mercantil, 🟡), então não é número solto. Mas o Monitor Mercantil não abriu aqui, e a busca mostra que o "70%" aparece em formulações diferentes: "fraudes", "golpes e fraudes", "tentativas de golpe". Uma fonte acadêmica o data de 2023 e as matérias mais antigas são de 2020/2021. Não achei uma publicação oficial atual da Febraban com esse número. O roteiro diz "Segundo a Febraban, cerca de setenta por cento das tentativas de golpe têm origem na engenharia social". Além disso, a própria pesquisa descreve o 70% como "falsa central", e o roteiro o generaliza para "engenharia social". Precisa de data e de formulação exata, ou sai o número.
-4. **Frase do Tesouro sobre golpe (bloco 8 e cena 97).** O roteiro diz que o Tesouro alertou que terceiros podem usar os dados "para dar aparência de legitimidade a mensagens e ligações de golpe". Na matéria que abri a frase é "podem ser utilizadas por terceiros para tornar tentativas de fraude mais convincentes". A pesquisa afirma o "aparência de legitimidade". O mapa de edição marca o grifo como "literal conferido". Conferir o texto exato. Se for o que li, trocar o grifo e a paráfrase.
-5. **"Segundo o comunicado" sem ter lido o comunicado.** O PDF da CVP nunca foi lido (a própria pesquisa avisa). Mesmo assim o roteiro escreve "Segundo o comunicado da empresa" (bloco 2) e "Segundo o comunicado, a empresa bloqueou..." (bloco 5). Atribuir à Agência Brasil/IstoÉ ("segundo a Agência Brasil, que reproduz o comunicado"), ou ler o PDF.
-6. **"Afirma que o incidente não afetou contas da Caixa Econômica Federal."** Na Agência Brasil não há essa frase. A pesquisa a sustenta com a IstoÉ/Techtudo [3] (🟡), e a IstoÉ nota que o banco como um todo não confirmou. A frase aparece no roteiro e no mapa (cenas 7 e 41). Atribuir explicitamente à fonte ou ao comunicado depois de conferir.
-7. **"O FGC e a CVP foram na mesma linha. Pediram cautela..."** A cautela do FGC está confirmada. A da CVP não apareceu nas leituras que fiz (só vem de [1] na pesquisa). Conferir.
-8. **Gancho:** "essa cena entrou na vida de milhões de brasileiros" e "Durante esses dias, alguém já tinha a sua ficha". Não há fonte de que milhões receberam aviso (a CVP "começou a avisar"). Trocar por algo comprovável, por exemplo "milhões de brasileiros tiveram dados copiados, segundo a empresa".
-9. **Direito de resposta.** Está cumprido na forma ("a empresa afirma"). Falta apenas o cuidado de dizer na descrição se os órgãos foram procurados ou não (ver D).
+1. **FGC, data do comunicado (bloco 5).** O roteiro diz "O comunicado público saiu na quinta-feira, cinco de novembro, segundo o Tecnoblog. Dez dias depois da suspeita." O Tecnoblog e o Mercado & Consumo não trazem a data do comunicado: 05/11 é a data de publicação das matérias. O "dez dias" é, portanto, "da suspeita até a notícia". Ajuste de rótulo, não de fato (outras fontes da pesquisa [8][9] sugerem que o aviso foi no mesmo dia, mas não consegui abrir a data nelas).
+2. **"A empresa afirma que o incidente não afetou contas da Caixa Econômica Federal" (bloco 5, cena 62).** A IstoÉ (agora lida) escreve que não há confirmação de que contas correntes, poupanças ou sistemas bancários da Caixa Econômica Federal tenham sido invadidos, e que o incidente "não interrompeu a assistência prestada aos clientes" (apuração preliminar). Isso é mais fraco do que "a empresa afirma que não afetou". É justamente o ponto da confusão de marcas, então a precisão importa.
+3. **IstoÉ, "nome e CPF em todos os registros" (bloco 4).** O resumo da IstoÉ diz "parte dos registros também continha endereços, telefones, e-mails e datas de nascimento", o que implica nome e CPF em todos, mas não diz "todos" expressamente. Conferir o trecho antes de gravar.
+4. **Fatos 🟡 ainda sem conferência na fonte, falados sem "segundo":** Febraban (classificação da falsa central e "banco não pede senha, dados ou token por telefone"), Idec ("indica o boletim como primeiro passo"), Registrato e Pix aleatória, verificação em duas etapas (sem fonte). Para a Febraban há fonte primária à vista: a busca nos domínios da Febraban devolveu "Golpe da falsa central de atendimento" (portal.febraban.org.br/DetalheAntifraude/2/pt-br/) e a cartilha de engenharia social. Hoje o roteiro se apoia no Monitor Mercantil (fonte 16), cuja atribuição a Febraban a própria pesquisa contesta.
+5. **Pesquisa desatualizada.** O `01-pesquisa.md` ainda diz que os titulares não estão fechados e carrega material descartado (INSS, 70%).
+6. Fatos do roteiro que não estão no 01 com fonte aberta: nenhum fora os itens acima. As datas de dia da semana (seg 26/10, qua 04/11, sex 06/11) conferem com o calendário.
 
-**Hotmart.** Roteiro (02) e mapa de edição (05): sem nenhuma menção, exceto a linha do checklist do mapa ("Hotmart não aparece no vídeo"), que é interna. Restam menções em arquivos que não vão ao ar:
-- `03-titulos-descricao.md`, linha 10: linha de referência de concorrente, sem citar a empresa. Só a duração "31 min" diverge dos 32:37 do briefing.
-- `04-thumbnail.md`, linha 20: título do concorrente "HOTMART VAZA e avisa 1 mês depois" e o "1 mês", fato que a pesquisa descartou. Não é afirmação do canal, mas convém tirar.
-- `00-briefing.md` e `01-pesquisa.md`: menções esperadas (a pesquisa recomenda cortar). O briefing ainda lista Hotmart no tema e no "placar da demora", e deve ser atualizado.
-Nada do que o espectador verá cita a Hotmart. Sem falha.
+## B. Jurídico e YouTube — nota 7,8 (há falhas, então AJUSTES)
 
-**Data da pesquisa.** O briefing e a pesquisa estão datados de 17/11/2026, e a data do ambiente é 16/11/2026. Conferir o carimbo de data, porque o roteiro diz "até o fechamento desta investigação".
+**Resolvido**
+- Nenhum trecho afirma cumprimento ou descumprimento de prazo. O espectador é avisado três vezes (bloco 5, 6 e 9).
+- O título não afirma mais "último a saber". Cada data aparece como "segundo a empresa" ou "segundo a Agência Brasil".
+- Direito de resposta: cada empresa e órgão tem a posição citada ("a empresa afirma", "o FGC afirma", "o Tesouro informou").
+- Nenhum trecho ensina a invadir, fraudar ou achar dados vazados. Dados fictícios nos mocks. Nenhum dado real de vítima. Telekall só com nome, cidade, valor e "cabe recurso".
+- Ninguém é chamado de criminoso. "Hacker" e "quem copiou" são genéricos e a Agência Brasil confirma que os dados foram copiados por um invasor. O Tesouro "não quer dizer que foi ou será punido" está no texto.
+- Título e thumbnail: sustentados pelas datas da empresa. Sem nome da Caixa no título, sem logo na thumbnail.
 
----
+**Falhas que restam**
+- **B1. Fontes incompletas na descrição.** A bíblia (§7, item 7) exige fontes na descrição. A descrição lista 7 fontes, mas o vídeo cita também Febraban, Idec, escritórios de advocacia (regra da data de início da contagem), Registrato/Banco Central e o texto da LGPD. A rodada 1 tinha 12 links; agora há 7 e o roteiro ainda cita as que sumiram.
+- **B2. Frase da Caixa Econômica atribuída além da fonte** (ver A2). Em tema de confusão de marcas, atribuição solta é risco.
+- **B3. `04-thumbnail.md` com "golpista" para quem copiou os dados.** Não vai ao ar, mas é a regra de ouro desta rodada e o arquivo ainda orienta o designer com o título antigo.
 
-## B. Jurídico e YouTube — nota 4,5 (falhas = AJUSTES obrigatório)
+**Sem falha**
+- O prazo "cinco dias" é aritmética sobre datas da empresa e vem rotulado como "conta nossa" onde aparece.
+- Tags e título não são enganosos. (Sugestão: a tag "meu CPF vazou" promete algo que o vídeo só atende em parte; ver opcionais.)
 
-**B1. "Dentro do prazo" e conclusões de legalidade (falha).** O editor tem razão sobre a cena 78, e o problema é maior que essa frase. O roteiro afirma ou insinua que está tudo dentro da regra em vários pontos:
-- Bloco 6: "Pelas datas públicas, a notificação à autoridade caiu dentro do prazo. Para chegar nesse cenário, ninguém precisou quebrar regra nenhuma."
-- Bloco 6: "Até onde as fontes mostram, estava tudo dentro do que a regra permite."
-- Bloco 9: "não houve uma empresa vilã quebrando a lei."
-- Bloco 1/3: "E se ninguém precisou quebrar regra nenhuma..."
-- Bloco 6: "o problema deste laudo não é uma empresa vilã."
-Isso vai além das fontes por três motivos. (a) A contagem só vale se a data de "conhecimento" for a que a empresa informa, e essa regra de início da contagem vem só de escritórios de advocacia (🟡; a página da ANPD não a define). (b) Só a CVP tem datas para a conta. Para o Tesouro e o FGC a própria pesquisa diz que não se sabe quando notificaram a ANPD, quando "tomaram conhecimento" nem quando avisaram os titulares, mas o roteiro conclui "tudo dentro do que a regra permite" para os três. (c) A ANPD admite comunicação preliminar com complementação em até 20 dias úteis (página oficial), o que o roteiro omite. A regra do roteiro precisa dizer que não afirmamos nem que cumpriram nem que descumpriram.
-Ajuste: ver lista (roteirista). Texto-modelo sugerido: "Pelas datas informadas, a notificação da CVP à ANPD ocorreu três dias úteis depois de 6 de novembro. Mas a contagem depende da data em que a empresa diz ter tomado conhecimento, e essa data é informada por ela. Para o Tesouro e o FGC, as fontes não trazem as datas necessárias. Não afirmamos que o prazo foi cumprido nem que foi descumprido."
-
-**B2. Título nº 1 afirma um fato que as fontes não sustentam (falha).** "Por Que Você Soube Por Último?" parte do princípio de que o público foi o último a saber. Pela Agência Brasil, a CVP notificou ANPD, autoridades e titulares no mesmo dia (11/11), e no caso do Tesouro e do FGC não se sabe quando os titulares foram avisados. O título também carrega o "último a saber" para dentro do roteiro (blocos 1, 6 e 9) e para a thumbnail ("CHEGOU TARDE"). Mesmo como pergunta, ela embute a afirmação. Opções seguras: usar o nº 3 como principal, ou trocar o nº 1 por, por exemplo, "7,6 Milhões de CPFs Vazados: Quando Você Deve Ser Avisado?" (58 caracteres, uma palavra em caixa alta). Decisão é do Diretor e do dono do canal, mas o nº 1 como está não deveria ir ao ar sem a confirmação de que os titulares foram avisados depois do público.
-
-**B3. Thumbnail A, "CHEGOU TARDE" (ajuste).** "Tarde" é julgamento: sugere atraso indevido, e o roteiro diz que não afirma isso. A própria 04 diz que "chegou tarde" não acusa descumprimento, mas na prática o espectador lê como acusação. Trocar por algo factual e igualmente forte, como "DIAS DEPOIS" ou "CHEGOU DEPOIS". Também evita repetir o título nº 1 se ele for mantido.
-
-**B4. "Nenhuma fonte diz que descumpriu" (ajuste de precisão).** Bloco 2, 5 e 6. A frase vale só para as fontes lidas. Trocar por "nenhuma fonte que consultamos diz...". O roteiro já usa essa forma no bloco 7; padronizar.
-
-**B5. Virada omite o que a própria ANPD escreve (ajuste de justiça).** O roteiro diz que a empresa decide se o risco é relevante. A página da ANPD diz isso, mas também lista como fatores de relevância a larga escala, dados que permitam roubo de identidade e dados sensíveis, e diz que a ANPD analisa as comunicações recebidas. Para 7,6 milhões de pessoas, "larga escala" pesa. Sem essa ressalva, o espectador conclui que a empresa poderia ter decidido não avisar. Acrescentar.
-
-**B6. "E o Tesouro Nacional é um órgão público."** Depois de "órgão público não leva multa em dinheiro", insinua impunidade do Tesouro. Está atribuído "Segundo a LGPD" (correto, e o § 3º do art. 52 segue como "conferir antes de gravar"), mas convém acrescentar "a lei prevê advertência e publicização" sem sugerir que o caso do Tesouro já foi punido ou será. Aceito, com a ressalva de conferir o art. 52 antes de gravar.
-
-**Itens do art. 48/52 da LGPD.** Conferidos conforme combinado: as frases do roteiro vêm com "Segundo a LGPD" (sanções, multa de 2%/R$ 50 mi, órgão público). A frase "O artigo quarenta e oito dessa lei manda comunicar incidentes..." (bloco 4) não traz o "segundo", mas é a descrição de uma lei, sem acusação. Manter "conferir antes de gravar", sem reprovar por isso.
-
-**Itens do bloco B sem falha**
-- Nenhum dado real de vítima. Todas as simulações usam dados fictícios (E8, 000.000.000-00). Telekall: só nome, cidade, valor e "cabe recurso" (fonte oficial da ANPD).
-- Nenhum trecho ensina a invadir, fraudar ou achar dados vazados. Nada diz onde encontrar dados vazados. Bloco 8 é só defesa.
-- Não diz que os dados foram vendidos ou usados em golpe. Correto, só "podem ser usados".
-- Confusão com a Caixa Econômica: tratada com cuidado em roteiro, mapa e títulos (nenhum título cita "Caixa").
-- Pix instável no mesmo dia: não relacionado, como mandava a pesquisa.
-
----
-
-## C. Retenção e narrativa — nota 7,5
+## C. Retenção e narrativa — nota 8,3
 
 **Funciona bem**
-- Abertura com objeto do dia a dia ("uma notificação acendendo a tela do seu celular") e pergunta aos ~0:55: "E se ninguém precisou quebrar regra nenhuma para você ser o último a saber?". A tensão aparece cedo e o bloco 2 fecha com um gancho ("Nenhuma fonte diz que ... descumpriu").
-- Estrutura dos 9 blocos respeitada. Abertura fixa ("HACKOPSIA. Laudo número zero zero um") entra logo depois da Grande Pergunta. Encerramento fixo presente.
-- Mini-ganchos bons: "Guarde essa ideia", "Guarde o Tesouro", "Mas essa ainda não é a virada", "Dois detalhes", pausa de 1 s antes de "Quem decide se o risco é relevante?".
-- A Grande Pergunta é respondida: quem decide é a empresa. A ligação com o golpe (bloco 8) fecha o arco aberto no bloco 4 e puxa o Laudo 002 de forma natural.
-- Frases curtas, bom para voz de IA. Números por extenso, termos explicados na mesma frase.
+- As duas primeiras frases são o objeto do dia a dia (a notificação acendendo a tela). Aos ~0:25 já há tensão ("quem copiou os dados já tinha a sua ficha. E você não sabia de nada") e aos 1:12 o soco do título: "Cinco dias. Na prática, quem copiou soube antes de você."
+- A Grande Pergunta (bloco 3) é respondida na virada: quem decide é a empresa, com a ressalva honesta da ANPD. O fecho do bloco 9 repete a resposta em três linhas.
+- A virada tem dois degraus bem escalonados: dias úteis e início do relógio; depois "quem decide se o risco é relevante". O "ex-clientes" aparece antes, como surpresa lateral, depois do mini-gancho "A palavra é ativos". Ganhou força em relação à rodada 1.
+- Mini-ganchos: "Guarde essa ideia", "Guarde o Tesouro", "Mas essa ainda não é a virada". O bloco 5 agora tem uma quebra no meio (ativos) e fecha explicando por que Tesouro e FGC não se comparam à CVP.
+- "Como se proteger" tem sete passos numerados, simples e sem jargão sem explicação. O fecho aponta o Laudo 002 e segue a fórmula fixa.
+- Tom conforme a bíblia, frases curtas para voz de IA, "gov ponto br" bem escrito para falar.
 
 **Fraquezas**
-1. **A resposta da Grande Pergunta só cobre a CVP.** A pergunta é "por que o anúncio pode sair mais de uma semana depois?". A conta do bloco 6 explica a CVP (6 dias corridos, 4 úteis), mas os "oito" e "dez" dias do Tesouro e do FGC, que são os que passam de uma semana, não são explicados pela regra. O roteiro fecha como se explicasse os três. Reconhecer isso (junto com B1) e dizer o que falta para explicar: datas de conhecimento e de aviso aos titulares.
-2. **Promessa que não se cumpre:** "E foi no calendário que apareceu o primeiro detalhe estranho" (fim do bloco 4). O "detalhe estranho" é apenas sexta a quarta. "Mas isso ainda não era o pior" (fim do bloco 5, sobre a resposta da CVP) também é exagero. Trocar por ganchos que se cumpram.
-3. **Digressão do INSS (bloco 4).** Além do erro de fato (A1), não ilustra demora de aviso. Corta ritmo no trecho mais "de definição" do vídeo (2:15 a 4:45).
-4. **Virada é boa, mas a "frase escondida" é rebaixada** pela pausa dupla ("essa ainda não é a virada"). Funciona, mas "ex-clientes" é a surpresa mais forte e fica num ponto morno. O ponto do ex-cliente é de fato inesperado e seguro; vale deixá-lo ainda mais claro no placar.
-5. **Bloco 5 denso.** Entre 5:20 e 6:14 são ~10 frases seguidas de "a empresa afirma". Necessário pelo direito de resposta, mas precisa de um pequeno gancho no meio (por exemplo, antes da lista de medidas).
-6. **Bloco 8, numeração:** "Quinto" abriga duas dicas e a verificação em duas etapas entra "solta", sem número. Renumerar até sete limpos e deixar a dica de duas etapas como passo próprio. A dica 2 ("Procure no site do Banco Central o serviço...") é vaga: dizer o nome do serviço depois de conferir. Faltou orientar a pessoa a perguntar à empresa se ela está na base (o e-mail da CVP não foi encontrado).
-7. **Tom:** conforme a bíblia (sério, sem gíria, ironia seca). "Clássico Brasil" não é usado e não faz falta.
-8. **Duração:** o roteiro declara 2.570 palavras (≈17 min), dentro de 14 a 18 min. O `03` calcula 2.441 palavras. Contar de novo e alinhar os arquivos.
+1. **Passo 2 do "como se proteger" pode ser inseguro.** "Desligue. Ligue de volta pelo número oficial" é o conselho clássico, mas a Febraban alerta (resultado da busca nos domínios dela, a conferir na página) que o golpista pode manter a linha aberta e simular a central; a recomendação é usar outro aparelho ou outro canal, de preferência o aplicativo. Num laudo que termina chamando o golpe da falsa central, este é o passo que mais precisa estar certo.
+2. **Gancho sem pergunta nos primeiros 30 s.** Há mistério (a data, a ficha), mas a primeira pergunta só vem aos 2:00. Não reprova, mas dá para plantar uma pergunta curta antes do aviso da Caixa Econômica (que tira 15 s do gancho).
+3. **"Ela volta daqui a pouco" (bloco 5, sobre a frase do Tesouro).** A frase só volta no bloco 8, uns 5 minutos depois. Trocar por "ela volta no fim deste laudo". O mesmo vale para "Guarde essa ideia... Ela volta no fim" (Febraban), que só reaparece de leve no passo 2.
+4. **Bloco 4 (2:26 a 4:32) é a parte mais densa** (lei, resolução, prazo, preliminar). Funciona por causa dos mini-ganchos, mas é o ponto de maior risco de queda de retenção. Os cartões do mapa (cenas 30 a 46) ajudam.
+5. **Duração.** Com 2.514 palavras (contagem do Diretor), a narração dá cerca de 16:46 a 150 palavras por minuto, dentro dos 14 a 18 min. Mas o roteiro (17,0 min), o 03 (17:44) e o mapa (~18:36 com tela final) dizem outra coisa (ver D).
 
----
-
-## D. Embalagem — nota 6,0
+## D. Embalagem — nota 6,5
 
 **Bom**
-- Descrição com resumo, capítulos, fontes (12 links), aviso e direito de resposta. Nenhuma menção à Hotmart. Tags coerentes.
-- O título nº 3 é cumprido pelo roteiro (a virada é exatamente "quem decide"). O nº 1 é cumprido apenas em parte (ver B2).
-- Thumbnail A: objeto único, sem rosto, sem logo, sem dado real, com a etiqueta "LAUDO Nº 001". Conforme a bíblia. O texto não repete o título nº 3.
+- Título principal cumprido pelo roteiro; 57 caracteres; só "CPFs" em caixa alta; não nomeia a Caixa. O título A/B é cumprido pela virada.
+- Thumbnail F1 completa o título e não o repete. É a mais forte das três propostas.
+- Descrição com resumo, capítulos, canais oficiais, direito de resposta e aviso. Nada de Hotmart, INSS ou 70%.
 
 **Problemas**
-1. **Capítulos errados.** A descrição foi calculada com 2.441 palavras e diverge do mapa de edição em quase 1 minuto no fim: "08:26 Você nem precisa ser cliente" (mapa: 08:39), "13:24 O que fazer hoje" (mapa: 14:18), "15:31 O próximo laudo" (mapa: 16:00), "04:36" (mapa: 04:39), "06:30" (mapa: 06:24 para o Tesouro). Só podem ser publicados depois de calcular sobre o vídeo gravado. A nota do próprio arquivo já pede isso.
-2. **O roteiro promete algo que a descrição não entrega:** "Os canais oficiais de cada instituição para tirar dúvidas estão na descrição deste vídeo" (bloco 8). Não há essa lista na descrição. Já existem nas fontes o e-mail do FGC (atendimento.credores@fgc.org.br) e o canal do Tesouro (encarregado de dados do Ministério da Fazenda via Fala.BR). O e-mail da CVP não foi encontrado.
-3. **Descrição:** diz "explicamos como esses dados podem dar aparência de verdade a um golpe". Ajustar para refletir a frase confirmada do Tesouro (ver A4). A linha "Nenhuma fonte consultada informa descumprimento de prazo nem punição" é boa; manter.
-4. **Thumbnail:** o arquivo ainda cita o título nº 1 como "7,6 Mi" (agora é "7,6 Milhões"), e nenhuma referência foi aberta visualmente (a própria 04 admite). Aceitável como proposta, mas pendente.
-5. **Título nº 1** cumpre molde 2/4 e fica em 59 caracteres, mas ver B2. Como o título nº 3 não nomeia empresa e é cumprido integralmente, é o mais seguro.
-6. **Duração:** dentro de 14 a 18 min, mas há divergência de contagem de palavras entre arquivos (ver C8).
-7. **Cenas do mapa a corrigir junto com o roteiro:** cena 8 ("Ninguém precisou quebrar regra nenhuma?"), cena 78 ("Dentro do prazo (pelas datas informadas)"), cena 82 ("Dentro do que a regra permite"), cena 113 ("Não houve empresa vilã quebrando a lei"). Nenhuma deve ir ao ar como está. Cenas 31 e 32 (INSS 2,8 milhões) saem junto com o trecho. Cena 22 (70%) segue a decisão do ajuste A3.
+1. **Contagem de palavras em três versões:** roteiro 2.553 ("17,0 min"), 03 diz 2.661 (≈17:44) e mapa 2.553 (~18 min, tela final em 18:36). A base real é 2.514.
+2. **Capítulos públicos em base errada.** Se o vídeo tem 2.514 palavras (16:46 de narração pura), o bloco 9 (cerca de 160 palavras, ~1 min) não pode começar em 16:39, como diz o cabeçalho do roteiro e o capítulo "16:39 O próximo laudo" da descrição. E o mapa discorda do 03: virada em 10:00 contra 09:32; lei em 13:10 contra 12:02; "como se proteger" em 14:32 contra 13:52; fechamento em 17:37 contra 16:39. Publicar capítulos só depois de gravar.
+3. **Descrição: fontes** (ver B1).
+4. **Mapa x manual de edição:**
+   - Vídeos de banco com mais de 6 s: cenas 10 (9 s), 70 (8 s), 113 (9 s), 118 (8 s) e 146 (10 s). O checklist do próprio mapa proíbe.
+   - Ritmo: 168 cenas em cerca de 18 min dão ~9 cortes por minuto; o manual pede 12 a 18.
+   - Tarja vermelha em números que não são de perda: cenas 16, 21, 23, 42, 78, 88 e 98 ("5 DIAS", "8 DIAS", "3 DIAS ÚTEIS"). O manual (§6) e o checklist do mapa (linha 257) reservam vermelho para 7,6 MI, 30 MIL, 4 MIL e "VAZADO". As cenas 123 a 127 já usam tarja branca; padronizar.
+   - Cartões de capítulo: intervalo de 5:28 entre ARQUIVO 02 (4:32) e ARQUIVO 03 (10:00); o manual pede 3 a 5 min.
+   - Pendências do mapa desatualizadas (linhas 268 a 275): a data do aviso aos titulares agora está confirmada; "2.553" e "~18 min" estão errados; o cabeçalho diz "151 linhas" e a tabela tem 168.
+5. **Carimbo de data** 17/11 (briefing, 03, 04, manual) contra o ambiente em 16/11 e o roteiro, que fecha "até dezesseis de novembro".
 
 ---
 
 ## Ajustes obrigatórios (agente → o quê → onde)
 
-1. **roteirista → trocar as afirmações de legalidade pela ressalva neutra.**
-   - Bloco 6: "Pelas datas públicas, a notificação à autoridade caiu dentro do prazo. Para chegar nesse cenário, ninguém precisou quebrar regra nenhuma." Substituir por: "Pelas datas informadas, a notificação da CVP à ANPD ocorreu três dias úteis depois de seis de novembro. Mas a contagem depende da data em que a própria empresa diz ter tomado conhecimento. Para o Tesouro e o FGC, as fontes não trazem as datas necessárias. Não afirmamos que o prazo foi cumprido, nem que foi descumprido."
-   - Bloco 6: "Até onde as fontes mostram, estava tudo dentro do que a regra permite." e "o problema deste laudo não é uma empresa vilã. O problema é a regra." Reescrever como "Não afirmamos que alguma delas descumpriu a regra. O que o laudo mostra é que a regra deixa o relógio e a avaliação do risco nas mãos de quem sofreu o ataque."
-   - Bloco 9: "não houve uma empresa vilã quebrando a lei" por "este laudo não acusa ninguém de descumprir a lei. Mostra uma regra que deixa a decisão com a própria empresa."
-   - Bloco 1/3 e cabeçalho (Virada): remover "ninguém precisou quebrar regra nenhuma" e "Estava tudo dentro do que a regra permite".
-   - Blocos 2, 5, 6: "Nenhuma fonte diz" por "nenhuma fonte que consultamos diz".
-2. **pesquisador → confirmar, no texto literal da Agência Brasil e do comunicado da CVP, se os titulares foram notificados em 11/11 ou depois, e se a CVP "pediu cautela com contatos em seu nome".** Se os titulares foram avisados em 11/11, o roteirista reescreve gancho, virada e fechamento para "o aviso chegou X dias depois do incidente" (sem "último a saber") e o titulos-descricao troca o título nº 1.
-3. **pesquisador → corrigir ou cortar o INSS.** O número "2,8 milhões" não consta no Olhar Digital citado. A matéria diz cerca de 2 milhões de segurados, 97% de CPFs de falecidos, apuração em andamento. **roteirista:** cortar o parágrafo do INSS no bloco 4 (e as cenas 31 e 32 do **editor**), ou reescrevê-lo com o dado correto e ligá-lo ao tema (demora de aviso). Preferência: cortar.
-4. **pesquisador → conferir a frase do Tesouro no texto literal** ("tornar tentativas de fraude mais convincentes" x "dar aparência de legitimidade a mensagens e ligações") e conferir o 70% da Febraban (ano, formulação e a fonte oficial). **roteirista:** ajustar a paráfrase do bloco 8 e o bloco 4 ao texto confirmado, dizendo o ano do 70%, ou trocar por "a maior parte dos golpes". **editor:** cena 22 e cena 97 seguem o que for confirmado.
-5. **roteirista → atribuir "segundo o comunicado"** (bloco 2 e bloco 5) a "segundo a Agência Brasil, que reproduz o comunicado" enquanto o PDF não for lido. Atribuir à fonte a frase "o incidente não afetou contas da Caixa Econômica Federal" (bloco 5; mapa cenas 7 e 41).
-6. **roteirista → acrescentar na virada a ressalva da ANPD** sobre os fatores de relevância (larga escala etc.) e que a ANPD analisa as comunicações; e mencionar a comunicação preliminar com complemento em até 20 dias úteis (bloco 4 ou 6). Sem isso a virada exagera.
-7. **roteirista → corrigir o gancho (bloco 1):** "essa cena entrou na vida de milhões de brasileiros" e "alguém já tinha a sua ficha" devem ser comprováveis ("milhões de brasileiros tiveram dados copiados, segundo a empresa").
-8. **roteirista → explicar que o Tesouro e o FGC não são resolvidos pela conta** (oito e dez dias) e remover as promessas não cumpridas ("o primeiro detalhe estranho", "isso ainda não era o pior").
-9. **titulos-descricao → título principal.** Não publicar o nº 1 como está enquanto o ajuste 2 não for fechado. Opções: nº 3 como principal, ou "7,6 Milhões de CPFs Vazados: Quando Você Deve Ser Avisado?" (58 caracteres). Corrigir também a contagem de palavras (2.441 x 2.570) e **recalcular os capítulos** sobre o roteiro final (não publicar 04:36, 06:30, 08:26, 13:24, 15:31 sem conferir com a narração).
-10. **titulos-descricao → listar na descrição os canais oficiais** prometidos no bloco 8: e-mail do FGC, Fala.BR do Ministério da Fazenda (Tesouro) e o canal da CVP (pesquisador: localizar; se não houver, o roteirista tira a promessa do bloco 8).
-11. **thumbnail → trocar "CHEGOU TARDE"** por termo factual ("DIAS DEPOIS" ou "CHEGOU DEPOIS"), atualizar "7,6 Mi" para "7,6 Milhões" e remover da tabela de referências a linha da Hotmart com "1 mês".
-12. **editor → cenas 8, 78, 82 e 113:** ajustar o texto na tela ao novo roteiro (sem "dentro do prazo", "dentro do que a regra permite" ou "não houve empresa vilã"). Cenas 31 e 32 saem com o INSS. Remover "(literal conferido)" da cena 97 até a conferência do ajuste 4.
-13. **Diretor → atualizar `00-briefing.md`** (tira a Hotmart do tema e do placar) e conferir o carimbo de data (17/11 x 16/11).
+1. **titulos-descricao → completar "📰 Fontes" na descrição** (rege a bíblia §7.7). Acrescentar, depois de o pesquisador conferir cada uma: Febraban (portal.febraban.org.br/DetalheAntifraude/2/pt-br/ e/ou a cartilha de engenharia social), Idec (fonte 27), escritórios de advocacia (fontes 10 e 11, Mattos Filho e Confidata), Registrato (Tecnoblog, fonte 23) e a LGPD (planalto.gov.br, só depois de lida). Onde: bloco "📰 Fontes", hoje com 7 itens.
+2. **roteirista → refazer a frase da Caixa Econômica, bloco 5** ("E, segundo a IstoÉ, a empresa afirma que o incidente não afetou contas da Caixa Econômica Federal, nem interrompeu serviços."). Texto sugerido, a conferir no original da IstoÉ: "Segundo a IstoÉ, não há confirmação de que contas ou sistemas da Caixa Econômica Federal tenham sido invadidos. E, segundo a empresa, o incidente não interrompeu o atendimento aos clientes." **editor →** cena 62 (grifo "não afetou contas da Caixa Econômica Federal") e o checklist do mapa.
+3. **roteirista → rotular a data do FGC, bloco 5.** Trocar "O comunicado público saiu na quinta-feira, cinco de novembro, segundo o Tecnoblog. Dez dias depois da suspeita." por "A notícia do Tecnoblog é de quinta-feira, cinco de novembro. Dez dias depois da suspeita." No fechamento do bloco 5, "para o Tesouro e o FGC a conta vai até o anúncio público" passa a "até a notícia" para o FGC. **editor →** cenas 87, 88 e 92 ("da suspeita à notícia (conta nossa)"). **pesquisador →** na linha do tempo do 01, marcar 05/11 como "data da matéria", a não ser que uma fonte traga a data do comunicado.
+4. **pesquisador + roteirista → passo 2 do bloco 8.** O pesquisador abre a página da Febraban sobre a falsa central e confirma a orientação de linha aberta. O roteirista troca "Ligue de volta pelo número oficial, do cartão ou do aplicativo" por algo como "Ligue de volta de outro aparelho, ou abra o aplicativo do banco, porque o golpista pode manter a linha aberta". **editor →** cenas 147 e 148.
+5. **pesquisador → atualizar o `01-pesquisa.md`.** (a) Registrar que o texto original da Agência Brasil traz os titulares na mesma frase da notificação de 11/11 (conferido pelo Diretor e por esta análise) e tirar "🟡 NÃO FECHADO" e "derruba a tese". (b) Tirar ou isolar numa seção "Descartados" o 70% da Febraban e o INSS (checagem pós-parecer, "Contexto", "Casos parecidos", fontes 16a, 16b, 19). (c) Trocar a fonte 16 (Monitor Mercantil) pelas páginas da própria Febraban nas duas afirmações do roteiro. (d) Corrigir o carimbo de data.
+6. **Diretor → alinhar a contagem de palavras em todos os arquivos para 2.514** (cabeçalho do 02: "2.553 ÷ 150 = 17,0", 03: "2.661 palavras ≈17:44", mapa: "2.553" e "~18 min"). Depois de aplicar os ajustes 2 a 4, recontar por bloco com a ferramenta e refazer os tempos dos blocos no cabeçalho do roteiro, os capítulos do 03 e a linha do tempo do mapa a partir dessa mesma base. Publicar capítulos só depois da gravação.
+7. **editor → ajustar o mapa ao manual e ao próprio checklist:** (a) dividir em dois planos os vídeos de banco acima de 6 s (cenas 10, 70, 113, 118, 146); (b) subir o ritmo para 12 a 18 cortes por minuto, sem perder os cartões que mudam a cada 3 a 4 s; (c) tarja vermelha só em 7,6 MI, 30 MIL, 4 MIL e "VAZADO"; dias e prazos em tarja amarela ou branca (cenas 16, 21, 23, 42, 78, 88, 98); (d) quebrar o intervalo de 5:28 entre ARQUIVO 02 e 03, por exemplo um cartão em "E NÃO ERA SÓ ELA" (cena 73); (e) atualizar as pendências do fim do arquivo (titulares confirmados, contagem 2.514, "168 cenas").
+8. **thumbnail (ou Diretor) → corrigir o `04-thumbnail.md`:** linha 3 (título antigo com "Golpista") e linhas 56, 64 e 146 ("o golpista soube antes de você") trocam para "o hacker". A seção "Recomendado: A" (linha 144) passa a "superada pela F1" e o F1 sobe para o topo como recomendação oficial. Opcional: etiqueta "06/11" em amarelo ou branco, para respeitar a regra do vermelho.
+9. **Diretor → `00-briefing.md`:** colocar uma nota "SUPERADO PELAS DECISÕES DA RODADA 1 E 2" no topo (título antigo, Hotmart no placar, "o golpista já está com os dados" nas linhas 4 a 24) e conferir o carimbo 17/11.
 
 ## Sugestões opcionais
-- Renumerar o bloco 8 em sete passos limpos, deixando a verificação em duas etapas como passo próprio, com fonte (gov.br ou CERT.br).
-- Dar o nome oficial do serviço de bloqueio de abertura de contas (Banco Central) quando conferir no site.
-- Incluir "Procon e Banco Central" como canais da vítima no passo 7, depois de confirmar.
-- Pequeno gancho no meio do bloco 5, antes da lista de medidas da CVP.
-- Na descrição, dizer se as instituições foram procuradas ("procuramos" ou "não procuramos") além de citar os comunicados.
-- A "pergunta nos comentários" do bloco 9 é boa. Aproveitar a mesma no comentário fixado (já está).
-- Corrigir a duração do vídeo de referência do mano deyvin (31 x 32:37) em `03-titulos-descricao.md`.
+- Trocar o teaser final por "o que fazem com os dados depois que eles vazam", sem "golpistas" (bloco 9, cena 165 do mapa).
+- Dizer "hacker" uma vez, no bloco 1 ou no 9 ("Cinco dias. Nesse intervalo, o hacker soube antes de você"), para colar a narração ao título.
+- Bloco 6: começar "Uma regra de três dias úteis..." com "Por exemplo,".
+- Plantar uma pergunta curta ainda no bloco 1 (por exemplo, depois de "você não sabia de nada": "Quantos dias é possível ficar sem saber?").
+- Bloco 5: trocar "Ela volta daqui a pouco" por "Ela volta no fim deste laudo".
+- Na descrição, dizer se as instituições foram procuradas ou não, além de citar os comunicados (sugestão da rodada 1, ainda pendente).
+- Tag "meu CPF vazou": o vídeo não ensina a consultar. Trocar por "vazamento Caixa Seguradora" ou manter só se o roteiro ganhar uma linha sobre consultar o próprio CPF em serviço oficial.
+- Mapa: nas listas, usar o rótulo "EVIDÊNCIA 01, 02..." do manual.
+- Itens a conferir antes de gravar (não reprovam): art. 48 e art. 52 (2% e R$ 50 milhões, § 3º) da LGPD no planalto.gov.br; "nome e CPF em todos os registros" (IstoÉ); Idec; Registrato e nome atual do serviço; verificação em duas etapas (gov.br ou CERT.br); PDF do comunicado da CVP.
 
 ## Pontos fortes
-- Ângulo original: ninguém no YouTube explicou o padrão (regra, quem avalia o risco, quase ninguém punido).
-- Cautela jurídica na maior parte do texto: "segundo", "a empresa afirma", "cabe recurso", Telekall só com fonte oficial da ANPD.
-- Cortes certeiros: Hotmart fora do roteiro e dos materiais públicos, Pix sem relação com o ataque, dados fictícios nas simulações.
-- Estrutura de nove blocos, abertura e encerramento fixos, mini-ganchos eficientes e fecho que puxa o Laudo 002.
-- Mapa de edição detalhado e com checklist honesto (o editor identificou sozinho "dentro do prazo", o art. 52 e o 70%).
-- Thumbnail A coerente com a identidade visual: um objeto, sem rosto, sem logo, sem dado real.
+- A nova espinha ("quem copiou soube antes de você") é verdadeira, vem das datas da empresa, e cumpre o título e a thumbnail sem acusar ninguém.
+- Cautela jurídica consistente em todo o roteiro: "segundo", "a empresa afirma", "não afirmamos que cumpriu nem que descumpriu", "nenhuma fonte que consultamos".
+- A virada é honesta: mostra a falha da regra e ainda cita os fatores de relevância da ANPD, o que protege o canal e dá credibilidade.
+- Frase do Tesouro literal e bem usada como ponte entre vazamento e golpe, com a observação certa ("foi o próprio órgão que teve os dados acessados").
+- Bloco "como se proteger" claro, numerado e curto, com o glossário na hora (token, autenticação, controlador).
+- Thumbnail F1: nítida, de fato, sem rosto, completa o título.
+- Mapa de edição detalhado, com direito de resposta na tela e checklist honesto.
