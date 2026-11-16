@@ -86,5 +86,14 @@ texto da narração...
 colar na ferramenta de voz)
 ```
 
+## Entrega 2: versão pronta para voz de IA
+
+Depois que o roteiro for aprovado no conteúdo, crie `02b-narracao-ia.md` (modelo:
+`videos/001-caixa-7-milhoes/02b-narracao-ia.md`): **um áudio por bloco** (ÁUDIO 01
+a 09), cada um com a versão com pausas (`<break time="0.8s" />` nos momentos de
+tensão, `1.5s` antes da virada) e a versão de texto puro; grafias de pronúncia
+(ex.: HACKOPSIA → Rekópsia; hacker → réquer) e, no fim, a lista das 8 emendas
+entre blocos para as transições do editor (seção 3.11 do manual de edição).
+
 No fim, responda ao Diretor em até 5 linhas: palavras, duração e qualquer
 `[FALTA]`.

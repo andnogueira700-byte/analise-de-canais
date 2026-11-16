@@ -59,6 +59,12 @@ Chame `analista` com o caminho da pasta.
   rodadas**. Se ainda não aprovar, leve as pendências para o dono decidir.
 - **APROVADO:** siga para o passo 6.
 
+## Passo 5b — Narração pronta para IA
+
+Com o roteiro aprovado, peça ao `roteirista` o `02b-narracao-ia.md` (um áudio por
+bloco, com pausas e pronúncia) e ao `editor` as transições entre blocos no mapa
+(seção 3.11 do manual de edição).
+
 ## Passo 6 — Decisão final (Diretor + dono)
 
 1. Faça a sua própria leitura rápida: o vídeo cumpre a bíblia? Você publicaria?
