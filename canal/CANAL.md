@@ -121,6 +121,21 @@ vídeo não entrega.
   borrado de mentira, e-mail de aviso); alto contraste; sem rosto.
 - Rostos reais de pessoas: só figuras públicas e só em contexto de notícia.
 
+### Padrão de thumbnail inspirado no Elementar
+
+Referência: `canal/referencias-visuais/elementar-thumbnails.webp` (aba de
+vídeos do Elementar, nov/2026). O que eles repetem e nós adaptamos:
+
+| Elementar faz | HACKOPSIA adapta |
+|---|---|
+| Foto realista e cinematográfica do **objeto** do tema (colchão, quebra-molas, carro), luz dramática e cores quentes | Foto realista e cinematográfica do **objeto do caso** (celular com aviso, calendário, documento, cartão), luz dramática, mas com sombra mais escura e um toque frio (clima de perícia) |
+| Texto enorme em fonte **condensada e grossa** (estilo Anton/Bebas), em 2 linhas, branco + amarelo ou vermelho, com contorno ou sombra preta forte | Igual: fonte condensada grossa, 2 a 4 palavras, branco + amarelo (#FFD400); vermelho só em "VAZADO" ou número de perda |
+| Pergunta ou acusação curta: "VOCÊ FOI ENGANADO?", "POR QUE?", "PROIBIDO POR LEI" | Fato curto e forte: "5 DIAS DEPOIS", "SEU CPF VAZOU", "QUEM AVISOU?" |
+| Etiquetas inclinadas com números (preço "R$ 80.000" em tag vermelha/azul) | Etiquetas de evidência inclinadas com **datas e números** ("06/11", "7,6 MI") |
+| Comparação dividida por um rasgo (Brasil x EUA) | Comparação "antes x depois" (dia do ataque x dia do aviso) |
+| **Marca fixa no canto inferior esquerdo** (o "E" num círculo) em toda thumb | **Etiqueta "LAUDO Nº NNN" + mini-logo HACKOPSIA** no canto inferior esquerdo, em toda thumb |
+| Uma pessoa de costas ou sem foco no rosto | Mãos segurando o objeto, ou silhueta de costas; nunca rosto do narrador |
+
 ## 7. Regras de segurança jurídica e do YouTube (obrigatórias)
 
 1. **Nunca** mostrar dados vazados reais, nem borrados. Documentos de exemplo
