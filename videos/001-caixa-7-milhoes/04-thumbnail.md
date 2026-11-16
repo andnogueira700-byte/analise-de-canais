@@ -151,3 +151,19 @@ Ponto fraco: exige olhar de perto para entender a tarja. No celular, o texto gra
 - Para o teste A/B do título alternativo ("Quem Decide Se Você Precisa Saber?"), o B (linha do tempo) ou o C (documento) combinam melhor, porque mostram a lacuna e o aviso tapado.
 
 Cuidados de conferência antes de publicar: a data "11/11" da notificação é a informada pela empresa; se a pesquisa mudar essas datas, ajuste o "5 DIAS" e a tela do celular. Nada nas imagens deve parecer comunicado oficial da Caixa.
+
+---
+
+## Variações no Canva — rodada 1 (geradas pelo Diretor)
+
+| Variação | Link para editar | Texto | Avaliação do Diretor |
+|---|---|---|---|
+| A | https://canva.link/0dvzzlzphb64pdg | 5 DIAS / DEPOIS | Nítida e com suspense, mas não conta a história do título |
+| B | https://canva.link/362ioiuomil3duz | ELE SOUBE / ANTES | A que mais conversa com o título (06/11 x 11/11); texto quase repete o título |
+| C | https://canva.link/xvs103rtkig1nzo | 7,6 MILHÕES / DE CPFS | Descartar: brasão oficial no documento e texto repete o título |
+
+Prévia: `thumbs-canva/v1-mosaico.jpg`.
+
+Pedido do dono (17/11): juntar tudo — nitidez e texto forte do Elementar +
+clima de suspense das referências de hacker + conversar com o título. Rodada 2
+= fusões F1 e F2.

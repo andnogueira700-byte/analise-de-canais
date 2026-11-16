@@ -108,3 +108,8 @@ Consequências:
 5. **Tesouro:** usar a frase literal: "podem ser utilizadas por terceiros para tornar tentativas de fraude mais convincentes, por meio de mensagens e contatos que aparentem ser legítimos".
 6. "Segundo o comunicado" → "segundo o comunicado da empresa, citado pela Agência Brasil" (o PDF não foi lido).
 7. **Thumbnail:** trocar "CHEGOU TARDE" por "5 DIAS DEPOIS" (fato, não julgamento).
+
+### Ajuste do Diretor após o roteiro revisado
+- Nenhuma fonte diz que os dados da CVP já foram usados em golpe. "Golpista" no título afirmaria isso. Fato confirmado: os dados foram "copiados clandestinamente" por um invasor (Agência Brasil).
+- **Título principal final:** "7,6 Milhões de CPFs Vazados: O Hacker Soube Antes de Você" (57 caracteres). Alternativa A/B: "Vazamento de Dados: Quem Decide Se Você Precisa Saber?".
+- Thumbnail: texto de fato, sem "golpista".
