@@ -19,6 +19,19 @@ Status: 💡 ideia · 🔬 em produção · ✅ publicado
 | 11 | O que o roubo de 6,3 bilhões da Binance ensina ao Brasil | Mundo + Brasil | 💡 |
 | 12 | O Lado OBSCURO do seu cadastro na farmácia, no mercado e no app | Brasil, atemporal | 💡 |
 
+## Transição do canal antigo para o HACKOPSIA
+
+O canal [@HACKOPSIA](https://www.youtube.com/@hackopsia) já existe (252
+inscritos, 8 Shorts de política). Checklist antes da estreia:
+
+- [ ] Deixar os 8 Shorts de política como **privados** (não apagar)
+- [ ] Trocar a foto de perfil e o banner pelos do HACKOPSIA
+- [ ] Trocar a descrição do canal
+- [ ] Em Configurações > Canal: país = Brasil; palavras-chave do canal
+      (vazamento de dados, golpe digital, ataque hacker, cibercrime, documentário)
+- [ ] Criar o trailer do canal, depois do primeiro laudo
+- [ ] Ajustar o Instagram e o TikTok com o mesmo nome e a mesma foto
+
 ## Plano da semana de lançamento
 
 Ideia: estrear com **3 vídeos prontos** (1 quente + 2 atemporais), para quem
