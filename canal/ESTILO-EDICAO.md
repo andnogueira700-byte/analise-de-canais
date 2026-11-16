@@ -128,6 +128,22 @@ esquerdo, o vídeo inteiro.
 - **Tela preta**, título pequeno e branco no centro, com as letras aparecendo
   uma a uma. Dura 2 a 4 s, com pausa na narração e mudança na música.
 
+### 3.11 Transição entre blocos: o "respiro de suspense" (pedido do dono)
+Em **toda troca de bloco do roteiro** (por exemplo, da introdução para o
+primeiro bloco), o vídeo faz uma pausa dramática:
+1. **Fade-out** (a imagem vai escurecendo até ficar preta) em cerca de 1 s,
+   junto com o fim da última frase do bloco.
+2. **Tela preta ou quase preta de 2 a 4 s, sem voz**: só a música de
+   suspense sobe um pouco (de 3 a 6 dB). Opcional: o cartão de capítulo
+   "ARQUIVO 0X — título" aparecendo letra por letra nesse escuro.
+3. **Fade-in** (a imagem vai clareando) em cerca de 1 s, **junto com a primeira
+   frase do bloco seguinte**: a voz volta e a imagem do novo bloco aparece.
+4. A música volta ao volume de fundo (cerca de -20 dB abaixo da voz) assim que a
+   voz recomeça.
+
+Como a narração é gerada **em um áudio por bloco** (ver `02b-narracao-ia.md` de
+cada vídeo), cada emenda entre áudios é exatamente o ponto dessa transição.
+
 ## 4. As imagens (de onde vem cada coisa)
 
 Pela contagem dos quadros, mais ou menos:
