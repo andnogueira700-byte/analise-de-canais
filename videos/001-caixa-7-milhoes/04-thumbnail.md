@@ -167,3 +167,12 @@ Prévia: `thumbs-canva/v1-mosaico.jpg`.
 Pedido do dono (17/11): juntar tudo — nitidez e texto forte do Elementar +
 clima de suspense das referências de hacker + conversar com o título. Rodada 2
 = fusões F1 e F2.
+
+## Variações no Canva — rodada 2: fusões (Elementar + suspense)
+
+| Fusão | Link para editar | Texto | Avaliação do Diretor |
+|---|---|---|---|
+| **F1** ⭐ | https://canva.link/p6vx5hkbujvaguc | 5 DIAS / DE VANTAGEM | **Recomendada.** Conta a história (06/11 invasor x 11/11 você), completa o título sem repetir, texto gigante e nítido |
+| F2 | https://canva.link/htzdezhx1qspbjs | ELE SOUBE / ANTES | A mais rica em elementos (calendário rasgado, linha do tempo), mas o texto repete o título. Boa para o teste A/B com o título alternativo |
+
+Prévia: `thumbs-canva/v2-fusoes.jpg`.
