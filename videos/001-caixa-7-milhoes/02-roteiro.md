@@ -230,7 +230,7 @@ Quinto. Ative a verificação em duas etapas no e-mail e nos aplicativos. É uma
 
 Sexto. Quando puder, use uma chave Pix aleatória, em vez do CPF ou do celular. Assim, você expõe menos dados.
 
-Sétimo. Se cair num golpe, avise o banco imediatamente e registre um boletim de ocorrência. O Instituto Brasileiro de Defesa do Consumidor indica o boletim como primeiro passo.
+Sétimo. Se cair num golpe, avise o banco imediatamente e registre um boletim de ocorrência. O Instituto Brasileiro de Defesa do Consumidor, o Idec, orienta registrar boletim de ocorrência se você reconhecer uma transação estranha.
 
 E se você quer saber se está numa dessas bases, pergunte à instituição, pelo canal oficial. O canal do Tesouro e o e-mail do FGC estão na descrição deste vídeo.
 
@@ -466,7 +466,7 @@ Quinto. Ative a verificação em duas etapas no e-mail e nos aplicativos. É uma
 
 Sexto. Quando puder, use uma chave Pix aleatória, em vez do CPF ou do celular. Assim, você expõe menos dados.
 
-Sétimo. Se cair num golpe, avise o banco imediatamente e registre um boletim de ocorrência. O Instituto Brasileiro de Defesa do Consumidor indica o boletim como primeiro passo.
+Sétimo. Se cair num golpe, avise o banco imediatamente e registre um boletim de ocorrência. O Instituto Brasileiro de Defesa do Consumidor, o Idec, orienta registrar boletim de ocorrência se você reconhecer uma transação estranha.
 
 E se você quer saber se está numa dessas bases, pergunte à instituição, pelo canal oficial. O canal do Tesouro e o e-mail do FGC estão na descrição deste vídeo.
 

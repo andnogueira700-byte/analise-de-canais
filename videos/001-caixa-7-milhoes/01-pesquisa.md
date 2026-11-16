@@ -2,6 +2,8 @@
 
 ## Checagem pós-parecer
 
+**Diretor (17/11), lido no original do Idec [27]:** ✅ "os consumidores brasileiros estão imensamente mais propensos a cair em golpes financeiros com o vazamento"; ✅ "é possível checar se há manifestações fraudulentas com seus dados bancários na ferramenta Registrato, do Banco Central. Caso reconheça alguma transação estranha, faça um boletim de ocorrência." ❌ CORTADOS de vez: Febraban 70% e o número do INSS (não usar em nenhum arquivo).
+
 Feita em 16/11/2026, em resposta ao `06-parecer.md`. Dotti Finder e vidIQ não usados (sem cota). As leituras de página são resumos automáticos: as citações abaixo são o que a ferramenta devolveu como trecho literal; conferir no original antes de gravar. IstoÉ devolveu erro 502 (não lida nesta rodada). Valor, CNN, Exame, InfoMoney e Poder360 não foram lidos sobre o caso CVP (busca não os trouxe). PDF do comunicado segue não lido.
 
 **1) CVP: quando os titulares foram avisados?** Resultado: 🟡 NÃO FECHADO. Não dá para afirmar "titulares avisados em 11/11" nem "titulares avisados depois".
