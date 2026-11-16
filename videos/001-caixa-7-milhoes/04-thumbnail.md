@@ -176,3 +176,18 @@ clima de suspense das referências de hacker + conversar com o título. Rodada 2
 | F2 | https://canva.link/htzdezhx1qspbjs | ELE SOUBE / ANTES | A mais rica em elementos (calendário rasgado, linha do tempo), mas o texto repete o título. Boa para o teste A/B com o título alternativo |
 
 Prévia: `thumbs-canva/v2-fusoes.jpg`.
+
+## Rodada 3: thumbnails limpas + títulos em forma de pergunta (pedido do dono, 17/11)
+
+O dono achou as fusões poluídas. Nova regra (bíblia, seção 5.1): título = a
+pergunta do espectador; thumb = 2 a 4 palavras que dão nome ao mistério, sem
+repetir o título; uma imagem, um assunto.
+
+| Combinação | Título | Thumb (link) | Texto |
+|---|---|---|---|
+| **1** ⭐ | Seu CPF Vazou na Caixa Seguridade?! | https://canva.link/oonk5jdywxepvs3 | ATÉ QUEM / JÁ SAIU (gaveta de arquivo) |
+| 2 | Caixa Seguridade Hackeada: Por que Você Só Soube Depois?! | https://canva.link/z3nl2qof84bxp14 (usar a página 2; a página 1 saiu em branco) | A JANELA / DO HACKER (celular no escuro) |
+| 3 | O Que Aconteceu na Caixa Seguridade?! | https://canva.link/8u0nar8395cfkkz | 5 DIAS / NO ESCURO (documento fictício + feixe de luz) |
+
+Prévia: `thumbs-canva/v3-limpas.jpg`.
+Fora de questão por enquanto: "Quem hackeou?" e "Como hackearam?" (nenhuma fonte responde).
