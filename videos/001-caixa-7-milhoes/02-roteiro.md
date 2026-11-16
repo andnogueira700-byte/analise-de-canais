@@ -1,6 +1,6 @@
-# Roteiro — 7,6 Milhões de CPFs Vazados: O Hacker Soube Antes de Você
-**Gancho:** um e-mail de "incidente de segurança" na tela do celular, com o ataque datado dias antes do aviso; na Caixa Vida e Previdência, segundo a própria empresa, o ataque foi em seis de novembro e o aviso aos clientes em onze de novembro, cinco dias. A Caixa Vida e Previdência não é a Caixa Econômica. | **Grande Pergunta:** se a lei manda avisar, por que existe uma janela em que quem copiou os dados já sabe e você não, e quem decide se você precisa saber? | **Virada:** a regra conta só dias úteis, começa quando a empresa diz ter tomado conhecimento e só obriga o aviso quando o próprio controlador avalia o risco como relevante, com a ressalva dos fatores que a ANPD lista. Sem afirmar cumprimento nem descumprimento de prazo: mesmo quando é seguida, a regra deixa uma janela aberta.
-**Palavras:** 2.553 | **Duração estimada:** 17 min (2.553 ÷ 150 = 17,0)
+# Roteiro — Caixa Seguridade Hackeada: Por que Você Só Soube Depois?!
+**Gancho:** um e-mail de "incidente de segurança" na tela do celular, com o ataque datado dias antes do aviso; na Caixa Vida e Previdência, subsidiária da Caixa Seguridade, segundo a própria empresa, o ataque foi em seis de novembro e o aviso aos clientes em onze de novembro, cinco dias: o hacker soube antes, você só soube depois. A Caixa Vida e Previdência não é a Caixa Econômica. | **Grande Pergunta:** se a lei manda avisar, por que você só soube depois, por que existe uma janela em que quem copiou os dados já sabe e você não, e quem decide se você precisa saber? | **Virada:** a regra conta só dias úteis, começa quando a empresa diz ter tomado conhecimento e só obriga o aviso quando o próprio controlador avalia o risco como relevante, com a ressalva dos fatores que a ANPD lista. Sem afirmar cumprimento nem descumprimento de prazo: mesmo quando é seguida, a regra deixa uma janela aberta.
+**Palavras:** 2.542 | **Duração estimada:** 17 min (2.542 ÷ 150 = 16,9). Base: contagem do Diretor, 2.514, mais 28 palavras dos ajustes da rodada 2. Recontar com a ferramenta antes de fechar os tempos dos blocos.
 
 ---
 ## [BLOCO 1 — GANCHO] (0:00)
@@ -19,7 +19,7 @@ E antes de tudo, um aviso importante. A Caixa Vida e Previdência não é a Caix
 
 Segundo a empresa, os dados foram copiados num ataque em seis de novembro. E, segundo a mesma empresa, o aviso aos clientes saiu em onze de novembro.
 
-Cinco dias. Na prática, quem copiou soube antes de você. E isso pode acontecer mesmo quando a empresa afirma ter seguido a lei.
+Cinco dias. Na prática, o hacker soube antes de você, e você só soube depois. E isso pode acontecer mesmo quando a empresa afirma ter seguido a lei.
 
 ## [BLOCO 2 — CHOQUE EM NÚMEROS] (1:14)
 
@@ -35,7 +35,7 @@ Só que três dias úteis não são três dias. E o relógio não começa quando
 
 ## [BLOCO 3 — A GRANDE PERGUNTA] (2:00)
 
-Então, se a lei manda avisar, por que existe uma janela em que quem copiou os dados já sabe, e você ainda não?
+Então, se a lei manda avisar, por que você só soube depois? Por que existe uma janela em que quem copiou os dados já sabe, e você ainda não?
 
 E, no fim das contas, quem decide se você precisa saber?
 
@@ -93,7 +93,7 @@ Autenticação são as senhas e os códigos que provam que você é você.
 
 Pela apuração preliminar, a empresa afirma que também não foram atingidos dados bancários, valores de apólices e saldos de previdência.
 
-E, segundo a IstoÉ, a empresa afirma que o incidente não afetou contas da Caixa Econômica Federal, nem interrompeu serviços.
+E, segundo a IstoÉ, não há confirmação de que contas da Caixa Econômica Federal tenham sido afetadas.
 
 A empresa também diz que bloqueou os mecanismos usados no acesso, reforçou a proteção e contratou uma consultoria forense externa. Ou seja, peritos de fora para investigar.
 
@@ -121,19 +121,19 @@ O órgão também explicou o intervalo. Segundo o Tesouro, o tempo foi necessár
 
 Guarde o Tesouro. No meio desse comunicado existe uma frase que vale mais do que todo o resto. Ela volta daqui a pouco.
 
-Agora volte mais ainda. Segunda-feira, vinte e seis de outubro. Segundo o Tecnoblog, o Fundo Garantidor de Créditos, o FGC, identifica a suspeita de um acesso não autorizado.
+Agora volte mais ainda. Segunda-feira, vinte e seis de outubro. Segundo o Tecnoblog, que noticiou o caso em cinco de novembro, o Fundo Garantidor de Créditos, o FGC, identifica a suspeita de um acesso não autorizado.
 
 O FGC faz pagamentos de garantia a investidores. E o ambiente afetado era justamente o desse fluxo de pagamento.
 
-O comunicado público saiu na quinta-feira, cinco de novembro, segundo o Tecnoblog. Dez dias depois da suspeita.
+Da suspeita até essa notícia, foram dez dias.
 
 Os dados atingidos, segundo o Tecnoblog: nome, CPF, e-mail, data de nascimento e informações de pagamentos de garantia, como investimentos e impostos descontados.
 
 O FGC afirma que credenciais bancárias não foram atingidas. E diz não ter evidência de divulgação, uso indevido ou perda financeira. Quantas pessoas? Não divulgou.
 
-Agora coloque os três lado a lado. FGC, dez dias. Tesouro, oito dias. Caixa Vida e Previdência, cinco dias até o aviso aos clientes.
+Agora coloque os três lado a lado. FGC, dez dias até a notícia. Tesouro, oito dias. Caixa Vida e Previdência, cinco dias até o aviso aos clientes.
 
-São contas nossas, sobre as datas publicadas. E não medem a mesma coisa. Para o Tesouro e o FGC, a conta vai até o anúncio público.
+São contas nossas, sobre as datas publicadas. E não medem a mesma coisa. Para o Tesouro, a conta vai até o anúncio público. Para o FGC, até a notícia.
 
 As fontes que consultamos não dizem quando esses dois tomaram conhecimento do problema, nem quando avisaram cada titular. Sem essas datas, não dá para comparar com o prazo. Não afirmamos que alguém cumpriu ou descumpriu a regra.
 
@@ -220,7 +220,7 @@ Então, o que você pode fazer hoje? São sete passos.
 
 Primeiro. Consulte o Registrato, do Banco Central. É gratuito e você entra com a sua conta gov ponto br. Ele mostra contas, chaves Pix, dívidas e empréstimos ligados ao seu CPF. Repita essa consulta de tempos em tempos.
 
-Segundo. Se alguém ligar dizendo ser do banco, da seguradora ou do governo, desligue. Ligue de volta pelo número oficial, do cartão ou do aplicativo. De acordo com a Febraban, banco não pede senha, dados pessoais ou token por telefone. Token é o código de segurança que confirma as suas operações.
+Segundo. Se alguém ligar dizendo ser do banco, da seguradora ou do governo, desligue. Depois, fale com a instituição pelo aplicativo oficial, ou ligue de outro telefone para o número oficial. A linha pode continuar aberta, com o golpista do outro lado. De acordo com a Febraban, banco não pede senha, dados pessoais ou token por telefone. Token é o código de segurança que confirma as suas operações.
 
 Terceiro. Desconfie de qualquer mensagem que cite a Caixa Vida e Previdência, o FGC ou o Tesouro. Confirme só pelos canais oficiais. É o que o FGC e o Tesouro pedem.
 
@@ -269,7 +269,7 @@ E antes de tudo, um aviso importante. A Caixa Vida e Previdência não é a Caix
 
 Segundo a empresa, os dados foram copiados num ataque em seis de novembro. E, segundo a mesma empresa, o aviso aos clientes saiu em onze de novembro.
 
-Cinco dias. Na prática, quem copiou soube antes de você. E isso pode acontecer mesmo quando a empresa afirma ter seguido a lei.
+Cinco dias. Na prática, o hacker soube antes de você, e você só soube depois. E isso pode acontecer mesmo quando a empresa afirma ter seguido a lei.
 
 Sete vírgula seis milhões. Segundo o comunicado da empresa, citado pela Agência Brasil, esse é o número de clientes ativos com dados copiados.
 
@@ -281,7 +281,7 @@ Três dias úteis. Esse é o prazo da regra brasileira para avisar você.
 
 Só que três dias úteis não são três dias. E o relógio não começa quando você imagina.
 
-Então, se a lei manda avisar, por que existe uma janela em que quem copiou os dados já sabe, e você ainda não?
+Então, se a lei manda avisar, por que você só soube depois? Por que existe uma janela em que quem copiou os dados já sabe, e você ainda não?
 
 E, no fim das contas, quem decide se você precisa saber?
 
@@ -335,7 +335,7 @@ Autenticação são as senhas e os códigos que provam que você é você.
 
 Pela apuração preliminar, a empresa afirma que também não foram atingidos dados bancários, valores de apólices e saldos de previdência.
 
-E, segundo a IstoÉ, a empresa afirma que o incidente não afetou contas da Caixa Econômica Federal, nem interrompeu serviços.
+E, segundo a IstoÉ, não há confirmação de que contas da Caixa Econômica Federal tenham sido afetadas.
 
 A empresa também diz que bloqueou os mecanismos usados no acesso, reforçou a proteção e contratou uma consultoria forense externa. Ou seja, peritos de fora para investigar.
 
@@ -363,19 +363,19 @@ O órgão também explicou o intervalo. Segundo o Tesouro, o tempo foi necessár
 
 Guarde o Tesouro. No meio desse comunicado existe uma frase que vale mais do que todo o resto. Ela volta daqui a pouco.
 
-Agora volte mais ainda. Segunda-feira, vinte e seis de outubro. Segundo o Tecnoblog, o Fundo Garantidor de Créditos, o FGC, identifica a suspeita de um acesso não autorizado.
+Agora volte mais ainda. Segunda-feira, vinte e seis de outubro. Segundo o Tecnoblog, que noticiou o caso em cinco de novembro, o Fundo Garantidor de Créditos, o FGC, identifica a suspeita de um acesso não autorizado.
 
 O FGC faz pagamentos de garantia a investidores. E o ambiente afetado era justamente o desse fluxo de pagamento.
 
-O comunicado público saiu na quinta-feira, cinco de novembro, segundo o Tecnoblog. Dez dias depois da suspeita.
+Da suspeita até essa notícia, foram dez dias.
 
 Os dados atingidos, segundo o Tecnoblog: nome, CPF, e-mail, data de nascimento e informações de pagamentos de garantia, como investimentos e impostos descontados.
 
 O FGC afirma que credenciais bancárias não foram atingidas. E diz não ter evidência de divulgação, uso indevido ou perda financeira. Quantas pessoas? Não divulgou.
 
-Agora coloque os três lado a lado. FGC, dez dias. Tesouro, oito dias. Caixa Vida e Previdência, cinco dias até o aviso aos clientes.
+Agora coloque os três lado a lado. FGC, dez dias até a notícia. Tesouro, oito dias. Caixa Vida e Previdência, cinco dias até o aviso aos clientes.
 
-São contas nossas, sobre as datas publicadas. E não medem a mesma coisa. Para o Tesouro e o FGC, a conta vai até o anúncio público.
+São contas nossas, sobre as datas publicadas. E não medem a mesma coisa. Para o Tesouro, a conta vai até o anúncio público. Para o FGC, até a notícia.
 
 As fontes que consultamos não dizem quando esses dois tomaram conhecimento do problema, nem quando avisaram cada titular. Sem essas datas, não dá para comparar com o prazo. Não afirmamos que alguém cumpriu ou descumpriu a regra.
 
@@ -456,7 +456,7 @@ Então, o que você pode fazer hoje? São sete passos.
 
 Primeiro. Consulte o Registrato, do Banco Central. É gratuito e você entra com a sua conta gov ponto br. Ele mostra contas, chaves Pix, dívidas e empréstimos ligados ao seu CPF. Repita essa consulta de tempos em tempos.
 
-Segundo. Se alguém ligar dizendo ser do banco, da seguradora ou do governo, desligue. Ligue de volta pelo número oficial, do cartão ou do aplicativo. De acordo com a Febraban, banco não pede senha, dados pessoais ou token por telefone. Token é o código de segurança que confirma as suas operações.
+Segundo. Se alguém ligar dizendo ser do banco, da seguradora ou do governo, desligue. Depois, fale com a instituição pelo aplicativo oficial, ou ligue de outro telefone para o número oficial. A linha pode continuar aberta, com o golpista do outro lado. De acordo com a Febraban, banco não pede senha, dados pessoais ou token por telefone. Token é o código de segurança que confirma as suas operações.
 
 Terceiro. Desconfie de qualquer mensagem que cite a Caixa Vida e Previdência, o FGC ou o Tesouro. Confirme só pelos canais oficiais. É o que o FGC e o Tesouro pedem.
 

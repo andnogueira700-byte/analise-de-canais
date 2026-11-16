@@ -191,3 +191,17 @@ repetir o título; uma imagem, um assunto.
 
 Prévia: `thumbs-canva/v3-limpas.jpg`.
 Fora de questão por enquanto: "Quem hackeou?" e "Como hackearam?" (nenhuma fonte responde).
+
+## Rodada 4: estilo "thumbs de hacker" + logo da Caixa Seguridade (pedido do dono)
+
+Título escolhido pelo dono: **Caixa Seguridade Hackeada: Por que Você Só Soube Depois?!**
+Logo: versão branca oficial, do site de RI da Caixa Seguridade, enviada ao Canva (uso editorial).
+
+| Versão | Link | Texto | Avaliação do Diretor |
+|---|---|---|---|
+| A | https://canva.link/eun6rf8v5qb7krl | 5 DIAS DEPOIS (tarja vermelha) | Limpa, mas "DEPOIS" repete a ideia do título |
+| **B** ⭐ | https://canva.link/x6ysnj6w4b0tsrg | 7,6 MILHÕES / EXPOSTOS | **Recomendada:** completa o título com a escala do caso, hacker recortado com contorno vermelho (como nas thumbs do Hackers do Crime) |
+
+⚠️ Nas duas, o selo azul cortou o logo: só aparece o símbolo laranja. No Canva,
+alargue o retângulo azul para o texto branco "CAIXA Seguridade" aparecer.
+Prévia: `thumbs-canva/v4-com-logo.jpg`.
