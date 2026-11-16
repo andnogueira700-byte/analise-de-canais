@@ -52,3 +52,15 @@ encher; vale entrar logo e com qualidade acima deles.
 
 - [ ] Puxar os títulos campeões (outliers) do Hackers do Crime e do In Comum
   quando o limite semanal do Dotti Finder voltar.
+
+## Mais vistos do Hackers do Crime (lido em 17/11/2026 com ferramentas/yt_busca.py)
+
+- [O Maior Mistério da História da Internet | Cicada 3301](https://youtu.be/3O7i2BohRnw): 2,1 mi
+- [Golpistas em PÂNICO ao descobrir que este HACKER revela suas VERDADEIRAS IDENTIDADES](https://youtu.be/1YZRHADhaIo): 2,1 mi
+- [O AUTISTA que HACKEOU e ROUBOU 3,4 BILHÕES de dólares na DARK WEB](https://youtu.be/SRYelBhl_Js): 1,1 mi
+- [O Homem que Enganou o Programa Mais Assistido do Mundo](https://youtu.be/VBxHG4EtIVI): 1 mi
+
+Padrão de título deles: "O [PERSONAGEM] que [AÇÃO INACREDITÁVEL]". Padrão de
+thumbnail: rosto com tarja preta nos olhos, 1 palavra em CAIXA ALTA (GOLPISTA,
+HACKER, PROCURADO) branca sobre tarja vermelha ou vermelha com contorno, fundo
+escuro.

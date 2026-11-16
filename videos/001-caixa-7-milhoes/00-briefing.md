@@ -89,3 +89,22 @@ pelo Diretor (não precisa repetir a busca):
 O que **ninguém fez**: explicar o padrão (por que todos demoram, o que a lei
 permite, por que quase ninguém é punido) e ligar o vazamento ao golpe que vem
 depois, em formato de documentário.
+
+---
+
+## Decisões do Diretor — rodada de ajustes 1 (após o parecer 06)
+
+Confirmado pelo Diretor no texto original da Agência Brasil
+(https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados):
+- "identificou um ataque cibernético **ocorrido em 6 de novembro**"
+- "O informe também afirma que a Caixa Vida e Previdência notificou, **em 11 de novembro**, a ANPD, outras autoridades competentes **e os titulares afetados**, conforme previsto na LGPD"
+- "os titulares dos dados afetados estão sendo comunicados e recebendo recomendações de proteção diante do risco de fraudes"
+
+Consequências:
+1. **Nova espinha:** "O golpista soube antes de você." Os dados foram copiados em 6/11 (segundo a empresa); o aviso aos clientes, segundo a própria empresa, saiu em 11/11. Cinco dias em que quem copiou tinha os dados e o cliente não sabia. Isso é verdade mesmo com a empresa seguindo a regra: o problema é a regra deixar esse intervalo e deixar a própria empresa avaliar o "risco relevante".
+2. **Título principal novo:** "7,6 Milhões de CPFs Vazados: O Golpista Soube Antes de Você". Alternativa A/B: "Vazamento de Dados: Quem Decide Se Você Precisa Saber?".
+3. **Legalidade:** NUNCA afirmar que alguém cumpriu ou descumpriu o prazo. Para a CVP, só atribuir: "a empresa afirma que fez as notificações conforme a LGPD". Para Tesouro e FGC: não há fonte; mostrar apenas as datas de detecção e de comunicação pública.
+4. **Cortar:** o "70% da Febraban" e o número do INSS.
+5. **Tesouro:** usar a frase literal: "podem ser utilizadas por terceiros para tornar tentativas de fraude mais convincentes, por meio de mensagens e contatos que aparentem ser legítimos".
+6. "Segundo o comunicado" → "segundo o comunicado da empresa, citado pela Agência Brasil" (o PDF não foi lido).
+7. **Thumbnail:** trocar "CHEGOU TARDE" por "5 DIAS DEPOIS" (fato, não julgamento).
