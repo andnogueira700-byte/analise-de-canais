@@ -35,7 +35,7 @@ Sem ferramenta de volume nesta rodada. As frases abaixo vêm das referências e 
 
 Regra: até 60 caracteres, no máximo uma palavra em CAIXA ALTA (aqui, só a sigla CPFs quando aparece). Nenhum cita "Caixa". Contagem aproximada entre parênteses.
 
-1. 7,6 Mi de CPFs Vazados: Por Que Você Foi o Último a Saber? (59) — molde 2/4
+1. 7,6 Milhões de CPFs Vazados: Por Que Você Soube Por Último? (59) — ajustado pelo Diretor — molde 2/4
 2. Vazamento de Dados: Por Que Você Só Descobre Dias Depois? (57) — molde 2, palavra-chave no começo
 3. Vazamento de Dados: Quem Decide Se Você Precisa Saber? (55) — palavra-chave no começo
 4. Vazamento de Dados: Você Nem Precisa Ser Cliente (49) — palavra-chave no começo
@@ -51,7 +51,7 @@ Regra: até 60 caracteres, no máximo uma palavra em CAIXA ALTA (aqui, só a sig
 **Nº 3 — Vazamento de Dados: Quem Decide Se Você Precisa Saber?** (recomendado)
 Palavra-chave principal no começo. Reproduz a virada do roteiro (a própria empresa avalia o risco). Não acusa ninguém e o vídeo cumpre a promessa nos blocos 6 e 7. Claro sem thumbnail e não nomeia nenhuma empresa, então não confunde com a Caixa Econômica. Ponto de atenção: é mais abstrato, então a thumbnail deve trazer o número "7,6 milhões".
 
-**Nº 1 — 7,6 Mi de CPFs Vazados: Por Que Você Foi o Último a Saber?**
+**Nº 1 — 7,6 Milhões de CPFs Vazados: Por Que Você Soube Por Último?** (escolhido pelo Diretor como principal; o nº 3 fica para teste A/B)
 Número forte (7,6 milhões vem do comunicado da empresa) e a Grande Pergunta. Evolui o título provisório do briefing: troca "Ninguém Te Avisou", que exagera (as empresas avisaram, depois), por "o último a saber", que o fecho do roteiro sustenta. Boa opção para teste A/B contra o nº 3.
 
 **Nº 6 — 7,6 Milhões de CPFs Vazados e Ninguém Quebrou a Regra?**
