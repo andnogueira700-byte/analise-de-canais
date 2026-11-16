@@ -26,7 +26,7 @@ chegar pelo primeiro vídeo já ter mais o que assistir.
 
 | Dia | Tarefa |
 |---|---|
-| Antes de tudo | Escolher o nome do canal, criar a conta, foto, banner e descrição |
+| Antes de tudo | ✅ Nome escolhido: HACKOPSIA. Falta: foto, banner e descrição do canal |
 | Dia 1 | `/novo-video` do vídeo 1 (quente) |
 | Dia 2 | `/novo-video` dos vídeos 2 e 4 (atemporais) |
 | Dia 3 | Narração com IA e começo da edição do vídeo 1 |

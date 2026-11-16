@@ -37,8 +37,11 @@ português do Brasil.
      antes.
    - **Bloco 8 (Proteção):** passos práticos e simples, numerados na fala
      ("primeiro...", "segundo...").
+   - **Abertura fixa:** logo depois do bloco 3, inclua "HACKOPSIA. Laudo
+     número [N]: [nome do caso]." (o número do laudo é o número da pasta do
+     vídeo).
    - **Bloco 9:** uma pergunta para os comentários e o encerramento fixo do
-     canal.
+     canal ("Laudo encerrado. Até a próxima autópsia.").
 3. **Cite as fontes na fala** de forma natural: "segundo o comunicado da
    empresa", "de acordo com a Agência Brasil".
 4. **Revise para voz de IA:**

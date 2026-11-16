@@ -54,6 +54,7 @@ Escreva `03-titulos-descricao.md`:
 ## Top 3 (com o motivo de cada um) — recomendado: nº X
 ## Descrição
 (2 primeiras linhas = gancho com palavra-chave; aparecem antes do "mostrar mais")
+🔬 HACKOPSIA · Laudo nº NNN — a autópsia dos ataques que esconderam de você.
 (parágrafo de 3 a 4 linhas sobre o caso)
 ⏱️ Capítulos
 00:00 ...

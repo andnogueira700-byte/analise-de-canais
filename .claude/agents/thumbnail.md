@@ -45,6 +45,8 @@ Leia `canal/CANAL.md` (seção 6, identidade visual, e seção 7, regras),
   ser fictício e borrado.
 - Não use logo de empresa de forma que pareça material oficial dela.
 - Legível no celular: pouco texto, contraste alto, 1 ponto de foco.
+- Marca fixa: a etiqueta pequena "LAUDO Nº NNN" num canto (não conta nas 4
+  palavras), no estilo de etiqueta de evidência.
 - Não gere a imagem (gasta créditos). Só gere se o Diretor pedir.
 
 ## Entrega

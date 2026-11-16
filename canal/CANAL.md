@@ -1,13 +1,23 @@
 # Bíblia do Canal
 
-> Nome do canal: **[A DEFINIR]**. Candidatos: Dossiê Vazado · Arquivo Exposto ·
-> Rastro Digital · Caso Vazado · O Decodificador.
-> Quando o nome for escolhido, troque `[NOME DO CANAL]` em todo o projeto.
+## 0. Marca
+
+- **Nome:** **HACKOPSIA** (hacker + autópsia), sempre escrito assim, em
+  maiúsculas e sem acento
+- **Conceito:** cada vídeo é a **autópsia de um ataque**. O canal chega depois do
+  "crime digital" e reconstrói tudo, como um perito.
+- **Slogan:** *"A autópsia dos ataques que esconderam de você."*
+- **Os vídeos são "laudos", numerados:** "Laudo nº 001", "Laudo nº 002"... O
+  número aparece na thumbnail (pequeno, num canto) e na abertura do vídeo.
+- **Vocabulário da marca** (usar com moderação, sem virar caricatura): laudo,
+  autópsia, evidência, perícia, causa do ataque, arquivo.
+- **Expansão futura:** o mesmo nome serve em espanhol e italiano (autopsia),
+  com um @ próprio para cada idioma.
 
 ## 1. Posicionamento
 
-**Frase do canal:** "Os vazamentos e golpes que esconderam de você, investigados
-do começo ao fim."
+**Frase do canal:** "A autópsia dos ataques que esconderam de você: vazamentos e
+golpes investigados do começo ao fim."
 
 **Classificação**
 - Mercado: Crime e investigação / Tecnologia
@@ -67,9 +77,12 @@ técnico.** Quer entender o que aconteceu, quem errou e o que fazer.
 
 **Patrocínio** (quando houver): entra entre os blocos 5 e 6, ligado ao assunto.
 
+**Abertura fixa** (logo depois do bloco 3, em até 5 segundos):
+> "HACKOPSIA. Laudo número [N]: [nome do caso]."
+
 **Encerramento fixo do canal:**
-> "E se você quer entender [tema do próximo vídeo], o próximo dossiê está aqui
-> na tela. Até o próximo arquivo."
+> "E se você quer entender [tema do próximo vídeo], o próximo laudo está aqui
+> na tela. Laudo encerrado. Até a próxima autópsia."
 
 ## 5. Moldes de título
 

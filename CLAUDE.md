@@ -1,6 +1,7 @@
-# Esteira de Conteúdo — Canal de Dossiês Digitais
+# Esteira de Conteúdo — HACKOPSIA
 
-Este repositório é a "fábrica" de vídeos de um canal faceless do YouTube Brasil
+Este repositório é a "fábrica" de vídeos do **HACKOPSIA** ("a autópsia dos
+ataques que esconderam de você"), um canal faceless do YouTube Brasil
 sobre **vazamentos de dados, golpes digitais e ataques hackers no Brasil**,
 em formato **documentário investigativo** (inspirado no estilo do canal Elementar).
 
