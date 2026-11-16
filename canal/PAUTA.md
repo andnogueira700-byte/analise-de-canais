@@ -6,7 +6,7 @@ Status: 💡 ideia · 🔬 em produção · ✅ publicado
 
 | # | Título provisório | Tipo | Status |
 |---|---|---|---|
-| 1 | Como 7,6 milhões de CPFs saíram da Caixa (E quem avisou você?) | Brasil, quente | 💡 |
+| 1 | Laudo 001 — 7,6 Milhões de CPFs Vazados. Por Que Ninguém Te Avisou? | Brasil, quente | 🔬 |
 | 2 | A Farsa do "Seus Dados Estão Seguros" (E por que ninguém é punido) | Brasil, atemporal | 💡 |
 | 3 | O que aconteceu no Porto de Santos? (O ataque que parou o maior porto do país) | Brasil, quente | 💡 |
 | 4 | O Golpe da Falsa Central do Banco (Eles sabem TUDO sobre você) | Brasil, atemporal | 💡 |
