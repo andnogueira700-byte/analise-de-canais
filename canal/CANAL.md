@@ -110,6 +110,44 @@ Regras: até 60 caracteres no título principal; uma palavra em CAIXA ALTA no
 máximo; o tema precisa estar claro sem ver a thumbnail; nunca prometer o que o
 vídeo não entrega.
 
+### 5.1 A regra de ouro: título = a pergunta do espectador; thumbnail = o "nome" do mistério
+
+Análise dos pares título ↔ thumbnail do Elementar (aba de vídeos, nov/2026):
+
+| Título (a pergunta que todo mundo faz) | Texto da thumbnail (não repete; dá nome ao fenômeno ou provoca) |
+|---|---|
+| Por que quem sai do Brasil não consegue mais viver aqui?! | A SÍNDROME DO RETORNO |
+| Por que NAMORAR ficou TÃO CARO?! | A INFLAÇÃO DO AMOR |
+| A Indústria BILIONÁRIA da Calvície | O PREÇO DO CABELO |
+| O Novo ESQUEMA de Multas do Brasil | A MÁQUINA DE MULTAS |
+| A Máfia do Colchão?! | VOCÊ FOI ENGANADO? |
+| Por que o Japão está criando uma nova capital?! | O FIM DE TÓQUIO?! |
+| Por que tem TANTO Porsche no BRASIL?! | BOLSA PORSCHE? |
+| Por que as Escolas estão DESESPERADAS?! | NINGUÉM QUER TRABALHAR |
+| Por que quebra-molas é proibido no Brasil? | PROIBIDO POR LEI |
+| Por que o Carro BRASILEIRO é mais Barato no Paraguai?! | POR QUE? (+ etiquetas R$ 80.000 x R$ 68.000) |
+
+**Regras que saem daí:**
+1. **Título = uma pergunta simples que quase todo mundo já fez**, com palavras do
+   dia a dia: "Por que...?!", "Como...?!", "O que aconteceu com...?!",
+   "...vai acabar?". Uma ou duas palavras em CAIXA ALTA. E o roteiro **tem que
+   responder** a essa pergunta.
+2. **Thumbnail = 2 a 4 palavras que NÃO repetem o título.** Elas fazem uma de
+   três coisas:
+   - **dão um nome ao fenômeno** ("A SÍNDROME DO RETORNO", "A MÁQUINA DE
+     MULTAS"), o tipo mais forte;
+   - **provocam o espectador** ("VOCÊ FOI ENGANADO?");
+   - **mostram o contraste** com números ou imagem e só perguntam "POR QUE?".
+3. A thumb **insinua a resposta sem entregar**: cria suspense, mas o "porquê"
+   só vem no vídeo.
+4. **Uma imagem, um assunto.** Uma cena só, limpa, com bastante espaço vazio
+   para o texto. Comparação dividida só quando o contraste for o próprio tema.
+   Nada de juntar 4 ou 5 elementos.
+5. Texto em 1 ou 2 linhas, fonte condensada grossa, branco + amarelo, legível
+   no celular.
+6. **Nunca prometa no título uma resposta que o roteiro não dá.** Exemplo:
+   "Quem hackeou?" só se a pesquisa tiver a resposta com fonte.
+
 ## 6. Identidade visual
 
 - Paleta: fundo quase preto (#0B0D10), amarelo-grifo (#FFD400) para destaque,

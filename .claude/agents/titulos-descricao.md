@@ -22,7 +22,10 @@ Leia `canal/CANAL.md` (seção 5, moldes de título), `canal/REFERENCIAS.md`,
 2. **Palavras-chave.** Descubra como o brasileiro busca o tema (ex.: "vazamento
    de dados", "meu CPF vazou", "golpe do Pix"). Use o `vidiq_keyword_research`
    no máximo **1 vez** por vídeo, porque gasta créditos.
-3. **10 títulos**, usando os moldes da bíblia, com no máximo 60 caracteres e uma
+3. **10 títulos**, seguindo a **regra de ouro da seção 5.1 da bíblia**: cada
+   título é uma **pergunta simples que o espectador já faz** ("Por que...?!",
+   "Como...?!", "O que aconteceu com...?!") e que o roteiro **responde de
+   verdade**. Use os moldes da bíblia, com no máximo 60 caracteres e uma
    palavra em CAIXA ALTA no máximo. Pelo menos 3 com a palavra-chave principal
    no começo.
 4. **Escolha os 3 melhores.** Critérios: curiosidade, clareza sem a thumbnail,
@@ -52,6 +55,7 @@ Escreva `03-titulos-descricao.md`:
 ## Palavras-chave
 ## 10 títulos
 ## Top 3 (com o motivo de cada um) — recomendado: nº X
+## Para cada um do top 3: a pergunta do espectador que ele responde + onde o roteiro responde + sugestão de texto de thumbnail (2 a 4 palavras, sem repetir o título, seção 5.1)
 ## Descrição
 (2 primeiras linhas = gancho com palavra-chave; aparecem antes do "mostrar mais")
 🔬 HACKOPSIA · Laudo nº NNN — a autópsia dos ataques que esconderam de você.

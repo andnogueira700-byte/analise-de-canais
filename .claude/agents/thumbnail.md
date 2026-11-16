@@ -70,6 +70,12 @@ python3 -I ferramentas/yt_busca.py canal @handle --n 9 --baixar PASTA --mosaico 
 
 ## Regras
 
+- **Siga a seção 5.1 da bíblia (regra de ouro):** o texto da thumb dá um
+  **nome ao mistério** ou **provoca** o espectador, em 2 a 4 palavras, sem
+  repetir o título e sem entregar a resposta. **Uma imagem, um assunto:** cena
+  limpa, com espaço vazio para o texto. Nunca junte mais de 2 elementos
+  visuais. Se ficar poluída, simplifique.
+
 - Sem rosto do narrador. Rosto real só de figura pública em contexto de notícia
   (e, se usar, com tarja nos olhos, como os concorrentes fazem com suspeitos).
 - **Nunca** CPF, cartão ou documento real. O que parecer dado tem que ser
