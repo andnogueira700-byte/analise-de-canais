@@ -1,174 +1,153 @@
-# Thumbnail — Laudo nº 001
+# Thumbnail
 
-**Aviso sobre as referências:** Dotti Finder (limite semanal) e vidIQ (0 créditos) não foram usados, e **nenhuma thumbnail de referência foi aberta visualmente**. Os links e as views abaixo vêm de `00-briefing.md`, `03-titulos-descricao.md` e `canal/VALIDACAO-LANCAMENTO.md`. A descrição visual é o padrão geral que conheço de thumbnails de notícia de vazamento (emissoras de TV, mano deyvin, canais de hacker). É descrição de memória, **não observação**. Conferir abrindo os links antes de decidir.
+Laudo nº 001. Título principal: "7,6 Milhões de CPFs Vazados: O Golpista Soube Antes de Você". Alternativa A/B: "Vazamento de Dados: Quem Decide Se Você Precisa Saber?".
+Regra do Diretor: o texto da thumb é fato, não julgamento. Datas usadas (segundo a empresa, citada pela Agência Brasil): ataque em 6/11, aviso aos titulares em 11/11.
 
-**Títulos considerados:** principal = nº 1, e o nº 3 fica para teste A/B.
-- Nº 1 (como está em `03-titulos-descricao.md`): "7,6 Mi de CPFs Vazados: Por Que Você Foi o Último a Saber?". O Diretor escreveu "7,6 Milhões", mas o arquivo diz "7,6 Mi". Confirmar qual vale.
-- Nº 3: "Vazamento de Dados: Quem Decide Se Você Precisa Saber?"
+## Buscas feitas (termos e canais) e mosaicos (caminhos)
 
-Regra usada para o texto: a thumb não repete o que está no título. Por isso ficam **fora do texto** as palavras "VAZADO", "CPF", "7,6", "último" e "quem decide". A thumb mostra a **demora**, que é a prova da pergunta. O título faz a pergunta.
+Pasta: `/home/user/analise-de-canais/videos/001-caixa-7-milhoes/ref-thumbs/`
+- m1-vazamento-cpf.jpg: busca "vazamento de dados cpf" (por views)
+- m2-dados-vazados-golpe.jpg: busca "dados vazados golpe"
+- m3-nicho-hacker.jpg: busca "ataque hacker brasil documentário"
+- m4-hackersdocrime.jpg: canal @HackersdoCrime (mais vistos)
+- m5-elementar.jpg: canal @Elementar (mais vistos recentes)
+- m6-manodeyvin.jpg: canal @manodeyvin
 
----
+Abri os 6 mosaicos e olhei as imagens. As views vêm da lista do Diretor.
 
-## Referências do YouTube (link, views, o que funciona)
+## Referências que funcionam (nº no mosaico, link, views, o que funciona)
 
-Views são as de 17/11/2026, tiradas dos arquivos do repositório. A coluna "Visual típico" é o padrão do gênero, não algo que eu vi nesses vídeos.
+| Mosaico/nº | Vídeo | Views | O que aparece e por que funciona |
+|---|---|---|---|
+| m1 #01 | Serasa "limpe e ganhe até 300 pontos" (youtu.be/eSZzDBEiQGc) | 265.315 | Rosto de boca aberta à direita, print de celular com círculo vermelho, texto branco e amarelo em bloco grosso. Gatilho: ganho pessoal e surpresa. Só 1 ponto de foco: o rosto. |
+| m1 #02 | SBT "maior vazamento da história" (youtu.be/XA9k6rEj_pA) | 174.735 | Rua com pessoa de máscara, faixa escura embaixo com "DADOS ROUBADOS DE 223 MILHÕES DE PESSOAS". Número enorme em frase de fato, estilo notícia. |
+| m1 #04 | CNN Serasa notificada (youtu.be/SJO77kAAVPE) | 117.929 | Âncora em frente a um painel com "Prazo para esclarecimento: 15 dias". Aqui o prazo em dias já é o gatilho. |
+| m1 #06 | Bruno Fraga "Descubra COMO CRIMINOSOS usam SEUS DADOS" (youtu.be/eJQJoFwChJs) | 84.639 | Foto com tarja/borrão, tela de app com "R$ 22.000,00", seta vermelha, tarja vermelha "MÃO DE CRIMINOSOS". Prova visual do dano com valor. |
+| m1 #09 | Inss Passo a Passo "DESCUBRA SE O SEU CPF FOI VAZADO" (youtu.be/1FLkp3l9-Ds) | 62.082 | Número "223.739.215 DE CPFs" em tarja amarela e vermelha, 5 faixas de texto. Poluída, mas o número gigante puxa clique. |
+| m2 #01 | Domingo Espetacular, falso advogado (youtu.be/kPfbkjtX1ws) | 393.694 | Suspeitos de costas, selo do programa, tarja azul "ESTELIONATO DIGITAL". Cena real de notícia mais rótulo curto. |
+| m2 #03 | UOL "como os bandidos sabem tanto sobre você" (youtu.be/DZXmpbr13a0) | 152.150 | Close do ícone do WhatsApp com notificação "2" e texto branco. Objeto do dia a dia como foco. |
+| m3 #04 | Cybernews NotPetya (youtu.be/nBRfUhWay80) | 960.237 | Sem rosto: arquivo vermelho em pilha, cursor branco, palavra única "NOTPETYA" em branco sobre fundo preto com código. |
+| m3 #08 | In Comum WannaCry (youtu.be/Irwhxliiq30) | 166.321 | Silhueta preta de chapéu com olhos vermelhos, título "WANNA_CRY" em vermelho, fundo azul-claro. Silhueta como figura anônima. |
+| m4 #02 e #07 | @HackersdoCrime, "Golpistas em PÂNICO" e "hacker mais procurado" | 2,1 mi e 412 mil | Capuz escuro sem rosto, palavra única em tarja vermelha ("GOLPISTAS", "PROCURADO") com letra branca. |
+| m4 #08 e #04 | @HackersdoCrime, "16 ANOS" e Charles Ingram | 332 mil e 1 mi | Rosto com tarja preta nos olhos, número/palavra enorme no topo. |
+| m5 #01 | Elementar, Fraude das Padarias | 978 mil | 1 objeto realista (pão na mão de luva preta), 3 palavras brancas e amarelas, fundo escuro, selo "E" pequeno no canto. |
+| m5 #02 | Elementar, quebra-molas proibido | 566 mil | Objeto único (quebra-molas), "PROIBIDO" em vermelho e "POR LEI" em branco. Texto de duas linhas, contraste máximo. |
+| m5 #08 | Elementar, americanos split | 252 mil | Comparação lado a lado (EUA x Brasil) e "POR QUÊ?". |
+| m6 #03 | mano deyvin, "hackearem seu banco" | 368 mil | Fundo de código verde, rosto de capuz, "NADA ESTÁ SEGURO" em vermelho grosso. |
+| m6 #06 | mano deyvin, Microsoft caiu | 248 mil | Logo grande ao fundo, "20 HORAS FORA": número com unidade de tempo, vermelho, texto de fato. |
 
-| # | Vídeo | Canal | Views | Visual típico do gênero (não aberto) | Por que atrai |
-|---|---|---|---|---|---|
-| 1 | [Ataque hacker ao Tesouro Nacional expõe dados](https://youtu.be/lg9tV3utOYY) | g1 | 410.746 | Frame do telejornal, logo da emissora, tarja com a manchete | Marca forte de TV e assunto de notícia quente; a audiência vem da marca |
-| 2 | [HOTMART VAZA e avisa 1 mês depois](https://youtu.be/1hCS9oOcy54) | mano deyvin | 220.575 | Rosto do apresentador com expressão de choque, texto grande em caixa alta, emoji de alarme no título | Rosto + emoção + número de tempo ("1 mês") |
-| 3 | [O FGC FOI INVADIDO E SÓ AVISOU 10 DIAS DEPOIS](https://youtu.be/J3HoQPoV-Ms) | mano deyvin | 164.962 | Mesmo padrão: rosto, caixa alta, cor quente, "10 DIAS" em destaque | O intervalo em dias é o gancho, mas com tom acusatório |
-| 4 | [Ataque hacker atinge sistema do FGC](https://youtu.be/ickJTmrBrqs) | SBT News | 75.332 | Frame de telejornal com arte do ataque (cadeado, código) | Autoridade de notícia |
-| 5 | [Ataque hacker na Caixa Econômica compromete 7,6 milhões](https://youtu.be/gDGDoP_5pbA) | Jovem Pan News | 69.365 | Frame do estúdio, logo do banco ao lado, tarja com o número | Número + marca conhecida (e confunde com a Caixa Econômica) |
-| 6 | [Ataque hacker a subsidiária da Caixa expõe 7,6 milhões](https://youtu.be/YIxVPMMipz8) | Metrópoles | 10.436 | Arte padrão de portal, tarja com texto | Só o número e a marca do portal |
-| 7 | [A Farsa da Indústria dos Óculos](https://www.youtube.com/watch?v=4kQtKFZ0Ru4) | Elementar | 2,8 mi | Molde de estilo (sem rosto, objeto único, texto curto). Não aberto | Referência de documentário: um objeto e pouca palavra |
+Observação: o m6 #08 (Hotmart) não foi usado (fora do tema). Nenhum dos concorrentes do m6 usa a data como elemento visual.
 
-Nota de honestidade: as views mostram que o tema e o formato "demora para avisar" funcionam. Não provam qual elemento visual da thumbnail fez diferença, porque não vi as imagens.
+## Padrões encontrados e a nossa brecha
 
----
+O que se repete nas que foram bem:
+1. **1 ponto de foco** e texto de 1 a 4 palavras (m5 inteiro, m3, m4, m6).
+2. **Letra grossa em caixa alta** com contorno ou sombra, branca e amarela, vermelha em tarja (m4, m5, m6).
+3. **Número ou prazo como gatilho** ("223 MILHÕES", "15 dias", "20 HORAS FORA", "16 ANOS").
+4. **Objeto de uso diário** (celular, WhatsApp, pão) ou **silhueta sem rosto** (m3 #08, m4 #02).
+5. **Fundo escuro** com 1 cor de alerta (vermelho) e amarelo para o destaque.
+6. Em vazamento de CPF (m1, m2): rosto assustado e logo de marca (Serasa, CNN, SBT). É o padrão mais comum e o mais barulhento.
 
-## Padrões encontrados e como vamos nos destacar
+O que todo mundo faz igual (e a gente não faz):
+- Rosto de youtuber com boca aberta, mão no rosto e logo da empresa (m1 #01, #05, #07, m6). Nós não temos rosto e não podemos usar logo da Caixa.
+- Capuz de hacker e código verde (m3, m4, m6 #03). É clichê e não diz nada sobre o caso brasileiro.
+- "DESCUBRA SE SEU CPF VAZOU" e perguntas vagas ("DADOS VAZADOS?"). Ninguém mostra **o tempo** entre ataque e aviso.
 
-**O que se repete (a confirmar visualmente):**
-1. Rosto de apresentador com cara de choque (canais de "jornal da semana") ou frame de TV (emissoras).
-2. Logo da empresa envolvida, o que aumenta o risco de confundir CVP com Caixa Econômica.
-3. Cadeado, código verde, "hacker de capuz" e tela de terminal.
-4. Número grande ("7,6 milhões", "10 dias") em amarelo ou vermelho.
-5. Vermelho e preto o tempo todo, com muito texto e emoji de alarme.
+**Nossa brecha:** ninguém usa a **data** como imagem. O título já diz "O golpista soube antes de você". A thumbnail mostra a **prova**: dois dias no calendário, 6 e 11, com o intervalo. É fato verificável (segundo a empresa), tem número (gatilho m1 #04 e m6 #06), objeto único (m5), fundo escuro e a assinatura do canal (etiqueta de evidência LAUDO Nº 001, grifo amarelo).
 
-**Como nos destacar:**
-- **Sem rosto e sem hacker de capuz.** Todo mundo mostra rosto ou clichê. Nós mostramos um objeto do dia a dia e um documento.
-- **Sem logo de empresa.** Fica mais seguro juridicamente e não confunde a seguradora com a Caixa Econômica.
-- **A demora vira imagem.** Os concorrentes escrevem o número. Nós desenhamos o intervalo entre incidente e aviso.
-- **Tom de laudo, não de pânico.** Fundo quase preto com amarelo-grifo e etiqueta de evidência, em vez de vermelho gritando. O vermelho aparece só uma vez, para o número.
-- **Pouco texto** (2 a 3 palavras), contra os 6 a 10 das referências.
+## Conceito A — Celular com aviso + carimbo de dias
 
-**Padrão visual do canal (vale para os próximos laudos):** fundo #0B0D10, 1 objeto central, texto em amarelo #FFD400 ou branco, vermelho #E63946 em 1 elemento só, etiqueta "LAUDO Nº 001" no canto superior esquerdo, sem rosto, sem logo.
+Referências combinadas: m5 #01 (1 objeto realista, 3 palavras), m2 #03 (celular com notificação), m6 #06 (prazo em unidade de tempo), identidade do canal (etiqueta, fundo preto).
 
----
+**Cena:** celular na mão (só a mão, sem rosto), tela acesa na madrugada num quarto escuro. Na tela, uma notificação de e-mail fictícia "Comunicado de incidente de segurança" com carimbo de hora 03:12 e data "11/11". Atrás do celular, desfocada, uma folha de calendário rasgada com o número "6" grande. A luz da tela é a única fonte de luz.
 
-## Regras comuns aos 3 conceitos
+**Texto na thumb (3 palavras):** `5 DIAS DEPOIS`. É fato, não repete o título e completa a ideia ("o golpista soube antes": quanto antes).
 
-- **Etiqueta fixa:** "LAUDO Nº 001", pequena, no canto **superior esquerdo**, estilo etiqueta de evidência (retângulo branco-sujo, borda preta fina, fonte tipo máquina de escrever, levemente inclinada em 2 graus, com um furinho de lacre). Não conta nas 4 palavras. Nos próximos laudos o número muda e o lugar e o estilo ficam.
-- **Tudo fictício:** nenhum dado real. Qualquer dado visível é "João da Silva, CPF 000.000.000-00", ou barras pretas e traços sem texto legível.
-- **Sem logo** da Caixa, da CVP, do FGC, do Tesouro ou de qualquer empresa. O remetente do e-mail é genérico ("Comunicado de segurança").
-- **Gere a imagem sem texto.** IA erra letras. Todo texto, números e etiqueta entram no Canva.
-- **Teste no celular:** reduzir a 160 px de largura. Só pode ficar legível o texto principal e o objeto.
-- Imagem 1280x720 px, margem de segurança de 60 px (o tempo do vídeo cobre o canto inferior direito).
-- **Compatível com os dois títulos:** nenhum conceito nomeia empresa nem acusa. Os três mostram o tempo ou a regra, e isso responde ao título nº 1 ("último a saber") e ao nº 3 ("quem decide"). Variante para o título nº 3 está dentro de cada conceito.
+**Cores:** fundo #0B0D10, texto "5 DIAS" amarelo #FFD400 e "DEPOIS" branco, luz azul-fria da tela, sem vermelho no texto (o vermelho é só para o carimbo VAZADO, opcional e pequeno).
 
----
-
-## Conceito A — Celular com o aviso que chegou tarde (objeto central + carimbo)
-
-**Cena:** um celular em close, levemente inclinado, tela acesa em cima de uma mesa escura. Na tela, um e-mail de aviso genérico: cabeçalho "Comunicado de incidente de segurança" (linhas de texto ilegíveis) e, em uma linha, um trecho grifado em amarelo. Sobre o celular, um carimbo inclinado.
-
-**Texto na thumb (2 palavras):** **"CHEGOU TARDE"**, carimbo em amarelo #FFD400 com borda grossa, inclinado uns 8 graus.
-- Não repete nenhum dos dois títulos.
-- Variante para o título nº 3: trocar por **"7,6 MI"** em branco, pequeno acima do celular, mais o carimbo "CHEGOU TARDE" (3 palavras no total). Esse número ajuda o título nº 3, que é mais abstrato.
-
-**Cores:** fundo #0B0D10, tela do celular com brilho branco-azulado frio, grifo e carimbo #FFD400. Sem vermelho (ou só um ponto de notificação vermelho pequeno no ícone do e-mail).
-
-**Layout:**
-- Celular ocupando o centro-direita (cerca de 50% da largura), inclinado 10 graus.
-- Carimbo cruzando o canto inferior esquerdo do celular, em cima da tela e fora dela.
-- Metade esquerda com espaço escuro, onde só entra a etiqueta no topo.
-- O ponto de foco é o brilho da tela e o carimbo.
+**Layout (1280x720):**
+- Celular no terço direito, inclinado 8 graus, ocupando 60% da altura.
+- Texto no terço esquerdo, em 2 linhas: "5 DIAS" (grande) e "DEPOIS" (menor).
+- Folha "6" desfocada atrás do celular, no canto superior direito.
+- Etiqueta "LAUDO Nº 001" no canto inferior esquerdo (ou superior esquerdo).
 
 **Prompt de imagem (inglês):**
 ```
-Close-up photo of a smartphone lying on a dark desk, tilted at about 10 degrees, screen glowing with a generic email app showing an email titled in blurry unreadable text, one highlighted line in bright yellow marker color, no real words, no logos, no brand marks, near-black background (#0B0D10) with subtle cool blue screen light spilling on the surface, cinematic investigative documentary mood, shallow depth of field, high contrast, large empty dark area on the left third of the frame, no people, no hands, no faces, 16:9, photorealistic
+Cinematic close-up of a hand holding a smartphone in a dark bedroom at night, the screen glowing cold blue and lighting the fingers. The screen shows a generic email notification titled "Security incident notice" with a time stamp "03:12" and a date "11/11", no company logo, no real names, no real data. Behind the phone, a heavily blurred torn calendar page with a large number "6" in the background. Near-black background (#0B0D10), strong contrast, shallow depth of field, single focal point, no face, no text other than the notification, 16:9, photoreal, high detail, room on the left third for large overlay text.
 ```
-Negative: text, letters, logos, brand names, faces, hands, red tones, hacker hood, green code.
 
-**Montagem no Canva (1280x720):**
-1. Fundo: a imagem gerada. Subir contraste +15 e reduzir o brilho das bordas (vinheta).
-2. Carimbo "CHEGOU TARDE": fonte Anton ou Bebas Neue, 150 a 180 px, amarelo #FFD400, contorno preto 8 px, fundo de retângulo com borda amarela de 6 px, rotação -8 graus, posicionado sobre o canto inferior esquerdo do celular. Aplicar a textura de carimbo (efeito "Rasgado" ou camada de ruído com 15% de opacidade).
-3. Etiqueta "LAUDO Nº 001": canto superior esquerdo, retângulo #E9E4D4, borda preta 2 px, fonte Special Elite ou Courier Bold 28 px, rotação 2 graus.
-4. Se quiser um grifo extra, uma faixa amarela de 70% de opacidade em cima da linha do e-mail.
-5. Exportar JPG abaixo de 2 MB e testar em 160 px.
+**Montagem no Canva:**
+1. Imagem 1280x720. Deixe o terço esquerdo escuro e vazio.
+2. Texto "5 DIAS": fonte Anton ou Bebas Neue, ~190 px, amarelo #FFD400, contorno preto 8 px, sombra suave. "DEPOIS": mesma fonte, ~120 px, branco.
+3. Troque a data e a hora da tela no Canva se a IA errar os números (zoom, retângulo preto + texto 03:12 e 11/11).
+4. Etiqueta: retângulo #E8E2D0 (papel de evidência), borda preta 3 px, texto preto Courier Bold "LAUDO Nº 001", ~34 px, rotação -3 graus, cantos quadrados, num canto. Não conta nas 4 palavras.
+5. Conferir no celular, com a miniatura reduzida a 168 px de largura: "5 DIAS DEPOIS" tem de ser legível.
 
----
+## Conceito B — Linha do tempo com a lacuna
 
-## Conceito B — Linha do tempo da demora (comparação / número)
+Referências combinadas: m1 #04 e m6 #06 (prazo em dias como gatilho), m5 #08 (comparação em dois lados), fundo escuro do m3 #04.
 
-**Cena:** uma linha do tempo horizontal fina e branca, desenhada em fundo quase preto, com três marcações que se alargam como um placar. Sobre elas, três números grandes: o intervalo de dias entre o incidente e o aviso nos três casos do vídeo.
+**Cena:** fundo preto com linha de tempo horizontal fina. À esquerda um ponto/pino com "6/11". À direita outro ponto com "11/11". O trecho entre os dois fica iluminado em amarelo e com 5 marcas pequenas (os 5 dias). Na ponta esquerda, um carimbo "VAZADO" em vermelho, inclinado, parcialmente sobre o pino. Sem objeto extra.
 
-**Texto na thumb (3 elementos, 4 palavras no máximo):** **"6 · 8 · 10"** em vermelho e **"DIAS"** em amarelo. Mantém "DIAS" pequeno abaixo (os números contam como palavras no limite, total 4).
-- Os números vêm do roteiro (Caixa Vida e Previdência 6, Tesouro 8, FGC 10), que são **cálculos a partir de datas publicadas**. Não escrever nomes de empresa na thumb.
-- Não repete nenhum dos dois títulos. Para o título nº 3, o número completa a pergunta "quem decide?" mostrando a demora. Variante: acrescentar "7,6 MI" pequeno, branco, no canto direito, se o título nº 3 for o testado.
-- Cuidado: o vermelho está na paleta só para "VAZADO" e "números de perda". Aqui ele é usado para o número da demora, o que é uma interpretação da regra. Se o Diretor preferir seguir a letra da regra, usar amarelo nos números.
+**Texto na thumb (2 itens, 3 palavras no máximo):** `6/11` e `11/11` (datas) e `5 DIAS` no meio, grande. Só fato.
 
-**Cores:** fundo #0B0D10, linha branca, números #E63946 (grandes), "DIAS" #FFD400, marcas em branco.
+**Cores:** fundo #0B0D10, linha e "5 DIAS" amarelo #FFD400, datas brancas, carimbo VAZADO vermelho #E63946.
 
 **Layout:**
-- Linha do tempo no terço inferior, de ponta a ponta, com 3 pontos.
-- Números enormes ocupando o centro (cada um com cerca de 1/3 da largura), sobre os pontos.
-- "DIAS" abaixo, centralizado. Etiqueta no topo à esquerda.
-- O ponto de foco é o "10", o maior dos três (o tamanho cresce de 6 para 10).
+- Linha no meio, ocupando 90% da largura.
+- "5 DIAS" enorme acima da linha, centralizado.
+- Datas pequenas abaixo dos dois pinos.
+- Carimbo à esquerda.
+- Etiqueta LAUDO Nº 001 no canto superior direito.
 
 **Prompt de imagem (inglês):**
 ```
-Minimal dark background (#0B0D10) with a thin white horizontal timeline line across the lower third, three small circular markers on the line spaced evenly, subtle grid paper texture and faint scan lines like a forensic report, soft vignette, a very faint yellow glow at the right end of the line, plenty of empty space above the line for large numbers, no text, no letters, no numbers, no logos, no people, flat graphic infographic style, high contrast, 16:9
+Minimal dark infographic background, near-black (#0B0D10) with subtle film grain, a thin horizontal timeline in the lower middle with two round markers, the segment between them glowing yellow (#FFD400) with five small tick marks, a worn red rubber-stamp texture "LEAKED" tilted over the left marker (stamp ink, distressed edges), forensic evidence-board mood, large empty space above the timeline for big overlay text, no people, no logos, no real data, 16:9, sharp, high contrast.
 ```
-Negative: text, numbers, letters, logos, faces, photos, hacker imagery.
 
-**Montagem no Canva (1280x720):**
-1. Fundo: imagem gerada, ou simplesmente um quadrado #0B0D10 com a linha desenhada no Canva (linha branca 6 px e três círculos de 36 px). Dispensa gerar imagem.
-2. Números "6", "8", "10": fonte Anton, tamanhos 260, 300 e 360 px, cor #E63946, contorno preto 6 px, alinhados em cima dos três pontos. Separar com um ponto "·" branco.
-3. "DIAS": Anton 110 px, amarelo #FFD400, centralizado abaixo da linha.
-4. Etiqueta "LAUDO Nº 001": canto superior esquerdo, igual ao conceito A.
-5. Exportar e testar em 160 px: os três números têm de continuar legíveis.
+**Montagem no Canva:**
+1. Gere ou monte o fundo. Escreva "5 DIAS" (Anton, ~220 px, #FFD400, contorno preto 6 px) acima da linha.
+2. Datas "6/11" e "11/11" em Courier Bold branco ~60 px, abaixo dos pinos.
+3. Se o carimbo ficar ruim na IA, use a palavra "VAZADO" no Canva: fonte Stencil ou Impact vermelho #E63946, contorno 4 px, rotação -8 graus, opacidade 90%.
+4. Etiqueta "LAUDO Nº 001" no canto superior direito (mesmo estilo do A).
 
----
+Ponto fraco: não tem objeto; fica mais "infográfico" do que as referências que mais vendem (m5). Boa como alternativa de teste A/B.
 
-## Conceito C — Documento com a frase escondida (mistério / documento)
+## Conceito C — Documento com a data riscada e o aviso tapado
 
-**Cena:** uma folha de comunicado oficial fictício, vista de cima, sobre mesa escura, iluminada por um spot. A maior parte do texto é uma textura de linhas cinza ilegíveis. Uma frase está grifada em amarelo, e logo depois dela uma tarja preta cobre uma palavra-chave. Nenhum nome ou dado real.
+Referências combinadas: m5 #01 (1 objeto realista em cena escura), m4 #01 (mistério, letra vermelha em fundo preto), m3 #04 (documento/arquivo como forma), identidade do canal (documento grifado em amarelo).
 
-**Texto na thumb (2 palavras):** **"RISCO RELEVANTE?"**, branco com fundo de tarja preta, tipo legenda de evidência.
-- É a expressão central da virada do roteiro (a própria empresa avalia se o risco é "relevante"), e não aparece em nenhum título. Completa o título nº 3 sem repetir ("quem decide" vira "relevante para quem?").
-- Variante para o título nº 1: usar **"VOCÊ NÃO ERA"** (a ideia de que nem ser cliente garante aviso). Só se for confirmado com o roteiro, porque pode exagerar.
+**Cena:** uma folha de "Comunicado de incidente" **fictícia**, vista de cima numa mesa escura de perícia, com luz de lanterna. Duas linhas visíveis: "Ocorrência: 06/11" grifada em amarelo e logo abaixo "Aviso aos titulares: ██████" com uma tarja preta grossa em cima da data. O resto do texto é borrado e ilegível (lorem falso, sem dado real). Um clipe e a etiqueta de evidência na quina.
 
-**Cores:** fundo #0B0D10, papel off-white com ruído, grifo #FFD400, tarja preta, texto branco. Sem vermelho.
+**Texto na thumb (3 palavras):** `6 DE NOVEMBRO` em branco, com a data da tarja preta como o mistério. Fato, sem julgamento. (Se testar: `DATA ESCONDIDA` não serve, porque insinua ocultação.)
+
+**Cores:** fundo #0B0D10, papel bege acinzentado, grifo amarelo #FFD400, tarja preta, texto branco. Sem vermelho (sem perda em dinheiro).
 
 **Layout:**
-- Folha ocupa o centro, inclinada 4 graus, ligeiramente maior que o quadro (corta nas bordas).
-- Grifo amarelo atravessando a folha no terço do meio.
-- Texto "RISCO RELEVANTE?" sobre a tarja, abaixo do grifo.
-- Etiqueta "LAUDO Nº 001" no canto superior esquerdo, sobre a folha, estilo etiqueta presa com clipe.
-- O ponto de foco é o contraste entre o grifo amarelo e a tarja preta.
+- Documento ocupando o centro-direita, levemente inclinado.
+- Grifo amarelo na linha "Ocorrência" e tarja na linha de baixo, no centro do quadro.
+- Texto "6 DE NOVEMBRO" no canto esquerdo, em 2 linhas ("6 DE" / "NOVEMBRO").
+- Etiqueta LAUDO Nº 001 no canto inferior direito, presa na quina do papel.
 
 **Prompt de imagem (inglês):**
 ```
-Top-down photo of a fictional official letter on a dark wooden desk, lit by a single spotlight, paper slightly tilted, body of the document is generic gray lines of illegible placeholder text with no readable words, one horizontal bright yellow highlighter stripe across a line, immediately followed by a solid black redaction bar, paper clip in the corner, near-black surroundings (#0B0D10), investigative forensic documentary mood, high contrast, no real names, no numbers, no logos, no letterhead, no people, 16:9, photorealistic
+Top-down photo of a fictional printed incident notice on a dark metal forensic desk, harsh flashlight from the top left, the paper has a fake generic letterhead without any real logo, blurred unreadable body text, one line reading "Occurrence: 06/11" highlighted with a bright yellow marker, the line below it covered by a thick black redaction bar, a paper clip on the corner, near-black surroundings (#0B0D10), shallow depth of field, no people, no real names, no ID numbers, 16:9, photoreal, empty dark space on the left third for overlay text.
 ```
-Negative: readable text, names, numbers, letterhead, logos, stamps with words, faces, hands.
 
-**Montagem no Canva (1280x720):**
-1. Fundo: imagem gerada, com a folha preenchendo o centro.
-2. Se o grifo da imagem não ficar limpo, refazer no Canva: retângulo #FFD400 com 85% de opacidade, modo "Multiplicar", sobre a linha.
-3. Texto "RISCO RELEVANTE?": Anton 120 px, branco, sobre retângulo preto 100% opaco com 20 px de margem interna, alinhado abaixo do grifo.
-4. Etiqueta "LAUDO Nº 001": canto superior esquerdo, igual ao A.
-5. Testar em 160 px. Se o texto não ficar legível, aumentar para 140 px e cortar "?".
+**Montagem no Canva:**
+1. "6 DE NOVEMBRO": Anton ~150 px, branco, contorno preto 8 px, duas linhas à esquerda. "6" em amarelo #FFD400.
+2. Se a IA errar o texto do papel, cubra com retângulo bege e redigite em Courier: "Ocorrência: 06/11" (grifo amarelo, retângulo com multiplicação) e tarja preta embaixo.
+3. Etiqueta LAUDO Nº 001 (mesma receita do A) na quina do papel.
 
----
+Ponto fraco: exige olhar de perto para entender a tarja. No celular, o texto grande e a tarja precisam estar bem contrastados.
 
 ## Recomendado: A — por quê
 
-**Recomendo o conceito A** (celular com aviso tardio + carimbo "CHEGOU TARDE"), com o B como segunda opção para teste.
+- **Completa o título sem repetir.** O título diz que o golpista soube antes de você. A thumb mostra o aviso chegando de madrugada e o texto "5 DIAS DEPOIS" dá o intervalo. A pessoa pensa "5 dias depois de quê?" e clica para saber.
+- **Segue o gancho do roteiro:** o objeto é a notificação no celular, a mesma cena que abre o vídeo.
+- **Segue o aprendizado das referências:** 1 objeto realista (m5 #01), celular com notificação (m2 #03), prazo em dias (m1 #04, m6 #06), fundo escuro e letra grossa. Sem rosto e sem capuz, o que nos separa dos clichês de m1, m3 e m4.
+- **É fato.** "5 DIAS DEPOIS" é o intervalo entre as datas que a própria empresa informa (6/11 e 11/11, segundo a Agência Brasil). Não diz que houve atraso, que descumpriram a regra, nem acusa ninguém.
+- **Segurança:** sem logo da Caixa, sem dado real (e-mail genérico), com a etiqueta LAUDO Nº 001.
+- Para o teste A/B do título alternativo ("Quem Decide Se Você Precisa Saber?"), o B (linha do tempo) ou o C (documento) combinam melhor, porque mostram a lacuna e o aviso tapado.
 
-- **Completa o título sem repeti-lo.** O título nº 1 pergunta "Por Que Você Foi o Último a Saber?". A thumb mostra a prova: o aviso chegou tarde. O título nº 3 pergunta "Quem decide?", e a mesma imagem faz o espectador querer saber por que a notificação demorou. Funciona com os dois sem trocar nada, só acrescentando "7,6 MI" na variante do nº 3.
-- **É a cena do gancho do roteiro.** Os primeiros segundos do vídeo são um e-mail de "incidente de segurança" no celular. O espectador clica e encontra o que a thumb prometeu (sem clickbait).
-- **Cumpre a identidade.** 1 objeto central, 2 palavras, alto contraste, sem rosto, sem logo, sem dado real. Como é o primeiro laudo, o celular e o carimbo amarelo dão o padrão visual: nos próximos, o objeto muda (cartão, ligação, documento) e o carimbo e a etiqueta ficam.
-- **Se destaca.** Os concorrentes usam rosto chocado e cadeado vermelho; um celular escuro com um carimbo amarelo sóbrio parece mais "laudo" que "plantão".
-- **Segurança jurídica.** "Chegou tarde" não acusa descumprimento de prazo (o roteiro diz que nenhuma fonte aponta descumprimento). Não nomeia empresa, então não confunde a CVP com a Caixa Econômica.
-
-**Sugestão de teste:** subir A como principal e, com o recurso de teste de miniaturas do YouTube, comparar com B (placar 6 · 8 · 10) nos primeiros dias. A janela do assunto é curta, então decidir rápido.
-
-**Pendências para o Diretor e o dono do canal:**
-1. Confirmar "7,6 Mi" ou "7,6 Milhões" no título nº 1.
-2. Abrir os links das referências para confirmar visualmente o padrão descrito.
-3. Decidir se o vermelho do conceito B (número da demora) é aceitável pela regra de paleta.
-4. Aprovar a imagem antes de gerar (nenhuma foi gerada, para não gastar créditos).
+Cuidados de conferência antes de publicar: a data "11/11" da notificação é a informada pela empresa; se a pesquisa mudar essas datas, ajuste o "5 DIAS" e a tela do celular. Nada nas imagens deve parecer comunicado oficial da Caixa.
