@@ -46,6 +46,11 @@ Para produzir um vídeo, use a skill **`/novo-video <tema ou título>`**.
 5. Todo vídeo fecha com um bloco prático "como se proteger".
 6. Não colocar o nome de nenhum modelo de IA nos arquivos do repositório.
 
+## Manual de edição
+
+`canal/ESTILO-EDICAO.md`: ritmo, elementos gráficos e som, a partir da análise
+quadro a quadro do Elementar. O editor segue esse manual.
+
 ## Organização dos vídeos
 
 Cada vídeo fica em `videos/NNN-slug/` (ex.: `videos/001-caixa-7-milhoes/`),
