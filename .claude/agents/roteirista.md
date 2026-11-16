@@ -94,6 +94,9 @@ a 09), cada um com a versão com pausas (`<break time="0.8s" />` nos momentos de
 tensão, `1.5s` antes da virada) e a versão de texto puro; grafias de pronúncia
 (ex.: HACKOPSIA → Rekópsia; hacker → réquer) e, no fim, a lista das 8 emendas
 entre blocos para as transições do editor (seção 3.11 do manual de edição).
+Gere também `02c-roteiro-corrido.txt`: o texto inteiro corrido, sem títulos,
+sem marcas de pausa e sem divisão em áudios (com as grafias de pronúncia), que é
+o arquivo que o dono cola no Studio do ElevenLabs.
 
 No fim, responda ao Diretor em até 5 linhas: palavras, duração e qualquer
 `[FALTA]`.

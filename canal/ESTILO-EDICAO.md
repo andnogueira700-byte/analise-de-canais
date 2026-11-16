@@ -141,8 +141,13 @@ primeiro bloco), o vídeo faz uma pausa dramática:
 4. A música volta ao volume de fundo (cerca de -20 dB abaixo da voz) assim que a
    voz recomeça.
 
-Como a narração é gerada **em um áudio por bloco** (ver `02b-narracao-ia.md` de
-cada vídeo), cada emenda entre áudios é exatamente o ponto dessa transição.
+**Como o dono trabalha (decisão de 17/11):** a narração é gerada **num áudio só,
+corrido**, no Studio do ElevenLabs, a partir do `02c-roteiro-corrido.txt` (sem
+marcas de pausa). **As pausas são criadas pelo editor, com cortes na própria
+edição**, só onde forem necessárias: nas 8 trocas de bloco (listadas no fim do
+`02b-narracao-ia.md` e no mapa de edição) e, se precisar, antes de uma revelação.
+O editor corta o áudio no fim da última frase do bloco, abre o espaço do respiro
+e cola o resto do áudio depois.
 
 ## 4. As imagens (de onde vem cada coisa)
 
