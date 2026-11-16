@@ -1,6 +1,6 @@
-# Roteiro — 7,6 Milhões de CPFs Vazados: O Golpista Soube Antes de Você
+# Roteiro — 7,6 Milhões de CPFs Vazados: O Hacker Soube Antes de Você
 **Gancho:** um e-mail de "incidente de segurança" na tela do celular, com o ataque datado dias antes do aviso; na Caixa Vida e Previdência, segundo a própria empresa, o ataque foi em seis de novembro e o aviso aos clientes em onze de novembro, cinco dias. A Caixa Vida e Previdência não é a Caixa Econômica. | **Grande Pergunta:** se a lei manda avisar, por que existe uma janela em que quem copiou os dados já sabe e você não, e quem decide se você precisa saber? | **Virada:** a regra conta só dias úteis, começa quando a empresa diz ter tomado conhecimento e só obriga o aviso quando o próprio controlador avalia o risco como relevante, com a ressalva dos fatores que a ANPD lista. Sem afirmar cumprimento nem descumprimento de prazo: mesmo quando é seguida, a regra deixa uma janela aberta.
-**Palavras:** 2.661 | **Duração estimada:** 18 min (2.661 ÷ 150 = 17,7)
+**Palavras:** 2.553 | **Duração estimada:** 17 min (2.553 ÷ 150 = 17,0)
 
 ---
 ## [BLOCO 1 — GANCHO] (0:00)
@@ -26,8 +26,6 @@ Cinco dias. Na prática, quem copiou soube antes de você. E isso pode acontecer
 Sete vírgula seis milhões. Segundo o comunicado da empresa, citado pela Agência Brasil, esse é o número de clientes ativos com dados copiados.
 
 Mas esse número deixa gente de fora. Ex-clientes também foram atingidos. Quantos? A empresa não divulgou.
-
-Cinco dias. Esse é o intervalo entre o ataque e o aviso aos clientes, pelas datas que a própria empresa informou.
 
 Oito dias. Pelas datas publicadas pela Agência Brasil, esse foi o intervalo entre o Tesouro Nacional detectar um acesso indevido e anunciar o caso.
 
@@ -89,8 +87,6 @@ A empresa afirma que fez essas notificações conforme a LGPD.
 
 Quinta-feira, doze de novembro. A Caixa Seguridade publica um comunicado ao mercado. É aí que o caso vira notícia e o público em geral fica sabendo.
 
-Faça a conta. Do ataque ao aviso aos clientes, cinco dias corridos. Nesse intervalo, segundo a própria empresa, os dados já tinham sido copiados. E o cliente ainda não tinha sido avisado.
-
 O que a empresa diz? Segundo o comunicado, citado pela Agência Brasil, não há indícios de comprometimento de dados financeiros ou de autenticação.
 
 Autenticação são as senhas e os códigos que provam que você é você.
@@ -109,7 +105,7 @@ Sete vírgula seis milhões de clientes ativos. Segundo a Agência Brasil e a Is
 
 Pense no que isso quer dizer. Você pode ter cancelado um seguro ou uma previdência há anos. Pode nem lembrar que já foi cliente.
 
-Mesmo assim, seus dados podem estar nessa base. O total real de atingidos é maior do que o número da manchete. Quanto maior, ninguém de fora sabe.
+Mesmo assim, seus dados podem estar nessa base. O total real de atingidos é maior do que o número da manchete.
 
 E a Caixa Vida e Previdência não estava sozinha naquela semana.
 
@@ -206,9 +202,6 @@ O Tesouro Nacional é um órgão público. Isso não quer dizer que ele foi ou s
 E nos três casos deste laudo? Até dezesseis de novembro de dois mil e vinte e seis, nenhuma fonte que consultamos informa punição.
 
 A ANPD foi notificada nos três. Mas nenhuma fonte que lemos traz uma manifestação dela sobre esses casos.
-
-Resumindo. A lei manda avisar. A regra deixa a empresa avaliar o risco e informar quando ficou sabendo. E punição, até agora, nenhuma fonte informou.
-
 ## [BLOCO 8 — COMO SE PROTEGER] (13:52)
 
 Lembra da frase do Tesouro que valia mais do que o resto do comunicado? Aqui está ela.
@@ -222,8 +215,6 @@ Repare em quem escreveu isso. Foi o próprio órgão que teve os dados acessados
 O FGC pediu cautela com quem se diga do fundo. E a Caixa Vida e Previdência, segundo a Agência Brasil, passa aos clientes recomendações de proteção diante do risco de fraudes.
 
 Todos dizem que não houve impacto financeiro. E todos falam em risco de golpe. Sem impacto financeiro não quer dizer sem risco.
-
-O Instituto Brasileiro de Defesa do Consumidor, o Idec, vai além. Segundo o Idec, depois de vazamentos, os consumidores brasileiros estão imensamente mais propensos a cair em golpes financeiros.
 
 Então, o que você pode fazer hoje? São sete passos.
 
@@ -239,7 +230,7 @@ Quinto. Ative a verificação em duas etapas no e-mail e nos aplicativos. É uma
 
 Sexto. Quando puder, use uma chave Pix aleatória, em vez do CPF ou do celular. Assim, você expõe menos dados.
 
-Sétimo. Se cair num golpe, avise o banco imediatamente e registre um boletim de ocorrência. O Idec indica o boletim como primeiro passo.
+Sétimo. Se cair num golpe, avise o banco imediatamente e registre um boletim de ocorrência. O Instituto Brasileiro de Defesa do Consumidor indica o boletim como primeiro passo.
 
 E se você quer saber se está numa dessas bases, pergunte à instituição, pelo canal oficial. O canal do Tesouro e o e-mail do FGC estão na descrição deste vídeo.
 
@@ -283,8 +274,6 @@ Cinco dias. Na prática, quem copiou soube antes de você. E isso pode acontecer
 Sete vírgula seis milhões. Segundo o comunicado da empresa, citado pela Agência Brasil, esse é o número de clientes ativos com dados copiados.
 
 Mas esse número deixa gente de fora. Ex-clientes também foram atingidos. Quantos? A empresa não divulgou.
-
-Cinco dias. Esse é o intervalo entre o ataque e o aviso aos clientes, pelas datas que a própria empresa informou.
 
 Oito dias. Pelas datas publicadas pela Agência Brasil, esse foi o intervalo entre o Tesouro Nacional detectar um acesso indevido e anunciar o caso.
 
@@ -340,8 +329,6 @@ A empresa afirma que fez essas notificações conforme a LGPD.
 
 Quinta-feira, doze de novembro. A Caixa Seguridade publica um comunicado ao mercado. É aí que o caso vira notícia e o público em geral fica sabendo.
 
-Faça a conta. Do ataque ao aviso aos clientes, cinco dias corridos. Nesse intervalo, segundo a própria empresa, os dados já tinham sido copiados. E o cliente ainda não tinha sido avisado.
-
 O que a empresa diz? Segundo o comunicado, citado pela Agência Brasil, não há indícios de comprometimento de dados financeiros ou de autenticação.
 
 Autenticação são as senhas e os códigos que provam que você é você.
@@ -360,7 +347,7 @@ Sete vírgula seis milhões de clientes ativos. Segundo a Agência Brasil e a Is
 
 Pense no que isso quer dizer. Você pode ter cancelado um seguro ou uma previdência há anos. Pode nem lembrar que já foi cliente.
 
-Mesmo assim, seus dados podem estar nessa base. O total real de atingidos é maior do que o número da manchete. Quanto maior, ninguém de fora sabe.
+Mesmo assim, seus dados podem estar nessa base. O total real de atingidos é maior do que o número da manchete.
 
 E a Caixa Vida e Previdência não estava sozinha naquela semana.
 
@@ -453,9 +440,6 @@ O Tesouro Nacional é um órgão público. Isso não quer dizer que ele foi ou s
 E nos três casos deste laudo? Até dezesseis de novembro de dois mil e vinte e seis, nenhuma fonte que consultamos informa punição.
 
 A ANPD foi notificada nos três. Mas nenhuma fonte que lemos traz uma manifestação dela sobre esses casos.
-
-Resumindo. A lei manda avisar. A regra deixa a empresa avaliar o risco e informar quando ficou sabendo. E punição, até agora, nenhuma fonte informou.
-
 Lembra da frase do Tesouro que valia mais do que o resto do comunicado? Aqui está ela.
 
 Segundo a Agência Brasil, o próprio Tesouro alertou que as informações podem ser utilizadas por terceiros para tornar tentativas de fraude mais convincentes.
@@ -467,8 +451,6 @@ Repare em quem escreveu isso. Foi o próprio órgão que teve os dados acessados
 O FGC pediu cautela com quem se diga do fundo. E a Caixa Vida e Previdência, segundo a Agência Brasil, passa aos clientes recomendações de proteção diante do risco de fraudes.
 
 Todos dizem que não houve impacto financeiro. E todos falam em risco de golpe. Sem impacto financeiro não quer dizer sem risco.
-
-O Instituto Brasileiro de Defesa do Consumidor, o Idec, vai além. Segundo o Idec, depois de vazamentos, os consumidores brasileiros estão imensamente mais propensos a cair em golpes financeiros.
 
 Então, o que você pode fazer hoje? São sete passos.
 
@@ -484,7 +466,7 @@ Quinto. Ative a verificação em duas etapas no e-mail e nos aplicativos. É uma
 
 Sexto. Quando puder, use uma chave Pix aleatória, em vez do CPF ou do celular. Assim, você expõe menos dados.
 
-Sétimo. Se cair num golpe, avise o banco imediatamente e registre um boletim de ocorrência. O Idec indica o boletim como primeiro passo.
+Sétimo. Se cair num golpe, avise o banco imediatamente e registre um boletim de ocorrência. O Instituto Brasileiro de Defesa do Consumidor indica o boletim como primeiro passo.
 
 E se você quer saber se está numa dessas bases, pergunte à instituição, pelo canal oficial. O canal do Tesouro e o e-mail do FGC estão na descrição deste vídeo.
 
