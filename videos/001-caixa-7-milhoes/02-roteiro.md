@@ -1,6 +1,6 @@
 # Roteiro — Caixa Seguridade Hackeada: Por que Você Só Soube Depois?!
 **Gancho:** um e-mail de "incidente de segurança" na tela do celular, com o ataque datado dias antes do aviso; na Caixa Vida e Previdência, subsidiária da Caixa Seguridade, segundo a própria empresa, o ataque foi em seis de novembro e o aviso aos clientes em onze de novembro, cinco dias: o hacker soube antes, você só soube depois. A Caixa Vida e Previdência não é a Caixa Econômica. | **Grande Pergunta:** se a lei manda avisar, por que você só soube depois, por que existe uma janela em que quem copiou os dados já sabe e você não, e quem decide se você precisa saber? | **Virada:** a regra conta só dias úteis, começa quando a empresa diz ter tomado conhecimento e só obriga o aviso quando o próprio controlador avalia o risco como relevante, com a ressalva dos fatores que a ANPD lista. Sem afirmar cumprimento nem descumprimento de prazo: mesmo quando é seguida, a regra deixa uma janela aberta.
-**Palavras:** 2.542 | **Duração estimada:** 17 min (2.542 ÷ 150 = 16,9). Base: contagem do Diretor, 2.514, mais 28 palavras dos ajustes da rodada 2. Recontar com a ferramenta antes de fechar os tempos dos blocos.
+**Palavras:** 2.545 (contadas com ferramenta pelo Diretor) | **Duração estimada:** 17 min (2.542 ÷ 150 = 16,9). Base: contagem do Diretor, 2.514, mais 28 palavras dos ajustes da rodada 2. Recontar com a ferramenta antes de fechar os tempos dos blocos.
 
 ---
 ## [BLOCO 1 — GANCHO] (0:00)
@@ -55,7 +55,7 @@ Mas pense nesses dados como uma ficha de apresentação. Quem tem essa ficha con
 
 Existe um nome para isso. Engenharia social, que é manipulação psicológica. O golpista não quebra o sistema do banco. Ele convence você a abrir a porta.
 
-A Federação Brasileira de Bancos, a Febraban, classifica o golpe da falsa central como engenharia social. Guarde essa ideia. Ela volta no fim deste laudo.
+O golpe da falsa central, aquele em que alguém liga fingindo ser do banco, é o exemplo mais conhecido de engenharia social. Guarde essa ideia. Ela volta no fim deste laudo.
 
 Agora, a regra. Desde dois mil e dezoito, o Brasil tem a Lei Geral de Proteção de Dados, a LGPD.
 
@@ -220,7 +220,7 @@ Então, o que você pode fazer hoje? São sete passos.
 
 Primeiro. Consulte o Registrato, do Banco Central. É gratuito e você entra com a sua conta gov ponto br. Ele mostra contas, chaves Pix, dívidas e empréstimos ligados ao seu CPF. Repita essa consulta de tempos em tempos.
 
-Segundo. Se alguém ligar dizendo ser do banco, da seguradora ou do governo, desligue. Depois, fale com a instituição pelo aplicativo oficial, ou ligue de outro telefone para o número oficial. A linha pode continuar aberta, com o golpista do outro lado. De acordo com a Febraban, banco não pede senha, dados pessoais ou token por telefone. Token é o código de segurança que confirma as suas operações.
+Segundo. Se alguém ligar dizendo ser do banco, da seguradora ou do governo, desligue. Depois, fale com a instituição pelo aplicativo oficial, ou ligue de outro telefone para o número oficial. Assim, você tem certeza de que está falando com quem diz ser. E nunca passe senha, dados pessoais ou token por telefone. Token é o código de segurança que confirma as suas operações.
 
 Terceiro. Desconfie de qualquer mensagem que cite a Caixa Vida e Previdência, o FGC ou o Tesouro. Confirme só pelos canais oficiais. É o que o FGC e o Tesouro pedem.
 
@@ -299,7 +299,7 @@ Mas pense nesses dados como uma ficha de apresentação. Quem tem essa ficha con
 
 Existe um nome para isso. Engenharia social, que é manipulação psicológica. O golpista não quebra o sistema do banco. Ele convence você a abrir a porta.
 
-A Federação Brasileira de Bancos, a Febraban, classifica o golpe da falsa central como engenharia social. Guarde essa ideia. Ela volta no fim deste laudo.
+O golpe da falsa central, aquele em que alguém liga fingindo ser do banco, é o exemplo mais conhecido de engenharia social. Guarde essa ideia. Ela volta no fim deste laudo.
 
 Agora, a regra. Desde dois mil e dezoito, o Brasil tem a Lei Geral de Proteção de Dados, a LGPD.
 
@@ -456,7 +456,7 @@ Então, o que você pode fazer hoje? São sete passos.
 
 Primeiro. Consulte o Registrato, do Banco Central. É gratuito e você entra com a sua conta gov ponto br. Ele mostra contas, chaves Pix, dívidas e empréstimos ligados ao seu CPF. Repita essa consulta de tempos em tempos.
 
-Segundo. Se alguém ligar dizendo ser do banco, da seguradora ou do governo, desligue. Depois, fale com a instituição pelo aplicativo oficial, ou ligue de outro telefone para o número oficial. A linha pode continuar aberta, com o golpista do outro lado. De acordo com a Febraban, banco não pede senha, dados pessoais ou token por telefone. Token é o código de segurança que confirma as suas operações.
+Segundo. Se alguém ligar dizendo ser do banco, da seguradora ou do governo, desligue. Depois, fale com a instituição pelo aplicativo oficial, ou ligue de outro telefone para o número oficial. Assim, você tem certeza de que está falando com quem diz ser. E nunca passe senha, dados pessoais ou token por telefone. Token é o código de segurança que confirma as suas operações.
 
 Terceiro. Desconfie de qualquer mensagem que cite a Caixa Vida e Previdência, o FGC ou o Tesouro. Confirme só pelos canais oficiais. É o que o FGC e o Tesouro pedem.
 
