@@ -205,3 +205,20 @@ Logo: versão branca oficial, do site de RI da Caixa Seguridade, enviada ao Canv
 ⚠️ Nas duas, o selo azul cortou o logo: só aparece o símbolo laranja. No Canva,
 alargue o retângulo azul para o texto branco "CAIXA Seguridade" aparecer.
 Prévia: `thumbs-canva/v4-com-logo.jpg`.
+
+## Rodada 5: estilo da thumb nº 05 do Hackers do Crime (fundo dividido + personagem no centro)
+
+Pedido do dono: sem logo; de fundo, uma notícia destacando "Caixa Seguridade" + o prédio com o nome; o hacker bem no centro; fonte mais aberta e legível.
+- Notícia: reprodução da manchete real da Agência Brasil (crédito na descrição).
+- Prédio: **ilustração gerada** (não existe foto livre do prédio da Caixa Seguridade com o nome; a foto da matéria da Agência Brasil é da sede da Caixa Econômica, por isso não foi usada).
+
+| Versão | Link | Texto | Observação |
+|---|---|---|---|
+| V1 | https://canva.link/738sp85a6uuq97m | (sem texto) | Fachada saiu "CAI XA" separado: corrigir no Canva |
+| **V2** ⭐ | https://canva.link/c4toiy9514knvvr | 7,6 MILHÕES / EXPOSTOS | Fachada correta; texto forte e legível no celular |
+| V3 | https://canva.link/b9ds6u12tzm21fe | ATÉ EX-CLIENTES / VAZADOS | Texto mais legível de todas (espaçado); troca o prédio pelo celular |
+
+⚠️ Risco do Diretor: o personagem é um rosto realista com tarja. Como o hacker do caso
+**não foi identificado**, isso pode parecer que mostramos o suspeito. Recomendado trocar por
+hacker de capuz com o rosto na sombra (mantendo a tarja como estilo), ou um rosto claramente ilustrado.
+Prévia: `thumbs-canva/v5-noticia-predio.jpg`.
