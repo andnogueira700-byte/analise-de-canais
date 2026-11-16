@@ -14,6 +14,19 @@
 - **Expansão futura:** o mesmo nome serve em espanhol e italiano (autopsia),
   com um @ próprio para cada idioma.
 
+### Descrição do canal ("Sobre") — versão escolhida
+
+```
+🔬 HACKOPSIA — A autópsia dos ataques que esconderam de você.
+
+Vazamentos de dados, golpes digitais e ataques hackers que atingiram o Brasil, investigados do começo ao fim. Cada vídeo é um laudo: o que aconteceu, quem errou e como você se protege.
+
+Casos reais. Fontes verificadas. Nenhum dado de vítima exposto.
+
+🔔 Inscreva-se para receber o próximo laudo.
+📩 Contato: [e-mail profissional do canal]
+```
+
 ## 1. Posicionamento
 
 **Frase do canal:** "A autópsia dos ataques que esconderam de você: vazamentos e

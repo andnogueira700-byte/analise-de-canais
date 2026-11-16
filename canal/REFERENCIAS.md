@@ -42,6 +42,12 @@ O vídeo das farmácias (CPF trocado por desconto) é a ponte direta com o nosso
 - [O Ataque Hacker que Parou o Mundo | WannaCry](https://www.youtube.com/watch?v=Irwhxliiq30) (In Comum): 166.027
 - [Maior roubo cibernético do Brasil: R$ 813 milhões desviados via Pix](https://www.youtube.com/watch?v=t526Lf0XXCI) (Balanço Geral): 301.687
 
+## Canais pequenos entrando no tema (vigiar)
+
+Vistos em 17/11/2026, todos com menos de 1.000 views por vídeo: Raio-X do Golpe,
+Invasão Hacker, Dossiê Curioso, Café Com Ciber. Sinal de que o espaço vai
+encher; vale entrar logo e com qualidade acima deles.
+
 ## A fazer
 
 - [ ] Puxar os títulos campeões (outliers) do Hackers do Crime e do In Comum
