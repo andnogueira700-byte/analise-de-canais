@@ -1,0 +1,1788 @@
+# Biblioteca de imagens e vídeos livres
+
+Fontes: Mixkit (M…, vídeo 720p), Coverr (C…, vídeo Full HD) e Wikimedia Commons (F…, FOTO real, licença livre; usar com zoom lento e crédito na descrição).
+
+**REGRA DO DONO: não repetir vídeo. Antes da metade do vídeo (até 9:15 da narração) é PROIBIDO usar qualquer ID marcado [JÁ USADO] (lista em uso-clipes.json). Dentro do próprio bloco, também não repita. Depois da metade, só repete se não houver alternativa.**
+
+Contexto: fotos de agência da Caixa Econômica só quando a fala for sobre a Caixa Econômica ou o banco onde muita gente recebe salário; nunca para a seguradora atacada.
+
+Para usar um item, escreva o ID na coluna asset (ex.: M46632, C1234, F51914688). Foto (F…) usa tipo "foto".
+
+## Telefone, ligação e celular (409)
+
+- C1012 — an old man answering his smartphone
+- C1114 — british telephone booth
+- C11380 — texting in the park on a sunny day
+- C1231 — businesswoman answering a call
+- C1404 — cashier talking on the phone
+- C1437 — close up of a young man putting on his headphones
+- C1445 — emotionally talking by mobile phone
+- C15 — a man makes a videocall on iphone
+- C1580 — a trader making a call with his smartphone
+- C1654 — woman screaming into telephone
+- C1839 — premium a young man joining a video call
+- C1885 — premium typing a phone number
+- C2015 — premium a guy puts his smartphone into a pocket
+- C2078 — old man making a call
+- C21049 — smiling woman with smartphone outdoors
+- C227 — a guy securing a holder for his phone
+- C23567 — premium businesswoman checking smartphone outdoors
+- C2358 — number dialed on an old british phone
+- C2372 — putting on headphones and typing
+- C2396 — premium a young man talking on the phone in lisbon
+- C26137 — urban morning coffee and phone check
+- C2625 — man making a phone call
+- C2707 — old man showing his phone to someone
+- C2787 — a man carefully using his smartphone
+- C29541 — elegant lady texting in evening cityscape
+- C29710 — urban call woman on the phone
+- C3124 — premium a young man recording a voice message
+- C3164 — woman making a phone call
+- C31830 — young woman texting by the marina
+- C32027 — urban professional on a phone break
+- C3245 — premium texting messages on a smartphone
+- C3316 — people say hi on a video call
+- C3363 — answering a phone call
+- C3371 — old man using smartphone
+- C3400 — old man using his mobile phone
+- C3401 — an old man using his mobile phone at home
+- C3418 — female talking on a video call
+- C3442 — a man talks on the phone during his lunch break
+- C36726 — premium a woman says hi on a video call
+- C3728 — a man talking on his smartphone
+- C37990 — texting at twilight
+- C38729 — businesswoman texting outdoors
+- C40811 — connected on the go smartphone in use
+- C4358 — premium a couple shows their presents on a video call
+- C45372 — texting by the marina at dusk
+- C46437 — travelers pause texting while waiting
+- C48443 — casual chat on smartphone voice message
+- C4878 — a girl browsing the online nft marketplace using a smartphone app
+- C49 — premium a guy talks on a phone on a street
+- C49859 — businesswoman checking phone outdoors
+- C5063 — a girl browses the online nft marketplace on her smartphone
+- C5106 — man texts on smartphone in sunlight
+- C514 — a woman recording a voice message on her smartphone
+- C5610 — premium a man puts on his headphones and speaks into the microphone
+- C59986 — premium smiling woman using smartphone in city
+- C6027 — old man on phone at dinner table
+- C6060 — premium chatgpt website mobile version
+- C6195 — texting outdoors in cozy jacket
+- C6246 — a woman recording a voice message free stock video coverr
+- C62680 — young woman checking smartphone outdoors
+- C6360 — a guy calls someone on the phone in a telephone box
+- C6393 — an old man talking on his phone
+- C64025 — checking messages by the marina
+- C6613 — premium a weather app on a smartphone
+- C6752 — premium a man grabbing his smartphone from a bed
+- C68555 — hiker capturing memories with smartphone
+- C68818 — young woman showing off the marina over video call
+- C6896 — a man makes a phone call at his home office
+- C69427 — premium focused woman texting on smartphone
+- C70082 — worried woman talking on phone in city
+- C72874 — stroll at the marina with smartphone
+- C73030 — serene marina texting moment
+- C731 — premium text message
+- C73294 — texting by the marina
+- C7358 — man on the phone
+- C7379 — a blurry shot of a guy using a smartphone
+- C7480 — taking calls at the office
+- C7527 — person browsing the opensea marketplace on a smartphone
+- C7544 — a girl searches for nft data using her laptop and a smartphone app
+- C7612 — girl picking up the phone
+- C7669 — woman video calling her friend in the park
+- C7699 — old man using a smartphone
+- C7884 — a guy walks with a smartphone
+- C79348 — smiling woman texting in park
+- C809 — mom video calling on a smartphone
+- C82381 — traveler texting in hotel hallway
+- C82426 — texting on the go
+- C83277 — focused texting by car trunk
+- C834 — a woman using her phone while sitting on a tennis court
+- C839 — premium email on a smartphone
+- C87324 — premium tourist texting by hollywood sign
+- C8914 — a trader performing financial analysis of cryptocurrency using a phone app
+- C8926 — an old man talking on his iphone
+- C8939 — a girl tracking a trade graph cryptocurrency on her smartphone
+- C9043 — a businessman talking on his smartphone
+- C9293 — premium a young man puts on headphones
+- C9327 — a trader performing financial analysis of cryptocurrency using a phone app and laptop
+- C9524 — social media on a smartphone
+- C9562 — angry woman texting
+- C9762 — a man calling his friend while standing in the street
+- M100046 — smiling woman using smartphone in bed
+- M100050 — woman smiling at her phone on a cozy couch
+- M100059 — a young woman relaxing on the couch with mobile phone
+- M100070 — a hand reaches for a mobile phone featuring a green
+- M100091 — the hand reaches for the mobile phone featuring a green
+- M100300 — people watching a movie in a theater while using phones
+- M100325 — person talking on a phone looking concerned
+- M100851 — anxious woman in telephone booth
+- M100852 — young woman waiting in phone booth
+- M100853 — a worried woman calling from a vintage telephone booth
+- M100854 — urban woman calling inside a vintage telephone booth
+- M100855 — young woman making call in rain
+- M100856 — woman dialing inside the telephone booth at night
+- M100857 — urban woman in distress inside a telephone booth
+- M100858 — woman discovers her loved one outside the telephone booth
+- M100859 — urban couple hug outside the telephone booth at night
+- M100863 — young couple hug outside the telephone booth
+- M100864 — urban couple hug outside the telephone booth
+- M100867 — thelephone booth with water droplets
+- M100868 — focus pull from raindrops to payphone
+- M100869 — vintage telephone booth on a rainy night
+- M100880 — dialing on a vintage hotel phone
+- M100881 — vintage landline phone in use
+- M100882 — retro green rotary phone in use
+- M100883 — retro rotary phone in use
+- M100884 — woman dialing a vintage rotary telephone
+- M100885 — dialing a green rotary phone
+- M100894 — extreme close up of vintage phone
+- M101036 — woman making a call in a graffiti covered booth
+- M101246 — young boy using a smartphone
+- M101248 — boy using a smartphone
+- M10440 — girl on a video call standing on a balcony at
+- M10441 — happy man chatting on a video call
+- M10442 — young woman talking on video call on a terrace
+- M10444 — woman chatting on video call with her cell phone
+- M10445 — woman resting on a sofa while talking on video call
+- M10446 — having a video call working from home
+- M10447 — young woman talking on video call lying on her bed
+- M10448 — young cheerful man talking on a video call
+- M10449 — woman laughing out loud during a video call
+- M10450 — man in a video call at work is discovered by
+- M10451 — girl talking on the phone in a room with a
+- M10452 — annoyed woman talking on the phone
+- M10454 — young man having a call on a balcony
+- M10457 — guy facing in the middle of a video call on
+- M11442 — young man texting in the city
+- M11548 — paying on her phone using a credit card
+- M12964 — worried man on phone call stares at laptop
+- M13168 — a man lying on the bed scrolling on his phone
+- M13234 — young woman eats sandwich in cafe while texting
+- M14090 — special agent talking on the phone
+- M144 — hands shown texting on a smartphone [JÁ USADO]
+- M1442 — man on the phone near a construction site
+- M1443 — person takes a phone call at a construction site
+- M14669 — hands texting on a mobile phone at night [JÁ USADO]
+- M15893 — screen view of friend waving hello on video call
+- M16107 — lawyer talks on phone outside courthouse
+- M16109 — man in suit checks time and makes phone call
+- M1711 — a person texting on a smartphone
+- M1712 — a person texting on a smartphone at the street
+- M1713 — a person in the street messaging on a smartphone
+- M17528 — doctor on a video call on the mobile phone
+- M17531 — young woman on the street texting on her phone
+- M17585 — unlocking phone and typing
+- M17617 — a man texting on the phone while holding a credit
+- M17707 — woman talking on the phone in the cafe
+- M1787 — a woman writing an email on her smartphone
+- M1793 — cellphone under a lamp
+- M1795 — black cellphone on a wooden table [JÁ USADO]
+- M1796 — smartphone on a wooden table
+- M1804 — businesswoman having a phone call
+- M1805 — a woman using her smartphone
+- M1818 — a man texting with a smartphone
+- M1819 — business man having a call
+- M18264 — man making a transaction on his smartphone with his card
+- M21605 — hands of a person searching a map on his cell
+- M21740 — businessman texting on a cell
+- M21840 — texting in the city at night
+- M22122 — young couple on a video call in a cafe
+- M22504 — senior man using his phone
+- M22543 — texting before a flight
+- M22836 — architect using a phone calculator
+- M22987 — people working in a call center
+- M23073 — man on a phone call at his desk
+- M23081 — woman on a phone call on data center
+- M232 — woman walks through the city speaking on the phone
+- M233 — a woman having a telephone call in her office
+- M234 — hand dialing a phone
+- M23466 — young woman using the phone with credit card
+- M23475 — young woman shopping online with a smartphone
+- M2397 — a man texting in the street
+- M24151 — a man with friends on a video call at the
+- M24165 — police officer speaking on the phone
+- M24328 — a man calling car insurance for a broken car
+- M247 — black phone on laptop
+- M248 — phone on round end table
+- M26299 — video calling from a hotel room
+- M265 — guy texting at sunset
+- M269 — a guy texting on his smartphone
+- M27911 — couple having a video call on holiday
+- M28300 — hands using a cellphone with tracking point on a green
+- M28311 — girl sending a selfie by cell phone on a green
+- M28969 — couple having a video call while camping
+- M28985 — video call over breakfast
+- M309 — man in suit making a phone call outside
+- M311 — businesswoman in glasses talking on mobile phone
+- M31354 — thief silently steals a womans cell phone from a purse
+- M31395 — woman is robbed of her cell phone by a thief
+- M31405 — responding to messages in the morning upon waking
+- M31406 — girl checking her cell phone in her bed upon waking
+- M31413 — young man lying on his bed checking his smartphone
+- M31476 — silhouette of hands texting
+- M31478 — hand texting with tv static in the background
+- M317 — businessman taking a phone call
+- M318 — rooftop phone call by businesswoman
+- M319 — colleagues looking at information on mobile phone screen
+- M32008 — confident woman texting and walking
+- M321 — man texting in a bar
+- M32435 — man with a face mask looking at smart phone
+- M32617 — man texting on cell phone while walking in park
+- M33510 — young woman texting with her smartphone
+- M34092 — hands of a businessman texting on a cell phone
+- M34197 — scheduling an appointment on a smartphone
+- M34244 — a mans hand holding a cell on a boat
+- M34263 — adult man in a restaurant viewing his cell
+- M34277 — man entering bank data in a cellphone
+- M346 — woman texting in a club entrance
+- M347 — young man texting at a club
+- M35401 — businessman texting with a smartphone
+- M35902 — entering bank data on a smartphone
+- M35918 — hands of a man using his cellphone
+- M35925 — man using a smartphone on a wooden table
+- M36102 — woman sending messages on her cell phone
+- M36120 — woman texting lying on bed during breakfast
+- M36440 — girl in the back seat of a car texting
+- M36442 — girl texting in the back seat of a car
+- M36518 — girl sitting on a bench watching her cell phone
+- M36523 — sad girl on a bench looking to her smartphone
+- M37000 — woman focused on her smartphone
+- M38481 — person entering bank details on a smartphone
+- M38484 — person typing bank details on a cell phone
+- M38504 — updating bank details on a cell phone
+- M39521 — young man on a video call in his room
+- M39773 — girl lying on her bed chatting on cell phone
+- M39774 — hands of a young woman typing on her smartphone
+- M39778 — girl on a sofa laughing during a phone call
+- M39780 — girl is awakened by messages that arrive on her cell
+- M39781 — woman on a video call with a man by tablet
+- M39782 — happy girl lying down sending messages at night
+- M39783 — man and woman outdoors during a video call
+- M39785 — woman in her bed talking on the phone and using
+- M39786 — sleeping man is awakened by his cell phone alarm
+- M39788 — woman lying on a sofa sending messages on her cell
+- M39789 — girl lying down chatting on her cell phone before sleeping
+- M39790 — worried and sad woman during a phone call
+- M39791 — young happy woman laughing during a phone call
+- M39798 — young woman waving at her cell phone on a video
+- M39799 — girl on a terrace having a video call
+- M39800 — young woman on a terrace having a video call
+- M39802 — face of a woman having a video call outdoors
+- M39803 — man in his apartment during a phone call
+- M39808 — man on a phone call at night
+- M39809 — man enters an elevator tapping his wireless earphones
+- M39813 — woman on a video call in outdoors
+- M39814 — laughing girl talking on a video call
+- M39815 — young woman ending a call
+- M39837 — seated man typing on his smartphone
+- M39954 — boyfriend hugs his girlfriend distracted on her cell phone
+- M40185 — woman with face mask while texting
+- M40191 — woman with a face mask texting on the phone
+- M40429 — mother and daughter having a video call
+- M40670 — young man with mask traveling by subway with his cellphone
+- M41166 — person answering a message
+- M41167 — happy man chatting on his cell phone
+- M41168 — man thinks how to answer a message
+- M41173 — man texting on whatsapp
+- M41174 — happy man texting on his smartphone
+- M41175 — excited man looking at his cellphone
+- M41195 — girl in the middle of a video call on her
+- M41197 — young woman on a video call lying on a bed
+- M41198 — man working on a tablet during a call
+- M41202 — young woman having a video call by tablet
+- M41208 — happy man chatting by video call on a tablet
+- M41211 — happy woman talking on video call on a tablet
+- M41336 — man having a phone call at home
+- M41638 — programmer using his cell phone while working at his desk
+- M42123 — checking an item on a sales site on a cell
+- M42136 — woman exploring an online sales page on her cell phone
+- M42623 — boys talking on cell phone
+- M42625 — young businessman on phone call
+- M42626 — office desk with smartphones
+- M42630 — copying from a cell phone to the computer
+- M42637 — young entrepreneurs on phone call
+- M42750 — man using his computer and cell phone
+- M43270 — woman typing on her cell phone
+- M43381 — woman at night lying down using her cell phone
+- M43385 — girl using her cell phone at night
+- M44049 — close up shot of a professional condenser microphone
+- M44746 — man on a phone call while working in the office
+- M44748 — portrait man on a call working in an office
+- M44751 — a man talking on his mobile phone in the office
+- M44753 — professional woman on a call in her office
+- M44785 — elegant woman taking a call in the office
+- M44788 — woman having a call with wireless headphones
+- M4523 — family making a video call on smartphone
+- M4537 — a couple of friends sitting laughing with their cell phones
+- M45690 — girl sitting in bed on a video call on her
+- M45747 — office worker wearing headphones on a video call with a
+- M45754 — marketer pointing to a graph chart on a video call
+- M4594 — happy lady has a computer video call
+- M46021 — man being interviewed over a video call
+- M4603 — a pair of employees working in a call center
+- M4610 — woman and man working at a call center
+- M46550 — woman in a leather jacket laughing at phone
+- M4658 — man and woman working in a call center
+- M46638 — hands typing a message online
+- M46763 — woman replying to messages on her phone
+- M47004 — woman talking on a video call
+- M4706 — girl on video call with her friends
+- M47089 — pixelated red error message on a laptop screen
+- M47168 — man in a shirt holding a phone with a green
+- M47207 — young man texting with a smartphone
+- M47219 — young woman says hi in a video call
+- M4771 — girl texting with face mask on the street
+- M4801 — young man sitting scrolling on his cell phone
+- M4805 — well dressed businessman sending messages on his cell phone
+- M4808 — silhouette of a man texting during the sunset
+- M4822 — woman texting on the street
+- M4833 — female doctor talking on a video call
+- M4837 — young man on the street typing on his cell phone
+- M4844 — young female employee having a video call with a client
+- M4857 — couple having breakfast cereal and see their cell phones
+- M4864 — young redhead texts on his cell phone
+- M48679 — young woman waving at people on a video call
+- M4891 — woman walking down the street watching her cell phone
+- M4911 — young woman lying down watching images on her cell phone
+- M4915 — hands of a person typing on a cell phone
+- M4918 — man with face mask sending audios by cell phone
+- M4937 — young woman stops her work to answer a call
+- M49386 — young office worker greeting colleagues on a video call
+- M49939 — portrait of a woman chatting on her cell phone
+- M50486 — a smartphone records a young woman posing in a room
+- M50692 — close up of calligrapher writing happy with marker
+- M50693 — artist writing the start of the alphabet in calligraphy
+- M50694 — calligrapher writing the alphabet in gothic style
+- M50695 — calligraphy artist writes the alphabet in gothic font
+- M50696 — calligraphy artist writing the word happy in purple ink
+- M50698 — calligraphy of the word love in cursive hand writing
+- M50699 — artist writing the word love in calligraphy
+- M50700 — front on shot of calligrapher writing soul with fountain pen
+- M50701 — side view of calligraphy artist writing love
+- M50702 — aerial view of calligrapher writing love
+- M50703 — calligrapher writing congrats with fountain pen
+- M50704 — calligraphy artist writing the word soul in black ink
+- M50705 — close up calligraphy of the word soul
+- M50706 — calligrapher detailing the word feels
+- M50707 — calligraphy artist embellishing the word feels
+- M50708 — artist writing the word feels in calligraphy
+- M50709 — close up of calligrapher adding details to the word feels
+- M50710 — aerial view of calligrapher writing feels in cursive font
+- M51121 — a young smiling woman is texting on a mobile phone
+- M51122 — woman texting with a generic cell phone
+- M51123 — woman sending messages on whatsapp zoom shot
+- M51124 — close up of a womans hands texting
+- M51125 — close up of a woman texting with both hands
+- M51126 — close up of a woman texting quickly
+- M51391 — close up shot of a girl on her cell phone
+- M51395 — girl using her cell phone in her bed waiting to
+- M51396 — face of a sleepy girl using her cell phone
+- M51397 — young woman using her cell phone lying in her bed
+- M51398 — face of a girl lying down using her cell phone
+- M5178 — young woman on her cell phone after training
+- M5312 — man in a suit and a mask checks his cell
+- M5313 — girl with masks chatting on her cell phone
+- M5320 — woman with face mask walking while texting
+- M5345 — woman in a mask sends messages on her smart phone
+- M5385 — doctor consults coronavirus patient on video call
+- M5389 — man waves hello to family on video call
+- M5406 — quarantined man with smartphone video chats on sofa
+- M5420 — quarantined man chats on smartphone on couch
+- M5432 — sick man chats on video call from couch at home
+- M5449 — reveal view of sick man on video call with doctor
+- M5467 — sick man in video call with doctor during virus lockdown
+- M5479 — elderly couple enjoying video call on sofa with tablet
+- M5557 — man asks for coronavirus diagnosis on video call
+- M556 — photographer using a smartphone
+- M5681 — angry woman screams into mobile phone in office
+- M6509 — businessman using his phone in the office
+- M6529 — students talking on a video call
+- M6708 — friends texting
+- M6710 — man checking his phone
+- M8741 — man laughing out loud at his cell phone
+- M8742 — young man upset while talking on the phone
+- M8744 — young man upset and frustrated receiving a message
+- M8745 — excited girl talking on video call with her cell phone
+- M8757 — annoyed and frustrated man with his smartphone
+- M8762 — man says hello on smartphone video call
+- M8771 — family waves hello to woman on laptop video call
+- M8785 — man smiles at facebook video call from family
+- M8790 — man laughs at facebook video call outside cafe
+- M8839 — hand holding mobile phone with greenscreen
+- M8891 — friends say hello on video call while walking outdoors
+- M8930 — man gets emotional on mobile video call
+- M9082 — woman opens video call on futuristic hologram panel in bed
+- M9183 — woman having a video call at the park
+- M9256 — woman texting happily on social media
+- M99893 — a young man wearing headphones focus on texting on his
+- M99896 — a young man talking on his mobile phone in front
+- M99953 — a confident performer in corset waving her hands energetically with
+
+## Idosos (52)
+
+- C1517 — a senior man using a laptop
+- C2321 — grandfather and granddaughter browsing on a laptop
+- C240 — old man closing a door
+- C274 — grandfather and granddaughter talking
+- C2907 — premium a senior man putting on glasses to use a laptop
+- C5227 — old man using a laptop
+- C7495 — grandfather and granddaughter using laptop
+- C824 — grandfather and granddaughter
+- C9667 — old man entering his apartment
+- C9731 — an old man leaving his apartment
+- M12518 — arab old woman praying with a rosary at home
+- M12529 — grandmother chatting with her cat
+- M12530 — elderly woman checking her blood pressure
+- M12531 — grandmother shopping in a clothing store
+- M13044 — young man walking with grandfather in a wheelchair
+- M21674 — grandparents reading a letter from their family [JÁ USADO]
+- M22226 — granddaughter visiting an elderly relative
+- M22510 — senior couple walking at sunset
+- M22599 — senior couple with a fake mustache
+- M22718 — elderly woman sitting on a pew in a church
+- M26322 — senior couple at the waterfront
+- M32080 — senior man playing the accordion
+- M32129 — senior man reading information on the computer
+- M32139 — senior man using laptop at home
+- M32182 — senior woman looking at reading device
+- M32186 — senior couple reading on the bed with devices
+- M32837 — very happy and surprised senior woman portrait
+- M33307 — elderly woman sitting in front of the window
+- M33358 — gray haired old man counting a few coins
+- M33499 — old woman combing her gray hair
+- M33681 — elderly woman in wheelchair looking out the window
+- M33686 — calm elderly woman in wheelchair in a park
+- M33699 — senior woman disinfecting the steering wheel
+- M33707 — senior woman showing keys to her new car
+- M33721 — senior woman sneezing
+- M33788 — old woman looks out the window wearing mask
+- M33968 — silhouette of an old man relaxing at sunset
+- M35979 — young girl caressing her grandmother hands
+- M36555 — boy playing with his grandmother around a tree
+- M4180 — commuters at new yorks grand central station
+- M4273 — senior female playing golf
+- M43774 — talented pianist playing an elegant grand piano
+- M4738 — old couple sitting on a bench in a park
+- M4764 — cute old couple in a park
+- M48790 — elderly person gripping the handle of their walking cane
+- M48998 — elderly couple waving hello at camera while chatting on a
+- M49020 — elderly man looks out of his window with a hopeful
+- M49280 — senior engineer communicating via walkie talkie
+- M5383 — grandmother receiving a visit from her granddaughter
+- M5777 — senior woman chats over romantic dinner in modern restaurant
+- M6640 — senior couple enjoying the outdoors
+- M9070 — elderly woman online shopping uses credit card payment
+
+## Banco, dinheiro, cartão e caixa eletrônico (105)
+
+- C1291 — online shopping with credit card
+- C24911 — calculating expenses with cash and calculator
+- C29762 — premium keycard access to modern door lock
+- C3270 — close up of barista taking money from a customer
+- C4079 — putting boots on the cash desk
+- C4206 — a man picks up a game card while playing the lovopoly board game
+- C4325 — premium brazilian coins and banknotes
+- C4419 — a motorcyclist getting his wallet and credit card out of his bag
+- C5376 — transferring card details
+- C5513 — cashier folding a jacket
+- C6567 — premium a male video editor puts an sd card in a laptop
+- C6935 — a man draws a game card with the text give a compliment
+- C7958 — a man counting 50 euro banknotes
+- C8050 — premium a customer pays barista with cash
+- C8143 — task card
+- C8577 — an old brazilian banknote
+- C87392 — secure online payment process
+- C8815 — brazilian banknotes fall in a heap
+- C91003 — blurry online payment interface
+- C91818 — online payment and budget planning
+- C9403 — a man counting money
+- C9719 — giving cashier a credit card
+- M11549 — woman making a credit card payment
+- M12042 — cannon on the banks of new york city
+- M12823 — closeup of hand using atm touchscreen
+- M13227 — top view of credit card pay over world map
+- M14009 — online shoping with credit card
+- M15545 — american banknote
+- M15914 — woman pays cashier with credit card in shop
+- M16374 — man entering credit card details
+- M17201 — closeup of a us banknote
+- M17418 — holding credit card and typing on a keyboard
+- M17618 — typing credit card information on a laptop
+- M17666 — man with credit card ordering online
+- M17667 — finger typing and unfocused hand holding credit card
+- M18247 — hands of people during a money transaction
+- M18261 — fast sequence of detailed photos of banknote parts
+- M18297 — man searching for a banknote in his wallet close up
+- M18299 — person realizes that they no longer have money in his
+- M18302 — person counting money
+- M18305 — banknotes falling on a dark background
+- M20859 — counting money on a table
+- M21325 — woman pays with a credit card in a clothing store
+- M21780 — using a card machine at the counter
+- M21911 — using an atm machine
+- M21992 — typing a credit card number
+- M22158 — lots of alligators on a river bank
+- M22991 — businessman closing his mouth with money
+- M23168 — counting money and giving it to another person
+- M23523 — hands demanding more money
+- M23524 — man separating money for different budgets
+- M23725 — female hands counting cash
+- M24139 — paying dress with a credit card in the store
+- M24483 — poker player revealing two cards
+- M24582 — fanning out bank notes
+- M24583 — dropping bank notes
+- M24584 — counting bank notes
+- M25451 — taking money from a locked safe
+- M25545 — man sitting on the bank of a river with ducks
+- M26848 — bank of a river in a city with office buildings
+- M27138 — sheep eating grass on the bank of a river
+- M28723 — woman with laptop holding a credit card
+- M34180 — man checking his empty wallet without money
+- M34212 — typing on the computer numbers a bank card
+- M34241 — man in suit copying data from a card in his
+- M34258 — typing a credit card data into a computer
+- M3486 — rocky sea bank with a small boardwalk
+- M3660 — two elephants on the banks of a river
+- M38401 — graph of money growing with coin towers underneath
+- M38425 — boy working relaxed on the bank of a river
+- M38445 — man with a laptop on the bank of a river
+- M38482 — entering bank details on a computer
+- M38489 — person typing his bank information on a laptop
+- M38493 — typing bank details on a laptop
+- M38502 — typing bank details on a tablet
+- M38503 — man entering credit card details on his device
+- M43608 — aerial tour over the bank of a river
+- M44360 — athletic man and woman jogging on the bank of a
+- M45701 — rotating shot of a large volume of money
+- M45702 — money counting machine counting a stack of bills
+- M45703 — money counting machine counting up money
+- M45704 — bitcoin and cash sitting in front of a stock chart
+- M45705 — rich man surrounded by money waving bills
+- M46117 — judge shows money on table
+- M46980 — close up to a counting money machine
+- M46988 — dollars in cash on a table
+- M47005 — a lot of cash over a rotating background
+- M47009 — counting money with a calculator
+- M47011 — wallet full of cash money
+- M47192 — bearded man counting money while he smokes
+- M47413 — man sitting at his laptop making an online payment
+- M47733 — close up of a money counting machine
+- M48520 — close up of man sharing business card
+- M49134 — money counter machine working
+- M5023 — different banknotes a close up of money
+- M5025 — details of a pair of battered old banknotes
+- M5443 — man using online pay with credit card in cafe
+- M5746 — businessman online shopping in office holds credit card
+- M5882 — paying with a credit card online
+- M6093 — woman making a card payment
+- M6367 — using a bank terminal during a card payment
+- M8994 — man uses credit card on pos to pay for meal
+- M9077 — woman uses future hologram technology for online payment
+- M9086 — man shops online in cafe and pays with credit card
+- M9230 — paying for an online purchase with a credit card
+
+## Hacker, segurança, dados e servidores (132)
+
+- C3816 — premium smart lock door opening close up
+- C652 — a trader writing analytical data in a notebook
+- M101383 — flock of birds over urban lake
+- M21053 — colorful data scrolling
+- M22018 — boat in a lock
+- M22019 — large passenger ship in a lock
+- M22966 — engineers working in the data center
+- M22970 — a hacker with the laptop in a dark room [JÁ USADO]
+- M22972 — installing a security camera in data center
+- M22981 — young engineer walking through data center
+- M23007 — woman on server room logs into the computer
+- M23028 — a woman working on the security camera room
+- M23040 — a woman working with a computer in the server room
+- M23108 — young man walking in the server room
+- M23109 — datacenter engineer with a tablet
+- M23152 — thief cracking a car door lock
+- M23153 — thief unlocking a car door
+- M23158 — engineer team working in a server room
+- M23159 — server room under attack
+- M23161 — young engineers working on server room
+- M23162 — engineer walking among server racks
+- M23210 — technician working with cables in the data center
+- M23211 — woman with security helmet in the control room
+- M23214 — man working with data center computer
+- M23215 — close up of server racks lights
+- M23216 — long server rack hallway
+- M23217 — engineer walking in data center hallway
+- M23218 — information technology specialist in data center
+- M23219 — long hallway in data center [JÁ USADO]
+- M23268 — security camera crew working in control center
+- M23277 — young woman walking in server hallway
+- M23280 — close up of security camera and smoke
+- M23281 — hands working with laptop in datacenter
+- M23282 — bluish data center hallway
+- M23283 — security cam capturing a fire in the server room
+- M23374 — timelapse of engineers working on data center
+- M23375 — engineers setting up a data center
+- M23380 — time lapse of engineers working in a data center
+- M23497 — man in hoodie hacking a data center
+- M23498 — thief in server room being recorded by a camera
+- M23700 — man working with vr glasses in data center
+- M23703 — two thiefs hacking a data center
+- M23704 — thief blocks cctv camera and then hacks the server
+- M23705 — hacker sitting on the ground of data center
+- M24029 — hacker introducing malware to data center
+- M24032 — two hackers escaping from data center
+- M24033 — data center at night
+- M24035 — hacker with face mask entering data center
+- M24036 — camera recording hacker entering data center
+- M24038 — hackers escaping an exploding data center
+- M24445 — passengers going through airport security
+- M27221 — man cutting a wooden board with a large lock
+- M28886 — analog wall clock on a black background in a closed [JÁ USADO]
+- M28892 — an hourglass and an analog wall clock
+- M28893 — black analog clock in a very close shot
+- M28897 — slowly approaching a clock on a black background
+- M28899 — woman turning off her alarm clock in the morning
+- M28902 — alarm clock ringing on a wooden table
+- M28978 — hacker raising his hands in success
+- M28979 — hackers working together in an apartment
+- M29903 — successful hacker finishing programming
+- M29904 — portrait of a hacker wearing a mask
+- M30010 — two office men approving data with a handshake
+- M30286 — information blocks virtual world concept
+- M30869 — virtual network environment in a 3d render
+- M31372 — two thieves recorded on a security camera
+- M31378 — hacker with balaclava working in front of a computer
+- M31380 — mugger opening the lock at night
+- M31590 — digital network representation
+- M35896 — man tries to open a padlocked wooden door [JÁ USADO]
+- M36381 — hands of a stylist taking a lock of hair
+- M39834 — metal bells alarm clock
+- M4079 — big ben clock time lapse
+- M42897 — woman turning off her alarm clock
+- M4478 — disk clock
+- M45419 — hand writes teamwork in block letters on a blackboard
+- M46483 — man in a hoodie raises his fist outside a garage
+- M46577 — shot from behind of a man in a hoodie working
+- M46578 — man wearing a hoodie in a dark room typing aggressively [JÁ USADO]
+- M46627 — hacker with a digital glitch over his face
+- M46632 — a computer hacker with a mask in black hood
+- M46633 — hacker working with a laptop in a dark room
+- M46636 — hacker making a new software at home
+- M46685 — business people analyzing marketing data
+- M46753 — construction workers with uniforms and security helmets
+- M46979 — little clock over bills background
+- M46981 — a lot of dollars are safe inside a security box
+- M47050 — close up of fiber optics in a server room
+- M47085 — mail post box storage lockers
+- M47215 — anonymous hacker woman playing video games
+- M47320 — close up of password on a computer screen
+- M47321 — computer hacker logging a website with code
+- M47793 — stock exchange information data
+- M47796 — stock subscription data in a real time screen
+- M48922 — security camera rotates and follow the object
+- M4908 — person working while scrolling on social networks
+- M49125 — hacker writing code on laptop
+- M49126 — hacker on the dark web
+- M49128 — hacker working at night
+- M49247 — close up of a hacker working on a computer in
+- M49248 — hacker writing code on a computer screen
+- M50734 — a young hacker is in front of various screens with
+- M50735 — a hacker is in front of various screens with technological
+- M50737 — a hacker with a laptop runs code on four screens
+- M50738 — a hacker with a laptop runs code on multiple screens
+- M50740 — close up side view of hacker working on a laptop
+- M50741 — side view close up of hacker working on a laptop
+- M50745 — long haired hacker wearing anonymous face mask in front of
+- M50751 — hacker in a scary mask sitting in front of computer
+- M50811 — a young hacker typing on a laptop in front of
+- M5379 — a group of hackers celebrate breaking in
+- M5386 — depressed man wearing mask sits on balcony in covid lockdown
+- M5396 — hud style animated data graph growth trend visualization
+- M5404 — marketing infographic data charts animation
+- M5410 — busy hackers talk between data visualisations on monitors
+- M5424 — animated growth chart data infographic
+- M5437 — colorful marketing data hud graph animation
+- M5463 — hud style animated financial data visualization
+- M5728 — hacker fails at cybersecurity attack on server
+- M5867 — hacker team working together
+- M5868 — hackers breaking through security
+- M5869 — female hacker wearing a mask
+- M5871 — hacker using vr
+- M5872 — group of hackers working
+- M5873 — hackers using computers
+- M5874 — male hacker sitting at his desk
+- M5875 — hacker celebrating a successful breach
+- M5879 — male hacker being denied access
+- M5880 — hackers with multiple screens
+- M5881 — hackers run from the police
+- M7891 — data cables in a server room
+- M9186 — pirate or hacker flag waving close up
+
+## Escritório, documentos e reuniões (231)
+
+- C1514 — solitude by the sea reading time
+- C1731 — office building
+- C1936 — a man licking cigarette paper
+- C3045 — a man actively and seriously talks during a virtual meeting
+- C3235 — premium colleagues working together in the office
+- C3564 — woman sitting at her desk and studying at home
+- C3740 — premium a young man and woman discussing work in the office
+- C4089 — premium businesswoman working in a cafe
+- C4630 — a girl browsing the nft marketplace while sitting on an office chair
+- C4636 — a guy puts the paper into the shredder
+- C4792 — close up of a man talking on a virtual meeting
+- C4871 — a guy puts the paper in the printer machine
+- C5252 — a printer at work in the office
+- C56572 — serene reading time by the seashore
+- C568 — queue to a newspaper store
+- C6120 — man steaming a sweatshirt
+- C65988 — businesswoman enjoying cityscape
+- C725 — premium businesswoman writing carefully in a notebook
+- C7343 — premium a team prepares to work in the office
+- C7380 — premium a man finishes a virtual meeting
+- C7789 — premium a man sits down at the desk in the office
+- C7812 — businesswoman waiting for a meeting
+- C7943 — teamwork in the office
+- C80418 — premium businesswoman enjoying a break outdoors
+- C8234 — premium a man says hello and talks on a virtual meeting
+- C8393 — a young man adjusts an electric fan in the office
+- C8700 — a man cutting rolling paper
+- C8865 — premium workers make copies of documents on the printer
+- C88686 — freelancer enjoying natures office
+- C9085 — a man working on a laptop at the office
+- C944 — premium young professional facing modern office
+- C9706 — a man happily talks on a virtual meeting
+- C9981 — a male worker conducts a meeting by showing statistics
+- M100311 — young professionals working in a colorful office space
+- M100319 — team collaboration in a colorful workspace
+- M100323 — woman working at laptop in office setting
+- M100328 — office meeting with laptops and focused colleagues
+- M100330 — collaborative meeting with a digital display
+- M100781 — a mature couple enjoys reading at the park bench on
+- M100797 — a mature couple reading sitting at the park bench share
+- M101119 — teamwork recycling with dad and son
+- M101310 — college desk with backpack and supplies
+- M101311 — college study desk with supplies
+- M101313 — overhead shot of teen study desk
+- M101385 — modern office buildings reflecting on a lake
+- M101392 — woman working on retro modern desk setup
+- M101393 — frustrated woman typing at desk
+- M101400 — aesthetic desk with retro tools
+- M101534 — desk height view of woman taking notes
+- M101536 — focused woman at office
+- M101541 — indian woman working at desk
+- M101543 — smooth pan of focused man at desk
+- M101554 — desk level pov of man working
+- M101654 — hands cutting wrapping paper
+- M101661 — hands folding wrapping paper corners
+- M10404 — mother reading a story to her daughter to go to
+- M12126 — girl receives good news and celebrates with her friend
+- M13192 — audience raise hands at business conference
+- M13218 — silhouette of business people talking by highrise window
+- M13315 — tired woman fed up with work throws papers in air
+- M13881 — man with pen and paper on the desk
+- M14040 — a business woman at a video conference at the office
+- M14044 — news reporter live on the street
+- M14126 — man with calculator and legal documents [JÁ USADO]
+- M14396 — hands typing on a black keyboard on a desk
+- M15186 — cutting paper for a bouquet
+- M153 — coworkers informal meeting
+- M15362 — burning white paper
+- M15858 — lawyers talk with client in late evening office
+- M16104 — lawyers discuss strategy in late night meeting
+- M16106 — lawyer explains to client with laptop in office
+- M16108 — lawyer types on laptop in highrise office with city view
+- M17049 — signing a contract with a pen
+- M17050 — signing the dotted line of a contract
+- M17051 — signature in contract with a pen close up
+- M17416 — signing a contract with a pen close up
+- M17665 — man typing on a laptop in the desk
+- M17694 — man destroys contract
+- M1800 — a woman working on her laptop at an office
+- M1814 — business person working with devices
+- M1820 — a man working at the office
+- M20235 — filling in an exam paper
+- M204 — person working at the office
+- M21561 — stressed man at his desk
+- M22087 — unrolling toilet paper
+- M22827 — paperwork with a calculator
+- M22856 — comparing documents in an interview
+- M22961 — a man is presenting a business report
+- M22997 — surveillance team checking the cameras
+- M23016 — surveillance team looking at monitors
+- M23112 — three persons signing contracts
+- M23115 — man signing off a contract and handshake
+- M23186 — police officer checking a crime scene
+- M23222 — signing on a contract on a wooden table
+- M23226 — man working with the computer in the office
+- M23243 — businessman talking with engineers
+- M23247 — police officer with a flashlight in a dark room
+- M23253 — police officer with a flashlight smoking
+- M23318 — businessman talking to an audience
+- M23740 — couple at lawyer office
+- M23742 — i am working with laptop in the office at night
+- M23835 — portrait of a police officer with a vest and with
+- M23980 — police officers watching an alert on a map
+- M24057 — businessman discussing business charts
+- M241 — signing a contract [JÁ USADO]
+- M24191 — worried man announcing bad news to the team
+- M24394 — police officer looking for evidence on crime scene
+- M24538 — architect drawing lines on a document
+- M25240 — office objects and a man working in the background
+- M25255 — slicing paper we cutting equipment
+- M25260 — office printer printing
+- M25262 — woman looking at documents on a windy street
+- M261 — office meeting [JÁ USADO]
+- M28298 — friends man and woman meeting on a green background
+- M28359 — manny is reviewing a business graph
+- M28360 — man signing a contract with pen
+- M28362 — signing a business contract close up
+- M28751 — woman working with a laptop computer at the office
+- M29971 — doctor typing on a tablet in the desk
+- M307 — person signing a contract
+- M312 — woman and man working in an office
+- M313 — colleagues reading a report together
+- M314 — two business people exit a building
+- M315 — two business people walk in an office hall
+- M32770 — female police officer interrogating a person at a crime scene
+- M32785 — analyzing with a magnifying glass is a bullet casing at
+- M33116 — co workers reviewing a document
+- M34002 — businessmen walking in a row through a door
+- M34096 — two businessmen in suits reviewing some documents
+- M34154 — unrolling an old paper tied with string
+- M35182 — businessmen walking through a door in the desert
+- M35293 — businessmen walking through a door in a desert
+- M38492 — signing a document with blue ink
+- M38512 — signing an important document
+- M39496 — two coworkers talking about some documents
+- M39516 — woman sealing documents in the office
+- M39838 — man working in an office at night
+- M39839 — man working on computer in an office at night
+- M39840 — young man in front of the computer in an office
+- M39841 — young man working in an office overtime
+- M39847 — man in an office throwing sheets of paper in the
+- M39848 — man in an office taking a white sheet of paper
+- M39849 — hand of a person taking a blank sheet of paper
+- M39854 — exhausted man working in an office overtime
+- M39856 — hand of a man in an office taking a sheet
+- M39857 — hand of a man on a desk taking a sheet
+- M39858 — office man throwing sheets of paper in the air
+- M4108 — paper lamps close up in the street
+- M4109 — large paper lamp in the street
+- M41192 — pov flipping through a newspaper
+- M41201 — woman browsing a news page on a tablet
+- M41652 — hands of a programmer working on a desk
+- M4170 — corporate and business buildings in the city
+- M42617 — people working in the office
+- M42641 — young people working together in the office
+- M42643 — presentation in a business meeting room
+- M42644 — business meeting in a meeting room
+- M42645 — woman with glasses working in the office
+- M42648 — business man exposing graphs
+- M42649 — man discussing income in a meeting
+- M42654 — business woman concentrating on her laptop
+- M42656 — thoughtful woman working in her office
+- M42664 — professional woman working in an office
+- M42665 — professional woman working on graphs in the office
+- M42666 — presentation during a work team meeting
+- M42751 — office woman at her desk on a green background
+- M43477 — soccer team cheering together
+- M43478 — business days soccer players playing with the ball
+- M43479 — hands of a soccer team making a cheer
+- M43481 — play between two teams in a soccer match
+- M4380 — towers and steam outlets of an industrial plant
+- M44750 — satisfied woman finishes her work and leaves the office
+- M44786 — woman working on a computer in an office
+- M44787 — elegant woman working hard in an office
+- M45150 — painting with red paint on paper
+- M4526 — frustrated woman throws paperwork on the floor
+- M4542 — father and son reading a book together
+- M4547 — people having a work meeting around a table
+- M45706 — investor checking stock charts on a tablet at the office
+- M45922 — young businessman overwhelmed with paperwork
+- M45923 — close up of a tall stack of papers on a [JÁ USADO]
+- M4607 — bored young office workers in an office
+- M4634 — sad businessman talking head on
+- M4648 — architect talking to businessmen
+- M46503 — contract that is being signed
+- M46504 — woman looking stressed as she does paperwork
+- M46505 — woman completing paperwork with a calculator
+- M46533 — woman signing the paperwork
+- M46680 — brainstorming over the meeting table
+- M46750 — ceo giving feed back to his team
+- M46977 — documents with magnifying glass on a desk [JÁ USADO]
+- M4700 — woman stressed and wailing profile view
+- M4727 — police officer talking to a woman
+- M47732 — documents with magnifying glass on a table [JÁ USADO]
+- M47928 — girl plays with a paper airplane in a field at
+- M47929 — playing with a paper aeroplane in the countryside
+- M4793 — happy young man writing with pen and paper
+- M47932 — hand flies a paper airplane with the blue sky in
+- M4802 — people ending a business meeting
+- M4804 — two people working in a large office
+- M4809 — business people at work meeting
+- M4811 — formal dressed people worked in an office
+- M4813 — business partners meeting
+- M4817 — two people at a business meeting
+- M4834 — therapist in his office talking to the camera
+- M4835 — office workers hands typing on their devices
+- M48517 — close up view of hands cutting paper with knife and
+- M4876 — woman working in an office flips smiling
+- M48976 — accounters analyzing business documents
+- M49219 — a businessman pointing a bad inversion
+- M4948 — blonde woman reading a book
+- M49484 — little boy playing with a paper plane at the park
+- M49486 — having fun with a red paper plane
+- M49487 — portrait of little boy with a paper plane
+- M4950 — woman sitting reading in pajamas
+- M4951 — young woman doing home office in her dining room
+- M4956 — business woman working from home
+- M50487 — a young influencer woman singing in a room with paper
+- M51401 — profile face of a sleepy girl looking out the window
+- M5488 — depressed businessman rubs face and looks at report
+- M5601 — stressed businessman rubs eyes while working on laptop
+- M5608 — stressed business man takes a break in office
+- M6005 — tactical team moving
+- M6174 — tired woman reading in the library
+- M8904 — stressed man works on laptop in minimalist office
+- M9061 — young team having stressed meeting in office
+- M914 — open office space
+- M916 — three women meeting
+- M917 — open office space and staircase
+- M918 — busy office space
+- M99898 — a young business man working on a laptop on the
+
+## Computador e digitação (210)
+
+- C1054 — student typing on a laptop
+- C1093 — a mature man using a laptop
+- C1187 — a woman s hands typing on a keyboard
+- C137 — a man typing on a laptop
+- C1544 — a young man opens his laptop in a cafe
+- C1550 — young man typing on a laptop
+- C1564 — premium delicate hands are opening a laptop
+- C1905 — woman using a laptop
+- C2309 — student doing an assignment on a laptop
+- C2313 — premium a man shutting down his laptop after completing his work
+- C2673 — typing on a laptop at the airport
+- C2728 — premium a man adjusts the monitor
+- C2802 — person typing on a keyboard
+- C2893 — a busy worker working on a modern laptop
+- C3006 — premium a girl is typing something on the whiteboard
+- C32520 — urban professional on laptop outdoors
+- C3645 — a woman typing on a laptop
+- C3763 — premium a young woman connects a hard drive to her laptop
+- C3764 — a young man takes a laptop out of his bag
+- C3786 — premium a woman s hands typing on a laptop
+- C3805 — typing quickly on a laptop
+- C4218 — girl typing on a laptop
+- C426 — a guy is typing something on the whiteboard
+- C4383 — the sensory screen on the printer machine
+- C4597 — premium types on a keyboard
+- C4707 — close up of woman typing
+- C4743 — closing laptop
+- C4901 — a girl walking around the room holding a laptop in her hands
+- C4926 — close up of a man typing on the keyboard
+- C4953 — workers typing and closing their laptops
+- C5131 — typing
+- C550 — typing on computer keyboard
+- C552 — woman on her laptop on a plane
+- C55496 — blurred tablet screen close up
+- C5698 — typing on a white keyboard
+- C5707 — browsing information about nfts on a laptop
+- C5794 — woman typing on laptop
+- C5877 — typing on laptop
+- C6414 — premium woman s hands are typing on a keyboard
+- C6507 — typing on a black laptop
+- C6593 — typing on macbook keyboard
+- C68919 — contemplative woman with laptop outdoors
+- C7199 — slow motion typing on a laptop
+- C7349 — images of a subscribe logo on a laptop screen
+- C74268 — blurred online form on a screen
+- C763 — female hands typing
+- C775 — fingers typing on a laptop
+- C7847 — male hands typing
+- C8013 — typing on a laptop keyboard
+- C8021 — using laptop at the airport
+- C805 — woman with blue nails typing on a laptop
+- C8237 — premium a man scrolling through photos on his laptop
+- C878 — woman s hands typing on a laptop
+- C8842 — typing on a white keyboard
+- C8950 — person browsing the opensea marketplace on a laptop
+- C9066 — woman opens laptop and types
+- C9245 — premium taking out a laptop from a backpack
+- C94 — premium connecting a hard drive to a laptop
+- C957 — opening the laptop
+- C9617 — typing on the keyboard
+- C967 — checking emails on a laptop
+- C9693 — woman opens laptop at airport
+- C9754 — a casual man typing on a laptop
+- C9766 — typing on a laptop and closing it
+- M100057 — a young woman typing on a laptop computer on the
+- M100307 — two colleagues working together at a laptop
+- M100324 — person working on a laptop wearing a cream shirt
+- M100326 — person taking notes while working on a laptop
+- M100878 — woman typing on antique adding machine
+- M100879 — vintage adding machine typing
+- M100887 — hands typing on retro typewriter
+- M100892 — typing on a vintage typewriter
+- M101252 — boy typing on a laptop computer and a headset at
+- M101403 — pan shot of typing hands
+- M101538 — hand using mouse and typing
+- M101539 — feminine hands typing on keyboard
+- M101546 — hands typing on led decorated keyboard
+- M101549 — close up of hands on led keyboard
+- M101553 — close up of hands typing and using mouse
+- M10325 — computer code running on a screen
+- M10396 — typewriter viewed in great detail when typing
+- M13906 — fingers typing on a laptop browsing the internet
+- M13937 — person typing on old typewriter
+- M14098 — man using the touchpad on a laptop
+- M14102 — woman typing on a laptop on the table
+- M146 — hands typing away on a laptop
+- M14606 — typing on a tablet by the window
+- M14614 — girl typing on laptop computer in the library
+- M14724 — reflection of screen information on glasses
+- M14771 — screen information reflects on a womans glasses
+- M16424 — hands typing on a flat keyboard
+- M1728 — software developer working on code screen close up
+- M1731 — hands typing slowly on laptop
+- M17315 — a scientist typing on a laptop in the lab
+- M1735 — a developer typing on a laptop top view
+- M17450 — working on a laptop at night
+- M17682 — doctor using a facemask typing on a computer
+- M17695 — hands typing on computer keyboard
+- M1781 — typing on a laptop close up [JÁ USADO]
+- M1808 — close up shot of a person typing on a laptop
+- M1811 — a person typing on a keyboard
+- M1813 — a persons hands typing on a wifi keyboard
+- M221 — reflection of a screen in glasses
+- M22869 — typing on a flat keyboard
+- M23087 — a worker with a laptop or on a solar panel
+- M23673 — a woman monitoring close circuit surveillance
+- M23726 — worker in front of the computer with headset
+- M24031 — man using laptop on bitcoin mining farm
+- M242 — typing on a laptop
+- M25575 — young very frustrated woman in front of her computer
+- M25585 — frustrated boy throws a tantrum while working on his computer
+- M28237 — woman typing on an english keyboard
+- M28756 — woman typing fast on the laptop
+- M29990 — engineer working on his computers in his workshop
+- M29993 — working on the computer in a technology workshop
+- M308 — man working on his laptop
+- M31363 — balaclava assailant steals computer from car
+- M32196 — young woman with laptop working in the couch
+- M34837 — virus attack red text on a screen
+- M34838 — numeric code on screen close up
+- M38485 — man typing on a small tablet
+- M38491 — hands of a person working on a laptop
+- M38496 — person typing with the finger on a tablet
+- M39851 — man with glasses working on a computer
+- M39852 — frustrated and tired young man working on computer
+- M41266 — hands of a person typing on an editing keyboard
+- M41268 — fingers typing extreme close up
+- M41287 — hands of a person typing on a computer keyboard
+- M41637 — programmer working with codes on a computer
+- M41639 — experienced programmer working on a large computer
+- M41640 — hands of a programmer working on his computer
+- M41642 — professional programmer working on a big computer
+- M41643 — experienced programmer working on a computer
+- M41644 — software developer working on a computer
+- M41647 — professional programmer working on a large computer
+- M41649 — close up view of a screen with programming codes
+- M41656 — experienced programmer working on a powerful computer
+- M41658 — programming codes on a screen close up
+- M41659 — programmer working on his computer
+- M4187 — dj playing on a stage with led screens
+- M42121 — man and woman buying online on a laptop
+- M42620 — people working on laptops
+- M42650 — man exposing from a screen
+- M42653 — woman finishes working on her computer
+- M42662 — hands of a woman typing on a laptop keyboard
+- M42748 — a productive workday typing on a computer
+- M42749 — woman working on a computer
+- M43260 — woman finishes working on her laptop
+- M43527 — hands of a man playing on a computer
+- M43539 — womans hand using computer mouse
+- M44071 — boy editing a video on a computer
+- M44073 — boy working on his computer
+- M44749 — elegant woman working on a computer
+- M45300 — close up of a keyboards letters
+- M45708 — investor checking stock prices on a tablet screen
+- M46290 — tv static on an old tv screen in the dark
+- M46291 — tv static playing on a tv screen in a dark
+- M46574 — man aggressively typing on his laptop in the dark
+- M46639 — programmer hacking a system on the laptop
+- M46681 — womans hands typing in a laptop keyboard
+- M46746 — engineers working with multiple computer screens
+- M46766 — silhouette of a man typing away on a tablet
+- M46976 — man sending emails on a laptop
+- M4713 — woman researching on the computer
+- M47211 — forex in real time on a screen
+- M4757 — little girl doing homework on a laptop
+- M4827 — hands of a man typing on a laptop
+- M48503 — intensely focused young man working on a computer
+- M48579 — woman sipping her coffee in front of a laptop green
+- M4907 — person typing on a computer in detail
+- M49122 — code on green letters on screen
+- M4916 — man visiting twitter on his laptop
+- M4938 — hands of a girl working on a computer
+- M4939 — hands of a woman typing on a laptop
+- M4954 — woman finishes work and closes her laptop
+- M50617 — computer screen with a window showing different resolutions and technology
+- M50736 — script code running on four screens in front of a
+- M50743 — person in an anonymous mask sits in front of computer
+- M50746 — looking at young person with long white from behind computer
+- M50748 — computer screens display green text and matrix like scrolling
+- M50749 — a laptop and four screens running green text scripts
+- M50765 — a focused man typing on a laptop on the couch
+- M50810 — a young man is watching several monitors with code patterns
+- M50812 — a white haired man in front of computer monitors with code
+- M51384 — girl with insomnia in her computer in her bed
+- M51386 — young woman using her laptop in her bed falling asleep
+- M51388 — woman with insomnia lying down using her laptop
+- M51392 — young woman with insomnia on her laptop in her bed
+- M51406 — woman with insomnia lying down at night using her laptop
+- M51602 — a young gamer in front of a pc monitor with
+- M51609 — fingers pressing the backlit gaming keyboard
+- M51625 — hands typying in a retro backlit keyboard
+- M5598 — stressed man in suit yawns and types on laptop
+- M8815 — focused man types on laptop in outdoor cafe
+- M8843 — confused man in dark room stares at laptop screen [JÁ USADO]
+- M8907 — developer types on laptop in cafe and sips coffee
+- M8921 — woman prepares dinner while video chatting on laptop
+- M9055 — stressed man working on laptop tries to solve problem
+- M9075 — man typing on laptop outside smiles in triumph
+- M9117 — stressed woman treats headache while working on laptop
+- M9125 — man typing on laptop reflected in glasses
+- M9173 — man typing on laptop with black background
+- M9182 — man types on greenscreen laptop in bedroom
+- M9237 — stressed man working from home on his laptop
+- M9525 — code on blue screen
+- M9757 — computer code in the screen
+- M99901 — a young focused man wearing a denim jacket is typing
+- M99906 — top perspective of the hands of a man typing on
+- M99907 — a young man types on a laptop computer with a
+- M99910 — beside a modern laptop the hands write a note on
+
+## Emoções: preocupação, estresse, sozinho, pensando (40)
+
+- M100567 — worried woman peers anxiously through a doorway
+- M11487 — worried woman looking straight ahead
+- M11666 — worried woman outside
+- M16289 — worried woman at the window
+- M21398 — person stressed by his work
+- M21412 — mother advising her sad daughter
+- M25251 — worried man by the window of a train in movement
+- M25579 — sad and desperate man lying on a sofa
+- M25589 — sad and desperate girl crying and screaming
+- M25592 — young stressed woman with headache
+- M32374 — close up of a man wearing a face mask thinking
+- M33091 — young woman worried about her pregnancy test
+- M33208 — sad woman crying calmly in the dark
+- M35973 — worried pregnant woman and her husband at home
+- M36007 — stressed woman spinning in her chair
+- M42270 — face of a very worried girl
+- M42973 — upset man and sad woman
+- M44447 — basketball player shooting baskets while training alone
+- M4511 — sad girl looking out the window
+- M4513 — worried and sad woman hugging a cushion
+- M4516 — little girl on the floor worried next to a bed
+- M4534 — worried woman sitting in an armchair
+- M4552 — worried woman hugging a cushion
+- M46713 — sad boy looking at the camera
+- M4701 — worried and sad man with his head down
+- M4708 — girl regretting regret and sad
+- M4728 — sad and worried young man in a park
+- M4748 — sad and angry back to back man and woman
+- M49225 — stressed man having a headache
+- M49438 — man anxiously counting dollar bills
+- M49885 — face of a man thinking while playing chess
+- M51404 — a worried woman walking through her livingroom apartment at night
+- M51429 — a visible looking worried woman walking through her tiny apartment
+- M5923 — stressed woman working from home
+- M6208 — young woman stressed at work
+- M8739 — worried and sad woman outdoors
+- M8810 — stressed student studies for exam in library
+- M8821 — stressed man removes glasses and rubs forehead
+- M8926 — student stressed over exam sits with books in library
+- M9212 — stressed man at work from home
+
+## Tempo: calendário e relógio (38)
+
+- C2133 — couple spending time at home
+- C4760 — woman using facetime on a macbook
+- C5136 — couple spending time together
+- C5192 — july calendar
+- C65007 — premium selfie time at the hollywood sign
+- C6530 — timetable movement buses in london
+- C66397 — premium twilight tech time
+- M100417 — nighttime park with illuminated streetlights and trees
+- M100784 — a mature couple enjoy leisure time at a park bench
+- M101213 — sunset timelapse over the hills
+- M1648 — morning in the street time lapse
+- M1673 — aerial view of a factory at night time
+- M1704 — night sky with stars at a calm lake time lapse
+- M17412 — marking a calendar [JÁ USADO]
+- M17413 — marking a calendar in july
+- M22752 — figures on a calendar
+- M2847 — marking the calendar
+- M28616 — time lapse of people walking on a street in beijin
+- M351 — nightclub time lapse
+- M38501 — crossing out days with down on a calendar
+- M4025 — time lapse of the arc de triomphe in paris from
+- M4028 — valley time lapse
+- M4033 — aurora borealis timelapse
+- M4048 — desert time lapse
+- M4049 — beautiful desert landscape timelapse
+- M4070 — time lapse of a green meadow
+- M4080 — red or blood moon time lapse
+- M4144 — las vegas panning time lapse
+- M4240 — time lapse of traffic at night
+- M42629 — checking the calendar on a tablet
+- M4332 — times square during a rainy night
+- M4442 — times square during a sunny day
+- M47018 — the stock market in real time
+- M47214 — man analyzing the stock market in real time
+- M48505 — crowd of people close to stage waving arms in time
+- M50989 — timelapse of a drive through the city streets at night
+- M50990 — timelapse of a car driving through the city at night
+- M56 — daytime city traffic aerial view
+
+## Casa, família, porta e chave (111)
+
+- C13588 — urban professional working outdoors
+- C2014 — couple relaxing at home
+- C2229 — family at thanksgiving
+- C25307 — focused writing session outdoors
+- C2553 — a couple relaxing at home
+- C30048 — focused student studying outdoors
+- C33289 — mysterious doorway at night
+- C3529 — writing a poem outdoors
+- C4496 — family waving sparklers around
+- C54781 — premium professional woman working outdoors
+- C6650 — boy and girl studying outdoors
+- C7506 — family at the lake
+- C75655 — outdoor messaging break
+- C81082 — outdoor online shopping session
+- C87762 — premium focused woman working outdoors
+- C88268 — focused outdoor study session
+- C90707 — focused remote work at outdoor setting
+- M100573 — woman in white gasps at window in dimly lit room
+- M100574 — eerie figure in white gazes out darkened window
+- M100575 — shocked woman near window with eerie shadow behind glass
+- M100577 — silhouette lurks at glass door under eerie moonlight
+- M100581 — mysterious figure gazes thoughtfully out the window
+- M100592 — girl in a purple cape rides outdoors under night sky
+- M100877 — vintage home scene
+- M101135 — pregnant woman standing by sunlit window
+- M12118 — girl welcomes her friend at home with a hug
+- M12877 — slow motion offer of house key and handshake
+- M12878 — realtor hand holds key and woman takes it
+- M12879 — young woman holds up house key with big smile
+- M13126 — real state agent gives keys to couple
+- M14971 — opening a draw with a key
+- M15064 — house keys on a table [JÁ USADO]
+- M15768 — army soldier returns home and hugs family at door
+- M16293 — girl looking through a door
+- M18258 — young family walking on a road at the hill
+- M20812 — handle of a car door
+- M21812 — opening a door with a hanging key
+- M21813 — woman opening a front door
+- M21817 — opening a hotel room door
+- M21818 — opening a store refrigerator door
+- M21821 — opening a hotel door with a keypad
+- M22724 — side door of a gothic church in the dark
+- M23046 — family having dinner at home
+- M23083 — workers of solar energy plant outdoors
+- M23248 — family watching the tv in the bedroom
+- M23319 — boy behind the window
+- M23699 — worker closing the door in a factory
+- M24240 — man serving thanksgiving turkey for family
+- M24453 — delivering car keys to the owner
+- M24964 — woman opening a car door and posing
+- M26716 — a family at the sunset on the seashore
+- M28864 — opening a door of a metal furnace
+- M29455 — automatic doors at madrid airport
+- M30867 — abstract concept of doors with islamic design
+- M3111 — master bedroom and window
+- M31137 — postman delivering envelopes to a person at home
+- M31155 — delivering a package to the door of a house
+- M31297 — woman at the door of her house receives a parcel
+- M31379 — silent thief leaning out of a house window
+- M31434 — homeless cats on a wooden door
+- M33243 — family enjoying a movie at the cinema medium shot
+- M33379 — pensive woman looking out of a window on a rainy
+- M33583 — person disinfecting a door with spray
+- M33712 — person cleaning a door handle
+- M33729 — family walking in the park full shot
+- M3491 — urban art on the doors of the houses
+- M3492 — art in the door
+- M3494 — clothing shop with art on its doorstep
+- M3499 — mural art at the doors
+- M36136 — excited couple showing their house keys
+- M36631 — family sitting on a hill watching the nature
+- M3813 — many metal keys on rings
+- M39767 — family walking together in nature
+- M3977 — view of a window with a curtain
+- M3978 — view from a window of the night outside
+- M41581 — loving couple sitting on the shore of a lake outdoors
+- M42037 — view out of a car window at night
+- M42100 — boy waving the brazilian flag outdoors
+- M43562 — man using virtual reality glasses at home
+- M44362 — two people jogging outdoors in nature
+- M44644 — close up view of a drone flying outdoors
+- M45029 — woman passenger looking out the door of a train as
+- M4531 — girl doing homework in a library
+- M45977 — happy family enjoying a delicious dinner
+- M46217 — a door opens by itself in a haunted abandoned house
+- M46485 — closed fist raised in front of a steel door
+- M46684 — guys making homework in a co working space
+- M46708 — crying and depressed woman lonely at home
+- M47170 — dusty keys from an old typewriter
+- M47171 — close up of old typewriter keys
+- M47442 — nostalgic girl looking thru a window bus
+- M4761 — concentrated boy studying at home
+- M49485 — back view of little boy playing outdoors
+- M49691 — romantic retro homemade video of a couple in a desert
+- M51047 — a young man opens the camping tent fabric door and
+- M51393 — sleepy woman looking out the window at night
+- M51402 — sleepy girl approaches to look out the window
+- M51522 — a young man opens the door and finds a surprise
+- M6213 — family walking together at sunset
+- M6239 — family watching a funny video
+- M6320 — happy family watching a video together
+- M6518 — couple get the keys to their new house
+- M747 — two boys playing basketball outdoors
+- M750 — two boys playing basketball at an outdoor court
+- M869 — tennis players at an outdoor court
+- M8729 — mother coming home after picking up her daughter from school
+- M8733 — mother and daughter coming home
+- M8746 — young woman getting excited at her boyfriend at home
+- M924 — silhouette of woman opening a window
+- M9299 — family feeding birds at sunset
+- M958 — old truck door advertising a farmers market
+
+## Lei, polícia e tribunal (50)
+
+- C1509 — steps near a tennis court
+- C2617 — friends entering the tennis court
+- C3935 — empty basketball court
+- C4074 — friends arriving at a tennis court
+- C4938 — man entering a tennis court
+- C5182 — woman entering the tennis court
+- C69 — playing tennis on a court
+- C7742 — two friends entering a tennis court
+- C7996 — basketball court in auckland new zealand
+- C8193 — tennis balls rolling on the court
+- C8622 — man walking to the tennis court
+- C8850 — basketball courts in mexico city
+- C9147 — a woman walking onto the tennis court
+- M1216 — aerial view of a blue and purple basketball court
+- M14004 — police lights in a dark background
+- M16105 — lawyer checks schedule and smiles
+- M1613 — top view of football courts at night
+- M17375 — police lights flashing close up
+- M17376 — police car lights flashing
+- M17396 — police lights flashing red and blue
+- M23103 — police control room receive an alarm
+- M23364 — police looking at an interactive map
+- M23429 — police man walking on a crime scene
+- M23474 — policemen in front of an interactive map
+- M23613 — policeman searching a crime scene
+- M23864 — policeman reporting an arrest
+- M31376 — thief is surprised by the police when stealing
+- M32771 — police handcuffing a criminal at a crime scene
+- M32772 — police woman interrogating the coroner at a crime scene
+- M32773 — armed policewoman in a dark apartment
+- M32780 — police analyzing a shot in the wall at a crime
+- M32783 — police forensic guarding evidence at a crime scene
+- M32790 — police barricade tape at a crime scene
+- M33987 — basketball player on a dark court in 3d
+- M38532 — blue police turrets flashing in the dark
+- M41372 — soccer match on a grass court from above
+- M4290 — policemen gathered on the street
+- M44461 — two basketball players training on a court
+- M46104 — freshly mowed law with dew
+- M46820 — judge pronounces sentence in court
+- M46821 — judge pronouncing sentence against a usa flag
+- M4736 — police and medical examiner analyzing a crime scene
+- M47491 — blurry lights form a police car
+- M47686 — judge reads the sentence to be imposed
+- M47687 — judge writes verdict and sentence to be imposed
+- M49251 — detectives interrogating a suspect in a police station
+- M49252 — suspect being interviewed by a police detective
+- M49328 — blue and red lights from a police car
+- M49329 — handcuffed man walking to a police car
+- M5014 — tennis courts filmed from the air
+
+## Cidade, ruas, prédios, trânsito e vistas aéreas (156)
+
+- C1166 — premium brazilian coin spinning on a black background
+- C1246 — a guy crosses a road in a city
+- C1641 — cacti near a building
+- C1974 — boat on a brazilian river
+- C2624 — premium friends taking photos on lisbon street
+- C2949 — premium girl exploring and taking photos of the city on a professional camera
+- C3313 — premium friends standing on lisbon street
+- C3377 — friends walking down an old city street
+- C4070 — a person driving around panama city
+- C4147 — coast in brazil
+- C4365 — premium friends walking along the street
+- C492 — a man walks into a street and looks around confidently
+- C5098 — premium friends exploring the city from the top
+- C5583 — town in brazil
+- C7247 — walking down the city road
+- C7853 — a sunny day in the city of belem lisbon
+- C8207 — premium friends walking on lisbon street
+- C8923 — traffic lights in paris
+- C92219 — premium city view conversation
+- C9320 — friends viewing the city from on top of a balcony
+- C94985 — tech savvy user with various gadgets
+- M100579 — terrified woman peeks through curtains at night
+- M100586 — girls in tiaras play dress up with flashlights at night
+- M100823 — dark starry night
+- M100825 — sky on a night to sunrise transition
+- M100831 — sky transitioning from night to sunrise
+- M100862 — urban couple hug at night
+- M100938 — hands reaching in city lights
+- M100941 — silhouetted hands against city lights
+- M100942 — people silhouetted by city lights
+- M100949 — silhouetted couple under city lights
+- M100951 — silhouetted hands connecting under city lights
+- M100952 — silhouetted couple enjoying city lights
+- M101086 — motherboard resembling a city from above
+- M11 — aerial view of city traffic at night [JÁ USADO]
+- M134 — a man being followed walking in a city
+- M14087 — festival crowd at night
+- M14980 — woman running from someone at night
+- M1599 — cars on the street
+- M1606 — city train driving under a bridge
+- M1649 — street traffic building and pedestrians
+- M1774 — lake michigan at sunset aerial shot
+- M18033 — brazilian flag gently waving
+- M18843 — brazils flag
+- M1947 — aerial view of a factory
+- M2034 — aerial shot of a busy avenue in the city
+- M22085 — young boy holding the brazilian flag
+- M22086 — rio written in the sand
+- M2286 — basketballs being shot in a street rink
+- M23392 — man taking measurements in a building
+- M25552 — trash pile on the street on a sunny day
+- M26278 — woman holding the brazilian flag in the wind
+- M2793 — aerial view of a wooded landscape with a road
+- M30 — blurred abstract cars lights at night with bokeh effect
+- M31010 — forbidden city complex in beijing
+- M3112 — interior of a department room
+- M31136 — delivery man looking for an address on the street
+- M31359 — thief steals a womans purse on the street
+- M3303 — park between a city and the sea coast
+- M334 — couple arriving at a night club
+- M3361 — plane flying over a city at night
+- M3428 — street with people walking at dusk
+- M3429 — city street with trolleybus at night
+- M3456 — old street at night
+- M34562 — two avenues with many cars traveling at night
+- M36443 — man smoking out of his car at night
+- M39770 — view of the night sky filled with stars
+- M40 — suspended bridge with traffic
+- M4000 — busy street in the city
+- M40047 — skyline of a desert with the moon at night
+- M4010 — buildings under construction aerial view
+- M4014 — medieval city of the halambra seen from afar
+- M4015 — canal and street scene in amsterdam
+- M4038 — northern lights of blue and green colors in the night
+- M40639 — streets with cars and people during one night
+- M4064 — fireworks at night sky
+- M40640 — walking a big city walker at night
+- M40654 — night panorama of the skyscrapers of a big city
+- M4067 — traffic in an underground tunnel
+- M40701 — skyscraper in the city seen when walking the street
+- M40741 — sunset in the distance walking through the city
+- M40746 — night walk through the streets of a big city
+- M40747 — night tour through the streets of a big city
+- M4076 — revolving restaurant in a city
+- M4087 — new york city view at night
+- M41160 — streets of a big city at night
+- M41161 — night movement of a main avenue of a big city
+- M4124 — many stars in the night sky
+- M4128 — electronic ticker in the street
+- M41375 — tour high above a city at dusk
+- M4148 — milky way seen at night
+- M41540 — aerial travel above a highway in the city
+- M41541 — aerial panorama over the buildings of a big city
+- M4169 — people walking in front of a building
+- M4191 — classic car parked in the street of a town
+- M42031 — touring a city at night
+- M42039 — view from inside a car in night traffic
+- M42080 — brazilian flag waving on top of a flagpole
+- M42090 — man waving the flag of brazil
+- M42091 — flag of brazil waving
+- M42097 — young man waving the flag of brazil
+- M42103 — man waving the flag of brazil in slow motion
+- M42107 — close up view of a brazilian flag
+- M42294 — two stylish friends incarcerated after a night out
+- M42342 — aerial shot of a city at night
+- M42343 — movement in a city at night in an aerial shot
+- M42357 — night city traffic seen from above
+- M4262 — football stadium aerial shot
+- M4263 — ride through the streets of london
+- M4272 — traffic light directing traffic
+- M4308 — aerial view of a city during the night
+- M4330 — new york buildings at night pan shot
+- M4331 — traffic on a rainy night
+- M4339 — city full of buildings
+- M4348 — a calm street in paris
+- M4353 — eiffel tower illuminated at night
+- M4360 — petrochemical plant lit up at night
+- M43607 — aerial shot of a river in nature
+- M4364 — monument in a plaza at night
+- M4383 — city of tokyo at night
+- M4390 — interior of the train station
+- M4401 — crowds of people cross a street junction
+- M4422 — thunderstorm at night
+- M4437 — people walking in the street in japan
+- M4451 — quiet tokyo street at night
+- M4455 — atop the city of tokyo at night
+- M44598 — portrait of a brazilian fan watching the world cup
+- M44599 — brazil fan watching a world cup match
+- M4497 — cranes build a stage in a city in japan
+- M46119 — starry night in the desert
+- M4646 — venice central canal at night
+- M48004 — drops of rain falling on the street
+- M4815 — blonde girl smiling head on on the street
+- M4832 — man dressed in suit crossing the street
+- M4893 — footsteps of a young man walking down the street
+- M49806 — flying slowly over a big city
+- M49845 — aerial view of the glass corporate buildings of a big [JÁ USADO]
+- M49846 — side by side aerial view of a city at night
+- M49849 — aerial view of a highway in a big city
+- M49859 — big river with bridges in an aerial shot
+- M49869 — aerial tour of a big city at dusk
+- M49871 — huge city with a river in an aerial view at
+- M49873 — aerial view of city roads and big iluminated city buildings
+- M49875 — panoramic aerial shot of a metropolis at night
+- M49876 — avenue of a big city at night from the heights
+- M49878 — big city at night from an aerial shot
+- M5015 — european city from the air with buildings to the horizon
+- M50998 — top view of the traffic around a roundabout at night
+- M581 — drone in the sky at a city
+- M60 — busy intersection aerial view
+- M879 — tennis serve aerial view
+- M880 — two people playing tennis aerial view
+- M8812 — closeup of brazilian flag waving gently in the wind
+- M9345 — texture of brazil nuts falling on a tablecloth
+- M9531 — various euros denominations in coins
+- M9586 — aerial view of a nightclub crowd
+
+## Pessoas e multidões (72)
+
+- C10156 — waiting for check in hotel lobby scene
+- C1204 — men waiting for a flight
+- C127 — medium shot of a tourist walking to a hotel room
+- C2036 — waiting at the airport
+- C2243 — premium two guys walking towards the castle
+- C2876 — coastline in ponta de s o louren o
+- C3150 — queue to carrefour market in paris
+- C3892 — woman waiting for the subway
+- C4717 — walking with suitcase
+- C4893 — student waiting for class
+- C6795 — socially distanced queue
+- C80052 — secure online shopping experience
+- C8360 — walking to the mountain top
+- C8880 — woman waiting to meet someone
+- M10443 — teacher in online class
+- M1227 — urban trendy girl walking to the camera
+- M14190 — flying over the grass of a stadium waiting for the
+- M15997 — people feet walking
+- M1623 — people getting into the subway train
+- M17581 — man shopping online
+- M22180 — woman waiting for her laundry to finish
+- M23200 — entrepreneurs explaining project people
+- M23551 — man walking through the warehouse
+- M23696 — electrical workers walking on the hallway
+- M23785 — workers walking among solar panels
+- M255 — two people working on a black table
+- M28309 — hands of two people shaking hands on a green background
+- M31510 — 3d animation of lines and luminous points rotating
+- M31771 — scrambled dots and lines within a sphere of dots
+- M33019 — hands of a volunteer gives bread to hungry people
+- M33874 — fire line to the floor of the entrance to a
+- M34091 — hands of a man in a suit doing a waiting
+- M4008 — people walking down an airport corridor in fast motion
+- M40656 — slowly walking down a path in a park
+- M41028 — two people adjusting harnesses on their body
+- M41512 — a woman walking through a vintage house corridor
+- M42129 — a boy and a girl shopping online
+- M42137 — hands of two people sealing a package with tape
+- M42639 — people working with electronic devices
+- M43524 — group of friends having fun playing together online
+- M43532 — young man playing an online video game
+- M4454 — people in the subway hall in tokyo
+- M4519 — students walking in a university
+- M4530 — lovers walking through a lavender field
+- M4560 — students walking through a college
+- M4611 — woman waiting for photos from a printer
+- M4629 — backlit woman walking at sunset
+- M4661 — couple walking hand in hand
+- M4673 — young people playing poker in a room
+- M4709 — cheerful young people giving each other a group hug
+- M47212 — online graphs of cryptocurrency
+- M47213 — stock market information online
+- M4747 — scientist walking down a corridor
+- M4779 — doctor walking down a hospital hallway
+- M47803 — handcuffed man walking to the prison
+- M47854 — fan cheering for a band in the crowd covered in
+- M4788 — group of young people talking about their presentation
+- M48433 — three lines of compact discs on a black base
+- M48504 — shot of crowd jumping and waving arms at a show
+- M48510 — a close up shot in slow motion captures the crowd at
+- M48678 — close up of a young man greeting people on a
+- M48680 — young woman smiling and waving in greeting to people on
+- M48724 — student participating in an online webinar
+- M51403 — woman with insomnia walking through her apartment
+- M5421 — sick man in online video consultation with doctor
+- M6472 — three generations walking together at sunset
+- M7088 — crowd of koi carp fish in a freshwater pond
+- M7837 — people walking in nepal
+- M9585 — crowd cheering at the stadium
+- M98 — person walking on crosswalk
+- M99967 — a diverse group of people dressed in flamboyant and stylish
+- M99968 — lgbtq person in a bold outfit confidently walking and performing
+
+## Outros (38)
+
+- C7124 — mouse with colored led backlight
+- M100598 — girl glows under colorful lights with an umbrella
+- M101134 — pregnant woman bathed in natural light
+- M12540 — love letter burning
+- M13779 — opening a white envelope on a blue background
+- M15769 — teenage girl writes letter to army dad
+- M15770 — little boy in army hat writing letter to soldier
+- M19195 — witchcraft letters from a burning fortune teller
+- M21333 — person writing a letter with a typewriter
+- M21543 — cloth letters in the sand
+- M22011 — 3d printing a letter
+- M22015 — woman checking her mail
+- M23816 — strange light lurking in the woods
+- M2838 — arrangement of letters that say for u
+- M31214 — mail delivery with digital signature
+- M31274 — mother and daughter opening a package received in the mail
+- M32791 — taking and analyzing fingerprints under black light [JÁ USADO]
+- M33867 — sneaky robed person with arms up under a red light
+- M34158 — writing a letter on a sheet next to a daisy
+- M34621 — burning a letter on a campfire
+- M35662 — rain of light blue 3d letters and symbols
+- M3676 — flickering light from a bulb
+- M38 — blinking round lights with bokeh effect
+- M39970 — woman in sunglasses smiling in front of love letter balloons
+- M39972 — hands of a woman opening an envelope with a love
+- M4034 — beautiful northern lights of yellow and pink tones
+- M4036 — yellow northern lights in norway
+- M4065 — flight getting ready for departure
+- M41154 — neon light of a hotel flickering in the dark
+- M41944 — headlight of a motorcycle that is turned on by a
+- M4447 — neon signs with japanese letters
+- M47513 — close up of casino chips with neon lights
+- M47699 — hand places the missing letters on this 5 de mayo
+- M47804 — letters spelling sunday hanging on a string
+- M48216 — letters spelling the word sale hanging on a rope
+- M49557 — person handwriting a letter
+- M50055 — pastry chef decorating a cake with letter shaped candles
+- M5827 — woman emailing while having breakfast
+
+## FOTOS REAIS (Wikimedia Commons) (93)
+
+- F175988495 — Banco Central do Brasil de Fortaleza 04.jpg (Banco Central do Brasil sede; CC BY-SA 4.0)
+- F175988497 — Banco Central do Brasil de Fortaleza 05.jpg (Banco Central do Brasil sede; CC BY-SA 4.0)
+- F175988503 — Banco Central do Brasil de Fortaleza 07.jpg (Banco Central do Brasil sede; CC BY-SA 4.0)
+- F175988502 — Banco Central do Brasil de Fortaleza 08.jpg (Banco Central do Brasil sede; CC BY-SA 4.0)
+- F37162033 — Edificio Sede del Banco Central de Brasil en São Paulo.jpg (Banco Central do Brasil sede; CC0)
+- F170249769 — Edifício "Sede" do Banco Central do Brasil em Brasília.jpg (Banco Central do Brasil sede; CC BY 2.0)
+- F201638522 — Edifício "Sede" do Banco Central do Brasil em Brasília (cropped).jpg (Banco Central do Brasil sede; CC BY 2.0)
+- F40450476 — Edifício sede do Banco Central do Brasil (16011634694).jpg (Banco Central do Brasil sede; CC BY 2.0)
+- F40450474 — Edifício sede do Banco Central do Brasil (16011635094).jpg (Banco Central do Brasil sede; CC BY 2.0)
+- F40450472 — Edifício sede do Banco Central do Brasil (16607833736).jpg (Banco Central do Brasil sede; CC BY 2.0)
+- F67284550 — Mais Educação - Brasília (14467062574).jpg (Caixa Econômica Federal sede Brasília; CC BY-SA 2.0)
+- F20682110 — Brasilia Eixo Monumental Nat Congress Ministries from TV Tower.jpg (Congresso Nacional Brasília; CC BY-SA 3.0)
+- F57617092 — Brasília - Congresso Nacional - panoramio.jpg (Congresso Nacional Brasília; CC BY 3.0)
+- F524093 — Brazilian National Congress.jpg (Congresso Nacional Brasília; CC BY-SA 2.5)
+- F65039292 — CONGRESSO NACIONAL BRASÍLIA FOTO ARLEY DA CRUZ.jpg (Congresso Nacional Brasília; CC BY-SA 4.0)
+- F39989510 — Congresso Nacional, Brasília-DF, Brasil.jpg (Congresso Nacional Brasília; CC BY 2.0)
+- F85502566 — Congresso Nacional BSB 06 2014 8856 cropped.jpg (Congresso Nacional Brasília; CC BY-SA 4.0)
+- F55310314 — Congresso Nacional de Brasília - panoramio.jpg (Congresso Nacional Brasília; CC BY 3.0)
+- F12449874 — Congresso do Brasil.jpg (Congresso Nacional Brasília; CC BY-SA 2.0)
+- F130403155 — Imagens de Brasília - Congresso Nacional (50059647053).jpg (Congresso Nacional Brasília; CC BY 2.0)
+- F130403150 — Imagens de Brasília - Congresso Nacional (50060213016).jpg (Congresso Nacional Brasília; CC BY 2.0)
+- F48305004 — Arquivo da Agência Brasil - Brasília 15.jpg (Esplanada dos Ministérios Brasília; CC BY 3.0 br)
+- F123387413 — Esplanada dos Ministerios a noite.jpg (Esplanada dos Ministérios Brasília; CC BY-SA 4.0)
+- F2464899 — Esplanada dos Ministérios, Brasília DF 04 2006.jpg (Esplanada dos Ministérios Brasília; Public domain)
+- F89358738 — Esplanada dos Ministérios (48205132557).jpg (Esplanada dos Ministérios Brasília; CC BY 2.0)
+- F121093855 — Esplanada dos Ministérios (52232232753).jpg (Esplanada dos Ministérios Brasília; CC BY 2.0)
+- F121093859 — Esplanada dos Ministérios (52232498374).jpg (Esplanada dos Ministérios Brasília; CC BY 2.0)
+- F95496517 — Esplanada dos Ministérios - 50494787276.jpg (Esplanada dos Ministérios Brasília; CC BY 2.0)
+- F107746924 — Museu da República 1 edit.jpg (Esplanada dos Ministérios Brasília; CC BY-SA 4.0)
+- F45352843 — Nossa Brasília - Esplanada dos Ministérios (16579876914).jpg (Esplanada dos Ministérios Brasília; CC BY 2.0)
+- F61372606 — Guarda Presidencial no Palácio do Planalto (35906623615).jpg (Palácio do Planalto; CC BY 2.0)
+- F83489797 — Palacio do Planalto.jpeg (Palácio do Planalto; Public domain)
+- F123536665 — PalaciodoplanaltoFR.jpg (Palácio do Planalto; CC BY-SA 4.0)
+- F83498416 — Palácio do Planalto (14091328829).jpg (Palácio do Planalto; CC BY 2.0)
+- F28380198 — Palácio do Planalto (8721928846).jpg (Palácio do Planalto; CC BY 2.0)
+- F28380199 — Palácio do Planalto - 2 (8726935114).jpg (Palácio do Planalto; CC BY 2.0)
+- F92502514 — Palácio do Planalto em 2020.jpg (Palácio do Planalto; CC BY 2.0)
+- F123381198 — Palácio do Planalto reflexcao em Rosa.jpg (Palácio do Planalto; CC BY-SA 4.0)
+- F35350053 — Planalto panorama.jpg (Palácio do Planalto; CC BY 2.0)
+- F43778506 — Reflexos do Planalto.jpg (Palácio do Planalto; CC BY-SA 4.0)
+- F88995062 — Imagens de Brasília - Praça dos Três Poderes - 49732065671.jpg (Praça dos Três Poderes; CC BY 2.0)
+- F88995061 — Imagens de Brasília - Praça dos Três Poderes - 49732389232.jpg (Praça dos Três Poderes; CC BY 2.0)
+- F11726207 — Praça 3 Poderes Brasília panorama.jpg (Praça dos Três Poderes; CC BY-SA 3.0)
+- F110959136 — Praça dos Três Poderes, vista parcial.jpg (Praça dos Três Poderes; CC BY-SA 4.0)
+- F133916733 — Réplica 14 BIS - Praça dos Três Poderes.jpg (Praça dos Três Poderes; CC BY-SA 4.0)
+- F61863955 — Av Paulista (Unsplash).jpg (São Paulo avenida Paulista noite; CC0)
+- F58980417 — Avenida Paulista, São Paulo, Brasil - panoramio (6).jpg (São Paulo avenida Paulista noite; CC BY-SA 3.0)
+- F53000716 — Avenida Paulista, São Paulo, Brasil - panoramio - Ricardo Migliani (1).jpg (São Paulo avenida Paulista noite; CC BY 3.0)
+- F57973308 — Avenida Paulista 33.jpg (São Paulo avenida Paulista noite; CC BY-SA 4.0)
+- F149402631 — Avenida Paulista à noite, São Paulo.jpg (São Paulo avenida Paulista noite; CC BY 2.0)
+- F3493219 — Graffiti at Paulista Ave and Dr. Arnaldo Ave, São Paulo, Brazil.jpg (São Paulo avenida Paulista noite; CC BY 2.5)
+- F55036960 — Santa Catarina Hospital, Avenida Paulista, São Paulo, Brazil.jpg (São Paulo avenida Paulista noite; CC BY-SA 4.0)
+- F3517536 — Túnel da Av. Paulista, São Paulo, Brazil.jpg (São Paulo avenida Paulista noite; CC BY 2.5)
+- F162657430 — IBPA 141679 - Brasília, DF, Brasil - 20-12-2024 - Reunião com a Subsecretária do Tesouro - 2024-12-20 - Cesar Lopes-PMPA.jpg (Tesouro Nacional Brasília; Attribution)
+- F162707584 — IBPA 141681 - Brasília, DF, Brasil - 20-12-2024 - Reunião com a Subsecretária do Tesouro - 2024-12-20 - Cesar Lopes-PMPA.jpg (Tesouro Nacional Brasília; Attribution)
+- F51914688 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24302885179).jpg (Tesouro Nacional Brasília; CC BY 2.0)
+- F51914689 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24302885579).jpg (Tesouro Nacional Brasília; CC BY 2.0)
+- F51914683 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24302886739).jpg (Tesouro Nacional Brasília; CC BY 2.0)
+- F51914684 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24375026310).jpg (Tesouro Nacional Brasília; CC BY 2.0)
+- F51914686 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24375031780).jpg (Tesouro Nacional Brasília; CC BY 2.0)
+- F51914680 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24577030101).jpg (Tesouro Nacional Brasília; CC BY 2.0)
+- F51914681 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24644349346).jpg (Tesouro Nacional Brasília; CC BY 2.0)
+- F51914687 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24670583605).jpg (Tesouro Nacional Brasília; CC BY 2.0)
+- F91119973 — Agen da Caixa Econômica Federal em Campo Maior.jpg (agência Caixa Econômica Federal; Public domain)
+- F50694029 — Agência Caixa Econômica Federal, Paratinga, 2016.jpg (agência Caixa Econômica Federal; CC BY-SA 4.0)
+- F9111067 — Agência da Caixa Econômica Federal em Almirante Tamandaré.JPG (agência Caixa Econômica Federal; Public domain)
+- F127980338 — Agência da Caixa Econômica Federal em Paratinga, janeiro de 2023.jpg (agência Caixa Econômica Federal; CC BY-SA 4.0)
+- F126920394 — Agência da Caixa Econômica Federal na Universidade Federal de Goiás, Goiânia, dezembro de 2022 (1).jpg (agência Caixa Econômica Federal; CC BY-SA 4.0)
+- F126920393 — Agência da Caixa Econômica Federal na Universidade Federal de Goiás, Goiânia, dezembro de 2022 (2).jpg (agência Caixa Econômica Federal; CC BY-SA 4.0)
+- F107355840 — Agência da Caixa Econômica Federal na Universidade Federal de Goiás, Goiânia, julho de 2021.jpg (agência Caixa Econômica Federal; CC BY-SA 4.0)
+- F80334665 — Agência móvel da Caixa Econômica Federal.JPG (agência Caixa Econômica Federal; Public domain)
+- F56938091 — Caixa Econômica Federal (2), Paratinga, janeiro de 2017.jpg (agência Caixa Econômica Federal; CC BY-SA 4.0)
+- F81608247 — Cidade de Araci - 93.jpg (agência Caixa Econômica Federal; CC BY-SA 4.0)
+- F90008382 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49854668788).jpg (agência bancária Brasil fila; CC BY 2.0)
+- F90008378 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49854668908).jpg (agência bancária Brasil fila; CC BY 2.0)
+- F90008335 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49854734058).jpg (agência bancária Brasil fila; CC BY 2.0)
+- F90008329 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49854734213).jpg (agência bancária Brasil fila; CC BY 2.0)
+- F90008379 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49855207611).jpg (agência bancária Brasil fila; CC BY 2.0)
+- F90008381 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49855207706).jpg (agência bancária Brasil fila; CC BY 2.0)
+- F90008346 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49855271781).jpg (agência bancária Brasil fila; CC BY 2.0)
+- F90008344 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49855573887).jpg (agência bancária Brasil fila; CC BY 2.0)
+- F90008343 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49855573932).jpg (agência bancária Brasil fila; CC BY 2.0)
+- F90008328 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49855574477).jpg (agência bancária Brasil fila; CC BY 2.0)
+- F63269688 — Prisão de Arrombadores de Caixas Eletrônicos (4427344413).jpg (caixa eletrônico Brasil; CC BY 2.0)
+- F63269708 — Prisão de Arrombadores de Caixas Eletrônicos (4428108136).jpg (caixa eletrônico Brasil; CC BY 2.0)
+- F63269687 — Prisão de Arrombadores de Caixas Eletrônicos (4428108222).jpg (caixa eletrônico Brasil; CC BY 2.0)
+- F63269696 — Prisão de Arrombadores de Caixas Eletrônicos (4428108430).jpg (caixa eletrônico Brasil; CC BY 2.0)
+- F63269709 — Prisão de Arrombadores de Caixas Eletrônicos (4428108536).jpg (caixa eletrônico Brasil; CC BY 2.0)
+- F63269712 — Prisão de Arrombadores de Caixas Eletrônicos (4428108834).jpg (caixa eletrônico Brasil; CC BY 2.0)
+- F63269726 — Prisão de Arrombadores de Caixas Eletrônicos (4428108906).jpg (caixa eletrônico Brasil; CC BY 2.0)
+- F63269720 — Prisão de Arrombadores de Caixas Eletrônicos (4428108994).jpg (caixa eletrônico Brasil; CC BY 2.0)
+- F63269722 — Prisão de Arrombadores de Caixas Eletrônicos (4428109158).jpg (caixa eletrônico Brasil; CC BY 2.0)
+- F63269711 — Prisão de Arrombadores de Caixas Eletrônicos (4428109204).jpg (caixa eletrônico Brasil; CC BY 2.0)

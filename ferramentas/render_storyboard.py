@@ -437,6 +437,63 @@ def cartao(base, texto, k):
     return img
 
 
+# ---------- biblioteca e controle de repetição ----------
+
+def obter_asset(cfg, asset):
+    """Devolve o caminho local do vídeo/foto; baixa da biblioteca se preciso."""
+    pasta = cfg["clipes"]
+    for ext in (".mp4", ".jpg"):
+        c = os.path.join(pasta, asset + ext)
+        if os.path.exists(c) and os.path.getsize(c) > 10000:
+            return c
+    lib = cfg.get("_lib")
+    if lib is None:
+        lib = cfg["_lib"] = json.load(open(cfg["biblioteca"])) if cfg.get("biblioteca") else {}
+    item = lib.get(asset)
+    if not item:
+        raise SystemExit(f"asset desconhecido: {asset}")
+    url = item.get("video") or item.get("imagem")
+    destino = os.path.join(pasta, asset + (".mp4" if item.get("video") else ".jpg"))
+    import urllib.request
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    open(destino, "wb").write(urllib.request.urlopen(req, timeout=90).read())
+    if os.path.getsize(destino) < 10000:
+        raise SystemExit(f"download falhou: {asset} ({url})")
+    print(f"  baixado {asset} <- {item['fonte']}: {item['titulo'][:60]}", flush=True)
+    return destino
+
+
+def checar_repeticao(cfg, planos):
+    uso = json.load(open(cfg["uso"])) if cfg.get("uso") and os.path.exists(cfg["uso"]) else {}
+    parte = cfg.get("parte", "?")
+    corte = float(cfg.get("metade", 555))
+    vistos, erros = {}, []
+    for p in planos:
+        a = p["asset"]
+        if p["tipo"] not in ("video", "foto") or a in ("-", ""):
+            continue
+        if a in vistos:
+            erros.append(f"plano {p['n']}: {a} repetido dentro do bloco (plano {vistos[a]})")
+        vistos[a] = p["n"]
+        outras = [x for x in uso.get(a, []) if x != parte]
+        if outras and p["ini"] < corte:
+            erros.append(f"plano {p['n']}: {a} já usado em {outras} (antes da metade do vídeo)")
+    if erros and not cfg.get("permitir_repeticao"):
+        raise SystemExit("REPETIÇÃO PROIBIDA:\n  " + "\n  ".join(erros))
+    return vistos
+
+
+def registrar_uso(cfg, vistos):
+    if not cfg.get("uso"):
+        return
+    uso = json.load(open(cfg["uso"])) if os.path.exists(cfg["uso"]) else {}
+    for a in vistos:
+        uso.setdefault(a, [])
+        if cfg.get("parte") not in uso[a]:
+            uso[a].append(cfg.get("parte"))
+    json.dump(uso, open(cfg["uso"], "w"), indent=1, sort_keys=True)
+
+
 # ---------- vídeo ----------
 
 def quadros_de_video(clipe, entrada, dur):
@@ -454,6 +511,7 @@ def renderizar(cfg):
         palavras = [x for x in stt["words"] if x["type"] == "word"]
         planos = ler_storyboard_v2(cfg["storyboard"], palavras, cfg)
         cfg["_planos"] = planos
+        cfg["_vistos"] = checar_repeticao(cfg, planos)
         for p in planos:
             print(f"  {p['n']:>2} {p['ini']:6.2f}-{p['fim']:6.2f} {p['tipo']}", flush=True)
     else:
@@ -474,17 +532,27 @@ def renderizar(cfg):
         tipo = p["tipo"]
         frames_base = None
         if tipo == "video":
-            clipe = os.path.join(cfg["clipes"], p["asset"] + ".mp4")
-            if not os.path.exists(clipe):
-                raise SystemExit(f"clipe ausente: {clipe} (plano {p['n']})")
+            clipe = obter_asset(cfg, p["asset"])
             frames_base = quadros_de_video(clipe, p["entrada"], nq / FPS)
             ultimo_video = (clipe, p["entrada"] + nq / FPS)
+        elif tipo == "foto":
+            foto_img = Image.open(obter_asset(cfg, p["asset"])).convert("RGB")
+            fw, fh = foto_img.size
+            alvo = W / H
+            if fw / fh > alvo:
+                nw = int(fh * alvo); foto_img = foto_img.crop(((fw - nw) // 2, 0, (fw + nw) // 2, fh))
+            else:
+                nh = int(fw / alvo); foto_img = foto_img.crop((0, (fh - nh) // 2, fw, (fh + nh) // 2))
+            foto_img = foto_img.resize((2112, 1188), Image.LANCZOS)
+            frames_base = [foto_img]
         elif tipo in ("texto", "numero", "frase_centro", "cartao") and ultimo_video:
             fb = quadros_de_video(ultimo_video[0], ultimo_video[1], 0.1)
             frames_base = [escurecer(fb[0], 0.42, 10)] if fb else None
         for i in range(nq):
             k = i / max(1, nq - 1)
-            if tipo == "video" and frames_base:
+            if tipo == "foto" and frames_base:
+                f = ken_burns(frames_base[0], k, p["mov"] if p["mov"] in ("zoom_in", "zoom_out", "pan_esq", "pan_dir") else "zoom_in", 0.10)
+            elif tipo == "video" and frames_base:
                 f = ken_burns(frames_base[min(i, len(frames_base) - 1)], k, p["mov"], 0.07)
             elif tipo == "print":
                 chave = mapa_print.get(f"{p['n']}", p["asset"])
@@ -529,6 +597,7 @@ def renderizar(cfg):
     enc.stdin.close()
     enc.wait()
     mixar(cfg, planos, saida_video)
+    registrar_uso(cfg, cfg.get("_vistos", {}))
 
 
 def mixar(cfg, planos, video):

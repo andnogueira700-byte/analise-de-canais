@@ -148,6 +148,13 @@ edição**, só onde forem necessárias: nas trocas entre a intro e o bloco 1 e 
 O editor corta o áudio no fim da última frase do bloco, abre o espaço do respiro
 e cola o resto do áudio depois.
 
+### 3.12 Regra de não repetir imagens (pedido do dono)
+- **Até a metade do vídeo, nenhum vídeo ou foto pode aparecer duas vezes.** O público nota na hora e o vídeo fica cansativo.
+- Da metade para o fim, só repete se não houver alternativa (muitos já saíram, e quem ficou se incomoda menos).
+- O controle é automático: `uso-clipes.json` registra o que cada parte usou, e o renderizador recusa o storyboard com repetição proibida.
+- Biblioteca: `ferramentas/biblioteca.py` (Mixkit, Coverr Full HD e fotos reais do Wikimedia Commons, todos com licença livre). Fotos reais do Brasil (agências, filas, Brasília) dão "cara" ao que é dito.
+- **YouTube:** não dá para baixar daqui (o YouTube bloqueia servidores). Se o dono quiser trechos de até 5 s de outros vídeos, ele baixa no computador dele e envia; o editor usa sem o áudio, só a imagem, sempre como apoio à narrativa e com o crédito na descrição.
+
 ## 4. As imagens (de onde vem cada coisa)
 
 Pela contagem dos quadros, mais ou menos:
