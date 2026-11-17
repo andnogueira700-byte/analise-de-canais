@@ -144,8 +144,7 @@ primeiro bloco), o vídeo faz uma pausa dramática:
 **Como o dono trabalha (decisão de 17/11):** a narração é gerada **num áudio só,
 corrido**, no Studio do ElevenLabs, a partir do `02c-roteiro-corrido.txt` (sem
 marcas de pausa). **As pausas são criadas pelo editor, com cortes na própria
-edição**, só onde forem necessárias: nas 8 trocas de bloco (listadas no fim do
-`02b-narracao-ia.md` e no mapa de edição) e, se precisar, antes de uma revelação.
+edição**, só onde forem necessárias: nas trocas entre a intro e o bloco 1 e entre cada bloco seguinte (6 trocas, marcadas no mapa de edição) e, se precisar, antes de uma revelação.
 O editor corta o áudio no fim da última frase do bloco, abre o espaço do respiro
 e cola o resto do áudio depois.
 

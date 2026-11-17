@@ -38,9 +38,17 @@ Chame `pesquisador` com o caminho da pasta. Ao receber:
 
 ## Passo 2 — Roteiro
 
-Chame `roteirista` com o caminho da pasta. Confira se a contagem de palavras
-está entre 2.100 e 2.700 e se não ficou nenhum `[FALTA]`. Se ficou, peça ao
+Chame `roteirista` com o caminho da pasta. Confira se a contagem de palavras dos blocos 1 a 6
+está entre 1.800 e 2.300 e se não ficou nenhum `[FALTA]`. Se ficou, peça ao
 pesquisador só aquele dado e devolva ao roteirista.
+
+## Passo 2b — Intro
+
+Chame `intro` com o caminho da pasta. Ele entrega 3 opções em `02a-intro.md` e
+recomenda uma. Mostre as 3 ao dono em poucas linhas e use a escolhida (ou a
+recomendada, se o dono não quiser escolher). Monte então o
+`02c-roteiro-corrido.txt`: intro escolhida + blocos 1 a 6, em texto corrido, sem
+títulos, pronto para colar no Studio do ElevenLabs.
 
 ## Passo 3 — Títulos e Edição (em paralelo)
 
@@ -58,12 +66,6 @@ Chame `analista` com o caminho da pasta.
   forem independentes). Depois chame o `analista` de novo. Máximo de **2
   rodadas**. Se ainda não aprovar, leve as pendências para o dono decidir.
 - **APROVADO:** siga para o passo 6.
-
-## Passo 5b — Narração pronta para IA
-
-Com o roteiro aprovado, peça ao `roteirista` o `02b-narracao-ia.md` (um áudio por
-bloco, com pausas e pronúncia) e ao `editor` as transições entre blocos no mapa
-(seção 3.11 do manual de edição).
 
 ## Passo 6 — Decisão final (Diretor + dono)
 

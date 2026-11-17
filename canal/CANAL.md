@@ -106,24 +106,26 @@ técnico.** Quer entender o que aconteceu, quem errou e o que fazer.
 - Frequência no lançamento: 2 vídeos por semana. Depois: 1 ou 2 por semana, com
   qualidade acima de quantidade.
 
-### Estrutura obrigatória do roteiro (9 blocos)
+### Estrutura obrigatória do roteiro: INTRO + 6 blocos
 
-| # | Bloco | Tempo | Função |
-|---|---|---|---|
-| 1 | Gancho com objeto | 0:00–0:45 | Algo do dia a dia do espectador + uma pergunta perturbadora |
-| 2 | Choque em números | 0:45–1:30 | 3 ou 4 dados duros em sequência |
-| 3 | A Grande Pergunta + a promessa | ~1:30 | O mistério que o vídeo vai responder e as 3 coisas que o espectador vai sair sabendo (seção 1.1) |
-| 4 | Contexto e origem | 2–5 min | Como aquilo surgiu, a linha do tempo |
-| 5 | A investigação | 5–10 min | Casos reais com nomes, cidades, datas, valores e fontes |
-| 6 | A virada | ~10 min | O detalhe que muda tudo o que o espectador achava |
-| 7 | O que diz a lei + **O PARECER DO LAUDO** | 11–13 min | Legal ou ilegal? Quem deveria fiscalizar? Teve punição? E a opinião do canal: o que falhou e o que deveria mudar (seção 1.3) |
-| 8 | Como se proteger | 13–15 min | Passos práticos que a pessoa pode fazer hoje |
-| 9 | Fechamento | final | Pergunta para os comentários + chamada para o próximo vídeo + encerramento fixo |
+A **INTRO** é escrita por um agente especialista (`intro`), **depois** do
+roteiro; o `roteirista` escreve só do **Bloco 1** em diante.
 
-**Patrocínio** (quando houver): entra entre os blocos 5 e 6, ligado ao assunto.
+| # | Parte | Quem escreve | Tempo | Função |
+|---|---|---|---|---|
+| INTRO | Gancho + choque + Grande Pergunta + promessa + vinheta | agente `intro` | 0:00–1:30 | Prender nos primeiros 30 s, mostrar o tamanho do caso, fazer a pergunta que o vídeo responde e prometer as 3 entregas (seção 1.1). Termina na vinheta "Laudo número N" |
+| 1 | Contexto e origem | roteirista | 1:30–4 min | O que é a empresa, o que foi levado, a regra ou o mecanismo por trás |
+| 2 | A investigação | roteirista | 4–9 min | A linha do tempo, os fatos, as fontes, os casos parecidos |
+| 3 | A virada | roteirista | ~9–11 min | O detalhe que muda tudo o que o espectador achava |
+| 4 | O que diz a lei + **O PARECER DO LAUDO** | roteirista | 11–13 min | Legal ou ilegal, punições, e a opinião do canal (seção 1.3) |
+| 5 | Como se proteger | roteirista | 13–15 min | Passos práticos que a pessoa pode fazer hoje |
+| 6 | Fechamento | roteirista | final | Resposta clara à pergunta do título, pergunta para os comentários, chamada para o próximo laudo e encerramento fixo |
 
-**Abertura fixa** (logo depois do bloco 3, em até 5 segundos):
-> "HACKOPSIA. Laudo número [N]: [nome do caso]."
+**Patrocínio** (quando houver): entra entre os blocos 2 e 3, ligado ao assunto.
+
+**Abertura fixa** (fim da INTRO, em até 5 segundos): a vinheta mostra HACKOPSIA
+na tela, e a voz diz só:
+> "Laudo número [N]. [Nome do caso]."
 
 **Encerramento fixo do canal:**
 > "E se você quer entender [tema do próximo vídeo], o próximo laudo está aqui

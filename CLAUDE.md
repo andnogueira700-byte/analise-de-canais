@@ -20,7 +20,8 @@ não é técnico. Explique termos difíceis.
 | Ordem | Agente | Modelo | Entrega |
 |---|---|---|---|
 | 1 | `pesquisador` | sonnet | `01-pesquisa.md` |
-| 2 | `roteirista` | opus | `02-roteiro.md` |
+| 2 | `roteirista` | opus | `02-roteiro.md` (blocos 1 a 6, sem a intro) |
+| 2b | `intro` | opus | `02a-intro.md` (3 opções de intro, baseadas no estudo de roteiros) |
 | 3 | `titulos-descricao` | sonnet | `03-titulos-descricao.md` |
 | 3 | `editor` | haiku | `05-mapa-de-edicao.md` (em paralelo com o 3) |
 | 4 | `thumbnail` | sonnet | `04-thumbnail.md` |
@@ -35,6 +36,8 @@ Para produzir um vídeo, use a skill **`/novo-video <tema ou título>`**.
   roteiro, moldes de título, identidade visual e **regras de segurança jurídica**.
 - `canal/REFERENCIAS.md` — concorrentes e vídeos de referência, com números.
 - `canal/PAUTA.md` — banco de ideias e o plano de lançamento.
+- `canal/ESTUDO-ROTEIROS.md` — estudo de roteiros de webdocumentários brasileiros
+  grandes (aberturas, retenção, linguagem, opinião). Base do `intro` e do `roteirista`.
 
 ## Regras que nunca mudam
 
