@@ -454,7 +454,7 @@ def _mascara_suave(w, h, borda):
 _PRINT_CACHE = {}
 
 
-def print_mensagem(png, grupos, k, fonte_nome):
+def print_mensagem(png, grupos, k, fonte_nome, recorte=None):
     """Notícia no estilo Elementar: recorta só a manchete/trecho, grande, bordas que somem no fundo escuro,
     marca-texto entrando frase por frase. grupos = [(rects, inicio_0a1), ...]."""
     if png not in _PRINT_CACHE:
@@ -462,15 +462,21 @@ def print_mensagem(png, grupos, k, fonte_nome):
     pag = _PRINT_CACHE[png]
     iw, ih = pag.size
     todos = [r for g, _ in grupos for r in g]
-    if todos:
+    if recorte:
+        x0, y0, x1, y1 = recorte
+    elif todos:
         x0 = min(r[0] for r in todos) - 220; x1 = max(r[0] + r[2] for r in todos) + 220
         y0 = min(r[1] for r in todos) - 260; y1 = max(r[1] + r[3] for r in todos) + 200
     else:
         x0, y0, x1, y1 = iw * 0.2, ih * 0.15, iw * 0.8, ih * 0.6
-    # proporção mínima de 16:7 para não ficar uma tira fina
+    # largura mínima (linhas inteiras) e proporção entre 16:9 e 16:7
     w, h = x1 - x0, y1 - y0
+    if not recorte and w < 2150:
+        extra = (2150 - w) / 2; x0 -= extra; x1 += extra; w = 2150
     if w / h > 16 / 7:
         extra = (w * 7 / 16 - h) / 2; y0 -= extra; y1 += extra
+    elif w / h < 16 / 9:
+        extra = (h * 16 / 9 - w) / 2; x0 -= extra; x1 += extra
     x0, y0 = max(0, x0), max(0, y0); x1, y1 = min(iw, x1), min(ih, y1)
     rec = pag.crop((int(x0), int(y0), int(x1), int(y1))).convert("RGBA")
     # marca-texto progressivo por grupo
@@ -670,7 +676,8 @@ def renderizar(cfg):
                 png = os.path.join(cfg["prints"], p["_partes"][0][0] + ".png")
                 if not os.path.exists(png):
                     png = os.path.join(cfg["prints"], p["_fonte"] + ".png")
-                f = print_mensagem(png, grupos, k, FONTES_PRINT.get(p["_fonte"], ""))
+                rec_man = (grifos.get(p["_partes"][0][0]) or {}).get("recorte")
+                f = print_mensagem(png, grupos, k, FONTES_PRINT.get(p["_fonte"], ""), rec_man)
             elif tipo == "print":
                 chave = mapa_print.get(f"{p['n']}", p["asset"])
                 g = grifos.get(chave) or grifos.get(p["asset"])

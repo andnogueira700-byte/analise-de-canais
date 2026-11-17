@@ -27,6 +27,12 @@
     973,
     42
    ]
+  ],
+  "recorte": [
+   880,
+   400,
+   2960,
+   1080
   ]
  },
  "P02": {
@@ -57,6 +63,12 @@
     1352,
     124
    ]
+  ],
+  "recorte": [
+   600,
+   664,
+   3460,
+   1484
   ]
  },
  "P13": {
@@ -98,7 +110,13 @@
  "P03a": {
   "url": "https://istoe.com.br/ataque-hacker-caixa-vida-previdencia-vazamento-dados",
   "frase": "não há confirmação",
-  "rects": []
+  "rects": [],
+  "recorte": [
+   700,
+   920,
+   2200,
+   1420
+  ]
  },
  "P03b": {
   "url": "https://istoe.com.br/ataque-hacker-caixa-vida-previdencia-vazamento-dados",
@@ -110,6 +128,12 @@
     55,
     38
    ]
+  ],
+  "recorte": [
+   680,
+   740,
+   2480,
+   1280
   ]
  },
  "P10a": {
