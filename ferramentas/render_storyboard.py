@@ -637,6 +637,8 @@ def quadros_de_video(clipe, entrada, dur):
 
 
 def renderizar(cfg):
+    global GRAF
+    import graficos as GRAF
     if cfg.get("formato") == "v2":
         stt = json.load(open(cfg["transcricao"]))
         palavras = [x for x in stt["words"] if x["type"] == "word"]
@@ -728,6 +730,8 @@ def renderizar(cfg):
             elif tipo == "cartao":
                 base = ken_burns(frames_base[0], k, "zoom_in", 0.03) if frames_base else None
                 f = cartao(base, p["texto"], k)
+            elif tipo in GRAF.TIPOS:
+                f = GRAF.TIPOS[tipo](re.split(r";?\s*(?:data|credito)=", p["texto"])[0].strip(), k)
             elif tipo == "calendario":
                 f = ken_burns(calendario(p["texto"], k), k, "zoom_in", 0.04)
             elif tipo == "vinheta":
@@ -738,6 +742,8 @@ def renderizar(cfg):
             if tipo != "vinheta":
                 f = colorir(f, p.get("cor", "neutro"))
                 f = poeira(f, quadro_global)
+                if ("data=" in p["texto"] or "credito=" in p["texto"]) and tipo not in ("print",):
+                    f = GRAF.etiquetas(f, p["texto"][p["texto"].find("data=") if "data=" in p["texto"] else p["texto"].find("credito="):])
             if prox_vinheta and i >= nq - 14:
                 f = Image.blend(f, Image.new("RGB", (W, H), (0, 0, 0)), (i - (nq - 14)) / 14)
             quadro_global += 1
