@@ -116,7 +116,7 @@ Segundo a Febraban, os clientes relataram 139 mil casos de falsa central só no 
 6. Sugestão do canal: combine com os pais e avós uma regra e uma palavra-código da família.
 7. Sugestão do canal: reduza o limite do Pix, principalmente o da noite, e desconfie de quem pede para aumentar.
 
-👉 PRÓXIMO LAUDO (nº 003): R$ 813 milhões saíram de uma vez, no maior roubo via Pix da história. Inscreva-se e ative o sininho para não perder.
+👉 PRÓXIMO LAUDO (nº 003): cerca de R$ 813 milhões desviados num único ataque, segundo a Polícia Federal: o maior ataque hacker ligado ao Pix já registrado no país. Inscreva-se e ative o sininho para não perder.
 
 📰 Fontes
 Febraban, 1º semestre de 2025 (falsa central: 139 mil relatos, +195,7%): https://istoedinheiro.com.br/golpe-da-falsa-venda-lidera-ranking
@@ -167,7 +167,7 @@ Alguém da sua família já recebeu uma ligação dessas? O que o golpista sabia
 6. Sugestão do canal: uma regra e uma palavra-código da família.
 7. Sugestão do canal: reduza o limite noturno do Pix e desconfie de quem pede para aumentar.
 
-Próximo laudo: o maior roubo via Pix da história.
+Próximo laudo: o maior ataque hacker ligado ao Pix já registrado no país.
 ```
 
 Ligação com o bloco 9 do roteiro (fechamento): repete a pergunta final do vídeo ("Alguém da sua família já recebeu uma ligação dessas?") e a promessa da lista na descrição e no comentário fixado.

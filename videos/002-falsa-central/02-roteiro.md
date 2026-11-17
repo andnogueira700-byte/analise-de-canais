@@ -105,4 +105,4 @@ Alguém da sua família já recebeu uma ligação dessas? O que o golpista sabia
 
 Da próxima vez que o celular tocar com o nome do banco na tela, lembre que aquele nome é só o que alguém escreveu no envelope.
 
-A falsa central rouba uma pessoa de cada vez. E se você quer entender como oitocentos e treze milhões de reais saíram de uma vez, no maior roubo via Pix da história, o próximo laudo está aqui na tela. Laudo encerrado. Até a próxima autópsia.
+A falsa central rouba uma pessoa de cada vez. E se você quer entender como, segundo a Polícia Federal, cerca de oitocentos e treze milhões de reais foram desviados num único ataque, o maior ataque hacker ligado ao Pix já registrado no país, o próximo laudo está aqui na tela. Laudo encerrado. Até a próxima autópsia.
