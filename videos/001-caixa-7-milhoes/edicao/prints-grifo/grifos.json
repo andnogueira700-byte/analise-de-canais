@@ -153,5 +153,96 @@
     48
    ]
   ]
+ },
+ "P01d": {
+  "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados",
+  "frase": "identificou um ataque cibernético ocorrido em 6 de novembro",
+  "rects": [
+   [
+    1768,
+    1010,
+    782,
+    42
+   ],
+   [
+    1220,
+    1058,
+    156,
+    42
+   ]
+  ]
+ },
+ "P02a": {
+  "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/tesouro-nacional-identifica-vazamento-de-dados-de-30-mil-cadastros",
+  "frase": "30 mil cadastros",
+  "rects": [
+   [
+    1640,
+    618,
+    560,
+    96
+   ]
+  ],
+  "recorte": [
+   720.0,
+   288,
+   3120.0,
+   1022
+  ]
+ },
+ "P02b": {
+  "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/tesouro-nacional-identifica-vazamento-de-dados-de-30-mil-cadastros",
+  "frase": "4 mil chaves Pix",
+  "mesma_imagem": "P02a",
+  "rects": [
+   [
+    1784,
+    730,
+    229,
+    42
+   ]
+  ]
+ },
+ "P01e": {
+  "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados",
+  "frase": "notificou, em 11 de novembro, a Autoridade Nacional de Proteção de Dados (ANPD), outras autoridades competentes e os titulares afetados",
+  "rects": [
+   [
+    2068,
+    1009,
+    457,
+    42
+   ],
+   [
+    1220,
+    1057,
+    1306,
+    42
+   ],
+   [
+    1220,
+    1105,
+    250,
+    42
+   ]
+  ]
+ },
+ "P05a": {
+  "url": "https://www.gov.br/anpd/pt-br/canais_atendimento/agente-de-tratamento/comunicado-de-incidente-de-seguranca-cis?activeAccordion=474f3af0-aa3f-4bf4-9023-a013b00a0697",
+  "frase": "três (3) dias úteis",
+  "rects": [
+   [
+    2476,
+    1057,
+    258,
+    46
+   ]
+  ],
+  "recorte": [
+   640,
+   620,
+   3260,
+   1420
+  ]
  }
 }
