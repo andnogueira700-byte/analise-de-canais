@@ -565,10 +565,10 @@ def obter_asset(cfg, asset):
         try:
             dados = urllib.request.urlopen(req, timeout=90).read()
             break
-        except urllib.error.HTTPError as e:
-            if e.code != 429 or tentativa == 5:
+        except Exception as e:
+            if tentativa == 5 or (isinstance(e, urllib.error.HTTPError) and e.code not in (429, 500, 502, 503, 504)):
                 raise
-            time.sleep(15 * (tentativa + 1))  # limite de downloads do site: espera e tenta de novo
+            time.sleep(15 * (tentativa + 1))  # limite do site ou download cortado: espera e tenta de novo
     open(destino, "wb").write(dados)
     if os.path.getsize(destino) < 10000:
         raise SystemExit(f"download falhou: {asset} ({url})")

@@ -244,5 +244,90 @@
    3260,
    1420
   ]
+ },
+ "P01f": {
+  "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados",
+  "frase": "vazamento de dados dos 7,6 milhões de clientes ativos da companhia",
+  "rects": [
+   [
+    1635,
+    1058,
+    870,
+    42
+   ],
+   [
+    1220,
+    1106,
+    170,
+    42
+   ]
+  ]
+ },
+ "P01g": {
+  "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados",
+  "frase": "Dados de ex-clientes também foram vazados",
+  "mesma_imagem": "P01f",
+  "rects": [
+   [
+    1858,
+    1154,
+    686,
+    42
+   ]
+  ]
+ },
+ "P03c": {
+  "url": "https://istoe.com.br/ataque-hacker-caixa-vida-previdencia-vazamento-dados",
+  "frase": "clientes e ex-clientes",
+  "rects": [
+   [
+    1073,
+    1053,
+    432,
+    56
+   ]
+  ],
+  "recorte": [
+   700,
+   620,
+   2300,
+   1400
+  ]
+ },
+ "P05b": {
+  "url": "https://www.gov.br/anpd/pt-br/assuntos/incidente-de-seguranca",
+  "frase": "risco ou dano relevante aos titulares dos dados",
+  "rects": [
+   [
+    1160,
+    1079,
+    729,
+    46
+   ]
+  ],
+  "recorte": [
+   400,
+   760,
+   2560,
+   1220
+  ]
+ },
+ "P06a": {
+  "url": "https://www.gov.br/anpd/pt-br/assuntos/incidente-de-seguranca",
+  "frase": "Cabe ao controlador avaliar os riscos e impactos aos titulares",
+  "rects": [
+   [
+    834,
+    1080,
+    982,
+    46
+   ]
+  ],
+  "recorte": [
+   780,
+   900,
+   3000,
+   1320
+  ]
  }
 }
