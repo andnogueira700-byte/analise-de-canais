@@ -119,3 +119,73 @@ Consequências:
   (a pergunta que o espectador faz; o roteiro responde: ataque em 6/11, aviso em 11/11 segundo a empresa, e a regra que permite esse intervalo).
 - Thumbnail: estilo das thumbs de hacker aprovadas (Hackers do Crime): foto clara e realista, prédio corporativo + hacker na tela + logo da Caixa Seguridade + 1 texto forte em tarja vermelha. Sem excesso de escuro, sem poluição.
 - Rodada 2 do analista: nota 7,7, ajustes pequenos. Limite de 2 rodadas atingido; o Diretor coordena os ajustes finais e leva as pendências ao dono.
+
+---
+
+## REESCRITA PROFISSIONAL — diagnóstico do Diretor (pedido do dono, 18/11)
+
+O dono reprovou o estilo do roteiro: texto quebrado, palavras que a IA lê mal e
+trechos que não se encaixam. Diagnóstico da leitura completa do `02c-roteiro-corrido.txt`:
+
+### A. Estilo (o mais grave)
+1. **Frases picadas e parágrafos de uma linha** ("Cinco dias.", "Parece muito.",
+   "A palavra é ativos.", "Oito dias depois da detecção."). Isso soa como lista,
+   não como documentário. O Elementar narra em **parágrafos cheios, de 3 a 6
+   frases, com ligação entre as ideias** (ver a transcrição da Fraude nas Padarias
+   em `canal/REFERENCIAS.md`). Frases de impacto curtas: no máximo 1 a cada 3 ou
+   4 parágrafos, só em momentos-chave.
+2. **Atribuição repetida de forma mecânica.** "Segundo a Agência Brasil" /
+   "segundo a empresa" aparece quase a cada frase. Atribua **uma vez por bloco de
+   fatos**, com verbos variados (de acordo com, conforme informou, a empresa
+   declarou, o comunicado divulgado ao mercado diz que...).
+3. **Defensivo e repetitivo.** "Não afirmamos que alguém cumpriu ou descumpriu"
+   aparece 3 vezes; "Este laudo não acusa ninguém" 2 vezes; "São contas nossas".
+   Diga isso **uma vez**, com elegância, no bloco da virada.
+4. **Comandos repetidos ao espectador:** "Volte ao calendário", "Guarde essa ideia",
+   "Agora volte mais ainda", "Repare". Use no máximo 2 vezes no vídeo todo.
+
+### B. Leitura pela IA (ElevenLabs)
+As grafias fonéticas atrapalharam. Regra nova: **não escrever palavras
+"deformadas"**; em vez disso, **evitar** a palavra difícil ou trocá-la:
+- "réquer" → use "invasor", "criminoso" ou "hacker" (o ElevenLabs lê "hacker" bem).
+- "Rekópsia" → **não falar o nome do canal na narração**; a vinheta mostra
+  HACKOPSIA na tela. A abertura fica: "Laudo número um. O vazamento da Caixa
+  Vida e Previdência."
+- "Isto É" → "a revista IstoÉ" pode ficar, mas prefira "a revista IstoÉ" só uma
+  vez; nas outras, "a revista".
+- "Tecno Blog" → "o site de tecnologia Tecnoblog" (uma vez), depois "o site".
+- "Telecól Infosérvice" → não citar o nome: "uma microempresa de telemarketing
+  de Ubatuba, no litoral de São Paulo".
+- "tôken" → "código de segurança".
+- "gov ponto bê érre" → "com a mesma conta que você usa nos serviços do governo federal".
+- "ê-Serviços" → "o portal de serviços do Tesouro".
+- "Idéc" → "o Instituto Brasileiro de Defesa do Consumidor" (sem a sigla).
+- "Laudo número zero zero um" → "Laudo número um".
+- Datas: o ano por extenso só na primeira menção; depois, só dia e mês.
+- Nada de parênteses, aspas, travessões, barras, siglas novas sem explicação.
+
+### C. O que não se encaixa (conteúdo)
+1. **O título diz "Caixa Seguridade Hackeada"**, mas a narração quase não liga a
+   Caixa Seguridade ao caso. Deixe claro logo no início: a Caixa Seguridade é a
+   empresa do grupo Caixa que cuida de seguros e previdência; foi ela que divulgou
+   o comunicado ao mercado sobre o ataque à sua subsidiária Caixa Vida e
+   Previdência. E que **não é a Caixa Econômica Federal**.
+2. **A pergunta do título ("Por que você só soube depois?") precisa de uma
+   resposta explícita e clara** no fim do vídeo, amarrando as três razões: dias
+   úteis, o relógio começa quando a empresa diz que soube, e a própria empresa
+   avalia o risco.
+3. **O "placar" Tesouro/FGC mede coisas diferentes** e o texto se perde
+   explicando isso. Simplifique: apresente os dois como "outros casos da mesma
+   quinzena", com os intervalos e o que cada um mede, em um parágrafo cada, sem
+   transformar em comparação de quem foi pior.
+4. "Até dezesseis de novembro" → "até a produção deste laudo".
+5. O bloco da multa da ANPD: mostrar que a primeira multa foi baixa e não era
+   vazamento, sem o nome da empresa e sem detalhes que não ajudam a história.
+
+### D. O que manter
+Todos os fatos, números e atribuições confirmados da versão atual; a estrutura de
+9 blocos; a virada (ex-clientes + quem decide o risco relevante); os 7 passos de
+proteção (em parágrafo fluido, não em lista seca, mas ainda numerados na fala:
+"o primeiro cuidado é...", "o segundo...");
+o encerramento fixo "Laudo encerrado. Até a próxima autópsia." e a ponte para o
+Laudo 002. Tamanho: **2.300 a 2.600 palavras**.
