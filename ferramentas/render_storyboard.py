@@ -167,7 +167,9 @@ def frase_na_tela(base, texto, k):
     img = base.copy()
     d = ImageDraw.Draw(img)
     fnt = fonte(FONTE, 86)
-    linhas = quebrar(texto, fnt, 1250, d)
+    linhas = []
+    for parte in texto.split(" / "):
+        linhas += quebrar(parte.strip(), fnt, 1250, d)
     alt = 118
     y0 = H // 2 - len(linhas) * alt // 2 - 20
     x0 = 160
@@ -473,6 +475,8 @@ def renderizar(cfg):
         frames_base = None
         if tipo == "video":
             clipe = os.path.join(cfg["clipes"], p["asset"] + ".mp4")
+            if not os.path.exists(clipe):
+                raise SystemExit(f"clipe ausente: {clipe} (plano {p['n']})")
             frames_base = quadros_de_video(clipe, p["entrada"], nq / FPS)
             ultimo_video = (clipe, p["entrada"] + nq / FPS)
         elif tipo in ("texto", "numero", "frase_centro", "cartao") and ultimo_video:
