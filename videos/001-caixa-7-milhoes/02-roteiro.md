@@ -1,0 +1,104 @@
+# Roteiro — Caixa Seguridade Hackeada: Por que Você Só Soube Depois?!
+**Grande Pergunta:** Se a lei manda avisar, por que quem tinha dados na Caixa Vida e Previdência só soube do ataque de seis de novembro dias depois? | **Virada:** a base atingida inclui ex-clientes, e quem decide se o caso é grave o bastante para avisar, e quando o relógio começa a correr, é a própria empresa; mesmo seguida à risca, a regra deixa uma janela em que o hacker soube antes de você. | **Parecer:** na avaliação do laudo, a regra protege mais o processo da empresa do que o cidadão; propostas: prazo em dias corridos, critério objetivo de quando avisar e transparência sobre o total de atingidos, incluindo ex-clientes.
+**Palavras (blocos 1 a 6):** 2.460 (contadas com ferramenta pelo Diretor) | **Duração estimada:** 16 min e meio
+
+**Aprendizado central:** o caminho do aviso em quatro passos (a empresa descobre; a empresa avalia se o risco é relevante; o relógio de três dias úteis começa quando ela diz que soube; só então o aviso chega a você) e por que dado vazado vira golpe (a ficha de apresentação).
+**Bônus prático:** as três atitudes quando alguém liga dizendo ser do banco ou da seguradora, e o que procurar no Registrato.
+**Frases marcantes:** "Você sai da empresa, mas os seus dados nem sempre saem com você." | "Três dias úteis não são três dias." | "Quem sabe os seus dados não prova que é do banco. Prova só que leu a ficha." | "Sem impacto financeiro não quer dizer sem risco."
+
+---
+## [INTRO] — a cargo do agente intro (ver 02a-intro.md)
+
+## [BLOCO 1 — CONTEXTO]
+
+Para entender este caso, é preciso acertar os nomes, porque até parte da imprensa se confundiu. A Caixa Seguridade é a empresa do grupo Caixa que cuida de seguros e previdência. É como uma família em que a Caixa Seguridade é a mãe e a Caixa Vida e Previdência, a seguradora atacada, é uma das filhas. Foi a mãe que veio a público, com um comunicado ao mercado, contar o que aconteceu com a filha.
+
+Nenhuma das duas é a Caixa Econômica Federal, o banco onde muita gente recebe salário. Segundo a revista IstoÉ, não há confirmação de que contas da Caixa Econômica tenham sido afetadas. Mas, se um dia você contratou um seguro de vida ou uma previdência pela Caixa, esta conversa é com você.
+
+De acordo com a Agência Brasil, que cita o comunicado da empresa, um invasor copiou clandestinamente dados de sete vírgula seis milhões de clientes ativos. Estão ali CPF, endereço, telefone, e-mail e data de nascimento, e a revista acrescenta que nome e CPF aparecem em todos os registros. Pela apuração preliminar, não há sinal de que senhas, dados bancários ou saldos de previdência tenham sido atingidos. Sem senha e sem cartão, parece pouca coisa, e é exatamente aí que mora o engano.
+
+Esses dados funcionam como uma cópia da chave da sua casa. Ninguém entrou ainda, mas alguém pode entrar, e você não sabe quem ficou com a cópia. Juntos, eles formam a ficha de apresentação de uma pessoa. Com essa ficha na mão, um estranho fala com você como se te conhecesse há anos.
+
+Esse truque se chama engenharia social, que é enganar a pessoa em vez de quebrar o sistema. É como o porteiro que não abre para qualquer um, mas abre para quem chega dizendo o nome do morador e o número do apartamento. O exemplo mais conhecido é o golpe da falsa central, em que alguém liga fingindo ser do banco e já sabe o seu nome, o seu CPF e o seu endereço.
+
+O Instituto Brasileiro de Defesa do Consumidor faz um alerta nessa direção. Segundo o instituto, depois de um vazamento, os consumidores brasileiros ficam imensamente mais propensos a cair em golpes financeiros. Guarde essa ideia, porque ela explica tudo o que vem depois.
+
+## [BLOCO 2 — A INVESTIGAÇÃO]
+
+Vamos ao calendário, dia por dia, como numa perícia. Sexta-feira, seis de novembro. Segundo o comunicado da Caixa Seguridade, citado pela Agência Brasil, essa é a data do ataque cibernético contra a seguradora. Quem entrou e por qual falha, a empresa não divulgou. Depois vieram o sábado, o domingo, a segunda e a terça.
+
+Na quarta-feira, onze de novembro, a empresa notificou a Autoridade Nacional de Proteção de Dados, a ANPD, outras autoridades e os titulares afetados. Titular é a palavra técnica para você, a pessoa dona do CPF. A empresa afirma ter feito essas notificações conforme prevê a lei. No dia seguinte, quinta-feira, doze de novembro, saiu o comunicado ao mercado, e só aí o público em geral ficou sabendo.
+
+A empresa declarou que bloqueou os caminhos usados no acesso, reforçou a proteção e contratou uma consultoria forense externa, ou seja, peritos de fora. Disse também que monitora a internet em busca dos dados e que os clientes atingidos estão recebendo recomendações de proteção diante do risco de fraudes. Só que a seguradora não estava sozinha naquela quinzena, e o desenho que aparece ao lado dela se repete.
+
+Em quatro de novembro, dois dias antes do ataque à seguradora, o Tesouro Nacional detectou um acesso não autorizado a dados pessoais. Conforme informou a Agência Brasil, foram atingidos cerca de trinta mil cadastros do portal de serviços do Tesouro, com nome, CPF e e-mail, além de cerca de quatro mil chaves Pix e informações de pagamentos do governo federal. O anúncio público veio na noite de doze de novembro, oito dias depois. O órgão afirma que não houve impacto financeiro e que esse tempo foi necessário para confirmar, investigar e conter o incidente.
+
+O terceiro caso envolve o Fundo Garantidor de Créditos, o FGC, que faz pagamentos de garantia a investidores. De acordo com o site de tecnologia Tecnoblog, o fundo identificou a suspeita de um acesso não autorizado em vinte e seis de outubro. O caso veio a público em cinco de novembro, quando foi noticiado, dez dias depois. Foram atingidos nome, CPF, e-mail, data de nascimento e dados de pagamentos de garantia, e o fundo afirma que não tem evidência de uso indevido nem de perda financeira.
+
+Esses dois intervalos vão da detecção ou da suspeita até a notícia, e as fontes não dizem quando cada pessoa foi avisada. Eles não servem para apontar quem foi pior, mas mostram um padrão de dias entre o problema e a notícia.
+
+E existe uma lei para isso. Desde dois mil e dezoito, o Brasil tem a Lei Geral de Proteção de Dados, a LGPD, que manda avisar a autoridade e o titular quando há um incidente. Em abril de dois mil e vinte e quatro, a ANPD publicou uma resolução que fixou o prazo. Segundo a página oficial da autoridade, o aviso deve sair em três dias úteis, de forma individual e direta sempre que possível, e em linguagem simples.
+
+No papel, parece uma regra firme. O problema começa quando ela encontra o calendário de verdade, e foi aí que dois detalhes mudaram o tamanho deste caso.
+
+## [BLOCO 3 — A VIRADA]
+
+O primeiro detalhe está numa palavra que quase passou despercebida nas manchetes, a palavra ativos. Os sete vírgula seis milhões são só os clientes ativos. Segundo a Agência Brasil e a revista IstoÉ, a base atingida também inclui ex-clientes, e a empresa não informou quantos. Você pode ter cancelado um seguro há anos, pode nem lembrar que foi cliente, e mesmo assim os seus dados podem estar nessa base. O total real de atingidos é maior do que o número da manchete.
+
+Você sai da empresa, mas os seus dados nem sempre saem com você.
+
+O segundo detalhe está dentro da própria regra. Para entendê-lo, vale seguir o caminho do aviso passo a passo, como quem acompanha uma encomenda até a sua porta. O primeiro passo é a empresa descobrir o problema. Segundo escritórios de advocacia que analisam a resolução, o prazo não começa na data do ataque, e sim quando a empresa toma conhecimento de que dados pessoais foram atingidos. E quem informa essa data é a própria empresa.
+
+O segundo passo é avaliar se o caso é grave. De acordo com a página oficial da ANPD, o aviso só é obrigatório quando o incidente está confirmado, envolve dados pessoais e pode causar risco ou dano relevante às pessoas. E a mesma página diz quem faz essa avaliação. Cabe ao controlador avaliar os riscos e os impactos, e controlador é a empresa ou o órgão que guarda os seus dados.
+
+É como um cano que estoura no seu prédio. Quem decide se o vazamento é grave o bastante para avisar os moradores é o próprio síndico, e o relógio só começa quando ele diz que viu a água. A ANPD lista fatores que pesam, como a larga escala e dados que permitam roubo de identidade, e analisa as comunicações que recebe. Mesmo assim, a primeira palavra é de quem sofreu o ataque.
+
+O terceiro passo é o prazo de três dias úteis, que não conta sábado, domingo nem feriado. É como a entrega de uma compra pela internet com prazo de três dias úteis, que, feita numa sexta, só chega na quarta. Entre uma sexta e uma quarta, são cinco dias no calendário, mas só três dias úteis. E o calendário da seguradora teve exatamente esse desenho, com o ataque numa sexta e a notificação numa quarta. Como o prazo conta a partir de quando a empresa diz ter tomado conhecimento, só ela tem essa data.
+
+Três dias úteis não são três dias.
+
+Só no quarto passo o aviso chega a você. A empresa sofre o ataque, avalia o risco, informa quando ficou sabendo e conta os dias úteis. Você é o último elo dessa corrente, e não escolhe nada nela.
+
+Este laudo não afirma que alguém cumpriu ou descumpriu o prazo, e a seguradora diz ter seguido a lei. A questão é mais incômoda. Mesmo seguida à risca, a regra deixa uma janela aberta. Durante essa janela, quem copiou os dados já tinha a sua ficha de apresentação, e você seguia a vida sem saber de nada. O hacker soube antes de você.
+
+## [BLOCO 4 — O QUE DIZ A LEI + O PARECER DO LAUDO]
+
+E quando a regra é descumprida? Pela LGPD, as punições possíveis incluem advertência, multa, publicação da infração e bloqueio dos dados. A multa simples pode chegar a dois por cento do faturamento da empresa no Brasil, limitada a cinquenta milhões de reais por infração. À primeira vista, parece uma ameaça pesada.
+
+Só que o histórico conta outra história. A primeira multa da ANPD saiu no Diário Oficial da União em julho de dois mil e vinte e três, contra uma microempresa de telemarketing de Ubatuba, no litoral de São Paulo. Foram catorze mil e quatrocentos reais, mais uma advertência, e o caso nem era um vazamento. Segundo a autoridade, um dos motivos foi usar dados pessoais sem base legal, ou seja, sem uma justificativa que a lei permita.
+
+E órgão público, pela LGPD, não leva multa em dinheiro. A lei prevê advertência e publicação da infração, que é tornar a falha pública. Isso não quer dizer que o Tesouro foi ou será punido. Até a produção deste laudo, nenhuma fonte consultada informa punição em nenhum dos três casos.
+
+Segundo a Agência Brasil, o próprio Tesouro alertou que as informações podem ser utilizadas por terceiros para tornar tentativas de fraude mais convincentes, por meio de mensagens e contatos que aparentem ser legítimos. Quem escreveu isso foi o órgão que teve os dados acessados. O FGC também pediu cautela com quem se diga do fundo, e a seguradora orienta os clientes diante do risco de fraudes.
+
+Todos afirmam que não houve impacto financeiro e, ao mesmo tempo, todos falam em golpe. Sem impacto financeiro não quer dizer sem risco.
+
+Chegamos ao parecer deste laudo, e o que vem agora é opinião, não fato. Na nossa avaliação, a regra atual protege mais o processo da empresa do que a pessoa que teve os dados copiados. Ela diz à empresa o que fazer e em quanto tempo, mas deixa nas mãos dela a data em que o relógio começa e a decisão sobre se o caso merece aviso. E a punição, até agora, ficou longe de assustar.
+
+Por isso, o nosso parecer propõe três mudanças. A primeira é um prazo em dias corridos para avisar o titular, porque o risco de quem teve os dados copiados não tira folga no fim de semana. A segunda é um critério objetivo de quando avisar, como o número de pessoas atingidas ou o tipo de dado exposto, em vez de a empresa decidir sozinha o que é risco relevante. A terceira é transparência sobre o total de atingidos, incluindo os ex-clientes. São propostas deste laudo, não regras em vigor, e nenhuma delas acusa ninguém de crime.
+
+## [BLOCO 5 — COMO SE PROTEGER]
+
+Agora, o que você pode fazer ainda hoje. São sete cuidados, e o primeiro é o que mais vale a pena treinar.
+
+O primeiro cuidado é saber o que fazer quando alguém liga dizendo ser do banco, da seguradora ou do governo, e ele se resume a três atitudes. A primeira é lembrar que saber o seu nome, o seu CPF e o seu endereço não prova nada, porque esses são justamente os dados que vazam. A segunda é não confirmar nenhum dado e não passar senha nem código de segurança, seja qual for o motivo. A terceira é dizer com calma que você não resolve nada por telefone e desligar. Depois, procure a instituição você mesmo, pelo número do verso do cartão ou pelo aplicativo oficial. Se a ligação era verdadeira, o assunto continua lá. Se era golpe, você acabou de fechar a porta.
+
+Quem sabe os seus dados não prova que é do banco. Prova só que leu a ficha.
+
+O segundo cuidado é consultar o Registrato, um serviço gratuito do Banco Central. Você entra com a mesma conta que usa nos serviços do governo federal e vê as contas, as chaves Pix, as dívidas e os empréstimos ligados ao seu CPF. O que você procura é aquilo que não reconhece, como uma conta que nunca abriu ou um empréstimo que nunca pediu. O Instituto Brasileiro de Defesa do Consumidor orienta registrar um boletim de ocorrência se você encontrar uma transação estranha. E vale repetir essa consulta de tempos em tempos, como quem confere o extrato.
+
+O terceiro cuidado é desconfiar de mensagem que cite a seguradora, o FGC ou o Tesouro, e confirmar tudo pelos canais oficiais. O quarto vem da orientação do FGC, que pede para nunca informar senhas ou códigos e nunca pagar taxa para acessar um serviço. O quinto é ativar a verificação em duas etapas no e-mail e nos aplicativos, que funciona como uma segunda tranca na porta, além da senha.
+
+O sexto é usar, quando puder, uma chave Pix aleatória em vez do CPF ou do celular, para espalhar menos os seus dados. O sétimo vale para quem já caiu num golpe. Avise o banco imediatamente e registre o boletim de ocorrência.
+
+Para saber se você está numa dessas bases, pergunte à própria instituição, pelo canal oficial. O canal do Tesouro e o e-mail do FGC estão na descrição, e a seguradora, segundo a Agência Brasil, vai disponibilizar um e-mail específico para dúvidas. A lista está na descrição e no comentário fixado.
+
+## [BLOCO 6 — FECHAMENTO]
+
+Agora dá para responder à pergunta do começo. Você só soube depois por três razões, e nenhuma delas exige que alguém tenha quebrado a regra. A primeira é que o relógio só começa quando a empresa diz ter tomado conhecimento do problema, e essa data é ela quem informa. A segunda é que o aviso só é obrigatório quando o risco é considerado relevante, e quem avalia isso primeiro é a própria empresa. A terceira é que a regra conta dias úteis, e um ataque numa sexta-feira empurra o aviso para a quarta.
+
+E, como a base inclui ex-clientes, os seus dados podem estar num cadastro de que você nem lembra mais. Entre a cópia e o aviso existe uma janela, e nessa janela quem copiou soube antes de você.
+
+Eu quero saber de você. Você já recebeu algum aviso de vazamento de dados? E quanto tempo depois do incidente ele chegou? Conta aqui nos comentários.
+
+E se você quer entender o que fazem com os dados depois que eles vazam, o próximo laudo está aqui na tela. É o golpe da falsa central, em que a sua ficha de apresentação vira roteiro de ligação. Laudo encerrado. Até a próxima autópsia.
