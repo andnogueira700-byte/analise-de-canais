@@ -9,7 +9,7 @@ Status: 💡 ideia · 🔬 em produção · ✅ publicado
 | 1 | Laudo 001 — 7,6 Milhões de CPFs Vazados. Por Que Ninguém Te Avisou? | Brasil, quente | 🔬 |
 | 2 | A Farsa do "Seus Dados Estão Seguros" (E por que ninguém é punido) | Brasil, atemporal | 💡 |
 | 3 | O que aconteceu no Porto de Santos? (O ataque que parou o maior porto do país) | Brasil, quente | 💡 |
-| 4 | O Golpe da Falsa Central do Banco (Eles sabem TUDO sobre você) | Brasil, atemporal | 💡 |
+| 4 | Laudo 002 — O Golpe da Falsa Central do Banco (Eles sabem TUDO sobre você) | Brasil, atemporal | 🔬 |
 | 5 | Por que vazar dados no Brasil quase não dá multa? | Brasil, atemporal | 💡 |
 | 6 | A Máfia dos Painéis de Consulta de CPF | Brasil, atemporal (cuidado jurídico redobrado) | 💡 |
 | 7 | O hacker que avisou a hora do ataque à Petrobras | Brasil, quente | 💡 |
