@@ -39,15 +39,15 @@ Importante: a Caixa Vida e Previdência é uma empresa do grupo Caixa Seguridade
 7. Viu algo estranho? Avise o banco na hora e faça boletim de ocorrência.
 
 📰 Fontes
-- Agência Brasil, Caixa Seguridade informa ataque cibernético e vazamento de dados: https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados
-- IstoÉ, ataque hacker à Caixa expõe dados de 7,6 milhões de clientes: https://istoe.com.br/ataque-hacker-caixa-vida-previdencia-vazamento-dados
-- Agência Brasil, Tesouro Nacional identifica vazamento de dados de 30 mil cadastros: https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/tesouro-nacional-identifica-vazamento-de-dados-de-30-mil-cadastros
-- Tecnoblog, FGC sofre invasão e notifica investidores: https://tecnoblog.net/noticias/fgc-sofre-invasao-e-notifica-investidores-sobre-dados-vazados/
-- ANPD, comunicação de incidente de segurança: https://www.gov.br/anpd/pt-br/assuntos/incidente-de-seguranca
-- ANPD, primeira multa por descumprimento da LGPD: https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-aplica-a-primeira-multa-por-descumprimento-a-lgpd
-- LGPD, Lei nº 13.709/2018: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm
-- Mattos Filho, regulamento de incidente de segurança: https://www.mattosfilho.com.br/unico/regulamento-incidente-seguranca/
-- Idec, vazamento de dados pessoais: como proteger suas informações: https://idec.org.br/dicas-e-direitos/vazamento-de-dados-pessoais-saiba-como-proteger-suas-informacoes
+- Agência Brasil, Caixa Seguridade informa ataque cibernético e vazamento de dados
+- IstoÉ, ataque hacker à Caixa expõe dados de 7,6 milhões de clientes
+- Agência Brasil, Tesouro Nacional identifica vazamento de dados de 30 mil cadastros
+- Tecnoblog, FGC sofre invasão e notifica investidores
+- ANPD, comunicação de incidente de segurança
+- ANPD, primeira multa por descumprimento da LGPD
+- LGPD, Lei nº 13.709/2018
+- Mattos Filho, regulamento de incidente de segurança
+- Idec, vazamento de dados pessoais: como proteger suas informações
 
 Direito de resposta: citamos o que cada instituição afirmou em comunicado. Os intervalos em dias são cálculos nossos a partir das datas publicadas. Até 16/11/2026, nenhuma fonte consultada informa punição nestes casos.
 
