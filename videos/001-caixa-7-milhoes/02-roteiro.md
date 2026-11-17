@@ -25,7 +25,7 @@ O Instituto Brasileiro de Defesa do Consumidor faz um alerta nessa direção. Se
 
 ## [BLOCO 2 — A INVESTIGAÇÃO]
 
-Vamos ao calendário, dia por dia, como numa perícia. Sexta-feira, seis de novembro. Segundo o comunicado da Caixa Seguridade, citado pela Agência Brasil, essa é a data do ataque cibernético contra a seguradora. Quem entrou e por qual falha, a empresa não divulgou. Depois vieram o sábado, o domingo, a segunda e a terça.
+Vamos ao calendário, dia por dia, como numa perícia, e voltemos àquela sexta-feira, seis de novembro. Segundo o comunicado da Caixa Seguridade, citado pela Agência Brasil, essa é a data do ataque cibernético contra a seguradora. Quem entrou e por qual falha, a empresa não divulgou. Depois vieram o sábado, o domingo, a segunda e a terça.
 
 Na quarta-feira, onze de novembro, a empresa notificou a Autoridade Nacional de Proteção de Dados, a ANPD, outras autoridades e os titulares afetados. Titular é a palavra técnica para você, a pessoa dona do CPF. A empresa afirma ter feito essas notificações conforme prevê a lei. No dia seguinte, quinta-feira, doze de novembro, saiu o comunicado ao mercado, e só aí o público em geral ficou sabendo.
 
