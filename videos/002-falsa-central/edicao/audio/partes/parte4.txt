@@ -1,0 +1,13 @@
+A regra geral é a Súmula quatrocentos e setenta e nove do Superior Tribunal de Justiça, o STJ. Ela diz que os bancos respondem, mesmo sem culpa provada, por fraudes de terceiros em operações bancárias que fazem parte do risco da própria atividade, como o assalto faz parte do risco de um carro-forte.
+
+Em Volta Redonda, segundo o jornal O Povo, golpistas disseram a uma cliente, pelo WhatsApp, que a conta estava sendo invadida e a mandaram ampliar o limite do Pix na agência para se proteger. Segundo a sentença, ela avisou a gerente que desconfiava de falsos funcionários, e mesmo assim o limite foi ampliado. À noite, saíram cento e noventa mil e novecentos reais. O juiz mandou o banco devolver tudo, por não ter bloqueado operações fora do histórico da cliente. O banco alegou autenticação regular, e a decisão é de primeira instância.
+
+No STJ, o caso foi outro. Um cliente recebeu ligação de um número zero oitocentos, com golpistas que citavam dados pessoais dele, fez dois Pix pequenos e, no dia seguinte, transferiu vinte e oito mil reais na agência. Em quinze de julho de dois mil e vinte e seis, a Terceira Turma manteve, por unanimidade, a decisão que negou a indenização. Segundo o tribunal, as operações eram compatíveis com o histórico, e o relator, ministro Humberto Martins, entendeu que a responsabilidade do banco não é automática e exige falha na prestação do serviço.
+
+O golpe era quase o mesmo, e a pergunta decisiva foi se o banco tinha como perceber. Cada caso é um caso, e nenhuma decisão garante que quem perdeu dinheiro vai receber. A Febraban afirma que a culpa do golpe é do fraudador.
+
+Fora da Justiça, há o Mecanismo Especial de Devolução, o MED do Pix, reformado pelo Banco Central, que avisa: a devolução não é garantida, porque depende de ainda haver dinheiro nas contas.
+
+Agora, o parecer deste laudo, que é opinião. Na nossa avaliação, a falsa central passa por três portas com três vigias. Os dados vazam por uma porta da Autoridade Nacional de Proteção de Dados, a ANPD, a ligação passa pela da Anatel e o dinheiro sai pela do Banco Central. Ninguém fecha o ciclo, e quem fica no meio é a vítima.
+
+O parecer propõe três mudanças. Primeira, nome do banco na tela só em ligação verificada, com prazo curto para o setor. Segunda, um critério público de operação fora do padrão, como transferência alta à noite logo após aumentar o limite. Terceira, um canal único em que a vítima avisa uma vez, e o aviso chega ao banco, à operadora e à polícia. São propostas, não regras em vigor, e nenhuma acusa ninguém.

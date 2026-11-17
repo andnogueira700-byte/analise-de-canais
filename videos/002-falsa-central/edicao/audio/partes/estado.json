@@ -1,0 +1,37 @@
+{
+ "0": {
+  "request_id": "Sj4ZBGnftozLI8KfRrgV",
+  "caracteres": 1103,
+  "duracao_fala": 74.08
+ },
+ "1": {
+  "request_id": "pj4cJ4W5zVJaBgVswWSJ",
+  "caracteres": 2054,
+  "duracao_fala": 147.44
+ },
+ "2": {
+  "request_id": "6xgRz1OlOhy2nDizytG8",
+  "caracteres": 2443,
+  "duracao_fala": 164.4
+ },
+ "3": {
+  "request_id": "aKqNVSailvpUX5qMQAw4",
+  "caracteres": 1902,
+  "duracao_fala": 132.32
+ },
+ "4": {
+  "request_id": "eh5TwRXSO4satqFB0Zgg",
+  "caracteres": 2541,
+  "duracao_fala": 180.56
+ },
+ "5": {
+  "request_id": "xQLV3CpgKSMVEv6jTplJ",
+  "caracteres": 2566,
+  "duracao_fala": 183.76
+ },
+ "6": {
+  "request_id": "rG3ybiLwF3jg1438wjCp",
+  "caracteres": 1297,
+  "duracao_fala": 88.8
+ }
+}

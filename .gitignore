@@ -3,3 +3,4 @@ __pycache__/
 videos/*/edicao/audio/*.wav
 videos/*/edicao/audio/*.mp3
 videos/*/edicao/piloto/*.mp4
+videos/*/edicao/audio/partes/*.wav
