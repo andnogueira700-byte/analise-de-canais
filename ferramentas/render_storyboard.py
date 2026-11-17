@@ -61,7 +61,7 @@ def ler_storyboard_v2(caminho, palavras, cfg):
         planos.append(dict(n=int(c[0]), ini=max(0.0, ini), fim=None, tipo=c[2], asset=c[3],
                            entrada=float(c[4]) if c[4] not in ("-", "") else 0.0, mov=c[5],
                            texto=c[6], sfx=c[7], trans=c[8], cor=c[9] if len(c) > 9 else "neutro"))
-    planos[0]["ini"] = 0.0
+    planos[0]["ini"] = float(cfg.get("inicio", 0.0))
     for a, b in zip(planos, planos[1:]):
         a["fim"] = b["ini"]
     planos[-1]["fim"] = float(cfg["fim"])
@@ -485,8 +485,9 @@ def renderizar(cfg):
             elif tipo == "print":
                 chave = mapa_print.get(f"{p['n']}", p["asset"])
                 g = grifos.get(chave) or grifos.get(p["asset"])
+                sem_grifo = p["texto"].strip().startswith("-")
                 f = print_grifado(os.path.join(cfg["prints"], (chave if chave in grifos else p["asset"]) + ".png"),
-                                  g["rects"] if g else [], k, p["mov"])
+                                  [] if (sem_grifo or not g) else g["rects"], k, p["mov"])
             elif tipo == "texto":
                 base = ken_burns(frames_base[0], k, "zoom_in", 0.03) if frames_base else fundo_chumbo()
                 f = frase_na_tela(base, p["texto"], k)

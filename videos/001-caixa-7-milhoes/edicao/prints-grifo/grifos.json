@@ -76,5 +76,58 @@
     90
    ]
   ]
+ },
+ "P01c": {
+  "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados",
+  "frase": "não há indícios de comprometimento de dados financeiros ou de autenticação",
+  "rects": [
+   [
+    1921,
+    965,
+    334,
+    52
+   ],
+   [
+    1272,
+    1025,
+    1109,
+    52
+   ]
+  ]
+ },
+ "P03a": {
+  "url": "https://istoe.com.br/ataque-hacker-caixa-vida-previdencia-vazamento-dados",
+  "frase": "não há confirmação",
+  "rects": []
+ },
+ "P03b": {
+  "url": "https://istoe.com.br/ataque-hacker-caixa-vida-previdencia-vazamento-dados",
+  "frase": "CPF",
+  "rects": [
+   [
+    1694,
+    1017,
+    55,
+    38
+   ]
+  ]
+ },
+ "P10a": {
+  "url": "https://idec.org.br/dicas-e-direitos/vazamento-de-dados-pessoais-saiba-como-proteger-suas-informacoes",
+  "frase": "imensamente mais propensos a cair em golpes financeiros",
+  "rects": [
+   [
+    2183,
+    1056,
+    364,
+    48
+   ],
+   [
+    1200,
+    1116,
+    724,
+    48
+   ]
+  ]
  }
 }
