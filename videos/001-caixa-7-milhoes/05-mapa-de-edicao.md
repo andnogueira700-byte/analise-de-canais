@@ -1,366 +1,296 @@
-# Mapa de Edição
-**Duração estimada:** ~19 min 44 s (tela final de 20 s incluída: 19:20 da tabela, mais 24 s das 8 transições de 3 s cada; as pausas não foram empurradas para as cenas seguintes) | **Cenas:** 237 planos (168 cenas originais; 69 planos extras, de cenas longas divididas)
+# Mapa de Edição: Laudo 001 (roteiro novo)
+**Duração estimada:** ~18 min 40 s (intro 1:22, blocos 1 a 6 ~16 min 40 s, tela final 20 s) | **Cenas:** 171 linhas (165 planos + 6 transições)
 
-**Base:** `02-roteiro.md`, a versão de blocos (1 a 9). O arquivo traz o texto duplicado: depois dos blocos há uma segunda cópia em "Texto limpo para narração". Usei só a primeira. O cabeçalho declara 2.553 palavras (o pedido fala em 2.514). Pelo ritmo de 150 palavras por minuto, a narração dá cerca de 18 min, mais que os 17 declarados. Os tempos abaixo são estimativas; conferir na montagem.
+**Base:** `02c-roteiro-corrido.txt` (narração num áudio só, no ElevenLabs). INTRO = opção A de `02a-intro.md` (escolha do dono). Blocos 1 a 6 de `02-roteiro.md`. As pausas (T1 a T6) são cortes no áudio único: corta-se no fim da última frase do bloco, abre-se o respiro de 3 s e cola-se o resto. Tempos estimados a 150 palavras/min; alinhar ao áudio real.
 
-**Regras aplicadas em todo o mapa:** nenhum texto na tela diz "cumpriu" ou "descumpriu" prazo; quem copiou os dados nunca aparece como "golpista" na tela; nenhum dado pessoal real (sempre "NOME FICTÍCIO" e "000.000.000-00"); nenhum logo da Caixa, da CVP, do Tesouro, do FGC, do Banco Central ou de veículo. Nomes de empresa e de veículo entram só em texto.
+**Regras aplicadas em todo o mapa:** nenhum texto na tela diz "cumpriu" ou "descumpriu" prazo; quem copiou os dados nunca aparece como "golpista" ou "criminoso"; nenhum dado pessoal real (ficha ou cadastro: "NOME FICTÍCIO" e "000.000.000-00"); nenhum logo da Caixa, da CVP, do Tesouro, do FGC, do Banco Central, da ANPD ou de veículo. Nome de empresa e de veículo entra só como texto. Marca "HACKOPSIA" no canto inferior esquerdo o vídeo inteiro. Fundo dos cartões: chumbo com grade e brilho azul-frio; grifo amarelo #FFD400.
 
-**Abreviações de áudio:** M = música (tensão, suspense, neutro, virada, fechamento). SFX = efeito (whoosh, impacto, carimbo, digitação, tique, glitch). "Print fonte X" = print da fonte nº X da `01-pesquisa.md`, só o trecho usado.
+**Abreviações:** M = música. SFX = efeito. P## = print (lista no fim). V## = vídeo de banco (lista no fim). G## = elemento a criar (lista no fim). "(conta nossa)" = cálculo do canal sobre datas publicadas.
 
-## Elementos reutilizáveis
-
-Criar uma vez e usar em todos os laudos. Cores: fundo #0B0D10 a #15181D, amarelo #FFD400 (grifo e destaque), vermelho #E63946 (só números de perda e "VAZADO"), branco no texto, azul-frio suave no brilho do fundo.
-
-1. **Vinheta HACKOPSIA (3 a 4 s):** tela preta, "HACKOPSIA" em caixa alta, "LAUDO Nº 001" e o slogan "A autópsia dos ataques que esconderam de você". Entra na abertura fixa (2:22). O gancho não tem vinheta.
-2. **Marca d'água HACKOPSIA:** pequena, branca, canto inferior esquerdo, o vídeo inteiro.
-3. **Fundo dos cartões:** chumbo com grade fina quase invisível e brilho azul-frio no canto inferior esquerdo. Usado em todo cartão de reportagem, gráfico e lista.
-4. **Cartão de reportagem grifada (molde):** título em branco negrito; "Por: veículo" e "Publicado: data" em cinza pequeno; linha dupla branca; trecho em branco. O grifo amarelo (#FFD400, texto preto) avança a cada 3 a 4 s, uma frase de cada vez.
-5. **Frase na tela (molde):** cada linha em caixa branca própria, texto preto em negrito, entra de baixo para cima com whoosh. Termina com quadradinho amarelo quando for pergunta.
-6. **Número de destaque (molde):** número grande sobre tarja. Tarja vermelha (#E63946, número em branco) só para número de perda (7,6 MI, 30 MIL, 4 MIL). Os demais números usam tarja amarela (#FFD400, número em preto). Legenda pequena em faixa branca. Entra deslizando.
-7. **Lista numerada (molde):** números 01, 02, 03 em amarelo; itens em branco negrito; o último item fica em amarelo.
-8. **Etiqueta de local/data (molde):** retângulo preto pequeno, texto branco, canto inferior esquerdo. Ex.: "SEXTA · 06/11/2026", "UBATUBA · SP".
-9. **Linha do tempo animada:** barra horizontal com as datas 26/10, 04/11, 05/11, 06/11, 11/11, 12/11. Os pontos aparecem em ordem; o ponto da data atual fica amarelo. Reaproveitada como calendário.
-10. **Carimbos:** "VAZADO" (vermelho, inclinado, só sobre números de perda) e "LAUDO ENCERRADO" (branco, no fechamento). Som de carimbo.
-11. **Moldura de documento fictício:** mock de e-mail com assunto "Comunicado sobre incidente de segurança", remetente sem logo nem domínio real, campos "NOME FICTÍCIO" e "000.000.000-00". Marca "SIMULAÇÃO COM DADOS FICTÍCIOS" no canto.
-12. **Transição glitch (0,3 s) ou film burn frio:** entre cartões. Só na virada e nos capítulos.
-13. **Cartão de capítulo (molde):** tela preta, "ARQUIVO 0X — título" em branco, digitado letra por letra, 3 s. Pausa de 0,5 s antes e troca de música.
-14. **Tela final (20 s):** fundo chumbo, moldura com a miniatura do Laudo nº 002 (placeholder), área reservada para o botão de inscrição e os cards do YouTube, texto "Fontes e canais oficiais na descrição".
+**Cartões de capítulo (3.10):** ARQUIVO 01 no T1; ARQUIVO 02 no T2; ARQUIVO 03 no T3; ARQUIVO 04 no T4; ARQUIVO 05 no T5. T6 sem cartão.
 
 ## Cena a cena
 
-Tempos estimados a 150 palavras por minuto. Os marcos dos capítulos (1:14, 4:32, 9:58, 14:56) seguem a ordem dos blocos do roteiro.
-
-Cenas com letra (10a, 10b, 25a...) são divisões de planos longos, para que cada corte fique entre 4 e 5 s e o ritmo chegue a 12 a 18 cortes por minuto. A narração é a mesma. Nas frases na tela, o texto fica e o fundo troca. Os vídeos de banco com mais de 6 s foram divididos (cenas 10, 70, 113, 118 e 146).
-
-As linhas **TRANSIÇÃO** são as pausas entre blocos (fade-out, tela preta de 3 s, fade-in; manual, seção 3.11). Não são planos e não entram na contagem de cenas. A tela preta é inserida no ponto indicado, e não empurra as cenas seguintes; as 8 transições somam 24 s ao total do cabeçalho.
-
 | # | Tempo | Trecho da narração (início...) | Elemento | Visual | Texto na tela | Movimento | Áudio | Onde achar |
 |---|---|---|---|---|---|---|---|---|
-| **BLOCO 1 — GANCHO (0:00–1:14). Cortes de 2 a 4 s.** | | | | | | | | |
-| 1 | 0:00 | "Imagine uma notificação acendendo a tela do seu celular..." | vídeo de banco | Celular acendendo num quarto escuro | — | zoom lento | M tensão; SFX alerta curto | "phone notification dark" |
-| 2 | 0:03 | "...um título frio: comunicado sobre incidente de segurança." | imagem em moldura | Moldura de e-mail fictício (item 11) | "Comunicado sobre incidente de segurança" | corte seco | M tensão | criar (mock) |
-| 3 | 0:07 | "Você abre." | vídeo de banco | Mão segurando celular, close | — | zoom lento | M tensão | "hands holding phone night" |
-| 4 | 0:09 | "A empresa informa que seus dados podem ter sido acessados por terceiros." | imagem em moldura | E-mail aberto com campos fictícios | "DADOS FICTÍCIOS" (canto) | zoom lento | M tensão | criar (mock) |
-| 5 | 0:14 | "Nome. CPF. Endereço. Telefone. Data de nascimento." | frase na tela | Cinco caixas entram uma a uma, 1 s cada | NOME · CPF · ENDEREÇO · TELEFONE · NASCIMENTO | entra de baixo | SFX whoosh por caixa | criar |
-| 6 | 0:21 | "Aí você repara numa data." | etiqueta de local/data | Etiqueta sobre o mock | "ATAQUE · 06/11/2026" | corte seco | SFX carimbo | criar (sem data do e-mail, ver checklist) |
-| 7 | 0:24 | "O ataque aconteceu dias antes de esse e-mail chegar." | vídeo de banco | Calendário em close sobre a mesa | — | zoom lento | M tensão | "calendar close up desk" |
-| 8 | 0:28 | "Durante esses dias, quem copiou os dados já tinha a sua ficha." | vídeo de banco | Silhueta de capuz em tela escura, sem rosto | "JÁ TINHA A SUA FICHA" | panorâmica lenta | SFX whoosh | "hacker hoodie silhouette" |
-| 9 | 0:34 | "E você não sabia de nada." | frase na tela | Uma caixa branca | "E VOCÊ NÃO SABIA" | entra | SFX impacto grave | criar |
-| 10a | 0:38 | "Em novembro de dois mil e vinte e seis, milhões de brasileiros tiveram dados copiados, segundo a própria empresa." | vídeo de banco | Corredor de data center, azul-frio | "MILHÕES · DADOS COPIADOS (segundo a empresa)" | zoom lento | M tensão | "data center" |
-| 10b | 0:43 | (mesma narração de 10a) | vídeo de banco | Close em luzes azuis de servidor, sem tela legível | — | zoom lento | M tensão | "server rack blue light close up" |
-| 11 | 0:47 | "O nome dela é Caixa Vida e Previdência." | frase na tela | Caixa branca só com o nome da empresa, sem logo | "CAIXA VIDA E PREVIDÊNCIA" | entra | SFX whoosh | criar (só texto) |
-| 12 | 0:52 | "A Caixa Vida e Previdência não é a Caixa Econômica Federal." | frase na tela | Duas linhas | "NÃO É A CAIXA ECONÔMICA FEDERAL" / "SEGURADORA · GRUPO CAIXA SEGURIDADE" | entra linha a linha | M neutro | Fonte 2 (Techtudo) |
-| 13 | 0:59 | "Parte da imprensa confundiu as duas. Neste laudo, não vamos confundir." | print com zoom | Trecho da matéria com o alvo da invasão (CVP) | grifo amarelo no nome da empresa | zoom até o trecho | M neutro | Print fonte 2 |
-| 14 | 1:04 | "Segundo a empresa, os dados foram copiados num ataque em seis de novembro." | cartão de notícia | Manchete: "Caixa Seguridade informa ataque cibernético e vazamento de dados" | "Agência Brasil · nov/2026" | zoom lento | M tensão | Fonte 1; nome do veículo em texto, sem logo |
-| 15 | 1:09 | "E, segundo a mesma empresa, o aviso aos clientes saiu em onze de novembro." | gráfico animado | Linha do tempo (item 9): pontos 06/11 e 11/11 | "06/11 → 11/11 (segundo a empresa)" | pontos aparecem | SFX tique | criar (item 9) |
-| 16 | 1:12 | "Cinco dias. Na prática, quem copiou soube antes de você." | número de destaque | Tarja amarela, número em preto | "5 DIAS" · legenda "entre a cópia e o aviso" | entra deslizando | SFX impacto grave | criar |
-| 17 | 1:14 | **ARQUIVO 01** | cartão de capítulo | Tela preta | "ARQUIVO 01 — O choque" | digitação, 3 s | pausa 0,5 s; M muda | criar (item 13) |
-| **TRANSIÇÃO 1→2** | 1:14 (escuro 1:14–1:17) | Fim: "E isso pode acontecer mesmo quando a empresa afirma ter seguido a lei." / Início: "Sete vírgula seis milhões." | Fade-out ~1 s; tela preta 3 s, sem voz; fade-in ~1 s com a primeira frase | ARQUIVO 01 — O choque (cartão no escuro, é a linha 17) | fade-out e fade-in ~1 s; cartão digitado | M tensão sobe 3 a 6 dB no escuro; troca para a música de virada no cartão; volta a -20 dB com a voz | criar (item 13) |
-| **BLOCO 2 — CHOQUE EM NÚMEROS (1:14–2:00)** | | | | | | | | |
-| 18 | 1:18 | "Sete vírgula seis milhões. Segundo o comunicado da empresa, citado pela Agência Brasil..." | número de destaque | Tarja vermelha (número de perda), número contando até 7,6 | "7,6 MILHÕES" · legenda "clientes ativos com dados copiados" | contador | M entra (virada leve) | Fonte 1 |
-| 19 | 1:25 | "Mas esse número deixa gente de fora. Ex-clientes também foram atingidos." | frase na tela | Caixa branca | "EX-CLIENTES TAMBÉM" | entra | SFX whoosh | Fontes 1 e 3 |
-| 20 | 1:30 | "Quantos? A empresa não divulgou." | frase na tela | Caixa com quadradinho amarelo | "QUANTOS? NÃO DIVULGADO" | entra | — | criar |
-| 21 | 1:34 | "Oito dias." | número de destaque | Tarja amarela, número em preto | "8 DIAS" · legenda "do aviso ao anúncio, Tesouro" | entra | SFX impacto | criar |
-| 22a | 1:37 | "Pelas datas publicadas pela Agência Brasil, esse foi o intervalo entre o Tesouro Nacional detectar um acesso indevido e anunciar o caso." | linha do tempo | 04/11 → 12/11 com a barra de 8 dias | "04/11 · 12/11 (conta nossa)" | barra cresce | SFX tique | Fonte 4 |
-| 22b | 1:42 | (mesma narração de 22a) | linha do tempo | Mesma linha; pulso no ponto 12/11 | — | pulso | — | item 9 |
-| 23 | 1:47 | "Três dias úteis. Esse é o prazo da regra brasileira para avisar você." | número de destaque | Tarja amarela, número em preto | "3 DIAS ÚTEIS" · legenda "prazo da ANPD" | entra | SFX impacto | Fonte 24 |
-| 24 | 1:53 | "Só que três dias úteis não são três dias. E o relógio não começa quando você imagina." | frase na tela | Duas linhas | "NÃO SÃO TRÊS DIAS." / "O RELÓGIO NÃO COMEÇA QUANDO VOCÊ IMAGINA" | entra linha a linha | M tensão | criar |
-| **TRANSIÇÃO 2→3** | 1:57 (escuro 1:57–2:00) | Fim: "E o relógio não começa quando você imagina." / Início: "Então, se a lei manda avisar, por que você só soube depois?" | Fade-out ~1 s; tela preta 3 s, sem voz; fade-in ~1 s com a primeira frase | nada (tela preta) | — | fade-out e fade-in ~1 s; sem cartão | M suspense sobe 3 a 6 dB no escuro; volta a -20 dB com a voz | — |
-| **BLOCO 3 — A GRANDE PERGUNTA (2:00–2:26)** | | | | | | | | |
-| 25a | 2:00 | "Então, se a lei manda avisar, por que existe uma janela em que quem copiou os dados já sabe, e você ainda não?" | frase na tela | Tela escura; primeira caixa | "SE A LEI MANDA AVISAR," | pausa 1 s antes; entra | pausa 1 s; M suspense | criar (Grande Pergunta) |
-| 25b | 2:04 | (mesma narração de 25a) | frase na tela | Segunda caixa entra; fundo continua escuro | "POR QUE HÁ UMA JANELA?" | entra | M suspense | criar |
-| 25c | 2:08 | (mesma narração de 25a) | vídeo de banco | Plano de apoio: tela de celular apagada, sem texto | — (as duas caixas ficam) | zoom lento | M suspense | "phone dark table close up" |
-| 26 | 2:12 | "E, no fim das contas, quem decide se você precisa saber?" | frase na tela | Caixa com quadradinho amarelo | "QUEM DECIDE SE VOCÊ PRECISA SABER?" | entra | M suspense | criar |
-| 27 | 2:18 | "Para responder, vamos abrir este caso como um perito abre um arquivo. Data por data." | vídeo de banco | Mãos sobre pasta de papel, close | — | zoom lento | M suspense | "paper document close up" |
-| 28 | 2:24 | "HACKOPSIA. Laudo número zero zero um: o vazamento da Caixa Vida e Previdência." | vinheta (item 1) | Vinheta completa | "HACKOPSIA · LAUDO Nº 001" | letras aparecem | SFX carimbo; M troca | criar (item 1) |
-| **TRANSIÇÃO 3→4** | 2:28 (escuro 2:28–2:31) | Fim: "HACKOPSIA. Laudo número zero zero um: o vazamento da Caixa Vida e Previdência." / Início: "Comece pelo que foi levado." | Fade-out ~1 s; tela preta 3 s, sem voz; fade-in ~1 s com a primeira frase | nada (tela preta) | — | fade-out e fade-in ~1 s; sem cartão | M suspense sobe no escuro; troca para a música do bloco 4; volta a -20 dB com a voz | — |
-| **BLOCO 4 — CONTEXTO E ORIGEM (2:26–4:32)** | | | | | | | | |
-| 29 | 2:29 | "Comece pelo que foi levado." | vídeo de banco | Folha de papel em branco sobre mesa escura | — | zoom lento | M neutro | "paper document close up" |
-| 30a | 2:33 | "Segundo a Agência Brasil, os dados expostos incluem CPF, endereço, telefone, e-mail e data de nascimento." | lista numerada | 01 CPF · 02 endereço · 03 telefone | "DADOS EXPOSTOS (segundo a Agência Brasil)" | item a item, 2 s | SFX whoosh | Fonte 1 |
-| 30b | 2:38 | (mesma narração de 30a) | lista numerada | Itens restantes: 04 e-mail · 05 data de nascimento | (mesmo título) | item a item | — | Fonte 1 |
-| 31a | 2:44 | "A revista IstoÉ detalha. Nome e CPF aparecem em todos os registros. Os outros dados, só em parte deles." | cartão de reportagem grifada | Título "IstoÉ"; grifo em "Nome e CPF" | "Por: IstoÉ" | grifo a cada 3 s | M tensão | Fonte 3 (conferir o trecho) |
-| 31b | 2:49 | (mesma narração de 31a) | cartão de reportagem grifada | Mesmo cartão; grifo avança para "só em parte deles" | "Por: IstoÉ" | grifo | M tensão | Fonte 3 |
-| 32 | 2:54 | "Não parece tanta coisa. Não tem senha. Não tem número de cartão." | frase na tela | Duas caixas | "NÃO TEM SENHA." / "NÃO TEM NÚMERO DE CARTÃO." | entram uma a uma | SFX impacto leve | criar |
-| 33 | 3:00 | "Mas pense nesses dados como uma ficha de apresentação." | imagem em moldura | Ficha fictícia centralizada (item 11) | "FICHA DE APRESENTAÇÃO" | zoom lento | M tensão | criar (mock) |
-| 34 | 3:06 | "Quem tem essa ficha consegue falar com você como se já te conhecesse." | vídeo de banco | Celular com chamada recebida, sem texto legível | — | zoom lento | M tensão | "phone call worried man" |
-| 35 | 3:12 | "Existe um nome para isso. Engenharia social, que é manipulação psicológica." | frase na tela | Caixa branca | "ENGENHARIA SOCIAL = MANIPULAÇÃO PSICOLÓGICA" | entra | SFX whoosh | criar |
-| 36 | 3:18 | "O golpista não quebra o sistema do banco. Ele convence você a abrir a porta." | vídeo de banco | Silhueta com celular, ambiente escuro | — | panorâmica lenta | M tensão | "hands typing laptop night" |
-| 37a | 3:24 | "A Febraban classifica o golpe da falsa central como engenharia social. Guarde essa ideia." | frase na tela | Caixas em sequência | "FEBRABAN: GOLPE DA FALSA CENTRAL = ENGENHARIA SOCIAL" / "GUARDE ESSA IDEIA" | entra | M neutro | Fonte 16 (🟡): conferir antes de gravar |
-| 37b | 3:28 | (mesma narração de 37a) | vídeo de banco | Textos ficam; fundo troca para mesa escura com celular virado para baixo | — | zoom lento | M neutro | "phone face down dark table" |
-| 38 | 3:32 | "Agora, a regra. Desde dois mil e dezoito, o Brasil tem a Lei Geral de Proteção de Dados, a LGPD." | vídeo de banco | Vista aérea de Brasília | "LGPD · 2018" | zoom lento | M neutro | "brasilia aerial" |
-| 39a | 3:38 | "O artigo quarenta e oito dessa lei manda comunicar incidentes de segurança à autoridade e ao titular dos dados." | print com zoom | Texto do art. 48, grifo amarelo | "ART. 48 · LGPD" | zoom até o trecho | M neutro | Fonte 25 (planalto bloqueado): ler antes; se não der, cartão com fonte 24 |
-| 39b | 3:42 | (mesma narração de 39a) | print com zoom | Zoom continua até "autoridade e ao titular" | "ART. 48 · LGPD" | zoom | M neutro | Fonte 25 |
-| 40a | 3:46 | "O titular é você, a pessoa dona daquele CPF. A autoridade é a ANPD." | frase na tela | Duas caixas | "TITULAR = VOCÊ" / "AUTORIDADE = ANPD" | entra | M tensão | criar |
-| 40b | 3:50 | (mesma narração de 40a) | vídeo de banco | Textos ficam; mão segurando celular, close | — | zoom lento | M tensão | "hands holding phone night" |
-| 41 | 3:54 | "Em vinte e quatro de abril de dois mil e vinte e quatro, a ANPD publicou a Resolução número quinze." | print com zoom | Cabeçalho da página oficial | "24/04/2024 · RESOLUÇÃO Nº 15" | zoom | M neutro | Print fonte 24 |
-| 42a | 4:00 | "Segundo a página oficial da ANPD, a empresa deve comunicar a autoridade e os titulares em três dias úteis." | número de destaque | Tarja amarela, número em preto, grifo em "três (3) dias úteis" | "3 DIAS ÚTEIS" · legenda "para a ANPD e os titulares" | entra deslizando | SFX carimbo | Print fonte 24 |
-| 42b | 4:04 | (mesma narração de 42a) | print com zoom | Número fica; grifo avança sobre o print da ANPD | "3 DIAS ÚTEIS" | zoom | — | Print fonte 24 |
-| 43a | 4:08 | "E o aviso a você deve ser individual e direto, sempre que possível." | cartão de reportagem grifada | Título "Comunicação de incidente de segurança" | "Por: ANPD" | grifo no trecho | M tensão | Print fonte 24 |
-| 43b | 4:12 | (mesma narração de 43a) | cartão de reportagem grifada | Mesmo cartão; grifo avança para "sempre que possível" | "Por: ANPD" | grifo | M tensão | Print fonte 24 |
-| 44a | 4:16 | "A ANPD aceita uma comunicação preliminar, completada depois. Mas a própria autoridade diz que a preliminar sozinha não basta." | cartão de reportagem grifada | Grifo 1: "até vinte dias úteis" | "Por: ANPD" | grifo a cada 4 s | SFX carimbo | Print fonte 24 |
-| 44b | 4:21 | (mesma narração de 44a) | cartão de reportagem grifada | Grifo 2: "a preliminar sozinha não basta" | "Por: ANPD" | grifo | M tensão | Print fonte 24 |
-| 45 | 4:26 | "No papel, parece uma regra firme. Três dias. Aviso direto. Linguagem clara." | lista numerada | 01 Três dias úteis · 02 Aviso direto · 03 Linguagem clara (último em amarelo) | "NO PAPEL" | item a item | SFX whoosh | criar |
-| 46 | 4:31 | "Agora veja como o calendário se comporta na prática." | frase na tela | Caixa branca | "AGORA, O CALENDÁRIO." | entra | SFX whoosh | criar |
-| **TRANSIÇÃO 4→5** | 4:32 (escuro 4:32–4:35) | Fim: "Agora veja como o calendário se comporta na prática." / Início: "Sexta-feira, seis de novembro de dois mil e vinte e seis." | Fade-out ~1 s; tela preta 3 s, sem voz; fade-in ~1 s com a primeira frase | ARQUIVO 02 — O calendário (cartão no escuro, é a linha 47) | fade-out e fade-in ~1 s; cartão digitado | M tensão sobe 3 a 6 dB no escuro; M muda no cartão; volta a -20 dB com a voz | criar (item 13) |
-| **BLOCO 5 — A INVESTIGAÇÃO (4:32–9:58). Maior bloco: cortes de 3 a 5 s e cartões com grifo.** | | | | | | | | |
-| 47 | 4:32 | **ARQUIVO 02** | cartão de capítulo | Tela preta | "ARQUIVO 02 — O calendário" | digitação, 3 s | M muda | criar (item 13) |
-| 48 | 4:36 | "Sexta-feira, seis de novembro de dois mil e vinte e seis." | etiqueta de local/data | Etiqueta | "SEXTA · 06/11/2026" | entra | SFX carimbo | criar |
-| 49a | 4:40 | "Segundo o comunicado da empresa, citado pela Agência Brasil, é a data do ataque cibernético contra a Caixa Vida e Previdência." | print com zoom | Matéria, grifo em "ocorrido em 6 de novembro" | — | zoom até o trecho | M tensão | Print fonte 1 (conferir a frase literal) |
-| 49b | 4:44 | (mesma narração de 49a) | print com zoom | Zoom continua no parágrafo seguinte | — | zoom | M tensão | Print fonte 1 |
-| 50 | 4:48 | "Ataque cibernético é o nome técnico para alguém entrar onde não deveria." | vídeo de banco | Sala de servidores com luz azul, sem tela legível | — | zoom lento | M tensão | "server room" |
-| 51 | 4:54 | "Quem entrou? Por qual falha? Segundo a IstoÉ, a empresa não divulgou." | frase na tela | Duas caixas com pergunta | "QUEM ENTROU?" / "POR QUAL FALHA?" / "NÃO DIVULGADO (IstoÉ)" | entram | M suspense | Fonte 3 |
-| 52 | 5:00 | "Vem o fim de semana. Sábado. Domingo. Depois, segunda e terça." | gráfico animado | Faixa de calendário: SEX 06, SÁB 07, DOM 08, SEG 09, TER 10 | — | dias acendem a cada 1 s | SFX tique | criar (item 9) |
-| 53 | 5:06 | "Quarta-feira, onze de novembro." | etiqueta de local/data | Etiqueta | "QUARTA · 11/11/2026" | corte seco | SFX carimbo | criar |
-| 54a | 5:09 | "Segundo a Agência Brasil, a empresa notifica a ANPD, outras autoridades competentes e os titulares afetados." | print com zoom | Matéria, grifo na frase inteira | — | zoom | M tensão | Print fonte 1 (conferir a frase e a data dos titulares) |
-| 54b | 5:13 | (mesma narração de 54a) | print com zoom | Zoom avança para "titulares afetados" | — | zoom | M tensão | Print fonte 1 |
-| 55 | 5:17 | "A empresa afirma que fez essas notificações conforme a LGPD." | frase na tela | Tag de atribuição | "A EMPRESA AFIRMA" / "CONFORME A LGPD" | entra | — | criar (direito de resposta) |
-| 56 | 5:22 | "Quinta-feira, doze de novembro. A Caixa Seguridade publica um comunicado ao mercado." | etiqueta de local/data | Etiqueta | "QUINTA · 12/11/2026" · "COMUNICADO AO MERCADO" | corte seco | SFX carimbo | criar |
-| 57 | 5:27 | "É aí que o caso vira notícia e o público em geral fica sabendo." | cartão de notícia | Manchete da Techtudo | legenda: "Caixa Vida e Previdência (CVP)" | zoom lento | M tensão | Fonte 2. A manchete diz "Caixa": a legenda corrige |
-| 58a | 5:33 | "O que a empresa diz? Segundo o comunicado, citado pela Agência Brasil, não há indícios de comprometimento de dados financeiros ou de autenticação." | cartão de reportagem grifada | Grifo na frase inteira | "Por: Agência Brasil" | grifo a cada 4 s | M tensão | Fonte 1 |
-| 58b | 5:38 | (mesma narração de 58a) | cartão de reportagem grifada | Grifo avança para "autenticação" | "Por: Agência Brasil" | grifo | M tensão | Fonte 1 |
-| 59 | 5:44 | "Autenticação são as senhas e os códigos que provam que você é você." | frase na tela | Caixa com quadradinho amarelo | "AUTENTICAÇÃO = SENHAS E CÓDIGOS" | entra | — | criar |
-| 60 | 5:50 | (plano de apoio) | vídeo de banco | Mão digitando código no celular, sem tela legível | — | zoom lento | M tensão | "hands holding phone night" |
-| 61a | 5:55 | "Pela apuração preliminar, a empresa afirma que também não foram atingidos dados bancários, valores de apólices e saldos de previdência." | lista numerada | 01 dados bancários · 02 valores de apólices | "NÃO ATINGIDOS (segundo a empresa)" | item a item | M tensão | Fonte 1 |
-| 61b | 6:00 | (mesma narração de 61a) | lista numerada | Item 03 saldos de previdência (último em amarelo) | "NÃO ATINGIDOS (segundo a empresa)" | item a item | M tensão | Fonte 1 |
-| 62a | 6:06 | "E, segundo a IstoÉ, a empresa afirma que o incidente não afetou contas da Caixa Econômica Federal, nem interrompeu serviços." | print com zoom | Matéria, grifo em "não afetou contas da Caixa Econômica Federal" | "Por: IstoÉ · a empresa afirma" | zoom | M tensão | Fonte 3 (última tentativa deu 502: conferir; se não der, usar fonte 2) |
-| 62b | 6:10 | (mesma narração de 62a) | print com zoom | Zoom avança para o trecho seguinte da matéria (conferir o texto literal) | "Por: IstoÉ · a empresa afirma" | zoom | M tensão | Fonte 3 |
-| 63a | 6:14 | "A empresa também diz que bloqueou os mecanismos usados no acesso, reforçou a proteção e contratou uma consultoria forense externa." | frase na tela | Três caixas | "BLOQUEOU O ACESSO" / "REFORÇOU A PROTEÇÃO" / "CONSULTORIA FORENSE EXTERNA" | entram | SFX whoosh | Fonte 1 |
-| 63b | 6:19 | (mesma narração de 63a) | vídeo de banco | As três caixas ficam; fundo troca para sala escura com luz de monitor | — | zoom lento | M tensão | "computer screen dark" |
-| 64 | 6:24 | "Ou seja, peritos de fora para investigar." | vídeo de banco | Lupa sobre documento, mesa escura | — | zoom lento | M suspense | "magnifying glass document" |
-| 65 | 6:29 | "E diz que monitora a internet para ver se os dados aparecem expostos." | vídeo de banco | Monitor distante e escuro, sem conteúdo | "MONITORA A INTERNET" | panorâmica | M tensão | "computer screen dark" |
-| 66 | 6:35 | "Até aqui, uma resposta organizada." | frase na tela | Caixa branca | "UMA RESPOSTA ORGANIZADA." | entra | — | criar |
-| 67 | 6:39 | "Mas há uma palavra no meio desse comunicado que muda o tamanho do problema. A palavra é ativos." | frase na tela (revelação) | Pausa de 0,7 s em tela preta; depois a palavra | "ATIVOS" (grande, amarelo) | corte seco | pausa de 0,7 s; M segura | criar |
-| 68 | 6:46 | "Sete vírgula seis milhões de clientes ativos." | número de destaque | Tarja vermelha (número de perda) | "7,6 MI" · legenda "clientes ativos" | entra deslizando | SFX impacto grave | Fontes 1 e 3 |
-| 69 | 6:51 | "Segundo a Agência Brasil e a IstoÉ, a base atingida também inclui ex-clientes. E a empresa não informou quantos." | frase na tela | Duas caixas | "+ EX-CLIENTES" / "QUANTOS? NÃO INFORMADO" | entram | — | Fontes 1 e 3 |
-| 70a | 6:58 | "Pense no que isso quer dizer. Você pode ter cancelado um seguro ou uma previdência há anos." | vídeo de banco | Pessoa lendo carta à mesa, sem rosto | "CANCELOU HÁ ANOS?" | zoom lento | M tensão | "person reading letter at table" |
-| 70b | 7:02 | (mesma narração de 70a) | vídeo de banco | Close na carta, sem texto legível (outro ângulo) | — | zoom lento | M tensão | "letter close up dark table" |
-| 71 | 7:06 | "Pode nem lembrar que já foi cliente." | vídeo de banco | Caixa de arquivo fechada, luz baixa | — | zoom lento | M tensão | "old file folder dark" |
-| 72 | 7:11 | "Mesmo assim, seus dados podem estar nessa base. O total real de atingidos é maior do que o número da manchete." | número de destaque | Tarja vermelha (número de perda) | "MAIS DO QUE 7,6 MI" · legenda "total real desconhecido" | entra | SFX impacto | criar |
-| 73 | 7:18 | "E a Caixa Vida e Previdência não estava sozinha naquela semana." | frase na tela | Caixa branca | "E NÃO ERA SÓ ELA" | entra | M tensão | criar (frase antes de bloco de casos) |
-| 74 | 7:23 | "Volte dois dias no calendário. Quarta-feira, quatro de novembro." | etiqueta de local/data | Linha do tempo volta a 04/11 | "QUARTA · 04/11/2026" | calendário volta (reverso) | SFX whoosh | criar (item 9) |
-| 75 | 7:28 | "Segundo a Agência Brasil, o Tesouro Nacional detecta um acesso não autorizado a dados pessoais." | print com zoom | Matéria, grifo em "acesso não autorizado a dados pessoais" | "Por: Agência Brasil" | zoom | M tensão | Print fonte 4 |
-| 76 | 7:35 | "Foram cerca de trinta mil cadastros do portal e-Serviços, com nome, CPF e e-mail." | número de destaque | Tarja vermelha (número de perda) | "30 MIL" · legenda "cadastros do e-Serviços" | entra | SFX impacto | Fonte 4 |
-| 77 | 7:42 | "E cerca de quatro mil chaves Pix e informações de pagamentos do governo federal." | número de destaque | Tarja vermelha (número de perda) | "4 MIL" · legenda "chaves Pix e pagamentos do governo" | entra | — | Fonte 4 |
-| 78a | 7:48 | "O anúncio público veio na noite de quinta-feira, doze de novembro. Oito dias depois da detecção." | número de destaque | Tarja amarela, número em preto | "8 DIAS" · legenda "da detecção ao anúncio (conta nossa)" | entra | SFX impacto | Fonte 4 |
-| 78b | 7:52 | (mesma narração de 78a) | vídeo de banco | Número fica; fundo troca para calendário em close | "8 DIAS" | zoom lento | M tensão | "calendar close up desk" |
-| 79a | 7:56 | "O que diz o Tesouro? Que não houve impacto financeiro, e que os sistemas centrais não foram comprometidos." | cartão de reportagem grifada | Grifo em "não houve impacto financeiro" | "Por: Agência Brasil" | grifo a cada 4 s | M tensão | Fonte 4 (conferir literal) |
-| 79b | 8:00 | (mesma narração de 79a) | cartão de reportagem grifada | Grifo avança para "sistemas centrais" | "Por: Agência Brasil" | grifo | M tensão | Fonte 4 |
-| 80 | 8:05 | "E que a ANPD foi notificada." | frase na tela | Caixa | "O TESOURO INFORMOU" / "ANPD NOTIFICADA" | entra | — | Fonte 4 |
-| 81a | 8:09 | "O órgão também explicou o intervalo. Segundo o Tesouro, o tempo foi necessário para detectar e confirmar o incidente, investigar internamente e fazer a contenção e recuperação." | cartão de reportagem grifada | Grifo em "detectar e confirmar o incidente" | "Por: Agência Brasil" | grifo a cada 4 s | M tensão | Fonte 4 (conferir literal) |
-| 81b | 8:14 | (mesma narração de 81a) | cartão de reportagem grifada | Grifo em "investigar internamente" | "Por: Agência Brasil" | grifo | M tensão | Fonte 4 |
-| 81c | 8:19 | (mesma narração de 81a) | cartão de reportagem grifada | Grifo em "fazer a contenção e recuperação" | "Por: Agência Brasil" | grifo | M tensão | Fonte 4 |
-| 82 | 8:25 | "Guarde o Tesouro." | frase na tela | Caixa com quadradinho amarelo | "GUARDE O TESOURO" | entra; pausa de 0,5 s antes | M tensão | criar |
-| 83 | 8:29 | "No meio desse comunicado existe uma frase que vale mais do que todo o resto. Ela volta daqui a pouco." | frase na tela | Caixa | "A FRASE QUE VALE MAIS" | entra | — | criar |
-| 84 | 8:36 | "Agora volte mais ainda. Segunda-feira, vinte e seis de outubro." | etiqueta de local/data | Linha do tempo se estende para outubro | "SEGUNDA · 26/10/2026" | linha se estende | SFX whoosh | criar (item 9) |
-| 85a | 8:42 | "Segundo o Tecnoblog, o Fundo Garantidor de Créditos, o FGC, identifica a suspeita de um acesso não autorizado." | cartão de notícia | Manchete "FGC sofre invasão e notifica investidores sobre dados vazados" | "Tecnoblog · 05/11/2026" | zoom lento | M tensão | Fonte 7 (manchete a conferir) |
-| 85b | 8:46 | (mesma narração de 85a) | vídeo de banco | Manchete fica; fundo troca para escritório escuro | "Tecnoblog · 05/11/2026" | zoom lento | M tensão | "office desk dark" |
-| 86a | 8:50 | "O FGC faz pagamentos de garantia a investidores. E o ambiente afetado era justamente o desse fluxo de pagamento." | gráfico animado | Três caixas com setas: "FGC" → "pagamento de garantia a investidores" | — | caixas aparecem | SFX whoosh | criar |
-| 86b | 8:54 | (mesma narração de 86a) | gráfico animado | Terceira caixa "ambiente afetado" destacada em amarelo | — | destaque | SFX tique | criar |
-| 87 | 8:58 | "O comunicado público saiu na quinta-feira, cinco de novembro, segundo o Tecnoblog." | etiqueta de local/data | Linha do tempo com 05/11 | "QUINTA · 05/11/2026" | corte seco | SFX carimbo | Fonte 7 |
-| 88 | 9:03 | "Dez dias depois da suspeita." | número de destaque | Tarja amarela, número em preto | "10 DIAS" · legenda "da suspeita ao comunicado (conta nossa)" | entra | SFX impacto | criar |
-| 89a | 9:07 | "Os dados atingidos, segundo o Tecnoblog: nome, CPF, e-mail, data de nascimento e informações de pagamentos de garantia." | lista numerada | 01 nome · 02 CPF | "DADOS ATINGIDOS (segundo o Tecnoblog)" | item a item | M tensão | Fonte 7 |
-| 89b | 9:12 | (mesma narração de 89a) | lista numerada | Itens 03 e-mail · 04 data de nascimento | "DADOS ATINGIDOS (segundo o Tecnoblog)" | item a item | M tensão | Fonte 7 |
-| 89c | 9:17 | (mesma narração de 89a) | lista numerada | Item 05 pagamentos de garantia (último em amarelo) | "DADOS ATINGIDOS (segundo o Tecnoblog)" | item a item | M tensão | Fonte 7 |
-| 90a | 9:20 | "O FGC afirma que credenciais bancárias não foram atingidas. E diz não ter evidência de divulgação, uso indevido ou perda financeira." | cartão de reportagem grifada | Grifo em "credenciais bancárias não foram atingidas" | "Por: Tecnoblog · FGC afirma" | grifo a cada 4 s | M tensão | Fonte 7 (conferir literal) |
-| 90b | 9:25 | (mesma narração de 90a) | cartão de reportagem grifada | Grifo em "não ter evidência de divulgação, uso indevido ou perda financeira" | "Por: Tecnoblog · FGC afirma" | grifo | M tensão | Fonte 7 |
-| 91 | 9:31 | "Quantas pessoas? Não divulgou." | frase na tela | Caixa | "QUANTAS PESSOAS? NÃO DIVULGADO." | entra | SFX impacto | criar |
-| 92a | 9:35 | "Agora coloque os três lado a lado. FGC, dez dias. Tesouro, oito dias. Caixa Vida e Previdência, cinco dias até o aviso aos clientes." | gráfico animado | Barras: FGC 10 · Tesouro 8 · CVP 5 (dias corridos) | "dias corridos · FGC e Tesouro até o anúncio; CVP até o aviso" | barras crescem 0,5 s cada | SFX tique; M tensão | criar (barras) |
-| 92b | 9:40 | (mesma narração de 92a) | gráfico animado | Barras prontas; linha de regra "3 dias úteis" tracejada aparece | (mesmo texto) | linha desenha | — | criar (barras) |
-| 93 | 9:45 | "São contas nossas, sobre as datas publicadas. E não medem a mesma coisa." | frase na tela | Duas caixas | "CONTA NOSSA, SOBRE DATAS PUBLICADAS" / "NÃO MEDEM A MESMA COISA" | entram | — | criar |
-| 94 | 9:50 | "As fontes que consultamos não dizem quando esses dois tomaram conhecimento do problema, nem quando avisaram cada titular." | frase na tela | Tela preta com duas perguntas em branco | "SEM AS DATAS, A CONTA NÃO FECHA" | corte seco | M tensão | criar |
-| 95 | 9:56 | "Já a Caixa Vida e Previdência tem as datas do ataque e do aviso. E é colocando essas datas ao lado da regra que aparece o ponto cego." | frase na tela (antes da virada) | Linha do tempo CVP e barra de 3 dias úteis lado a lado | "O PONTO CEGO" (amarelo, grande) | entra | pausa 0,5 s antes | criar |
-| **TRANSIÇÃO 5→6** | 10:00 (escuro 10:00–10:03) | Fim: "E é colocando essas datas ao lado da regra que aparece o ponto cego." / Início: "Volte ao calendário." | Fade-out ~1 s; tela preta 3 s, sem voz; fade-in ~1 s com a primeira frase | ARQUIVO 03 — A virada (cartão no escuro, é a linha 96) | fade-out e fade-in ~1 s; cartão digitado | M tensão sobe no escuro; pausa 0,5 s antes do cartão; M de virada no cartão; volta a -20 dB com a voz | criar (item 13) |
-| **BLOCO 6 — A VIRADA (cerca de 9:58–12:40)** | | | | | | | | |
-| 96 | 10:00 | **ARQUIVO 03** | cartão de capítulo | Tela preta | "ARQUIVO 03 — A virada" | digitação, 3 s | pausa 0,5 s; M muda para virada | criar (item 13) |
-| 97a | 10:04 | "Volte ao calendário. Seis de novembro, sexta-feira. Onze de novembro, quarta-feira." | gráfico animado | Calendário com 06 e 11 marcados | "SEX 06/11 → QUA 11/11" | seta cresce | M virada | criar (item 9) |
-| 97b | 10:08 | (mesma narração de 97a) | gráfico animado | Calendário fica; seta avança até 11/11 | "SEX 06/11 → QUA 11/11" | seta | M virada | criar (item 9) |
-| 98 | 10:12 | "São cinco dias corridos." | número de destaque | Tarja amarela, número em preto | "5 DIAS CORRIDOS" | entra | SFX impacto | criar |
-| 99a | 10:16 | "Mas a regra não conta dias corridos. Conta dias úteis. Sábado e domingo não entram." | frase na tela | Calendário com sábado e domingo apagados | "NÃO CONTA DIAS CORRIDOS." / "CONTA DIAS ÚTEIS." | entra; sáb e dom apagam | SFX whoosh | criar |
-| 99b | 10:20 | (mesma narração de 99a) | vídeo de banco | Textos ficam; fundo troca para calendário em close | — | zoom lento | M virada | "calendar close up desk" |
-| 100a | 10:24 | "E, segundo escritórios de advocacia que analisam a regra, o prazo não começa na data do ataque. Começa quando a empresa toma conhecimento de que dados pessoais foram afetados." | cartão de reportagem grifada | Título "Regras para comunicação de incidente" | "Por: escritórios de advocacia" | grifo a cada 4 s | M tensão | Fontes 10 e 11 (🟡): conferir antes de gravar |
-| 100b | 10:28 | (mesma narração de 100a) | cartão de reportagem grifada | Grifo avança para "começa na data do ataque" | "Por: escritórios de advocacia" | grifo | M tensão | Fontes 10 e 11 |
-| 100c | 10:32 | (mesma narração de 100a) | cartão de reportagem grifada | Grifo em "dados pessoais foram afetados" | "Por: escritórios de advocacia" | grifo | M tensão | Fontes 10 e 11 |
-| 101 | 10:36 | "E quem informa essa data é a própria empresa." | frase na tela | Duas caixas | "QUEM INFORMA A DATA?" / "A PRÓPRIA EMPRESA" | entram; pausa 0,5 s antes | M tensão | criar |
-| 102a | 10:42 | "Não afirmamos que o prazo foi cumprido, nem que foi descumprido. A empresa afirma que fez as notificações conforme a LGPD." | frase na tela | Tag de atribuição | "NÃO ACUSAMOS NINGUÉM." / "A EMPRESA AFIRMA" | entra | — | criar (não usar "cumprido" na tela) |
-| 102b | 10:47 | (mesma narração de 102a) | vídeo de banco | Tag fica; fundo troca para plano de apoio sem texto (escrivaninha) | — | zoom lento | — | "desk dark notebook" |
-| 103 | 10:52 | "E esse é justamente o ponto." | frase na tela | Caixa | "ESSE É O PONTO." | entra | — | criar |
-| 104a | 10:56 | "Uma regra de três dias úteis, começando numa sexta-feira, pode terminar só na quarta." | gráfico animado | Faixa de calendário: SEX 06 (início) → SEG 09 → TER 10 → QUA 11 (destaque) | "ilustração da regra · conta nossa" | marcadores acendem | SFX tique | criar (item 9) |
-| 104b | 11:01 | (mesma narração de 104a) | gráfico animado | Marcadores seguem até QUA 11, que fica em amarelo | "ilustração da regra · conta nossa" | marcadores | — | criar (item 9) |
-| 105 | 11:06 | "Os dados copiados não tiram fim de semana." | vídeo de banco | Celular na mesa, de madrugada, fora de foco | — | zoom lento | M tensão | "phone notification dark" |
-| 106 | 11:11 | "Mas essa ainda não é a virada. Ela está numa frase da própria regra." | frase na tela | Tela preta | "A VIRADA ESTÁ NA REGRA" | pausa 0,5 s antes | M tensão sobe | criar |
-| 107a | 11:17 | "Segundo a página oficial da ANPD, o prazo de três dias úteis não vale para todo incidente." | print com zoom | Página da ANPD, grifo no trecho | "Por: ANPD" | zoom até o trecho | M virada (cordas) | Print fonte 24 (conferir o texto literal) |
-| 107b | 11:21 | (mesma narração de 107a) | print com zoom | Zoom avança para o trecho das três condições | "Por: ANPD" | zoom | M virada | Print fonte 24 |
-| 108a | 11:25 | "A comunicação só é obrigatória quando três coisas acontecem juntas." | lista numerada | 01 incidente confirmado · 02 envolve dados pessoais | "TUDO JUNTO" | item a item, 3 s | M virada | Print fonte 24 |
-| 108b | 11:30 | (mesma narração de 108a) | lista numerada | Item 03 pode acarretar risco ou dano relevante aos titulares | "TUDO JUNTO" | item a item | M virada | Print fonte 24 |
-| 108c | 11:35 | (mesma narração de 108a) | lista numerada | Itens 01 a 03 acesos; o último em amarelo | "TUDO JUNTO" | destaque | SFX tique | Print fonte 24 |
-| 109a | 11:40 | "Risco ou dano relevante. Agora a pergunta. Quem decide se o risco é relevante?" | frase na tela (VIRADA) | Tela preta por 1 s antes; depois a primeira linha da pergunta | "QUEM DECIDE SE O RISCO É RELEVANTE?" (quadradinho amarelo) | glitch de 0,3 s antes; entra letra a letra | pausa de 1 s; SFX impacto grave; M muda | criar (momento de destaque) |
-| 109b | 11:44 | (mesma narração de 109a) | vídeo de banco | Pergunta fica; fundo troca para tela escura com brilho azul | "QUEM DECIDE SE O RISCO É RELEVANTE?" | zoom lento | M virada | "dark blue glow" |
-| 110 | 11:48 | "A resposta está na mesma página da ANPD, com todas as letras." | print com zoom | Página da ANPD | "Por: ANPD" | zoom | M virada | Print fonte 24 |
-| 111 | 11:53 | "Cabe ao controlador avaliar os riscos e impactos." | print com zoom | Grifo na frase, uma palavra de cada vez | — | grifo avança | SFX carimbo | Print fonte 24 |
-| 112 | 11:58 | "Controlador é a empresa ou o órgão que guarda os seus dados." | frase na tela | Caixa | "CONTROLADOR = QUEM GUARDA SEUS DADOS" | entra | — | criar |
-| 113a | 12:03 | "Ou seja, quem sofreu o ataque é quem avalia, primeiro, se ele é grave o bastante para você ser avisado." | vídeo de banco | Sala de servidores escura, sem tela legível | "QUEM SOFREU O ATAQUE AVALIA" | zoom lento | M virada | "data center" |
-| 113b | 12:07 | (mesma narração de 113a) | vídeo de banco | Close em luz azul de servidor, outro ângulo, sem tela legível | "QUEM SOFREU O ATAQUE AVALIA" | zoom lento | M virada | "server room" |
-| 114a | 12:12 | "É justo dizer o resto. A mesma página lista o que pesa nessa avaliação." | lista numerada | 01 larga escala · 02 dados que permitam roubo de identidade | "O QUE PESA" | item a item | M tensão | Print fonte 24 |
-| 114b | 12:17 | (mesma narração de 114a) | lista numerada | Item 03 dados sensíveis (último em amarelo) | "O QUE PESA" | item a item | M tensão | Print fonte 24 |
-| 115a | 12:22 | "E a ANPD analisa as comunicações que recebe. Num caso com sete vírgula seis milhões de clientes ativos, a larga escala pesa." | número de destaque | Tarja vermelha (número de perda) | "7,6 MI" · legenda "larga escala pesa" | entra | SFX impacto | Fontes 24 e 1 |
-| 115b | 12:26 | (mesma narração de 115a) | print com zoom | Número fica; fundo troca para print da ANPD com grifo em "larga escala" | "7,6 MI" | zoom | M tensão | Print fonte 24 |
-| 116a | 12:30 | "Ainda assim, repare na sequência. A empresa sofre o ataque. A empresa avalia o risco." | gráfico animado | Caixas 1 e 2: SOFRE O ATAQUE → AVALIA O RISCO | "A EMPRESA" em amarelo | uma caixa a cada 3 s | SFX whoosh | criar |
-| 116b | 12:34 | (mesma narração de 116a) | gráfico animado | Caixa 3: INFORMA QUANDO SOUBE | "A EMPRESA" em amarelo | caixa entra | SFX whoosh | criar |
-| 116c | 12:38 | (mesma narração de 116a) | gráfico animado | Caixa 4: O RELÓGIO COMEÇA (em amarelo) | "A EMPRESA" em amarelo | caixa entra | SFX tique | criar |
-| 117a | 12:42 | "Você entra nessa história no final. Este laudo não acusa ninguém de descumprir a regra." | frase na tela | Caixa | "VOCÊ ENTRA NO FINAL" / "ESTE LAUDO NÃO ACUSA NINGUÉM" | entram | M tensão | criar |
-| 117b | 12:46 | (mesma narração de 117a) | vídeo de banco | Textos ficam; fundo troca para sala escura com janela | — | zoom lento | M tensão | "dark room window" |
-| 118a | 12:50 | "O que ele mostra é outra coisa. A regra deixa o relógio e a avaliação do risco nas mãos de quem sofreu o ataque." | vídeo de banco | Mão fechando pasta de papel sobre a mesa | — | zoom lento | M tensão | "hands holding paper document" |
-| 118b | 12:54 | (mesma narração de 118a) | vídeo de banco | Close na pasta aberta, outro ângulo, sem texto legível | — | zoom lento | M tensão | "paper folder close up" |
-| 119 | 12:58 | "E, mesmo quando é seguida, ela deixa uma janela aberta." | vídeo de banco | Porta entreaberta em quarto escuro | "JANELA ABERTA" | zoom lento | M virada termina | "door half open dark" |
-| 120 | 13:04 | "Uma janela em que quem copiou os dados soube antes de você." | frase na tela | Caixa | "QUEM COPIOU SOUBE ANTES." | entra | SFX impacto | criar |
-| **TRANSIÇÃO 6→7** | 13:08 (escuro 13:08–13:11) | Fim: "Uma janela em que quem copiou os dados soube antes de você." / Início: "E quando a regra é descumprida? O que acontece?" | Fade-out ~1 s; tela preta 3 s, sem voz; fade-in ~1 s com a primeira frase | nada (tela preta; sem capítulo neste ponto) | — | fade-out e fade-in ~1 s; sem cartão | M sobe 3 a 6 dB no escuro; pausa de 1 s antes da pergunta (linha 121); volta a -20 dB com a voz | — |
-| **BLOCO 7 — O QUE DIZ A LEI (13:10–14:32)** | | | | | | | | |
-| 121 | 13:10 | "E quando a regra é descumprida? O que acontece?" | frase na tela | Tela escura; pausa de 1 s antes | "E O QUE A LEI PREVÊ?" | entra | pausa 1 s; M muda | criar (pergunta que não acusa) |
-| 122a | 13:16 | "Segundo a LGPD, as punições possíveis incluem advertência, multa, publicação da infração e bloqueio dos dados." | lista numerada | 01 advertência · 02 multa | "SEGUNDO A LGPD (art. 52)" | item a item | M tensão | Fonte 25 (conferir art. 52 antes de gravar) |
-| 122b | 13:21 | (mesma narração de 122a) | lista numerada | Itens 03 publicização da infração · 04 bloqueio dos dados | "SEGUNDO A LGPD (art. 52)" | item a item | M tensão | Fonte 25 |
-| 123 | 13:26 | "A multa simples, segundo a LGPD, pode chegar a dois por cento do faturamento da empresa no Brasil." | número de destaque | Tarja amarela, número em preto (não é número de perda) | "ATÉ 2%" · legenda "do faturamento no Brasil" | contador | SFX impacto | Fonte 25 (🟡) |
-| 123b | 13:30 | (mesma narração de 123) | vídeo de banco | Número fica; fundo troca para plano de apoio escuro | "ATÉ 2%" | zoom lento | M tensão | "dark office desk" |
-| 124 | 13:34 | "O limite é de cinquenta milhões de reais por infração. Parece muito. Agora olhe o histórico." | número de destaque | Tarja amarela, número em preto | "R$ 50 MI" · legenda "por infração" · frase "PARECE MUITO." | entra | — | Fonte 25 (🟡) |
-| 124b | 13:38 | (mesma narração de 124) | vídeo de banco | Número fica; fundo troca para plano de apoio escuro | "R$ 50 MI" | zoom lento | M tensão | "dark office desk" |
-| 125a | 13:42 | "A primeira multa da ANPD foi publicada no Diário Oficial da União em seis de julho de dois mil e vinte e três." | print com zoom | Notícia oficial da ANPD, grifo em "primeira multa" | "DOU · 06/07/2023" (etiqueta) | zoom | M tensão | Print fonte 28 (só título e data) |
-| 125b | 13:46 | (mesma narração de 125a) | print com zoom | Zoom no título e na data do DOU | "DOU · 06/07/2023" | zoom | M tensão | Print fonte 28 |
-| 126a | 13:50 | "Segundo a autoridade, a punida foi a Telekall Infoservice, uma microempresa de Ubatuba, em São Paulo." | cartão de notícia | Manchete "ANPD aplica a primeira multa por descumprimento à LGPD" | "ANPD · 07/07/2023" + etiqueta "UBATUBA · SP" | zoom lento | M tensão | Fonte 28. Sem mapa, sem foto |
-| 126b | 13:55 | (mesma narração de 126a) | cartão de notícia | Manchete fica; zoom continua no cabeçalho | "ANPD · 07/07/2023" + "UBATUBA · SP" | zoom | M tensão | Fonte 28 |
-| 127 | 13:59 | "O valor total foi de catorze mil e quatrocentos reais, mais uma advertência." | número de destaque | Tarja amarela, número em preto | "R$ 14,4 MIL" · legenda "+ advertência · limitado (microempresa)" | entra | — | Fonte 28 |
-| 128 | 14:05 | "O caso nem era um vazamento. Segundo a ANPD, entre os motivos estava tratar dados pessoais sem base legal." | cartão de reportagem grifada | Grifo em "tratar dados pessoais sem base legal" | "NÃO ERA VAZAMENTO" (frase) | grifo | M tensão | Fonte 28 |
-| 129 | 14:13 | "A empresa ainda podia recorrer." | frase na tela | Caixa | "CABE RECURSO" | entra | — | criar |
-| 130a | 14:16 | "E tem um detalhe que pesa neste laudo. Segundo a LGPD, órgão público não leva multa em dinheiro." | frase na tela + print | Grifo no art. 52, § 3º (print da lei) | "ÓRGÃO PÚBLICO: SEM MULTA EM DINHEIRO" | entra; grifo | M tensão | Fonte 25 (🟡: conferir antes de exibir) |
-| 130b | 14:20 | (mesma narração de 130a) | print com zoom | Grifo fica; zoom no parágrafo do § 3º | "ÓRGÃO PÚBLICO: SEM MULTA EM DINHEIRO" | zoom | M tensão | Fonte 25 (🟡) |
-| 131 | 14:24 | "A lei prevê advertência e publicização da infração, que é tornar a falha pública." | frase na tela | Duas caixas | "ADVERTÊNCIA + PUBLICIZAÇÃO" / "TORNAR A FALHA PÚBLICA" | entram | — | Fonte 25 |
-| 132a | 14:30 | "O Tesouro Nacional é um órgão público. Isso não quer dizer que ele foi ou será punido. É só o que a lei prevê." | frase na tela | Caixa | "NÃO É PUNIÇÃO. É SÓ O QUE A LEI PREVÊ." + etiqueta "BRASÍLIA · DF" | entra; pausa 0,5 s | M tensão | criar |
-| 132b | 14:35 | (mesma narração de 132a) | vídeo de banco | Texto fica; fundo troca para vista aérea de Brasília | "NÃO É PUNIÇÃO. É SÓ O QUE A LEI PREVÊ." | zoom lento | M tensão | "brasilia aerial" |
-| 133a | 14:40 | "E nos três casos deste laudo? Até dezesseis de novembro de dois mil e vinte e seis, nenhuma fonte que consultamos informa punição." | gráfico animado | Cartão 1: CVP | "SANÇÃO: NENHUMA FONTE CONSULTADA INFORMA" · "ATÉ 16/11/2026" | cartão entra | SFX whoosh | criar |
-| 133b | 14:44 | (mesma narração de 133a) | gráfico animado | Cartão 2: Tesouro entra | (mesmo texto) | cartão entra | SFX whoosh | criar |
-| 133c | 14:48 | (mesma narração de 133a) | gráfico animado | Cartão 3: FGC entra | (mesmo texto) | cartão entra | SFX whoosh | criar |
-| 134 | 14:52 | "A ANPD foi notificada nos três. Mas nenhuma fonte que lemos traz uma manifestação dela sobre esses casos." | frase na tela | Caixa | "ANPD NOTIFICADA: 3 DE 3" / "MANIFESTAÇÃO DA ANPD: NÃO ENCONTRADA" | entra | M tensão | Fontes 1, 4 e 7 |
-| **TRANSIÇÃO 7→8** | 14:56 (escuro 14:56–14:59) | Fim: "Mas nenhuma fonte que lemos traz uma manifestação dela sobre esses casos." / Início: "Lembra da frase do Tesouro que valia mais do que o resto do comunicado?" | Fade-out ~1 s; tela preta 3 s, sem voz; fade-in ~1 s com a primeira frase | ARQUIVO 04 — Como se proteger (cartão no escuro, é a linha 135) | fade-out e fade-in ~1 s; cartão digitado | M tensão sobe no escuro; troca para suspense leve no cartão; volta a -20 dB com a voz | criar (item 13) |
-| **BLOCO 8 — COMO SE PROTEGER (14:56–17:44). Visual limpo, passos numerados.** | | | | | | | | |
-| 135 | 14:56 | **ARQUIVO 04** | cartão de capítulo | Tela preta | "ARQUIVO 04 — Como se proteger" | digitação, 3 s | M muda para suspense leve | criar (item 13) |
-| 136 | 15:01 | "Lembra da frase do Tesouro que valia mais do que o resto do comunicado? Aqui está ela." | frase na tela | Fundo chumbo limpo | "A FRASE DO TESOURO" (quadradinho amarelo) | entra; pausa 0,5 s antes | M suspense | criar |
-| 137a | 15:07 | "Segundo a Agência Brasil, o próprio Tesouro alertou que as informações podem ser utilizadas por terceiros para tornar tentativas de fraude mais convincentes." | cartão de reportagem grifada | Grifo 1 "podem ser utilizadas por terceiros" | "Por: Agência Brasil" | grifo a cada 4 s | SFX carimbo | Fonte 4 (texto literal conferido) |
-| 137b | 15:11 | (mesma narração de 137a) | cartão de reportagem grifada | Grifo 2 "tornar tentativas de fraude mais convincentes" | "Por: Agência Brasil" | grifo | SFX carimbo | Fonte 4 |
-| 137c | 15:16 | (mesma narração de 137a) | cartão de reportagem grifada | Grifo fica em 2; zoom lento no cartão | "Por: Agência Brasil" | zoom lento | M tensão | Fonte 4 |
-| 138 | 15:20 | "Por meio de mensagens e contatos que aparentem ser legítimos." | cartão de reportagem grifada | Grifo 3: "mensagens e contatos que aparentem ser legítimos" | "Por: Agência Brasil" | grifo | M suspense | Fonte 4 |
-| 139 | 15:25 | "Repare em quem escreveu isso. Foi o próprio órgão que teve os dados acessados." | frase na tela | Caixa | "QUEM ESCREVEU? O PRÓPRIO ÓRGÃO." | entra | — | criar |
-| 140 | 15:31 | "O FGC pediu cautela com quem se diga do fundo." | cartão de reportagem grifada | Grifo na frase | "Por: Tecnoblog · FGC" | grifo | M tensão | Fonte 7 |
-| 141a | 15:37 | "E a Caixa Vida e Previdência, segundo a Agência Brasil, passa aos clientes recomendações de proteção diante do risco de fraudes." | cartão de reportagem grifada | Grifo em "recomendações de proteção" | "Por: Agência Brasil" | grifo | M tensão | Fonte 1 |
-| 141b | 15:42 | (mesma narração de 141a) | cartão de reportagem grifada | Grifo em "diante do risco de fraudes" | "Por: Agência Brasil" | grifo | M tensão | Fonte 1 |
-| 142 | 15:46 | "Todos dizem que não houve impacto financeiro. E todos falam em risco de golpe." | frase na tela | Duas caixas | "NÃO HOUVE IMPACTO FINANCEIRO" / "TODOS FALAM EM RISCO DE GOLPE" | entram | M tensão | Fontes 1, 4, 7 |
-| 143 | 15:53 | "Sem impacto financeiro não quer dizer sem risco." | frase na tela (destaque) | Caixa com quadradinho amarelo | "SEM IMPACTO FINANCEIRO ≠ SEM RISCO" | entra | SFX impacto | criar |
-| 144 | 15:58 | "Então, o que você pode fazer hoje? São sete passos." | frase na tela | Caixa | "O QUE FAZER HOJE: 7 PASSOS" | entra | M suspense leve | criar |
-| 145a | 16:03 | "Primeiro. Consulte o Registrato, do Banco Central. É gratuito e você entra com a sua conta gov ponto br." | lista numerada | 01 REGISTRATO (BANCO CENTRAL) | "COMO SE PROTEGER" | item entra | SFX whoosh | Fonte 23 (🟡): conferir o nome atual do serviço |
-| 145b | 16:08 | (mesma narração de 145a) | lista numerada | Segunda linha do item 01: gratuito · entra com gov.br | "COMO SE PROTEGER" | item entra | — | Fonte 23 (🟡) |
-| 146a | 16:14 | "Ele mostra contas, chaves Pix, dívidas e empréstimos ligados ao seu CPF. Repita essa consulta de tempos em tempos." | vídeo de banco | Pessoa olhando o celular à noite, sem tela legível | — | zoom lento | M suspense | "person checking phone at night" |
-| 146b | 16:19 | (mesma narração de 146a) | vídeo de banco | Close na mão segurando o celular, sem tela legível (outro ângulo) | — | zoom lento | M suspense | "hand holding phone close up dark" |
-| 147a | 16:24 | "Segundo. Se alguém ligar dizendo ser do banco, da seguradora ou do governo, desligue." | lista numerada | 02 DESLIGUE · o passo 1 fica cinza | — | item | SFX whoosh | Fonte 16 (🟡) |
-| 147b | 16:28 | (mesma narração de 147a) | lista numerada | Texto do passo 02 em amarelo | — | destaque | — | Fonte 16 (🟡) |
-| 148a | 16:32 | "Ligue de volta pelo número oficial, do cartão ou do aplicativo. De acordo com a Febraban, banco não pede senha, dados pessoais ou token por telefone." | frase na tela | Primeiros dois itens | "BANCO NÃO PEDE POR TELEFONE: SENHA · DADOS" | itens entram | — | Fonte 16 (🟡): conferir na Febraban |
-| 148b | 16:37 | (mesma narração de 148a) | frase na tela | Terceiro item entra | "BANCO NÃO PEDE POR TELEFONE: SENHA · DADOS · TOKEN" | item entra | — | Fonte 16 (🟡) |
-| 149 | 16:42 | "Token é o código de segurança que confirma as suas operações." | frase na tela | Caixa | "TOKEN = CÓDIGO QUE CONFIRMA SUAS OPERAÇÕES" | entra | — | criar (glossário) |
-| 150 | 16:47 | "Terceiro. Desconfie de qualquer mensagem que cite a Caixa Vida e Previdência, o FGC ou o Tesouro." | lista numerada | 03 CONFIRME SÓ PELOS CANAIS OFICIAIS | — | item | SFX whoosh | Fontes 4 e 7 |
-| 151 | 16:55 | "Confirme só pelos canais oficiais. É o que o FGC e o Tesouro pedem." | vídeo de banco | Notificação de mensagem no celular, sem texto legível nem link | — | zoom lento | M suspense | "phone message notification dark" |
-| 152a | 17:02 | "Quarto. Nunca informe senhas ou códigos que chegam por mensagem. E nunca pague taxa para acessar um serviço." | lista numerada | 04 NUNCA INFORME SENHA NEM CÓDIGO POR MENSAGEM | — | item | — | Fonte 7 |
-| 152b | 17:07 | (mesma narração de 152a) | lista numerada | Item 04 segunda linha: NUNCA PAGUE TAXA PARA ACESSAR SERVIÇO | — | item | — | Fonte 7 |
-| 153a | 17:12 | "Quinto. Ative a verificação em duas etapas no e-mail e nos aplicativos. É uma segunda trava, além da senha." | lista numerada | 05 VERIFICAÇÃO EM DUAS ETAPAS | — | item | — | Sem fonte específica: cartilha do gov.br ou do CERT.br (🟡) |
-| 153b | 17:17 | (mesma narração de 153a) | lista numerada | "segunda trava, além da senha" entra | — | item | — | Sem fonte específica (🟡) |
-| 154a | 17:22 | "Sexto. Quando puder, use uma chave Pix aleatória, em vez do CPF ou do celular. Assim, você expõe menos dados." | lista numerada | 06 CHAVE PIX ALEATÓRIA, NO LUGAR DO CPF OU DO CELULAR | — | item | — | Fonte 23 (🟡) |
-| 154b | 17:26 | (mesma narração de 154a) | lista numerada | Item 06 com "expõe menos dados" em grifo | — | destaque | — | Fonte 23 (🟡) |
-| 155 | 17:30 | "Sétimo. Se cair num golpe, avise o banco imediatamente e registre um boletim de ocorrência." | lista numerada | 07 AVISE O BANCO E REGISTRE BOLETIM DE OCORRÊNCIA (último em amarelo) | — | item | — | Fonte 27 (🟡) |
-| 156 | 17:36 | "O Instituto Brasileiro de Defesa do Consumidor indica o boletim como primeiro passo." | cartão de reportagem grifada | Grifo em "boletim como primeiro passo" | "Por: Idec" | grifo | M suspense | Fonte 27 (🟡) |
-| 157 | 17:42 | "E se você quer saber se está numa dessas bases, pergunte à instituição, pelo canal oficial." | frase na tela | Caixa | "PERGUNTE PELO CANAL OFICIAL" | entra | — | criar |
-| 158 | 17:47 | "O canal do Tesouro e o e-mail do FGC estão na descrição deste vídeo." | frase na tela | Seta para baixo | "CANAIS OFICIAIS NA DESCRIÇÃO" | entra | — | criar; a descrição precisa listar os canais |
-| 159a | 17:53 | "Segundo a Agência Brasil, a Caixa Vida e Previdência vai disponibilizar um e-mail específico para dúvidas. O endereço não aparece nas fontes que consultamos." | cartão de reportagem grifada | Grifo em "um endereço de e-mail específico para receber dúvidas dos clientes" | "Por: Agência Brasil" | grifo | M suspense | Fonte 1 |
-| 159b | 17:57 | (mesma narração de 159a) | frase na tela | Caixa entra | "ENDEREÇO: NÃO ENCONTRADO" | entra | M suspense | Fonte 1 |
-| **TRANSIÇÃO 8→9** | 18:01 (escuro 18:01–18:04) | Fim: "O endereço não aparece nas fontes que consultamos." / Início: "Este laudo chega a uma conclusão incômoda." | Fade-out ~1 s; tela preta 3 s, sem voz; fade-in ~1 s com a primeira frase | nada (tela preta) | — | fade-out e fade-in ~1 s; sem cartão | M suspense sobe no escuro; entra a música de fechamento; volta a -20 dB com a voz | — |
-| **BLOCO 9 — FECHAMENTO (18:01–18:44)** | | | | | | | | |
-| 160 | 18:01 | "Este laudo chega a uma conclusão incômoda. Ele não acusa ninguém de descumprir a lei." | frase na tela | Tela preta | "UMA CONCLUSÃO INCÔMODA" | entra; pausa 0,5 s | M fechamento | criar |
-| 161a | 18:08 | "Mostra uma regra que deixa a decisão com a própria empresa. Uma regra que conta só dias úteis. Que começa a contar quando a empresa diz ter tomado conhecimento." | lista numerada | 01 CONTA SÓ DIAS ÚTEIS · 02 COMEÇA QUANDO A EMPRESA DIZ QUE SOUBE | "A DECISÃO FICA COM A EMPRESA" | item a item, 4 s | M fechamento | criar |
-| 161b | 18:13 | (mesma narração de 161a) | lista numerada | Mesma lista; item 02 em destaque | "A DECISÃO FICA COM A EMPRESA" | item a item | M fechamento | criar |
-| 161c | 18:19 | "E que só obriga o aviso quando o risco é considerado relevante, primeiro pela própria empresa." | lista numerada | 03 SÓ OBRIGA SE O RISCO FOR RELEVANTE (último em amarelo) | "A DECISÃO FICA COM A EMPRESA" | item a item | M fechamento | criar |
-| 162 | 18:24 | "Seus dados podem estar numa base de que você nem lembra mais." | vídeo de banco | Mock do e-mail do início (volta ao objeto do gancho) | — | zoom lento | M tensão | reutiliza item 2 |
-| 163 | 18:29 | "E, entre a cópia e o aviso, pode existir uma janela de dias. Nessa janela, quem copiou soube antes de você." | frase na tela | Linha do tempo com janela marcada | "JANELA DE DIAS" / "QUEM COPIOU SOUBE ANTES" | entra | M tensão | criar |
-| 164 | 18:35 | "Agora eu quero saber de você. Você já recebeu algum aviso de vazamento de dados? Quanto tempo depois do incidente ele chegou?" | frase na tela | Duas caixas com quadradinho amarelo; ícone de comentário | "VOCÊ JÁ RECEBEU UM AVISO?" / "QUANTO TEMPO DEPOIS?" | entram | M fechamento | criar |
-| 165a | 18:41 | "Conta aqui nos comentários. E se você quer entender o que os golpistas fazem com os dados depois que eles vazam, o próximo laudo está aqui na tela." | imagem em moldura | Miniatura placeholder do Laudo nº 002 centralizada | "PRÓXIMO LAUDO" | zoom lento | M fechamento | criar após o Laudo 002 existir |
-| 165b | 18:45 | (mesma narração de 165a) | imagem em moldura | Miniatura fica; zoom no título do próximo laudo | "PRÓXIMO LAUDO" | zoom lento | M fechamento | criar após o Laudo 002 existir |
-| 166 | 18:49 | "O golpe da falsa central. Os dados vazaram. Agora veja o que fazem com eles." | frase na tela | Duas caixas | "O GOLPE DA FALSA CENTRAL" / "OS DADOS VAZARAM." | entram | SFX impacto | criar |
-| 167 | 18:54 | "Laudo encerrado. Até a próxima autópsia." | carimbo + vinheta | Carimbo "LAUDO ENCERRADO" + vinheta de fechamento | "LAUDO ENCERRADO" | carimbo bate | SFX carimbo; M cai | item 10 |
-| 168 | 19:00 | **Tela final (20 s, sem narração)** | tela final | Item 14: miniatura do Laudo nº 002, áreas de inscrição e de vídeos | "Próximo laudo · Inscreva-se" | fundo lento | M fade, neutra | item 14 |
+| **INTRO (0:00–1:22). Cortes de 3 a 4 s. Gancho sem vinheta.** | | | | | | | | |
+| 1 | 0:00 | "Na quinta-feira, doze de novembro, a Caixa Seguridade publicou um comunicado..." | vídeo de banco | Celular acendendo num quarto escuro | — | zoom lento | M tensão; SFX alerta curto | V01 |
+| 2 | 0:04 | "...um comunicado ao mercado que ninguém gostaria de ler. Uma empresa do grupo tinha sido hackeada..." | cartão de notícia | Manchete recriada, fundo escurecido | "Agência Brasil · nov/2026" (texto, sem logo) | zoom lento | M tensão | P01 |
+| 3 | 0:08 | "...dados de sete vírgula seis milhões de clientes foram parar nas mãos de um invasor." | número de destaque | Tarja vermelha | "7,6 MI" · "clientes ativos com dados copiados" | entra deslizando | SFX impacto grave | P01 |
+| 4 | 0:12 | "A notícia virou manchete na Agência Brasil." | print com zoom | Título da matéria, grifo amarelo | — | zoom até o título | M tensão | P01 |
+| 5 | 0:15 | "Só que, segundo a própria empresa, o ataque aconteceu seis dias antes, numa sexta-feira." | etiqueta de local/data | Linha do tempo, primeiro ponto | "SEXTA · 06/11/2026 (segundo a empresa)" | corte seco | SFX carimbo | G01 |
+| 6 | 0:19 | "Ela afirma que avisou as autoridades e os clientes atingidos na quarta-feira seguinte, como prevê a lei." | frase na tela | Duas caixas | "A EMPRESA AFIRMA" / "AVISO NA QUARTA · 11/11" | entra de baixo | SFX whoosh | G03 |
+| 7 | 0:25 | "E não foi um caso isolado." | vídeo de banco | Calendário em close | "NÃO FOI UM CASO ISOLADO" | zoom lento | M tensão | V03 |
+| 8 | 0:28 | "Na mesma quinzena, o Tesouro Nacional e o Fundo Garantidor de Créditos também anunciaram acessos..." | frase na tela | Duas caixas | "TESOURO NACIONAL" / "FGC" | entram | SFX whoosh | G02 |
+| 9 | 0:33 | "...a dados de brasileiros, dias depois de perceberem o problema." | cartão de notícia | Manchete recriada do Tesouro | "Agência Brasil · nov/2026" | zoom lento | M tensão | P04 |
+| 10 | 0:38 | "Aí vem a pergunta que todo mundo faz." | vídeo de banco | Mão segurando celular, close | — | zoom lento | M tensão; pausa 0,5 s antes | V02 |
+| 11 | 0:42 | "Se a lei manda avisar, por que você só soube depois?" | frase na tela | Pergunta com quadradinho amarelo (Grande Pergunta) | "SE A LEI MANDA AVISAR," / "POR QUE VOCÊ SÓ SOUBE DEPOIS?" | entra linha a linha | SFX whoosh; M suspense | G03 |
+| 12 | 0:48 | "E a resposta não passa por apontar um culpado." | vídeo de banco | Sala escura com luz de monitor | — | panorâmica lenta | M suspense | V15 |
+| 13 | 0:52 | "Está num detalhe da própria regra que quase ninguém explica..." | frase na tela | Caixa branca | "DETALHE DA REGRA" / "QUE QUASE NINGUÉM EXPLICA" | entra | M suspense | G03 |
+| 14 | 0:57 | "...e num número que ficou de fora da manchete." | frase na tela | Caixa branca | "NÚMERO FORA DA MANCHETE" | entra | SFX whoosh | G03 |
+| 15 | 1:00 | "Até o fim, você vai saber se os seus dados podem estar nessa base..." | vídeo de banco | Pasta de arquivo fechada | "VOCÊ PODE ESTAR NA BASE" | zoom lento | M tensão | V18 |
+| 16 | 1:06 | "Vai entender, passo a passo, quem decide quando você fica sabendo de um vazamento." | vídeo de banco | Relógio em close | "QUEM DECIDE QUANDO VOCÊ SABE?" | zoom lento | M tensão; tique | V38 |
+| 17 | 1:11 | "E vai sair com o que fazer hoje, inclusive as três atitudes para quando alguém ligar..." | vídeo de banco | Celular tocando numa mesa escura | "3 ATITUDES NA LIGAÇÃO" | zoom lento | M tensão | V11 |
+| 18 | 1:18 | "Laudo número um. O vazamento da Caixa Vida e Previdência." | vinheta | Vinheta HACKOPSIA (3 a 4 s) | "HACKOPSIA · LAUDO Nº 001" / "A autópsia dos ataques que esconderam de você" | letras aparecem | SFX carimbo; M troca | G04 |
+| **T1** | 1:22 | **Fim:** "...o vazamento da Caixa Vida e Previdência." / **Início:** "Para entender este caso, é preciso acertar os nomes..." | transição 3.11 + cartão | Fade-out 1 s; tela preta 3 s sem voz; fade-in 1 s | "ARQUIVO 01 — O caso" (digitado no escuro) | fade, cartão | pausa 0,5 s; M suspense sobe 3 a 6 dB no escuro; volta a -20 dB com a voz | G05 |
+| **BLOCO 1 — CONTEXTO E ORIGEM (1:25–4:01). Cortes de 3 a 5 s.** | | | | | | | | |
+| 19 | 1:25 | "Para entender este caso, é preciso acertar os nomes, porque até parte da imprensa se confundiu." | frase na tela | Duas linhas sobre chumbo | "ACERTAR OS NOMES" | entra | M neutro | G03 |
+| 20 | 1:30 | "A Caixa Seguridade é a empresa do grupo Caixa que cuida de seguros e previdência." | frase na tela | Caixa branca | "CAIXA SEGURIDADE = GRUPO" | entra | SFX whoosh | G03 |
+| 21 | 1:35 | "É como uma família em que a Caixa Seguridade é a mãe e a Caixa Vida e Previdência... é uma das filhas." | gráfico animado | Árvore: mãe no topo, filha embaixo, destaque na filha | "MÃE: CAIXA SEGURIDADE" / "FILHA ATACADA: CVP" | nós aparecem | SFX tique | G06 |
+| 22 | 1:42 | "Foi a mãe que veio a público, com um comunicado ao mercado, contar o que aconteceu com a filha." | cartão de reportagem grifada | Título recriado do comunicado; grifo em "comunicado ao mercado" | "Por: Caixa Seguridade (comunicado)" | grifo a cada 4 s | M neutro | P01 |
+| 23 | 1:47 | "Nenhuma das duas é a Caixa Econômica Federal, o banco onde muita gente recebe salário." | frase na tela | Duas linhas | "NÃO É A CAIXA ECONÔMICA FEDERAL" / "O BANCO DO SALÁRIO" | entram | M neutro | G03 |
+| 24 | 1:53 | "Segundo a revista IstoÉ, não há confirmação de que contas da Caixa Econômica tenham sido afetadas." | print com zoom | Trecho da IstoÉ, grifo amarelo | "Por: IstoÉ" | zoom até o trecho | M neutro | P03 |
+| 25 | 1:59 | "Mas, se um dia você contratou um seguro de vida ou uma previdência pela Caixa, esta conversa é com você." | vídeo de banco | Mão com caneta sobre contrato | "ESTA CONVERSA É COM VOCÊ" | zoom lento | M neutro | V09 |
+| 26 | 2:05 | "De acordo com a Agência Brasil, que cita o comunicado da empresa, um invasor copiou clandestinamente dados de sete vírgula seis milhões de clientes ativos." | cartão de reportagem grifada | Grifo em "copiou clandestinamente dados" | "Por: Agência Brasil" | grifo a cada 4 s | M tensão | P01 |
+| 27 | 2:11 | "Estão ali CPF, endereço, telefone, e-mail e data de nascimento..." | lista numerada | 01 CPF · 02 endereço · 03 telefone | "DADOS CADASTRAIS (segundo a Agência Brasil)" | item a item, 2 s | SFX whoosh | G07 |
+| 28 | 2:15 | "...e a revista acrescenta que nome e CPF aparecem em todos os registros." | lista numerada | 04 e-mail · 05 nascimento; "nome" e "CPF" em destaque | "NOME + CPF: EM TODOS OS REGISTROS" | item a item | SFX whoosh | G07 |
+| 29 | 2:20 | "Pela apuração preliminar, não há sinal de que senhas, dados bancários ou saldos de previdência tenham sido atingidos." | cartão de reportagem grifada | Grifo em "não há sinal de que senhas" | "Por: apuração preliminar da empresa" | grifo | M tensão | P01 |
+| 30 | 2:26 | "Sem senha e sem cartão, parece pouca coisa, e é exatamente aí que mora o engano." | frase na tela | Duas caixas | "SEM SENHA. SEM CARTÃO." / "PARECE POUCA COISA." | entram | SFX impacto leve | G03 |
+| 31 | 2:31 | "Esses dados funcionam como uma cópia da chave da sua casa." | vídeo de banco | Chave de casa em close | "CÓPIA DA CHAVE DA SUA CASA" | zoom lento | M tensão | V39 |
+| 32 | 2:36 | "Ninguém entrou ainda, mas alguém pode entrar, e você não sabe quem ficou com a cópia." | vídeo de banco | Porta fechada em corredor escuro | — | zoom lento | M tensão | V24 |
+| 33 | 2:41 | "Juntos, eles formam a ficha de apresentação de uma pessoa." | imagem em moldura | Ficha fictícia centralizada | "FICHA DE APRESENTAÇÃO" / "NOME FICTÍCIO · 000.000.000-00" | zoom lento | M tensão | G08 |
+| 34 | 2:45 | "Com essa ficha na mão, um estranho fala com você como se te conhecesse há anos." | vídeo de banco | Celular com chamada recebida | — | zoom lento | M tensão | V11 |
+| 35 | 2:50 | "Esse truque se chama engenharia social, que é enganar a pessoa em vez de quebrar o sistema." | frase na tela | Caixa branca | "ENGENHARIA SOCIAL = ENGANAR A PESSOA" | entra | SFX whoosh | G03 |
+| 36 | 2:55 | "É como o porteiro que não abre para qualquer um, mas abre para quem chega dizendo o nome do morador..." | vídeo de banco | Entrada de prédio à noite | "O NOME DO MORADOR" | panorâmica lenta | M tensão | V37 |
+| 37 | 3:00 | "...e o número do apartamento." | vídeo de banco | Interfone em close | — | zoom lento | M tensão | V37 |
+| 38 | 3:04 | "O exemplo mais conhecido é o golpe da falsa central..." | vídeo de banco | Celular com tela apagada | "GOLPE DA FALSA CENTRAL" | zoom lento | M tensão | V02 |
+| 39 | 3:09 | "...em que alguém liga fingindo ser do banco e já sabe o seu nome, o seu CPF e o seu endereço." | vídeo de banco | Celular tocando, close | "JÁ SABE SEU NOME, CPF E ENDEREÇO" | zoom lento | M tensão | V11 |
+| 40 | 3:15 | "O Instituto Brasileiro de Defesa do Consumidor faz um alerta nessa direção." | cartão de reportagem grifada | Título recriado do Idec | "Por: Idec" | grifo a cada 4 s | M neutro | P10 |
+| 41 | 3:20 | "...os consumidores brasileiros ficam imensamente mais propensos a cair em golpes financeiros." | cartão de reportagem grifada | Grifo em "imensamente mais propensos" | "Por: Idec" | grifo | M tensão | P10 |
+| 42 | 3:27 | "Guarde essa ideia, porque ela explica tudo o que vem depois." | frase na tela | Caixa com quadradinho amarelo | "GUARDE ESSA IDEIA" | entra | M tensão | G03 |
+| 43 | 3:33 | (plano de respiro até o fim do bloco) | vídeo de banco | Celular virado para baixo, mesa escura | — | zoom lento | M tensão cai | V13 |
+| **T2** | 4:01 | **Fim:** "...ela explica tudo o que vem depois." / **Início:** "Vamos ao calendário, dia por dia, como numa perícia..." | transição 3.11 + cartão | Fade-out 1 s; tela preta 3 s sem voz; fade-in 1 s | "ARQUIVO 02 — O calendário" (digitado no escuro) | fade, cartão | pausa 0,5 s; M suspense no escuro; volta a -20 dB com a voz | G05 |
+| **BLOCO 2 — A INVESTIGAÇÃO (4:04–8:20). Cortes de 3 a 5 s; cartões com grifo.** | | | | | | | | |
+| 44 | 4:04 | "Vamos ao calendário, dia por dia, como numa perícia, e voltemos àquela sexta-feira, seis de novembro." | etiqueta de local/data | Etiqueta | "SEXTA · 06/11/2026" | corte seco | SFX carimbo | G01 |
+| 45 | 4:10 | "Segundo o comunicado da Caixa Seguridade, citado pela Agência Brasil, essa é a data do ataque cibernético contra a seguradora." | print com zoom | Matéria, grifo em "6 de novembro" | "Por: Agência Brasil" | zoom | M tensão | P01 |
+| 46 | 4:17 | "Quem entrou e por qual falha, a empresa não divulgou." | frase na tela | Duas caixas | "QUEM ENTROU?" / "POR QUAL FALHA? NÃO DIVULGADO" | entram | M suspense | G03 |
+| 47 | 4:22 | "Depois vieram o sábado, o domingo, a segunda e a terça." | gráfico animado | Faixa de calendário SEX 06 a TER 10 | dias acendem | 1 s por dia | SFX tique | G09 |
+| 48 | 4:28 | "Na quarta-feira, onze de novembro, a empresa notificou a Autoridade Nacional de Proteção de Dados, a ANPD..." | etiqueta de local/data | Etiqueta | "QUARTA · 11/11/2026" | corte seco | SFX carimbo | G01 |
+| 49 | 4:33 | "...outras autoridades e os titulares afetados." | print com zoom | Matéria, grifo em "titulares afetados" | "Por: Agência Brasil" | zoom | M tensão | P01 |
+| 50 | 4:38 | "Titular é a palavra técnica para você, a pessoa dona do CPF." | frase na tela | Caixa branca | "TITULAR = VOCÊ" | entra | SFX whoosh | G03 |
+| 51 | 4:42 | "A empresa afirma ter feito essas notificações conforme prevê a lei." | frase na tela | Tag de atribuição | "A EMPRESA AFIRMA" / "CONFORME PREVÊ A LEI" | entra | — | G03 |
+| 52 | 4:47 | "No dia seguinte, quinta-feira, doze de novembro, saiu o comunicado ao mercado..." | etiqueta de local/data | Etiqueta | "QUINTA · 12/11/2026 · COMUNICADO AO MERCADO" | corte seco | SFX carimbo | G01 |
+| 53 | 4:52 | "...e só aí o público em geral ficou sabendo." | cartão de notícia | Manchete recriada da Techtudo | "Caixa Vida e Previdência (CVP)" (legenda corrige o "Caixa") | zoom lento | M tensão | P02 |
+| 54 | 4:58 | "A empresa declarou que bloqueou os caminhos usados no acesso, reforçou a proteção e contratou uma consultoria forense externa." | frase na tela | Três caixas | "BLOQUEOU OS CAMINHOS" / "REFORÇOU A PROTEÇÃO" / "CONSULTORIA FORENSE EXTERNA" | entram | SFX whoosh | P01 |
+| 55 | 5:05 | "Disse também que monitora a internet em busca dos dados..." | vídeo de banco | Monitor escuro, sem conteúdo | "MONITORA A INTERNET" | panorâmica | M tensão | V15 |
+| 56 | 5:10 | "...e que os clientes atingidos estão recebendo recomendações de proteção diante do risco de fraudes." | cartão de reportagem grifada | Grifo em "recomendações de proteção" | "Por: Agência Brasil · a empresa afirma" | grifo | M tensão | P01 |
+| 57 | 5:17 | "Só que a seguradora não estava sozinha naquela quinzena, e o desenho que aparece ao lado dela se repete." | frase na tela | Caixa com quadradinho amarelo | "NÃO ESTAVA SOZINHA" | entra | M suspense | G03 |
+| 58 | 5:23 | "Em quatro de novembro, dois dias antes do ataque à seguradora, o Tesouro Nacional detectou um acesso não autorizado..." | linha do tempo | Ponto 04/11 aceso, ponto 06/11 ao lado | "04/11 · TESOURO DETECTA" | ponto acende | SFX tique | G09 |
+| 59 | 5:30 | "...a dados pessoais." | print com zoom | Matéria da Agência Brasil, grifo em "acesso não autorizado" | "Por: Agência Brasil" | zoom | M tensão | P04 |
+| 60 | 5:36 | "Foram atingidos cerca de trinta mil cadastros do portal de serviços do Tesouro, com nome, CPF e e-mail..." | número de destaque | Tarja vermelha | "30 MIL" · "cadastros do portal de serviços" | entra deslizando | SFX impacto grave | P04 |
+| 61 | 5:43 | "...além de cerca de quatro mil chaves Pix e informações de pagamentos do governo federal." | número de destaque | Tarja vermelha | "4 MIL" · "chaves Pix e pagamentos do governo" | entra | SFX impacto | P04 |
+| 62 | 5:49 | "O anúncio público veio na noite de doze de novembro, oito dias depois." | número de destaque | Tarja amarela, número em preto | "8 DIAS" · "do aviso ao anúncio (conta nossa)" | entra | SFX impacto | G11 |
+| 63 | 5:55 | "O órgão afirma que não houve impacto financeiro e que esse tempo foi necessário para confirmar, investigar e conter o incidente." | cartão de reportagem grifada | Grifo em "não houve impacto financeiro" | "Por: Agência Brasil · o órgão afirma" | grifo | M tensão | P04 |
+| 64 | 6:03 | "O terceiro caso envolve o Fundo Garantidor de Créditos, o FGC, que faz pagamentos de garantia a investidores." | cartão de notícia | Manchete recriada do Tecnoblog sobre o FGC | "Tecnoblog · 05/11/2026" | zoom lento | M tensão | P05 |
+| 65 | 6:09 | "De acordo com o site Tecnoblog, o fundo identificou a suspeita de um acesso não autorizado em vinte e seis de outubro." | etiqueta de local/data | Linha do tempo com 26/10 | "SEGUNDA · 26/10/2026 (suspeita)" | linha se estende | SFX whoosh | P05 |
+| 66 | 6:16 | "O caso veio a público em cinco de novembro, quando foi noticiado, dez dias depois." | número de destaque | Tarja amarela | "10 DIAS" · "da suspeita ao comunicado (conta nossa)" | entra | SFX impacto | G11 |
+| 67 | 6:22 | "Foram atingidos nome, CPF, e-mail, data de nascimento e dados de pagamentos de garantia..." | lista numerada | 01 nome · 02 CPF · 03 e-mail | "DADOS ATINGIDOS (segundo o Tecnoblog)" | item a item | SFX whoosh | G07 |
+| 68 | 6:28 | "...e o fundo afirma que não tem evidência de uso indevido nem de perda financeira." | cartão de reportagem grifada | Grifo em "não tem evidência de uso indevido" | "Por: Tecnoblog · o FGC afirma" | grifo | M tensão | P05 |
+| 69 | 6:36 | "Esses dois intervalos vão da detecção ou da suspeita até a notícia..." | frase na tela | Duas caixas | "DETECÇÃO OU SUSPEITA → NOTÍCIA" / "AS FONTES NÃO DIZEM QUANDO CADA UM FOI AVISADO" | entram | M tensão | G03 |
+| 70 | 6:44 | "Eles não servem para apontar quem foi pior, mas mostram um padrão de dias entre o problema e a notícia." | gráfico animado | Três barras: Tesouro 8 · FGC 10 · CVP 6 (dias corridos, conta nossa) | "NÃO É RANKING" | barras crescem 0,5 s | SFX tique | G10 |
+| 71 | 6:52 | "E existe uma lei para isso. Desde dois mil e dezoito, o Brasil tem a Lei Geral de Proteção de Dados, a LGPD..." | vídeo de banco | Vista aérea de Brasília | "LGPD · 2018" | zoom lento | M neutro | V08 |
+| 72 | 7:00 | "...que manda avisar a autoridade e o titular quando há um incidente." | print com zoom | Texto da LGPD, art. 48 | "Art. 48 · LGPD" | zoom até o trecho | M neutro | P07 (ler antes; se bloquear, usar P06) |
+| 73 | 7:08 | "Em abril de dois mil e vinte e quatro, a ANPD publicou uma resolução que fixou o prazo." | print com zoom | Cabeçalho da página oficial da ANPD | "24/04/2024 · RESOLUÇÃO Nº 15" | zoom | M neutro | P06 |
+| 74 | 7:14 | "Segundo a página oficial da autoridade, o aviso deve sair em três dias úteis..." | número de destaque | Tarja amarela, grifo em "três dias úteis" | "3 DIAS ÚTEIS" · "para a ANPD e os titulares" | entra deslizando | SFX carimbo | P06 |
+| 75 | 7:22 | "...de forma individual e direta sempre que possível, e em linguagem simples." | cartão de reportagem grifada | Título "Comunicação de incidente de segurança" | "Por: ANPD" · grifo em "sempre que possível" | grifo | M tensão | P06 |
+| 76 | 7:30 | "No papel, parece uma regra firme." | lista numerada | 01 três dias úteis · 02 aviso direto · 03 linguagem clara (último em amarelo) | "NO PAPEL" | item a item | SFX whoosh | G07 |
+| 77 | 7:36 | "O problema começa quando ela encontra o calendário de verdade..." | vídeo de banco | Calendário em close sobre a mesa | — | zoom lento | M tensão | V03 |
+| 78 | 7:42 | "...e foi aí que dois detalhes mudaram o tamanho deste caso." | frase na tela | Caixa com quadradinho amarelo | "DOIS DETALHES MUDAM O CASO" | entra | pausa 0,5 s antes | G03 |
+| **T3** | 8:20 | **Fim:** "...mudaram o tamanho deste caso." / **Início:** "O primeiro detalhe está numa palavra que quase passou despercebida..." | transição 3.11 + cartão | Fade-out 1 s; tela preta 3 s sem voz; fade-in 1 s | "ARQUIVO 03 — A virada" (digitado no escuro) | fade, cartão | pausa 0,5 s; M de virada no cartão; volta a -20 dB com a voz | G05 |
+| **BLOCO 3 — A VIRADA (8:23–11:31). Cortes de 3 a 5 s.** | | | | | | | | |
+| 79 | 8:23 | "O primeiro detalhe está numa palavra que quase passou despercebida nas manchetes, a palavra ativos." | frase na tela | Tela preta 0,7 s; depois a palavra | "ATIVOS" (grande, amarelo) | corte seco | pausa 0,7 s; M segura | G03 |
+| 80 | 8:28 | "Os sete vírgula seis milhões são só os clientes ativos." | número de destaque | Tarja vermelha | "7,6 MI" · "só clientes ativos" | entra deslizando | SFX impacto grave | P01 |
+| 81 | 8:33 | "Segundo a Agência Brasil e a revista IstoÉ, a base atingida também inclui ex-clientes..." | frase na tela | Duas caixas | "+ EX-CLIENTES" / "SEGUNDO AGÊNCIA BRASIL E ISTOÉ" | entram | — | P01 |
+| 82 | 8:40 | "...e a empresa não informou quantos." | frase na tela | Caixa com quadradinho amarelo | "QUANTOS? NÃO INFORMADO" | entra | M tensão | G03 |
+| 83 | 8:45 | "Você pode ter cancelado um seguro há anos, pode nem lembrar que foi cliente..." | vídeo de banco | Pessoa lendo carta à mesa, sem rosto | "CANCELOU HÁ ANOS?" | zoom lento | M tensão | V16 |
+| 84 | 8:51 | "...e mesmo assim os seus dados podem estar nessa base." | vídeo de banco | Carta em close, sem texto legível | — | zoom lento | M tensão | V17 |
+| 85 | 8:56 | "O total real de atingidos é maior do que o número da manchete." | número de destaque | Tarja vermelha | "MAIS DO QUE 7,6 MI" · "total real desconhecido" | entra | SFX impacto | G11 |
+| 86 | 9:03 | "Você sai da empresa, mas os seus dados nem sempre saem com você." | frase na tela | Caixa branca | "VOCÊ SAI DA EMPRESA. OS DADOS, NEM SEMPRE." | entra | M tensão | G03 |
+| 87 | 9:08 | "O segundo detalhe está dentro da própria regra..." | vídeo de banco | Pasta fechada sobre mesa | — | zoom lento | M tensão | V28 |
+| 88 | 9:13 | "...como quem acompanha uma encomenda até a sua porta." | vídeo de banco | Pacote na porta | "ACOMPANHE O AVISO" | zoom lento | M tensão | V35 |
+| 89 | 9:19 | "O primeiro passo é a empresa descobrir o problema." | gráfico animado | Caminho em 4 caixas; caixa 1 acende | "1 · A EMPRESA DESCOBRE" | caixa entra | SFX tique | G12 |
+| 90 | 9:24 | "Segundo escritórios de advocacia que analisam a resolução, o prazo não começa na data do ataque..." | cartão de reportagem grifada | Título recriado "Regras para comunicação de incidente" | "Por: escritórios de advocacia" | grifo a cada 4 s | M tensão | P13 |
+| 91 | 9:30 | "...e sim quando a empresa toma conhecimento de que dados pessoais foram atingidos." | cartão de reportagem grifada | Grifo em "toma conhecimento" | "Por: escritórios de advocacia" | grifo | M tensão | P13 |
+| 92 | 9:36 | "E quem informa essa data é a própria empresa." | frase na tela | Duas caixas | "QUEM INFORMA A DATA?" / "A PRÓPRIA EMPRESA" | entram; pausa 0,5 s antes | M tensão | G03 |
+| 93 | 9:41 | "O segundo passo é avaliar se o caso é grave." | gráfico animado | Caixa 2 acende | "2 · A EMPRESA AVALIA O RISCO" | caixa entra | SFX tique | G12 |
+| 94 | 9:46 | "De acordo com a página oficial da ANPD, o aviso só é obrigatório quando o incidente está confirmado..." | print com zoom | Página da ANPD, grifo em "confirmado" | "Por: ANPD" | zoom | M tensão | P06 |
+| 95 | 9:53 | "...envolve dados pessoais e pode causar risco ou dano relevante às pessoas." | print com zoom | Grifo em "risco ou dano relevante" | "Por: ANPD" | zoom | M tensão | P06 |
+| 96 | 10:00 | "E a mesma página diz quem faz essa avaliação. Cabe ao controlador avaliar os riscos e os impactos..." | print com zoom | Grifo em "Cabe ao controlador" | "Por: ANPD" | grifo | SFX carimbo | P06 |
+| 97 | 10:06 | "...e controlador é a empresa ou o órgão que guarda os seus dados." | frase na tela | Caixa | "CONTROLADOR = QUEM GUARDA SEUS DADOS" | entra | — | G03 |
+| 98 | 10:12 | "É como um cano que estoura no seu prédio." | vídeo de banco | Água escorrendo de cano | — | zoom lento | M tensão | V33 |
+| 99 | 10:17 | "Quem decide se o vazamento é grave o bastante para avisar os moradores é o próprio síndico..." | frase na tela | Caixa | "QUEM DECIDE? O SÍNDICO" | entra | M tensão | G03 |
+| 100 | 10:23 | "...e o relógio só começa quando ele diz que viu a água." | gráfico animado | Relógio cujo ponteiro começa na fala da empresa | "O RELÓGIO COMEÇA QUANDO ELA DIZ" | ponteiro gira | SFX tique | G12 |
+| 101 | 10:29 | "A ANPD lista fatores que pesam, como a larga escala e dados que permitam roubo de identidade..." | lista numerada | 01 larga escala · 02 roubo de identidade | "O QUE PESA" | item a item | M tensão | P06 |
+| 102 | 10:36 | "...e analisa as comunicações que recebe. Mesmo assim, a primeira palavra é de quem sofreu o ataque." | frase na tela | Caixa com quadradinho amarelo | "A PRIMEIRA PALAVRA É DE QUEM SOFREU O ATAQUE" | entra | M virada | G03 |
+| 103 | 10:44 | "O terceiro passo é o prazo de três dias úteis, que não conta sábado, domingo nem feriado." | número de destaque | Tarja amarela | "3 DIAS ÚTEIS" · "sem sábado, domingo ou feriado" | entra | SFX impacto | P06 |
+| 104 | 10:51 | "É como a entrega de uma compra pela internet com prazo de três dias úteis, que, feita numa sexta, só chega na quarta." | gráfico animado | Faixa de calendário SEX 06 → QUA 11 | "SEXTA → QUARTA" | dias acendem | SFX tique | G09 |
+| 105 | 10:58 | "Entre uma sexta e uma quarta, são cinco dias no calendário, mas só três dias úteis." | número de destaque | Tarja amarela | "5 DIAS CORRIDOS" · "3 DIAS ÚTEIS" | entra | SFX impacto | G11 |
+| 106 | 11:04 | "E o calendário da seguradora teve exatamente esse desenho, com o ataque numa sexta e a notificação numa quarta." | etiqueta de local/data | Etiquetas sobre a linha: SEX 06 e QUA 11 | "CVP: SEX 06 → QUA 11 (segundo a empresa)" | corte seco | SFX carimbo | G09 |
+| 107 | 11:09 | "Como o prazo conta a partir de quando a empresa diz ter tomado conhecimento, só ela tem essa data." | frase na tela | Caixa | "SÓ A EMPRESA TEM ESSA DATA" | entra | M tensão | G03 |
+| 108 | 11:14 | "Três dias úteis não são três dias." | frase na tela | Tela preta; uma frase grande | "TRÊS DIAS ÚTEIS NÃO SÃO TRÊS DIAS." | entra; pausa 0,5 s antes | SFX impacto | G03 |
+| 109 | 11:18 | "Só no quarto passo o aviso chega a você..." | gráfico animado | Caminho: caixa 4 "VOCÊ" acende em amarelo | "4 · O AVISO CHEGA A VOCÊ" | caixa entra | SFX tique | G12 |
+| 110 | 11:24 | "...Você é o último elo dessa corrente, e não escolhe nada nela." | vídeo de banco | Corrente de elos em close, escura | — | zoom lento | M tensão | V25 |
+| 111 | 11:28 | "Este laudo não afirma que alguém cumpriu ou descumpriu o prazo..." | frase na tela | Tag de atribuição | "NÃO ACUSAMOS NINGUÉM." / "A EMPRESA DIZ TER SEGUIDO A LEI" | entra | — | G03 |
+| **T4** | 11:31 | **Fim:** "...e a seguradora diz ter seguido a lei. A questão é mais incômoda..." / **Início:** "Mesmo seguida à risca, a regra deixa uma janela aberta." | transição 3.11 + cartão | Fade-out 1 s; tela preta 3 s sem voz; fade-in 1 s | "ARQUIVO 04 — A lei e o parecer" (digitado no escuro) | fade, cartão | pausa 0,5 s; M sobe no escuro; volta a -20 dB com a voz | G05 |
+| **BLOCO 4 — O QUE DIZ A LEI + O PARECER (11:34–14:30).** | | | | | | | | |
+| 112 | 11:34 | "Mesmo seguida à risca, a regra deixa uma janela aberta." | vídeo de banco | Porta entreaberta em quarto escuro | "JANELA ABERTA" | zoom lento | M virada termina | V24 |
+| 113 | 11:40 | "Durante essa janela, quem copiou os dados já tinha a sua ficha de apresentação, e você seguia a vida sem saber de nada." | frase na tela | Caixa | "QUEM COPIOU JÁ TINHA A FICHA" / "VOCÊ, NÃO" | entra | SFX impacto | G03 |
+| 114 | 11:47 | "O hacker soube antes de você." | frase na tela | Tela preta; uma frase | "O HACKER SOUBE ANTES DE VOCÊ." | entra | SFX impacto grave | G03 |
+| 115 | 11:52 | "E o que a lei prevê? Pela LGPD, as punições possíveis incluem advertência, multa..." | frase na tela | Tela escura; pausa de 1 s antes | "E O QUE A LEI PREVÊ?" | entra; pausa 1 s | M muda | G03 |
+| 116 | 12:00 | "...publicação da infração e bloqueio dos dados." | lista numerada | 01 advertência · 02 multa · 03 publicação · 04 bloqueio | "PUNIÇÕES PREVISTAS (LGPD, art. 52)" | item a item | M tensão | P07 |
+| 117 | 12:08 | "A multa simples pode chegar a dois por cento do faturamento da empresa no Brasil..." | número de destaque | Tarja amarela, número em preto | "ATÉ 2%" · "do faturamento no Brasil" | contador | SFX impacto | P07 |
+| 118 | 12:14 | "...limitada a cinquenta milhões de reais por infração. À primeira vista, parece uma ameaça pesada." | número de destaque | Tarja amarela | "R$ 50 MI" · "por infração" | entra | — | P07 |
+| 119 | 12:21 | "Só que o histórico conta outra história." | vídeo de banco | Plano de apoio escuro, mesa | "E O HISTÓRICO?" | zoom lento | M tensão | V19 |
+| 120 | 12:26 | "A primeira multa da ANPD saiu no Diário Oficial da União em julho de dois mil e vinte e três..." | print com zoom | Notícia oficial da ANPD, grifo em "primeira multa" | "DOU · 06/07/2023" | zoom | M tensão | P08 |
+| 121 | 12:34 | "...contra uma microempresa de telemarketing de Ubatuba, no litoral de São Paulo." | cartão de notícia | Manchete "ANPD aplica a primeira multa por descumprimento à LGPD" | "ANPD · 07/07/2023" + "UBATUBA · SP" | zoom lento | M tensão | P08 |
+| 122 | 12:40 | "Foram catorze mil e quatrocentos reais, mais uma advertência..." | número de destaque | Tarja amarela | "R$ 14,4 MIL" · "+ advertência" | entra | SFX impacto | P08 |
+| 123 | 12:46 | "...e o caso nem era um vazamento. Segundo a autoridade, um dos motivos foi usar dados pessoais sem base legal." | cartão de reportagem grifada | Grifo em "sem base legal" | "Por: ANPD · NÃO ERA VAZAMENTO" | grifo | M tensão | P08 |
+| 124 | 12:55 | "E órgão público, pela LGPD, não leva multa em dinheiro." | frase na tela + print | Grifo no art. 52, § 3º | "ÓRGÃO PÚBLICO: SEM MULTA EM DINHEIRO" | grifo | M tensão | P07 (conferir antes de exibir) |
+| 125 | 13:02 | "A lei prevê advertência e publicação da infração, que é tornar a falha pública." | lista numerada | 01 advertência · 02 publicação da infração | "O QUE A LEI PREVÊ PARA ÓRGÃO" | item a item | — | P07 |
+| 126 | 13:08 | "Isso não quer dizer que o Tesouro foi ou será punido." | frase na tela | Caixa | "ISSO NÃO QUER DIZER QUE O TESOURO FOI PUNIDO" | entra | — | G03 |
+| 127 | 13:14 | "Até a produção deste laudo, nenhuma fonte consultada informa punição em nenhum dos três casos." | número de destaque | Tarja amarela | "0 PUNIÇÕES" · "nas fontes consultadas (até 16/11)" | entra | SFX impacto leve | G11 |
+| 128 | 13:21 | "Segundo a Agência Brasil, o próprio Tesouro alertou que as informações podem ser utilizadas por terceiros..." | cartão de reportagem grifada | Grifo em "tornar tentativas de fraude mais convincentes" | "Por: Agência Brasil · o Tesouro afirma" | grifo a cada 4 s | M tensão | P04 |
+| 129 | 13:30 | "...para tornar tentativas de fraude mais convincentes, por meio de mensagens e contatos que aparentem ser legítimos." | cartão de reportagem grifada | Grifo em "mensagens e contatos que aparentem ser legítimos" | "Por: Agência Brasil" | grifo | M tensão | P04 |
+| 130 | 13:38 | "Quem escreveu isso foi o órgão que teve os dados acessados." | frase na tela | Caixa | "QUEM ESCREVEU FOI O ÓRGÃO" | entra | — | G03 |
+| 131 | 13:43 | "O FGC também pediu cautela com quem se diga do fundo, e a seguradora orienta os clientes diante do risco de fraudes." | lista numerada | 01 FGC: cautela com quem se diga do fundo · 02 seguradora: orientação | "CAUTELA" | item a item | — | P05 / P01 |
+| 132 | 13:52 | "Todos afirmam que não houve impacto financeiro e, ao mesmo tempo, todos falam em golpe." | frase na tela | Três caixas | "CVP · TESOURO · FGC" / "SEM IMPACTO FINANCEIRO" / "TODOS FALAM EM GOLPE" | entram | M tensão | G03 |
+| 133 | 14:00 | "Sem impacto financeiro não quer dizer sem risco." | frase na tela | Frase grande, quadradinho amarelo | "SEM IMPACTO FINANCEIRO NÃO QUER DIZER SEM RISCO." | entra | pausa 0,5 s antes | G03 |
+| 134 | 14:05 | "Chegamos ao parecer deste laudo, e o que vem agora é opinião, não fato." | frase na tela | Caixa | "PARECER DO LAUDO · OPINIÃO, NÃO FATO" | entra | M virada | G03 |
+| 135 | 14:11 | "Na nossa avaliação, a regra atual protege mais o processo da empresa do que a pessoa que teve os dados copiados." | frase na tela | Caixa com quadradinho amarelo | "A REGRA PROTEGE MAIS O PROCESSO" | entra | M virada | G03 |
+| 136 | 14:18 | "Ela diz à empresa o que fazer e em quanto tempo, mas deixa nas mãos dela a data em que o relógio começa..." | vídeo de banco | Mão fechando pasta sobre a mesa | — | zoom lento | M tensão | V25 |
+| 137 | 14:23 | "...e a decisão sobre se o caso merece aviso. E a punição, até agora, ficou longe de assustar." | vídeo de banco | Pasta aberta, close | — | zoom lento | M tensão | V28 |
+| 138 | 14:28 | "Por isso, o nosso parecer propõe três mudanças..." | lista numerada | 01 prazo em dias corridos · 02 critério objetivo · 03 total de atingidos (último em amarelo) | "PARECER: TRÊS PROPOSTAS" | item a item | M virada | G07 |
+| **T5** | 14:30 | **Fim:** "...nenhuma delas acusa ninguém de crime." / **Início:** "Agora, o que você pode fazer ainda hoje." | transição 3.11 + cartão | Fade-out 1 s; tela preta 3 s sem voz; fade-in 1 s | "ARQUIVO 05 — Como se proteger" (digitado no escuro) | fade, cartão | pausa 0,5 s; M de proteção (mais leve); volta a -20 dB com a voz | G05 |
+| **BLOCO 5 — COMO SE PROTEGER (14:33–17:09). Visual limpo, passos numerados na tela.** | | | | | | | | |
+| 139 | 14:33 | "Agora, o que você pode fazer ainda hoje. São sete cuidados, e o primeiro é o que mais vale a pena treinar." | lista numerada | Fundo chumbo, título "COMO SE PROTEGER" e 7 linhas vazias | "7 CUIDADOS · HOJE" | itens entram depois | M neutro | G07 |
+| 140 | 14:42 | "O primeiro cuidado é saber o que fazer quando alguém liga dizendo ser do banco, da seguradora ou do governo..." | frase na tela | Lista 1 · "LIGAÇÃO" | "1 · ALGUÉM LIGA?" | entra | M neutro | G07 |
+| 141 | 14:50 | "A primeira é lembrar que saber o seu nome, o seu CPF e o seu endereço não prova nada..." | frase na tela | Caixa | "1A · NOME, CPF E ENDEREÇO NÃO PROVAM NADA" | entra | SFX whoosh | G07 |
+| 142 | 14:57 | "A segunda é não confirmar nenhum dado e não passar senha nem código de segurança, seja qual for o motivo." | frase na tela | Caixa | "1B · NÃO CONFIRME NADA, NÃO PASSE SENHA NEM CÓDIGO" | entra | SFX whoosh | G07 |
+| 143 | 15:05 | "A terceira é dizer com calma que você não resolve nada por telefone e desligar." | frase na tela | Caixa | "1C · DIGA QUE NÃO RESOLVE POR TELEFONE E DESLIGUE" | entra | SFX whoosh | G07 |
+| 144 | 15:11 | "Depois, procure a instituição você mesmo, pelo número do verso do cartão ou pelo aplicativo oficial." | vídeo de banco | Cartão de crédito em close | "PROCURE VOCÊ MESMO" | zoom lento | M neutro | V40 |
+| 145 | 15:18 | "Se a ligação era verdadeira, o assunto continua lá. Se era golpe, você acabou de fechar a porta." | vídeo de banco | Celular com tela apagada | "O ASSUNTO CONTINUA LÁ" | zoom lento | M neutro | V20 |
+| 146 | 15:25 | "Quem sabe os seus dados não prova que é do banco. Prova só que leu a ficha." | frase na tela | Frase grande, quadradinho amarelo | "QUEM SABE OS SEUS DADOS NÃO PROVA QUE É DO BANCO." / "PROVA SÓ QUE LEU A FICHA." | entram linha a linha | pausa 0,5 s antes | G03 |
+| 147 | 15:32 | "O segundo cuidado é consultar o Registrato, um serviço gratuito do Banco Central." | lista numerada | 2 · REGISTRATO (Banco Central, gratuito) | "2 · CONSULTE O REGISTRATO" | entra | M neutro | P12 |
+| 148 | 15:39 | "Você entra com a mesma conta que usa nos serviços do governo federal e vê as contas, as chaves Pix, as dívidas e os empréstimos..." | vídeo de banco | Celular com app, sem tela legível | "CONTAS · CHAVES PIX · DÍVIDAS · EMPRÉSTIMOS" | zoom lento | M neutro | V41 |
+| 149 | 15:48 | "O que você procura é aquilo que não reconhece, como uma conta que nunca abriu ou um empréstimo que nunca pediu." | frase na tela | Duas caixas | "PROCURE O QUE NÃO RECONHECE" | entram | M neutro | G03 |
+| 150 | 15:55 | "O Instituto Brasileiro de Defesa do Consumidor orienta registrar um boletim de ocorrência se você encontrar uma transação estranha." | cartão de reportagem grifada | Grifo em "registrar um boletim de ocorrência" | "Por: Idec" | grifo | M neutro | P10 |
+| 151 | 16:02 | "E vale repetir essa consulta de tempos em tempos, como quem confere o extrato." | vídeo de banco | Extrato impresso, sem texto legível | "REPITA DE TEMPOS EM TEMPOS" | zoom lento | M neutro | V21 |
+| 152 | 16:08 | "O terceiro cuidado é desconfiar de mensagem que cite a seguradora, o FGC ou o Tesouro, e confirmar tudo pelos canais oficiais." | lista numerada | 3 · DESCONFIE DE MENSAGEM (CVP, FGC, Tesouro) · confirme pelos canais oficiais | "3 · DESCONFIE E CONFIRME" | entra | M neutro | P04 |
+| 153 | 16:15 | "O quarto vem da orientação do FGC, que pede para nunca informar senhas ou códigos e nunca pagar taxa para acessar um serviço." | cartão de reportagem grifada | Grifo em "nunca informar senhas ou códigos" | "Por: FGC (orientação)" | grifo | M neutro | P05 |
+| 154 | 16:23 | "O quinto é ativar a verificação em duas etapas no e-mail e nos aplicativos, que funciona como uma segunda tranca na porta, além da senha." | frase na tela | Caixa | "5 · VERIFICAÇÃO EM DUAS ETAPAS" / "SEGUNDA TRANCA" | entra | M neutro | G03 |
+| 155 | 16:29 | "O sexto é usar, quando puder, uma chave Pix aleatória em vez do CPF ou do celular, para espalhar menos os seus dados." | lista numerada | 6 · CHAVE PIX ALEATÓRIA (em vez de CPF ou celular) | "6 · CHAVE PIX ALEATÓRIA" | entra | M neutro | G07 |
+| 156 | 16:35 | "O sétimo vale para quem já caiu num golpe. Avise o banco imediatamente e registre o boletim de ocorrência." | frase na tela | Caixa com quadradinho amarelo | "7 · JÁ CAIU? AVISE O BANCO E REGISTRE O B.O." | entra | M neutro | G03 |
+| 157 | 16:42 | "Para saber se você está numa dessas bases, pergunte à própria instituição, pelo canal oficial." | vídeo de banco | Celular com mensagem de canal oficial, sem texto legível | "PERGUNTE PELO CANAL OFICIAL" | zoom lento | M neutro | V02 |
+| 158 | 16:50 | "O canal do Tesouro e o e-mail do FGC estão na descrição..." | lista numerada | Seta para a descrição do vídeo | "LINKS NA DESCRIÇÃO" | entra | — | G07 |
+| 159 | 16:58 | "...e a seguradora, segundo a Agência Brasil, vai disponibilizar um e-mail específico para dúvidas." | cartão de reportagem grifada | Grifo em "um e-mail específico para dúvidas" | "Por: Agência Brasil" | grifo | M neutro | P01 |
+| 160 | 17:05 | "A lista está na descrição e no comentário fixado." | frase na tela | Caixa | "DESCRIÇÃO + COMENTÁRIO FIXADO" | entra | M neutro | G03 |
+| **T6** | 17:09 | **Fim:** "...e no comentário fixado." / **Início:** "Agora dá para responder à pergunta do começo." | transição 3.11 (sem cartão) | Fade-out 1 s; tela preta 3 s sem voz; fade-in 1 s | — | fade | pausa de 1 s antes da resposta; M de fechamento; volta a -20 dB com a voz | — |
+| **BLOCO 6 — FECHAMENTO (17:12–18:20). Resposta à pergunta do título.** | | | | | | | | |
+| 161 | 17:12 | "Agora dá para responder à pergunta do começo. Você só soube depois por três razões..." | frase na tela | Caixa | "POR QUE VOCÊ SÓ SOUBE DEPOIS?" / "NENHUMA EXIGE QUE ALGUÉM QUEBRE A REGRA" | entram | M neutro | G03 |
+| 162 | 17:22 | "A primeira é que o relógio só começa quando a empresa diz ter tomado conhecimento do problema..." | lista numerada | 1 · O RELÓGIO COMEÇA QUANDO A EMPRESA DIZ | "1 · A EMPRESA INFORMA A DATA" | item a item | M neutro | G07 |
+| 163 | 17:30 | "A segunda é que o aviso só é obrigatório quando o risco é considerado relevante, e quem avalia isso primeiro é a própria empresa." | lista numerada | 2 · O AVISO DEPENDE DO RISCO, E A EMPRESA AVALIA | "2 · A EMPRESA AVALIA O RISCO" | item a item | M neutro | G07 |
+| 164 | 17:39 | "A terceira é que a regra conta dias úteis, e um ataque numa sexta-feira empurra o aviso para a quarta." | lista numerada | 3 · DIAS ÚTEIS · SEXTA → QUARTA (último em amarelo) | "3 · DIAS ÚTEIS" | item a item | SFX tique | G07 |
+| 165 | 17:46 | "E, como a base inclui ex-clientes, os seus dados podem estar num cadastro de que você nem lembra mais." | vídeo de banco | Pasta de arquivo antiga, luz baixa | "CADASTRO QUE VOCÊ NEM LEMBRA" | zoom lento | M tensão | V18 |
+| 166 | 17:53 | "Entre a cópia e o aviso existe uma janela, e nessa janela quem copiou soube antes de você." | frase na tela | Caixa | "QUEM COPIOU SOUBE ANTES." | entra | SFX impacto | G03 |
+| 167 | 18:00 | "Eu quero saber de você. Você já recebeu algum aviso de vazamento de dados? E quanto tempo depois do incidente ele chegou?" | frase na tela | Duas caixas | "VOCÊ JÁ RECEBEU UM AVISO?" / "QUANTO TEMPO DEPOIS?" | entram | M neutro | G03 |
+| 168 | 18:07 | "Conta aqui nos comentários." | vídeo de banco | Celular na mesa, luz da tela | "COMENTE" | zoom lento | M neutro | V13 |
+| 169 | 18:11 | "E se você quer entender o que fazem com os dados depois que eles vazam, o próximo laudo está aqui na tela." | vídeo de banco | Mão com celular, close | "PRÓXIMO LAUDO: A FALSA CENTRAL" | zoom lento | M fechamento | V02 |
+| 170 | 18:15 | "Laudo encerrado. Até a próxima autópsia." | carimbo | Carimbo "LAUDO ENCERRADO" (branco) sobre chumbo | "LAUDO ENCERRADO" | carimbo | SFX carimbo; M fecha | G13 |
+| **TELA FINAL (18:20–18:40). 20 s, fundo chumbo.** | | | | | | | | |
+| 171 | 18:20 | (tela final, 20 s, sem narração nova) | tela final | Moldura com miniatura do Laudo nº 002 (placeholder); área reservada para inscrição e cards do YouTube | "Fontes e canais oficiais na descrição" | — | M fechamento, 20 s | G14 |
+
+---
+
+## Lista de PRINTS
+
+Só material oficial e público (comunicado, notícia, página oficial). Trecho em amarelo #FFD400 com texto preto. Qualquer dado pessoal que aparecer no print deve ser borrado. Nenhum logo da Caixa: se o comunicado for usado, cortar o cabeçalho.
+
+| ID | Fonte | Link exato (01-pesquisa.md) | Trecho para grifar em amarelo | Cenas |
+|---|---|---|---|---|
+| P01 | Agência Brasil, "Caixa Seguridade informa ataque cibernético e vazamento de dados" | https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados | "ataque cibernético ocorrido em 6 de novembro"; "notificou, em 11 de novembro, a Autoridade Nacional de Proteção de Dados (ANPD), outras autoridades competentes e os titulares afetados"; "não há indícios de comprometimento de dados financeiros ou de autenticação"; "recomendações de proteção diante do risco de fraudes" | 2, 3, 4, 22, 26, 29, 45, 49, 54, 56, 80, 81, 159 |
+| P02 | Techtudo, "Ataque hacker à Caixa: quem teve dados vazados e o que fazer agora" | https://www.techtudo.com.br/noticias/2026/11/ataque-hacker-a-caixa-quem-teve-dados-vazados-e-o-que-fazer-agora-edsoftwares.ghtml | "identificado na última sexta-feira (6)"; nome "Caixa Vida e Previdência" | 53 |
+| P03 | IstoÉ, "Ataque hacker à Caixa expõe dados de 7,6 milhões de clientes" | https://istoe.com.br/ataque-hacker-caixa-vida-previdencia-vazamento-dados | "não há confirmação de que contas da Caixa Econômica tenham sido afetadas"; "nome e CPF em todos os registros"; trecho sobre ex-clientes | 24, 28, 81 |
+| P04 | Agência Brasil, "Tesouro Nacional identifica vazamento de dados de 30 mil cadastros" | https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/tesouro-nacional-identifica-vazamento-de-dados-de-30-mil-cadastros | "acesso não autorizado a dados pessoais"; "podem ser utilizadas por terceiros para tornar tentativas de fraude mais convincentes, por meio de mensagens e contatos que aparentem ser legítimos"; "não houve impacto financeiro"; "detectar e confirmar o incidente, investigar internamente e fazer a contenção e recuperação" | 9, 59, 60, 61, 63, 128, 129, 152 |
+| P05 | Tecnoblog, "FGC sofre invasão e notifica investidores sobre dados vazados" (05/11/2026) | https://tecnoblog.net/noticias/fgc-sofre-invasao-e-notifica-investidores-sobre-dados-vazados/ | "suspeita de um acesso não autorizado" (26/10); "não tem evidência de uso indevido nem de perda financeira"; "nunca informar senhas ou códigos" (orientação do FGC) | 64, 65, 66, 67, 68, 131, 153 |
+| P06 | ANPD (oficial), "Comunicação de incidente de segurança" | https://www.gov.br/anpd/pt-br/assuntos/incidente-de-seguranca | "no prazo de três (3) dias úteis"; "de forma individual e diretamente aos titulares, sempre que possível"; "possa acarretar risco ou dano relevante aos titulares"; "Cabe ao controlador avaliar os riscos e impactos" | 73, 74, 75, 94, 95, 96, 101, 103 |
+| P07 | LGPD (Lei 13.709/2018), arts. 48 e 52 e § 3º do art. 52 | https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm (NÃO LIDO: bloqueado; ler antes de gravar; se não der, usar P06 e marcar art. 52 como 🟡) | art. 48: comunicar à ANPD e ao titular; art. 52: advertência, multa de até 2% limitada a R$ 50 mi, publicização; § 3º: órgão público sem multa em dinheiro | 72, 116, 117, 118, 124, 125 |
+| P08 | ANPD (oficial), "ANPD aplica a primeira multa por descumprimento à LGPD" (07/07/2023) | https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-aplica-a-primeira-multa-por-descumprimento-a-lgpd | Data de publicação no DOU (06/07/2023); "R$ 14.400,00"; "tratamento de dados pessoais sem base legal" | 120, 121, 122, 123 |
+| P10 | Idec, "Vazamento de dados pessoais: saiba como proteger suas informações" | https://idec.org.br/dicas-e-direitos/vazamento-de-dados-pessoais-saiba-como-proteger-suas-informacoes | "imensamente mais propensos a cair em golpes financeiros"; "registrar um boletim de ocorrência" | 40, 41, 150 |
+| P12 | Tecnoblog, "Como consultar contas e dívidas do seu CPF usando o Registrato" | https://tecnoblog.net/408975/como-ver-contas-e-dividas-feitas-no-seu-cpf-registrato/ | "gratuito"; contas, chaves Pix, dívidas e empréstimos | 147 (ideal: print também do site do Banco Central, fonte ainda não registrada na pesquisa) |
+| P13 | Escritórios de advocacia: Mattos Filho e Confidata (cartão de reportagem, não print, 🟡) | https://www.mattosfilho.com.br/unico/regulamento-incidente-seguranca/ ; https://confidata.com.br/blog/comunicacao-incidente-seguranca-anpd | "o prazo ... começa quando a empresa toma conhecimento de que dados pessoais foram atingidos" | 90, 91 |
+
+## Lista de VÍDEOS DE BANCO
+
+Duração mínima: 6 s por clipe (planos de 3 a 5 s podem usar um trecho do mesmo clipe). Termos em inglês para Pexels, Pixabay ou Mixkit. Tom escuro, luz de tela de celular ou de monitor. Sem tela de código, sem painel de dados, sem rosto de pessoa real identificável.
+
+| ID | Descrição | Termos de busca (inglês) | Duração mínima | Cenas |
+|---|---|---|---|---|
+| V01 | Celular acendendo com notificação num quarto escuro | "phone notification dark" · "smartphone glowing dark room" | 6 s | 1 |
+| V02 | Mão segurando celular, close, luz da tela | "hands holding phone night" · "person holding smartphone close up" | 6 s | 10, 38, 157, 169 |
+| V03 | Calendário ou agenda em close sobre a mesa | "calendar close up desk" · "calendar pages desk close up" | 6 s | 7, 77 |
+| V08 | Vista aérea de Brasília | "brasilia aerial" · "brasilia aerial night" | 6 s | 71 |
+| V09 | Mão com caneta sobre contrato, sem texto legível | "hand pen signing contract close up" · "contract paper pen desk" | 5 s | 25 |
+| V11 | Celular tocando numa mesa escura, chamada recebida | "phone ringing night" · "phone call worried man" | 6 s | 17, 34, 39 |
+| V13 | Celular virado para baixo ou com tela acesa sobre mesa escura | "phone face down dark table" · "smartphone dark table" | 6 s | 43, 168 |
+| V15 | Sala escura com tela de monitor ao fundo, sem conteúdo legível | "computer screen dark" · "monitor glow dark room" | 6 s | 12, 55 |
+| V16 | Pessoa lendo carta à mesa, sem rosto | "person reading letter at table" · "hands reading letter table" | 5 s | 83 |
+| V17 | Carta ou envelope em close, sem texto legível | "letter close up dark table" · "envelope close up dark" | 5 s | 84 |
+| V18 | Pasta de arquivo fechada, luz baixa | "old file folder dark" · "file folder dark" | 6 s | 15, 165 |
+| V19 | Mesa escura de escritório, plano de apoio | "dark office desk" · "office desk night" | 5 s | 119 |
+| V20 | Celular com tela apagada sobre mesa | "phone dark table close up" · "smartphone dark table" | 5 s | 145 |
+| V21 | Extrato ou papel impresso sobre escrivaninha, sem texto legível | "paper document close up" · "notebook desk night" | 5 s | 151 |
+| V24 | Porta entreaberta em quarto escuro | "door half open dark" · "door ajar dark room" | 6 s | 32, 112 |
+| V25 | Mão fechando pasta de papel ou corrente de elos em close | "hands holding paper document" · "chain links close up dark" | 6 s | 110, 136 |
+| V28 | Pasta de papel aberta, close | "paper folder close up" · "documents folder desk" | 5 s | 87, 137 |
+| V33 | Água escorrendo de cano | "water pipe leak" · "water leak pipe close up" | 5 s | 98 |
+| V35 | Pacote de papelão na porta | "delivery package doorstep" · "cardboard package door" | 5 s | 88 |
+| V37 | Entrada de prédio à noite e interfone em close | "building entrance night" · "intercom close up" | 6 s | 36, 37 |
+| V38 | Relógio de parede ou ponteiro em close | "clock ticking close up" · "clock hands dark" | 5 s | 16 |
+| V39 | Chave de casa em close | "house key close up" · "keys hand close" | 5 s | 31 |
+| V40 | Cartão de crédito em close | "credit card close up" · "bank card close up" | 5 s | 144 |
+| V41 | Celular com aplicativo bancário, sem tela legível | "bank app phone" · "banking app smartphone night" | 5 s | 148 |
+
+**Observação:** são 24 vídeos distintos. A meta de 40 a 60 não foi atingida: vários planos reutilizam o mesmo clipe (V02 aparece 4 vezes, V11 3 vezes). Próxima passada: trocar cerca de 16 planos repetidos por clipes novos (silhueta de capuz para "quem copiou"; sala de servidores; mão digitando no notebook; lupa sobre documento; idosa ao telefone; entre outros) para chegar a 40.
+
+## Lista de GRÁFICOS a criar
+
+Criar uma vez e reutilizar. Cores: fundo chumbo #0B0D10 a #15181D, grade fina, brilho azul-frio; grifo e destaque #FFD400; vermelho #E63946 só para número de perda e "VAZADO".
+
+| ID | Elemento | Descrição | Cenas |
+|---|---|---|---|
+| G01 | Linha do tempo com etiquetas de data | Barra horizontal com 26/10, 04/11, 05/11, 06/11, 11/11 e 12/11. Ponto da data atual em amarelo. Etiqueta preta de data no canto inferior esquerdo | 5, 44, 48, 52 |
+| G02 | Frase na tela (dupla) | Duas caixas brancas com o nome de cada órgão | 8 |
+| G03 | Frase na tela (molde) | Caixa branca, texto preto negrito, entra de baixo para cima com whoosh; quadradinho amarelo quando for pergunta | 6, 11, 13, 14, 23, 30, 35, 42, 46, 50, 51, 57, 69, 78, 79, 82, 86, 92, 97, 99, 102, 107, 108, 111, 113, 114, 115, 126, 130, 132, 133, 134, 135, 146, 149, 154, 156, 160, 161, 166, 167 |
+| G04 | Vinheta HACKOPSIA | Tela preta, "HACKOPSIA" em caixa alta, "LAUDO Nº 001" e o slogan. 3 a 4 s. Reutilizável em todo laudo | 18 |
+| G05 | Cartão de capítulo | Tela preta, "ARQUIVO 0X — título" digitado letra por letra, 3 s, pausa de 0,5 s antes e troca de música | T1, T2, T3, T4, T5 |
+| G06 | Árvore de família | Mãe no topo (Caixa Seguridade), filha embaixo (CVP) destacada em amarelo | 21 |
+| G07 | Lista numerada (molde) | Números 01, 02, 03 em amarelo, itens em branco negrito, último item em amarelo; itens entram um a um | 27, 28, 67, 76, 116, 125, 131, 138, 139, 140, 141, 142, 143, 147, 152, 155, 158, 162, 163, 164 |
+| G08 | Moldura de documento fictício | Ficha de apresentação fictícia; "NOME FICTÍCIO", "000.000.000-00", marca "SIMULAÇÃO COM DADOS FICTÍCIOS" | 33 |
+| G09 | Calendário animado | Faixa de dias SEX 06 a TER 10, QUA 11 em destaque; pontos de 04/11 e 06/11; sábado e domingo apagam para a regra dos dias úteis | 47, 58, 104, 105, 106 |
+| G10 | Gráfico de barras (dias corridos) | Tesouro 8 · FGC 10 · CVP 6, com "NÃO É RANKING". Rótulo "conta nossa" | 70 |
+| G11 | Número de destaque (molde) | Tarja vermelha só para número de perda (7,6 MI); tarja amarela para os demais | 62, 66, 85, 105, 127 |
+| G12 | Caminho do aviso em 4 passos | Quatro caixas em sequência: 1 a empresa descobre, 2 a empresa avalia o risco, 3 a empresa informa quando soube, 4 o aviso chega a você. A caixa atual acende em amarelo | 89, 93, 100, 109 |
+| G13 | Carimbo "LAUDO ENCERRADO" | Branco, sobre chumbo, com som de carimbo | 170 |
+| G14 | Tela final (20 s) | Fundo chumbo, moldura com a miniatura do Laudo nº 002 (placeholder), área reservada para botão de inscrição e cards do YouTube | 171 |
 
 ## Momentos de destaque
 
-- **Gancho (0:00–1:14, linhas 1 a 16):** cortes de 2 a 4 s, mock do e-mail e frases curtas. Sem vinheta. Fecha com "5 DIAS" (1:12).
-- **Grande Pergunta (2:00–2:12, linhas 25a a 26):** pausa de 1 s antes; frase na tela; a música entra em tensão.
-- **Abertura fixa (2:24, linha 28):** vinheta, carimbo sonoro e troca de música.
-- **Revelação "ATIVOS" (6:39, linha 67):** pausa de 0,7 s em tela preta; depois "7,6 MI" (linha 68) e "EX-CLIENTES" (linha 69).
-- **Ponto cego (9:56, linha 95):** frase na tela antes da virada, com pausa de 0,5 s.
-- **Virada (10:00–11:40, linhas 96 a 109a):** capítulo ARQUIVO 03; calendário; lista das três condições; pausa de 1 s e glitch de 0,3 s antes de "Quem decide se o risco é relevante?" (linha 109a), com a troca de música.
-- **Frase do Tesouro (15:01, linhas 136 a 138):** "A FRASE DO TESOURO" em tela limpa, depois o grifo com o texto literal.
-- **Como se proteger (14:56–17:59, linhas 135 a 159b):** visual limpo, fundo chumbo, lista numerada de 7 passos; trocar a música por um bed neutro e leve.
-- **Fechamento (18:01–18:54, linhas 160 a 167):** lista da regra, pergunta para os comentários, teaser do próximo laudo e carimbo ENCERRADO.
-- **Tela final (19:00, linha 168):** 20 s.
+- **Gancho (0:00–0:42):** cortes de 3 a 5 s. Dados de sete vírgula seis milhões e a Grande Pergunta aos 0:42.
+- **Grande Pergunta:** linha 11 (0:42), com pausa de 0,5 s antes.
+- **Virada:** a palavra "ATIVOS" (linha 79, 8:23) e a pergunta "QUEM DECIDE SE O RISCO É RELEVANTE?" (ver linhas 100 a 103; a pergunta exata não está no roteiro novo, então na tela usar "A PRIMEIRA PALAVRA É DE QUEM SOFREU O ATAQUE", linha 102). Pausa de 1 s antes.
+- **"Como se proteger" (14:33–17:09):** visual limpo com passos numerados (linhas 139 a 160).
 
 ## Checklist do editor
 
-**Legendas**
-- [ ] Legenda em português do Brasil, revisada linha a linha (números por extenso na narração, nomes de órgãos, siglas).
-- [ ] Glossário na tela (cartão de 3 a 4 s) para: engenharia social, acesso não autorizado, autenticação, controlador, ANPD, LGPD, token, base legal, FGC, dias úteis, chave Pix aleatória.
-- [ ] "Caixa Vida e Previdência (CVP)" na primeira aparição; "CVP" depois.
-
-**Áudio**
-- [ ] Música a **-20 dB** abaixo da voz (a voz é a referência). Export entre **-14 e -16 LUFS**.
-- [ ] Música só de biblioteca do YouTube, Epidemic Sound ou Artlist (gêneros: documentary, suspense, investigation, dark ambient). Guardar o comprovante de licença.
-- [ ] Trocas de música: 1:14 (ARQUIVO 01), 2:24 (abertura), 4:32 (ARQUIVO 02), 10:00 (ARQUIVO 03 e virada, 11:40 a troca forte), 14:56 (ARQUIVO 04, bed leve), 18:01 (fechamento), tela final (fade).
-- [ ] Transições (8, uma por troca de bloco): fade-out de ~1 s, tela preta de 2 a 4 s com a música de suspense subindo 3 a 6 dB, fade-in de ~1 s com a primeira frase do bloco seguinte. Nas 4 transições com capítulo (1→2, 4→5, 5→6, 7→8), o cartão ARQUIVO digitado fica no escuro.
-- [ ] Efeitos (whoosh, tique, carimbo, digitação) em nível baixo, sem competir com a voz.
-
-**Ritmo**
-- [ ] Nenhum vídeo de banco fica mais de 6 s na tela.
-- [ ] Cartões de texto (reportagem grifada, lista, gráfico) mudam algo a cada 3 a 4 s.
-- [ ] Frase na tela antes de cada virada e capítulo: "E NÃO ERA SÓ ELA" (7:18), "O PONTO CEGO" (9:56), "QUEM DECIDE SE O RISCO É RELEVANTE?" (11:40), "A FRASE DO TESOURO" (15:01).
-- [ ] Capítulos a cada 3 a 5 min: ARQUIVO 01 (1:14), 02 (4:32), 03 (10:00), 04 (14:56). Os intervalos são 3:18, 5:28, 4:56.
-- [ ] Marca d'água HACKOPSIA o vídeo inteiro.
-- [ ] Tela final de 20 s com o Laudo nº 002 e os botões do YouTube.
-
-**Visual e segurança jurídica**
-- [ ] Nenhum logo da Caixa, da CVP, do Tesouro, do FGC, do Banco Central, do gov.br ou de veículo. Só texto digitado.
-- [ ] Nenhum texto na tela diz que alguém cumpriu ou descumpriu prazo. A ressalva fica só na narração.
-- [ ] Quem copiou os dados nunca aparece como "golpista" na tela, nem em legenda, nem em thumbnail.
-- [ ] Nenhum dado pessoal real: só "NOME FICTÍCIO" e "000.000.000-00". Nenhuma chave Pix real, nenhum número de cartão, nenhuma tela de login.
-- [ ] Documento na tela só oficial ou da imprensa (fontes 1, 2, 3, 4, 7, 24, 25, 28), só o trecho usado, com crédito.
-- [ ] Direito de resposta: cada afirmação de empresa ou órgão aparece com "a empresa afirma", "segundo" ou "A EMPRESA AFIRMA" (linhas 55, 62, 102, 137).
-- [ ] Nenhuma imagem de painel, código de ataque ou dado vazado. "Clima hacker" só com silhueta e sala de servidores.
-- [ ] Telekall: só nome, cidade, valor e "cabe recurso". Sem fachada e sem logo.
-- [ ] Hotmart não aparece no vídeo.
-- [ ] Vermelho só em números de perda (7,6 MI, 30 MIL, 4 MIL) e no carimbo "VAZADO". Os demais números de destaque usam tarja amarela.
-
-**Conferir antes de gravar** (o texto na tela só entra depois de conferido)
-- [ ] **Citações literais** das fontes 1, 3, 4, 7 e 24 (linhas 49, 54, 58, 62, 75, 79, 81, 90, 107 a 111, 137 a 138). O PDF do comunicado da CVP não foi lido. A frase do Tesouro segue o texto confirmado: "podem ser utilizadas por terceiros para tornar tentativas de fraude mais convincentes, por meio de mensagens e contatos que aparentem ser legítimos".
-- [ ] **Art. 48 e art. 52 da LGPD** (linhas 39, 122 a 124, 130 a 131): texto não lido no planalto.gov.br. Não exibir 2%, R$ 50 milhões nem a regra do órgão público antes de conferir o § 3º.
-- [ ] **Febraban** (linhas 37, 148): fonte 16 é 🟡. Conferir na própria Febraban antes de atribuir.
-- [ ] **Idec** (linha 156): fonte 27 é 🟡. Conferir o texto antes de pôr aspas.
-- [ ] **Registrato, bloqueio e Pix aleatória** (linhas 145, 154): conferir o nome atual do serviço no site do Banco Central.
-- [ ] **Verificação em duas etapas** (linha 153): sem fonte específica. Citar gov.br ou CERT.br depois de achar.
-- [ ] **Escritórios de advocacia** (linha 100): fontes 10 e 11 são 🟡. A regra de início da contagem vem só daí; a página da ANPD não a define.
-- [ ] **Manchete da Techtudo e do Tecnoblog** (linhas 57 e 85): conferir o título exato na fonte.
-- [ ] **Data do e-mail do cenário** (linha 6): mostrar só "ATAQUE · 06/11/2026". Não mostrar data no mock, porque a data do aviso aos titulares não está confirmada.
-
-## Pendências para o Diretor (antes de gravar)
-1. **Duração.** A narração estimada dá ~19 min com a tela final chegando a 19:20 (pelo realinhamento da cena 135, +24 s). Somando as 8 transições (24 s), o total sobe para ~19 min 44 s. O teto da bíblia é 18 min. Se for necessário cortar, a sugestão é encurtar o bloco 4 (a frase do Idec ficou de fora deste roteiro, não há corte grande a fazer). Decidir com o roteirista e refazer a conta.
-2. **Roteiro duplicado.** O `02-roteiro.md` tem o texto repetido (blocos + "Texto limpo"). Manter só uma cópia e corrigir o cabeçalho (2.553 palavras).
-3. **Atribuições pendentes.** Conferir no original da Agência Brasil (CVP) se "os titulares afetados" entram na notificação de 11/11. Se não entrarem, a cena 54 precisa de ajuste de texto na tela.
-4. **Canais oficiais na descrição.** A cena 158 promete o e-mail do FGC e o canal do Tesouro (Fala.BR). O e-mail da CVP não foi encontrado: ou tirar a promessa do roteiro, ou manter "endereço não divulgado nas fontes".
-5. **Thumbnail.** Não usar "golpista" para quem copiou os dados. A thumbnail segue o fato, por exemplo "5 DIAS DEPOIS".
-6. **Linha do tempo (corrigido).** A cena 135 (ARQUIVO 04) estava em 14:32, antes da cena 134 (14:52). Passou para 14:56, e as cenas 136 a 168 e os marcos dos blocos 8 e 9 foram deslocados +24 s. Conferir na montagem.
-7. **Cena 104a (corrigido).** Retirado o "Por exemplo," que não estava no roteiro; a frase agora segue o texto de `02-roteiro.md`.
-
----
-**Nota do Diretor (17/11):** os horários deste mapa são estimativas e acumularam desvio.
-Pela contagem real (2.552 palavras a 150 por minuto = cerca de 17:01 de narração),
-mais 8 transições de cerca de 5 s e a tela final de 20 s, o vídeo deve ficar com
-**cerca de 18 minutos**. Na edição, alinhe cada cena ao áudio gravado de cada bloco
-(ÁUDIO 01 a 09 do `02b-narracao-ia.md`), e não aos horários desta tabela.
+- [ ] Legendas em português, geradas e revisadas. A tela não pode cobrir o grifo.
+- [ ] Música a cerca de -20 dB sob a voz; volume final entre -14 e -16 LUFS.
+- [ ] Transições T1 a T6 cortadas no áudio único (fim da última frase, 3 s de respiro, cola do resto). Conferir a posição real de cada corte no áudio gerado.
+- [ ] Nenhum vídeo de banco fica mais de 6 s na tela (ver a lista de vídeos).
+- [ ] Cartões de texto mudam algo a cada 3 a 4 s (grifo ou item novo).
+- [ ] Marca "HACKOPSIA" o vídeo inteiro.
+- [ ] Nenhum logo da Caixa, da CVP, do Tesouro, do FGC, do Banco Central ou de veículo.
+- [ ] Dados pessoais: só "NOME FICTÍCIO" e "000.000.000-00".
+- [ ] Nenhum texto na tela diz "cumpriu" ou "descumpriu" prazo; nenhum "golpista".
+- [ ] **Pendências de fonte antes de gravar:** (a) P07, LGPD (planalto bloqueado): ler arts. 48 e 52 e § 3º; (b) P03, IstoÉ (erro 502 na última tentativa): reler o trecho; (c) "titulares afetados" em 11/11 (linhas 48 e 49) vem só da Agência Brasil, em leitura automática: conferir no original; (d) "escritórios de advocacia" (linhas 90 e 91): 🟡; (e) P12: incluir fonte do Banco Central para o Registrato.
+- [ ] Tela final de 20 s, com cards do YouTube e área de inscrição.
+- [ ] Cartões de capítulo a cada 3 a 5 minutos: ARQUIVO 01 (1:22), 02 (4:01), 03 (8:20), 04 (11:31), 05 (14:30).
