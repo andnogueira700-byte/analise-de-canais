@@ -32,6 +32,42 @@ def fonte(caminho, tam):
         return ImageFont.truetype(FONTE, tam)
 
 
+def _norm(t):
+    return re.sub(r"[^\wáàâãéêíóôõúçü]", "", t.lower())
+
+
+def ler_storyboard_v2(caminho, palavras, cfg):
+    """Formato v2: | plano | gatilho | tipo | asset | entrada | movimento | texto | sfx | transicao | cor |"""
+    linhas = []
+    for linha in open(caminho, encoding="utf-8"):
+        c = [x.strip() for x in linha.strip().strip("|").split("|")]
+        if len(c) >= 10 and c[0].isdigit():
+            linhas.append(c)
+    planos, pos = [], 0
+    vin = cfg.get("vinhetas", {})
+    for c in linhas:
+        g = c[1]
+        if g.upper().startswith("VINHETA"):
+            ini = float(vin[g.upper()])
+        else:
+            alvo = [_norm(x) for x in g.split() if _norm(x)]
+            ini = None
+            for i in range(pos, len(palavras) - len(alvo) + 1):
+                if all(_norm(palavras[i + j]["text"]) == alvo[j] for j in range(len(alvo))):
+                    ini, pos = palavras[i]["start"] - cfg.get("antecipa", 0.06), i + 1
+                    break
+            if ini is None:
+                raise SystemExit(f"gatilho nao encontrado no plano {c[0]}: {g}")
+        planos.append(dict(n=int(c[0]), ini=max(0.0, ini), fim=None, tipo=c[2], asset=c[3],
+                           entrada=float(c[4]) if c[4] not in ("-", "") else 0.0, mov=c[5],
+                           texto=c[6], sfx=c[7], trans=c[8], cor=c[9] if len(c) > 9 else "neutro"))
+    planos[0]["ini"] = 0.0
+    for a, b in zip(planos, planos[1:]):
+        a["fim"] = b["ini"]
+    planos[-1]["fim"] = float(cfg["fim"])
+    return planos
+
+
 def ler_storyboard(caminho):
     planos = []
     for linha in open(caminho, encoding="utf-8"):
@@ -130,9 +166,9 @@ def frase_na_tela(base, texto, k):
     """Caixas brancas empilhadas (uma por linha), texto preto, quadradinho amarelo (estilo Elementar)."""
     img = base.copy()
     d = ImageDraw.Draw(img)
-    fnt = fonte(FONTE, 74)
-    linhas = quebrar(texto, fnt, 1150, d)
-    alt = 104
+    fnt = fonte(FONTE, 86)
+    linhas = quebrar(texto, fnt, 1250, d)
+    alt = 118
     y0 = H // 2 - len(linhas) * alt // 2 - 20
     x0 = 160
     for j, ln in enumerate(linhas):
@@ -218,7 +254,7 @@ def vinheta(texto, k, dur):
     img = Image.new("RGB", (W, H), (0, 0, 0))
     d = ImageDraw.Draw(img)
     linhas = [t.strip() for t in texto.split("/")]
-    fm = fonte(MONO or FONTE, 46)
+    fm = fonte(MONO or FONTE, 54)
     total = sum(len(l) for l in linhas)
     mostrar = int(total * min(1, k * 1.6))
     y = H // 2 - 40 * len(linhas) - 20
@@ -226,13 +262,13 @@ def vinheta(texto, k, dur):
         n = max(0, min(len(ln), mostrar))
         mostrar -= len(ln)
         if j == 0 and ln.upper().startswith("HACKOPSIA"):
-            fl = fonte(FONTE_BLACK, 120)
+            fl = fonte(FONTE_BLACK, 150)
             tw = d.textlength(ln, font=fl)
             if n > 0:
                 d.text(((W - tw) / 2, y), ln[:n], font=fl, fill=(255, 255, 255))
             y += 170
             continue
-        f = fm if j > 1 else fonte(MONO or FONTE, 58)
+        f = fm if j > 1 else fonte(MONO or FONTE, 72)
         tw = d.textlength(ln, font=f)
         cor = AMARELO if ("LAUDO" in ln.upper() or "ARQUIVO" in ln.upper()) else (200, 204, 210)
         d.text(((W - tw) / 2, y), ln[:n], font=f, fill=cor)
@@ -272,6 +308,38 @@ def print_grifado(png, rects, k, mov):
     return img.resize((W, H), Image.LANCZOS, box=(cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2))
 
 
+LUTS = {
+    "frio": (lambda v: int(v * 0.90), lambda v: int(v * 0.98), lambda v: min(255, int(v * 1.06 + 10))),
+    "quente": (lambda v: min(255, int(v * 1.07 + 6)), lambda v: int(v * 1.0), lambda v: int(v * 0.88)),
+}
+_LUT_CACHE = {}
+
+
+def colorir(img, cor):
+    if cor not in LUTS:
+        return img
+    if cor not in _LUT_CACHE:
+        _LUT_CACHE[cor] = [list(map(f, range(256))) for f in LUTS[cor]]
+    r, g, b = img.split()
+    lr, lg, lb = _LUT_CACHE[cor]
+    return Image.merge("RGB", (r.point(lr), g.point(lg), b.point(lb)))
+
+
+def poeira(img, quadro):
+    """Partículas e riscos leves de película (ar de documentário)."""
+    import random
+    rnd = random.Random(quadro * 7919)
+    d = ImageDraw.Draw(img, "RGBA")
+    for _ in range(rnd.randint(4, 10)):
+        x, y, r = rnd.randint(0, W), rnd.randint(0, H), rnd.choice([1, 1, 2, 2, 3])
+        a = rnd.randint(40, 110)
+        d.ellipse([x - r, y - r, x + r, y + r], fill=(235, 230, 220, a))
+    if rnd.random() < 0.06:
+        x = rnd.randint(100, W - 100)
+        d.line([(x, 0), (x + rnd.randint(-20, 20), H)], fill=(230, 230, 230, 35), width=1)
+    return img
+
+
 # ---------- vídeo ----------
 
 def quadros_de_video(clipe, entrada, dur):
@@ -284,18 +352,28 @@ def quadros_de_video(clipe, entrada, dur):
 
 
 def renderizar(cfg):
-    planos = ler_storyboard(cfg["storyboard"])
+    if cfg.get("formato") == "v2":
+        stt = json.load(open(cfg["transcricao"]))
+        palavras = [x for x in stt["words"] if x["type"] == "word"]
+        planos = ler_storyboard_v2(cfg["storyboard"], palavras, cfg)
+        cfg["_planos"] = planos
+        for p in planos:
+            print(f"  {p['n']:>2} {p['ini']:6.2f}-{p['fim']:6.2f} {p['tipo']}", flush=True)
+    else:
+        planos = ler_storyboard(cfg["storyboard"])
     grifos = json.load(open(os.path.join(cfg["prints"], "grifos.json")))
     mapa_print = cfg.get("mapa_prints", {})
     saida_video = cfg["saida"].replace(".mp4", "_sem_audio.mp4")
     enc = subprocess.Popen(["ffmpeg", "-loglevel", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24",
                             "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "medium",
-                            "-crf", "18", "-pix_fmt", "yuv420p", saida_video], stdin=subprocess.PIPE)
+                            "-crf", "18", "-pix_fmt", "yuv420p"] + (["-vf", cfg["look"]] if cfg.get("look") else []) + [saida_video], stdin=subprocess.PIPE)
     ultimo_video = None
     fwm = fonte(FONTE_BLACK, 26)
     usados_print = {}
-    for p in planos:
+    quadro_global = 0
+    for idx_p, p in enumerate(planos):
         nq = max(1, round((p["fim"] - p["ini"]) * FPS))
+        prox_vinheta = idx_p + 1 < len(planos) and planos[idx_p + 1]["tipo"] == "vinheta" and p["tipo"] != "vinheta"
         tipo = p["tipo"]
         frames_base = None
         if tipo == "video":
@@ -328,6 +406,12 @@ def renderizar(cfg):
                 f = Image.new("RGB", (W, H), (0, 0, 0))
             f = transicao(f, i, p["trans"])
             if tipo != "vinheta":
+                f = colorir(f, p.get("cor", "neutro"))
+                f = poeira(f, quadro_global)
+            if prox_vinheta and i >= nq - 14:
+                f = Image.blend(f, Image.new("RGB", (W, H), (0, 0, 0)), (i - (nq - 14)) / 14)
+            quadro_global += 1
+            if tipo != "vinheta":
                 d = ImageDraw.Draw(f)
                 d.text((44, H - 64), "HACKOPSIA", font=fwm, fill=(235, 235, 235))
             enc.stdin.write(f.tobytes())
@@ -338,11 +422,16 @@ def renderizar(cfg):
 
 
 def mixar(cfg, planos, video):
+    planos = cfg.get("_planos", planos)
     ini, fim = planos[0]["ini"], planos[-1]["fim"]
     dur = fim - ini
     entradas = ["-i", video, "-ss", f"{ini}", "-t", f"{dur}", "-i", cfg["narracao"],
                 "-stream_loop", "-1", "-t", f"{dur}", "-i", cfg["musica"]]
-    filtros = [f"[1:a]volume=1.0[voz]"]
+    mudo = cfg.get("mutar_narracao", [])
+    vexpr = "1"
+    for a, b in mudo:
+        vexpr = f"if(between(t,{a - ini},{b - ini}),0,{vexpr})"
+    filtros = [f"[1:a]volume='{vexpr}':eval=frame[voz]"]
     # música: baixa sob a voz, sobe no respiro (sem voz)
     resp = cfg.get("respiro", [])
     expr = "0.16"
@@ -359,9 +448,14 @@ def mixar(cfg, planos, video):
         arq = os.path.join(cfg["sfx"], s + ".mp3")
         if not os.path.exists(arq):
             continue
-        entradas += ["-i", arq]
         atraso = int((p["ini"] - ini) * 1000)
-        filtros.append(f"[{idx}:a]volume={vol.get(s, 0.4)},adelay={atraso}|{atraso}[s{idx}]")
+        if p["tipo"] == "vinheta" and s == "digitacao":
+            dur_dig = (p["fim"] - p["ini"]) / 1.6 + 0.1
+            entradas += ["-stream_loop", "-1", "-t", f"{dur_dig:.2f}", "-i", arq]
+            filtros.append(f"[{idx}:a]volume=0.45,afade=t=out:st={max(0, dur_dig - 0.15):.2f}:d=0.15,adelay={atraso}|{atraso}[s{idx}]")
+        else:
+            entradas += ["-i", arq]
+            filtros.append(f"[{idx}:a]volume={vol.get(s, 0.4)},adelay={atraso}|{atraso}[s{idx}]")
         mix.append(f"[s{idx}]")
         idx += 1
     filtros.append("".join(mix) + f"amix=inputs={len(mix)}:normalize=0:duration=first,alimiter=limit=0.95[a]")
