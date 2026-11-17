@@ -1,24 +1,12 @@
 {
  "P01a": {
   "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados",
-  "frase": "Caixa Seguridade informa ataque cibernético",
+  "frase": "Caixa Seguridade informa ataque cibernético e vazamento de dados",
   "rects": [
    [
     1118,
     522,
-    1259,
-    96
-   ]
-  ]
- },
- "P01b": {
-  "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados",
-  "frase": "ataque cibernético e vazamento de dados",
-  "rects": [
-   [
-    1730,
-    522,
-    992,
+    1604,
     96
    ],
    [
@@ -29,14 +17,32 @@
    ]
   ]
  },
+ "P01b": {
+  "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados",
+  "frase": "Dados de 7,6 milhões de clientes ativos foram copiados por hackers",
+  "rects": [
+   [
+    1427,
+    730,
+    973,
+    42
+   ]
+  ]
+ },
  "P02": {
   "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/tesouro-nacional-identifica-vazamento-de-dados-de-30-mil-cadastros",
-  "frase": "Tesouro Nacional identifica vazamento de dados",
+  "frase": "Tesouro Nacional identifica vazamento de dados de 30 mil cadastros",
   "rects": [
    [
     1041,
     522,
-    1338,
+    1757,
+    96
+   ],
+   [
+    1640,
+    618,
+    265,
     96
    ]
   ]
@@ -55,12 +61,12 @@
  },
  "P13": {
   "url": "https://sbtnews.sbt.com.br/noticia/economia/sistema-do-fgc-e-invadido-e-dados-de-clientes-acessados",
-  "frase": "dados de clientes são acessados",
+  "frase": "Sistema do FGC é invadido e dados de clientes são acessados",
   "rects": [
    [
-    1802,
+    798,
     958,
-    316,
+    1321,
     90
    ],
    [
