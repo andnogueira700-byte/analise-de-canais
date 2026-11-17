@@ -27,9 +27,9 @@ Muita gente jura que o golpista sabia até a última compra. Não encontramos fo
 
 ## [BLOCO 2 — A INVESTIGAÇÃO]
 
-Primeiro, o tamanho do problema. Segundo a Federação Brasileira de Bancos, a Febraban, clientes relataram cento e cinco mil casos de falsa central em dois mil e vinte e quatro, e cento e trinta e nove mil só no primeiro semestre de dois mil e vinte e cinco, quase o triplo de um ano antes. São relatos, não todas as tentativas, e não existe número oficial de quanto dinheiro esse golpe já levou. Esses números são piso, não teto.
+Primeiro, o tamanho do problema. Segundo a Febraban, aqueles cento e trinta e nove mil relatos do primeiro semestre de dois mil e vinte e cinco vieram depois de cento e cinco mil em todo o ano de dois mil e vinte e quatro. São relatos, não todas as tentativas, e não existe número oficial de quanto dinheiro esse golpe já levou. Esses números são piso, não teto.
 
-De um lado, a promessa de toda campanha de banco, a de que ninguém liga pedindo senha nem transferência. Do outro, cento e trinta e nove mil relatos em seis meses. A explicação começa no visor do celular.
+Lembra do paradoxo do começo? A explicação começa no visor do celular.
 
 Em agosto de dois mil e vinte e cinco, a conselheira Cristiana Camarate, da Agência Nacional de Telecomunicações, a Anatel, citou estudos segundo os quais um quarto das ligações na rede brasileira vem de número falsificado, ou seja, mostra na sua tela um número que não é o de quem liga. Nem tudo é golpe, porque o telemarketing entra na conta. Mas a Anatel afirma que impostores de bancos usam esse recurso para levar a vítima a transferir dinheiro.
 

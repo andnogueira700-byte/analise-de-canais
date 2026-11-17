@@ -1,5 +1,7 @@
 # Intro — Laudo 002
 
+> **ESCOLHA DO DONO (17/11/2026): Opção A**, com a primeira frase trocada pelo dono: saiu o número de visualizações dos vídeos de alerta dos bancos e entrou "Ela aparece no aplicativo, nas propagandas e nos avisos dos próprios bancos". Nome do golpe: "golpe da falsa central do banco" na primeira menção, depois "falsa central". Bloco 2 ajustado pelo Diretor para não repetir o paradoxo (sugestões 1 e 2 abaixo). A fala "Laudo número dois. O golpe da falsa central." NÃO é narrada (regra do dono desde o Laudo 001): só a vinheta digitada, em silêncio.
+
 Título de referência: o provisório do briefing, "O Golpe da Falsa Central do Banco: Como Eles Sabem TUDO Sobre Você?". Ainda não existem `03-titulos-descricao.md` nem `04-thumbnail.md`. Se o título mudar, a Grande Pergunta das três opções precisa acompanhar.
 Thumbnail provável, pelo briefing: celular tocando com o nome do banco na tela.
 O Bloco 1 começa com: "Antes de discar, o golpista já tem uma folha na mão."
@@ -35,7 +37,7 @@ Nenhuma opção liga os vazamentos do Laudo 001 a vítimas, diz quanto dinheiro 
 
 ## Opção A — O paradoxo do aviso (225 palavras)
 
-O banco não liga pedindo senha, código ou transferência. Você já ouviu essa frase, e só os vídeos de alerta de quatro grandes bancos no YouTube passam de cinquenta milhões de visualizações. Mas, segundo a Febraban, a federação dos bancos, os clientes relataram cento e trinta e nove mil casos do golpe da falsa central do banco. Só no primeiro semestre de dois mil e vinte e cinco.
+O banco não liga pedindo senha, código ou transferência. Você já ouviu essa frase. Ela aparece no aplicativo, nas propagandas e nos avisos dos próprios bancos. Mesmo assim, segundo a Febraban, a federação dos bancos, os clientes relataram cento e trinta e nove mil casos do golpe da falsa central do banco. Só no primeiro semestre de dois mil e vinte e cinco.
 
 O aviso está em toda parte, e os relatos quase triplicaram em um ano. Como as duas coisas podem ser verdade?
 
