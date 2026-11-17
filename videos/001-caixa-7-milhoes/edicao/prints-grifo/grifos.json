@@ -329,5 +329,41 @@
    3000,
    1320
   ]
+ },
+ "P06b": {
+  "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-aplica-a-primeira-multa-por-descumprimento-a-lgpd",
+  "frase": "sanções de multa e de advertência por ofensas à Lei Geral de Proteção de Dados",
+  "rects": [
+   [
+    1018,
+    803,
+    1511,
+    56
+   ]
+  ],
+  "recorte": [
+   720,
+   480,
+   3120,
+   1020
+  ]
+ },
+ "P02c": {
+  "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/tesouro-nacional-identifica-vazamento-de-dados-de-30-mil-cadastros",
+  "frase": "tornar tentativas de fraude mais convincentes, por meio de mensagens e contatos que aparentem ser legítimos",
+  "rects": [
+   [
+    1220,
+    1060,
+    1309,
+    42
+   ],
+   [
+    1220,
+    1108,
+    371,
+    42
+   ]
+  ]
  }
 }

@@ -194,7 +194,9 @@ def numero_destaque(base, texto, k):
     img = escurecer(base, 0.35, 6)
     d = ImageDraw.Draw(img)
     partes = texto.split(" ", 2)
-    if len(partes) >= 2 and any(ch.isdigit() for ch in partes[0]):
+    if " / " in texto:  # "NÚMERO / legenda"
+        num, resto = [t.strip() for t in texto.split(" / ", 1)]
+    elif len(partes) >= 2 and any(ch.isdigit() for ch in partes[0]):
         num = partes[0] + (" " + partes[1] if partes[1].isupper() and len(partes[1]) <= 3 else "")
         resto = texto[len(num):].strip()
     else:
@@ -368,20 +370,36 @@ def lista(texto, k):
     """Lista numerada com itens surgindo um a um (fundo chumbo, números em amarelo)."""
     img = fundo_chumbo()
     d = ImageDraw.Draw(img)
+    # "A / B / C #2": lista cumulativa (volta à tela a cada item falado); mostra até o item 2,
+    # os anteriores já prontos e o novo entrando no começo do plano.
+    ate = None
+    m = re.search(r"#(\d+)\s*$", texto)
+    if m:
+        ate = int(m.group(1)); texto = texto[:m.start()]
     itens = [t.strip() for t in texto.split("/") if t.strip()]
     fn, fi = fonte(FONTE_BLACK, 58), fonte(FONTE, 62)
     alt = 118
     y0 = H // 2 - len(itens) * alt // 2
     for j, it in enumerate(itens):
-        t0 = j / max(1, len(itens)) * 0.7
+        if ate is not None:
+            if j >= ate:
+                continue
+            t0 = 0.0 if j < ate - 1 else 0.06
+        else:
+            t0 = j / max(1, len(itens)) * 0.7
         if k < t0:
             continue
         a = min(1.0, (k - t0) * 8)
         y = y0 + j * alt
         x = 360 + int((1 - a) * 40)
-        ultimo = j == len(itens) - 1
+        if ate is not None:
+            a = 1.0 if j < ate - 1 else a
+            x = 360 + int((1 - a) * 40)
+            cor = AMARELO if j == ate - 1 else (150, 154, 162)
+        else:
+            cor = AMARELO if j == len(itens) - 1 and k > 0.85 else (240, 242, 246)
         d.text((x, y), f"{j + 1:02d}", font=fn, fill=AMARELO)
-        d.text((x + 120, y), it, font=fi, fill=AMARELO if ultimo and k > 0.85 else (240, 242, 246))
+        d.text((x + 120, y), it, font=fi, fill=cor)
     return img
 
 
