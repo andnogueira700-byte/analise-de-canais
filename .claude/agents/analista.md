@@ -37,6 +37,10 @@ Leia `canal/CANAL.md` inteiro e todos os arquivos `00` a `05` da pasta do vídeo
 - O bloco "como se proteger" é prático e simples?
 - Tom de voz conforme a bíblia? Frases boas para voz de IA?
 
+### C2. Valor e opinião (dentro do bloco C)
+- A promessa das 3 coisas (seção 1.1 da bíblia) aparece no começo e é cumprida?
+- Existe "O PARECER DO LAUDO" com opinião clara, fundamentada e apresentada como opinião, sem acusar ninguém de crime?
+
 ### D. Embalagem (peso 15%)
 - O título recomendado é cumprido pelo roteiro?
 - Thumbnail e título se completam, sem repetir?

@@ -49,6 +49,38 @@ banco, farmácia, WhatsApp).
 - 10% vídeos quentes: vazamento grande que acabou de estourar, mas sempre em
   formato de documentário, nunca de "jornal da semana"
 
+## 1.1 O que o espectador ganha (a promessa de todo laudo)
+
+Todo vídeo precisa entregar **três coisas**, ditas logo no começo e cumpridas
+até o fim:
+1. **Saber se isso me atinge:** quem foi afetado, inclusive os casos que
+   ninguém explicou (ex.: ex-clientes).
+2. **Entender o porquê:** a explicação que o jornal de 2 minutos não dá: a
+   regra, o mecanismo e a falha por trás do caso.
+3. **Saber o que fazer hoje:** passos práticos, com a lista também na descrição
+   e no comentário fixado.
+
+## 1.2 O que fazemos de diferente
+
+| Quem já existe | O que fazem | O que o HACKOPSIA faz |
+|---|---|---|
+| TV e portais (g1, Jovem Pan, Record) | Notícia de 2 minutos, fria, sem contexto | Um caso por vídeo, do começo ao fim, com o porquê e o que fazer |
+| mano deyvin e canais de opinião | Opinião rápida, com rosto, várias notícias por vídeo, tom de bate-papo | Opinião **embasada**, num único caso investigado, com documentos e fontes na tela |
+| Canais de hacker (Hackers do Crime, In Comum) | Histórias de hackers estrangeiros | Casos **brasileiros** que tocam o seu CPF, o seu Pix e a sua conta |
+
+## 1.3 Nós temos opinião: "O PARECER DO LAUDO"
+
+Todo laudo tem um trecho fixo, perto do fim, em que o canal **assume uma
+opinião**, sempre fundamentada nos fatos do vídeo e sempre apresentada como
+opinião ("na avaliação deste laudo", "o nosso parecer é"):
+- o que, na nossa avaliação, falhou (a regra, o processo, a fiscalização);
+- o que deveria mudar, com 2 ou 3 propostas concretas;
+- nunca acusar pessoa ou empresa de crime: a opinião é sobre sistemas, regras e
+  práticas, não sobre culpa.
+
+Esse é o nosso diferencial: **não só contamos o que aconteceu, damos um
+parecer**, como um perito ao fim de uma autópsia.
+
 ## 2. Público
 
 Brasileiro comum, de 25 a 55 anos, que usa Pix, banco no celular e WhatsApp,
@@ -80,11 +112,11 @@ técnico.** Quer entender o que aconteceu, quem errou e o que fazer.
 |---|---|---|---|
 | 1 | Gancho com objeto | 0:00–0:45 | Algo do dia a dia do espectador + uma pergunta perturbadora |
 | 2 | Choque em números | 0:45–1:30 | 3 ou 4 dados duros em sequência |
-| 3 | A Grande Pergunta | ~1:30 | O mistério que o vídeo vai responder |
+| 3 | A Grande Pergunta + a promessa | ~1:30 | O mistério que o vídeo vai responder e as 3 coisas que o espectador vai sair sabendo (seção 1.1) |
 | 4 | Contexto e origem | 2–5 min | Como aquilo surgiu, a linha do tempo |
 | 5 | A investigação | 5–10 min | Casos reais com nomes, cidades, datas, valores e fontes |
 | 6 | A virada | ~10 min | O detalhe que muda tudo o que o espectador achava |
-| 7 | O que diz a lei | 11–13 min | Legal ou ilegal? Quem deveria fiscalizar? Teve punição? |
+| 7 | O que diz a lei + **O PARECER DO LAUDO** | 11–13 min | Legal ou ilegal? Quem deveria fiscalizar? Teve punição? E a opinião do canal: o que falhou e o que deveria mudar (seção 1.3) |
 | 8 | Como se proteger | 13–15 min | Passos práticos que a pessoa pode fazer hoje |
 | 9 | Fechamento | final | Pergunta para os comentários + chamada para o próximo vídeo + encerramento fixo |
 
