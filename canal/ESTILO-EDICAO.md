@@ -202,6 +202,11 @@ Pela contagem dos quadros, mais ou menos:
 | Apresentador (às vezes) | **Nunca.** Trocar por mãos segurando o celular, telas, documentos e vídeos de banco |
 | Bloco de produto com QR code | Quando houver patrocínio: mesmo formato, entre os blocos 5 e 6 do roteiro |
 
+
+### 3.13 Regras do dono (17/11, Laudo 002)
+- **Gráfico entra na palavra exata.** Cada pedaço de um gráfico animado (cada barra, cada data da linha do tempo, cada número, a tarja da nota) entra no instante em que a palavra correspondente é falada, nem antes nem depois. No storyboard, cada item leva a âncora "@palavras" (ex.: "139 MIL~1º SEM. 2025@cento e trinta e nove"); o renderizador acha a palavra na narração.
+- **Pausa depois da intro, sem texto.** Entre a intro e o bloco 1 há sempre um respiro: a imagem escurece (fade-out), fica a tela preta só com a música de suspense por alguns segundos (3 a 4 s) e a imagem abre devagar (fade-in de cerca de 1,5 s) junto com a primeira frase do bloco 1. Nesse respiro **não há texto na tela**. Ele separa a intro do resto do roteiro. Nas trocas entre os outros blocos, segue o respiro com o cartão "ARQUIVO 0X — título" (3.11).
+
 ### O que o HACKOPSIA acrescenta (o "ar de suspense")
 - Música um pouco mais **tensa** que a do Elementar (pulso grave, cordas).
 - Vídeos de banco **mais escuros**, com luz de tela de celular e de monitor.
