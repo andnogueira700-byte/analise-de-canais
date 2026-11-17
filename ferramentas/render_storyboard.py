@@ -437,6 +437,103 @@ def cartao(base, texto, k):
     return img
 
 
+FONTES_PRINT = {"P01": "AGÊNCIA BRASIL", "P02": "AGÊNCIA BRASIL", "P03": "ISTOÉ", "P04": "TECNOBLOG",
+                "P05": "ANPD (GOV.BR)", "P06": "ANPD (GOV.BR)", "P07": "IDEC", "P09": "TECHTUDO",
+                "P10": "IDEC", "P11": "G1", "P12": "MATTOS FILHO", "P13": "SBT NEWS"}
+
+
+def _mascara_suave(w, h, borda):
+    m = Image.new("L", (w, h), 255)
+    d = ImageDraw.Draw(m)
+    for i in range(borda):
+        v = int(255 * (i / borda) ** 1.5)
+        d.rectangle([i, i, w - 1 - i, h - 1 - i], outline=v)
+    return m
+
+
+_PRINT_CACHE = {}
+
+
+def print_mensagem(png, grupos, k, fonte_nome):
+    """Notícia no estilo Elementar: recorta só a manchete/trecho, grande, bordas que somem no fundo escuro,
+    marca-texto entrando frase por frase. grupos = [(rects, inicio_0a1), ...]."""
+    if png not in _PRINT_CACHE:
+        _PRINT_CACHE[png] = Image.open(png).convert("RGB")
+    pag = _PRINT_CACHE[png]
+    iw, ih = pag.size
+    todos = [r for g, _ in grupos for r in g]
+    if todos:
+        x0 = min(r[0] for r in todos) - 220; x1 = max(r[0] + r[2] for r in todos) + 220
+        y0 = min(r[1] for r in todos) - 260; y1 = max(r[1] + r[3] for r in todos) + 200
+    else:
+        x0, y0, x1, y1 = iw * 0.2, ih * 0.15, iw * 0.8, ih * 0.6
+    # proporção mínima de 16:7 para não ficar uma tira fina
+    w, h = x1 - x0, y1 - y0
+    if w / h > 16 / 7:
+        extra = (w * 7 / 16 - h) / 2; y0 -= extra; y1 += extra
+    x0, y0 = max(0, x0), max(0, y0); x1, y1 = min(iw, x1), min(ih, y1)
+    rec = pag.crop((int(x0), int(y0), int(x1), int(y1))).convert("RGBA")
+    # marca-texto progressivo por grupo
+    gr = Image.new("RGBA", rec.size, (0, 0, 0, 0)); dg = ImageDraw.Draw(gr)
+    for rects, t0 in grupos:
+        prog = min(1.0, max(0.0, (k - t0 - 0.04) / 0.22))
+        total = sum(r[2] for r in rects) or 1
+        andar = total * prog
+        for (x, y, rw, rh) in rects:
+            if andar <= 0:
+                break
+            ww = min(rw, andar)
+            dg.rectangle([x - x0 - 8, y - y0 + rh * 0.1, x - x0 + ww + 8, y - y0 + rh * 0.95], fill=(255, 212, 0, 125))
+            andar -= rw
+    rec = Image.alpha_composite(rec, gr)
+    # fundo: a própria página desfocada e escura (mescla)
+    fundo = pag.resize((W, H), Image.BILINEAR).filter(ImageFilter.GaussianBlur(18))
+    fundo = Image.blend(Image.new("RGB", (W, H), (8, 10, 14)), fundo, 0.22)
+    escala = min(1500 / rec.width, 760 / rec.height) * (1.0 + 0.05 * k)
+    nw, nh = int(rec.width * escala), int(rec.height * escala)
+    rec = rec.resize((nw, nh), Image.LANCZOS)
+    rec.putalpha(_mascara_suave(nw, nh, max(30, min(nw, nh) // 9)))
+    px, py = (W - nw) // 2, (H - nh) // 2 + 50
+    fundo.paste(rec, (px, py), rec)
+    d = ImageDraw.Draw(fundo)
+    if fonte_nome:
+        ff = fonte(FONTE_BLACK, 40)
+        tw = d.textlength(fonte_nome, font=ff)
+        d.text(((W - tw) / 2, py - 70), fonte_nome, font=ff, fill=AMARELO)
+        d.line([((W - 120) / 2, py - 18), ((W + 120) / 2, py - 18)], fill=AMARELO, width=4)
+    return fundo
+
+
+def foto_em_cartao(img, k):
+    """Foto dentro de um cartão no centro, sobre a própria foto desfocada."""
+    fundo = Image.blend(Image.new("RGB", (W, H), (0, 0, 0)), img.resize((W, H)).filter(ImageFilter.GaussianBlur(22)), 0.35)
+    esc = 0.70 + 0.04 * k
+    fw, fh = int(W * esc), int(H * esc)
+    fr = img.resize((fw, fh), Image.LANCZOS)
+    sombra = Image.new("RGBA", (fw + 60, fh + 60), (0, 0, 0, 0))
+    ImageDraw.Draw(sombra).rectangle([30, 36, fw + 30, fh + 36], fill=(0, 0, 0, 150))
+    sombra = sombra.filter(ImageFilter.GaussianBlur(18))
+    fundo.paste(sombra, ((W - fw) // 2 - 30, (H - fh) // 2 - 30), sombra)
+    ImageDraw.Draw(fundo).rectangle([(W - fw) // 2 - 6, (H - fh) // 2 - 6, (W + fw) // 2 + 6, (H + fh) // 2 + 6], fill=(240, 240, 240))
+    fundo.paste(fr, ((W - fw) // 2, (H - fh) // 2))
+    return fundo
+
+
+def juntar_prints(planos):
+    """Prints seguidos da mesma fonte viram um plano só (sem cortar e voltar)."""
+    out = []
+    for p in planos:
+        m = re.match(r"(P\d+)", p["asset"]) if p["tipo"] == "print" else None
+        if m and out and out[-1]["tipo"] == "print" and out[-1].get("_fonte") == m.group(1):
+            out[-1]["fim"] = p["fim"]
+            out[-1]["_partes"].append((p["asset"], p["ini"], p["texto"]))
+            continue
+        if m:
+            p = dict(p, _fonte=m.group(1), _partes=[(p["asset"], p["ini"], p["texto"])])
+        out.append(p)
+    return out
+
+
 # ---------- biblioteca e controle de repetição ----------
 
 def obter_asset(cfg, asset):
@@ -509,7 +606,7 @@ def renderizar(cfg):
     if cfg.get("formato") == "v2":
         stt = json.load(open(cfg["transcricao"]))
         palavras = [x for x in stt["words"] if x["type"] == "word"]
-        planos = ler_storyboard_v2(cfg["storyboard"], palavras, cfg)
+        planos = juntar_prints(ler_storyboard_v2(cfg["storyboard"], palavras, cfg))
         cfg["_planos"] = planos
         cfg["_vistos"] = checar_repeticao(cfg, planos)
         for p in planos:
@@ -526,6 +623,11 @@ def renderizar(cfg):
     fwm = fonte(FONTE_BLACK, 26)
     usados_print = {}
     quadro_global = 0
+    n_foto = 0
+    for p in planos:
+        if p["tipo"] == "foto":
+            p["_cartao"] = (n_foto % 2 == 1) or p["mov"] in ("cartao", "moldura")
+            n_foto += 1
     for idx_p, p in enumerate(planos):
         nq = max(1, round((p["fim"] - p["ini"]) * FPS))
         prox_vinheta = idx_p + 1 < len(planos) and planos[idx_p + 1]["tipo"] == "vinheta" and p["tipo"] != "vinheta"
@@ -551,9 +653,24 @@ def renderizar(cfg):
         for i in range(nq):
             k = i / max(1, nq - 1)
             if tipo == "foto" and frames_base:
-                f = ken_burns(frames_base[0], k, p["mov"] if p["mov"] in ("zoom_in", "zoom_out", "pan_esq", "pan_dir") else "zoom_in", 0.10)
+                if p.get("_cartao"):
+                    f = foto_em_cartao(frames_base[0], k)
+                else:
+                    f = ken_burns(frames_base[0], k, p["mov"] if p["mov"] in ("zoom_in", "zoom_out", "pan_esq", "pan_dir") else "zoom_in", 0.06)
             elif tipo == "video" and frames_base:
                 f = ken_burns(frames_base[min(i, len(frames_base) - 1)], k, p["mov"], 0.07)
+            elif tipo == "print" and p.get("_partes"):
+                dur = max(0.01, p["fim"] - p["ini"])
+                grupos = []
+                for (aid, t_ini, txt) in p["_partes"]:
+                    chave = mapa_print.get(str(p["n"]), aid)
+                    g = grifos.get(chave) or grifos.get(aid)
+                    if g and not txt.strip().startswith("-"):
+                        grupos.append((g["rects"], (t_ini - p["ini"]) / dur))
+                png = os.path.join(cfg["prints"], p["_partes"][0][0] + ".png")
+                if not os.path.exists(png):
+                    png = os.path.join(cfg["prints"], p["_fonte"] + ".png")
+                f = print_mensagem(png, grupos, k, FONTES_PRINT.get(p["_fonte"], ""))
             elif tipo == "print":
                 chave = mapa_print.get(f"{p['n']}", p["asset"])
                 g = grifos.get(chave) or grifos.get(p["asset"])
