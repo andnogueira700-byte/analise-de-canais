@@ -1,0 +1,3357 @@
+# Biblioteca do Laudo 002
+
+3128 itens (vídeos M/C e fotos F). [NOVO] = encontrado para este laudo. [USADO NO 001] = já apareceu no Laudo 001: evite nas cenas principais.
+
+## family
+- M39767 — family walking together in nature
+- M33729 — family walking in the park full shot
+- M26716 — a family at the sunset on the seashore
+- M18258 — young family walking on a road at the hill
+- M23248 — family watching the tv in the bedroom
+- M45977 — happy family enjoying a delicious dinner
+- M4542 — father and son reading a book together
+- M6472 — three generations walking together at sunset
+- M9299 — family feeding birds at sunset
+- M24240 — man serving thanksgiving turkey for family
+- M101135 — pregnant woman standing by sunlit window
+- M101119 — teamwork recycling with dad and son
+- M101134 — pregnant woman bathed in natural light
+- M23046 — family having dinner at home
+- M10404 — mother reading a story to her daughter to go to
+- M33784 — parents playing with their little son in the park [NOVO]
+- M23095 — family taking a group photo in the garden [NOVO]
+- M4762 — bored kids playing chess [NOVO]
+- M23072 — family playing with a dog in the garden [NOVO]
+- M46049 — child blowing on a huge dandelion with her parents [NOVO]
+- M4874 — mother and daughter read a book together in a park [NOVO]
+- M4640 — group of friends partying happily [NOVO]
+- M23050 — father and son throwing rocks at the lake [NOVO]
+- M4790 — mother helps her daughter study [NOVO]
+- M101239 — girl playing with her dog [NOVO]
+- M101365 — mom fixing daughters hair for school [NOVO]
+- M101245 — pov shot of happy dog playing [NOVO]
+- M101233 — girl hugging dog [NOVO]
+- M101375 — finishing packing for school together [NOVO]
+- M4554 — female doctor visiting a sick girl [NOVO]
+- M101217 — dog resting with a sweet look [NOVO]
+- M101230 — girl doing tricks with dog [NOVO]
+- M101238 — dog playing with little owner [NOVO]
+- M101221 — girl and dog playing with toys [NOVO]
+- M101371 — mom helping daughter get ready [NOVO]
+- M101229 — close up of dog [NOVO]
+- M49952 — mother playing with her baby who is crawling on the [NOVO]
+- M101108 — father and son sorting recycling [NOVO]
+- M49974 — portrait of a smiling little baby [NOVO]
+- M40349 — loving mother and daughter [NOVO]
+- M101218 — dog playing with toy on floor [NOVO]
+- M4042 — baby on the belly of his mother plays and smiles [NOVO]
+- M101676 — siblings drawing together in christmas [NOVO]
+- M101147 — pregnant woman looking at sonogram [NOVO]
+- M101369 — girl lacing sneakers for school [NOVO]
+- M101227 — girl and dog resting on couch [NOVO]
+- M49944 — mother and son playing in their room [NOVO]
+- M101372 — girl packing backpack with moms help [NOVO]
+- M49958 — mother lying with her baby on the bed [NOVO]
+- M101172 — little girl helping with cookies [NOVO]
+- M101362 — packing school supplies close up [NOVO]
+- M49970 — loving mother holding and lulling her baby [NOVO]
+- M101226 — girl cuddling dog on couch [NOVO]
+- M101373 — packing school supplies with mom [NOVO]
+- M43324 — father and daughter sharing a loving moment [NOVO]
+- M101361 — happy school morning packing routine [NOVO]
+- M101169 — mom and daughter mixing dough [NOVO]
+- M101109 — boy recycling [NOVO]
+- M101690 — kids placing their letters for santa [NOVO]
+- M49967 — baby playing with a teddy bear [NOVO]
+- M4725 — couple receiving welcome gifts from their neighbors [NOVO]
+- M4565 — mother and daughters in a kitchen dancing [NOVO]
+- M101117 — father and son recycling cans [NOVO]
+- M101175 — mom and daughter baking cookies [NOVO]
+- M49947 — young mom taking care of her baby while playing [NOVO]
+- M39765 — father and his little daughter eating marshmallows in nature [NOVO]
+- M101242 — playful girl and dog interaction [NOVO]
+- M43325 — little girl playing with her dad [NOVO]
+- M101225 — girl resting with her dog [NOVO]
+- M101164 — mom and daughter baking together [NOVO]
+- M101235 — girl caressing dog [NOVO]
+- M4561 — father and son watching a movie [NOVO]
+- M42151 — elegant table with people eating at christmas dinner [NOVO]
+- M101219 — girl and dog chilling at home [NOVO]
+- M101692 — little boy writing santa letter [NOVO]
+- M101179 — showing off fresh cookies [NOVO]
+- M6957 — bird taking care of the chicks in the nest [NOVO]
+- M44572 — decorated with spheres a christmas tree [NOVO]
+- M101136 — close up of baby bump [NOVO]
+- M101331 — girl coloring on tablet in bed [NOVO]
+- M101223 — girl and dog playing on couch [NOVO]
+- M101174 — mom and daughter celebrate baking [NOVO]
+- M101691 — little girl in jammies drawing [NOVO]
+- M42735 — couple happily caressing their furry friend [NOVO]
+- M101155 — loving mom guiding daughter in baking [NOVO]
+- M101137 — pregnant woman rubbing belly [NOVO]
+- M101241 — girl hugging dog with pure love [NOVO]
+- M101216 — girl coloring with dog by side [NOVO]
+- M101163 — little girl whisking baking mix [NOVO]
+- M4044 — time lapse of a pool [NOVO]
+- M4017 — mountain ski equipment [NOVO]
+- M101685 — kids making christmas drawings [NOVO]
+- M101222 — girl having fun with her dog [NOVO]
+- M101237 — girl playing with dog in backyard [NOVO]
+- M101131 — pregnant woman relaxing on couch [NOVO]
+- M4549 — mother with her happy daughters [NOVO]
+- M101162 — mom and daughter preparing baking mix [NOVO]
+- M101152 — pregnant woman hugging baby essentials [NOVO]
+- M50044 — loving mother giving her baby a bottle [NOVO]
+- M43342 — father and daughter in the morning [NOVO]
+- M101244 — girl tossing ball to dog [NOVO]
+- M8734 — mother and daughter cleaning the kitchen [NOVO]
+- M42138 — friends sitting at a table setting for christmas dinner [NOVO]
+- M39744 — very excited little girl opening a christmas gift with her [NOVO]
+- M101693 — children and christmas cards [NOVO]
+- M101232 — girl chilling with her dog [NOVO]
+- M101146 — expecting mom contemplates baby sonogram [NOVO]
+- M101130 — expecting mom smiling at baby bump [NOVO]
+- M4527 — father and son playing piggyback [NOVO]
+- M101358 — mom and daughter packing school supplies [NOVO]
+- M101115 — father and son recycling [NOVO]
+- M3349 — children skiing on the plain of a pine forest [NOVO]
+- M101173 — mom and daughter decorating cookies [NOVO]
+- M101231 — girl caressing dogs fur [NOVO]
+- M101220 — girl playing with dog indoors [NOVO]
+- M49963 — a baby on tummy time with dummy in his mouth [NOVO]
+- M6213 — family walking together at sunset [USADO NO 001]
+
+## old-man
+- M13044 — young man walking with grandfather in a wheelchair
+- M100859 — urban couple hug outside the telephone booth at night
+- M100864 — urban couple hug outside the telephone booth
+- M100858 — woman discovers her loved one outside the telephone booth
+- M100863 — young couple hug outside the telephone booth
+- M4661 — couple walking hand in hand
+- M34263 — adult man in a restaurant viewing his cell
+- M46776 — man sitting on his own on a park bench in [NOVO]
+- M9248 — confused elderly man using a tablet [NOVO]
+- M21449 — old man remembering with his photo album [NOVO]
+- M12866 — back pain affects elderly man getting up from chair [NOVO]
+- M33418 — tired old man wakes up in his bed [NOVO]
+- M33428 — old poor man depressed and drunk [NOVO]
+- M5478 — smiling elderly man holding crutches and sitting on sofa [NOVO]
+- M33361 — profile face of an sad old man in the dark [NOVO]
+- M21669 — old man opening the window curtains [NOVO]
+- M13079 — an old mans face with wrinkles [NOVO]
+- M33398 — old poor hungry man counting coins [NOVO]
+- M33427 — old poor man praying [NOVO]
+- M33210 — old man smiling portrait [NOVO]
+- M21448 — old man placing notes on the wall for his memory [NOVO]
+- M48063 — older man sitting on a bench in the park using [NOVO]
+- M33539 — old and depressed man portrait [NOVO]
+- M32119 — happy old man playing an imaginary guitar [NOVO]
+- M5784 — older couple enjoy romantic dinner date [NOVO]
+- M33401 — old and depressed man overthinking [NOVO]
+- M13322 — old man answers mobile phone call while on tablet at [NOVO]
+- M33390 — old poor man counting coins [NOVO]
+- M29916 — old businessman working from home [NOVO]
+- M13321 — old man listens to music with headphones on sofa [NOVO]
+- M32124 — old man writing be yourself on a notebook [NOVO]
+- M48067 — old man sitting on steps using a digital tablet [NOVO]
+- M33773 — old man wearing n95 mask [NOVO]
+- M33449 — gray head of a man while working on a table [NOVO]
+- M13323 — old man taking successfully takes selfie with mobile phone [NOVO]
+- M9223 — old man shopping online [NOVO]
+- M47983 — toothless old man smiles at the camera [NOVO]
+- M33768 — old couple taking off their masks at home [NOVO]
+- M33214 — old shirtless drunk man sleeping on a table [NOVO]
+- M5474 — elderly man chats with home care nurse while laying in [NOVO]
+- M49910 — face of an intellectual old man playing chess [NOVO]
+- M12533 — old man walking through green fields [NOVO]
+- M49911 — elderly man in a game of chess with an opponent [NOVO]
+- M41327 — old fashioned man dancing in the living room [NOVO]
+- M49896 — close view of an old man playing chess [NOVO]
+- M41496 — friendly old fashion man smoking a cigar in a bookstore [NOVO]
+- M46792 — elderly man takes pills to control his illnesses [NOVO]
+- M9733 — muslim old man praying to a coffin [NOVO]
+- M6049 — elderly man reading a book to children [NOVO]
+- M41497 — portrait of an elegant old fashioned man [NOVO]
+- M49891 — portrait of an old man playing chess [NOVO]
+- M48752 — old man taking a nap in a swinging chair [NOVO]
+- M41492 — old fashion man modeling in an old place [NOVO]
+- M41331 — old fashioned man dancing while looking at the camera [NOVO]
+- M49894 — an old mans turn in chess [NOVO]
+- M26274 — elderly man walking on a treadmill [NOVO]
+- M5457 — sick elderly man lays on hospital bed in home care [NOVO]
+- M39191 — old man riding a bicycle on a street [NOVO]
+- M17217 — old man walking by the shore [NOVO]
+- M9175 — elderly man confused by mobile app [NOVO]
+- M9166 — elderly man tells grandchildren a joke he read on web [NOVO]
+- M46927 — elderly man enjoys the fresh air in the forest [NOVO]
+- M33409 — poor elderly man eating some bread [NOVO]
+- M29499 — old man walking with a bag [NOVO]
+- M9157 — elderly man stressed over broken laptop [NOVO]
+- M8950 — elderly man takes selfie with grandchildren on sofa [NOVO]
+- M12826 — elderly deaf man signs hear us [NOVO]
+- M10131 — an old man is knitting [NOVO]
+- M28191 — elderly man wearing sunglasses [NOVO]
+- M8211 — old men out fishing [NOVO]
+- M49908 — elderly gentleman making a chess move [NOVO]
+- M49902 — portrait of an older man in a game of chess [NOVO]
+- M49895 — face of an elderly intellectual playing chess [NOVO]
+- M49892 — movement in chess in a close view of the board [NOVO]
+- M41481 — young old fashion style man modeling in front of a [NOVO]
+- M41480 — young man modeling old fashion style [NOVO]
+- M41472 — catwalk of a man modeling old fashion clothes [NOVO]
+- M41493 — portrait of a man modeling old fashion style [NOVO]
+- M41479 — boy modeling old style in a suit and coat [NOVO]
+- M41515 — old fashioned couple in the bedroom [NOVO]
+- M41483 — model dressed old fashion smoking in an old fashioned bookstore [NOVO]
+- M41486 — old fashion model smoking in an old bookstore [NOVO]
+- M41490 — young man modeling with old fashion style clothes [NOVO]
+- M49653 — a young man adjust an old photography camera by the [NOVO]
+- M100433 — men in a vintage library setting playing poker [NOVO]
+- M33864 — girl dancing around a man in a kind of ritual [NOVO]
+- M49647 — a young smiling woman filming a video by the lake [NOVO]
+- M27238 — man walking along an old narrow alley tracking [NOVO]
+- M24872 — man playing on an old piano [NOVO]
+- M34222 — two men walking along the old alleys [NOVO]
+- M34525 — a girl and two boys in the mirrors of a [NOVO]
+- M48537 — man counting money on a old calculator [NOVO]
+- M41319 — man talking cheerfully on an old telephone [NOVO]
+- M7359 — man shooting paintballs to an old car [NOVO]
+- M41318 — dance of a man who dances in a kitchen of [NOVO]
+- M49646 — a young man adjust the lens of an old film [NOVO]
+- M48534 — man pushing play button on a vintage tape recorder [NOVO]
+- M41325 — man dancing on a sofa with old fashioned style [NOVO]
+- M49658 — a young man in knit hat doing silly faces to [NOVO]
+- M41754 — couple exploring an old and abandoned place [NOVO]
+- M32129 — senior man reading information on the computer [USADO NO 001]
+- M32139 — senior man using laptop at home [USADO NO 001]
+
+## phone
+- M39789 — girl lying down chatting on her cell phone before sleeping
+- M247 — black phone on laptop
+- M41174 — happy man texting on his smartphone
+- M39773 — girl lying on her bed chatting on cell phone
+- M269 — a guy texting on his smartphone
+- M31413 — young man lying on his bed checking his smartphone
+- M39774 — hands of a young woman typing on her smartphone
+- M242 — typing on a laptop
+- M42123 — checking an item on a sales site on a cell
+- M42136 — woman exploring an online sales page on her cell phone
+- M4908 — person working while scrolling on social networks
+- M28300 — hands using a cellphone with tracking point on a green
+- M4537 — a couple of friends sitting laughing with their cell phones
+- M4805 — well dressed businessman sending messages on his cell phone
+- M100880 — dialing on a vintage hotel phone
+- M248 — phone on round end table
+- M100323 — woman working at laptop in office setting
+- M4857 — couple having breakfast cereal and see their cell phones
+- M100059 — a young woman relaxing on the couch with mobile phone
+- M100882 — retro green rotary phone in use
+- M100853 — a worried woman calling from a vintage telephone booth
+- M4911 — young woman lying down watching images on her cell phone
+- M101246 — young boy using a smartphone
+- M39782 — happy girl lying down sending messages at night
+- M8741 — man laughing out loud at his cell phone
+- M1814 — business person working with devices
+- M4523 — family making a video call on smartphone
+- M100050 — woman smiling at her phone on a cozy couch
+- M39815 — young woman ending a call
+- M100854 — urban woman calling inside a vintage telephone booth
+- M21605 — hands of a person searching a map on his cell
+- M100326 — person taking notes while working on a laptop
+- M100046 — smiling woman using smartphone in bed
+- M43381 — woman at night lying down using her cell phone
+- M101248 — boy using a smartphone
+- M100070 — a hand reaches for a mobile phone featuring a green
+- M100894 — extreme close up of vintage phone
+- M100885 — dialing a green rotary phone
+- M100881 — vintage landline phone in use
+- M39791 — young happy woman laughing during a phone call
+- M232 — woman walks through the city speaking on the phone
+- M39780 — girl is awakened by messages that arrive on her cell
+- M100856 — woman dialing inside the telephone booth at night
+- M321 — man texting in a bar
+- M13168 — a man lying on the bed scrolling on his phone
+- M39786 — sleeping man is awakened by his cell phone alarm
+- M100857 — urban woman in distress inside a telephone booth
+- M100324 — person working on a laptop wearing a cream shirt
+- M42626 — office desk with smartphones
+- M1442 — man on the phone near a construction site
+- M100300 — people watching a movie in a theater while using phones
+- M100091 — the hand reaches for the mobile phone featuring a green
+- M4919 — person on social media while serving coffee [NOVO]
+- M4953 — girl in glasses writing with pencil on a notepad [NOVO]
+- M42133 — a mans hand scrolling on a sales page [NOVO]
+- M100893 — extreme close up of rotary dial [NOVO]
+- M100053 — a young smiling woman sitting on a comfy couch using [NOVO]
+- M28286 — man on a green screen on a phone call [NOVO]
+- M100069 — smartphone with a green screen on a desk setup [NOVO]
+- M100079 — mobile phone featuring a green screen surrounded by several books [NOVO]
+- M4520 — students resting in a university garden [NOVO]
+- M4574 — couple sitting on a sofa back to back [NOVO]
+- M42638 — entrepreneurs working in the office chroma background [NOVO]
+- M42621 — business woman holding a cell phone with green screen [NOVO]
+- M100314 — man multitasking at desk with laptop and phone call [NOVO]
+- M4566 — students studying on a bench [NOVO]
+- M43391 — coffee and music in the morning [NOVO]
+- M100060 — in the comfort of the couch a young woman uses [NOVO]
+- M100089 — hand with smartwatch using smartphone with green screen background [NOVO]
+- M100086 — the hand reaches the mobile phone featuring a green screen [NOVO]
+- M4599 — students resting on the grass at a university [NOVO]
+- M4820 — woman in a kitchen typing on her smartphone [NOVO]
+- M41538 — couple walk around a lake in nature [NOVO]
+- M100080 — the hands place a mobile phone featuring a green screen [NOVO]
+- M42636 — chroma on a smartphone with a green screen background [NOVO]
+- M4915 — hands of a person typing on a cell phone [USADO NO 001]
+- M144 — hands shown texting on a smartphone [USADO NO 001]
+- M14669 — hands texting on a mobile phone at night [USADO NO 001]
+- M4808 — silhouette of a man texting during the sunset [USADO NO 001]
+- M1711 — a person texting on a smartphone [USADO NO 001]
+- M41638 — programmer using his cell phone while working at his desk [USADO NO 001]
+- M43270 — woman typing on her cell phone [USADO NO 001]
+- M4801 — young man sitting scrolling on his cell phone [USADO NO 001]
+- M43385 — girl using her cell phone at night [USADO NO 001]
+- M241 — signing a contract [USADO NO 001]
+- M42630 — copying from a cell phone to the computer [USADO NO 001]
+- M1793 — cellphone under a lamp [USADO NO 001]
+- M1805 — a woman using her smartphone [USADO NO 001]
+- M4837 — young man on the street typing on his cell phone [USADO NO 001]
+- M42750 — man using his computer and cell phone [USADO NO 001]
+- M41173 — man texting on whatsapp [USADO NO 001]
+- M1795 — black cellphone on a wooden table [USADO NO 001]
+- M1787 — a woman writing an email on her smartphone [USADO NO 001]
+- M1796 — smartphone on a wooden table [USADO NO 001]
+- M234 — hand dialing a phone [USADO NO 001]
+- M41165 — man answering a whatsapp [USADO NO 001]
+
+## elderly
+- M48790 — elderly person gripping the handle of their walking cane
+- M33681 — elderly woman in wheelchair looking out the window
+- M33686 — calm elderly woman in wheelchair in a park
+- M4764 — cute old couple in a park
+- M100797 — a mature couple reading sitting at the park bench share
+- M100892 — typing on a vintage typewriter
+- M46291 — tv static playing on a tv screen in a dark
+- M41268 — fingers typing extreme close up
+- M50695 — calligraphy artist writes the alphabet in gothic font
+- M4025 — time lapse of the arc de triomphe in paris from
+- M100877 — vintage home scene
+- M10396 — typewriter viewed in great detail when typing
+- M5015 — european city from the air with buildings to the horizon
+- M22718 — elderly woman sitting on a pew in a church
+- M100784 — a mature couple enjoy leisure time at a park bench
+- M100862 — urban couple hug at night
+- M49691 — romantic retro homemade video of a couple in a desert
+- M100781 — a mature couple enjoys reading at the park bench on
+- M46290 — tv static on an old tv screen in the dark
+- M41512 — a woman walking through a vintage house corridor
+- M43774 — talented pianist playing an elegant grand piano
+- M4014 — medieval city of the halambra seen from afar
+- M3676 — flickering light from a bulb
+- M4191 — classic car parked in the street of a town
+- M33968 — silhouette of an old man relaxing at sunset
+- M28616 — time lapse of people walking on a street in beijin
+- M49557 — person handwriting a letter
+- M31010 — forbidden city complex in beijing
+- M49020 — elderly man looks out of his window with a hopeful
+- M50700 — front on shot of calligrapher writing soul with fountain pen
+- M33358 — gray haired old man counting a few coins
+- M101400 — aesthetic desk with retro tools
+- M41266 — hands of a person typing on an editing keyboard
+- M4611 — woman waiting for photos from a printer
+- M35364 — old aged man relaxing in front of the sea [NOVO]
+- M4421 — vintage film roll effect with countdown [NOVO]
+- M100871 — vintage tv tuning up [NOVO]
+- M21612 — ancient map of the world in the dark lit by [NOVO]
+- M100891 — vintage living room setup [NOVO]
+- M100785 — a mature couple at the park bench engage in a [NOVO]
+- M5035 — old turntable [NOVO]
+- M26656 — vintage film grain [NOVO]
+- M100801 — a vertical video of a mature couple sharing a lovely [NOVO]
+- M5017 — classic red sports car [NOVO]
+- M100799 — a mature woman gently lean on her lovers shoulder and [NOVO]
+- M49698 — forest from a car window in a retro video [NOVO]
+- M4085 — ferri crossing a canal [NOVO]
+- M100876 — vintage entertainment center [NOVO]
+- M49694 — pink sunset sky from a moving car [NOVO]
+- M4013 — medieval castle in the mountains [NOVO]
+- M100800 — vertical video of a mature couple engaging in conversation and [NOVO]
+- M34538 — reflection of a man in a piece of broken mirror [NOVO]
+- M43374 — putting music on an old radio [NOVO]
+- M39822 — pocket watch moving fast on snow [NOVO]
+- M100798 — vertical video of a mature couple reading at a park [NOVO]
+- M4573 — adult woman looking in the mirror [NOVO]
+- M18288 — typewriter in a close shot when writing on the sheet [NOVO]
+- M52199 — the camera pans on a vintage vinyl records and a [NOVO]
+- M4781 — grandmother on her birthday with a cake with candles [NOVO]
+- M100789 — a mature couple sits closely on a park bench sharing [NOVO]
+- M4143 — a retro ghetto blaster with built in television [NOVO]
+- M10395 — close up view of a typewriter while a man works on [NOVO]
+- M5036 — vinyl record spinning on a turntable [NOVO]
+- M49696 — sunset in nature in a retro video [NOVO]
+- M100783 — a lovely mature couple sitting at a park bench enjoy [NOVO]
+- M39836 — old pocket watch thrown in the snow [NOVO]
+- M28422 — old film projector working [NOVO]
+- M100890 — static tv to spinning vinyl reveal [NOVO]
+- M49697 — nature of a road by car in a retro video [NOVO]
+- M100889 — vintage typewriter in use [NOVO]
+- M43370 — turning on an old vintage radio [NOVO]
+- M25350 — broken static on an old tv [NOVO]
+- M100740 — senior couple gazing at green screen horizon [NOVO]
+- M49701 — road trip through nature in a rearview mirror view [NOVO]
+- M34526 — man reflecting in a piece of a broken mirror [NOVO]
+- M48532 — audiocassette playback in retro tape recorder [NOVO]
+- M48353 — old fossil fuel energy pumping unit [NOVO]
+- M42298 — two young girls having fun dancing and posing to the [NOVO]
+- M41491 — stylish old fashion male model putting on a coat [NOVO]
+- M100741 — couple embracing in front of green screen [NOVO]
+- M39668 — man reflected in a mirror on dry leaves [NOVO]
+- M100888 — woman surrounded by vintage gadgets [NOVO]
+- M42920 — close up shot of a turntable playing a record [NOVO]
+- M42306 — happy woman dancing happily in a colorful spot [NOVO]
+- M41350 — woman eating noodles [NOVO]
+- M100792 — a mature couple sits closely on a park bench sharing [NOVO]
+- M22727 — detailed view of the facade of a gothic style church [NOVO]
+- M100775 — sitting on a park bench a young man caresses the [NOVO]
+- M5037 — vintage turntable playing music [NOVO]
+- M49681 — man driving a pickup truck through a desert [NOVO]
+- M100895 — retro adding machine in use [NOVO]
+- M100787 — a mature couple sitting on a park bench have a [NOVO]
+- M42960 — turntable spinning a vinyl record [NOVO]
+- M41338 — woman turning on an old radio [NOVO]
+- M33307 — elderly woman sitting in front of the window [USADO NO 001]
+- M4738 — old couple sitting on a bench in a park [USADO NO 001]
+
+## hacker
+- M41642 — professional programmer working on a big computer
+- M41643 — experienced programmer working on a computer
+- M9757 — computer code in the screen
+- M47321 — computer hacker logging a website with code
+- M17450 — working on a laptop at night
+- M41640 — hands of a programmer working on his computer
+- M46639 — programmer hacking a system on the laptop
+- M34838 — numeric code on screen close up
+- M49247 — close up of a hacker working on a computer in
+- M46632 — a computer hacker with a mask in black hood
+- M49126 — hacker on the dark web
+- M50745 — long haired hacker wearing anonymous face mask in front of
+- M31378 — hacker with balaclava working in front of a computer
+- M49122 — code on green letters on screen
+- M29904 — portrait of a hacker wearing a mask
+- M41639 — experienced programmer working on a large computer
+- M50810 — a young man is watching several monitors with code patterns
+- M41658 — programming codes on a screen close up
+- M41644 — software developer working on a computer
+- M50812 — a white haired man in front of computer monitors with code
+- M41659 — programmer working on his computer
+- M50811 — a young hacker typing on a laptop in front of
+- M5410 — busy hackers talk between data visualisations on monitors
+- M50751 — hacker in a scary mask sitting in front of computer
+- M10325 — computer code running on a screen
+- M41649 — close up view of a screen with programming codes
+- M50737 — a hacker with a laptop runs code on four screens
+- M49125 — hacker writing code on laptop
+- M41647 — professional programmer working on a large computer
+- M5728 — hacker fails at cybersecurity attack on server
+- M50746 — looking at young person with long white from behind computer
+- M24038 — hackers escaping an exploding data center
+- M50743 — person in an anonymous mask sits in front of computer
+- M23703 — two thiefs hacking a data center
+- M46577 — shot from behind of a man in a hoodie working
+- M50741 — side view close up of hacker working on a laptop
+- M50738 — a hacker with a laptop runs code on multiple screens
+- M50736 — script code running on four screens in front of a
+- M24035 — hacker with face mask entering data center
+- M50735 — a hacker is in front of various screens with technological
+- M23704 — thief blocks cctv camera and then hacks the server
+- M46574 — man aggressively typing on his laptop in the dark
+- M50734 — a young hacker is in front of various screens with
+- M5867 — hacker team working together
+- M50740 — close up side view of hacker working on a laptop
+- M29903 — successful hacker finishing programming
+- M23497 — man in hoodie hacking a data center
+- M9182 — man types on greenscreen laptop in bedroom
+- M5873 — hackers using computers
+- M47215 — anonymous hacker woman playing video games
+- M46633 — hacker working with a laptop in a dark room
+- M24032 — two hackers escaping from data center
+- M24029 — hacker introducing malware to data center
+- M23705 — hacker sitting on the ground of data center
+- M5872 — group of hackers working
+- M49248 — hacker writing code on a computer screen
+- M34837 — virus attack red text on a screen
+- M9075 — man typing on laptop outside smiles in triumph
+- M8907 — developer types on laptop in cafe and sips coffee
+- M5881 — hackers run from the police
+- M5879 — male hacker being denied access
+- M28979 — hackers working together in an apartment
+- M9186 — pirate or hacker flag waving close up
+- M8815 — focused man types on laptop in outdoor cafe
+- M5875 — hacker celebrating a successful breach
+- M5874 — male hacker sitting at his desk
+- M5869 — female hacker wearing a mask
+- M9525 — code on blue screen
+- M5880 — hackers with multiple screens
+- M5871 — hacker using vr
+- M5868 — hackers breaking through security
+- M5379 — a group of hackers celebrate breaking in
+- M28978 — hacker raising his hands in success
+- M46634 — close up of a hands programming and making code [NOVO]
+- M50747 — a person wearing an anonymous mask sits relaxed on a [NOVO]
+- M46635 — programming and coding new technologies [NOVO]
+- M41653 — focused programmer during work [NOVO]
+- M41645 — experienced programmer working very concentrated [NOVO]
+- M41641 — expert programmer working at a workstation [NOVO]
+- M41650 — face of a focused programmer during work [NOVO]
+- M46631 — developer programming a software [NOVO]
+- M50750 — person with long white hair sits in a chair working [NOVO]
+- M50744 — close up of person wearing an anonymous face mask [NOVO]
+- M5876 — man trying to break into a system [NOVO]
+- M46637 — programmer hacking information on the dark web [NOVO]
+- M9523 — code in programming language c [NOVO]
+- M49130 — young woman working on pc [NOVO]
+- M15888 — pirate flag waving in slow motion [NOVO]
+- M9522 — scrooting development code [NOVO]
+- M9524 — viewing hacking code [NOVO]
+- C4926 — close up of a man typing on the keyboard
+- C3045 — a man actively and seriously talks during a virtual meeting
+- C1550 — young man typing on a laptop
+- C94 — premium connecting a hard drive to a laptop
+- C3763 — premium a young woman connects a hard drive to her laptop
+- C1093 — a mature man using a laptop
+- C1517 — a senior man using a laptop
+- C3786 — premium a woman s hands typing on a laptop
+- C6567 — premium a male video editor puts an sd card in a laptop
+- C4597 — premium types on a keyboard
+- C9245 — premium taking out a laptop from a backpack
+- C1564 — premium delicate hands are opening a laptop
+- C8013 — typing on a laptop keyboard
+- C1544 — a young man opens his laptop in a cafe
+- C3764 — a young man takes a laptop out of his bag
+- C2893 — a busy worker working on a modern laptop
+- C9085 — a man working on a laptop at the office
+- C9754 — a casual man typing on a laptop
+- C805 — woman with blue nails typing on a laptop
+- C227 — a guy securing a holder for his phone
+- M46627 — hacker with a digital glitch over his face [USADO NO 001]
+- M22970 — a hacker with the laptop in a dark room [USADO NO 001]
+- M46578 — man wearing a hoodie in a dark room typing aggressively [USADO NO 001]
+- M9173 — man typing on laptop with black background [USADO NO 001]
+- M9125 — man typing on laptop reflected in glasses [USADO NO 001]
+- M49128 — hacker working at night [USADO NO 001]
+
+## court
+- M4262 — football stadium aerial shot
+- M43481 — play between two teams in a soccer match
+- M41372 — soccer match on a grass court from above
+- M43479 — hands of a soccer team making a cheer
+- M869 — tennis players at an outdoor court
+- M880 — two people playing tennis aerial view
+- M43477 — soccer team cheering together
+- M750 — two boys playing basketball at an outdoor court
+- M1216 — aerial view of a blue and purple basketball court
+- M879 — tennis serve aerial view
+- M747 — two boys playing basketball outdoors
+- M5014 — tennis courts filmed from the air
+- M43478 — business days soccer players playing with the ball
+- M14190 — flying over the grass of a stadium waiting for the
+- M1613 — top view of football courts at night
+- M33987 — basketball player on a dark court in 3d
+- M44461 — two basketball players training on a court
+- M44447 — basketball player shooting baskets while training alone
+- M2286 — basketballs being shot in a street rink
+- M43484 — player dribbling in a one on one in a soccer [NOVO]
+- M43499 — goal play in a semi professional soccer game [NOVO]
+- M43483 — one on one in a soccer game [NOVO]
+- M43495 — penalty kick seen from behind the goal nets [NOVO]
+- M44448 — skilled basketball player shooting baskets training alone [NOVO]
+- M43494 — close shot of a soccer player shooting a penalty [NOVO]
+- M4567 — men coming to play soccer football [NOVO]
+- M43482 — semi professional soccer match [NOVO]
+- M43486 — skillful soccer players passing the ball with juggling [NOVO]
+- M744 — basketball player dribbling ball [NOVO]
+- M42541 — juggling the ball [NOVO]
+- M43485 — semi pro soccer game [NOVO]
+- M44468 — one on one in basketball training [NOVO]
+- M4576 — soccer players playing on a field [NOVO]
+- M43491 — skilled footballer demonstrating ball juggling prowess [NOVO]
+- M853 — batter hits a baseball [NOVO]
+- M43492 — player accommodating the ball and shooting a penalty [NOVO]
+- M877 — man playing tennis [NOVO]
+- M873 — tennis player serving [NOVO]
+- M871 — baseball batter [NOVO]
+- M42355 — soccer fields seen from the air [NOVO]
+- M876 — tennis player during a match [NOVO]
+- M4588 — basketball players stacking hands [NOVO]
+- M44464 — pair of good basketball players playing a match [NOVO]
+- M2923 — footballer headbutting the ball [NOVO]
+- M2280 — couple playing basketball [NOVO]
+- M44455 — skilled basketball player training dunk [NOVO]
+- M44454 — talented basketball player dunking [NOVO]
+- M2915 — soccer football player tries an overhead kick [NOVO]
+- M43497 — skillful soccer player shoots on goal [NOVO]
+- M2291 — woman training for basketball [NOVO]
+- M44469 — two basketball players playing one on one [NOVO]
+- M736 — soccer player kicking a ball in slow motion [NOVO]
+- M2272 — man bouncing a basketball ball [NOVO]
+- M2275 — a person doing a slam dunk [NOVO]
+- M42530 — skillful dribbles of a football player [NOVO]
+- M32798 — athlete woman training with a coach [NOVO]
+- M875 — tennis players feet [NOVO]
+- M751 — one on one basketball game [NOVO]
+- M2273 — amateur basketball player doing a slam dunk [NOVO]
+- M2918 — urban football training [NOVO]
+- M44446 — portrait of a basketball player practicing shots [NOVO]
+- M43487 — very experienced soccer player skillfully juggling the ball [NOVO]
+- M2921 — football player moving forward [NOVO]
+- M2917 — football player dribbling to the defender [NOVO]
+- M2278 — basketball player shot at goal [NOVO]
+- M42540 — talented soccer player juggling the ball [NOVO]
+- M2916 — soccer football player does an overhead kick goal [NOVO]
+- M878 — man serving tennis ball [NOVO]
+- M43496 — goalkeeper in the goal during a soccer game [NOVO]
+- M42531 — female soccer player doing freestyle [NOVO]
+- M42535 — kick of a penalty saved by a goalkeeper [NOVO]
+- M738 — the feet of a two boys playing football soccer [NOVO]
+- M44458 — portrait of a strong basketball player with a ball [NOVO]
+- M43493 — soccer player sets the ball and shoots [NOVO]
+- M2277 — basketball players training [NOVO]
+- M856 — baseball player pitching the ball [NOVO]
+- M2912 — soccer player ties his laces [NOVO]
+- M4587 — goalkeeper putting on his gloves [NOVO]
+- M44470 — pair of basketball players playing in training [NOVO]
+- M30601 — flying low on a pitch in an empty stadium [NOVO]
+- M2287 — basketball players practicing [NOVO]
+- M2284 — woman practicing free throws [NOVO]
+- M2282 — player dribbling basketball [NOVO]
+- M767 — three men playing soccer in concrete field [NOVO]
+- M42539 — freestyle soccer player doing skillful tricks with the ball [NOVO]
+- M44459 — talented basketball player dunking with great skill [NOVO]
+- M2288 — man playing basketball [NOVO]
+- M2274 — basketball player hangs on the rim [NOVO]
+- M42544 — professional freestyler doing skillful ball juggling [NOVO]
+- M44471 — two professional basketball players playing a match [NOVO]
+- M44445 — experienced basketball player making a basket [NOVO]
+- M2271 — a couple playing basketball [NOVO]
+- M737 — two men playing with a soccer ball [NOVO]
+- C7742 — two friends entering a tennis court
+- C4074 — friends arriving at a tennis court
+- C8622 — man walking to the tennis court
+- C2617 — friends entering the tennis court
+- C4938 — man entering a tennis court
+- C5182 — woman entering the tennis court
+- C9147 — a woman walking onto the tennis court
+- C834 — a woman using her phone while sitting on a tennis court
+- C69 — playing tennis on a court
+- C8193 — tennis balls rolling on the court
+- C1509 — steps near a tennis court
+- C8850 — basketball courts in mexico city
+- C7996 — basketball court in auckland new zealand
+- C3935 — empty basketball court
+- M46820 — judge pronounces sentence in court [USADO NO 001]
+
+## dark
+- M50748 — computer screens display green text and matrix like scrolling
+- M4747 — scientist walking down a corridor
+- M50749 — a laptop and four screens running green text scripts
+- M5396 — hud style animated data graph growth trend visualization
+- M1038 — dancer in the dark back view [NOVO]
+- M22728 — raining in a cloud forest full of tall trees [NOVO]
+- M28901 — sand falling from an hourglass on a black background [NOVO]
+- M46898 — big full moon on a cloudy night [NOVO]
+- M33866 — mysterious people in robes in an old building at night [NOVO]
+- M33875 — silhouettes of a sect in a ritual [NOVO]
+- M3458 — candle lighting in the dark [NOVO]
+- M3925 — depressed guy smoking in the dark [NOVO]
+- M30563 — flying through dark matter in space [NOVO]
+- M50951 — a trail of smoke rapidly twirls over a dark background [NOVO]
+- M3637 — dancing ballet in the dark [NOVO]
+- M3461 — lighting candles in the dark [NOVO]
+- M2026 — driving in a dark tunnel [NOVO]
+- M3926 — girl smoking in the shadows with a backlight [NOVO]
+- M101599 — hand rising from graveyard [NOVO]
+- M1987 — scary woman seeing through the window [NOVO]
+- M3438 — flames in candles close up [NOVO]
+- M101588 — hand rising from grave [NOVO]
+- M101600 — zombie hand rising [NOVO]
+- M101597 — witch hands stirring spell [NOVO]
+- M50956 — soft and traslucent smoke flows up on a dark background [NOVO]
+- M1986 — ghost in the hall [NOVO]
+- M50943 — white thick mist continuously flows at a fast pace [NOVO]
+- M25580 — girl watching a horror movie in her bedroom with the [NOVO]
+- M100067 — a young smiling woman enjoys social media scrolling on her [NOVO]
+- M101604 — vertical shot of witchy hands [NOVO]
+- M50957 — a thick mist twists and settles on a dark surface [NOVO]
+- M50945 — smoke abundantly flows from the left side of the screen [NOVO]
+- M3453 — candles lighting detail views [NOVO]
+- M100826 — dark blue sky full of stars [NOVO]
+- M3918 — smoking in the dark with a taillight [NOVO]
+- M3916 — hand of a person in the dark through colored lights [NOVO]
+- M100829 — night skyline with twinkling stars [NOVO]
+- M5109 — cake with burning candles in the dark [NOVO]
+- M46316 — golden particles background [NOVO]
+- M101601 — creepy hands over key and star [NOVO]
+- M100112 — a young man sitting in a dark room focuses on [NOVO]
+- M101598 — branch star after ritual [NOVO]
+- M100117 — a confident young man in a dark room smiles in [NOVO]
+- M44227 — face of a woman in a terrifying costume [NOVO]
+- M101593 — eerie hand lighting witchcraft candles [NOVO]
+- M51090 — a young mystical woman with blank eyes and a black [NOVO]
+- M100832 — dark starry sky [NOVO]
+- M50950 — smoke slowly flows and floats on a dark environment [NOVO]
+- M2866 — golden glitters [NOVO]
+- M101602 — witch hands around burning contraption [NOVO]
+- M50936 — an ethereal thick white mist slowly flows in a gentle [NOVO]
+- M3636 — ballet dancer in the dark [NOVO]
+- M101587 — hand emerging from the ground [NOVO]
+- M1035 — man dancing in the dark [NOVO]
+- M100556 — woman in white gazes out startled by shadow at window [NOVO]
+- M50944 — a thick mist abundantly flows from top to bottom [NOVO]
+- M19675 — halloween sign and evil pumpkins falling [NOVO]
+- M8461 — smoke rising in the dark [NOVO]
+- M100106 — a serious looking woman move a chess piece and waits [NOVO]
+- M51069 — a young mistical woman with blank eyes holds a canddle [NOVO]
+- M47741 — smoking factory chimneys producing a lot of emissions [NOVO]
+- M17426 — candles in the dark [NOVO]
+- M51071 — a woman covered in a dark veil holds a lit [NOVO]
+- M1036 — dancer silhouette [NOVO]
+- M51085 — an ritual ensemble of tarot cards candles and an ancient [NOVO]
+- M101603 — blood ritual over branch star [NOVO]
+- M100109 — friends playing chess in cinematic light [NOVO]
+- M101592 — witchcraft potion [NOVO]
+- M101589 — high angle sweep of ritual star [NOVO]
+- M28884 — hourglass on a black background [NOVO]
+- M27191 — many halloween pumpkins lit 3d [NOVO]
+- M100105 — a young man sitting at the table with a focused [NOVO]
+- M100860 — couple embrace outside the telephone booth [NOVO]
+- M100391 — croupier dealing cards [NOVO]
+- M100115 — in a dark room a young man moves a piece [NOVO]
+- M41772 — portrait of a nun on halloween [NOVO]
+- M3449 — flame waving on a black background [NOVO]
+- M12496 — light smoke in the dark [NOVO]
+- M9603 — moon in the dark sky [NOVO]
+- M22744 — bunch of grapes dripping wine into a glass [NOVO]
+- M1998 — woman zombie in trance [NOVO]
+- M101595 — scary hand invoking spell [NOVO]
+- M101590 — witchcraft setup in graveyard [NOVO]
+- M50938 — a light mist continuously flows at a fast pace [NOVO]
+- M952 — couple performing on circus ropes [NOVO]
+- M3441 — flame on a dark background [NOVO]
+- M32832 — hand of an undead rising from his grave [NOVO]
+- M51086 — the eerie hands with long fingernails light a candle [NOVO]
+- M50947 — a light smoke rapidly scapes from the left side enveloping [NOVO]
+- M1996 — crazy zombie playing with a light bulb [NOVO]
+- M8843 — confused man in dark room stares at laptop screen [USADO NO 001]
+- M22997 — surveillance team checking the cameras [USADO NO 001]
+- M28886 — analog wall clock on a black background in a closed [USADO NO 001]
+
+## night
+- M100869 — vintage telephone booth on a rainy night
+- M4451 — quiet tokyo street at night
+- M4332 — times square during a rainy night
+- M4308 — aerial view of a city during the night
+- M100941 — silhouetted hands against city lights
+- M100417 — nighttime park with illuminated streetlights and trees
+- M42343 — movement in a city at night in an aerial shot
+- M41375 — tour high above a city at dusk
+- M100949 — silhouetted couple under city lights
+- M40640 — walking a big city walker at night
+- M40746 — night walk through the streets of a big city
+- M100938 — hands reaching in city lights
+- M100951 — silhouetted hands connecting under city lights
+- M42039 — view from inside a car in night traffic
+- M41161 — night movement of a main avenue of a big city
+- M3429 — city street with trolleybus at night
+- M50998 — top view of the traffic around a roundabout at night
+- M42037 — view out of a car window at night
+- M40654 — night panorama of the skyscrapers of a big city
+- M100942 — people silhouetted by city lights
+- M38 — blinking round lights with bokeh effect
+- M4240 — time lapse of traffic at night
+- M100952 — silhouetted couple enjoying city lights
+- M4087 — new york city view at night
+- M4330 — new york buildings at night pan shot
+- M50990 — timelapse of a car driving through the city at night
+- M4383 — city of tokyo at night
+- M42342 — aerial shot of a city at night
+- M40 — suspended bridge with traffic
+- M3456 — old street at night
+- M41160 — streets of a big city at night
+- M40747 — night tour through the streets of a big city
+- M40047 — skyline of a desert with the moon at night
+- M4148 — milky way seen at night
+- M100823 — dark starry night
+- M4422 — thunderstorm at night
+- M1704 — night sky with stars at a calm lake time lapse
+- M100831 — sky transitioning from night to sunrise
+- M4064 — fireworks at night sky
+- M100825 — sky on a night to sunrise transition
+- M4038 — northern lights of blue and green colors in the night
+- M39770 — view of the night sky filled with stars
+- M30 — blurred abstract cars lights at night with bokeh effect
+- M4036 — yellow northern lights in norway
+- M4109 — large paper lamp in the street
+- M4034 — beautiful northern lights of yellow and pink tones
+- M46119 — starry night in the desert
+- M1673 — aerial view of a factory at night time
+- M3361 — plane flying over a city at night
+- M4033 — aurora borealis timelapse
+- M4108 — paper lamps close up in the street
+- M4433 — full moon with a soft haze [NOVO]
+- M30605 — full moon on halloween night loop video [NOVO]
+- M100824 — starry sky framed by trees [NOVO]
+- M4157 — fireworks illuminating the beach sky [NOVO]
+- M4281 — matterhorn mountain landscape [NOVO]
+- M100943 — silhouettes of couple chatting [NOVO]
+- M1610 — stars in space background [NOVO]
+- M344 — couple on the dance floor having fun [NOVO]
+- M4344 — people dancing at a night club [NOVO]
+- M830 — dj turntable [NOVO]
+- M348 — silhouette of a girl dancing at a nightclub [NOVO]
+- M303 — couple dancing in nightclub [NOVO]
+- M4188 — stage of an electronic music festival [NOVO]
+- M46893 — party between friends dancing and having fun [NOVO]
+- M332 — woman dancing alone in the club [NOVO]
+- M44555 — stylish woman sitting on a camaro [NOVO]
+- M44545 — stylish woman sitting on a sports car [NOVO]
+- M44541 — young stylish woman in a sports car [NOVO]
+- M337 — couple dancing together at a nightclub [NOVO]
+- M4026 — dj playing music on stage [NOVO]
+- M4040 — aurora borealis at dawn [NOVO]
+- M44542 — stylish woman sitting in a sports car [NOVO]
+- M44556 — stylish woman leaning in a camaro [NOVO]
+- M4043 — a busy elegant bar [NOVO]
+- M30304 — entrance to a cemetery with ornamental pumpkins [NOVO]
+- M4269 — audience at a concert [NOVO]
+- M4151 — fireworks in the sky [NOVO]
+- M4350 — urban coffee shop [NOVO]
+- M4059 — electric storm over the ocean [NOVO]
+- M341 — hands raised high on a nightclub dance floor [NOVO]
+- M350 — girl dancing at a nightclub [NOVO]
+- M44544 — stylish woman smoking sitting next to sports car [NOVO]
+- M44694 — vertical video of bokeh defocused lights of an avenue at [NOVO]
+- M44559 — woman fixing the rearview mirror of a car [NOVO]
+- M100827 — starry sky with shooting stars [NOVO]
+- M302 — girl dancing in nightclub [NOVO]
+- M833 — two djs mixing music at a club [NOVO]
+- M831 — dj playing music at a nightclub [NOVO]
+- M4185 — audience of a music festival [NOVO]
+- M31411 — sleeping boy moves in bed [NOVO]
+- M11 — aerial view of city traffic at night [USADO NO 001]
+
+## old-woman
+- M33707 — senior woman showing keys to her new car
+- M33499 — old woman combing her gray hair
+- M12518 — arab old woman praying with a rosary at home
+- M32837 — very happy and surprised senior woman portrait
+- M5777 — senior woman chats over romantic dinner in modern restaurant
+- M33699 — senior woman disinfecting the steering wheel
+- M33721 — senior woman sneezing
+- M33788 — old woman looks out the window wearing mask
+- M33208 — sad woman crying calmly in the dark
+- M48789 — elderly woman resting her hands in her lap [NOVO]
+- M48751 — elderly woman sitting in a chair staring out the window [NOVO]
+- M33198 — old woman planting a new plant in her garden [NOVO]
+- M48157 — mother and daughter sharing a cuddle on the couch [NOVO]
+- M32188 — old woman hugging her cat [NOVO]
+- M5768 — elder care nurse helps woman to bed [NOVO]
+- M33771 — female doctor looking at an x ray of lungs [NOVO]
+- M33352 — adult woman with hand on head gesturing pain [NOVO]
+- M33404 — old woman drinking water from a bottle [NOVO]
+- M33767 — old woman suffering from a heart attack [NOVO]
+- M33486 — old woman with umbrella while it rains at a funeral [NOVO]
+- M33277 — old woman looking at the sky with great faith [NOVO]
+- M33232 — old sad woman at a funeral while raining [NOVO]
+- M48159 — elderly woman having a cup of tea while on the [NOVO]
+- M33026 — old woman sore her neck from tension [NOVO]
+- M48992 — elderly woman sitting on sofa with headache [NOVO]
+- M48153 — older woman smiling at the camera standing against a brick [NOVO]
+- M33338 — adult woman gently putting a cream on her face [NOVO]
+- M33748 — woman being prepared for cosmetic surgery [NOVO]
+- M48158 — daughter showing her elderly mother how to use a smartphone [NOVO]
+- M33725 — old woman smelling flowers from her garden [NOVO]
+- M33421 — old woman cutting apples from the trees in her garden [NOVO]
+- M33367 — woman smiling at camera in front of a flowering tree [NOVO]
+- M33325 — old woman arranging tulip garden [NOVO]
+- M33162 — old woman loving her cat [NOVO]
+- M36140 — adult women exercising with dumbbells [NOVO]
+- M33739 — driving instructor angry at his student [NOVO]
+- M33355 — adult woman taking apples from a tree in a garden [NOVO]
+- M12293 — old woman praying at home [NOVO]
+- M49009 — elderly woman sitting on a couch while drinking coffee in [NOVO]
+- M33199 — old woman playing with her dog on the floor [NOVO]
+- M11686 — elderly woman smiling towards the camera [NOVO]
+- M33774 — old female doctor wearing surgery clothes and mask [NOVO]
+- M33753 — old woman with sad look wearing mask [NOVO]
+- M33675 — eyes of an old female doctor wearing mask [NOVO]
+- M33568 — old woman wearing mask while driving her car [NOVO]
+- M33408 — old rancher woman holding a basket with apples [NOVO]
+- M33403 — old woman running in a park in the morning [NOVO]
+- M33373 — elderly woman touching her face in a small mirror [NOVO]
+- M33365 — adult woman smiling with a tablet [NOVO]
+- M33227 — old woman touching the skin of her face [NOVO]
+- M33171 — elderly woman drinking water in her home garden [NOVO]
+- M33025 — old woman with tension in her neck [NOVO]
+- M25005 — women portrait in the field [NOVO]
+- M21344 — old woman searching for healthy recipes [NOVO]
+- M12535 — grandmother choosing winter clothes in the mall [NOVO]
+- M36121 — adult women exercising outdoors [NOVO]
+- M34261 — smoking lady sitting in a park [NOVO]
+- M33777 — old female doctor puts on an n95 mask [NOVO]
+- M33711 — worried old woman in her car wearing face mask [NOVO]
+- M33672 — old woman and her pet wearing mask [NOVO]
+- M33612 — woman fails driving test [NOVO]
+- M33445 — old woman with a basket of apples [NOVO]
+- M33416 — old mother with her young daughter in a flower garden [NOVO]
+- M33400 — old woman with mask very angry [NOVO]
+- M33399 — old woman taking photos with her camera [NOVO]
+- M33342 — adult woman looking her face in front of a mirror [NOVO]
+- M33340 — adult woman jogging through a large garden [NOVO]
+- M33194 — old woman smiling at camera at a garden portrait [NOVO]
+- M33185 — daughter kisses her mother on the cheek portrait [NOVO]
+- M33023 — older woman with neck tension [NOVO]
+- M32183 — elderly woman working from home [NOVO]
+- M11687 — woman staring into the camera [NOVO]
+- M6401 — older woman having a spa treatment [NOVO]
+- M47991 — sick old woman shivering with a blanket around her shoulders [NOVO]
+- M33761 — old female doctor puts on the mask [NOVO]
+- M33737 — mature woman taking a driving class [NOVO]
+- M33720 — old woman looks with concern out the window [NOVO]
+- M33688 — elderly woman in a wheelchair wearing mask [NOVO]
+- M33687 — elderly woman in wheelchair in nursing home [NOVO]
+- M33685 — elderly woman in wheelchair portrait [NOVO]
+- M33647 — old female doctor wearing face shield from surgery [NOVO]
+- M33632 — adult woman smiling in nature portrait [NOVO]
+- M33628 — old woman takes off her mask [NOVO]
+- M33627 — old woman with mask looks out the window [NOVO]
+- M33604 — mature woman starting her test drive [NOVO]
+- M33528 — old woman in nature portrait [NOVO]
+- M33430 — mother and daughter concept of youth and old age [NOVO]
+- M33222 — old woman massaging skin on her face [NOVO]
+
+## worried
+- M25575 — young very frustrated woman in front of her computer
+- M8739 — worried and sad woman outdoors
+- M51404 — a worried woman walking through her livingroom apartment at night
+- M51406 — woman with insomnia lying down at night using her laptop
+- M4513 — worried and sad woman hugging a cushion
+- M25251 — worried man by the window of a train in movement
+- M51395 — girl using her cell phone in her bed waiting to
+- M100577 — silhouette lurks at glass door under eerie moonlight
+- M42270 — face of a very worried girl
+- M46708 — crying and depressed woman lonely at home
+- M51393 — sleepy woman looking out the window at night
+- M100581 — mysterious figure gazes thoughtfully out the window
+- M51429 — a visible looking worried woman walking through her tiny apartment
+- M51391 — close up shot of a girl on her cell phone
+- M51401 — profile face of a sleepy girl looking out the window
+- M100579 — terrified woman peeks through curtains at night
+- M51403 — woman with insomnia walking through her apartment
+- M51388 — woman with insomnia lying down using her laptop
+- M100575 — shocked woman near window with eerie shadow behind glass
+- M100567 — worried woman peers anxiously through a doorway
+- M51386 — young woman using her laptop in her bed falling asleep
+- M51402 — sleepy girl approaches to look out the window
+- M51392 — young woman with insomnia on her laptop in her bed
+- M4552 — worried woman hugging a cushion
+- M51397 — young woman using her cell phone lying in her bed
+- M51396 — face of a sleepy girl using her cell phone
+- M51384 — girl with insomnia in her computer in her bed
+- M100574 — eerie figure in white gazes out darkened window
+- M100586 — girls in tiaras play dress up with flashlights at night
+- M100573 — woman in white gasps at window in dimly lit room
+- M51398 — face of a girl lying down using her cell phone
+- M100598 — girl glows under colorful lights with an umbrella
+- M100592 — girl in a purple cape rides outdoors under night sky
+- M35973 — worried pregnant woman and her husband at home
+- M33091 — young woman worried about her pregnancy test
+- M32374 — close up of a man wearing a face mask thinking
+- M11666 — worried woman outside
+- M11487 — worried woman looking straight ahead
+- M32435 — man with a face mask looking at smart phone
+- M34268 — meditative man on the shore of a beach at sunset [NOVO]
+- M8743 — heartbroken crying woman slowly sits on the floor [NOVO]
+- M4517 — annoyed woman working in a room [NOVO]
+- M23075 — couple worrying about the bills [NOVO]
+- M51390 — face of a woman lying down trying to sleep [NOVO]
+- M51399 — restless woman with insomnia trying to sleep [NOVO]
+- M100572 — person in shock and screaming in dramatic black and white [NOVO]
+- M51394 — woman with insomnia lying in her bed trying to sleep [NOVO]
+- M51405 — face of a sleepy woman lying in her bed [NOVO]
+- M28729 — thoughtful woman with glasses [NOVO]
+- M51389 — thoughtful woman in her bed trying to sleep dealing with [NOVO]
+- M100578 — woman in shock holds her head in dark room [NOVO]
+- M51400 — portrait of a woman trying to sleep in her bed [NOVO]
+- M51387 — woman trying to sleep in her bed [NOVO]
+- M8754 — hands of a wedding couple she comforts him [NOVO]
+- M51324 — woman with insomnia yawning in the dark [NOVO]
+- M51383 — young woman lying in her bed just before sleeping [NOVO]
+- M51385 — sleepy woman in her bed tossing and turning and yawning [NOVO]
+- M100576 — mysterious figure peers through door in dim garden [NOVO]
+- M46380 — surprised woman with a green background [NOVO]
+- M100580 — woman in white looks out startled in dim room [NOVO]
+- M42509 — affectionate couple in a car hanging out together [NOVO]
+- M28324 — a boy and a girl turning around in shame [NOVO]
+- M100594 — child tells spooky stories under a starry tent [NOVO]
+- M100583 — kids in costumes enjoy a magical night picnic outside [NOVO]
+- M100588 — kids in animal costumes celebrate halloween at night [NOVO]
+- M100587 — kids in costumes enjoy a nighttime adventure outdoors [NOVO]
+- M100584 — children in costumes enjoy a nighttime picnic outside [NOVO]
+- M100590 — girls gather in the backyard for stories at dusk [NOVO]
+- M100582 — kids enjoy a nighttime picnic by a lit play tent [NOVO]
+- M51449 — huge river with lots of vegetation and a seagull [NOVO]
+- M100597 — child in cat costume glows under spooky lighting [NOVO]
+- M100593 — child in leopard costume plays in tent with light [NOVO]
+- M100589 — kids have fun at a nighttime outdoor sleepover party [NOVO]
+- M100595 — child in leopard costume smiles with painted face [NOVO]
+- M100585 — kids in costumes enjoy a nighttime picnic on a blanket [NOVO]
+- M33092 — woman looking at her pregnancy test [NOVO]
+- M100591 — kids in costumes share spooky stories outdoors at night [NOVO]
+- M100596 — smiling girl glows softly against a blue background [NOVO]
+- M30238 — woman hitchhiking with her broken down car [NOVO]
+- M5510 — depressed medical professional working on pc in lab [NOVO]
+- M49444 — crime detective looking concerned at a crime scene [NOVO]
+- M33580 — doctor asking heaven for help [NOVO]
+- M33093 — woman is surprised with her pregnancy test [NOVO]
+- M33089 — woman shocked with her pregnancy test [NOVO]
+- M4701 — worried and sad man with his head down [USADO NO 001]
+- M4534 — worried woman sitting in an armchair [USADO NO 001]
+- M24191 — worried man announcing bad news to the team [USADO NO 001]
+- M16289 — worried woman at the window [USADO NO 001]
+
+## crime
+- M49329 — handcuffed man walking to a police car
+- M47803 — handcuffed man walking to the prison
+- M24036 — camera recording hacker entering data center
+- M23498 — thief in server room being recorded by a camera
+- M23864 — policeman reporting an arrest
+- M23152 — thief cracking a car door lock
+- M23153 — thief unlocking a car door
+- M32790 — police barricade tape at a crime scene
+- M49328 — blue and red lights from a police car
+- M49252 — suspect being interviewed by a police detective
+- M32771 — police handcuffing a criminal at a crime scene
+- M32770 — female police officer interrogating a person at a crime scene
+- M32773 — armed policewoman in a dark apartment
+- M32785 — analyzing with a magnifying glass is a bullet casing at
+- M32780 — police analyzing a shot in the wall at a crime
+- M32772 — police woman interrogating the coroner at a crime scene
+- M49251 — detectives interrogating a suspect in a police station
+- M24394 — police officer looking for evidence on crime scene
+- M23186 — police officer checking a crime scene
+- M38532 — blue police turrets flashing in the dark
+- M32788 — forensic taking photos of a body at a crime scene [NOVO]
+- M32778 — crime scene with evidence and a silhouette marked in chalk [NOVO]
+- M33605 — silhouette of a hand firing a revolver [NOVO]
+- M32787 — taking a blood sample at a crime scene [NOVO]
+- M47602 — the scales of justice [NOVO]
+- M46575 — close up of a mans eye looking at his laptop [NOVO]
+- M32775 — crime scene with a bloody body and evidence around [NOVO]
+- M32782 — female detective analyzing a gun at a crime scene [NOVO]
+- M32789 — hand of a body at a crime scene [NOVO]
+- M45648 — group of rioters hold up weapons and raised fist during [NOVO]
+- M32769 — female detective arriving at a crime scene in an apartment [NOVO]
+- M32786 — cordoning off a crime scene with barricade tape [NOVO]
+- M32776 — gun and some bullets on the ground at a crime [NOVO]
+- M32781 — detective woman checking a body at a crime scene [NOVO]
+- M32784 — forensic personnel saving evidence in a box [NOVO]
+- M32774 — forensic working at a crime scene [NOVO]
+- M47802 — man with handcuffs in the interrogation room [NOVO]
+- M49607 — a woman destroys an old tv with a baseball bat [NOVO]
+- M24184 — please headquarters receive robbery alert [NOVO]
+- M47801 — arrested criminal with a black mask [NOVO]
+- M32777 — knife covered in blood at a crime scene [NOVO]
+- M32779 — female detective analyzes bullet casings at a crime scene [NOVO]
+- M49606 — a woman destroys a television with a baseball bat [NOVO]
+- M49703 — criminal woman breaking an old television [NOVO]
+- M49593 — a young thug waving a baseball bat [NOVO]
+- M24190 — asking officers where to lock a thief [NOVO]
+- M33106 — concept of mugger or murderer showing a knife [NOVO]
+- M23658 — a shirtless man behind a wire fence [NOVO]
+- M23560 — silhouette of a person with a rifle in the night [NOVO]
+- M20864 — masked robber smashing a window [NOVO]
+- M48777 — bloody hand falls to the floor and gets dragged away [NOVO]
+- M33709 — addict person preparing drug [NOVO]
+- M23252 — a robbery in the coffee shop [NOVO]
+- M23013 — gangster aiming with a gun at the camera [NOVO]
+- M49702 — criminal women extorting by cell phone [NOVO]
+- M49609 — thugs in ski maks discusing a plan at night [NOVO]
+- M49595 — a young woman wearing a balaclava shows off her firearm [NOVO]
+- M49591 — a group of women wearing ski mask in the mansion [NOVO]
+- M49439 — detective using binoculars to observe a suspect [NOVO]
+- M33600 — robber holding a gun portrait [NOVO]
+- M49440 — detective undercover in their car observing a suspect with binoculars [NOVO]
+- M49608 — a thug in a pink suit kicks and hits an [NOVO]
+- M49442 — detective examining a body at a crime scene [NOVO]
+- M33713 — heroin addict preparing a dose [NOVO]
+- M24037 — man with face mask hacking a data center [NOVO]
+- M23309 — silhouette of a thief with a shotgun in the night [NOVO]
+- M49601 — a woman in a pink suit wearing a ski mask [NOVO]
+- M49597 — a young woman wearing black tights and a balaclava shoots [NOVO]
+- M49592 — a group of young woman thugs having a meeting by [NOVO]
+- M20819 — handing over a silver case [NOVO]
+- M49605 — a woman in a pink suit destroys a television with [NOVO]
+- M49594 — a young woman wearing a balaclava shows off her baseball [NOVO]
+- M49445 — detective bagging a knife at a grisly crime scene [NOVO]
+- M49441 — detective arriving at a grisly crime scene [NOVO]
+- M33615 — mad killer draws a knife [NOVO]
+- M23368 — thief steals a phone and a tablet from the car [NOVO]
+- M23074 — thieves robbing a shop [NOVO]
+- M49604 — thug in a pink suit giving orders [NOVO]
+- M49598 — a young thug in a black ski mask shows off [NOVO]
+- M49249 — detective interviewing a suspect after a crime [NOVO]
+- M33108 — dangerous and crazy man plays with a knife [NOVO]
+- M4736 — police and medical examiner analyzing a crime scene [USADO NO 001]
+- M32791 — taking and analyzing fingerprints under black light [USADO NO 001]
+- M32783 — police forensic guarding evidence at a crime scene [USADO NO 001]
+
+## office
+- M101393 — frustrated woman typing at desk
+- M100879 — vintage adding machine typing
+- M914 — open office space
+- M4809 — business people at work meeting
+- M221 — reflection of a screen in glasses
+- M918 — busy office space
+- M42664 — professional woman working in an office
+- M101553 — close up of hands typing and using mouse
+- M40701 — skyscraper in the city seen when walking the street
+- M13218 — silhouette of business people talking by highrise window
+- M4067 — traffic in an underground tunnel
+- M4938 — hands of a girl working on a computer
+- M4835 — office workers hands typing on their devices
+- M41541 — aerial panorama over the buildings of a big city
+- M4954 — woman finishes work and closes her laptop
+- M4804 — two people working in a large office
+- M42656 — thoughtful woman working in her office
+- M42666 — presentation during a work team meeting
+- M41637 — programmer working with codes on a computer
+- M101541 — indian woman working at desk
+- M101546 — hands typing on led decorated keyboard
+- M42620 — people working on laptops
+- M101549 — close up of hands on led keyboard
+- M4939 — hands of a woman typing on a laptop
+- M4956 — business woman working from home
+- M41652 — hands of a programmer working on a desk
+- M101534 — desk height view of woman taking notes
+- M4916 — man visiting twitter on his laptop
+- M39852 — frustrated and tired young man working on computer
+- M100319 — team collaboration in a colorful workspace
+- M4827 — hands of a man typing on a laptop
+- M39839 — man working on computer in an office at night
+- M100307 — two colleagues working together at a laptop
+- M307 — person signing a contract
+- M48503 — intensely focused young man working on a computer
+- M313 — colleagues reading a report together
+- M4811 — formal dressed people worked in an office
+- M39856 — hand of a man in an office taking a sheet
+- M1800 — a woman working on her laptop at an office
+- M101543 — smooth pan of focused man at desk
+- M42617 — people working in the office
+- M101538 — hand using mouse and typing
+- M42639 — people working with electronic devices
+- M4526 — frustrated woman throws paperwork on the floor
+- M4817 — two people at a business meeting
+- M101539 — feminine hands typing on keyboard
+- M39848 — man in an office taking a white sheet of paper
+- M4607 — bored young office workers in an office
+- M100311 — young professionals working in a colorful office space
+- M101536 — focused woman at office
+- M204 — person working at the office
+- M46755 — close up of a handshake between two colleagues [NOVO]
+- M101542 — vertical close up of hands at work [NOVO]
+- M4872 — two coworkers talking and laughing [NOVO]
+- M42655 — a woman writing in her spiral notebook [NOVO]
+- M4830 — man in a suit works from the kitchen [NOVO]
+- M101540 — young woman focused at modern workplace [NOVO]
+- M39855 — hand of a man writing on a sheet on a [NOVO]
+- M4806 — young woman writes a list on her work schedule [NOVO]
+- M100848 — corporate employee with laughing emoji face [NOVO]
+- M29991 — young engineer programming in his workshop seen up close [NOVO]
+- M4957 — young woman working remotely [NOVO]
+- M100849 — employee celebrating a win [NOVO]
+- M101401 — dual workspace with retro vibes [NOVO]
+- M101547 — it man working [NOVO]
+- M100088 — a sleek tablet featuring a green screen device sits on [NOVO]
+- M44737 — man working on computer with chroma green background [NOVO]
+- M101548 — detail shot of fingers on mouse [NOVO]
+- M29984 — drawing in a notebook on a white table [NOVO]
+- M45923 — close up of a tall stack of papers on a [USADO NO 001]
+- M22961 — a man is presenting a business report [USADO NO 001]
+- M46680 — brainstorming over the meeting table [USADO NO 001]
+- M46750 — ceo giving feed back to his team [USADO NO 001]
+- M4547 — people having a work meeting around a table [USADO NO 001]
+- M917 — open office space and staircase [USADO NO 001]
+- M4813 — business partners meeting [USADO NO 001]
+- M4802 — people ending a business meeting [USADO NO 001]
+- M42644 — business meeting in a meeting room [USADO NO 001]
+- M30010 — two office men approving data with a handshake [USADO NO 001]
+- M39838 — man working in an office at night [USADO NO 001]
+- M39841 — young man working in an office overtime [USADO NO 001]
+
+## money
+- M18261 — fast sequence of detailed photos of banknote parts
+- M23524 — man separating money for different budgets
+- M18305 — banknotes falling on a dark background
+- M18299 — person realizes that they no longer have money in his
+- M23168 — counting money and giving it to another person
+- M18247 — hands of people during a money transaction
+- M42649 — man discussing income in a meeting
+- M47018 — the stock market in real time
+- M45708 — investor checking stock prices on a tablet screen
+- M47211 — forex in real time on a screen
+- M5023 — different banknotes a close up of money
+- M47192 — bearded man counting money while he smokes
+- M42650 — man exposing from a screen
+- M49438 — man anxiously counting dollar bills
+- M21911 — using an atm machine
+- M47011 — wallet full of cash money
+- M47733 — close up of a money counting machine
+- M33019 — hands of a volunteer gives bread to hungry people
+- M22991 — businessman closing his mouth with money
+- M45704 — bitcoin and cash sitting in front of a stock chart
+- M38401 — graph of money growing with coin towers underneath
+- M47513 — close up of casino chips with neon lights
+- M23725 — female hands counting cash
+- M18296 — man counting a wad of bills seen very closely [NOVO]
+- M18304 — hands flipping through a wad of dollars seen very close [NOVO]
+- M24354 — woman counting dollars [NOVO]
+- M47517 — a bunch of dollar bills background [NOVO]
+- M18263 — hands of a man counting coins close up view [NOVO]
+- M18249 — 100 dollar bills on a rotating surface [NOVO]
+- M47006 — stock market exchange and forex prices background [NOVO]
+- M47735 — close up of coins with hands woman background [NOVO]
+- M18307 — hand of a man tossing a coin in the air [NOVO]
+- M18303 — tower of 100 dollars being burned with a flame [NOVO]
+- M47016 — close up of a stock market graphic [NOVO]
+- M47210 — graphics of the cryptocurrency [NOVO]
+- M47014 — falling coins over a calculator [NOVO]
+- M24061 — child hands counting cash [NOVO]
+- M46984 — administration of expenses and incomes [NOVO]
+- M18262 — surface while 100 dollar bills fall messily [NOVO]
+- M38406 — towers of golden coins rotating on a gray background [NOVO]
+- M30873 — stock market concept 3d [NOVO]
+- M18306 — pennies falling on a reflective surface with a dark background [NOVO]
+- M47017 — a lot of coins falling in slow motion [NOVO]
+- M47015 — hands counting euro bills [NOVO]
+- M46982 — administration of the profit [NOVO]
+- M45661 — close up of a woman tracking stock prices on a [NOVO]
+- M46994 — calculating expenses of the month [NOVO]
+- M47019 — graphic of cryptocurrency in action [NOVO]
+- M47734 — counting and distributing the spends [NOVO]
+- M46972 — coins inside a crystal piggy [NOVO]
+- M45707 — investor scrolling through an investment app on a tablet [NOVO]
+- M47008 — rows of shining golden coins [NOVO]
+- M46985 — woman counting euros bills [NOVO]
+- M18301 — 100 dollar bill seen in great detail [NOVO]
+- M47013 — slow motion of falling coins [NOVO]
+- M31135 — man picking up 100 bills from the table [NOVO]
+- M49131 — young woman calculating taxes [NOVO]
+- M47007 — calculating expenses and profit [NOVO]
+- M49379 — a man dialing a secret code to open a vault [NOVO]
+- M18248 — scrambled american coins and bills seen very close [NOVO]
+- M11034 — angry monkey jumping around in the forest [NOVO]
+- M46991 — bitcoins rotating on a table [NOVO]
+- M23315 — anguished couple checking the bills in the bedroom [NOVO]
+- M18259 — detailed shot of pictures for a dollar bill [NOVO]
+- M9533 — dollars bills falling and covering a surface [NOVO]
+- M14006 — filling jar glass with coins [NOVO]
+- M47005 — a lot of cash over a rotating background [USADO NO 001]
+- M18297 — man searching for a banknote in his wallet close up [USADO NO 001]
+- M46979 — little clock over bills background [USADO NO 001]
+- M18302 — person counting money [USADO NO 001]
+- M45706 — investor checking stock charts on a tablet at the office [USADO NO 001]
+- M48976 — accounters analyzing business documents [USADO NO 001]
+- M46988 — dollars in cash on a table [USADO NO 001]
+- M46117 — judge shows money on table [USADO NO 001]
+- M34180 — man checking his empty wallet without money [USADO NO 001]
+- M5025 — details of a pair of battered old banknotes [USADO NO 001]
+- M46981 — a lot of dollars are safe inside a security box [USADO NO 001]
+- M23523 — hands demanding more money [USADO NO 001]
+- M49134 — money counter machine working [USADO NO 001]
+- M47009 — counting money with a calculator [USADO NO 001]
+
+## call
+- M8745 — excited girl talking on video call with her cell phone
+- M100883 — retro rotary phone in use
+- M4834 — therapist in his office talking to the camera
+- M4844 — young female employee having a video call with a client
+- M10457 — guy facing in the middle of a video call on
+- M44787 — elegant woman working hard in an office
+- M100855 — young woman making call in rain
+- M100868 — focus pull from raindrops to payphone
+- M100852 — young woman waiting in phone booth
+- M40429 — mother and daughter having a video call
+- M100851 — anxious woman in telephone booth
+- M100325 — person talking on a phone looking concerned
+- M39809 — man enters an elevator tapping his wireless earphones
+- M42637 — young entrepreneurs on phone call
+- M24165 — police officer speaking on the phone
+- M22987 — people working in a call center
+- M39798 — young woman waving at her cell phone on a video
+- M42625 — young businessman on phone call
+- M4833 — female doctor talking on a video call
+- M10446 — having a video call working from home
+- M4658 — man and woman working in a call center
+- M39813 — woman on a video call in outdoors
+- M10443 — teacher in online class
+- M10441 — happy man chatting on a video call
+- M39814 — laughing girl talking on a video call
+- M99896 — a young man talking on his mobile phone in front
+- M39803 — man in his apartment during a phone call
+- M39785 — woman in her bed talking on the phone and using
+- M309 — man in suit making a phone call outside
+- M23073 — man on a phone call at his desk
+- M1804 — businesswoman having a phone call
+- M41198 — man working on a tablet during a call
+- M10449 — woman laughing out loud during a video call
+- M101036 — woman making a call in a graffiti covered booth
+- M100884 — woman dialing a vintage rotary telephone
+- M4951 — young woman doing home office in her dining room
+- M10451 — girl talking on the phone in a room with a
+- M1819 — business man having a call
+- M39781 — woman on a video call with a man by tablet
+- M10440 — girl on a video call standing on a balcony at
+- M10442 — young woman talking on video call on a terrace
+- M39783 — man and woman outdoors during a video call
+- M10448 — young cheerful man talking on a video call
+- M44788 — woman having a call with wireless headphones
+- M318 — rooftop phone call by businesswoman
+- M44746 — man on a phone call while working in the office
+- M42623 — boys talking on cell phone
+- M31395 — woman is robbed of her cell phone by a thief
+- M44786 — woman working on a computer in an office
+- M12126 — girl receives good news and celebrates with her friend
+- M317 — businessman taking a phone call
+- M233 — a woman having a telephone call in her office
+- M10445 — woman resting on a sofa while talking on video call
+- M10444 — woman chatting on video call with her cell phone
+- M44753 — professional woman on a call in her office
+- M10454 — young man having a call on a balcony
+- M311 — businesswoman in glasses talking on mobile phone
+- M44785 — elegant woman taking a call in the office
+- M42645 — woman with glasses working in the office
+- M39778 — girl on a sofa laughing during a phone call
+- M4606 — young people dancing intensely [NOVO]
+- M101533 — woman preparing to take notes [NOVO]
+- M4608 — excited young people partying with party hats [NOVO]
+- M42633 — woman talking on the phone with chroma background [NOVO]
+- M101038 — asian model in an urban graffiti setting [NOVO]
+- M39812 — girl on a video call while drinking coffee [NOVO]
+- M42640 — woman calling on cell phone with chroma background [NOVO]
+- M42582 — urban fashion young people on the phone [NOVO]
+- M10452 — annoyed woman talking on the phone [USADO NO 001]
+- M4603 — a pair of employees working in a call center [USADO NO 001]
+- M39790 — worried and sad woman during a phone call [USADO NO 001]
+- M4937 — young woman stops her work to answer a call [USADO NO 001]
+- M24328 — a man calling car insurance for a broken car [USADO NO 001]
+- M39808 — man on a phone call at night [USADO NO 001]
+- M4610 — woman and man working at a call center [USADO NO 001]
+- M44751 — a man talking on his mobile phone in the office [USADO NO 001]
+- M8742 — young man upset while talking on the phone [USADO NO 001]
+- M41336 — man having a phone call at home [USADO NO 001]
+
+## stress
+- M25585 — frustrated boy throws a tantrum while working on his computer
+- M45922 — young businessman overwhelmed with paperwork
+- M25592 — young stressed woman with headache
+- M25589 — sad and desperate girl crying and screaming
+- M4708 — girl regretting regret and sad
+- M4511 — sad girl looking out the window
+- M46713 — sad boy looking at the camera
+- M33379 — pensive woman looking out of a window on a rainy
+- M4634 — sad businessman talking head on
+- M4728 — sad and worried young man in a park
+- M4748 — sad and angry back to back man and woman
+- M39858 — office man throwing sheets of paper in the air
+- M4516 — little girl on the floor worried next to a bed
+- M39847 — man in an office throwing sheets of paper in the
+- M49225 — stressed man having a headache
+- M25579 — sad and desperate man lying on a sofa
+- M8926 — student stressed over exam sits with books in library
+- M8904 — stressed man works on laptop in minimalist office
+- M34091 — hands of a man in a suit doing a waiting
+- M9117 — stressed woman treats headache while working on laptop
+- M8821 — stressed man removes glasses and rubs forehead
+- M8810 — stressed student studies for exam in library
+- M9061 — young team having stressed meeting in office
+- M5488 — depressed businessman rubs face and looks at report
+- M5608 — stressed business man takes a break in office
+- M5923 — stressed woman working from home
+- M5598 — stressed man in suit yawns and types on laptop
+- M6174 — tired woman reading in the library
+- M4673 — young people playing poker in a room
+- M36443 — man smoking out of his car at night
+- M13315 — tired woman fed up with work throws papers in air
+- M9212 — stressed man at work from home
+- M21561 — stressed man at his desk
+- M21398 — person stressed by his work
+- M9237 — stressed man working from home on his laptop
+- M6208 — young woman stressed at work
+- M5681 — angry woman screams into mobile phone in office
+- M5386 — depressed man wearing mask sits on balcony in covid lockdown
+- M36007 — stressed woman spinning in her chair
+- M4500 — upset woman sitting on the floor [NOVO]
+- M25595 — frustrated woman unable to resolve an account [NOVO]
+- M46558 — blurry shot of a man sitting on the floor upset [NOVO]
+- M4720 — lonely boy on a park bench [NOVO]
+- M4508 — surprised man with hands on head [NOVO]
+- M4502 — frightened girl hiding beside a bed [NOVO]
+- M4731 — couple sitting upset and disappointed [NOVO]
+- M4515 — adult woman in the mirror frustrated by her wrinkles [NOVO]
+- M4737 — annoyed man and woman back to back [NOVO]
+- M4732 — addicted woman surrounded by her vices [NOVO]
+- M33468 — woman in her bed unable to sleep due to the [NOVO]
+- M25584 — young man gets upset after losing in a video game [NOVO]
+- M12951 — tearful woman looks up and prays [NOVO]
+- M100989 — emoji reactions of couples conflict [NOVO]
+- M16215 — exhausted woman working late [NOVO]
+- M45746 — close up of a struggling nurse in a mask blinking [NOVO]
+- M100990 — couple having a tense moment [NOVO]
+- M100981 — couple reacting to pregnancy test results [NOVO]
+- M14821 — a tired student in the library [NOVO]
+- M15767 — upset army veteran sits on sofa drinking beer [NOVO]
+- M6134 — man holding his whisky glass [NOVO]
+- M5402 — depressed man hangs head in isolation [NOVO]
+- M36100 — girl frustrated while studying throws a books away [NOVO]
+- M33618 — kidnapped man tied and gagged [NOVO]
+- M32862 — woman relaxing while getting a back massage [NOVO]
+- M6207 — stressed man turning to drink [NOVO]
+- M6162 — woman suffering from a headache [NOVO]
+- M6119 — soldier resting in a room [NOVO]
+- M39854 — exhausted man working in an office overtime [USADO NO 001]
+- M5601 — stressed businessman rubs eyes while working on laptop [USADO NO 001]
+- M4700 — woman stressed and wailing profile view [USADO NO 001]
+- M46505 — woman completing paperwork with a calculator [USADO NO 001]
+- M46504 — woman looking stressed as she does paperwork [USADO NO 001]
+- M9055 — stressed man working on laptop tries to solve problem [USADO NO 001]
+
+## typing
+- M100887 — hands typing on retro typewriter
+- M101403 — pan shot of typing hands
+- M1808 — close up shot of a person typing on a laptop
+- M42662 — hands of a woman typing on a laptop keyboard
+- M41287 — hands of a person typing on a computer keyboard
+- M21333 — person writing a letter with a typewriter
+- M39851 — man with glasses working on a computer
+- M42749 — woman working on a computer
+- M29990 — engineer working on his computers in his workshop
+- M99898 — a young business man working on a laptop on the
+- M1813 — a persons hands typing on a wifi keyboard
+- M1811 — a person typing on a keyboard
+- M100878 — woman typing on antique adding machine
+- M39840 — young man in front of the computer in an office
+- M99901 — a young focused man wearing a denim jacket is typing
+- M1731 — hands typing slowly on laptop
+- M42748 — a productive workday typing on a computer
+- M146 — hands typing away on a laptop
+- M99906 — top perspective of the hands of a man typing on
+- M99907 — a young man types on a laptop computer with a
+- M23087 — a worker with a laptop or on a solar panel
+- M13906 — fingers typing on a laptop browsing the internet
+- M17695 — hands typing on computer keyboard
+- M51625 — hands typying in a retro backlit keyboard
+- M50765 — a focused man typing on a laptop on the couch
+- M46681 — womans hands typing in a laptop keyboard
+- M48579 — woman sipping her coffee in front of a laptop green
+- M28756 — woman typing fast on the laptop
+- M23226 — man working with the computer in the office
+- M47171 — close up of old typewriter keys
+- M46684 — guys making homework in a co working space
+- M28237 — woman typing on an english keyboard
+- M22869 — typing on a flat keyboard
+- M14102 — woman typing on a laptop on the table
+- M14098 — man using the touchpad on a laptop
+- M14614 — girl typing on laptop computer in the library
+- M17665 — man typing on a laptop in the desk
+- M17315 — a scientist typing on a laptop in the lab
+- M16424 — hands typing on a flat keyboard
+- M38491 — hands of a person working on a laptop
+- M25240 — office objects and a man working in the background
+- M17707 — woman talking on the phone in the cafe
+- M17682 — doctor using a facemask typing on a computer
+- M14606 — typing on a tablet by the window
+- M13937 — person typing on old typewriter
+- M38496 — person typing with the finger on a tablet
+- M32196 — young woman with laptop working in the couch
+- M29971 — doctor typing on a tablet in the desk
+- M28751 — woman working with a laptop computer at the office
+- M41183 — working on a macbook pro [NOVO]
+- M206 — woman typing on her laptop in a coffee shop [NOVO]
+- M43259 — woman working on laptop she drinks coffee [NOVO]
+- M100321 — hands typing on a laptop with a green screen display [NOVO]
+- M100886 — retro typewriter in action [NOVO]
+- M99908 — a man sitting on a cafe table types on his [NOVO]
+- M99911 — skillful male hands adorned with rings typing on a laptop [NOVO]
+- M1746 — a person typing in a laptop at a coffee shop [NOVO]
+- M99887 — close up shot of the hands of a young man [NOVO]
+- M46742 — hands typing on a keyboard with a green screen laptop [NOVO]
+- M45677 — close up of a green screen on a laptop [NOVO]
+- M46743 — hands typing with a green screen laptop [NOVO]
+- M28358 — close up of a finger using a calculator [NOVO]
+- M14397 — man typing on a macbook with a green screen [NOVO]
+- M28762 — young female student portrait in the library [NOVO]
+- M1781 — typing on a laptop close up [USADO NO 001]
+- M42654 — business woman concentrating on her laptop [USADO NO 001]
+- M46976 — man sending emails on a laptop [USADO NO 001]
+- M46763 — woman replying to messages on her phone [USADO NO 001]
+- M14396 — hands typing on a black keyboard on a desk [USADO NO 001]
+- M46638 — hands typing a message online [USADO NO 001]
+- M23726 — worker in front of the computer with headset [USADO NO 001]
+- M46766 — silhouette of a man typing away on a tablet [USADO NO 001]
+
+## mobile
+- M17617 — a man texting on the phone while holding a credit
+- M8839 — hand holding mobile phone with greenscreen
+- M17585 — unlocking phone and typing
+- M51121 — a young smiling woman is texting on a mobile phone
+- M99893 — a young man wearing headphones focus on texting on his
+- M28765 — hands using a mobile phone on the street [NOVO]
+- M16140 — woman with insomnia checks mobile phone [NOVO]
+- M21262 — person using his smartphone [NOVO]
+- M9143 — elderly woman texts on mobile phone and smiles [NOVO]
+- M9067 — urban man browses web on mobile phone [NOVO]
+- M8766 — man browsing social media on smartphone top view [NOVO]
+- M8941 — businessman on mobile phone in dubai street [NOVO]
+- M100084 — a mobile phone featuring a green screen sits over a [NOVO]
+- M45345 — holding a phone with a green screen and swiping [NOVO]
+- M100035 — a young woman laying on her comfortable bed using his [NOVO]
+- M100038 — in the soft morning light a young woman comfortably reclines [NOVO]
+- M858 — baseball player catches and throws a ball [NOVO]
+- M100077 — colorful desk with phone books and mini figurines [NOVO]
+- M9078 — woman holding greenscreen mobile phone taps screen [NOVO]
+- M9083 — hands hold greenscreen mobile phone [NOVO]
+- M100061 — top down view of a young woman on her comfy [NOVO]
+- M29302 — man scrolling through his cellphone [NOVO]
+- M5790 — nurse helps woman use app on mobile phone [NOVO]
+- M13169 — a man lying on the bed scrolling food pictures on [NOVO]
+- M15818 — hands scroll through facebook on mobile at desk [NOVO]
+- M9181 — man touching mobile phone greenscreen [NOVO]
+- M8868 — young boy playing mobile video games on bed [NOVO]
+- M13264 — young woman texting on her mobile phone at the metro [NOVO]
+- M8886 — hopeful man smiles at social media while walking through city [NOVO]
+- M8875 — woman buying groceries with mobile phone [NOVO]
+- M100042 — a young beautiful woman laying in the bed focus on [NOVO]
+- M48644 — woman touching a blank phone screen [NOVO]
+- M8784 — young woman records social media video in cafe [NOVO]
+- M35410 — person using a smartphone in a table [NOVO]
+- M24217 — man using his phone at the office at night [NOVO]
+- M15762 — messy guy eating pizza and talking on mobile phone [NOVO]
+- M779 — woman prepares to jog [NOVO]
+- M68 — woman texting in nature [NOVO]
+- M593 — man sits in orange chair listening to music [NOVO]
+- M35427 — person using a mobile phone close up [NOVO]
+- M5610 — drinking coffee and paying with mobile phone closeup [NOVO]
+- M8857 — hand touches mobile website greenscreen demo [NOVO]
+- M8792 — man using mobile app touch screen with chromakey [NOVO]
+- M8789 — man watches social media video on mobile screen [NOVO]
+- M8778 — arab man smiles while using mobile app [NOVO]
+- M48647 — close up of the horizontal screen of a smartphone [NOVO]
+- M46545 — two teenagers texting and smiling [NOVO]
+- M8791 — woman smiles while using mobile app [NOVO]
+- M14096 — woman swiping fingers on a mobile phone [NOVO]
+- M1330 — two men text and read on a couch [NOVO]
+- M9033 — happy woman uses mobile app sitting in window [NOVO]
+- M6157 — woman shopping on her phone [NOVO]
+- M5733 — innovative smart home app turns lights on and off [NOVO]
+- M32141 — female doctor displaying mobile with green screen [NOVO]
+- M24606 — laying in bed with her smartphone [NOVO]
+- M23366 — close up of camera in a smartphone [NOVO]
+- M15741 — couple in car check gps with mobile phone [NOVO]
+- M14101 — hands using mobile phone on the desk [NOVO]
+- M13253 — courier making a phone call on the street [NOVO]
+- M15911 — man watches youtube influencer asks for subscribers to click like [NOVO]
+- M9035 — bearded man using mobile app in airport cafe [NOVO]
+- M6727 — woman scrolling through her phone [NOVO]
+- M6227 — teens playing mobile games [NOVO]
+- M5533 — man pays for coffee with mobile phone app [NOVO]
+- M5465 — elderly couple pay for dinner with mobile phone [NOVO]
+- M47167 — man typing on a phone on a pier [NOVO]
+- M28755 — woman watching a mobile phone with a green screen [NOVO]
+- M15690 — man on mobile phone with whisky and bokeh lights [NOVO]
+- M12964 — worried man on phone call stares at laptop [USADO NO 001]
+- M47168 — man in a shirt holding a phone with a green [USADO NO 001]
+- M16107 — lawyer talks on phone outside courthouse [USADO NO 001]
+- M4864 — young redhead texts on his cell phone [USADO NO 001]
+
+## city-night
+- M100867 — thelephone booth with water droplets
+- M49878 — big city at night from an aerial shot
+- M42031 — touring a city at night
+- M42357 — night city traffic seen from above
+- M50989 — timelapse of a drive through the city streets at night
+- M4455 — atop the city of tokyo at night
+- M41154 — neon light of a hotel flickering in the dark
+- M6754 — city street traffic by night [NOVO]
+- M40733 — walking in the city at night seeing its buildings [NOVO]
+- M34560 — under a peripheral road with two avenues on the sides [NOVO]
+- M42038 — driving through a night city [NOVO]
+- M99864 — a motorcyclist wearing a leather jacket is driving through the [NOVO]
+- M100946 — silhouettes of two people against a cityscape [NOVO]
+- M100953 — silhouetted couple holding hands [NOVO]
+- M99868 — futuristic urban biker wearing a helmet drives trough colorful neon [NOVO]
+- M4334 — new york buildings at night [NOVO]
+- M50988 — timelapse of a drive through the city night from the [NOVO]
+- M42041 — aerial view of the nightlife of a huge city [NOVO]
+- M40689 — street of a city with cars at night [NOVO]
+- M100945 — silhouette of a couples heartfelt moment [NOVO]
+- M40736 — walking between buildings looking up at night [NOVO]
+- M31089 — shanghai urban city scape time lapse [NOVO]
+- M100940 — couple contemplating city lights [NOVO]
+- M4238 — night traffic in the city [NOVO]
+- M100861 — urban couple hug at night outside the telephone booth [NOVO]
+- M100236 — a person wearing a helmet rides on a motorbike through [NOVO]
+- M100937 — couple disagreeing with city backdrop [NOVO]
+- M46122 — full shot of a train in tokyo night [NOVO]
+- M34561 — road of a city with many cars at night [NOVO]
+- M41158 — street of a city at night with cars and a [NOVO]
+- M20215 — hong kong cityscape at night [NOVO]
+- M42032 — driving down an avenue at night [NOVO]
+- M50992 — fast timelapse from the side of a white car driving [NOVO]
+- M99865 — a motorcyclist in sleek black gear rides a sporty blue [NOVO]
+- M44691 — abstract timelapse of cars in an avenue at dusk [NOVO]
+- M28687 — tokyo cityscape at night [NOVO]
+- M45575 — lightning strikes over a city at midnight [NOVO]
+- M28699 — shenzhen highway traffic in the knight [NOVO]
+- M20211 — downtown dubai cityscape from above [NOVO]
+- M100944 — silhouettes of couple with city lights [NOVO]
+- M4183 — view deck over a city at night [NOVO]
+- M31029 — futuristic buildings flashing in the night [NOVO]
+- M30544 — many skyscrapers next to central park [NOVO]
+- M11433 — aerial shot of beijing at night [NOVO]
+- M100936 — couple silhouettes under city lights [NOVO]
+- M99884 — a confident woman in a leather jacket stands near a [NOVO]
+- M30386 — zoom out shot of buildings and skyscrapers in nyc [NOVO]
+- M99886 — a young woman wearing a trendy leather outfit is on [NOVO]
+- M99863 — a focused woman driving a motorcycle in the colorful lighting [NOVO]
+- M44702 — out of focus view of car lights at night [NOVO]
+- M42030 — touring the city at night timelapse [NOVO]
+- M41542 — aerial landscape of a city at night [NOVO]
+- M100866 — couple hug outside the telephone booth at night [NOVO]
+- M20077 — tokyo night street with fast traffic and tower [NOVO]
+- M44704 — out of focus view to a large avenue at night [NOVO]
+- M42353 — aerial view to a big city at night [NOVO]
+- M42035 — looking out back window in a car [NOVO]
+- M40734 — large buildings of a city at dusk [NOVO]
+- M40655 — rotating shot of a pedestrian path in a city [NOVO]
+- M20107 — shanghai river and city skyscrapers illuminated [NOVO]
+- M30095 — flashing skyscrapers in shenzhen [NOVO]
+- M26920 — top aerial shot of the city life at night [NOVO]
+- M28609 — time lapse of busy crosswalk in the city of beijing [NOVO]
+- M99885 — a mystery woman wearing a leather jacket in futuristic neon [NOVO]
+- M44699 — defocused white and red lights in half mirrored video [NOVO]
+- M42360 — aerial tour above a city at night [NOVO]
+- M42046 — aerial shot with frontal view to night traffic [NOVO]
+
+## security
+- M4648 — architect talking to businessmen
+- M48922 — security camera rotates and follow the object
+- M23696 — electrical workers walking on the hallway
+- M46753 — construction workers with uniforms and security helmets
+- M31359 — thief steals a womans purse on the street
+- M1443 — person takes a phone call at a construction site
+- M31363 — balaclava assailant steals computer from car
+- M23280 — close up of security camera and smoke
+- M31354 — thief silently steals a womans cell phone from a purse
+- M47320 — close up of password on a computer screen
+- M23673 — a woman monitoring close circuit surveillance
+- M13126 — real state agent gives keys to couple
+- M23283 — security cam capturing a fire in the server room
+- M47089 — pixelated red error message on a laptop screen
+- M24445 — passengers going through airport security
+- M23028 — a woman working on the security camera room
+- M23083 — workers of solar energy plant outdoors
+- M41028 — two people adjusting harnesses on their body
+- M23785 — workers walking among solar panels
+- M23551 — man walking through the warehouse
+- M1436 — two construction workers [NOVO]
+- M4003 — staff preparing passenger plane for take off [NOVO]
+- M4854 — real estate development woman during sunset [NOVO]
+- M600 — man in hard hat watching drone fly [NOVO]
+- M23852 — working giving directions to freight truck [NOVO]
+- M23976 — checking in at the airport counter [NOVO]
+- M23695 — engineers working with electrical equipment [NOVO]
+- M1440 — man puts on hard hat [NOVO]
+- M23236 — three engineers working on a solar panel field [NOVO]
+- M23511 — men on constructions site checking the blueprint [NOVO]
+- M50098 — a young father supports his daughter while riding a bike [NOVO]
+- M43105 — biker putting on his helmet [NOVO]
+- M23693 — electrical workers in control room [NOVO]
+- M23269 — angry passengers in the airplane boarding gates [NOVO]
+- M31375 — silent thief peeking inside a house [NOVO]
+- M12830 — thief creep through house and looks up at camera [NOVO]
+- M50092 — a young girl focuses on riding a bike while her [NOVO]
+- M23694 — installing a solar panel in the field [NOVO]
+- M23224 — workers conversation on a construction site [NOVO]
+- M23146 — busines man going through airport customs [NOVO]
+- M31366 — thief tries unsuccessfully to steal a car tire [NOVO]
+- M31377 — a man stealthily stealing artifacts from a house [NOVO]
+- M24049 — quality control check at construction site [NOVO]
+- M23789 — loading vehicle operator smiling to the camera [NOVO]
+- M50105 — a young father tighten the shoe laces of her little [NOVO]
+- M24186 — scanning luggage with x rays [NOVO]
+- M24185 — guard inspecting a passenger bag at the airport [NOVO]
+- M50107 — a young father helps her daughter to dismount her bike [NOVO]
+- M50093 — a young father teaching his little daughter how to ride [NOVO]
+- M23549 — worker between two freight trucks smiling [NOVO]
+- M23499 — checking fingerprints in airport [NOVO]
+- M605 — man in hard hat flying drone on side of the [NOVO]
+- M50094 — father teaches daughter bike riding in the forest [NOVO]
+- M36155 — man getting into a car and putting on a seat [NOVO]
+- M24188 — removing personal belongings at the airport [NOVO]
+- M24179 — a shirtless man with metal chain behind the fence [NOVO]
+- M24053 — woman talks to builders and walks away [NOVO]
+- M23514 — men checking project at the construction site [NOVO]
+- M602 — man in hard hat flying a drone [NOVO]
+- M50099 — a young father helps her daughter to put on knee [NOVO]
+- M50091 — a young smiling father help her daughter to ride a [NOVO]
+- M50088 — a little girl cruises through the forest path on her [NOVO]
+- M23243 — businessman talking with engineers [USADO NO 001]
+- M23016 — surveillance team looking at monitors [USADO NO 001]
+- M22972 — installing a security camera in data center [USADO NO 001]
+- M23268 — security camera crew working in control center [USADO NO 001]
+- M23211 — woman with security helmet in the control room [USADO NO 001]
+
+## bank
+- M46980 — close up to a counting money machine
+- M45703 — money counting machine counting up money
+- M4169 — people walking in front of a building
+- M49219 — a businessman pointing a bad inversion
+- M38504 — updating bank details on a cell phone
+- M21992 — typing a credit card number
+- M38493 — typing bank details on a laptop
+- M12823 — closeup of hand using atm touchscreen
+- M45705 — rich man surrounded by money waving bills
+- M38484 — person typing bank details on a cell phone
+- M6367 — using a bank terminal during a card payment
+- M20859 — counting money on a table
+- M9531 — various euros denominations in coins
+- M17201 — closeup of a us banknote
+- M15545 — american banknote
+- M43608 — aerial tour over the bank of a river
+- M38489 — person typing his bank information on a laptop
+- M3660 — two elephants on the banks of a river
+- M3486 — rocky sea bank with a small boardwalk
+- M44360 — athletic man and woman jogging on the bank of a
+- M34212 — typing on the computer numbers a bank card
+- M25545 — man sitting on the bank of a river with ducks
+- M24584 — counting bank notes
+- M22158 — lots of alligators on a river bank
+- M26848 — bank of a river in a city with office buildings
+- M12042 — cannon on the banks of new york city
+- M38502 — typing bank details on a tablet
+- M38445 — man with a laptop on the bank of a river
+- M27138 — sheep eating grass on the bank of a river
+- M24583 — dropping bank notes
+- M24582 — fanning out bank notes
+- M38425 — boy working relaxed on the bank of a river
+- M4646 — venice central canal at night
+- M42129 — a boy and a girl shopping online
+- M49859 — big river with bridges in an aerial shot
+- M4497 — cranes build a stage in a city in japan
+- M44362 — two people jogging outdoors in nature
+- M3303 — park between a city and the sea coast
+- M14977 — couple seeking assistance from an advisor [NOVO]
+- M46990 — stock financial market information [NOVO]
+- M24604 — putting a safe back in a wall [NOVO]
+- M9536 — currencies from different countries [NOVO]
+- M47012 — profit on the stock market [NOVO]
+- M5024 — one dollar bill in detail [NOVO]
+- M14114 — floating positive stock indicators [NOVO]
+- M9357 — 100 dollar bills spinning [NOVO]
+- M9534 — texture of an american dollar macro close up [NOVO]
+- M9520 — american dollars with coins falling on top [NOVO]
+- M14112 — stock market indicators floating [NOVO]
+- M36209 — one hundred dollar bill spinning [NOVO]
+- M4682 — swans swimming on the banks of a river [NOVO]
+- M44870 — tropical sea life swimming gently along a coral reef bank [NOVO]
+- M38451 — swan swimming near the bank of a river [NOVO]
+- M11890 — dancing on the river bank [NOVO]
+- M44358 — athletic woman and man running through the woods [NOVO]
+- M3310 — open environment of a cold and snowy forest [NOVO]
+- M4137 — port in italy full of boats [NOVO]
+- M44354 — sporty woman and man jogging in nature [NOVO]
+- M25553 — thick layer of foam covering a path [NOVO]
+- M38481 — person entering bank details on a smartphone [USADO NO 001]
+- M45702 — money counting machine counting a stack of bills [USADO NO 001]
+- M38482 — entering bank details on a computer [USADO NO 001]
+- M45701 — rotating shot of a large volume of money [USADO NO 001]
+- M35902 — entering bank data on a smartphone [USADO NO 001]
+- M34277 — man entering bank data in a cellphone [USADO NO 001]
+
+## lawyer
+- M23740 — couple at lawyer office
+- M38512 — signing an important document
+- M23222 — signing on a contract on a wooden table
+- M23115 — man signing off a contract and handshake
+- M16109 — man in suit checks time and makes phone call
+- M5595 — tired lawyer yawns while reviewing reports in office [NOVO]
+- M8848 — lawyer working on laptop turns and smiles [NOVO]
+- M23042 — business people signing contracts [NOVO]
+- M12315 — lady justice statue [NOVO]
+- M6018 — lawyer walking with her suitcase [NOVO]
+- M8880 — professional hands type on laptop keyboard [NOVO]
+- M8903 — closeup of professional man in modern office [NOVO]
+- M9236 — female lawyer starts working with her laptop [NOVO]
+- M5534 — man working on a computer [NOVO]
+- M21261 — lawyer using mobile cellphone [NOVO]
+- M8878 — lawyer types on laptop in minimal office [NOVO]
+- M8873 — lawyers working in modern office look up an smile [NOVO]
+- M8846 — lawyer puts on sunglasses in front of modern building [NOVO]
+- M5747 — man turning to look at the camera [NOVO]
+- M5602 — man looking at monitors [NOVO]
+- M4982 — coffee beans falling on a layer of more beans [NOVO]
+- M18140 — layer of luminous particles in space [NOVO]
+- M12281 — flying through a thick layer of clouds [NOVO]
+- M9311 — dense layer of clouds before a storm [NOVO]
+- M3336 — pine trees under a heavy layer of snow [NOVO]
+- M51418 — colorful ink balls perched on a pink layer [NOVO]
+- M35044 — thick layer of clouds over snowy mountains [NOVO]
+- M51419 — close up of colorful ink balls on a pink layer [NOVO]
+- M35266 — big sun over the a clouds layer [NOVO]
+- M34977 — texture of a magical layer of blue clouds [NOVO]
+- M20689 — thin layer of smoke [NOVO]
+- M14272 — flying over a thick layer of clouds in the sky [NOVO]
+- M30298 — flying over a layer of small clouds [NOVO]
+- M3385 — aerial view of a mountainous forest in winter [NOVO]
+- M43095 — motorcyclist accelerating his motorcycle [NOVO]
+- M3375 — panorama of a snowy hill [NOVO]
+- M49786 — surface of a mountain with vegetation covered by steam [NOVO]
+- M100266 — sprinkling some sugar on a fresh donut [NOVO]
+- M100265 — sprinkling sugar on a fresh donut [NOVO]
+- M49768 — aerial view of a barren mountainous landscape [NOVO]
+- M49757 — aerial view of a rocky mountain on a sunny day [NOVO]
+- M49743 — flying over a hill with a view of the surrounding [NOVO]
+- M50902 — a young woman wearing a ballerina dress performs gracefully moving [NOVO]
+- M51170 — a young woman wrapped in a towel robe using a [NOVO]
+- M3367 — top of a hill covered with snow and pines [NOVO]
+- M49744 — general aerial view to a natural landscape with haze [NOVO]
+- M43946 — texture of coffee beans [NOVO]
+- M49742 — aerial tour over a foggy narwhal landscape [NOVO]
+- M49741 — natural landscape under fog in an aerial view [NOVO]
+- M3331 — pine forest covered with snow on a hill in canada [NOVO]
+- M44408 — aerial shot of a natural environment covered with trees [NOVO]
+- M51565 — the edge of an elegant crystal glass filled with a [NOVO]
+- M49758 — mountain formation shot from high in the air [NOVO]
+- M49781 — natural landscape covered with mist in an aerial view [NOVO]
+- M49769 — arid landscape with mountainous relief seen from the heights [NOVO]
+- M3328 — hill covered with snow and pine [NOVO]
+- M23112 — three persons signing contracts [USADO NO 001]
+- M16105 — lawyer checks schedule and smiles [USADO NO 001]
+- M15858 — lawyers talk with client in late evening office [USADO NO 001]
+- M16108 — lawyer types on laptop in highrise office with city view [USADO NO 001]
+- M16104 — lawyers discuss strategy in late night meeting [USADO NO 001]
+- M16106 — lawyer explains to client with laptop in office [USADO NO 001]
+- M17049 — signing a contract with a pen [USADO NO 001]
+
+## computer
+- M308 — man working on his laptop
+- M99910 — beside a modern laptop the hands write a note on
+- M42653 — woman finishes working on her computer
+- M1728 — software developer working on code screen close up
+- M4531 — girl doing homework in a library
+- M101311 — college study desk with supplies
+- M4713 — woman researching on the computer
+- M51602 — a young gamer in front of a pc monitor with
+- M29993 — working on the computer in a technology workshop
+- M4876 — woman working in an office flips smiling
+- M101086 — motherboard resembling a city from above
+- M100057 — a young woman typing on a laptop computer on the
+- M153 — coworkers informal meeting
+- M51609 — fingers pressing the backlit gaming keyboard
+- M916 — three women meeting
+- M1735 — a developer typing on a laptop top view
+- M1730 — software developer working while drinks coffee [NOVO]
+- M101098 — chipset close up view [NOVO]
+- M101085 — hands working on a motherboard [NOVO]
+- M101330 — kid focused on homework at laptop [NOVO]
+- M101088 — zoom in on a motherboard [NOVO]
+- M101094 — motherboard circuit twinkling [NOVO]
+- M2381 — circuit board [NOVO]
+- M29997 — person working on a 3d model in his workshop [NOVO]
+- M52076 — on a round table the hands of a young man [NOVO]
+- M4858 — cute couple watching a movie on a sofa [NOVO]
+- M4127 — dj mixing acetate discs [NOVO]
+- M1749 — a software developer working and drinking coffee [NOVO]
+- M101095 — chipset closeup [NOVO]
+- M101076 — motherboard resembling an urban landscape [NOVO]
+- M101090 — conductive pens connecting a circuit [NOVO]
+- M100315 — editing a green screen laptop display in an office setting [NOVO]
+- M799 — a graphic designer working on a tablet [NOVO]
+- M101101 — chipset with blue and red details [NOVO]
+- M101091 — motherboard being fixed [NOVO]
+- M253 — two people work in a coffee shop [NOVO]
+- M4907 — person typing on a computer in detail [USADO NO 001]
+- M261 — office meeting [USADO NO 001]
+- M23215 — close up of server racks lights [USADO NO 001]
+- M1820 — a man working at the office [USADO NO 001]
+
+## phone call
+- C8360 — walking to the mountain top
+- C2358 — number dialed on an old british phone
+- C15 — a man makes a videocall on iphone
+- C3442 — a man talks on the phone during his lunch break
+- C1839 — premium a young man joining a video call
+- C1885 — premium typing a phone number
+- C3124 — premium a young man recording a voice message
+- C99709 — a man takes the phone out of pocket and answers the call [NOVO]
+- C45489 — premium selfie time at the hollywood sign [NOVO]
+- C20436 — premium scenic selfie session overlook [NOVO]
+- C26090 — man takes selfie with hollywood sign [NOVO]
+- C80880 — woman chatting by her car trunk [NOVO]
+- C60398 — focused texting by car trunk [NOVO]
+- C26033 — tranquil marina walk at dusk [NOVO]
+- C5046 — urban call woman on the phone [NOVO]
+- C55521 — worried woman talking on phone in city [NOVO]
+- C30529 — contemplative woman in urban park [NOVO]
+- C36008 — premium businesswoman enjoying a break outdoors [NOVO]
+- C53329 — premium businesswoman checking smartphone outdoors [NOVO]
+- C77715 — businesswoman enjoying cityscape [NOVO]
+- C12417 — businesswoman texting outdoors [NOVO]
+- C2183 — businesswoman checking phone outdoors [NOVO]
+- C68151 — smiling woman texting in park [NOVO]
+- C73980 — hiker capturing memories with smartphone [NOVO]
+- C83162 — forest selfie time [NOVO]
+- C46315 — casual chat on smartphone voice message [NOVO]
+- C10476 — outdoor messaging break [NOVO]
+- C7373 — solitude by the sea reading time [NOVO]
+- C91274 — serene reading time by the seashore [NOVO]
+- C5403 — premium close up of a man talking on the phone [NOVO]
+- C6686 — a guy talks on the phone in a telephone booth [NOVO]
+- C7546 — a young man using a phone in a telephone box [NOVO]
+- C2165 — a young man enters a red telephone box [NOVO]
+- C4973 — a young man picks up the phone [NOVO]
+- C83307 — premium a woman says hi on a video call [NOVO]
+- C6279 — premium a man talks on the video call in the coffee shop [NOVO]
+- C6360 — a guy calls someone on the phone in a telephone box [USADO NO 001]
+
+## credit-card
+- M14009 — online shoping with credit card
+- M21780 — using a card machine at the counter
+- M15914 — woman pays cashier with credit card in shop
+- M21325 — woman pays with a credit card in a clothing store
+- M28723 — woman with laptop holding a credit card
+- M8994 — man uses credit card on pos to pay for meal
+- M18264 — man making a transaction on his smartphone with his card
+- M47413 — man sitting at his laptop making an online payment
+- M23466 — young woman using the phone with credit card
+- M9077 — woman uses future hologram technology for online payment
+- M6093 — woman making a card payment
+- M5882 — paying with a credit card online
+- M23475 — young woman shopping online with a smartphone
+- M17618 — typing credit card information on a laptop
+- M9070 — elderly woman online shopping uses credit card payment
+- M17667 — finger typing and unfocused hand holding credit card
+- M17418 — holding credit card and typing on a keyboard
+- M5443 — man using online pay with credit card in cafe
+- M17666 — man with credit card ordering online
+- M16374 — man entering credit card details
+- M9230 — paying for an online purchase with a credit card
+- M5746 — businessman online shopping in office holds credit card
+- M17581 — man shopping online
+- M13227 — top view of credit card pay over world map
+- M34258 — typing a credit card data into a computer
+- M38503 — man entering credit card details on his device
+- M24483 — poker player revealing two cards
+- M24139 — paying dress with a credit card in the store
+- M11548 — paying on her phone using a credit card
+- M9086 — man shops online in cafe and pays with credit card
+- M23249 — man shopping and clothing store [NOVO]
+- M9099 — shopping model poses with credit card on greenscreen [NOVO]
+- M11552 — using a pin machine in store [NOVO]
+- M34241 — man in suit copying data from a card in his [USADO NO 001]
+- M11549 — woman making a credit card payment [USADO NO 001]
+
+## police
+- M14090 — special agent talking on the phone
+- M31372 — two thieves recorded on a security camera
+- M31380 — mugger opening the lock at night
+- M31379 — silent thief leaning out of a house window
+- M31376 — thief is surprised by the police when stealing
+- M23429 — police man walking on a crime scene
+- M23474 — policemen in front of an interactive map
+- M23613 — policeman searching a crime scene
+- M23253 — police officer with a flashlight smoking
+- M14004 — police lights in a dark background
+- M4290 — policemen gathered on the street
+- M47491 — blurry lights form a police car
+- M17396 — police lights flashing red and blue
+- M6005 — tactical team moving
+- M17376 — police car lights flashing
+- M17375 — police lights flashing close up
+- M23364 — police looking at an interactive map
+- M23835 — portrait of a police officer with a vest and with
+- M42294 — two stylish friends incarcerated after a night out
+- M4193 — blue helicopter flying [NOVO]
+- M23169 — politician speaking surrounded by reporters [NOVO]
+- M5932 — soldiers in tactical formation [NOVO]
+- M49443 — detective examining some evidence at a murder scene [NOVO]
+- M39506 — army dog sniffing in a forest [NOVO]
+- M23988 — surveillance center goes into alert [NOVO]
+- M36496 — man training a dog outdoors [NOVO]
+- M36493 — dog snatching a training rod [NOVO]
+- M33736 — kidnapped person praying scared [NOVO]
+- M23679 — checking passengers thumbprint in the airport [NOVO]
+- M22785 — secret service on the white house [NOVO]
+- C2243 — premium two guys walking towards the castle
+- C6935 — a man draws a game card with the text give a compliment
+- C492 — a man walks into a street and looks around confidently
+- C7247 — walking down the city road
+- M23247 — police officer with a flashlight in a dark room [USADO NO 001]
+- M4727 — police officer talking to a woman [USADO NO 001]
+- M14044 — news reporter live on the street [USADO NO 001]
+- M23103 — police control room receive an alarm [USADO NO 001]
+- M23980 — police officers watching an alert on a map [USADO NO 001]
+
+## hacker dark
+- C8950 — person browsing the opensea marketplace on a laptop
+- C1580 — a trader making a call with his smartphone
+- C7124 — mouse with colored led backlight
+- C37701 — cybernetic dreamscape closeup [NOVO]
+- C38781 — mysterious figure in neon noir cityscape [NOVO]
+- C4928 — attachments for power tools [NOVO]
+- C9918 — picks up a bit from a toolbox [NOVO]
+- C3969 — premium a dark haired man setting up his camera [NOVO]
+- C7524 — a broker working with a candlestick chart [NOVO]
+- C256 — a trader analysing the cryptocurrency market [NOVO]
+- C9894 — a businessman makes notes in a notebook [NOVO]
+- C3403 — a trader appearing upset while analyzing a candlestick chart [NOVO]
+- C1109 — dark forest [NOVO]
+- C9516 — covering the candle light [NOVO]
+- C7889 — halloween man stares at the camera [NOVO]
+- C383 — lighter burning near a man s face [NOVO]
+- C3216 — man with skull makeup lights a candle [NOVO]
+- C9757 — halloween man lights a candle [NOVO]
+- C6436 — man lighting a candle [NOVO]
+- C7509 — man with halloween makeup screaming [NOVO]
+- C789 — scary man with skeleton makeup [NOVO]
+- C1490 — man climbing down the ladder [NOVO]
+- C9809 — man in suit climbing down a ladder [NOVO]
+- C9824 — creepy man looking up at the camera [NOVO]
+- C1159 — man climbing down a ladder [NOVO]
+- C5089 — man with halloween makeup smoking [NOVO]
+- C8736 — man climbing a ladder [NOVO]
+- C3278 — man looks down from a ladder [NOVO]
+- C5683 — man standing on a ladder [NOVO]
+- C4188 — man climbing up a ladder [NOVO]
+- C4005 — man with skull makeup smoking [NOVO]
+- C2976 — man with skull makeup lighting a cigarette [NOVO]
+- C2486 — man with skull makeup staring at the camera [NOVO]
+- C4401 — creepy man smoking a cigarette [NOVO]
+
+## family together
+- C7506 — family at the lake
+- C4496 — family waving sparklers around
+- C21629 — an adult walking hand in hand with a child at sunset [NOVO]
+- C92870 — premium friendly walk in suburban streets [NOVO]
+- C4046 — premium a couple takes christmas decorations out of the box [NOVO]
+- C5892 — premium a couple takes rolls of christmas wrapping paper out of the box [NOVO]
+- C6818 — a man joining his friend at a table outside [NOVO]
+- C9839 — parents assembling a stroller [NOVO]
+- C6102 — parents folding a baby stroller [NOVO]
+- C1223 — future parents assembling a stroller [NOVO]
+- C8870 — parents folding baby clothes [NOVO]
+- C9170 — pregnant couple [NOVO]
+- C8463 — putting baby clothes away [NOVO]
+- C7060 — couple preparing a room for a newborn baby [NOVO]
+- C1212 — parents preparing their baby s room [NOVO]
+- C3683 — parents setting up a baby crib [NOVO]
+- C3361 — future parents sorting out a baby crib [NOVO]
+- C811 — mom and daughter hugging while standing on a balcony [NOVO]
+- C2219 — a mom wins a game of uno against her daughter [NOVO]
+- C3094 — a daughter wins a game of uno against her mom [NOVO]
+- C1576 — mother and daughter playing uno [NOVO]
+- C2494 — mom and daughter playing uno [NOVO]
+- C7398 — mom plays uno with her daughter [NOVO]
+- C5651 — mom picking her daughter up and spinning her around [NOVO]
+- C2817 — mom and daughter playing with balloons [NOVO]
+- C9109 — mom and daughter taking a selfie [NOVO]
+- C9356 — mom and daughter taking selfies [NOVO]
+- C7302 — mother and daughter hugging each other [NOVO]
+- C933 — couple relaxing on bench [NOVO]
+- C7670 — couple relaxing on the beach [NOVO]
+- C384 — family waving sparklers [NOVO]
+- C7037 — friends raising a toast [NOVO]
+
+## bank app
+- C1246 — a girl searching on the nft marketplace using her smartphone and laptop
+- C8939 — a girl tracking a trade graph cryptocurrency on her smartphone
+- C7544 — a girl searches for nft data using her laptop and a smartphone app
+- C7527 — person browsing the opensea marketplace on a smartphone
+- C5063 — a girl browses the online nft marketplace on her smartphone
+- C4878 — a girl browsing the online nft marketplace using a smartphone app
+- C9524 — social media on a smartphone
+- C6613 — premium a weather app on a smartphone
+- C34527 — premium close up of iphone 15 in a case [NOVO]
+- C9513 — premium a man connects iphone 15 with power back [NOVO]
+- C45941 — smiling woman with smartphone outdoors [NOVO]
+- C2724 — calculating expenses with cash and calculator [NOVO]
+- C84219 — premium budget planning with digital and analog tools [NOVO]
+- C60816 — calculating finances close up [NOVO]
+- C62653 — calculating expenses on smartphone [NOVO]
+- C35363 — calculating expenses with smartphone [NOVO]
+- C75212 — urban coffee break [NOVO]
+- C9718 — urban casual fashion close up [NOVO]
+- C54263 — connected on the go smartphone in use [NOVO]
+- C3453 — analyzing cryptocurrency trends [NOVO]
+- C4028 — premium trading on a cryptocurrency platform [NOVO]
+- C9723 — app store on an iphone [NOVO]
+- C4197 — premium bitcoin price [NOVO]
+- C5213 — crypto wallet [NOVO]
+- C5007 — cryptocurrency trade platform [NOVO]
+- C6783 — premium weather app on an iphone [NOVO]
+- C9058 — a young man rents a bike with an app [NOVO]
+- C4615 — a young man rents a bicycle with an app [NOVO]
+- C4361 — browsing the activity page on the nft marketplace [NOVO]
+- C9646 — a girl browsing the online nft marketplace on her smartphone [NOVO]
+- C2862 — browsing the opensea marketplace [NOVO]
+
+## customer service headset
+- C4760 — a vr headset on a bed
+- C4792 — close up of a man talking on a virtual meeting
+- C8234 — premium a man says hello and talks on a virtual meeting
+- C1437 — close up of a young man putting on his headphones
+- C2728 — premium a man adjusts the monitor
+- C7380 — premium a man finishes a virtual meeting
+- C9706 — a man happily talks on a virtual meeting
+- C5610 — premium a man puts on his headphones and speaks into the microphone
+- C9293 — premium a young man puts on headphones
+- C4206 — a man using a vr headset
+- C11934 — man putting on headphones outdoors [NOVO]
+- C26893 — urban professional working outdoors [NOVO]
+- C52717 — focused remote work at outdoor setting [NOVO]
+- C14266 — premium hiker prepares vr headset in woods [NOVO]
+- C34535 — premium forest vr experience [NOVO]
+- C63627 — drone pilot navigating in forest [NOVO]
+- C84315 — mystery in the woods [NOVO]
+- C17971 — exploring vr worlds outdoors [NOVO]
+- C97283 — focused woman checking smartwatch [NOVO]
+- C25452 — virtual reality in nature [NOVO]
+- C43931 — exploring nature with binoculars [NOVO]
+- C96971 — drone pilot at controller close up [NOVO]
+- C8710 — premium rearview of a young man putting on headphones [NOVO]
+- C4049 — premium blonde guy putting on headphones [NOVO]
+- C1969 — premium close up a guy wears airpods [NOVO]
+- C6270 — a senior man enthusiastically looking into his vr headset [NOVO]
+- C1716 — a man putting a smartphone into a vr headset [NOVO]
+- C324 — an adult man putting his vr goggles on on his face [NOVO]
+- C7582 — an adult man using vr glasses while standing [NOVO]
+- C7048 — an adult man using his vr headset [NOVO]
+
+## police car night
+- C4325 — street from above
+- C4070 — a person driving around panama city
+- C6668 — cloaked figure standing next to a futuristic car [NOVO]
+- C1843 — premium street lamp illuminating the night sky [NOVO]
+- C6016 — premium cityscape at night [NOVO]
+- C9184 — driving past a building at night [NOVO]
+- C6155 — car in the rain outside [NOVO]
+- C9006 — rotating shot of a retro car [NOVO]
+- C3447 — close up shot of a retro car with an open door [NOVO]
+- C8968 — a retro car in the rain [NOVO]
+- C5367 — a woman smoking in the car [NOVO]
+- C3509 — close up of a nissan 300zx outside in the rain [NOVO]
+- C6347 — a man walking in a parking lot [NOVO]
+- C5550 — asian man stands in the street at night [NOVO]
+- C355 — asian man getting a jacket out of his car [NOVO]
+- C668 — electric car driving in the dark woods [NOVO]
+- C2601 — cars driving in the rain at night [NOVO]
+- C5120 — moving car on an empty road [NOVO]
+- C4076 — the city roads at night [NOVO]
+- C5837 — cars in the city at night [NOVO]
+- C6550 — night city from a moving car [NOVO]
+- C4149 — city building at night [NOVO]
+- C6200 — man spraying water on a woman [NOVO]
+- C7839 — getting out of car [NOVO]
+- C6089 — driving at night [NOVO]
+- C821 — palm trees at night [NOVO]
+- C8893 — unlocking a car with a key [NOVO]
+- C859 — couple washing a car together [NOVO]
+
+## motorcycle delivery
+- C7943 — a bearded man twisting a motorcycle throttle and getting ready to hit the road
+- C8323 — a motorcyclist putting on his helmet [NOVO]
+- C2179 — a motorcyclist taking his gloves off [NOVO]
+- C9269 — bikers in the distance riding a downhill path [NOVO]
+- C1326 — a motorcyclist waiting for his friend to get ready [NOVO]
+- C487 — a motorcyclist putting gloves on by the roadside [NOVO]
+- C8009 — a motorcyclist putting on his hood and sunglasses [NOVO]
+- C846 — a motorcyclist bringing his vehicle to a halt [NOVO]
+- C4245 — a motorcyclist putting on glasses and accelerating his bike [NOVO]
+- C6287 — a motorcyclist buttoning his jacket and preparing to leave [NOVO]
+- C7946 — bikers driving at a high altitude close to a mountain peak [NOVO]
+- C2177 — bikers disputing over something [NOVO]
+- C409 — bikers on a ride stop to look at the view [NOVO]
+- C8938 — bikers driving down a curvy road [NOVO]
+- C70 — two bikers discussing things [NOVO]
+- C9428 — a motorcyclist putting on a woolen jacket [NOVO]
+- C6998 — motorcyclists coming around a curve in the road [NOVO]
+- C8512 — a motorcyclist approaching his bike and starting it [NOVO]
+- C7876 — motorcyclists riding their bikes [NOVO]
+- C2896 — motorcyclists riding together on a downhill road [NOVO]
+- C7601 — two bikers are driving through an uphill curve in the road [NOVO]
+- C761 — driving through a palm tree forest [NOVO]
+- C8812 — motorcyclist on a road [NOVO]
+- C3120 — bicycle food delivery [NOVO]
+- C2727 — motorcycle by the palm trees [NOVO]
+- C6623 — off road motorbike [NOVO]
+- C9981 — bikers driving away down a path [USADO NO 001]
+
+## headset
+- M101252 — boy typing on a laptop computer and a headset at
+- M101545 — focused young man with gaming headset [NOVO]
+- M24263 — newscaster with tablet and headset speaking [NOVO]
+- M101552 — extreme close up of man with headset [NOVO]
+- M101254 — boy wearing a vr headset playing in a digital world [NOVO]
+- M23887 — a businessman with a headset and a tablet talking [NOVO]
+- M51194 — a young woman wearing a futuristic vr headset and a [NOVO]
+- M101273 — little girl wearing a vr headset playing and dancing on [NOVO]
+- M101270 — girl wearing a vr headset immersed in a virtual world [NOVO]
+- M43561 — man wearing virtual reality headset [NOVO]
+- M43543 — a woman reclining while using a virtual reality headset [NOVO]
+- M101272 — little girl playing with vr headset in her bedroom [NOVO]
+- M101256 — a little kid testing his vr headset and controllers at [NOVO]
+- M51196 — a young futuristic woman with white hair wears a vr [NOVO]
+- M43544 — man playing golf with a virtual reality headset [NOVO]
+- M52073 — a young man laying on the comfy couch of his [NOVO]
+- M39817 — wireless headset in a mans ear [NOVO]
+- M24189 — a man using a virtual reality headset [NOVO]
+- M51197 — a young woman wearing white attire a transparent vr headset [NOVO]
+- M51193 — a young woman wearing a futuristic vr headset and a [NOVO]
+- M52072 — a young man arrive to the comfy couch in the [NOVO]
+- M37045 — adult man with headset microphone on stage [NOVO]
+- M37038 — speaker with headset microphone and a tablet [NOVO]
+
+## smartphone night
+- C6752 — premium a man grabbing his smartphone from a bed
+- C92193 — premium twilight tech time [NOVO]
+- C79571 — texting at twilight [NOVO]
+- C67719 — twilight city call [NOVO]
+- C54754 — man enjoying music on smartphone at dusk [NOVO]
+- C8554 — young woman texting by the marina [NOVO]
+- C97127 — elegant lady texting in evening cityscape [NOVO]
+- C1088 — engrossed in tech on the go [NOVO]
+- C6745 — close up of a young man using his smartphone [NOVO]
+- C8076 — premium blonde girl using her phone near the coastline [NOVO]
+- C8319 — a young man using a black smartphone [NOVO]
+- C631 — a man looking at his phone in his home late at night [NOVO]
+- C5611 — a man using his phone at home late at night [NOVO]
+- C4825 — asian man using his smartphone while standing on a quay [NOVO]
+- C1562 — fingers scrolling on a smartphone [NOVO]
+- C8907 — person typing on a smartphone at night [NOVO]
+- C6100 — man taking a selfie on the street at night [NOVO]
+- C8505 — asian man talking on a smartphone [NOVO]
+- C3025 — person in bed on their iphone [NOVO]
+
+## grandparents
+- M36555 — boy playing with his grandmother around a tree
+- M35979 — young girl caressing her grandmother hands
+- M36631 — family sitting on a hill watching the nature
+- M12531 — grandmother shopping in a clothing store
+- M12530 — elderly woman checking her blood pressure
+- M36147 — young children with their grandparents [NOVO]
+- M7672 — woman and her grandchild [NOVO]
+- M21632 — old couple holding hands at the table [NOVO]
+- M36091 — mother and her children at a dinner with grandparents [NOVO]
+- M6176 — family dinner during thanksgiving [NOVO]
+- M32185 — grandparents reading a story to their grandchild [NOVO]
+- M35976 — grandparents spending time with their grandchildren [NOVO]
+- M21664 — grandmother teaches her husband how to use a phone [NOVO]
+- M35982 — children hug and kiss their grandmother [NOVO]
+- M21638 — old couple watching a tv comedy show [NOVO]
+- M21674 — grandparents reading a letter from their family [USADO NO 001]
+- M5383 — grandmother receiving a visit from her granddaughter [USADO NO 001]
+
+## lock
+- M21812 — opening a door with a hanging key
+- M20812 — handle of a car door
+- M25451 — taking money from a locked safe
+- M14971 — opening a draw with a key
+- M22019 — large passenger ship in a lock
+- M22018 — boat in a lock
+- M27221 — man cutting a wooden board with a large lock
+- M36381 — hands of a stylist taking a lock of hair
+- M25411 — opening a safe with the code [NOVO]
+- M23367 — man turning on the alarm of a car [NOVO]
+- M51150 — a newborn alien monster with scary eyes lying on the [NOVO]
+- M100752 — young couples loving gaze and hug [NOVO]
+- M35896 — man tries to open a padlocked wooden door [USADO NO 001]
+
+## old man phone
+- C1012 — an old man answering his smartphone
+- C3400 — old man using his mobile phone
+- C7699 — old man using a smartphone
+- C2707 — old man showing his phone to someone
+- C8926 — an old man talking on his iphone
+- C3728 — a man talking on his smartphone
+- C6027 — old man on phone at dinner table
+- C3371 — old man using smartphone
+- C6393 — an old man talking on his phone [USADO NO 001]
+- C2078 — old man making a call [USADO NO 001]
+- C2787 — a man carefully using his smartphone [USADO NO 001]
+- C3401 — an old man using his mobile phone at home [USADO NO 001]
+
+## elderly woman phone
+- C1445 — emotionally talking by mobile phone
+- C1231 — businesswoman answering a call
+- C809 — mom video calling on a smartphone
+- C70037 — texting by the marina at dusk [NOVO]
+- C98325 — premium smiling woman using smartphone in city [NOVO]
+- C74112 — urban morning coffee and phone check [NOVO]
+- C96161 — urban explorer in thoughtful pose [NOVO]
+- C31066 — woman taking selfie at park bench [NOVO]
+- C28981 — premium a woman crosses the road and uses the phone [NOVO]
+- C46738 — premium a woman explores the city with phone in hand [NOVO]
+- C92 — a woman talking on her phone while sitting at her desk in an office [NOVO]
+
+## Anatel sede
+- F105631253 — Prêmio Anatel de Acessibilidade em Telecomunicações 2019 (32682733437).jpg [NOVO] — CC BY 2.0, Ministério da Ciência, Tecnologia e Inovações from Brasília - DF, Brasil
+- F105630708 — Prêmio Anatel de Acessibilidade em Telecomunicações 2019 (46709882445).jpg [NOVO] — CC BY 2.0, Ministério da Ciência, Tecnologia e Inovações from Brasília - DF, Brasil
+- F105630591 — Prêmio Anatel de Acessibilidade em Telecomunicações 2019 (46709882495).jpg [NOVO] — CC BY 2.0, Ministério da Ciência, Tecnologia e Inovações from Brasília - DF, Brasil
+- F105631042 — Prêmio Anatel de Acessibilidade em Telecomunicações 2019 (46709886485).jpg [NOVO] — CC BY 2.0, Ministério da Ciência, Tecnologia e Inovações from Brasília - DF, Brasil
+- F105630943 — Prêmio Anatel de Acessibilidade em Telecomunicações 2019 (46901095014).jpg [NOVO] — CC BY 2.0, Ministério da Ciência, Tecnologia e Inovações from Brasília - DF, Brasil
+- F105630349 — Prêmio Anatel de Acessibilidade em Telecomunicações 2019 (47624938781).jpg [NOVO] — CC BY 2.0, Ministério da Ciência, Tecnologia e Inovações from Brasília - DF, Brasil
+- F105630314 — Prêmio Anatel de Acessibilidade em Telecomunicações 2019 (47624939911).jpg [NOVO] — CC BY 2.0, Ministério da Ciência, Tecnologia e Inovações from Brasília - DF, Brasil
+- F105630865 — Prêmio Anatel de Acessibilidade em Telecomunicações 2019 (47625418231).jpg [NOVO] — CC BY 2.0, Ministério da Ciência, Tecnologia e Inovações from Brasília - DF, Brasil
+- F105630643 — Prêmio Anatel de Acessibilidade em Telecomunicações 2019 (47625420531).jpg [NOVO] — CC BY 2.0, Ministério da Ciência, Tecnologia e Inovações from Brasília - DF, Brasil
+- F105630562 — Prêmio Anatel de Acessibilidade em Telecomunicações 2019 (47625421331).jpg [NOVO] — CC BY 2.0, Ministério da Ciência, Tecnologia e Inovações from Brasília - DF, Brasil
+
+## agência bancária Brasil
+- F81611027 — Cidade de Araci - 163.jpg [NOVO] — CC BY-SA 4.0, Ajmcbarreto
+- F81611028 — Cidade de Araci - 164.jpg [NOVO] — CC BY-SA 4.0, Ajmcbarreto
+- F81611029 — Cidade de Araci - 165.jpg [NOVO] — CC BY-SA 4.0, Ajmcbarreto
+- F81611031 — Cidade de Araci - 166.jpg [NOVO] — CC BY-SA 4.0, Ajmcbarreto
+- F81611030 — Cidade de Araci - 167.jpg [NOVO] — CC BY-SA 4.0, Ajmcbarreto
+- F81611032 — Cidade de Araci - 168.jpg [NOVO] — CC BY-SA 4.0, Ajmcbarreto
+- F133233856 — Tribunal Superior do Trabalho ganha agência bancária (52176901492).jpg [NOVO] — CC BY 2.0, Agência Brasília from Brasília, Brasil
+- F133233852 — Tribunal Superior do Trabalho ganha agência bancária (52176903927).jpg [NOVO] — CC BY 2.0, Agência Brasília from Brasília, Brasil
+- F133233850 — Tribunal Superior do Trabalho ganha agência bancária (52177933633).jpg [NOVO] — CC BY 2.0, Agência Brasília from Brasília, Brasil
+- F133233851 — Tribunal Superior do Trabalho ganha agência bancária (52178421545).jpg [NOVO] — CC BY 2.0, Agência Brasília from Brasília, Brasil
+
+## telefone celular Brasil
+- F186404912 — "Nós estamos numa luta de resistência", diz prefeita de Juiz de Fora no Alô Alô Brasil.webm [NOVO] — CC BY 4.0, Rádio Nacional BR
+- F111983952 — Cantar a minha aldeia dancar as minhas raizes, História no Museu da Pessoa (49745).pdf [NOVO] — CC BY-SA 4.0, Museu da Pessoa
+- F119937045 — Furnas Abriu as Portas para o Brasil para Mim, História no Museu da Pessoa (199738).pdf [NOVO] — CC BY-SA 4.0, Museu da Pessoa
+- F161096440 — Gerenciamento estratégico de informação nas empresas industriais do setor de telecomunicações no Brasil (Cionline 856).pdf [NOVO] — CC BY-SA 4.0, 
+Cecília Carmen Cunha Pontes
+- F161126684 — Para meninos, meninas e suas bonecas - moldes e moda para crianças no Brasil do século XIX.pdf [NOVO] — CC BY 4.0, 
+Fausto Viana, Isabel Italiano, Desirée Bastos, Luciano Araújo
+- F174922622 — Relação entre gordura corporal e pressão arterial sistólica e diastólica em escolares entre 14 e 17 anos de Floriano-Piauí-Brasil, Journal of Physical Education (17700).pdf [NOVO] — CC BY 4.0, 
+Irineu de Sousa Júnior
+- F39807258 — Senado Federal do Brasil Fotos produzidas pelo Senado (14961772605).jpg [NOVO] — CC BY 2.0, Senado Federal
+- F161097066 — Sociedade da Informação no Brasil e em Portugal - um panorama dos livros verdes (Cionline 993).pdf [NOVO] — CC BY-SA 4.0, Georgete Medleg Rodrigues
+- F112115636 — Tem que batalhar ser criativo correr atras, História no Museu da Pessoa (184794).pdf [NOVO] — CC BY-SA 4.0, Museu da Pessoa
+- F112118260 — Trajetoria premiada, História no Museu da Pessoa (114132).pdf [NOVO] — CC BY-SA 4.0, Museu da Pessoa
+
+## credit card
+- C82426 — online shopping with credit card
+- C9719 — giving cashier a credit card
+- C5376 — transferring card details
+- C4419 — a motorcyclist getting his wallet and credit card out of his bag
+- C59002 — man paying at parking meter [NOVO]
+- C76680 — premium focused work in a park setting [NOVO]
+- C50302 — secure online shopping experience [NOVO]
+- C41359 — secure online payment process [NOVO]
+- C67078 — focused outdoor study session [NOVO]
+
+## grandmother smartphone
+- C824 — grandfather and granddaughter
+- C274 — grandfather and granddaughter talking
+- C96122 — tech savvy user with various gadgets [NOVO]
+- C39618 — overhead shot of a woman using the phone [NOVO]
+- C310 — taking photos of a mother s day poster with a smartphone [NOVO]
+- C8918 — woman looking at her phone [NOVO]
+- C1935 — woman taking photos on smartphone [NOVO]
+- C2321 — grandfather and granddaughter browsing on a laptop [USADO NO 001]
+- C7495 — grandfather and granddaughter using laptop [USADO NO 001]
+
+## Banco Central do Brasil sede Brasília
+- F170249769 — Edifício "Sede" do Banco Central do Brasil em Brasília.jpg — CC BY 2.0, Banco Central do Brasil
+- F201638522 — Edifício "Sede" do Banco Central do Brasil em Brasília (cropped).jpg — CC BY 2.0, Banco Central do Brasil
+- F111962093 — A transformacao do banco do brasil, História no Museu da Pessoa (49736).pdf [NOVO] — CC BY-SA 4.0, Museu da Pessoa
+- F111965931 — Agencia de banco em barraco de madeira, História no Museu da Pessoa (49730).pdf [NOVO] — CC BY-SA 4.0, Museu da Pessoa
+- F33240734 — Banco Central do Brasil.jpg [NOVO] — CC BY-SA 2.0, Paulo Rená da Silva Santarém
+- F111992063 — De menor aprendiz a administrador da fundacao banco do brasil, História no Museu da Pessoa (47173).pdf [NOVO] — CC BY-SA 4.0, Museu da Pessoa
+- F112039089 — Minha trajetoria no banco do brasil, História no Museu da Pessoa (196121).pdf [NOVO] — CC BY-SA 4.0, Tayara Barreto de Souza Celestino/Museu da Pessoa
+- F112039102 — Minha trajetoria no banco do brasil, História no Museu da Pessoa (47189).pdf [NOVO] — CC BY-SA 4.0, Museu da Pessoa
+- F112126980 — Uma vida um banco e uma historia, História no Museu da Pessoa (49727).pdf [NOVO] — CC BY-SA 4.0, Museu da Pessoa
+
+## Superior Tribunal de Justiça prédio
+- F162233239 — Diario do Rio de Janeiro (N039) 1862-02-08.pdf [NOVO] — Public domain, Various
+- F162233236 — Diario do Rio de Janeiro (N061) 1862-03-02.pdf [NOVO] — Public domain, Various
+- F162232140 — Diario do Rio de Janeiro (N123) 1862-05-05.pdf [NOVO] — Public domain, Various
+- F164618003 — Edifício-sede e Instalações do STJ (15283799908).jpg [NOVO] — CC BY 2.0, Superior Tribunal de Justiça STJ from Brasil
+- F164618126 — Edifício-sede e Instalações do STJ (50087694211).jpg [NOVO] — CC BY 2.0, Superior Tribunal de Justiça STJ from Brasil
+- F164618139 — Edifício-sede e Instalações do STJ (50087922417).jpg [NOVO] — CC BY 2.0, Superior Tribunal de Justiça STJ from Brasil
+- F51066243 — Fotos produzidas pelo Senado (29313871471).jpg [NOVO] — CC BY 2.0, Senado Federal
+- F116404704 — Mandado de Segurança de alunos punidos contra o CONSUNI-UnB, Arquivo Nacional (BR DFANBSB AA1.0.AJD.18).pdf [NOVO] — Public domain, 
+Universidade de Brasília
+- F2248405 — TST Bloco B externo.jpg [NOVO] — Public domain, Luis Dantas
+
+## text-message
+- M51124 — close up of a womans hands texting
+- M40191 — woman with a face mask texting on the phone
+- M4918 — man with face mask sending audios by cell phone
+- M40185 — woman with face mask while texting
+- M27317 — friends sharing a text message [NOVO]
+- M22873 — woman checking her text messages [NOVO]
+- M28943 — girls checking text messages while out for the day [NOVO]
+- M27810 — checking text messages from a bar [NOVO]
+
+## call center
+- C8050 — premium a customer pays barista with cash
+- C3270 — close up of barista taking money from a customer
+- C4358 — premium a couple shows their presents on a video call
+- C3316 — people say hi on a video call
+- C6060 — premium chatgpt website mobile version
+- C20759 — premium focused woman working outdoors [NOVO]
+- C8033 — premium top view of a customer taking the coffee [NOVO]
+- C5684 — premium man reads chatgpt response [NOVO]
+
+## worried woman phone
+- C3164 — woman making a phone call
+- C9562 — angry woman texting
+- C1654 — woman screaming into telephone
+- C46864 — contemplative woman by the roadside [NOVO]
+- C86477 — young woman checking smartphone outdoors [NOVO]
+- C827 — woman on a video call [NOVO]
+- C7480 — taking calls at the office [USADO NO 001]
+
+## smartphone
+- M49939 — portrait of a woman chatting on her cell phone
+- M8757 — annoyed and frustrated man with his smartphone
+- M43260 — woman finishes working on her laptop
+- M43269 — a woman working remotely in a choffe shop [NOVO]
+- M51123 — woman sending messages on whatsapp zoom shot [USADO NO 001]
+- M8744 — young man upset and frustrated receiving a message [USADO NO 001]
+
+## call-center
+- M23081 — woman on a phone call on data center
+- M23064 — group of people working on a call center [NOVO]
+- M9159 — woman helping customer in call center smiles [NOVO]
+- M21401 — portrait of call center operator [NOVO]
+- M21399 — call center operator doing home office [NOVO]
+- M21400 — call center operator working at home [NOVO]
+
+## customer-service
+- M24405 — waiter taking customer order in the restaurant [NOVO]
+- M24060 — woman with headset doing customer support [NOVO]
+- M24213 — happy woman doing customer support [NOVO]
+- M24400 — we are serving food and coffee to customer [NOVO]
+- M24152 — waiter bringing the tea to the customer [NOVO]
+- M31998 — man loading packages on dolly [NOVO]
+
+## phone ringing
+- C731 — premium text message
+- C95244 — man texts on smartphone in sunlight [NOVO]
+- C8569 — premium guy typing a message on his phone [NOVO]
+
+## Febraban sede
+- F112126458 — Uma opcao ideologica, História no Museu da Pessoa (169962).pdf [NOVO] — CC BY-SA 4.0, Autor:/Museu da Pessoa
+
+## old
+- M4015 — canal and street scene in amsterdam
+- M101392 — woman working on retro modern desk setup
+
+## grandmother
+- M22226 — granddaughter visiting an elderly relative
+- M21412 — mother advising her sad daughter
+- M12529 — grandmother chatting with her cat
+
+## senior
+- M32182 — senior woman looking at reading device
+- M4273 — senior female playing golf
+- M22510 — senior couple walking at sunset
+- M6640 — senior couple enjoying the outdoors
+- M32186 — senior couple reading on the bed with devices
+- M49280 — senior engineer communicating via walkie talkie
+- M26322 — senior couple at the waterfront
+- M32080 — senior man playing the accordion
+- M22599 — senior couple with a fake mustache
+- M101310 — college desk with backpack and supplies
+- M101313 — overhead shot of teen study desk
+- M22504 — senior man using his phone [USADO NO 001]
+
+## business
+- M42648 — business man exposing graphs
+- M4010 — buildings under construction aerial view
+- M4437 — people walking in the street in japan
+- M42137 — hands of two people sealing a package with tape
+- M4832 — man dressed in suit crossing the street
+- M4008 — people walking down an airport corridor in fast motion
+- M4779 — doctor walking down a hospital hallway
+- M44644 — close up view of a drone flying outdoors
+- M4380 — towers and steam outlets of an industrial plant
+- M42643 — presentation in a business meeting room
+- M1947 — aerial view of a factory
+- M315 — two business people walk in an office hall
+- M44049 — close up shot of a professional condenser microphone
+- M47214 — man analyzing the stock market in real time
+- M4360 — petrochemical plant lit up at night
+- M42629 — checking the calendar on a tablet [USADO NO 001]
+
+## documents
+- M25262 — woman looking at documents on a windy street
+- M46503 — contract that is being signed
+- M39496 — two coworkers talking about some documents
+- M34096 — two businessmen in suits reviewing some documents
+- M38492 — signing a document with blue ink
+- M39516 — woman sealing documents in the office
+- M22836 — architect using a phone calculator
+- M24538 — architect drawing lines on a document
+- M22856 — comparing documents in an interview [USADO NO 001]
+- M46977 — documents with magnifying glass on a desk [USADO NO 001]
+- M46533 — woman signing the paperwork [USADO NO 001]
+- M33116 — co workers reviewing a document [USADO NO 001]
+- M14126 — man with calculator and legal documents [USADO NO 001]
+- M22827 — paperwork with a calculator [USADO NO 001]
+- M34154 — unrolling an old paper tied with string [USADO NO 001]
+- M47732 — documents with magnifying glass on a table [USADO NO 001]
+
+## paper
+- M39849 — hand of a person taking a blank sheet of paper
+- M312 — woman and man working in an office
+- M101654 — hands cutting wrapping paper
+- M101661 — hands folding wrapping paper corners
+- M4793 — happy young man writing with pen and paper
+- M39857 — hand of a man on a desk taking a sheet
+- M17416 — signing a contract with a pen close up
+- M20235 — filling in an exam paper
+- M50703 — calligrapher writing congrats with fountain pen
+- M28360 — man signing a contract with pen
+- M50704 — calligraphy artist writing the word soul in black ink
+- M50702 — aerial view of calligrapher writing love
+- M50698 — calligraphy of the word love in cursive hand writing
+- M49484 — little boy playing with a paper plane at the park
+- M50693 — artist writing the start of the alphabet in calligraphy
+- M49487 — portrait of little boy with a paper plane
+- M48517 — close up view of hands cutting paper with knife and
+- M50705 — close up calligraphy of the word soul
+- M50710 — aerial view of calligrapher writing feels in cursive font
+- M50486 — a smartphone records a young woman posing in a room
+- M50694 — calligrapher writing the alphabet in gothic style
+- M15362 — burning white paper
+- M50699 — artist writing the word love in calligraphy
+- M50692 — close up of calligrapher writing happy with marker
+- M50487 — a young influencer woman singing in a room with paper
+- M50706 — calligrapher detailing the word feels
+- M22087 — unrolling toilet paper
+- M15186 — cutting paper for a bouquet
+- M50708 — artist writing the word feels in calligraphy
+- M50701 — side view of calligraphy artist writing love
+- M50696 — calligraphy artist writing the word happy in purple ink
+- M49486 — having fun with a red paper plane
+- M47932 — hand flies a paper airplane with the blue sky in
+- M47928 — girl plays with a paper airplane in a field at
+- M25255 — slicing paper we cutting equipment
+- M17694 — man destroys contract
+- M50709 — close up of calligrapher adding details to the word feels
+- M49485 — back view of little boy playing outdoors
+- M47929 — playing with a paper aeroplane in the countryside
+- M45150 — painting with red paint on paper
+- M46685 — business people analyzing marketing data [USADO NO 001]
+- M28362 — signing a business contract close up [USADO NO 001]
+- M25260 — office printer printing [USADO NO 001]
+- M17050 — signing the dotted line of a contract [USADO NO 001]
+- M13881 — man with pen and paper on the desk [USADO NO 001]
+
+## technology
+- M31771 — scrambled dots and lines within a sphere of dots
+- M31510 — 3d animation of lines and luminous points rotating
+- M41656 — experienced programmer working on a powerful computer
+- M43527 — hands of a man playing on a computer
+- M44071 — boy editing a video on a computer
+- M43524 — group of friends having fun playing together online
+- M42665 — professional woman working on graphs in the office
+- M23216 — long server rack hallway
+- M31136 — delivery man looking for an address on the street
+- M42641 — young people working together in the office
+- M44748 — portrait man on a call working in an office
+- M581 — drone in the sky at a city
+- M101554 — desk level pov of man working
+- M43539 — womans hand using computer mouse
+- M44073 — boy working on his computer
+- M43532 — young man playing an online video game
+- M23282 — bluish data center hallway [USADO NO 001]
+- M23219 — long hallway in data center [USADO NO 001]
+- M41201 — woman browsing a news page on a tablet [USADO NO 001]
+- M47050 — close up of fiber optics in a server room [USADO NO 001]
+
+## data
+- M47793 — stock exchange information data
+- M21053 — colorful data scrolling
+- M14724 — reflection of screen information on glasses
+- M5437 — colorful marketing data hud graph animation
+- M47796 — stock subscription data in a real time screen
+- M23281 — hands working with laptop in datacenter
+- M255 — two people working on a black table
+- M23374 — timelapse of engineers working on data center
+- M24033 — data center at night
+- M319 — colleagues looking at information on mobile phone screen
+- M23210 — technician working with cables in the data center
+- M47212 — online graphs of cryptocurrency
+- M23159 — server room under attack
+- M23380 — time lapse of engineers working in a data center
+- M5424 — animated growth chart data infographic
+- M30869 — virtual network environment in a 3d render
+- M50617 — computer screen with a window showing different resolutions and technology
+- M48520 — close up of man sharing business card
+- M46636 — hacker making a new software at home
+- M23161 — young engineers working on server room
+- M23742 — i am working with laptop in the office at night
+- M23040 — a woman working with a computer in the server room
+- M23217 — engineer walking in data center hallway
+- M23108 — young man walking in the server room
+- M23007 — woman on server room logs into the computer
+- M23109 — datacenter engineer with a tablet
+- M23277 — young woman walking in server hallway
+- M23214 — man working with data center computer
+- M5463 — hud style animated financial data visualization
+- M28359 — manny is reviewing a business graph
+- M24031 — man using laptop on bitcoin mining farm
+- M48433 — three lines of compact discs on a black base
+- M23700 — man working with vr glasses in data center
+- M47213 — stock market information online
+- M23375 — engineers setting up a data center
+- M14771 — screen information reflects on a womans glasses
+- M5404 — marketing infographic data charts animation [USADO NO 001]
+- M22966 — engineers working in the data center [USADO NO 001]
+- M23158 — engineer team working in a server room [USADO NO 001]
+- M7891 — data cables in a server room [USADO NO 001]
+- M23218 — information technology specialist in data center [USADO NO 001]
+- M24057 — businessman discussing business charts [USADO NO 001]
+- M46746 — engineers working with multiple computer screens [USADO NO 001]
+- M31590 — digital network representation [USADO NO 001]
+- M30286 — information blocks virtual world concept [USADO NO 001]
+- M23162 — engineer walking among server racks [USADO NO 001]
+- M22981 — young engineer walking through data center [USADO NO 001]
+
+## city
+- M1606 — city train driving under a bridge
+- M49846 — side by side aerial view of a city at night
+- M34562 — two avenues with many cars traveling at night
+- M4442 — times square during a sunny day
+- M4000 — busy street in the city
+- M40656 — slowly walking down a path in a park
+- M134 — a man being followed walking in a city
+- M1599 — cars on the street
+- M101385 — modern office buildings reflecting on a lake
+- M4447 — neon signs with japanese letters
+- M49876 — avenue of a big city at night from the heights
+- M4348 — a calm street in paris
+- M101383 — flock of birds over urban lake
+- M4893 — footsteps of a young man walking down the street
+- M4454 — people in the subway hall in tokyo
+- M40741 — sunset in the distance walking through the city
+- M2034 — aerial shot of a busy avenue in the city
+- M49845 — aerial view of the glass corporate buildings of a big [USADO NO 001]
+- M3428 — street with people walking at dusk [USADO NO 001]
+- M4170 — corporate and business buildings in the city [USADO NO 001]
+
+## building
+- M49875 — panoramic aerial shot of a metropolis at night
+- M49849 — aerial view of a highway in a big city
+- M49806 — flying slowly over a big city
+- M4339 — city full of buildings
+- M49871 — huge city with a river in an aerial view at
+- M4079 — big ben clock time lapse [USADO NO 001]
+
+## street
+- M48004 — drops of rain falling on the street
+- M2793 — aerial view of a wooded landscape with a road
+- M4263 — ride through the streets of london
+- M49873 — aerial view of city roads and big iluminated city buildings
+- M56 — daytime city traffic aerial view
+- M4815 — blonde girl smiling head on on the street
+- M4272 — traffic light directing traffic
+- M98 — person walking on crosswalk
+- M49869 — aerial tour of a big city at dusk
+- M1227 — urban trendy girl walking to the camera
+- M25552 — trash pile on the street on a sunny day
+- M41540 — aerial travel above a highway in the city
+- M4144 — las vegas panning time lapse
+- M60 — busy intersection aerial view
+- M23816 — strange light lurking in the woods
+- M4401 — crowds of people cross a street junction [USADO NO 001]
+- M4128 — electronic ticker in the street [USADO NO 001]
+
+## people
+- M4629 — backlit woman walking at sunset
+- M4530 — lovers walking through a lavender field
+- M4948 — blonde woman reading a book
+- M4519 — students walking in a university
+- M4331 — traffic on a rainy night
+- M41581 — loving couple sitting on the shore of a lake outdoors
+- M1623 — people getting into the subway train
+- M4390 — interior of the train station
+- M4560 — students walking through a college
+- M4950 — woman sitting reading in pajamas
+- M47442 — nostalgic girl looking thru a window bus
+- M4788 — group of young people talking about their presentation
+- M4709 — cheerful young people giving each other a group hug
+- M351 — nightclub time lapse
+- M41192 — pov flipping through a newspaper [USADO NO 001]
+
+## home
+- M43607 — aerial shot of a river in nature
+- M42897 — woman turning off her alarm clock
+- M3112 — interior of a department room
+- M924 — silhouette of woman opening a window
+- M23319 — boy behind the window
+- M31406 — girl checking her cell phone in her bed upon waking
+- M4761 — concentrated boy studying at home
+- M42973 — upset man and sad woman
+- M3111 — master bedroom and window
+- M3977 — view of a window with a curtain [USADO NO 001]
+- M3978 — view from a window of the night outside [USADO NO 001]
+- M42121 — man and woman buying online on a laptop [USADO NO 001]
+
+## calendar
+- M34197 — scheduling an appointment on a smartphone
+- M17412 — marking a calendar [USADO NO 001]
+- M17413 — marking a calendar in july [USADO NO 001]
+- M38501 — crossing out days with down on a calendar [USADO NO 001]
+- M2847 — marking the calendar [USADO NO 001]
+- M22752 — figures on a calendar [USADO NO 001]
+- C5192 — july calendar [USADO NO 001]
+
+## time
+- M4478 — disk clock
+- M4070 — time lapse of a green meadow
+- M4028 — valley time lapse
+- M4065 — flight getting ready for departure
+- M101213 — sunset timelapse over the hills
+- M1774 — lake michigan at sunset aerial shot
+- M4049 — beautiful desert landscape timelapse
+- M4048 — desert time lapse
+- M4124 — many stars in the night sky
+- M4187 — dj playing on a stage with led screens
+- M49885 — face of a man thinking while playing chess
+- M4353 — eiffel tower illuminated at night
+- M4080 — red or blood moon time lapse
+- M28899 — woman turning off her alarm clock in the morning
+- M4076 — revolving restaurant in a city
+- M28897 — slowly approaching a clock on a black background [USADO NO 001]
+- M28892 — an hourglass and an analog wall clock [USADO NO 001]
+- M28893 — black analog clock in a very close shot [USADO NO 001]
+
+## clock
+- M39834 — metal bells alarm clock [USADO NO 001]
+- M28902 — alarm clock ringing on a wooden table [USADO NO 001]
+
+## door
+- M21821 — opening a hotel door with a keypad
+- M21817 — opening a hotel room door
+- M3494 — clothing shop with art on its doorstep
+- M46217 — a door opens by itself in a haunted abandoned house
+- M21818 — opening a store refrigerator door
+- M31434 — homeless cats on a wooden door
+- M28864 — opening a door of a metal furnace
+- M29455 — automatic doors at madrid airport
+- M23392 — man taking measurements in a building
+- M3492 — art in the door
+- M24964 — woman opening a car door and posing
+- M3491 — urban art on the doors of the houses
+- M33583 — person disinfecting a door with spray
+- M22724 — side door of a gothic church in the dark
+- M51047 — a young man opens the camping tent fabric door and
+- M33712 — person cleaning a door handle
+- M30867 — abstract concept of doors with islamic design
+- M23699 — worker closing the door in a factory
+- M46485 — closed fist raised in front of a steel door
+- M45029 — woman passenger looking out the door of a train as
+- M35293 — businessmen walking through a door in a desert
+- M34002 — businessmen walking in a row through a door
+- M46483 — man in a hoodie raises his fist outside a garage
+- M3499 — mural art at the doors
+- M15768 — army soldier returns home and hugs family at door
+- M958 — old truck door advertising a farmers market
+- M33874 — fire line to the floor of the entrance to a
+- M33867 — sneaky robed person with arms up under a red light
+- M12118 — girl welcomes her friend at home with a hug
+- M8746 — young woman getting excited at her boyfriend at home
+- M8733 — mother and daughter coming home
+- M1649 — street traffic building and pedestrians
+- M16293 — girl looking through a door [USADO NO 001]
+- M35182 — businessmen walking through a door in the desert [USADO NO 001]
+- M314 — two business people exit a building [USADO NO 001]
+- M21813 — woman opening a front door [USADO NO 001]
+- M31155 — delivering a package to the door of a house [USADO NO 001]
+- M31297 — woman at the door of her house receives a parcel [USADO NO 001]
+- M51522 — a young man opens the door and finds a surprise [USADO NO 001]
+- M8729 — mother coming home after picking up her daughter from school [USADO NO 001]
+- M1648 — morning in the street time lapse [USADO NO 001]
+
+## keys
+- M12877 — slow motion offer of house key and handshake
+- M28311 — girl sending a selfie by cell phone on a green
+- M44750 — satisfied woman finishes her work and leaves the office
+- M28309 — hands of two people shaking hands on a green background
+- M42751 — office woman at her desk on a green background
+- M100328 — office meeting with laptops and focused colleagues
+- M44749 — elegant woman working on a computer
+- M100330 — collaborative meeting with a digital display
+- M41944 — headlight of a motorcycle that is turned on by a
+- M12878 — realtor hand holds key and woman takes it
+- M6518 — couple get the keys to their new house
+- M36136 — excited couple showing their house keys
+- M3813 — many metal keys on rings
+- M4757 — little girl doing homework on a laptop
+- M47170 — dusty keys from an old typewriter
+- M12879 — young woman holds up house key with big smile
+- M24453 — delivering car keys to the owner
+- M28298 — friends man and woman meeting on a green background
+- M15064 — house keys on a table [USADO NO 001]
+
+## mail
+- M31137 — postman delivering envelopes to a person at home
+- M31274 — mother and daughter opening a package received in the mail
+- M13779 — opening a white envelope on a blue background
+- M22015 — woman checking her mail
+- M5827 — woman emailing while having breakfast
+- M31214 — mail delivery with digital signature [USADO NO 001]
+- M47085 — mail post box storage lockers [USADO NO 001]
+- M6710 — man checking his phone [USADO NO 001]
+
+## letter
+- M34158 — writing a letter on a sheet next to a daisy
+- M12540 — love letter burning
+- M15769 — teenage girl writes letter to army dad
+- M48216 — letters spelling the word sale hanging on a rope
+- M34621 — burning a letter on a campfire
+- M15770 — little boy in army hat writing letter to soldier
+- M50707 — calligraphy artist embellishing the word feels
+- M47804 — letters spelling sunday hanging on a string
+- M22011 — 3d printing a letter
+- M39972 — hands of a woman opening an envelope with a love
+- M50055 — pastry chef decorating a cake with letter shaped candles
+- M19195 — witchcraft letters from a burning fortune teller
+- M39970 — woman in sunglasses smiling in front of love letter balloons
+- M35662 — rain of light blue 3d letters and symbols
+- M45419 — hand writes teamwork in block letters on a blackboard
+- M47699 — hand places the missing letters on this 5 de mayo
+- M2838 — arrangement of letters that say for u
+- M45300 — close up of a keyboards letters
+- M21543 — cloth letters in the sand
+- M334 — couple arriving at a night club
+- M40639 — streets with cars and people during one night
+
+## law
+- M17051 — signature in contract with a pen close up
+- M46821 — judge pronouncing sentence against a usa flag
+- M14980 — woman running from someone at night
+- M46104 — freshly mowed law with dew
+- M47687 — judge writes verdict and sentence to be imposed [USADO NO 001]
+- M47686 — judge reads the sentence to be imposed [USADO NO 001]
+
+## brazil
+- M26278 — woman holding the brazilian flag in the wind
+- M42080 — brazilian flag waving on top of a flagpole
+- M42103 — man waving the flag of brazil in slow motion
+- M42107 — close up view of a brazilian flag
+- M42091 — flag of brazil waving
+- M18843 — brazils flag
+- M44599 — brazil fan watching a world cup match
+- M42097 — young man waving the flag of brazil
+- M42090 — man waving the flag of brazil
+- M44598 — portrait of a brazilian fan watching the world cup
+- M42100 — boy waving the brazilian flag outdoors
+- M8812 — closeup of brazilian flag waving gently in the wind
+- M22086 — rio written in the sand
+- M18033 — brazilian flag gently waving
+- M22085 — young boy holding the brazilian flag
+- M9345 — texture of brazil nuts falling on a tablecloth
+
+## crowd
+- M15997 — people feet walking
+- M13192 — audience raise hands at business conference
+- M48510 — a close up shot in slow motion captures the crowd at
+- M4364 — monument in a plaza at night
+- M23200 — entrepreneurs explaining project people
+- M99953 — a confident performer in corset waving her hands energetically with
+- M14087 — festival crowd at night
+- M99967 — a diverse group of people dressed in flamboyant and stylish
+- M48505 — crowd of people close to stage waving arms in time
+- M99968 — lgbtq person in a bold outfit confidently walking and performing
+- M7088 — crowd of koi carp fish in a freshwater pond
+- M7837 — people walking in nepal
+- M33243 — family enjoying a movie at the cinema medium shot
+- M47854 — fan cheering for a band in the crowd covered in
+- M48504 — shot of crowd jumping and waving arms at a show
+- M9586 — aerial view of a nightclub crowd
+- M4180 — commuters at new yorks grand central station [USADO NO 001]
+- M23318 — businessman talking to an audience [USADO NO 001]
+- M9585 — crowd cheering at the stadium [USADO NO 001]
+
+## texting
+- M31405 — responding to messages in the morning upon waking
+- M21840 — texting in the city at night
+- M36440 — girl in the back seat of a car texting
+- M32617 — man texting on cell phone while walking in park
+- M51122 — woman texting with a generic cell phone
+- M36523 — sad girl on a bench looking to her smartphone
+- M40670 — young man with mask traveling by subway with his cellphone
+- M39788 — woman lying on a sofa sending messages on her cell
+- M39954 — boyfriend hugs his girlfriend distracted on her cell phone
+- M41167 — happy man chatting on his cell phone
+- M39837 — seated man typing on his smartphone
+- M556 — photographer using a smartphone
+- M5312 — man in a suit and a mask checks his cell
+- M346 — woman texting in a club entrance
+- M265 — guy texting at sunset
+- M5178 — young woman on her cell phone after training
+- M35925 — man using a smartphone on a wooden table
+- M35918 — hands of a man using his cellphone
+- M1712 — a person texting on a smartphone at the street
+- M4771 — girl texting with face mask on the street
+- M47207 — young man texting with a smartphone
+- M22180 — woman waiting for her laundry to finish
+- M51125 — close up of a woman texting with both hands
+- M2397 — a man texting in the street
+- M5320 — woman with face mask walking while texting
+- M347 — young man texting at a club
+- M46550 — woman in a leather jacket laughing at phone
+- M32008 — confident woman texting and walking
+- M35401 — businessman texting with a smartphone
+- M31478 — hand texting with tv static in the background
+- M31476 — silhouette of hands texting
+- M22543 — texting before a flight
+- M11442 — young man texting in the city
+- M5313 — girl with masks chatting on her cell phone
+- M36442 — girl texting in the back seat of a car
+- M34244 — a mans hand holding a cell on a boat
+- M34092 — hands of a businessman texting on a cell phone
+- M21740 — businessman texting on a cell
+- M17531 — young woman on the street texting on her phone
+- M13234 — young woman eats sandwich in cafe while texting
+- M9256 — woman texting happily on social media
+- M6708 — friends texting
+- M5345 — woman in a mask sends messages on her smart phone
+- M38485 — man typing on a small tablet
+- M37000 — woman focused on her smartphone
+- M36120 — woman texting lying on bed during breakfast
+- M36102 — woman sending messages on her cell phone
+- M33510 — young woman texting with her smartphone
+- M4891 — woman walking down the street watching her cell phone [USADO NO 001]
+- M41166 — person answering a message [USADO NO 001]
+- M41175 — excited man looking at his cellphone [USADO NO 001]
+- M41168 — man thinks how to answer a message [USADO NO 001]
+- M1818 — a man texting with a smartphone [USADO NO 001]
+- M4822 — woman texting on the street [USADO NO 001]
+- M36518 — girl sitting on a bench watching her cell phone [USADO NO 001]
+- M1713 — a person in the street messaging on a smartphone [USADO NO 001]
+- M51126 — close up of a woman texting quickly [USADO NO 001]
+- M6509 — businessman using his phone in the office [USADO NO 001]
+
+## video-call
+- M48680 — young woman smiling and waving in greeting to people on
+- M10450 — man in a video call at work is discovered by
+- M41208 — happy man chatting by video call on a tablet
+- M10447 — young woman talking on video call lying on her bed
+- M43562 — man using virtual reality glasses at home
+- M39800 — young woman on a terrace having a video call
+- M4706 — girl on video call with her friends
+- M41202 — young woman having a video call by tablet
+- M39799 — girl on a terrace having a video call
+- M46021 — man being interviewed over a video call
+- M45754 — marketer pointing to a graph chart on a video call
+- M45747 — office worker wearing headphones on a video call with a
+- M41211 — happy woman talking on video call on a tablet
+- M14040 — a business woman at a video conference at the office
+- M39802 — face of a woman having a video call outdoors
+- M49386 — young office worker greeting colleagues on a video call
+- M47219 — young woman says hi in a video call
+- M4594 — happy lady has a computer video call
+- M48724 — student participating in an online webinar
+- M47004 — woman talking on a video call
+- M5421 — sick man in online video consultation with doctor
+- M41197 — young woman on a video call lying on a bed
+- M41195 — girl in the middle of a video call on her
+- M6320 — happy family watching a video together
+- M5420 — quarantined man chats on smartphone on couch
+- M26299 — video calling from a hotel room
+- M9082 — woman opens video call on futuristic hologram panel in bed
+- M8771 — family waves hello to woman on laptop video call
+- M8762 — man says hello on smartphone video call
+- M5479 — elderly couple enjoying video call on sofa with tablet
+- M5467 — sick man in video call with doctor during virus lockdown
+- M5449 — reveal view of sick man on video call with doctor
+- M5406 — quarantined man with smartphone video chats on sofa
+- M5389 — man waves hello to family on video call
+- M5385 — doctor consults coronavirus patient on video call
+- M48998 — elderly couple waving hello at camera while chatting on a
+- M45690 — girl sitting in bed on a video call on her
+- M39521 — young man on a video call in his room
+- M24151 — a man with friends on a video call at the
+- M22122 — young couple on a video call in a cafe
+- M17528 — doctor on a video call on the mobile phone
+- M15893 — screen view of friend waving hello on video call
+- M9183 — woman having a video call at the park
+- M8930 — man gets emotional on mobile video call
+- M8921 — woman prepares dinner while video chatting on laptop
+- M8891 — friends say hello on video call while walking outdoors
+- M8790 — man laughs at facebook video call outside cafe
+- M8785 — man smiles at facebook video call from family
+- M6529 — students talking on a video call
+- M6239 — family watching a funny video
+- M5557 — man asks for coronavirus diagnosis on video call
+- M5432 — sick man chats on video call from couch at home
+- M48679 — young woman waving at people on a video call
+- M48678 — close up of a young man greeting people on a
+- M28985 — video call over breakfast
+- M28969 — couple having a video call while camping
+- M27911 — couple having a video call on holiday
+
+## senior woman phone
+- C65007 — premium selfie time at the hollywood sign
+- C92219 — premium city view conversation
+- C94985 — tech savvy user with various gadgets
+- C83277 — focused texting by car trunk
+- C66397 — premium twilight tech time
+- C46437 — travelers pause texting while waiting
+- C37990 — texting at twilight
+- C31830 — young woman texting by the marina
+- C29541 — elegant lady texting in evening cityscape
+- C73294 — texting by the marina
+- C45372 — texting by the marina at dusk
+- C68818 — young woman showing off the marina over video call
+- C29710 — urban call woman on the phone
+- C70082 — worried woman talking on phone in city
+- C80418 — premium businesswoman enjoying a break outdoors
+- C23567 — premium businesswoman checking smartphone outdoors
+- C54781 — premium professional woman working outdoors
+- C87762 — premium focused woman working outdoors
+- C90707 — focused remote work at outdoor setting
+- C32027 — urban professional on a phone break
+- C21049 — smiling woman with smartphone outdoors
+- C65988 — businesswoman enjoying cityscape
+- C38729 — businesswoman texting outdoors
+- C49859 — businesswoman checking phone outdoors
+- C79348 — smiling woman texting in park
+- C68555 — hiker capturing memories with smartphone
+- C59986 — premium smiling woman using smartphone in city
+
+## old man smartphone
+- C5227 — old man using a laptop
+
+## bank branch
+- C9403 — a man counting money
+- C7958 — a man counting 50 euro banknotes
+- C5513 — cashier folding a jacket
+- C1404 — cashier talking on the phone
+- C4079 — putting boots on the cash desk
+- C1114 — british telephone booth
+
+## atm
+- C24911 — calculating expenses with cash and calculator
+- C87392 — secure online payment process
+- C88268 — focused outdoor study session
+- C4630 — a girl browsing the nft marketplace while sitting on an office chair
+- C6120 — man steaming a sweatshirt
+
+## people waiting line
+- C10156 — waiting for check in hotel lobby scene
+- C69427 — premium focused woman texting on smartphone
+- C7812 — businesswoman waiting for a meeting
+- C2673 — typing on a laptop at the airport
+- C2036 — waiting at the airport
+- C4717 — walking with suitcase
+- C4893 — student waiting for class
+- C8880 — woman waiting to meet someone
+- C3150 — queue to carrefour market in paris
+- C6795 — socially distanced queue
+- C8923 — traffic lights in paris
+- C1204 — men waiting for a flight
+- C3892 — woman waiting for the subway
+- C6530 — timetable movement buses in london [USADO NO 001]
+- C9066 — woman opens laptop and types [USADO NO 001]
+- C568 — queue to a newspaper store [USADO NO 001]
+
+## phone call worried
+- C75655 — outdoor messaging break
+- C1514 — solitude by the sea reading time
+- C6896 — a man makes a phone call at his home office
+- C7612 — girl picking up the phone
+- C2625 — man making a phone call
+- C7358 — man on the phone
+- C3363 — answering a phone call
+- C9762 — a man calling his friend while standing in the street [USADO NO 001]
+
+## scam call
+- C48443 — casual chat on smartphone voice message
+- C36726 — premium a woman says hi on a video call
+- C9043 — a businessman talking on his smartphone
+- C6246 — a woman recording a voice message free stock video coverr
+- C514 — a woman recording a voice message on her smartphone
+- C3418 — female talking on a video call
+- C7669 — woman video calling her friend in the park
+
+## server room
+- C82381 — traveler texting in hotel hallway
+- C68919 — contemplative woman with laptop outdoors
+- C4383 — the sensory screen on the printer machine
+- C4871 — a guy puts the paper in the printer machine
+- C3235 — premium colleagues working together in the office
+- C7343 — premium a team prepares to work in the office
+- C8237 — premium a man scrolling through photos on his laptop
+- C2907 — premium a senior man putting on glasses to use a laptop
+- C2313 — premium a man shutting down his laptop after completing his work
+
+## cyber security
+- C64025 — checking messages by the marina
+- C91003 — blurry online payment interface
+- C74268 — blurred online form on a screen
+- C88686 — freelancer enjoying natures office
+- C30048 — focused student studying outdoors
+- C80052 — secure online shopping experience
+- C1291 — online shopping with credit card
+- C81082 — outdoor online shopping session
+
+## data breach
+- C4901 — a girl walking around the room holding a laptop in her hands
+- C652 — a trader writing analytical data in a notebook
+
+## office night
+- C33289 — mysterious doorway at night
+- C944 — premium young professional facing modern office
+- C32520 — urban professional on laptop outdoors
+- C13588 — urban professional working outdoors
+- C7789 — premium a man sits down at the desk in the office
+- C8393 — a young man adjusts an electric fan in the office
+- C3740 — premium a young man and woman discussing work in the office
+
+## signing documents
+- C87324 — premium tourist texting by hollywood sign
+- C3816 — premium smart lock door opening close up
+- C29762 — premium keycard access to modern door lock
+- C26137 — urban morning coffee and phone check
+- C40811 — connected on the go smartphone in use
+- C25307 — focused writing session outdoors
+- C4636 — a guy puts the paper into the shredder
+- C426 — a guy is typing something on the whiteboard
+- C5252 — a printer at work in the office
+- C8143 — task card
+- C8865 — premium workers make copies of documents on the printer
+- C1731 — office building
+
+## brazil city
+- C2624 — premium friends taking photos on lisbon street
+- C3313 — premium friends standing on lisbon street
+- C5098 — premium friends exploring the city from the top
+- C8207 — premium friends walking on lisbon street
+- C4365 — premium friends walking along the street
+- C2396 — premium a young man talking on the phone in lisbon
+- C49 — premium a guy talks on a phone on a street
+- C2015 — premium a guy puts his smartphone into a pocket
+- C8815 — brazilian banknotes fall in a heap
+- C2949 — premium girl exploring and taking photos of the city on a professional camera
+- C7884 — a guy walks with a smartphone
+- C7853 — a sunny day in the city of belem lisbon
+- C3377 — friends walking down an old city street
+- C9320 — friends viewing the city from on top of a balcony
+- C5583 — town in brazil
+- C1641 — cacti near a building
+- C4147 — coast in brazil
+- C7379 — a blurry shot of a guy using a smartphone [USADO NO 001]
+
+## sao paulo
+- C2876 — coastline in ponta de s o louren o
+
+## brasilia
+- C1166 — premium brazilian coin spinning on a black background
+- C1974 — boat on a brazilian river
+- C8577 — an old brazilian banknote [USADO NO 001]
+
+## family home
+- C2229 — family at thanksgiving
+- C2014 — couple relaxing at home
+- C2553 — a couple relaxing at home
+- C2133 — couple spending time at home
+- C5136 — couple spending time together
+
+## online banking
+- C91818 — online payment and budget planning
+- C55496 — blurred tablet screen close up
+- C5707 — browsing information about nfts on a laptop
+- C9327 — a trader performing financial analysis of cryptocurrency using a phone app and laptop
+- C8914 — a trader performing financial analysis of cryptocurrency using a phone app
+
+## password
+- C7349 — images of a subscribe logo on a laptop screen
+- C4953 — workers typing and closing their laptops
+- C3645 — a woman typing on a laptop
+- C127 — medium shot of a tourist walking to a hotel room
+- C9667 — old man entering his apartment
+- C240 — old man closing a door
+- C9731 — an old man leaving his apartment
+- C7847 — male hands typing
+- C8021 — using laptop at the airport
+- C9693 — woman opens laptop at airport
+- C552 — woman on her laptop on a plane
+- C4743 — closing laptop [USADO NO 001]
+- C1905 — woman using a laptop [USADO NO 001]
+- C967 — checking emails on a laptop [USADO NO 001]
+
+## email notification
+- C73030 — serene marina texting moment
+- C72874 — stroll at the marina with smartphone
+- C11380 — texting in the park on a sunny day
+- C62680 — young woman checking smartphone outdoors
+- C56572 — serene reading time by the seashore
+- C3245 — premium texting messages on a smartphone
+- C839 — premium email on a smartphone
+
+## newspaper
+- C725 — premium businesswoman writing carefully in a notebook
+- C4089 — premium businesswoman working in a cafe
+- C8700 — a man cutting rolling paper
+- C1936 — a man licking cigarette paper
+- C2309 — student doing an assignment on a laptop
+- C3564 — woman sitting at her desk and studying at home
+- C957 — opening the laptop
+- C6650 — boy and girl studying outdoors
+- C3529 — writing a poem outdoors
+
+## typing keyboard
+- C3006 — premium a girl is typing something on the whiteboard
+- C6414 — premium woman s hands are typing on a keyboard
+- C2802 — person typing on a keyboard
+- C1187 — a woman s hands typing on a keyboard
+- C775 — fingers typing on a laptop
+- C878 — woman s hands typing on a laptop
+- C1054 — student typing on a laptop
+- C9617 — typing on the keyboard
+- C2372 — putting on headphones and typing
+- C6507 — typing on a black laptop
+- C9766 — typing on a laptop and closing it
+- C8842 — typing on a white keyboard
+- C5698 — typing on a white keyboard
+- C550 — typing on computer keyboard
+- C5877 — typing on laptop
+- C4218 — girl typing on a laptop
+- C763 — female hands typing
+- C5131 — typing
+- C4707 — close up of woman typing
+- C7199 — slow motion typing on a laptop
+- C3805 — typing quickly on a laptop
+- C137 — a man typing on a laptop
+- C5794 — woman typing on laptop
+- C6593 — typing on macbook keyboard
+
+## smartphone notification
+- C6195 — texting outdoors in cozy jacket
+- C5106 — man texts on smartphone in sunlight [USADO NO 001]
+
+## Caixa Econômica Federal sede Brasília
+- F67284550 — Mais Educação - Brasília (14467062574).jpg — CC BY-SA 2.0, Ministério do Desenvolvimento Social
+
+## agência bancária Brasil fila
+- F90008382 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49854668788).jpg — CC BY 2.0, Prefeitura de Itapevi from Itapevi, Brasil
+- F90008378 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49854668908).jpg — CC BY 2.0, Prefeitura de Itapevi from Itapevi, Brasil
+- F90008335 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49854734058).jpg — CC BY 2.0, Prefeitura de Itapevi from Itapevi, Brasil
+- F90008329 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49854734213).jpg — CC BY 2.0, Prefeitura de Itapevi from Itapevi, Brasil
+- F90008379 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49855207611).jpg — CC BY 2.0, Prefeitura de Itapevi from Itapevi, Brasil
+- F90008381 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49855207706).jpg — CC BY 2.0, Prefeitura de Itapevi from Itapevi, Brasil
+- F90008346 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49855271781).jpg — CC BY 2.0, Prefeitura de Itapevi from Itapevi, Brasil
+- F90008344 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49855573887).jpg — CC BY 2.0, Prefeitura de Itapevi from Itapevi, Brasil
+- F90008343 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49855573932).jpg — CC BY 2.0, Prefeitura de Itapevi from Itapevi, Brasil
+- F90008328 — (2020.05.04) Agências Bancárias e Lotéricas, Serão multada se não organizarem suas filas (49855574477).jpg — CC BY 2.0, Prefeitura de Itapevi from Itapevi, Brasil
+
+## caixa eletrônico Brasil
+- F63269688 — Prisão de Arrombadores de Caixas Eletrônicos (4427344413).jpg — CC BY 2.0, Fotos GOVBA from Bahia/Brasil
+- F63269708 — Prisão de Arrombadores de Caixas Eletrônicos (4428108136).jpg — CC BY 2.0, Fotos GOVBA from Bahia/Brasil
+- F63269687 — Prisão de Arrombadores de Caixas Eletrônicos (4428108222).jpg — CC BY 2.0, Fotos GOVBA from Bahia/Brasil
+- F63269696 — Prisão de Arrombadores de Caixas Eletrônicos (4428108430).jpg — CC BY 2.0, Fotos GOVBA from Bahia/Brasil
+- F63269709 — Prisão de Arrombadores de Caixas Eletrônicos (4428108536).jpg — CC BY 2.0, Fotos GOVBA from Bahia/Brasil
+- F63269712 — Prisão de Arrombadores de Caixas Eletrônicos (4428108834).jpg — CC BY 2.0, Fotos GOVBA from Bahia/Brasil
+- F63269726 — Prisão de Arrombadores de Caixas Eletrônicos (4428108906).jpg — CC BY 2.0, Fotos GOVBA from Bahia/Brasil
+- F63269720 — Prisão de Arrombadores de Caixas Eletrônicos (4428108994).jpg — CC BY 2.0, Fotos GOVBA from Bahia/Brasil
+- F63269722 — Prisão de Arrombadores de Caixas Eletrônicos (4428109158).jpg — CC BY 2.0, Fotos GOVBA from Bahia/Brasil
+- F63269711 — Prisão de Arrombadores de Caixas Eletrônicos (4428109204).jpg — CC BY 2.0, Fotos GOVBA from Bahia/Brasil
+
+## Tesouro Nacional Brasília
+- F162657430 — IBPA 141679 - Brasília, DF, Brasil - 20-12-2024 - Reunião com a Subsecretária do Tesouro - 2024-12-20 - Cesar Lopes-PMPA.jpg — Attribution, Cesar Lopes / PMPA
+- F162707584 — IBPA 141681 - Brasília, DF, Brasil - 20-12-2024 - Reunião com a Subsecretária do Tesouro - 2024-12-20 - Cesar Lopes-PMPA.jpg — Attribution, Cesar Lopes / PMPA
+- F51914688 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24302885179).jpg — CC BY 2.0, Agência Brasil Fotografias
+- F51914689 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24302885579).jpg — CC BY 2.0, Agência Brasil Fotografias
+- F51914683 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24302886739).jpg — CC BY 2.0, Agência Brasil Fotografias
+- F51914684 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24375026310).jpg — CC BY 2.0, Agência Brasil Fotografias
+- F51914686 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24375031780).jpg — CC BY 2.0, Agência Brasil Fotografias
+- F51914680 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24577030101).jpg — CC BY 2.0, Agência Brasil Fotografias
+- F51914681 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24644349346).jpg — CC BY 2.0, Agência Brasil Fotografias
+- F51914687 — Tesouro Nacional apresenta o resultado de dezembro de 2015 (24670583605).jpg — CC BY 2.0, Agência Brasil Fotografias
+
+## Banco Central do Brasil sede
+- F175988495 — Banco Central do Brasil de Fortaleza 04.jpg — CC BY-SA 4.0, Joelkaula
+- F175988497 — Banco Central do Brasil de Fortaleza 05.jpg — CC BY-SA 4.0, Joelkaula
+- F175988503 — Banco Central do Brasil de Fortaleza 07.jpg — CC BY-SA 4.0, Joelkaula
+- F175988502 — Banco Central do Brasil de Fortaleza 08.jpg — CC BY-SA 4.0, Joelkaula
+- F37162033 — Edificio Sede del Banco Central de Brasil en São Paulo.jpg — CC0, Wilfredor
+- F40450476 — Edifício sede do Banco Central do Brasil (16011634694).jpg — CC BY 2.0, Senado Federal
+- F40450474 — Edifício sede do Banco Central do Brasil (16011635094).jpg — CC BY 2.0, Senado Federal
+- F40450472 — Edifício sede do Banco Central do Brasil (16607833736).jpg — CC BY 2.0, Senado Federal
+
+## São Paulo avenida Paulista noite
+- F61863955 — Av Paulista (Unsplash).jpg — CC0, Yuri  Catalano yuricatalano
+- F58980417 — Avenida Paulista, São Paulo, Brasil - panoramio (6).jpg — CC BY-SA 3.0, CORRETOR-CARVALHO
+- F53000716 — Avenida Paulista, São Paulo, Brasil - panoramio - Ricardo Migliani (1).jpg — CC BY 3.0, Ricardo Migliani
+- F57973308 — Avenida Paulista 33.jpg — CC BY-SA 4.0, Wilfredor
+- F149402631 — Avenida Paulista à noite, São Paulo.jpg — CC BY 2.0, @rodrigocfavero
+- F3493219 — Graffiti at Paulista Ave and Dr. Arnaldo Ave, São Paulo, Brazil.jpg — CC BY 2.5, Rosana Maria Machado Marques
+- F55036960 — Santa Catarina Hospital, Avenida Paulista, São Paulo, Brazil.jpg — CC BY-SA 4.0, Wilfredor
+- F3517536 — Túnel da Av. Paulista, São Paulo, Brazil.jpg — CC BY 2.5, Rosana Maria Machado Marques
+
+## agência Caixa Econômica Federal
+- F91119973 — Agen da Caixa Econômica Federal em Campo Maior.jpg — Public domain, Moacir Ximenes
+- F9111067 — Agência da Caixa Econômica Federal em Almirante Tamandaré.JPG — Public domain, Deyvid Setti
+- F127980338 — Agência da Caixa Econômica Federal em Paratinga, janeiro de 2023.jpg — CC BY-SA 4.0, Fronteira
+- F126920393 — Agência da Caixa Econômica Federal na Universidade Federal de Goiás, Goiânia, dezembro de 2022 (2).jpg — CC BY-SA 4.0, Fronteira
+- F107355840 — Agência da Caixa Econômica Federal na Universidade Federal de Goiás, Goiânia, julho de 2021.jpg — CC BY-SA 4.0, Fronteira
+- F80334665 — Agência móvel da Caixa Econômica Federal.JPG — Public domain, Moacir Ximenes
+- F56938091 — Caixa Econômica Federal (2), Paratinga, janeiro de 2017.jpg — CC BY-SA 4.0, Fronteira
+- F81608247 — Cidade de Araci - 93.jpg — CC BY-SA 4.0, Ajmcbarreto
+- F50694029 — Agência Caixa Econômica Federal, Paratinga, 2016.jpg [USADO NO 001] — CC BY-SA 4.0, Fronteira
+- F126920394 — Agência da Caixa Econômica Federal na Universidade Federal de Goiás, Goiânia, dezembro de 2022 (1).jpg [USADO NO 001] — CC BY-SA 4.0, Fronteira
+
+## Esplanada dos Ministérios Brasília
+- F48305004 — Arquivo da Agência Brasil - Brasília 15.jpg — CC BY 3.0 br, Arquivo/Agência Brasil
+- F2464899 — Esplanada dos Ministérios, Brasília DF 04 2006.jpg — Public domain, Mario Roberto Durán Ortiz
+- F89358738 — Esplanada dos Ministérios (48205132557).jpg — CC BY 2.0, Senado Federal from Brasilia, Brazil
+- F121093855 — Esplanada dos Ministérios (52232232753).jpg — CC BY 2.0, Agência Senado from Brasilia, Brazil
+- F121093859 — Esplanada dos Ministérios (52232498374).jpg — CC BY 2.0, Agência Senado from Brasilia, Brazil
+- F95496517 — Esplanada dos Ministérios - 50494787276.jpg — CC BY 2.0, Senado Federal
+- F107746924 — Museu da República 1 edit.jpg — CC BY-SA 4.0, Fwsbsb
+- F45352843 — Nossa Brasília - Esplanada dos Ministérios (16579876914).jpg — CC BY 2.0, Agência Brasília
+- F123387413 — Esplanada dos Ministerios a noite.jpg [USADO NO 001] — CC BY-SA 4.0, Dasfour2022
+
+## Palácio do Planalto
+- F61372606 — Guarda Presidencial no Palácio do Planalto (35906623615).jpg — CC BY 2.0, Jonas Pereira/Agência Senado
+- F123536665 — PalaciodoplanaltoFR.jpg — CC BY-SA 4.0, Dasfour2022
+- F83498416 — Palácio do Planalto (14091328829).jpg — CC BY 2.0, Michel Temer
+- F28380198 — Palácio do Planalto (8721928846).jpg — CC BY 2.0, Leandro Neumann Ciuffo
+- F28380199 — Palácio do Planalto - 2 (8726935114).jpg — CC BY 2.0, Leandro Neumann Ciuffo
+- F92502514 — Palácio do Planalto em 2020.jpg — CC BY 2.0, Senado Federal
+- F123381198 — Palácio do Planalto reflexcao em Rosa.jpg — CC BY-SA 4.0, Dasfour2022
+- F35350053 — Planalto panorama.jpg — CC BY 2.0, Michel Temer
+- F43778506 — Reflexos do Planalto.jpg — CC BY-SA 4.0, Jonas Richter
+- F83489797 — Palacio do Planalto.jpeg [USADO NO 001] — Public domain, Annemariebr at English Wikipedia
+
+## Congresso Nacional Brasília
+- F57617092 — Brasília - Congresso Nacional - panoramio.jpg — CC BY 3.0, AndersonRHCP22
+- F524093 — Brazilian National Congress.jpg — CC BY-SA 2.5, Eurico Zimbres
+- F65039292 — CONGRESSO NACIONAL BRASÍLIA FOTO ARLEY DA CRUZ.jpg — CC BY-SA 4.0, Arley da Cruz
+- F39989510 — Congresso Nacional, Brasília-DF, Brasil.jpg — CC BY 2.0, Dária Baísa
+- F85502566 — Congresso Nacional BSB 06 2014 8856 cropped.jpg — CC BY-SA 4.0, Mariordo (Mario Roberto Durán Ortiz)
+- F55310314 — Congresso Nacional de Brasília - panoramio.jpg — CC BY 3.0, Bernhard Enders
+- F12449874 — Congresso do Brasil.jpg — CC BY-SA 2.0, P - A - S
+- F130403150 — Imagens de Brasília - Congresso Nacional (50060213016).jpg — CC BY 2.0, Agência Senado from Brasilia, Brazil
+- F20682110 — Brasilia Eixo Monumental Nat Congress Ministries from TV Tower.jpg [USADO NO 001] — CC BY-SA 3.0, Cayambe
+- F130403155 — Imagens de Brasília - Congresso Nacional (50059647053).jpg [USADO NO 001] — CC BY 2.0, Agência Senado from Brasilia, Brazil
+
+## Praça dos Três Poderes
+- F88995062 — Imagens de Brasília - Praça dos Três Poderes - 49732065671.jpg — CC BY 2.0, Senado Federal
+- F88995061 — Imagens de Brasília - Praça dos Três Poderes - 49732389232.jpg — CC BY 2.0, Senado Federal
+- F11726207 — Praça 3 Poderes Brasília panorama.jpg — CC BY-SA 3.0, Eric Gaba (Sting - fr:Sting)
+- F110959136 — Praça dos Três Poderes, vista parcial.jpg — CC BY-SA 4.0, Lou Fernando
+- F133916733 — Réplica 14 BIS - Praça dos Três Poderes.jpg — CC BY-SA 4.0, Juliana Werneck
+
+## water leak
+- C5085 — dripping faucet [USADO NO 001]
