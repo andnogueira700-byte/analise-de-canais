@@ -66,3 +66,20 @@
 - cartão de capítulo / vinheta (tela preta, texto com efeito de digitação)
 - etiqueta de data ou local
 - carimbo "VAZADO"
+
+## Tipos de plano disponíveis no renderizador (atualizado para os blocos)
+
+| tipo | o que faz | grifo_ou_texto |
+|---|---|---|
+| video | vídeo de banco com zoom/pan | - |
+| print | notícia com marca-texto amarelo varrendo a frase | a frase exata visível na página |
+| texto | frase em caixas brancas à esquerda (estilo Elementar) | a frase |
+| frase_centro | **NOVO (teste pedido pelo dono):** frase grande surgindo no centro, sem caixa, sobre o vídeo escurecido | a frase |
+| numero | número grande amarelo + legenda em tarja vermelha | ex.: "7,6 MI DE CLIENTES" |
+| calendario | semana com o dia marcado | ex.: "SEXTA · 06/11/2026" ou "QUARTA · 11/11/2026 · AVISO" |
+| lista | **NOVO:** lista numerada, itens surgindo um a um (fundo chumbo) | itens separados por " / " (ex.: "EMPRESA DESCOBRE / AVALIA O RISCO / CONTA 3 DIAS ÚTEIS / AVISA VOCÊ") |
+| familia | **NOVO:** diagrama mãe → filha | "MÃE / FILHA / NOTA" (ex.: "CAIXA SEGURIDADE / CAIXA VIDA E PREVIDÊNCIA / NÃO É A CAIXA ECONÔMICA FEDERAL") |
+| cartao | **NOVO:** título grande centralizado + subtítulo, fundo chumbo (para conceitos e comparações) | "TÍTULO / subtítulo" |
+| vinheta | tela preta com texto digitado | linhas separadas por " / " |
+
+Para pedir um vídeo que não está no catálogo, escreva na coluna asset: `NOVO:termo em inglês` (ex.: `NOVO:apartment building doorman`). O Diretor busca no Mixkit/Coverr e troca pelo ID.

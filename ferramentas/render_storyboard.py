@@ -340,6 +340,101 @@ def poeira(img, quadro):
     return img
 
 
+def frase_centro(base, texto, k):
+    """Frase grande surgindo no centro, sem caixa, sobre o vídeo escurecido (teste pedido pelo dono)."""
+    img = escurecer(base, 0.38, 8)
+    d = ImageDraw.Draw(img)
+    fnt = fonte(FONTE_BLACK, 96)
+    linhas = quebrar(texto, fnt, 1500, d)
+    alt = 122
+    y0 = H // 2 - len(linhas) * alt // 2
+    a = min(1.0, k * 5)
+    for j, ln in enumerate(linhas):
+        tw = d.textlength(ln, font=fnt)
+        y = y0 + j * alt + int((1 - a) * 40)
+        cor = tuple(int(255 * a) for _ in range(3))
+        d.text(((W - tw) / 2, y), ln, font=fnt, fill=cor, stroke_width=3, stroke_fill=(0, 0, 0))
+    if a >= 1:
+        larg = 140
+        d.rectangle([(W - larg) / 2, y0 + len(linhas) * alt + 18, (W + larg) / 2, y0 + len(linhas) * alt + 28], fill=AMARELO)
+    return img
+
+
+def lista(texto, k):
+    """Lista numerada com itens surgindo um a um (fundo chumbo, números em amarelo)."""
+    img = fundo_chumbo()
+    d = ImageDraw.Draw(img)
+    itens = [t.strip() for t in texto.split("/") if t.strip()]
+    fn, fi = fonte(FONTE_BLACK, 58), fonte(FONTE, 62)
+    alt = 118
+    y0 = H // 2 - len(itens) * alt // 2
+    for j, it in enumerate(itens):
+        t0 = j / max(1, len(itens)) * 0.7
+        if k < t0:
+            continue
+        a = min(1.0, (k - t0) * 8)
+        y = y0 + j * alt
+        x = 360 + int((1 - a) * 40)
+        ultimo = j == len(itens) - 1
+        d.text((x, y), f"{j + 1:02d}", font=fn, fill=AMARELO)
+        d.text((x + 120, y), it, font=fi, fill=AMARELO if ultimo and k > 0.85 else (240, 242, 246))
+    return img
+
+
+def familia(texto, k):
+    """Diagrama mãe -> filha, com nota de alerta."""
+    img = fundo_chumbo()
+    d = ImageDraw.Draw(img)
+    partes = [t.strip() for t in texto.split("/")]
+    mae, filha = partes[0], partes[1] if len(partes) > 1 else ""
+    nota = partes[2] if len(partes) > 2 else ""
+    fr, ft = fonte(FONTE_MED, 34), fonte(FONTE_BLACK, 56)
+    def caixa(cx, cy, rotulo, nome, cor, a):
+        if a <= 0:
+            return
+        w = max(d.textlength(nome, font=ft) + 90, 560)
+        y = cy + int((1 - a) * 30)
+        d.rounded_rectangle([cx - w / 2, y - 80, cx + w / 2, y + 80], 22, outline=cor, width=6, fill=(20, 24, 31))
+        d.text((cx - d.textlength(rotulo, font=fr) / 2, y - 62), rotulo, font=fr, fill=cor)
+        d.text((cx - d.textlength(nome, font=ft) / 2, y - 14), nome, font=ft, fill=(255, 255, 255))
+    caixa(W / 2, 250, "MÃE", mae, AMARELO, min(1, k * 4))
+    if k > 0.25:
+        a = min(1, (k - 0.25) * 4)
+        d.line([(W / 2, 340), (W / 2, 340 + 150 * a)], fill=AMARELO, width=6)
+        if a >= 1:
+            d.polygon([(W / 2 - 18, 470), (W / 2 + 18, 470), (W / 2, 495)], fill=AMARELO)
+    caixa(W / 2, 600, "FILHA (ATACADA)", filha, VERMELHO, min(1, (k - 0.4) * 4))
+    if nota and k > 0.65:
+        fn = fonte(FONTE, 46)
+        tw = d.textlength(nota, font=fn)
+        y = 820
+        d.rectangle([(W - tw) / 2 - 28, y - 8, (W + tw) / 2 + 28, y + 66], fill=VERMELHO)
+        d.text(((W - tw) / 2, y), nota, font=fn, fill=(255, 255, 255))
+    return img
+
+
+def cartao(base, texto, k):
+    """Título grande centralizado + subtítulo, para conceitos e comparações."""
+    img = escurecer(base, 0.3, 12) if base is not None else fundo_chumbo()
+    d = ImageDraw.Draw(img)
+    partes = [t.strip() for t in texto.split("/")]
+    ft = fonte(FONTE_BLACK, 104)
+    a = min(1.0, k * 5)
+    linhas = quebrar(partes[0], ft, 1600, d)
+    y = H // 2 - 70 * len(linhas) - 40
+    for ln in linhas:
+        tw = d.textlength(ln, font=ft)
+        d.text(((W - tw) / 2, y + int((1 - a) * 30)), ln, font=ft, fill=AMARELO, stroke_width=4, stroke_fill=(0, 0, 0))
+        y += 128
+    if len(partes) > 1 and k > 0.2:
+        fs = fonte(FONTE_MED, 52)
+        for ln in quebrar(partes[1], fs, 1500, d):
+            tw = d.textlength(ln, font=fs)
+            d.text(((W - tw) / 2, y + 20), ln, font=fs, fill=(235, 237, 241))
+            y += 70
+    return img
+
+
 # ---------- vídeo ----------
 
 def quadros_de_video(clipe, entrada, dur):
@@ -380,7 +475,7 @@ def renderizar(cfg):
             clipe = os.path.join(cfg["clipes"], p["asset"] + ".mp4")
             frames_base = quadros_de_video(clipe, p["entrada"], nq / FPS)
             ultimo_video = (clipe, p["entrada"] + nq / FPS)
-        elif tipo in ("texto", "numero") and ultimo_video:
+        elif tipo in ("texto", "numero", "frase_centro", "cartao") and ultimo_video:
             fb = quadros_de_video(ultimo_video[0], ultimo_video[1], 0.1)
             frames_base = [escurecer(fb[0], 0.42, 10)] if fb else None
         for i in range(nq):
@@ -398,6 +493,16 @@ def renderizar(cfg):
             elif tipo == "numero":
                 base = ken_burns(frames_base[0], k, "zoom_in", 0.03) if frames_base else fundo_chumbo()
                 f = numero_destaque(base, p["texto"], k)
+            elif tipo == "frase_centro":
+                base = ken_burns(frames_base[0], k, "zoom_in", 0.03) if frames_base else fundo_chumbo()
+                f = frase_centro(base, p["texto"], k)
+            elif tipo == "lista":
+                f = ken_burns(lista(p["texto"], k), k, "zoom_in", 0.03)
+            elif tipo == "familia":
+                f = ken_burns(familia(p["texto"], k), k, "zoom_in", 0.03)
+            elif tipo == "cartao":
+                base = ken_burns(frames_base[0], k, "zoom_in", 0.03) if frames_base else None
+                f = cartao(base, p["texto"], k)
             elif tipo == "calendario":
                 f = ken_burns(calendario(p["texto"], k), k, "zoom_in", 0.04)
             elif tipo == "vinheta":
