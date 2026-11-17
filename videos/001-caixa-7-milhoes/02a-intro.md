@@ -62,7 +62,9 @@ Até o fim deste laudo, você vai saber se pode estar entre os atingidos e quem 
 
 Laudo número um. O vazamento da Caixa Vida e Previdência.
 
-## Recomendada: B — por quê
+## ✅ ESCOLHA DO DONO: Opção A (17/11) — "a mais plausível e mais fácil de entender"
+
+## Recomendada pelo agente: B — por quê
 
 - **Retenção:** começa no momento do crime, com uma data e um hacker, e deixa o espectador "um passo à frente" do cliente. A frase "quem fez a cópia sabia de algo que milhões de clientes ainda não sabiam" cria tensão sem acusar ninguém. A lacuna tem duas pistas, "ninguém precisa ter quebrado regra nenhuma" e "o número da manchete ainda não conta todo mundo", que só se resolvem no Bloco 3, perto dos 9 minutos. Isso segura a pessoa durante os Blocos 1 e 2.
 - **Continuidade com título e thumbnail:** em cerca de 20 segundos já apareceram "hacker", "Caixa Seguridade" e "sete vírgula seis milhões", que são o hacker, o prédio e o texto da thumb. A Agência Brasil, que é a notícia ao fundo da thumb, entra logo depois. A pergunta do título é dita quase palavra por palavra por volta dos 45 segundos. A ordem da intro também segue o "antes e depois" do título: primeiro o ataque, depois o aviso, depois o público.

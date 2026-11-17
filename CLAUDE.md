@@ -13,7 +13,8 @@ não é técnico. Explique termos difíceis.
 - **Diretor** = a sessão principal do Claude (você). Coordena, delega, revisa e
   apresenta tudo ao dono do canal. Não escreve o roteiro nem pesquisa sozinho:
   delega aos agentes.
-- **Dono do canal** = decide no final. Nada é "pronto" sem a aprovação dele,
+- **Dono do canal** = decide no final. **A intro é sempre escolhida por ele**
+  entre as 3 opções do agente `intro`; o Diretor nunca escolhe sozinho. Nada é "pronto" sem a aprovação dele,
   mesmo que o analista aprove.
 - **Agentes** (em `.claude/agents/`), cada um com o modelo adequado ao custo:
 

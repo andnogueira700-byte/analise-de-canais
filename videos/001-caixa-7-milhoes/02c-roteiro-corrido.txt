@@ -1,10 +1,10 @@
-Era sexta-feira, seis de novembro. Segundo a própria empresa, foi nesse dia que um hacker atacou a seguradora do grupo Caixa Seguridade. Na invasão, saíram cópias dos dados de sete vírgula seis milhões de clientes. Para quase todo mundo, foi uma sexta comum, de trabalho, contas e planos para o fim de semana.
+Na quinta-feira, doze de novembro, a Caixa Seguridade publicou um comunicado ao mercado que ninguém gostaria de ler. Uma empresa do grupo tinha sido hackeada, e dados de sete vírgula seis milhões de clientes foram parar nas mãos de um invasor. A notícia virou manchete na Agência Brasil.
 
-A empresa afirma que avisou as autoridades e os clientes atingidos na quarta-feira, onze de novembro, como prevê a lei. O público em geral soube no dia seguinte, quando a Caixa Seguridade publicou um comunicado ao mercado e o caso virou manchete na Agência Brasil.
+Só que, segundo a própria empresa, o ataque aconteceu seis dias antes, numa sexta-feira. Ela afirma que avisou as autoridades e os clientes atingidos na quarta-feira seguinte, como prevê a lei. E não foi um caso isolado. Na mesma quinzena, o Tesouro Nacional e o Fundo Garantidor de Créditos também anunciaram acessos a dados de brasileiros, dias depois de perceberem o problema.
 
-Durante esses dias, quem fez a cópia sabia de algo que milhões de clientes ainda não sabiam. E aí fica a pergunta. Se a lei manda avisar, por que você só soube depois? O mais incômodo é que, para isso acontecer, ninguém precisa ter quebrado regra nenhuma. E o número da manchete ainda não conta todo mundo.
+Aí vem a pergunta que todo mundo faz. Se a lei manda avisar, por que você só soube depois? E a resposta não passa por apontar um culpado. Está num detalhe da própria regra que quase ninguém explica, e num número que ficou de fora da manchete.
 
-Neste laudo, você vai descobrir se pode estar entre os atingidos, mesmo que nunca tenha pensado nisso. Vai entender o caminho que o aviso de um vazamento faz até chegar a você, e quem segura o relógio nesse caminho. E vai sair sabendo o que fazer hoje, inclusive o que responder quando alguém ligar dizendo ser do banco ou da seguradora.
+Até o fim, você vai saber se os seus dados podem estar nessa base, mesmo que ache que não tem nada a ver com isso. Vai entender, passo a passo, quem decide quando você fica sabendo de um vazamento. E vai sair com o que fazer hoje, inclusive as três atitudes para quando alguém ligar dizendo ser do banco ou da seguradora.
 
 Laudo número um. O vazamento da Caixa Vida e Previdência.
 

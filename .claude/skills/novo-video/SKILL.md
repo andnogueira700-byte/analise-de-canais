@@ -45,8 +45,9 @@ pesquisador só aquele dado e devolva ao roteirista.
 ## Passo 2b — Intro
 
 Chame `intro` com o caminho da pasta. Ele entrega 3 opções em `02a-intro.md` e
-recomenda uma. Mostre as 3 ao dono em poucas linhas e use a escolhida (ou a
-recomendada, se o dono não quiser escolher). Monte então o
+recomenda uma. Mostre as 3 ao dono e **PARE: a intro é sempre escolhida pelo
+dono. Nunca escolha nem monte o texto com a recomendada por conta própria.**
+Só depois da escolha dele, registre-a no `02a-intro.md` e monte o
 `02c-roteiro-corrido.txt`: intro escolhida + blocos 1 a 6, em texto corrido, sem
 títulos, pronto para colar no Studio do ElevenLabs.
 
