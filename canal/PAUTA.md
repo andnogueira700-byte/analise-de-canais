@@ -13,7 +13,7 @@ Status: 💡 ideia · 🔬 em produção · ✅ publicado
 | 5 | Por que vazar dados no Brasil quase não dá multa? | Brasil, atemporal | 💡 |
 | 6 | A Máfia dos Painéis de Consulta de CPF | Brasil, atemporal (cuidado jurídico redobrado) | 💡 |
 | 7 | O hacker que avisou a hora do ataque à Petrobras | Brasil, quente | 💡 |
-| 8 | O maior roubo via Pix da história: R$ 813 milhões | Brasil, atemporal | 💡 |
+| 8 | Laudo 003 (anunciado no fim do 002) — O maior roubo via Pix da história: R$ 813 milhões | Brasil, atemporal | 💡 |
 | 9 | O Brasil virou "dados abertos"? O país onde tudo já vazou | Brasil, atemporal | 💡 |
 | 10 | A Indústria do Ransomware (O sequestro que as empresas pagam em silêncio) | Mundo + Brasil | 💡 |
 | 11 | O que o roubo de 6,3 bilhões da Binance ensina ao Brasil | Mundo + Brasil | 💡 |
