@@ -78,11 +78,14 @@ def montar(cfg):
     pecas = []
     ini_m = 0.0
     for i, pt in enumerate(cfg["partes"]):
-        if pt.get("cartao_antes") is not None:
-            c = os.path.join(tmp, f"cartao_{i:02d}.mp4")
-            print("cartão:", pt["cartao_antes"] or "(tela preta, só música)", flush=True)
-            cartao(pt["cartao_antes"], pt.get("dur_respiro", DUR_RESPIRO), c, cfg, ini_m, cfg.get("vol_respiro", -9))
-            ini_m += DUR_RESPIRO + 7  # cada respiro usa um trecho diferente da música
+        respiros = pt.get("respiros")  # lista [{"texto": "...", "dur": 4}, {"texto": "", "dur": 3}]
+        if respiros is None and pt.get("cartao_antes") is not None:
+            respiros = [{"texto": pt["cartao_antes"], "dur": pt.get("dur_respiro", DUR_RESPIRO)}]
+        for j, r in enumerate(respiros or []):
+            c = os.path.join(tmp, f"cartao_{i:02d}_{j}.mp4")
+            print("cartão:", r["texto"] or "(tela preta, só música)", flush=True)
+            cartao(r["texto"], r.get("dur", DUR_RESPIRO), c, cfg, ini_m, cfg.get("vol_respiro", -9))
+            ini_m += r.get("dur", DUR_RESPIRO) + 7  # cada respiro usa um trecho diferente da música
             pecas.append(c)
         s = os.path.join(tmp, f"parte_{i:02d}.mp4")
         print("parte:", os.path.basename(pt["arquivo"]), flush=True)
