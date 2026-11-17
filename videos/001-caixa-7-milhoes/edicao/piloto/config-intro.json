@@ -1,0 +1,11 @@
+{
+ "storyboard": "/home/user/analise-de-canais/videos/001-caixa-7-milhoes/edicao/storyboard-intro.md",
+ "clipes": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/clips",
+ "prints": "/home/user/analise-de-canais/videos/001-caixa-7-milhoes/edicao/prints-grifo",
+ "mapa_prints": {"3": "P01a", "10": "P01b"},
+ "narracao": "/home/user/analise-de-canais/videos/001-caixa-7-milhoes/edicao/audio/narracao-masterizada.wav",
+ "musica": "/home/user/analise-de-canais/videos/001-caixa-7-milhoes/edicao/musica/intro-tensao.mp3",
+ "sfx": "/home/user/analise-de-canais/videos/001-caixa-7-milhoes/edicao/sfx",
+ "respiro": [[90.4, 92.2]],
+ "saida": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/piloto-intro-v1.mp4"
+}
