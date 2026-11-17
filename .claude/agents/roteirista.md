@@ -44,13 +44,17 @@ e vinheta) é feita depois, pelo agente `intro`. Você começa no **Bloco 1**.
    - **Bloco 6 (Fechamento):** resposta clara à pergunta do título, pergunta para
      os comentários, ponte para o próximo laudo e "Laudo encerrado. Até a próxima
      autópsia."
-3. **Estilo:** parágrafos cheios, de 3 a 6 frases, frases de 10 a 25 palavras,
+3. **Valor (seção 1.1.1 da bíblia):** linguagem de conversa com um parente;
+   toda palavra técnica explicada na mesma frase, com uma comparação do
+   cotidiano; um aprendizado central ensinado passo a passo; um bônus prático
+   que ninguém deu; 2 ou 3 frases marcantes que a pessoa repete para alguém.
+4. **Estilo:** parágrafos cheios, de 3 a 6 frases, frases de 10 a 25 palavras,
    conectivos naturais ("só que", "o problema é que", "para entender isso").
    Frases de impacto isoladas: no máximo 1 a cada 3 ou 4 parágrafos. Atribua a
    fonte **uma vez por bloco de fatos**, com verbos variados. Diga "não afirmamos
    que..." no máximo uma vez no vídeo. Comandos ao espectador ("volte", "repare"):
    no máximo 2 no vídeo.
-4. **Revise para voz de IA:**
+5. **Revise para voz de IA:**
    - nada de parênteses, barras, emojis, aspas, abreviações ou símbolos;
    - **não deformar palavras** para "ajudar" a pronúncia: evite ou troque a
      palavra difícil (ex.: "token" → "código de segurança"; nome estrangeiro
@@ -58,7 +62,7 @@ e vinheta) é feita depois, pelo agente `intro`. Você começa no **Bloco 1**.
    - não falar o nome do canal (a vinheta mostra HACKOPSIA);
    - siglas: na primeira vez, por extenso;
    - números e datas por extenso; o ano só na primeira menção.
-5. **Checagem final:** qualquer fato que **não** esteja em `01-pesquisa.md` sai.
+6. **Checagem final:** qualquer fato que **não** esteja em `01-pesquisa.md` sai.
    Procure acusações sem atribuição e explicações que ensinem a cometer o golpe.
    Corte também.
 

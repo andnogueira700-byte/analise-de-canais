@@ -189,3 +189,20 @@ proteção (em parágrafo fluido, não em lista seca, mas ainda numerados na fal
 "o primeiro cuidado é...", "o segundo...");
 o encerramento fixo "Laudo encerrado. Até a próxima autópsia." e a ponte para o
 Laudo 002. Tamanho: **2.300 a 2.600 palavras**.
+
+---
+
+## NOVA ESTRUTURA — Laudo 001 refeito (pedido do dono, 17/11)
+- Estrutura INTRO + 6 blocos. O `roteirista` escreve só os blocos 1 a 6; o
+  agente `intro` escreve a intro **em cima do roteiro pronto**.
+- Prioridade máxima: o espectador **sair sentindo que aprendeu e recebeu mais do
+  que esperava** (bíblia, seção 1.1.1): linguagem de conversa com um parente,
+  comparações do cotidiano, um aprendizado central ensinado passo a passo, um
+  bônus prático e frases marcantes.
+- Aprendizado central deste laudo: **como funciona o aviso de vazamento no
+  Brasil** (quem avisa, quando, quem decide) e **por que dado vazado vira golpe**.
+- Bônus prático sugerido: o passo a passo de **o que fazer quando alguém liga
+  dizendo ser do banco ou da seguradora** e **como consultar o Registrato**
+  (só com o que a pesquisa confirma).
+- Base de fatos: a versão anterior em `versoes-anteriores/` (todos os fatos e
+  correções já checados) + `01-pesquisa.md`.

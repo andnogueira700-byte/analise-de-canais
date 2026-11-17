@@ -46,3 +46,7 @@ chegar pelo primeiro vídeo já ter mais o que assistir.
 | Dia 4 | Edição dos vídeos 2 e 4 |
 | Dia 5 | Revisão final, upload como privado e agendamento |
 | Estreia | Publicar o vídeo 1; os outros 2 ao longo da semana (ex.: terça e sexta, 18h) |
+
+## Produto do canal (futuro)
+
+Ideia inicial: guia ou kit prático de proteção contra golpes e vazamentos, montado a partir dos blocos de proteção dos laudos. Definir depois dos primeiros vídeos, olhando os comentários (o que o público mais pergunta).

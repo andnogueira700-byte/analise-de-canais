@@ -60,6 +60,35 @@ até o fim:
 3. **Saber o que fazer hoje:** passos práticos, com a lista também na descrição
    e no comentário fixado.
 
+## 1.1.1 "Recebi mais do que esperava" (regra do dono)
+
+O espectador tem que sair pensando: *"nossa, que fácil de entender, valeu
+muito a pena ter clicado"*. Para isso, todo laudo tem:
+
+1. **Linguagem de conversa com um parente:** explique como se estivesse falando
+   com a sua mãe ou com um vizinho que nunca ouviu falar do assunto. Palavras do
+   dia a dia. Toda palavra técnica vem explicada **na mesma frase**, de preferência
+   com uma **comparação do cotidiano** (ex.: "dados vazados funcionam como uma
+   cópia da chave da sua casa: ninguém entrou ainda, mas alguém pode entrar").
+2. **Um aprendizado central, ensinado de verdade:** em cada vídeo, um conceito
+   que a pessoa leva para a vida (ex.: como funciona a regra de aviso de
+   vazamento; o que é engenharia social). Ensinado passo a passo, com exemplo.
+3. **Um "bônus" prático que ninguém deu:** algo que a pessoa pode fazer logo
+   depois do vídeo e que vai além do óbvio (ex.: o passo a passo para consultar o
+   Registrato; o que dizer quando alguém liga se passando pelo banco; como pedir
+   à empresa os seus dados).
+4. **Frases que a pessoa repete para alguém:** 2 ou 3 frases simples e
+   marcantes que resumem o aprendizado (ex.: "sem impacto financeiro não quer
+   dizer sem risco").
+
+### Produto (futuro)
+O canal vai, mais adiante, oferecer um produto ao público (ideia inicial: um
+guia ou kit prático de proteção contra golpes e vazamentos). Por isso, desde já:
+- o bloco de proteção deve ser **tão útil que a pessoa queira mais**;
+- a lista de cuidados vai na descrição e no comentário fixado, formando a base
+  de um material maior no futuro;
+- **ainda não vender nada nos vídeos** até o produto existir.
+
 ## 1.2 O que fazemos de diferente
 
 | Quem já existe | O que fazem | O que o HACKOPSIA faz |
