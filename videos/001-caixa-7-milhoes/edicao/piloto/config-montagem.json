@@ -1,0 +1,38 @@
+{
+ "partes": [
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/piloto-intro-v2.mp4",
+   "corte_fim": 91.88
+  },
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/bloco1-v2.mp4"
+  },
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/bloco2-v1.mp4",
+   "cartao_antes": "ARQUIVO 02 — A investigação"
+  },
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/bloco3-v1.mp4",
+   "cartao_antes": "ARQUIVO 03 — A virada"
+  },
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/bloco4-v1.mp4",
+   "cartao_antes": "ARQUIVO 04 — O que diz a lei"
+  },
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/bloco5-v1.mp4",
+   "cartao_antes": "ARQUIVO 05 — Como se proteger"
+  },
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/bloco6-v1.mp4",
+   "cartao_antes": "ARQUIVO 06 — A resposta"
+  }
+ ],
+ "musica_respiro": "/home/user/analise-de-canais/videos/001-caixa-7-milhoes/edicao/musica/intro-tensao.mp3",
+ "digitacao": "/home/user/analise-de-canais/videos/001-caixa-7-milhoes/edicao/sfx/digitacao.mp3",
+ "cartao_final": "HACKOPSIA / LAUDO Nº 001 — ENCERRADO / a autópsia dos ataques que esconderam de você",
+ "dur_final": 12,
+ "look": "eq=contrast=1.07:saturation=0.86:gamma=0.98,vignette=angle=PI/4.6,noise=alls=6:allf=t+u",
+ "pasta_temp": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/montagem",
+ "saida": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/laudo-001-final.mp4"
+}
