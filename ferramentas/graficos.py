@@ -2,15 +2,16 @@
 a mesma tela vai se montando enquanto a voz fala). Cada função recebe o texto do
 storyboard e k (0 a 1, o progresso do plano) e devolve uma imagem 1920x1080.
 
-Formatos do texto (coluna "grifo_ou_texto" do storyboard):
-  barras       "105 MIL|2024 / !139 MIL|1º SEM. 2025 // nota: +195,7% sobre o mesmo semestre de 2024"
+Formatos do texto (coluna "grifo_ou_texto" do storyboard; "~" separa valor e legenda, porque "|" é a coluna da tabela;
+"@palavras" no fim de um item faz ele entrar na palavra falada):
+  barras       "105 MIL~2024 / !139 MIL~1º SEM. 2025 // nota: +195,7% sobre o mesmo semestre de 2024"
                (! = barra vermelha; a última sem ! fica amarela)
-  linha_tempo  "2018|LGPD aprovada / 02/2026|MED obrigatório / 07/2026|STJ decide"
-  parte_total  "1 de 4|das ligações usa número falsificado"
-  pessoas      "22|presos na central de Guarulhos"
+  linha_tempo  "2018~LGPD aprovada / 02/2026~MED obrigatório / 07/2026~STJ decide"
+  parte_total  "1 de 4~das ligações usa número falsificado"
+  pessoas      "22~presos na central de Guarulhos"
   fluxo        "A FICHA / O DISFARCE / O EMPURRÃO"
-  portas       "DADOS|quem vigia? / TELEFONIA|quem vigia? / BANCO|quem vigia? // ninguém fecha o ciclo"
-  dividida     "VOLTA REDONDA|banco devolveu R$ 190,9 mil / STJ|vítima não recebeu nada"
+  portas       "DADOS~quem vigia? / TELEFONIA~quem vigia? / BANCO~quem vigia? // ninguém fecha o ciclo"
+  dividida     "VOLTA REDONDA~banco devolveu R$ 190,9 mil / STJ~vítima não recebeu nada"
   ficha        "NOME FICTÍCIO / CPF 000.000.000-00 / TEL. (00) 00000-0000 / NASC. 00/00/0000"
 Etiquetas (em qualquer plano, inclusive vídeo): "data=28/11/2024; credito=ILUSTRAÇÃO".
 """
@@ -28,8 +29,33 @@ def _ease(x):
     return 1 - (1 - x) ** 3
 
 
+_ST = []        # início (0 a 1) de cada item, vindo da palavra falada (@palavra no storyboard)
+_NOTA = None   # início da nota
+
+
+def _prep(texto):
+    """Separa as âncoras "@0.42" (já convertidas pelo renderizador) de cada item."""
+    global _ST, _NOTA
+    principal, sep, nota = texto.partition("//")
+    itens, starts = [], []
+    for it in [t for t in principal.split(" / ") if t.strip()]:
+        m = re.search(r"@([\d.]+)\s*$", it.strip())
+        starts.append(float(m.group(1)) if m else None)
+        itens.append(re.sub(r"@[\d.]+\s*$", "", it.strip()))
+    m = re.search(r"@([\d.]+)\s*$", nota.strip())
+    _NOTA = float(m.group(1)) if m else None
+    nota = re.sub(r"@[\d.]+\s*$", "", nota.strip())
+    _ST = starts if any(x is not None for x in starts) else []
+    return " / ".join(itens) + (" // " + nota if sep else "")
+
+
 def _janela(k, i, n, inicio=0.05, fim=0.75):
-    """Progresso (0 a 1) do item i de n, que entram um após o outro entre inicio e fim."""
+    """Progresso (0 a 1) do item i de n. Com âncora, o item entra na palavra falada;
+    sem âncora, os itens entram um após o outro entre inicio e fim."""
+    ii = int(i)
+    if _ST and ii < len(_ST) and _ST[ii] is not None:
+        s = _ST[ii] + (i - ii) * 0.06
+        return _ease((k - s) / 0.07)
     passo = (fim - inicio) / max(1, n)
     return _ease((k - inicio - i * passo) / max(0.08, passo * 0.9))
 
@@ -62,7 +88,7 @@ def barras(texto, k):
     dados = []
     for it in itens:
         vermelho = it.startswith("!")
-        valor, _, rot = it.lstrip("!").partition("|")
+        valor, _, rot = it.lstrip("!").partition("~")
         dados.append((valor.strip(), rot.strip(), vermelho))
     maxv = max(_num(v) for v, _, _ in dados) or 1
     n = len(dados); base = 900; alt_max = 480; larg = 260
@@ -80,8 +106,9 @@ def barras(texto, k):
             _centro(d, v, fv, base - h - 96, CLARO, x - 60, x + larg + 60)
         _centro(d, r, fr, base + 22, CLARO if p > 0.3 else CINZA, x - 80, x + larg + 80)
         x += larg + gap
-    if nota and k > 0.7:
-        a = _ease((k - 0.7) / 0.15)
+    t_nota = _NOTA if _NOTA is not None else 0.7
+    if nota and k > t_nota:
+        a = _ease((k - t_nota) / 0.1)
         f = fonte(FONTE, 46)
         tw = d.textlength(nota, font=f)
         d.rectangle([(W - tw) / 2 - 24, 90, (W + tw) / 2 + 24, 166], fill=(int(VERMELHO[0] * a), int(VERMELHO[1] * a), int(VERMELHO[2] * a)))
@@ -96,7 +123,7 @@ def linha_tempo(texto, k):
     d.line([(x0, y), (x0 + (x1 - x0) * _ease(k / 0.25), y)], fill=AMARELO, width=6)
     fd, fe = fonte(MONO or FONTE, 54), fonte(FONTE_MED, 42)
     for i, it in enumerate(itens):
-        data, _, ev = it.partition("|")
+        data, _, ev = it.partition("~")
         p = _janela(k, i, n, 0.15, 0.85)
         if p <= 0:
             continue
@@ -130,7 +157,7 @@ def _quebra(d, txt, f, largura):
 
 def parte_total(texto, k):
     img = fundo_chumbo(); d = ImageDraw.Draw(img)
-    cab, _, leg = texto.partition("|")
+    cab, _, leg = texto.partition("~")
     m = re.match(r"\s*(\d+)\s*de\s*(\d+)", cab)
     parte, total = (int(m.group(1)), int(m.group(2))) if m else (1, 4)
     lado = 220 if total <= 6 else (120 if total <= 20 else 60)
@@ -163,7 +190,7 @@ def _boneco(d, x, y, esc, cor):
 
 def pessoas(texto, k):
     img = fundo_chumbo(); d = ImageDraw.Draw(img)
-    num, _, leg = texto.partition("|")
+    num, _, leg = texto.partition("~")
     n = max(1, int(_num(num)))
     cols = min(n, 11); linhas = math.ceil(n / cols)
     esp = 130; x0 = (W - (cols - 1) * esp) / 2; y0 = 330 - (linhas - 1) * 75
@@ -211,7 +238,7 @@ def portas(texto, k):
     n = len(itens); larg, alt, gap = 300, 470, 170
     total = n * larg + (n - 1) * gap; x = (W - total) / 2; y = 220
     for i, it in enumerate(itens):
-        rot, _, vig = it.partition("|")
+        rot, _, vig = it.partition("~")
         p = _janela(k, i, n, 0.05, 0.7)
         if p <= 0:
             x += larg + gap; continue
@@ -222,7 +249,7 @@ def portas(texto, k):
         _centro(d, rot.strip().upper(), fonte(FONTE_BLACK, 52), y + alt + 30, CLARO, x - 60, x + larg + 60)
         _centro(d, vig.strip(), fonte(FONTE_MED, 34), y + alt + 100, CINZA, x - 80, x + larg + 80)
         x += larg + gap
-    if nota and k > 0.78:
+    if nota and k > (_NOTA if _NOTA is not None else 0.78):
         _centro(d, nota.upper(), fonte(FONTE_BLACK, 56), 110, AMARELO)
     return img
 
@@ -232,7 +259,7 @@ def dividida(texto, k):
     itens, _ = _partes(texto)
     d.line([(W / 2, 140), (W / 2, 140 + (H - 280) * _ease(k / 0.2))], fill=CINZA, width=4)
     for i, it in enumerate(itens[:2]):
-        tit, _, txt = it.partition("|")
+        tit, _, txt = it.partition("~")
         p = _janela(k, i, 2, 0.12, 0.6)
         if p <= 0:
             continue
@@ -283,6 +310,14 @@ def etiquetas(img, texto):
         d.rectangle([50, 50, 50 + tw + 32, 92], fill=(0, 0, 0))
         d.text((66, 57), t, font=f, fill=(210, 214, 220))
     return img
+
+
+def desenhar(tipo, texto, k):
+    texto = _prep(texto)
+    if tipo in ("pessoas", "parte_total") and _ST:
+        s0 = _ST[0]; k = max(0.0, (k - s0) / max(0.05, 1 - s0))
+        globals()["_ST"] = []
+    return TIPOS[tipo](texto, k)
 
 
 TIPOS = {"barras": barras, "linha_tempo": linha_tempo, "parte_total": parte_total, "pessoas": pessoas,

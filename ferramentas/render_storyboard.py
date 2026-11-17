@@ -67,6 +67,20 @@ def ler_storyboard_v2(caminho, palavras, cfg):
     for a, b in zip(planos, planos[1:]):
         a["fim"] = b["ini"]
     planos[-1]["fim"] = float(cfg["fim"])
+    # âncoras "@palavras" dentro do texto: o item do gráfico entra na palavra falada
+    for p in planos:
+        if "@" not in p["texto"]:
+            continue
+        def troca(m, p=p):
+            alvo = [_norm(x) for x in m.group(1).split() if _norm(x)]
+            for i in range(len(palavras) - len(alvo) + 1):
+                if palavras[i]["start"] < p["ini"] - 0.5 or palavras[i]["start"] > p["fim"]:
+                    continue
+                if all(_norm(palavras[i + j]["text"]) == alvo[j] for j in range(len(alvo))):
+                    kk = (palavras[i]["start"] - cfg.get("antecipa", 0.06) - p["ini"]) / max(0.01, p["fim"] - p["ini"])
+                    return "@%.3f" % max(0.0, kk)
+            raise SystemExit(f"âncora não encontrada no plano {p['n']}: {m.group(1)}")
+        p["texto"] = re.sub(r"@([^/|@;]+?)(?=\s*(?:/|$|;|//|~))", troca, p["texto"])
     return planos
 
 
@@ -731,7 +745,7 @@ def renderizar(cfg):
                 base = ken_burns(frames_base[0], k, "zoom_in", 0.03) if frames_base else None
                 f = cartao(base, p["texto"], k)
             elif tipo in GRAF.TIPOS:
-                f = GRAF.TIPOS[tipo](re.split(r";?\s*(?:data|credito)=", p["texto"])[0].strip(), k)
+                f = GRAF.desenhar(tipo, re.split(r";?\s*(?:data|credito)=", p["texto"])[0].strip(), k)
             elif tipo == "calendario":
                 f = ken_burns(calendario(p["texto"], k), k, "zoom_in", 0.04)
             elif tipo == "vinheta":
