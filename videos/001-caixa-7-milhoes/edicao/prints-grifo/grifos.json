@@ -365,5 +365,23 @@
     42
    ]
   ]
+ },
+ "P10b": {
+  "url": "https://idec.org.br/dicas-e-direitos/vazamento-de-dados-pessoais-saiba-como-proteger-suas-informacoes",
+  "frase": "Caso reconheça alguma transação estranha, faça um boletim de ocorrência.",
+  "rects": [
+   [
+    2466,
+    1056,
+    97,
+    48
+   ],
+   [
+    1200,
+    1116,
+    1335,
+    48
+   ]
+  ]
  }
 }
