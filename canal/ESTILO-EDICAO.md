@@ -239,3 +239,9 @@ Pela contagem dos quadros, mais ou menos:
 - [ ] A música é contínua, a voz está clara e o volume final fica entre -14 e -16 LUFS.
 - [ ] Toda fonte citada aparece na tela (cartão de notícia ou de reportagem).
 - [ ] Nenhum dado pessoal real aparece na tela.
+
+### 3.14 Ajustes do dono (18/11, piloto do Laudo 002)
+- **Respiro mais curto.** Depois que o texto do cartão termina de ser digitado, a imagem volta logo: cartão de 2,6 s; no fim da intro, vinheta de 2,6 s + 1,2 s de tela preta só com música; fade-in de 1 s.
+- **Nunca cortar a última frase do bloco.** O escurecimento (fade-out) só começa 0,3 s depois da última palavra do bloco. Se a fala vai até o fim do trecho, o último quadro fica parado um pouco mais. A montagem usa o "fim_fala" de cada parte, tirado dos tempos da narração.
+- **Nunca esticar imagem.** Vídeo com proporção diferente de 16:9 é ampliado e cortado, nunca esticado. Vídeo vertical ou quadrado aparece inteiro no centro, com a própria imagem desfocada nas laterais. Prefira vídeos horizontais.
+- **Print de notícia, estilo novo.** Só o parágrafo (ou o título) onde está a frase grifada, num cartão branco com sombra leve, sobre fundo claro e neutro (papel), com o nome da fonte grande e escuro em cima e o traço amarelo. Nada do resto da página. A letra do parágrafo é aumentada na captura para ficar legível. O grifo amarelo avança com a voz.

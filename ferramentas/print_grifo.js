@@ -18,6 +18,21 @@ const [,, lista, out] = process.argv;
       for (const t of ['Aceitar cookies','Aceitar todos','Aceitar','Concordo','Prosseguir','Entendi']) {
         const bt = p.getByRole('button', { name: t }); if (await bt.count()) { await bt.first().click({timeout:2000}).catch(()=>{}); break; } }
       await p.waitForTimeout(800);
+      // aumenta a letra do parágrafo da frase (só para o print ficar legível em vídeo)
+      await p.evaluate((frase) => {
+        const re = new RegExp(frase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ /g, '\\s+'));
+        const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); let n;
+        while ((n = w.nextNode())) {
+          if (re.test(n.textContent) && n.parentElement && n.parentElement.offsetParent !== null) {
+            const el = n.parentElement.closest('p,h1,h2,h3,li,blockquote,figcaption') || n.parentElement;
+            const fs = parseFloat(getComputedStyle(el).fontSize);
+            if (fs < 30) { el.style.fontSize = '30px'; el.style.lineHeight = '1.45'; }
+            el.style.maxWidth = '1050px';
+            return;
+          }
+        }
+      }, frase);
+      await p.waitForTimeout(500);
       const rects = await p.evaluate((frase) => {
         const norm = s => s.replace(/\s+/g,' ');
         const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
@@ -63,8 +78,20 @@ const [,, lista, out] = process.argv;
           }
         }
         return null; }, frase);
+      // caixa do parágrafo (ou título) onde está a frase: o print novo mostra só esse bloco
+      const bloco = await p.evaluate((frase) => {
+        const re = new RegExp(frase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ /g, '\\s+'));
+        const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); let n;
+        while ((n = w.nextNode())) {
+          if (re.test(n.textContent) && n.parentElement && n.parentElement.offsetParent !== null) {
+            const el = n.parentElement.closest('p,h1,h2,h3,li,blockquote,figcaption') || n.parentElement;
+            const r = el.getBoundingClientRect(); return [r.left, r.top, r.width, r.height];
+          }
+        }
+        return null; }, frase);
       await p.screenshot({ path: `${out}/${id}.png` });
-      res[id] = { url, frase, rects: (rects2 || []).map(r => r.map(v => Math.round(v * 2))) };
+      res[id] = { url, frase, rects: (rects2 || []).map(r => r.map(v => Math.round(v * 2))),
+                  bloco: bloco ? bloco.map(v => Math.round(v * 2)) : null };
       // frases extras na MESMA imagem (print contínuo com vários grifos): id_2, id_3...
       for (let k = 1; k < lista_f.length; k++) {
         const rx = await p.evaluate((fr) => {

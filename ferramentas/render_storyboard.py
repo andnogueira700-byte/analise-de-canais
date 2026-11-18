@@ -554,6 +554,70 @@ def print_mensagem(png, grupos, k, fonte_nome, recorte=None):
     return fundo
 
 
+_FUNDO_CLARO = None
+
+
+def fundo_claro():
+    """Fundo neutro claro (papel), para os prints de notícia no estilo novo do dono."""
+    global _FUNDO_CLARO
+    if _FUNDO_CLARO is None:
+        import random
+        img = Image.new("RGB", (W, H), (236, 234, 229))
+        d = ImageDraw.Draw(img)
+        rnd = random.Random(7)
+        for _ in range(26000):
+            x, y = rnd.randrange(W), rnd.randrange(H)
+            v = rnd.randrange(222, 246)
+            d.point((x, y), fill=(v, v - 2, v - 6))
+        _FUNDO_CLARO = img.filter(ImageFilter.GaussianBlur(0.6))
+    return _FUNDO_CLARO.copy()
+
+
+def print_paragrafo(png, grupos, k, fonte_nome, bloco):
+    """Print novo: só o parágrafo da frase grifada + o nome da fonte, num cartão branco sobre fundo claro."""
+    if png not in _PRINT_CACHE:
+        _PRINT_CACHE[png] = Image.open(png).convert("RGB")
+    pag = _PRINT_CACHE[png]
+    bx, by, bw, bh = bloco
+    pad = 10
+    x0, y0 = max(0, bx - pad), max(0, by - pad)
+    x1, y1 = min(pag.width, bx + bw + pad), min(pag.height, by + bh + pad)
+    rec = pag.crop((x0, y0, x1, y1)).convert("RGBA")
+    # moldura branca limpa em volta do parágrafo (nada de pedaço de outra linha)
+    marg = 56
+    cartao_b = Image.new("RGBA", (rec.width + 2 * marg, rec.height + 2 * marg), (255, 255, 255, 255))
+    cartao_b.paste(rec, (marg, marg)); rec = cartao_b; x0 -= marg; y0 -= marg
+    gr = Image.new("RGBA", rec.size, (0, 0, 0, 0)); dg = ImageDraw.Draw(gr)
+    for rects, t0 in grupos:
+        prog = min(1.0, max(0.0, (k - t0 - 0.03) / 0.25))
+        total = sum(r[2] for r in rects) or 1
+        andar = total * prog
+        for (x, y, rw, rh) in rects:
+            if andar <= 0:
+                break
+            ww = min(rw, andar)
+            dg.rectangle([x - x0 - 6, y - y0 + rh * 0.08, x - x0 + ww + 6, y - y0 + rh * 0.96], fill=(255, 212, 0, 140))
+            andar -= rw
+    rec = Image.alpha_composite(rec, gr).convert("RGB")
+    fundo = fundo_claro()
+    esc = min(1560 / rec.width, 620 / rec.height, 1.6) * (1.0 + 0.035 * k)
+    nw, nh = int(rec.width * esc), int(rec.height * esc)
+    rec = rec.resize((nw, nh), Image.LANCZOS)
+    px, py = (W - nw) // 2, (H - nh) // 2 + 60
+    sombra = Image.new("RGBA", (nw + 120, nh + 120), (0, 0, 0, 0))
+    ImageDraw.Draw(sombra).rectangle([60, 70, nw + 60, nh + 70], fill=(0, 0, 0, 70))
+    sombra = sombra.filter(ImageFilter.GaussianBlur(26))
+    fundo.paste(sombra, (px - 60, py - 60), sombra)
+    fundo.paste(rec, (px, py))
+    d = ImageDraw.Draw(fundo)
+    if fonte_nome:
+        ff = fonte(FONTE_BLACK, 54)
+        tw = d.textlength(fonte_nome, font=ff)
+        d.text(((W - tw) / 2, py - 120), fonte_nome, font=ff, fill=(20, 22, 26))
+        d.rectangle([(W - 140) / 2, py - 44, (W + 140) / 2, py - 36], fill=AMARELO)
+    return fundo
+
+
 def foto_em_cartao(img, k):
     """Foto dentro de um cartão no centro, sobre a própria foto desfocada."""
     fundo = Image.blend(Image.new("RGB", (W, H), (0, 0, 0)), img.resize((W, H)).filter(ImageFilter.GaussianBlur(22)), 0.35)
@@ -653,8 +717,22 @@ def registrar_uso(cfg, vistos):
 
 def quadros_de_video(clipe, entrada, dur):
     """Extrai os quadros do trecho do clipe (1920x1080, 30 fps) como imagens PIL."""
+    wh = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
+                         "-of", "csv=p=0", clipe], capture_output=True, text=True).stdout.strip().split(",")
+    try:
+        prop = int(wh[0]) / int(wh[1])
+    except Exception:
+        prop = 16 / 9
+    if prop < 1.2:
+        # vídeo vertical/quadrado: inteiro no centro, com a própria imagem desfocada preenchendo as laterais
+        filtro = (f"fps={FPS},split[a][b];[a]scale=2112:1188:force_original_aspect_ratio=increase,crop=2112:1188,"
+                  f"boxblur=40:2,eq=brightness=-0.12[fundo];[b]scale=-2:1188:flags=lanczos[frente];"
+                  f"[fundo][frente]overlay=(W-w)/2:0")
+    else:
+        # nunca esticar: amplia até cobrir a tela e corta as sobras
+        filtro = f"fps={FPS},scale=2112:1188:force_original_aspect_ratio=increase:flags=lanczos,crop=2112:1188"
     cmd = ["ffmpeg", "-loglevel", "error", "-ss", f"{entrada:.2f}", "-t", f"{dur + 0.2:.2f}", "-i", clipe,
-           "-vf", f"fps={FPS},scale=2112:1188:flags=lanczos", "-f", "rawvideo", "-pix_fmt", "rgb24", "-"]
+           "-filter_complex" if prop < 1.2 else "-vf", filtro, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"]
     raw = subprocess.run(cmd, capture_output=True).stdout
     tam = 2112 * 1188 * 3
     return [Image.frombytes("RGB", (2112, 1188), raw[i:i + tam]) for i in range(0, len(raw) - tam + 1, tam)]
@@ -734,7 +812,11 @@ def renderizar(cfg):
                 rec_man = (grifos.get(p["_partes"][0][0]) or {}).get("recorte")
                 mf = re.search(r"credito=\s*Fonte:\s*([^;(]+)", p.get("etiq", ""))
                 nome_fonte = mf.group(1).strip().upper() if mf else FONTES_PRINT.get(p["_fonte"], "")
-                f = print_mensagem(png, grupos, k, nome_fonte, rec_man)
+                bloco_par = (grifos.get(p["_partes"][0][0]) or {}).get("bloco")
+                if bloco_par:
+                    f = print_paragrafo(png, grupos, k, nome_fonte, bloco_par)
+                else:
+                    f = print_mensagem(png, grupos, k, nome_fonte, rec_man)
             elif tipo == "print":
                 chave = mapa_print.get(f"{p['n']}", p["asset"])
                 g = grifos.get(chave) or grifos.get(p["asset"])

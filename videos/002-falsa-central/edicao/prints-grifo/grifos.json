@@ -4,23 +4,23 @@
   "frase": "dados como CPF, telefone e nomes de familiares podem ser obtidos por meio de bancos de dados vazados",
   "rects": [
    [
-    1053,
-    1030,
-    1462,
-    44
+    640,
+    996,
+    1803,
+    76
    ],
    [
     640,
-    1084,
-    466,
-    44
+    1083,
+    1411,
+    76
    ]
   ],
-  "recorte": [
-   560,
-   820,
-   2600,
-   1340
+  "bloco": [
+   640,
+   818,
+   1940,
+   522
   ]
  },
  "P03": {
@@ -45,6 +45,12 @@
     761,
     90
    ]
+  ],
+  "bloco": [
+   798,
+   944,
+   1456,
+   274
   ]
  }
 }

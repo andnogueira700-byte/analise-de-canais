@@ -17,9 +17,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from PIL import Image
 from render_storyboard import vinheta, W, H, FPS  # mesmo visual da vinheta da intro
 
-DUR_RESPIRO = 3.0   # tela escura com o cartão (2 a 4 s pelo manual)
+DUR_RESPIRO = 2.6   # tela escura com o cartão (o dono pediu respiro mais curto)
 FADE_OUT = 0.8      # imagem escurece no fim do bloco
 FADE_IN = 0.6       # imagem clareia junto com a primeira frase do bloco seguinte
+FOLGA_FALA = 0.3    # depois da última palavra, espera antes de escurecer (não cortar a frase)
 
 
 def sh(cmd):
@@ -56,15 +57,24 @@ def cartao(texto, dur, saida, cfg, ini_musica, vol_musica):
     os.remove(tmp_v)
 
 
-def parte(arq, saida, corte_fim=None, fade_in=True, fade_out=True, dur_fade_in=None):
+def parte(arq, saida, corte_fim=None, fade_in=True, fade_out=True, dur_fade_in=None, fim_fala=None):
     d = corte_fim or duracao(arq)
     FADE_IN_ = dur_fade_in or FADE_IN
     vf, af = [], []
+    inicio_fade = d - FADE_OUT
+    if fim_fala is not None:
+        # o fade só começa depois que a última palavra termina; se não houver espaço, segura o último quadro
+        inicio_fade = fim_fala + FOLGA_FALA
+        total = inicio_fade + FADE_OUT
+        if total > d:
+            vf.append(f"tpad=stop_mode=clone:stop_duration={total - d + 0.05:.3f}")
+            af.append(f"apad=pad_dur={total - d + 0.05:.3f}")
+        d = total
     if fade_in:
-        vf.append(f"fade=t=in:d={FADE_IN_}"); af.append("afade=t=in:d=0.25")
+        vf.append(f"fade=t=in:d={FADE_IN_}"); af.append("afade=t=in:d=0.05")
     if fade_out:
-        vf.append(f"fade=t=out:st={d - FADE_OUT}:d={FADE_OUT}"); af.append(f"afade=t=out:st={d - FADE_OUT}:d={FADE_OUT}")
-    cmd = ["ffmpeg", "-v", "error", "-y", "-i", arq, "-t", str(d)]
+        vf.append(f"fade=t=out:st={inicio_fade:.3f}:d={FADE_OUT}"); af.append(f"afade=t=out:st={inicio_fade:.3f}:d={FADE_OUT}")
+    cmd = ["ffmpeg", "-v", "error", "-y", "-i", arq, "-t", f"{d:.3f}"]
     if vf:
         cmd += ["-vf", ",".join(vf)]
     cmd += ["-af", ",".join(af + ["aformat=sample_rates=48000:channel_layouts=stereo"]),
@@ -90,7 +100,8 @@ def montar(cfg):
         s = os.path.join(tmp, f"parte_{i:02d}.mp4")
         print("parte:", os.path.basename(pt["arquivo"]), flush=True)
         ultimo = i == len(cfg["partes"]) - 1
-        parte(pt["arquivo"], s, pt.get("corte_fim"), fade_in=i > 0, fade_out=True, dur_fade_in=pt.get("fade_in"))
+        parte(pt["arquivo"], s, pt.get("corte_fim"), fade_in=i > 0, fade_out=True, dur_fade_in=pt.get("fade_in"),
+              fim_fala=pt.get("fim_fala"))
         pecas.append(s)
         if ultimo and cfg.get("cartao_final"):
             c = os.path.join(tmp, "cartao_final.mp4")
