@@ -16,7 +16,7 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco1.md
 | 8 | O policial civil Ítalo | print | P02 | - | zoom_ate_trecho; grifo avança | dados como CPF, telefone e nomes de familiares podem ser obtidos por meio de bancos de dados vazados; data=07/11/2026; credito=Fonte: O Liberal | nenhum | corte | neutro |
 | 9 | Ou seja, o | video | M46575 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 10 | E esses dados viram | video | M18263 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 11 | Em novembro de dois | reportagem | M28293 | 1.0 | zoom_lento | SBT NEWS~1 em cada 2 brasileiros teve dados sigilosos vendidos a quadrilhas@deflagrou a operação; data=28/11/2024 | nenhum | corte | neutro |
+| 11 | Em novembro de dois | reportagem | M14044 | 1.0 | zoom_lento | SBT NEWS~1 em cada 2 brasileiros teve dados sigilosos vendidos a quadrilhas@deflagrou a operação; data=28/11/2024 | nenhum | corte | neutro |
 | 12 | contra um grupo suspeito | video | M23214 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 13 | cento e vinte milhões | numero | - | - | entra_deslizando | 120 MILHÕES / de brasileiros expostos, segundo a polícia; data=28/11/2024; credito=Fonte: SBT News | impacto | corte | neutro |
 | 14 | até em golpes digitais. | video | M47213 | 1.0 | pan_dir | credito=ILUSTRAÇÃO | nenhum | corte | frio |
@@ -30,7 +30,7 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco1.md
 | 22 | Com essa ficha, o | video | M21821 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 23 | portão com um crachá | video | M31137 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 24 | Ninguém pede documento | video | M21261 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | quente |
-| 25 | Uma reportagem do programa | reportagem | M22976 | 1.0 | zoom_lento | FANTÁSTICO · TV GLOBO~Quadrilhas se dividem como uma empresa@se dividem; data=AGO/2026 | nenhum | corte | neutro |
+| 25 | Uma reportagem do programa | reportagem | M23082 | 1.0 | zoom_lento | FANTÁSTICO · TV GLOBO~Quadrilhas se dividem como uma empresa@se dividem; data=AGO/2026 | nenhum | corte | neutro |
 | 27 | um grupo que obtém | fluxo | - | - | caixa a caixa (acendem em sequência) | OBTÉM OS DADOS@obtém / LIGA@liga / RECEBE O DINHEIRO@recebe | tique | corte | frio |
 | 28 | Muita gente jura que | video | M321 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 29 | Não encontramos fonte que | video | M25262 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |

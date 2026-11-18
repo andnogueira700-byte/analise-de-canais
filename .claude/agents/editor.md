@@ -76,3 +76,5 @@ Antes de escolher um vídeo ou foto da biblioteca, descarte pelo título ou pela
 - fachada, logo ou fila de banco real quando o roteiro não fala daquele banco (regra: nenhum banco acusado);
 - imagens sem relação com a frase (lua, paisagem aleatória) só para preencher.
 Na dúvida, prefira mãos no celular, rosto preocupado, central de atendimento, documentos, cidade à noite.
+- fundo verde (chroma key/green screen) ou bandeira estrangeira (União Europeia, EUA etc.) em cena;
+- vídeo vertical (o renderizador recusa).
