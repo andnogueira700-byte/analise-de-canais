@@ -32,6 +32,7 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco5.md
 | 21 | Depois, registre o boletim | video | M34158 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 22 | O quinto cuidado é consultar | lista | - | - | estado 5: item 05 entra em "quinto cuidado" | BANCO NÃO PEDE SENHA NEM PIX POR TELEFONE / DESLIGUE E PROCURE VOCÊ MESMO / TENHA UMA FRASE PRONTA / JÁ CAIU? AVISE O BANCO NA HORA / CONSULTE O REGISTRATO / FAMÍLIA: REGRA E PALAVRA-CÓDIGO / REDUZA O LIMITE DO PIX À NOITE #5 | tique | corte | neutro |
 | 23 | Você entra com a | video | M38484 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
+| 23 | e vê as contas | video | M38504 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 24 | Procure o que você não reconhece | video | M29302 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 25 | um empréstimo que nunca pediu | video | M16140 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 26 | O sexto cuidado é uma recomendação | lista | - | - | estado 6: item 06 entra em "sexto cuidado"; aparece "RECOMENDAÇÃO DO CANAL" em "recomendação" | BANCO NÃO PEDE SENHA NEM PIX POR TELEFONE / DESLIGUE E PROCURE VOCÊ MESMO / TENHA UMA FRASE PRONTA / JÁ CAIU? AVISE O BANCO NA HORA / CONSULTE O REGISTRATO / FAMÍLIA: REGRA E PALAVRA-CÓDIGO / REDUZA O LIMITE DO PIX À NOITE #6 | tique | corte | neutro |
