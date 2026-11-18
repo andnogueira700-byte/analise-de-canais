@@ -81,7 +81,7 @@ def ler_storyboard_v2(caminho, palavras, cfg):
                     return "@%.3f" % max(0.0, kk)
             raise SystemExit(f"âncora não encontrada no plano {p['n']}: {m.group(1)}")
         p["texto"] = re.sub(r"@([^/|@;]+?)(?=\s*(?:/|$|;|//|~))", troca, p["texto"])
-    GRAFICOS = ("barras", "linha_tempo", "parte_total", "pessoas", "fluxo", "portas", "dividida", "ficha", "reportagem")
+    GRAFICOS = ("barras", "linha_tempo", "parte_total", "pessoas", "fluxo", "portas", "dividida", "ficha", "reportagem", "lista")
     for p in planos:
         m = re.search(r";?\s*((?:data|credito)=.*)$", p["texto"])
         p["etiq"] = m.group(1) if m else ""
@@ -401,6 +401,14 @@ def lista(texto, k):
     if m:
         ate = int(m.group(1)); texto = texto[:m.start()]
     itens = [t.strip() for t in texto.split("/") if t.strip()]
+    # âncoras "@0.42" (palavra falada): cada item entra na hora exata
+    ancoras = []
+    for j, it in enumerate(itens):
+        m2 = re.search(r"@([\d.]+)\s*$", it)
+        ancoras.append(float(m2.group(1)) if m2 else None)
+        itens[j] = re.sub(r"@[\d.]+\s*$", "", it).strip()
+    if not any(a is not None for a in ancoras):
+        ancoras = []
     fn, fi = fonte(FONTE_BLACK, 58), fonte(FONTE, 62)
     alt = 118
     y0 = H // 2 - len(itens) * alt // 2
@@ -409,6 +417,8 @@ def lista(texto, k):
             if j >= ate:
                 continue
             t0 = 0.0 if j < ate - 1 else 0.06
+        elif ancoras and j < len(ancoras) and ancoras[j] is not None:
+            t0 = ancoras[j]
         else:
             t0 = j / max(1, len(itens)) * 0.7
         if k < t0:

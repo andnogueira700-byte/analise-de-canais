@@ -9,39 +9,39 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco5.md
 
 | plano | gatilho | tipo | asset | entrada_no_clipe | movimento | grifo_ou_texto | sfx | transicao | cor |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | Agora, o que você pode | lista | - | - | estado 0: título e 7 linhas vazias | (lista completa, ver acima; estado 0 mostra só o título) | whoosh | corte | neutro |
-| 2 | O primeiro cuidado é a regra | lista | - | - | estado 1: item 01 entra em "regra de ouro" | (mesmo gráfico, estado 1) | tique | corte | neutro |
+| 1 | Agora, o que você pode | frase_centro | - | - | estado 0: título e 7 linhas vazias | 7 CUIDADOS PARA HOJE | whoosh | corte | neutro |
+| 2 | O primeiro cuidado é a regra | lista | - | - | estado 1: item 01 entra em "regra de ouro" | BANCO NÃO PEDE SENHA NEM PIX POR TELEFONE / DESLIGUE E PROCURE VOCÊ MESMO / TENHA UMA FRASE PRONTA / JÁ CAIU? AVISE O BANCO NA HORA / CONSULTE O REGISTRATO / FAMÍLIA: REGRA E PALAVRA-CÓDIGO / REDUZA O LIMITE DO PIX À NOITE #1 | tique | corte | neutro |
 | 3 | Segundo a Febraban, banco | print | P11 | - | zoom_até_trecho; grifo avança | O banco nunca liga para o cliente pedindo senha nem o número do cartão; credito=Fonte: CRCMS (orientação de segurança) | nenhum | corte | neutro |
 | 4 | E banco não manda ninguém | video | M31136 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 5 | não existe transferência | video | C3816 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 6 | motoboy buscando | video | M13253 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 7 | Se a ligação pede para você | texto | - | - | frase na tela, caixas brancas | SE PEDE ALGO COM O SEU DINHEIRO, A LIGAÇÃO É O GOLPE.@Se a ligação pede | impacto | corte | neutro |
-| 8 | O segundo cuidado é desligar | lista | - | - | estado 2: item 02 entra em "segundo cuidado" | (mesmo gráfico, estado 2) | tique | corte | neutro |
+| 8 | O segundo cuidado é desligar | lista | - | - | estado 2: item 02 entra em "segundo cuidado" | BANCO NÃO PEDE SENHA NEM PIX POR TELEFONE / DESLIGUE E PROCURE VOCÊ MESMO / TENHA UMA FRASE PRONTA / JÁ CAIU? AVISE O BANCO NA HORA / CONSULTE O REGISTRATO / FAMÍLIA: REGRA E PALAVRA-CÓDIGO / REDUZA O LIMITE DO PIX À NOITE #2 | tique | corte | neutro |
 | 9 | Segundo orientações de instituições | video | M50700 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 10 | o golpista pode manter a linha | video | M44746 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 11 | Se você ligar de volta | video | M42623 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 12 | Por isso, ligue de outro aparelho | video | M24217 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 13 | O terceiro cuidado é ter uma frase | lista | - | - | estado 3: item 03 entra em "terceiro cuidado" | (mesmo gráfico, estado 3) | tique | corte | neutro |
+| 13 | O terceiro cuidado é ter uma frase | lista | - | - | estado 3: item 03 entra em "terceiro cuidado" | BANCO NÃO PEDE SENHA NEM PIX POR TELEFONE / DESLIGUE E PROCURE VOCÊ MESMO / TENHA UMA FRASE PRONTA / JÁ CAIU? AVISE O BANCO NA HORA / CONSULTE O REGISTRATO / FAMÍLIA: REGRA E PALAVRA-CÓDIGO / REDUZA O LIMITE DO PIX À NOITE #3 | tique | corte | neutro |
 | 14 | A frase é esta | texto | - | - | frase pronta em destaque, quadradinho amarelo; pausa de 0,5 s antes | "EU NÃO RESOLVO NADA POR TELEFONE. VOU FALAR COM O BANCO PELO APLICATIVO."@A frase é esta | impacto | corte | neutro |
 | 15 | Não confirme nenhum dado | video | M4820 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 16 | Se a ligação era verdadeira | video | M1800 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 17 | O quarto cuidado é para quem | lista | - | - | estado 4: item 04 entra em "quarto cuidado" | (mesmo gráfico, estado 4) | tique | corte | neutro |
+| 17 | O quarto cuidado é para quem | lista | - | - | estado 4: item 04 entra em "quarto cuidado" | BANCO NÃO PEDE SENHA NEM PIX POR TELEFONE / DESLIGUE E PROCURE VOCÊ MESMO / TENHA UMA FRASE PRONTA / JÁ CAIU? AVISE O BANCO NA HORA / CONSULTE O REGISTRATO / FAMÍLIA: REGRA E PALAVRA-CÓDIGO / REDUZA O LIMITE DO PIX À NOITE #4 | tique | corte | neutro |
 | 18 | Avise o banco imediatamente | video | M9067 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 19 | o mais rápido possível | video | M25451 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 20 | O banco tem prazo | video | M42897 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 21 | Depois, registre o boletim | video | M34158 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 22 | O quinto cuidado é consultar | lista | - | - | estado 5: item 05 entra em "quinto cuidado" | (mesmo gráfico, estado 5) | tique | corte | neutro |
-| 23 | Você entra com a conta gov.br | video | M38484 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
+| 22 | O quinto cuidado é consultar | lista | - | - | estado 5: item 05 entra em "quinto cuidado" | BANCO NÃO PEDE SENHA NEM PIX POR TELEFONE / DESLIGUE E PROCURE VOCÊ MESMO / TENHA UMA FRASE PRONTA / JÁ CAIU? AVISE O BANCO NA HORA / CONSULTE O REGISTRATO / FAMÍLIA: REGRA E PALAVRA-CÓDIGO / REDUZA O LIMITE DO PIX À NOITE #5 | tique | corte | neutro |
+| 23 | Você entra com a | video | M38484 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 24 | Procure o que você não reconhece | video | M29302 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 25 | um empréstimo que nunca pediu | video | M16140 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
-| 26 | O sexto cuidado é uma recomendação | lista | - | - | estado 6: item 06 entra em "sexto cuidado"; aparece "RECOMENDAÇÃO DO CANAL" em "recomendação" | (mesmo gráfico, estado 6) | tique | corte | neutro |
+| 26 | O sexto cuidado é uma recomendação | lista | - | - | estado 6: item 06 entra em "sexto cuidado"; aparece "RECOMENDAÇÃO DO CANAL" em "recomendação" | BANCO NÃO PEDE SENHA NEM PIX POR TELEFONE / DESLIGUE E PROCURE VOCÊ MESMO / TENHA UMA FRASE PRONTA / JÁ CAIU? AVISE O BANCO NA HORA / CONSULTE O REGISTRATO / FAMÍLIA: REGRA E PALAVRA-CÓDIGO / REDUZA O LIMITE DO PIX À NOITE #6 | tique | corte | neutro |
 | 27 | Combine em família | video | M21632 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | quente |
 | 28 | A regra é que ligação de banco | video | M35976 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | quente |
 | 29 | só termina depois de um telefonema | video | M32185 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | quente |
 | 30 | A palavra é um código | video | M36147 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | quente |
 | 31 | quando alguém ligar dizendo | video | M7672 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | quente |
 | 32 | Quem não sabe a combinação | video | M14971 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 33 | O sétimo cuidado também | lista | - | - | estado 7: item 07 entra em "sétimo cuidado" | (mesmo gráfico, estado 7) | tique | corte | neutro |
+| 33 | O sétimo cuidado também | lista | - | - | estado 7: item 07 entra em "sétimo cuidado" | BANCO NÃO PEDE SENHA NEM PIX POR TELEFONE / DESLIGUE E PROCURE VOCÊ MESMO / TENHA UMA FRASE PRONTA / JÁ CAIU? AVISE O BANCO NA HORA / CONSULTE O REGISTRATO / FAMÍLIA: REGRA E PALAVRA-CÓDIGO / REDUZA O LIMITE DO PIX À NOITE #7 | tique | corte | neutro |
 | 34 | Reduza o limite do Pix | video | M42039 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 35 | principalmente o da noite | video | M42041 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 36 | as regras mudam de banco | video | M4240 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |

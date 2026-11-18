@@ -12,6 +12,7 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco2.md
 | 4 | Esses números são piso | video | M14006 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | impacto | corte | neutro |
 | 5 | Lembra do paradoxo do | video | M39789 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 6 | Em agosto de dois mil | video | M20249 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO; data=AGO/2025 | nenhum | corte | frio |
+| 6 | citou estudos segundo | video | M232 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 7 | um quarto das ligações | parte_total | - | - | 1 quadradinho pinta de vermelho na palavra exata | 1 DE 4~das ligações vêm de número falsificado (inclui telemarketing)@um quarto; credito=Fonte: Anatel | impacto | corte | neutro |
 | 8 | ou seja, mostra na sua | video | M248 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 9 | Nem tudo é golpe | video | M242 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |

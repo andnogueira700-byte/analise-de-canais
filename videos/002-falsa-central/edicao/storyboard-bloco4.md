@@ -21,7 +21,7 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco4.md
 | 13 | No STJ, o caso foi outro | foto | F164618003 | 1.0 | zoom_lento | credito=Fonte: STJ (foto da sede, CC BY 2.0) | nenhum | corte | neutro |
 | 14 | Um cliente recebeu ligação | print | P09 | - | zoom_até_trecho; grifo avança | Sem transações incompatíveis com perfil de cliente, banco não responde por golpe da falsa central; credito=Fonte: STJ; data=15/07/2026 | nenhum | corte | neutro |
 | 15 | Em quinze de julho | foto | F164618126 | 1.0 | zoom_lento | credito=Fonte: STJ (foto da sede, CC BY 2.0); data=15/07/2026 | nenhum | corte | neutro |
-| 16 | Turma, por unanimidade | foto | F164618139 | 1.0 | zoom_in | credito=Fonte: STJ (foto da sede, CC BY 2.0) | nenhum | corte | neutro |
+| 16 | a Terceira Turma | foto | F164618139 | 1.0 | zoom_in | credito=Fonte: STJ (foto da sede, CC BY 2.0) | nenhum | corte | neutro |
 | 17 | Segundo o tribunal | video | M5595 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 18 | as operações eram compatíveis | video | M16109 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 19 | a responsabilidade do banco | video | M4737 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
@@ -31,11 +31,10 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco4.md
 | 23 | A Febraban afirma que | reportagem | M47004 | 1.0 | zoom_lento | FANTÁSTICO · TV GLOBO~a culpa do golpe é do fraudador@a culpa do golpe é do fraudador; credito=Fonte: Fantástico (TV Globo), porta-voz da Febraban | nenhum | corte | neutro |
 | 24 | Fora da Justiça, há o Mecanismo | print | P10 | - | zoom_até_trecho; grifo avança | Mecanismo Especial de Devolução (MED); credito=Fonte: Agência Brasil; data=08/2025 | nenhum | corte | neutro |
 | 25 | Agora, o parecer deste laudo | video | M29984 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 26 | Na nossa avaliação | portas | - | - | 3 portas acendem nas palavras exatas; última linha em amarelo | DADOS · ANPD~quem vigia?@dados / LIGAÇÃO · ANATEL~quem vigia?@ligação / DINHEIRO · BANCO CENTRAL~quem vigia?@dinheiro // ninguém fecha o ciclo@ninguém | tique | corte | neutro |
+| 26 | Na nossa avaliação | portas | - | - | 3 portas acendem nas palavras exatas; última linha em amarelo | DADOS · ANPD~quem vigia?@dados / LIGAÇÃO · ANATEL~quem vigia?@ligação / DINHEIRO · BANCO CENTRAL~quem vigia?@dinheiro // ninguém fecha o ciclo | tique | corte | neutro |
 | 27 | Ninguém fecha o ciclo | video | M4830 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 28 | O parecer propõe três | video | M34096 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 29 | Primeira, nome do banco | lista | - | - | itens entram um a um (#1 em "Primeira", #2 em "Segunda") | 01 NOME DO BANCO NA TELA SÓ EM LIGAÇÃO VERIFICADA@Primeira / 02 CRITÉRIO PÚBLICO PARA OPERAÇÃO FORA DO PADRÃO@Segunda / 03 CANAL ÚNICO: AVISA UMA VEZ, CHEGA A TODOS@Terceira | whoosh | corte | neutro |
-| 30 | Terceira, um canal único | lista | - | - | mesmo gráfico do plano 29; item #3 entra na palavra exata (item 03 em amarelo) | (mesmo quadro do plano 29) | whoosh | corte | neutro |
+| 29 | Primeira, nome do banco | lista | - | - | itens entram um a um (#1 em "Primeira", #2 em "Segunda") | NOME DO BANCO NA TELA SÓ EM LIGAÇÃO VERIFICADA@Primeira / CRITÉRIO PÚBLICO PARA OPERAÇÃO FORA DO PADRÃO@Segunda / CANAL ÚNICO: AVISA UMA VEZ, CHEGA A TODOS@Terceira | whoosh | corte | neutro |
 | 31 | São propostas, não regras | video | M22855 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 
 ## Notas

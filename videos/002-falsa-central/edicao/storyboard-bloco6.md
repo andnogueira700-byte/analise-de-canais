@@ -7,15 +7,14 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco6.md
 | plano | gatilho | tipo | asset | entrada_no_clipe | movimento | grifo_ou_texto | sfx | transicao | cor |
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | Agora dá para responder | texto | - | - | frase na tela, caixas brancas | COMO ELES SABEM TUDO SOBRE VOCÊ?@Agora dá para responder | whoosh | corte | neutro |
-| 2 | O golpista sabe tanto | lista | - | - | estado 1: item 01 entra em "bases vazadas" | 01 FICHA: DADOS EM BASES VAZADAS (segundo a polícia)@bases vazadas / 02 DISFARCE: NÚMERO PODE SER FALSIFICADO@número do banco / 03 EMPURRÃO: AUTORIDADE, PRESSA E CARTILHA@autoridade | tique | corte | neutro |
-| 3 | Ele aparece com o número do banco | lista | - | - | estado 2: item 02 entra em "número do banco"; apoio "pode ser falsificado" em "pode ser falsificado" | (mesmo gráfico, estado 2) | tique | corte | neutro |
-| 4 | E ele convence gente esperta | lista | - | - | estado 3: item 03 entra em "autoridade" | (mesmo gráfico, estado 3) | impacto | corte | neutro |
-| 5 | O banco de verdade sabe quase tudo | dividida | - | - | lado esquerdo entra em "O banco de verdade"; lado direito entra em "O falso" | BANCO DE VERDADE: SABE E NÃO PEDE NADA@O banco de verdade / FALSO: SABE E PEDE QUE VOCÊ AJA AGORA@O falso | whoosh | corte | neutro |
+| 2 | O golpista sabe tanto | lista | - | - | estado 1: item 01 entra em "bases vazadas" | A FICHA: DADOS EM BASES VAZADAS@bases vazadas / O DISFARCE: NÚMERO FALSIFICADO@número do banco / O EMPURRÃO: AUTORIDADE E PRESSA@usa autoridade | tique | corte | neutro |
+| 5 | O banco de verdade sabe quase tudo | dividida | - | - | lado esquerdo entra em "O banco de verdade"; lado direito entra em "O falso" | BANCO DE VERDADE~sabe quase tudo e não pede nada@O banco de verdade / O FALSO~sabe quase tudo e pede que você aja agora@O falso | whoosh | corte | neutro |
 | 6 | Alguém da sua família | video | M48157 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | quente |
 | 7 | O que o golpista sabia | video | M24606 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 8 | Conta aqui nos comentários | video | M15911 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 9 | E, se este laudo foi útil | video | M13169 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 10 | Da próxima vez que o celular | video | C4973 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
+| 10 | lembre que aquele nome | video | M49557 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 11 | A falsa central rouba | video | M28884 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | tique | corte | frio |
 | 12 | E se você quer entender como | video | M4537 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 13 | cerca de oitocentos e treze | video | M32790 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |

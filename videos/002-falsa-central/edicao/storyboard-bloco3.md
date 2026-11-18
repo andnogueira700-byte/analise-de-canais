@@ -7,12 +7,12 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco3.md
 | plano | gatilho | tipo | asset | entrada_no_clipe | movimento | grifo_ou_texto | sfx | transicao | cor |
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | Há anos os bancos | video | M4809 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 2 | Não clique em link | lista | - | - | itens entram um a um (#1 em "Não clique", #2 em "Não faça", #3 em "Desconfie") | 01 NÃO CLIQUE EM LINK@Não clique / 02 NÃO PAGUE O QUE VOCÊ NÃO RECONHECE@Não faça pagamento / 03 DESCONFIE DE ACESSO ESTRANHO@Desconfie | tique | corte | neutro |
+| 2 | Não clique em link | lista | - | - | itens entram um a um (#1 em "Não clique", #2 em "Não faça", #3 em "Desconfie") | NÃO CLIQUE EM LINK@Não clique / NÃO PAGUE O QUE VOCÊ NÃO RECONHECE@Não faça pagamento / DESCONFIE DE ACESSO ESTRANHO@Desconfie | tique | corte | neutro |
 | 3 | Agora, repare no que | video | M42666 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 4 | Nos casos mostrados pelo | reportagem | M37045 | 1.0 | zoom_lento | FANTÁSTICO · TV GLOBO~abordagem começa com mensagem com comprovante@Nos casos mostrados; credito=Fonte: Fantástico (TV Globo) | nenhum | corte | neutro |
 | 5 | que traz um comprovante | video | M17617 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 6 | junto com um aviso | reportagem | M46021 | 1.0 | zoom_lento | FANTÁSTICO · TV GLOBO~aviso para não clicar em link nenhum@aviso; credito=Fonte: Fantástico (TV Globo) | nenhum | corte | neutro |
-| 7 | Depois vem a ligação | fluxo | - | - | caixa a caixa (acendem nas palavras) | 1 MENSAGEM@Depois / 2 LIGAÇÃO DE "ESPECIALISTA"@ligação de um especialista / 3 PEDIDO FINAL: CÓDIGO, PIX OU CARTÃO@Só no fim | tique | corte | frio |
+| 7 | Depois vem a ligação | fluxo | - | - | caixa a caixa (acendem nas palavras) | MENSAGEM@Depois / LIGAÇÃO DE "ESPECIALISTA"@ligação de um especialista / PEDIDO FINAL: CÓDIGO, PIX OU CARTÃO@Só no fim | tique | corte | frio |
 | 8 | É como alguém que bate | video | M21817 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 9 | ladrões no bairro | video | M1649 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 10 | Ele não pede para você | video | M11487 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
@@ -21,12 +21,12 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco3.md
 | 13 | Ela desconfiou do link | video | M4508 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 14 | seguiu o especialista | video | M4502 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 15 | E o último passo era | video | M4731 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 16 | O golpe não fura a cartilha | texto | - | - | caixas entram; pausa de 1 s antes; música muda | O GOLPE NÃO FURA A CARTILHA.@O golpe não fura / ELE RECITA A CARTILHA. (amarelo)@Ele recita | impacto | corte | neutro |
+| 16 | O golpe não fura a cartilha | texto | - | - | caixas entram; pausa de 1 s antes; música muda | O GOLPE NÃO FURA A CARTILHA.@O golpe não fura / ELE RECITA A CARTILHA.@Ele recita | impacto | corte | neutro |
 | 17 | Isso também explica quem | reportagem | M37038 | 1.0 | zoom_lento | FANTÁSTICO · TV GLOBO~vítimas com mestrado e doutorado@mestrado e doutorado; credito=Fonte: Fantástico (TV Globo) | nenhum | corte | neutro |
 | 18 | um advogado que perdeu | video | M23740 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 19 | seiscentos mil | numero | - | - | entra deslizando | R$ 600 MIL~perdidos por um advogado (caso do Fantástico), com cheque especial e financiamento em nome dele@seiscentos mil; credito=Fonte: Fantástico (TV Globo) | impacto | corte | neutro |
 | 20 | e um delegado aposentado | video | M33210 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 21 | Uma vítima do Paraná | reportagem | M23887 | 1.0 | zoom_lento | FANTÁSTICO · TV GLOBO~vítima do Paraná: "sem recurso e sem amparo"@sem recurso; credito=Fonte: Fantástico (TV Globo) | nenhum | corte | neutro |
+| 21 | Uma vítima do Paraná | reportagem | M23887 | 1.0 | zoom_lento | FANTÁSTICO · TV GLOBO~vítima do Paraná ficou "sem recurso e sem amparo"; credito=Fonte: Fantástico (TV Globo) | nenhum | corte | neutro |
 | 22 | de vítima para inadimplente | video | M25579 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 23 | Na leitura deste laudo | video | M33379 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 24 | O golpe não testa | video | M5488 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
