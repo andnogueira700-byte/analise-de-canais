@@ -231,11 +231,27 @@ def numero_destaque(base, texto, k):
     tw = d.textlength(num, font=fn)
     d.text(((W - tw) / 2, H / 2 - 230 * s), num, font=fn, fill=AMARELO, stroke_width=8, stroke_fill=(0, 0, 0))
     if resto and k > 0.15:
-        fr = fonte(FONTE, 70)
-        rw = d.textlength(resto, font=fr)
+        # legenda: diminui a letra e quebra em até 2 linhas para nunca sair da tela
+        tam = 70
+        def linhas_de(fr):
+            if d.textlength(resto, font=fr) <= W - 240:
+                return [resto]
+            pal = resto.split(); melhor = None
+            for c in range(1, len(pal)):
+                a, b = " ".join(pal[:c]), " ".join(pal[c:])
+                larg = max(d.textlength(a, font=fr), d.textlength(b, font=fr))
+                if melhor is None or larg < melhor[0]:
+                    melhor = (larg, [a, b])
+            return melhor[1] if melhor else [resto]
+        fr = fonte(FONTE, tam); ls = linhas_de(fr)
+        while tam > 40 and max(d.textlength(l, font=fr) for l in ls) > W - 240:
+            tam -= 4; fr = fonte(FONTE, tam); ls = linhas_de(fr)
         y = H / 2 + 90
-        d.rectangle([(W - rw) / 2 - 30, y - 10, (W + rw) / 2 + 30, y + 92], fill=VERMELHO)
-        d.text(((W - rw) / 2, y), resto, font=fr, fill=(255, 255, 255))
+        for l in ls:
+            rw = d.textlength(l, font=fr)
+            d.rectangle([(W - rw) / 2 - 30, y - 10, (W + rw) / 2 + 30, y + tam + 22], fill=VERMELHO)
+            d.text(((W - rw) / 2, y), l, font=fr, fill=(255, 255, 255))
+            y += tam + 34
     return img
 
 
