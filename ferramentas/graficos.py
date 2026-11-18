@@ -322,3 +322,27 @@ def desenhar(tipo, texto, k):
 
 TIPOS = {"barras": barras, "linha_tempo": linha_tempo, "parte_total": parte_total, "pessoas": pessoas,
          "fluxo": fluxo, "portas": portas, "dividida": dividida, "ficha": ficha}
+
+
+def tarja_tv(img, texto, k):
+    """Tarja de telejornal sobre um vídeo de reportagem: canal em vermelho + frase da reportagem.
+    texto: "SBT NEWS~1 em cada 2 brasileiros teve dados vendidos a quadrilhas@palavra" (âncora opcional)."""
+    texto = _prep(texto)
+    canal, _, frase = texto.partition("~")
+    d = ImageDraw.Draw(img)
+    p = _janela(k, 0, 1, 0.05, 0.25)
+    if p <= 0:
+        return img
+    y = H - 300
+    fc, ff = fonte(FONTE_BLACK, 44), fonte(FONTE, 50)
+    linhas = _quebra(d, frase.strip(), ff, 1500)
+    alt = 40 + len(linhas) * 66
+    larg = 120 + max([d.textlength(l, font=ff) for l in linhas] + [400])
+    xr = -larg + (larg + 90) * p  # entra deslizando da esquerda
+    d.rectangle([xr, y + 64, xr + larg, y + 64 + alt], fill=(250, 250, 250))
+    tw = d.textlength(canal.strip().upper(), font=fc)
+    d.rectangle([xr, y, xr + tw + 60, y + 64], fill=VERMELHO)
+    d.text((xr + 30, y + 8), canal.strip().upper(), font=fc, fill=(255, 255, 255))
+    for j, ln in enumerate(linhas):
+        d.text((xr + 40, y + 64 + 22 + j * 66), ln, font=ff, fill=(18, 20, 24))
+    return img

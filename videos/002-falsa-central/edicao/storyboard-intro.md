@@ -13,7 +13,7 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-intro.md`
 | 4 | Mesmo assim, segundo | video | M4805 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 5 | federação dos bancos, | video | M39774 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 6 | cento e trinta e | numero | - | - | entra_deslizando | 139 MIL relatos de clientes à Febraban@cento e trinta e nove mil; data=1º SEM/2025; credito=Fonte: Febraban | impacto | flash | neutro |
-| 7 | do golpe da | video | M51404 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
+| 7 | do golpe da | video | M22987 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 8 | O aviso está em | video | M269 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 9 | quase triplicaram em | video | M42270 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 10 | Como as duas coisas | video | M28884 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |

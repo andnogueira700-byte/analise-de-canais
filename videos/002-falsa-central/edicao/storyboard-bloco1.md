@@ -10,13 +10,13 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco1.md
 | 2 | Nela estão o | ficha | - | - | item_a_item (campos aparecem) | NOME FICTÍCIO@nome / CPF 000.000.000-00@cpf / TEL. (00) 00000-0000@telefone / NASC. 00/00/0000@nascimento | tique | corte | neutro |
 | 3 | e, às vezes, | video | M4542 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | quente |
 | 4 | No laudo anterior, | video | M39848 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 5 | a ficha de | video | M39856 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
+| 5 | a ficha de | video | M39496 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 6 | Agora chegou a | video | M5602 | 1.0 | pan_esq | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 7 | De onde vem | video | M49444 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 8 | O policial civil Ítalo | print | P02 | - | zoom_ate_trecho; grifo avança | dados como CPF, telefone e nomes de familiares podem ser obtidos por meio de bancos de dados vazados; data=07/11/2026; credito=Fonte: O Liberal | nenhum | corte | neutro |
 | 9 | Ou seja, o | video | M46575 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 10 | E esses dados viram | video | M18263 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 11 | Em novembro de dois | print | P03 | - | zoom_ate_trecho; grifo avança | 1 em cada 2 brasileiros teve dados sigilosos vendidos a quadrilhas; data=28/11/2024; credito=Fonte: SBT News | nenhum | corte | neutro |
+| 11 | Em novembro de dois | reportagem | M28293 | 1.0 | zoom_lento | SBT NEWS~1 em cada 2 brasileiros teve dados sigilosos vendidos a quadrilhas@deflagrou a operação; data=28/11/2024 | nenhum | corte | neutro |
 | 12 | contra um grupo suspeito | video | M23214 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 13 | cento e vinte milhões | numero | - | - | entra_deslizando | 120 MILHÕES / de brasileiros expostos, segundo a polícia; data=28/11/2024; credito=Fonte: SBT News | impacto | corte | neutro |
 | 14 | até em golpes digitais. | video | M47213 | 1.0 | pan_dir | credito=ILUSTRAÇÃO | nenhum | corte | frio |
@@ -30,10 +30,9 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco1.md
 | 22 | Com essa ficha, o | video | M21821 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 23 | portão com um crachá | video | M31137 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 24 | Ninguém pede documento | video | M21261 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | quente |
-| 25 | Uma reportagem do programa | video | M46290 | 1.0 | zoom_lento | data=AGO/2026; credito=ILUSTRAÇÃO (fonte da fala: Fantástico, TV Globo) | nenhum | corte | neutro |
-| 26 | mostrou que as quadrilhas | video | M1599 | 1.0 | pan_esq | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
+| 25 | Uma reportagem do programa | reportagem | M22976 | 1.0 | zoom_lento | FANTÁSTICO · TV GLOBO~Quadrilhas se dividem como uma empresa@se dividem; data=AGO/2026 | nenhum | corte | neutro |
 | 27 | um grupo que obtém | fluxo | - | - | caixa a caixa (acendem em sequência) | OBTÉM OS DADOS@obtém / LIGA@liga / RECEBE O DINHEIRO@recebe | tique | corte | frio |
-| 28 | Muita gente jura que | video | M42136 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
+| 28 | Muita gente jura que | video | M321 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 29 | Não encontramos fonte que | video | M25262 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 30 | então este laudo não | video | M25251 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 31 | O mecanismo tem três | fluxo | - | - | item_a_item | A FICHA@ficha / O DISFARCE@disfarce / O EMPURRÃO@empurrão | tique | corte | neutro |

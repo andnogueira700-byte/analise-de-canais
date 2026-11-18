@@ -96,3 +96,6 @@ Na coluna "grifo_ou_texto": "~" separa valor e legenda; " / " separa itens; " //
 | portas | DADOS~quem vigia?@dados / TELEFONIA~quem vigia?@telefonia / BANCO~quem vigia?@banco // ninguém fecha o ciclo@ninguém |
 | dividida | VOLTA REDONDA~banco devolveu R$ 190,9 mil@volta redonda / STJ~vítima não recebeu nada@superior tribunal |
 | ficha | NOME FICTÍCIO@nome / CPF 000.000.000-00@cpf / TEL. (00) 00000-0000@telefone |
+| reportagem | (asset = vídeo de reportagem: repórter, estúdio, redação, coletiva) SBT NEWS~1 em cada 2 brasileiros teve dados vendidos a quadrilhas@palavra falada; data=28/11/2024 |
+
+Regras novas do dono: fonte de TV = tipo "reportagem" (nunca print de texto); jornal/site = print do parágrafo. Proibido vídeo vertical (o renderizador recusa).

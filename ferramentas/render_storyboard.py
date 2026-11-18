@@ -81,7 +81,7 @@ def ler_storyboard_v2(caminho, palavras, cfg):
                     return "@%.3f" % max(0.0, kk)
             raise SystemExit(f"âncora não encontrada no plano {p['n']}: {m.group(1)}")
         p["texto"] = re.sub(r"@([^/|@;]+?)(?=\s*(?:/|$|;|//|~))", troca, p["texto"])
-    GRAFICOS = ("barras", "linha_tempo", "parte_total", "pessoas", "fluxo", "portas", "dividida", "ficha")
+    GRAFICOS = ("barras", "linha_tempo", "parte_total", "pessoas", "fluxo", "portas", "dividida", "ficha", "reportagem")
     for p in planos:
         m = re.search(r";?\s*((?:data|credito)=.*)$", p["texto"])
         p["etiq"] = m.group(1) if m else ""
@@ -696,7 +696,7 @@ def checar_repeticao(cfg, planos):
     vistos, erros = {}, []
     for p in planos:
         a = p["asset"]
-        if p["tipo"] not in ("video", "foto") or a in ("-", ""):
+        if p["tipo"] not in ("video", "foto", "reportagem") or a in ("-", ""):
             continue
         if a in vistos:
             erros.append(f"plano {p['n']}: {a} repetido dentro do bloco (plano {vistos[a]})")
@@ -730,6 +730,8 @@ def quadros_de_video(clipe, entrada, dur):
         prop = int(wh[0]) / int(wh[1])
     except Exception:
         prop = 16 / 9
+    if prop < 1.2 and os.environ.get("PERMITE_VERTICAL") != "1":
+        raise SystemExit(f"VÍDEO VERTICAL PROIBIDO (pedido do dono): {os.path.basename(clipe)} ({wh[0]}x{wh[1]}). Troque no storyboard.")
     if prop < 1.2:
         # vídeo vertical/quadrado: inteiro no centro, com a própria imagem desfocada preenchendo as laterais
         filtro = (f"fps={FPS},split[a][b];[a]scale=2112:1188:force_original_aspect_ratio=increase,crop=2112:1188,"
@@ -779,7 +781,7 @@ def renderizar(cfg):
         prox_vinheta = idx_p + 1 < len(planos) and planos[idx_p + 1]["tipo"] == "vinheta" and p["tipo"] != "vinheta"
         tipo = p["tipo"]
         frames_base = None
-        if tipo == "video":
+        if tipo in ("video", "reportagem"):
             clipe = obter_asset(cfg, p["asset"])
             frames_base = quadros_de_video(clipe, p["entrada"], nq / FPS)
             ultimo_video = (clipe, p["entrada"] + nq / FPS)
@@ -798,7 +800,10 @@ def renderizar(cfg):
             frames_base = [escurecer(fb[0], 0.42, 10)] if fb else None
         for i in range(nq):
             k = i / max(1, nq - 1)
-            if tipo == "foto" and frames_base:
+            if tipo == "reportagem" and frames_base:
+                f = ken_burns(frames_base[min(i, len(frames_base) - 1)], k, p["mov"] if p["mov"] in ("zoom_in", "zoom_out", "pan_esq", "pan_dir") else "zoom_in", 0.05)
+                f = GRAF.tarja_tv(f, p["texto"], k)
+            elif tipo == "foto" and frames_base:
                 if p.get("_cartao"):
                     f = foto_em_cartao(frames_base[0], k)
                 else:
