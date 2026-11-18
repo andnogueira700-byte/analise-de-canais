@@ -1,0 +1,55 @@
+{
+ "partes": [
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/l002-intro.mp4",
+   "fim_fala": 74.08
+  },
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/l002-bloco1.mp4",
+   "fim_fala": 147.44,
+   "respiros": [
+    {
+     "texto": "HACKOPSIA / LAUDO Nº 002 / O golpe da falsa central",
+     "dur": 2.6
+    },
+    {
+     "texto": "",
+     "dur": 1.2
+    }
+   ],
+   "fade_in": 1.0
+  },
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/l002-bloco2.mp4",
+   "fim_fala": 164.4,
+   "cartao_antes": "ARQUIVO 02 — O disfarce"
+  },
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/l002-bloco3.mp4",
+   "fim_fala": 132.32,
+   "cartao_antes": "ARQUIVO 03 — A cartilha"
+  },
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/l002-bloco4.mp4",
+   "fim_fala": 180.56,
+   "cartao_antes": "ARQUIVO 04 — A lei e o parecer"
+  },
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/l002-bloco5.mp4",
+   "fim_fala": 183.76,
+   "cartao_antes": "ARQUIVO 05 — Como se proteger"
+  },
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/l002-bloco6.mp4",
+   "fim_fala": 88.8,
+   "cartao_antes": "ARQUIVO 06 — A resposta"
+  }
+ ],
+ "musica_respiro": "/home/user/analise-de-canais/videos/001-caixa-7-milhoes/edicao/musica/intro-tensao.mp3",
+ "digitacao": "/home/user/analise-de-canais/videos/001-caixa-7-milhoes/edicao/sfx/digitacao.mp3",
+ "cartao_final": "HACKOPSIA / LAUDO Nº 002 — ENCERRADO / a autópsia dos ataques que esconderam de você",
+ "dur_final": 12,
+ "look": "eq=contrast=1.07:saturation=0.86:gamma=0.98,vignette=angle=PI/4.6,noise=alls=6:allf=t+u",
+ "pasta_temp": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/montagem-002-final",
+ "saida": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/laudo-002-final.mp4"
+}

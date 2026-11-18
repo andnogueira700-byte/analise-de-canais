@@ -1,0 +1,20 @@
+{
+ "formato": "v2",
+ "storyboard": "/home/user/analise-de-canais/videos/002-falsa-central/edicao/storyboard-bloco6.md",
+ "transcricao": "/home/user/analise-de-canais/videos/002-falsa-central/edicao/audio/stt-completo.json",
+ "inicio": 886.955102,
+ "antecipa": 0.06,
+ "fim": 975.719,
+ "clipes": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/clips",
+ "prints": "/home/user/analise-de-canais/videos/002-falsa-central/edicao/prints-grifo",
+ "mapa_prints": {},
+ "narracao": "/home/user/analise-de-canais/videos/002-falsa-central/edicao/audio/narracao-masterizada.wav",
+ "musica": "/home/user/analise-de-canais/videos/001-caixa-7-milhoes/edicao/musica/fundo-investigacao.mp3",
+ "sfx": "/home/user/analise-de-canais/videos/001-caixa-7-milhoes/edicao/sfx",
+ "look": "eq=contrast=1.07:saturation=0.86:gamma=0.98,vignette=angle=PI/4.6,noise=alls=6:allf=t+u",
+ "saida": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/l002-bloco6.mp4",
+ "biblioteca": "/home/user/analise-de-canais/videos/002-falsa-central/edicao/biblioteca.json",
+ "uso": "/home/user/analise-de-canais/videos/002-falsa-central/edicao/uso-clipes.json",
+ "parte": "bloco6",
+ "metade": 488
+}
