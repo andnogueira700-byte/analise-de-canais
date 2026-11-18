@@ -1,0 +1,44 @@
+{
+ "P02": {
+  "url": "https://www.oliberal.com/policia/golpes-financeiros-no-para-saiba-como-identificar-e-evitar-prejuizos-1.1191529",
+  "frase": "dados como CPF, telefone e nomes de familiares podem ser obtidos por meio de bancos de dados vazados",
+  "rects": [
+   [
+    1053,
+    1030,
+    1462,
+    44
+   ],
+   [
+    640,
+    1084,
+    466,
+    44
+   ]
+  ]
+ },
+ "P03": {
+  "url": "https://sbtnews.sbt.com.br/noticia/brasil/dados-de-1-em-cada-2-brasileiros-foram-vazados-aponta-investigacao-da-policia-civil-de-sp",
+  "frase": "1 em cada 2 brasileiros teve dados sigilosos vendidos a quadrilhas",
+  "rects": [
+   [
+    1906,
+    944,
+    341,
+    90
+   ],
+   [
+    798,
+    1035,
+    1151,
+    90
+   ],
+   [
+    798,
+    1126,
+    761,
+    90
+   ]
+  ]
+ }
+}

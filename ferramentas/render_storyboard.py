@@ -81,6 +81,16 @@ def ler_storyboard_v2(caminho, palavras, cfg):
                     return "@%.3f" % max(0.0, kk)
             raise SystemExit(f"âncora não encontrada no plano {p['n']}: {m.group(1)}")
         p["texto"] = re.sub(r"@([^/|@;]+?)(?=\s*(?:/|$|;|//|~))", troca, p["texto"])
+    GRAFICOS = ("barras", "linha_tempo", "parte_total", "pessoas", "fluxo", "portas", "dividida", "ficha")
+    for p in planos:
+        m = re.search(r";?\s*((?:data|credito)=.*)$", p["texto"])
+        p["etiq"] = m.group(1) if m else ""
+        if m:
+            p["texto"] = p["texto"][:m.start()].strip()
+        if p["tipo"] not in GRAFICOS:
+            p["texto"] = re.sub(r"@[\d.]+", "", p["texto"]).strip()
+        if p["texto"] == "":
+            p["texto"] = "-"
     return planos
 
 
@@ -652,6 +662,7 @@ def quadros_de_video(clipe, entrada, dur):
 
 def renderizar(cfg):
     global GRAF
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import graficos as GRAF
     if cfg.get("formato") == "v2":
         stt = json.load(open(cfg["transcricao"]))
@@ -721,7 +732,9 @@ def renderizar(cfg):
                 if not os.path.exists(png):
                     png = os.path.join(cfg["prints"], p["_fonte"] + ".png")
                 rec_man = (grifos.get(p["_partes"][0][0]) or {}).get("recorte")
-                f = print_mensagem(png, grupos, k, FONTES_PRINT.get(p["_fonte"], ""), rec_man)
+                mf = re.search(r"credito=\s*Fonte:\s*([^;(]+)", p.get("etiq", ""))
+                nome_fonte = mf.group(1).strip().upper() if mf else FONTES_PRINT.get(p["_fonte"], "")
+                f = print_mensagem(png, grupos, k, nome_fonte, rec_man)
             elif tipo == "print":
                 chave = mapa_print.get(f"{p['n']}", p["asset"])
                 g = grifos.get(chave) or grifos.get(p["asset"])
@@ -745,7 +758,7 @@ def renderizar(cfg):
                 base = ken_burns(frames_base[0], k, "zoom_in", 0.03) if frames_base else None
                 f = cartao(base, p["texto"], k)
             elif tipo in GRAF.TIPOS:
-                f = GRAF.desenhar(tipo, re.split(r";?\s*(?:data|credito)=", p["texto"])[0].strip(), k)
+                f = GRAF.desenhar(tipo, p["texto"], k)
             elif tipo == "calendario":
                 f = ken_burns(calendario(p["texto"], k), k, "zoom_in", 0.04)
             elif tipo == "vinheta":
@@ -756,8 +769,9 @@ def renderizar(cfg):
             if tipo != "vinheta":
                 f = colorir(f, p.get("cor", "neutro"))
                 f = poeira(f, quadro_global)
-                if ("data=" in p["texto"] or "credito=" in p["texto"]) and tipo not in ("print",):
-                    f = GRAF.etiquetas(f, p["texto"][p["texto"].find("data=") if "data=" in p["texto"] else p["texto"].find("credito="):])
+                if p.get("etiq"):
+                    etq = p["etiq"] if tipo != "print" else re.sub(r";?\s*credito=[^;]*", "", p["etiq"])
+                    f = GRAF.etiquetas(f, etq)
             if prox_vinheta and i >= nq - 14:
                 f = Image.blend(f, Image.new("RGB", (W, H), (0, 0, 0)), (i - (nq - 14)) / 14)
             quadro_global += 1
