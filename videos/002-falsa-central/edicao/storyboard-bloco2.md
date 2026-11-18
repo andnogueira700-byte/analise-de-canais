@@ -7,7 +7,7 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco2.md
 | plano | gatilho | tipo | asset | entrada_no_clipe | movimento | grifo_ou_texto | sfx | transicao | cor |
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | Primeiro, o tamanho do | video | M42343 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
-| 2 | Segundo a Febraban, | barras | - | - | barras crescem na palavra exata (2 barras) | 139 MIL~1º SEM. 2025@cento e trinta e nove / 105 MIL~ANO DE 2024@cento e cinco mil // nota: períodos diferentes, +195,7% no 1º sem.@vieram depois; credito=Fonte: Febraban | tique | corte | neutro |
+| 2 | Segundo a Febraban, | barras | - | - | barras crescem na palavra exata (2 barras) | 105 MIL~ANO DE 2024@cento e cinco mil / 139 MIL~1º SEM. 2025@cento e trinta e nove // nota: períodos diferentes, +195,7% no 1º sem.@vieram depois; credito=Fonte: Febraban | tique | corte | neutro |
 | 3 | São relatos, não todas | print | P04 | - | zoom_até_trecho; grifo avança | Falsa central, com 105 mil reclamações; credito=Fonte: Movimento Econômico (dados da Febraban) | nenhum | corte | neutro |
 | 4 | Esses números são piso | video | M14006 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | impacto | corte | neutro |
 | 5 | Lembra do paradoxo do | video | M39789 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
@@ -17,7 +17,7 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco2.md
 | 8 | ou seja, mostra na sua | video | M248 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 9 | Nem tudo é golpe | video | M242 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 10 | Mas a Anatel afirma | video | C3442 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 11 | impostores de bancos | video | M42637 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
+| 11 | impostores de bancos | video | M14090 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 12 | É como uma carta em | video | M49557 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 13 | O carteiro entrega do | video | M22015 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 14 | O número na tela | video | M41198 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
@@ -27,13 +27,13 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco2.md
 | 18 | Só que o calendário | video | M4806 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 19 | não encontramos regra | video | M47602 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 20 | O disfarce explica | video | M4834 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 21 | Segundo a investigação mostrada | reportagem | M24263 | 1.0 | zoom_lento | FANTÁSTICO · TV GLOBO~investigação mostrada pela TV@investigação mostrada; credito=Fonte: Fantástico (TV Globo) | nenhum | corte | neutro |
+| 21 | Segundo a investigação mostrada | reportagem | M24357 | 1.0 | zoom_lento | FANTÁSTICO · TV GLOBO~investigação mostrada pela TV@investigação mostrada; credito=Fonte: Fantástico (TV Globo) | nenhum | corte | neutro |
 | 22 | vinte e duas pessoas | pessoas | - | - | 22 bonecos entram um a um e acendem em amarelo | 22~presos na central falsa de Guarulhos@vinte e duas; credito=Fonte: Fantástico (TV Globo) | tique | corte | neutro |
 | 23 | Raphael Mielle, diretor | print | P06 | - | zoom_até_trecho; grifo avança | Simulam o atendimento do banco, com transferências entre setores; credito=Fonte: Tribuna do Sertão (dados da Febraban); data=06/07/2026 | nenhum | corte | neutro |
 | 24 | É a terceira peça | video | M42625 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 25 | chamam de gatilho | video | M24165 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 26 | de gatilho de urgência | video | M4478 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | tique | corte | neutro |
-| 27 | Segundo o programa, um aposentado | reportagem | M23169 | 1.0 | zoom_lento | FANTÁSTICO · TV GLOBO~aposentado de 82 anos, sem identificação@um aposentado de oitenta e dois anos; credito=Fonte: Fantástico (TV Globo) | nenhum | corte | neutro |
+| 27 | Segundo o programa, um aposentado | reportagem | M23165 | 1.0 | zoom_lento | FANTÁSTICO · TV GLOBO~aposentado de 82 anos, sem identificação@um aposentado de oitenta e dois anos; credito=Fonte: Fantástico (TV Globo) | nenhum | corte | neutro |
 | 28 | e dezessete mil e quatrocentos | numero | - | - | entra deslizando | R$ 17.400~sacados em agência de Guarulhos, a 600 KM do aposentado@dezessete mil e quatrocentos; credito=Fonte: Fantástico (TV Globo) | impacto | corte | neutro |
 | 29 | a cerca de seiscentos | video | M42037 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 30 | Quem sacou foi | video | M23864 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |

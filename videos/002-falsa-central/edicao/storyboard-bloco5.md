@@ -13,7 +13,7 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco5.md
 | 2 | O primeiro cuidado é a regra | lista | - | - | estado 1: item 01 entra em "regra de ouro" | BANCO NÃO PEDE SENHA NEM PIX POR TELEFONE / DESLIGUE E PROCURE VOCÊ MESMO / TENHA UMA FRASE PRONTA / JÁ CAIU? AVISE O BANCO NA HORA / CONSULTE O REGISTRATO / FAMÍLIA: REGRA E PALAVRA-CÓDIGO / REDUZA O LIMITE DO PIX À NOITE #1 | tique | corte | neutro |
 | 3 | Segundo a Febraban, banco | print | P11 | - | zoom_até_trecho; grifo avança | O banco nunca liga para o cliente pedindo senha nem o número do cartão; credito=Fonte: CRCMS (orientação de segurança) | nenhum | corte | neutro |
 | 4 | E banco não manda ninguém | video | M31136 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 5 | não existe transferência | video | C3816 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
+| 5 | não existe transferência | video | M28723 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 6 | motoboy buscando | video | M13253 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 7 | Se a ligação pede para você | texto | - | - | frase na tela, caixas brancas | SE PEDE ALGO COM O SEU DINHEIRO, A LIGAÇÃO É O GOLPE.@Se a ligação pede | impacto | corte | neutro |
 | 8 | O segundo cuidado é desligar | lista | - | - | estado 2: item 02 entra em "segundo cuidado" | BANCO NÃO PEDE SENHA NEM PIX POR TELEFONE / DESLIGUE E PROCURE VOCÊ MESMO / TENHA UMA FRASE PRONTA / JÁ CAIU? AVISE O BANCO NA HORA / CONSULTE O REGISTRATO / FAMÍLIA: REGRA E PALAVRA-CÓDIGO / REDUZA O LIMITE DO PIX À NOITE #2 | tique | corte | neutro |

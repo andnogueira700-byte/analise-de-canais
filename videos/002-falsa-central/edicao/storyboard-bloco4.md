@@ -11,7 +11,7 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco4.md
 | 3 | em operações bancárias | video | M38401 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 4 | como o assalto | video | M31359 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 5 | Em Volta Redonda, segundo | print | P08 | - | zoom_até_trecho | condenou uma instituição financeira a restituir; credito=Fonte: O Povo; data=03/08/2026 | nenhum | corte | neutro |
-| 6 | e a mandaram ampliar | video | M14096 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
+| 6 | e a mandaram ampliar | video | M45707 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 7 | Segundo a sentença, ela avisou | video | M29916 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 8 | falsos funcionários | video | M4844 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 9 | À noite, saíram cento | numero | - | - | entra deslizando | R$ 190,9 MIL~transferidos à noite; 1ª INSTÂNCIA@cento e noventa mil e novecentos; credito=Fonte: sentença de Volta Redonda (O Povo); data=03/08/2026 | impacto | corte | neutro |

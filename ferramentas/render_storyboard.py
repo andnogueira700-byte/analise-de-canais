@@ -217,6 +217,7 @@ def frase_na_tela(base, texto, k):
 def numero_destaque(base, texto, k):
     img = escurecer(base, 0.35, 6)
     d = ImageDraw.Draw(img)
+    texto = re.sub(r"\s*~\s*", " / ", texto, count=1)  # aceita também "NÚMERO~legenda"
     partes = texto.split(" ", 2)
     if " / " in texto:  # "NÚMERO / legenda"
         num, resto = [t.strip() for t in texto.split(" / ", 1)]
@@ -410,7 +411,12 @@ def lista(texto, k):
     if not any(a is not None for a in ancoras):
         ancoras = []
     fn, fi = fonte(FONTE_BLACK, 58), fonte(FONTE, 62)
-    alt = 118
+    # letra diminui até o item mais longo caber na tela (nada cortado na borda)
+    tam = 62
+    medidor = ImageDraw.Draw(img)
+    while tam > 34 and max((medidor.textlength(t, font=fi) for t in itens), default=0) > W - 360 - 120 - 90:
+        tam -= 2; fi = fonte(FONTE, tam)
+    alt = 118 if tam >= 50 else 96
     y0 = H // 2 - len(itens) * alt // 2
     for j, it in enumerate(itens):
         if ate is not None:
