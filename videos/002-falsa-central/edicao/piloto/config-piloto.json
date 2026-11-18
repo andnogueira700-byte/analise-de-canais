@@ -1,0 +1,26 @@
+{
+ "partes": [
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/l002-intro.mp4"
+  },
+  {
+   "arquivo": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/l002-bloco1.mp4",
+   "respiros": [
+    {
+     "texto": "HACKOPSIA / LAUDO Nº 002 / O golpe da falsa central",
+     "dur": 4.0
+    },
+    {
+     "texto": "",
+     "dur": 3.5
+    }
+   ],
+   "fade_in": 1.5
+  }
+ ],
+ "musica_respiro": "/home/user/analise-de-canais/videos/001-caixa-7-milhoes/edicao/musica/intro-tensao.mp3",
+ "digitacao": "/home/user/analise-de-canais/videos/001-caixa-7-milhoes/edicao/sfx/digitacao.mp3",
+ "look": "eq=contrast=1.07:saturation=0.86:gamma=0.98,vignette=angle=PI/4.6,noise=alls=6:allf=t+u",
+ "pasta_temp": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/montagem-002",
+ "saida": "/tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/l002-piloto-intro-bloco1.mp4"
+}
