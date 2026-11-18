@@ -8,16 +8,16 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco2.md
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | Primeiro, o tamanho do | video | M42343 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 2 | Segundo a Febraban, | barras | - | - | barras crescem na palavra exata (2 barras) | 139 MIL~1º SEM. 2025@cento e trinta e nove / 105 MIL~ANO DE 2024@cento e cinco mil // nota: períodos diferentes, +195,7% no 1º sem.@vieram depois; credito=Fonte: Febraban | tique | corte | neutro |
-| 3 | São relatos, não todas | print | P04 | - | zoom_até_trecho; grifo avança | falsa central: 105 mil relatos em 2024 (a confirmar no print); credito=Fonte: Febraban via Agência Brasil | nenhum | corte | neutro |
+| 3 | São relatos, não todas | print | P04 | - | zoom_até_trecho; grifo avança | Falsa central, com 105 mil reclamações; credito=Fonte: Movimento Econômico (dados da Febraban) | nenhum | corte | neutro |
 | 4 | Esses números são piso | video | M14006 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | impacto | corte | neutro |
 | 5 | Lembra do paradoxo do | video | M39789 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
-| 6 | Em agosto de dois mil | print | P05 | - | zoom_até_trecho; grifo avança em "um quarto" | a confirmar no print: spoofing e 25% das ligações; credito=Fonte: Tecnoblog (Anatel); data=14/08/2025 | nenhum | corte | neutro |
+| 6 | Em agosto de dois mil | video | M20249 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO; data=AGO/2025 | nenhum | corte | frio |
 | 7 | um quarto das ligações | parte_total | - | - | 1 quadradinho pinta de vermelho na palavra exata | 1 DE 4~das ligações vêm de número falsificado (inclui telemarketing)@um quarto; credito=Fonte: Anatel | impacto | corte | neutro |
 | 8 | ou seja, mostra na sua | video | M248 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
-| 9 | Nem tudo é golpe | video | M100314 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
+| 9 | Nem tudo é golpe | video | M242 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 10 | Mas a Anatel afirma | video | C3442 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 11 | impostores de bancos | video | M42637 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
-| 12 | É como uma carta em | video | M13779 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
+| 12 | É como uma carta em | video | M49557 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 13 | O carteiro entrega do | video | M22015 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 14 | O número na tela | video | M41198 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 15 | A resposta oficial é | video | M23222 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
@@ -28,7 +28,7 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-bloco2.md
 | 20 | O disfarce explica | video | M4834 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 21 | Segundo a investigação mostrada | reportagem | M24263 | 1.0 | zoom_lento | FANTÁSTICO · TV GLOBO~investigação mostrada pela TV@investigação mostrada; credito=Fonte: Fantástico (TV Globo) | nenhum | corte | neutro |
 | 22 | vinte e duas pessoas | pessoas | - | - | 22 bonecos entram um a um e acendem em amarelo | 22~presos na central falsa de Guarulhos@vinte e duas; credito=Fonte: Fantástico (TV Globo) | tique | corte | neutro |
-| 23 | Raphael Mielle, diretor | print | P06 | - | zoom_até_trecho; grifo avança | "número mascarado" e "simulação de transferência" (a confirmar no print); credito=Fonte: Febraban via O Globo (Tribuna do Sertão); data=06/07/2026 | nenhum | corte | neutro |
+| 23 | Raphael Mielle, diretor | print | P06 | - | zoom_até_trecho; grifo avança | Simulam o atendimento do banco, com transferências entre setores; credito=Fonte: Tribuna do Sertão (dados da Febraban); data=06/07/2026 | nenhum | corte | neutro |
 | 24 | É a terceira peça | video | M42625 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 25 | chamam de gatilho | video | M24165 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 26 | de gatilho de urgência | video | M4478 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | tique | corte | neutro |

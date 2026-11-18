@@ -52,5 +52,173 @@
    1456,
    274
   ]
+ },
+ "P07": {
+  "url": "file:///tmp/claude-0/-home-user-analise-de-canais/766061be-adb1-5135-8693-53d062ed33a0/scratchpad/sumula/sumula479.html",
+  "frase": "respondem objetivamente pelos danos gerados por fortuito interno relativo a fraudes e delitos praticados por terceiros",
+  "rects": [
+   [
+    1755,
+    364,
+    1037,
+    74
+   ],
+   [
+    1020,
+    466,
+    1781,
+    74
+   ],
+   [
+    1020,
+    568,
+    342,
+    74
+   ]
+  ],
+  "bloco": [
+   1020,
+   350,
+   1800,
+   306
+  ]
+ },
+ "P04": {
+  "url": "https://movimentoeconomico.com.br/seguranca/2025/04/14/febraban-divulga-os-10-golpes-mais-aplicados-contra-clientes-bancarios/",
+  "frase": "Falsa central, com 105 mil reclamações",
+  "rects": [
+   [
+    894,
+    1040,
+    971,
+    76
+   ]
+  ],
+  "bloco": [
+   894,
+   1036,
+   1414,
+   87
+  ]
+ },
+ "P06": {
+  "url": "https://tribunadosertao.com.br/financas/2026/07/06/934704-falsa-central-telefonica-golpe-fica-mais-sofisticado",
+  "frase": "Simulam o atendimento do banco, com transferências entre setores",
+  "rects": [
+   [
+    794,
+    1006,
+    1103,
+    72
+   ],
+   [
+    750,
+    1093,
+    797,
+    72
+   ]
+  ],
+  "bloco": [
+   750,
+   1000,
+   1540,
+   232
+  ]
+ },
+ "P08": {
+  "url": "https://www.opovo.com.br/noticias/brasil/2026/08/03/banco-tera-de-devolver-rs-1909-mil-por-falha-em-golpe-da-falsa-central.html",
+  "frase": "condenou uma instituição financeira a restituir",
+  "rects": [
+   [
+    1339,
+    951,
+    1352,
+    82
+   ]
+  ],
+  "bloco": [
+   1100,
+   862,
+   1640,
+   435
+  ]
+ },
+ "P09": {
+  "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/15072026-Sem-transacoes-incompativeis-com-perfil-de-cliente--banco-nao-responde-por-golpe-da-falsa-central.aspx",
+  "frase": "Sem transações incompatíveis com perfil de cliente, banco não responde por golpe da falsa central",
+  "rects": [
+   [
+    720,
+    814,
+    1185,
+    68
+   ],
+   [
+    720,
+    901,
+    1263,
+    68
+   ],
+   [
+    720,
+    988,
+    191,
+    68
+   ]
+  ],
+  "bloco": [
+   720,
+   806,
+   1361,
+   261
+  ]
+ },
+ "P10": {
+  "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2025-08/pix-novas-regras-vao-facilitar-devolucao-de-valores-em-casos-de-golpe",
+  "frase": "Mecanismo Especial de Devolução (MED)",
+  "rects": [
+   [
+    1956,
+    994,
+    646,
+    80
+   ],
+   [
+    1220,
+    1081,
+    465,
+    80
+   ]
+  ],
+  "bloco": [
+   1220,
+   818,
+   1400,
+   522
+  ]
+ },
+ "P11": {
+  "url": "https://crcms.org.br/?p=27604",
+  "frase": "O banco nunca liga para o cliente pedindo senha nem o número do cartão",
+  "rects": [
+   [
+    1480,
+    1082,
+    790,
+    82
+   ],
+   [
+    770,
+    1169,
+    1431,
+    82
+   ]
+  ],
+  "bloco": [
+   770,
+   732,
+   1500,
+   696
+  ]
  }
 }
