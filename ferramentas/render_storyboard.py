@@ -584,8 +584,9 @@ def print_paragrafo(png, grupos, k, fonte_nome, bloco):
     x1, y1 = min(pag.width, bx + bw + pad), min(pag.height, by + bh + pad)
     rec = pag.crop((x0, y0, x1, y1)).convert("RGBA")
     # moldura branca limpa em volta do parágrafo (nada de pedaço de outra linha)
-    marg = 56
-    cartao_b = Image.new("RGBA", (rec.width + 2 * marg, rec.height + 2 * marg), (255, 255, 255, 255))
+    marg = 26
+    cor_pagina = rec.getpixel((2, 2))[:3] + (255,)  # moldura com a cor do fundo da própria página
+    cartao_b = Image.new("RGBA", (rec.width + 2 * marg, rec.height + 2 * marg), cor_pagina)
     cartao_b.paste(rec, (marg, marg)); rec = cartao_b; x0 -= marg; y0 -= marg
     gr = Image.new("RGBA", rec.size, (0, 0, 0, 0)); dg = ImageDraw.Draw(gr)
     for rects, t0 in grupos:
@@ -604,10 +605,16 @@ def print_paragrafo(png, grupos, k, fonte_nome, bloco):
     nw, nh = int(rec.width * esc), int(rec.height * esc)
     rec = rec.resize((nw, nh), Image.LANCZOS)
     px, py = (W - nw) // 2, (H - nh) // 2 + 60
-    sombra = Image.new("RGBA", (nw + 120, nh + 120), (0, 0, 0, 0))
-    ImageDraw.Draw(sombra).rectangle([60, 70, nw + 60, nh + 70], fill=(0, 0, 0, 70))
-    sombra = sombra.filter(ImageFilter.GaussianBlur(26))
-    fundo.paste(sombra, (px - 60, py - 60), sombra)
+    # sombra de recorte de papel: deslocada para baixo e para a direita, nítida perto e suave longe
+    sombra = Image.new("RGBA", (nw + 160, nh + 160), (0, 0, 0, 0))
+    ds = ImageDraw.Draw(sombra)
+    ds.rectangle([80 + 16, 80 + 20, nw + 80 + 16, nh + 80 + 20], fill=(0, 0, 0, 120))
+    sombra = sombra.filter(ImageFilter.GaussianBlur(14))
+    perto = Image.new("RGBA", (nw + 160, nh + 160), (0, 0, 0, 0))
+    ImageDraw.Draw(perto).rectangle([80 + 5, 80 + 6, nw + 80 + 5, nh + 80 + 6], fill=(0, 0, 0, 90))
+    perto = perto.filter(ImageFilter.GaussianBlur(3))
+    sombra = Image.alpha_composite(sombra, perto)
+    fundo.paste(sombra, (px - 80, py - 80), sombra)
     fundo.paste(rec, (px, py))
     d = ImageDraw.Draw(fundo)
     if fonte_nome:
