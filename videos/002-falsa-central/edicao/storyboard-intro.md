@@ -10,12 +10,12 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-intro.md`
 | 1 | O banco não liga | frase_centro | - | - | entra_centro | O BANCO NÃO LIGA PEDINDO SENHA, CÓDIGO OU TRANSFERÊNCIA. | whoosh | corte | neutro |
 | 2 | Você já ouviu | video | M31413 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 3 | nas propagandas | video | M39780 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
-| 4 | Mesmo assim, segundo | foto | F90008382 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 5 | federação dos bancos, | video | M18305 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
+| 4 | Mesmo assim, segundo | video | M4805 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
+| 5 | federação dos bancos, | video | M39774 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 6 | cento e trinta e | numero | - | - | entra_deslizando | 139 MIL relatos de clientes à Febraban@cento e trinta e nove mil; data=1º SEM/2025; credito=Fonte: Febraban | impacto | flash | neutro |
 | 7 | do golpe da | video | M51404 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
-| 8 | O aviso está em | video | M22873 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
-| 9 | quase triplicaram em | video | M31406 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
+| 8 | O aviso está em | video | M269 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
+| 9 | quase triplicaram em | video | M42270 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 10 | Como as duas coisas | video | M28884 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 11 | A resposta começa | video | C4973 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 12 | A ligação às vezes | video | M247 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | quente |
@@ -26,7 +26,7 @@ Gatilho = 2 a 4 primeiras palavras exatas da fala (copiadas de `tempos-intro.md`
 | 17 | Não é questão de | video | M4552 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | quente |
 | 18 | Está num detalhe que | video | M39849 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 19 | Até o fim, você | video | M21812 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
-| 20 | e por que isso pode | video | M46898 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
+| 20 | e por que isso pode | video | M8739 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 21 | Vai entender as três | video | M3813 | 1.0 | pan_dir | credito=ILUSTRAÇÃO | nenhum | corte | neutro |
 | 22 | E vai sair com | video | M28765 | 1.0 | zoom_in | credito=ILUSTRAÇÃO | nenhum | corte | frio |
 | 23 | inclusive a frase pronta | video | C1562 | 1.0 | zoom_lento | credito=ILUSTRAÇÃO | tique | corte | frio |

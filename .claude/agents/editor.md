@@ -68,3 +68,11 @@ Escreva `05-mapa-de-edicao.md`:
 ```
 
 Responda ao Diretor em até 3 linhas.
+
+## Imagens proibidas (revisão do Diretor, Laudo 002)
+Antes de escolher um vídeo ou foto da biblioteca, descarte pelo título ou pela miniatura:
+- pessoas em cena sensual, roupa aberta, de lingerie ou na cama de forma insinuante;
+- dinheiro estrangeiro (dólar, euro) em história brasileira: use real ou evite dinheiro;
+- fachada, logo ou fila de banco real quando o roteiro não fala daquele banco (regra: nenhum banco acusado);
+- imagens sem relação com a frase (lua, paisagem aleatória) só para preencher.
+Na dúvida, prefira mãos no celular, rosto preocupado, central de atendimento, documentos, cidade à noite.
